@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Process — Studio Luminant</title>
+<title>Products — Studio Luminant</title>
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="Studio%20Luminant%20%E2%80%94%20Architectural%20Relief%20Manufacturing_files/css2.css" rel="stylesheet">
@@ -122,14 +122,13 @@
   /* ─── PAGE HERO ─────────────────────── */
   #page-hero {
     min-height: 100vh;
-    background-image: url('images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.png');
+    background-image: url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg');
     background-size: cover;
-    background-position: center top;
+    background-position: center;
     position: relative;
     display: flex;
     align-items: flex-end;
   }
-
   #page-hero::before {
     content: '';
     position: absolute; inset: 0;
@@ -139,16 +138,13 @@
       rgba(12,12,14,0.60) 50%,
       rgba(12,12,14,0.30) 100%
     );
-    z-index: 1;
-    pointer-events: none;
+    z-index: 1; pointer-events: none;
   }
-
   .page-hero-content {
     position: relative; z-index: 2;
     padding: 160px 60px 100px;
     max-width: 800px;
   }
-
   .page-hero-eyebrow {
     display: inline-flex; align-items: center; gap: 16px;
     margin-bottom: 40px;
@@ -161,7 +157,6 @@
     font-size: 10px; letter-spacing: 0.3em;
     text-transform: uppercase; color: var(--gold); font-weight: 400;
   }
-
   .page-hero-headline {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(68px, 7vw, 110px);
@@ -171,180 +166,81 @@
     opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
   }
   .page-hero-headline em { font-style: italic; color: var(--gold); }
-
   .page-hero-sub {
     font-size: 14px; font-weight: 300;
     line-height: 1.75; color: var(--text-secondary);
-    max-width: 480px;
+    max-width: 520px;
     opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards;
   }
 
-  /* ─── PROCESS DETAIL ────────────────── */
-  #process-detail {
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-    padding: 0;
-  }
+  /* ─── PRODUCT SECTIONS ──────────────── */
+  .product-section { padding: 0 0 100px; }
+  .product-full-img { width: 100%; max-height: 560px; object-fit: cover; display: block; }
 
-  .process-detail-step {
+  .product-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    min-height: 520px;
-    border-bottom: 1px solid var(--border);
+    gap: 100px;
+    padding: 80px 0 0;
+    align-items: start;
   }
 
-  .process-detail-step:last-child { border-bottom: none; }
-
-  /* Even steps: reverse order */
-  .process-detail-step.reverse { direction: rtl; }
-  .process-detail-step.reverse > * { direction: ltr; }
-
-  .process-step-img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    min-height: 400px;
-    filter: grayscale(10%);
-    transition: filter 0.5s;
-  }
-  .process-detail-step:hover .process-step-img { filter: grayscale(0%); }
-
-  .process-step-content {
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .step-ghost-num {
-    position: absolute;
-    top: 40px; right: 40px;
+  .product-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 120px; font-weight: 300;
-    color: rgba(201,168,76,0.06);
-    line-height: 1;
-    letter-spacing: -0.04em;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  .process-step-label {
-    font-size: 9px; letter-spacing: 0.32em;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 400; margin-bottom: 16px;
-  }
-
-  .process-step-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 3vw, 48px);
+    font-size: clamp(32px, 3vw, 42px);
     font-weight: 300; line-height: 1.05;
-    color: var(--text-primary); margin-bottom: 24px;
+    color: var(--text-primary); margin-bottom: 32px;
   }
+  .product-name em { font-style: italic; color: var(--gold); }
 
-  .process-step-desc {
-    font-size: 14px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    max-width: 400px;
-  }
-
-  /* ─── WORKSHOP ──────────────────────── */
-  #workshop {
-    background: var(--obsidian);
-    border-top: 1px solid var(--border);
-  }
-
-  .workshop-grid {
-    display: grid;
-    grid-template-columns: 1fr 480px 1fr;
-    min-height: 560px;
-    gap: 0;
-  }
-
-  .workshop-photo {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    filter: grayscale(20%);
-    transition: filter 0.5s;
-  }
-  .workshop-photo:hover { filter: grayscale(0%); }
-
-  .workshop-center {
-    padding: 80px 60px;
-    background: var(--surface);
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .workshop-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px; font-weight: 300;
-    line-height: 1.05; color: var(--text-primary);
-    margin-bottom: 28px;
-  }
-  .workshop-headline em { font-style: italic; color: var(--gold); }
-
-  .workshop-body {
+  .product-desc {
     font-size: 14px; line-height: 1.85;
     color: var(--text-secondary); font-weight: 300;
     margin-bottom: 20px;
   }
 
-  .workshop-location {
-    font-size: 10px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--text-muted);
-    margin-top: 8px;
-  }
-
-  /* ─── CAPABILITIES ──────────────────── */
-  #expertise {
-    padding: 120px 0;
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-  }
-
-  .expertise-layout {
+  /* Specs grid */
+  .specs-grid {
     display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 100px; align-items: start;
-  }
-
-  .expertise-label .section-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px; font-weight: 300; line-height: 1.05;
-  }
-  .expertise-label .section-headline em { font-style: italic; color: var(--gold); }
-
-  .expertise-skills {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 2px;
   }
-
-  .skill-tag {
+  .spec-cell {
     background: var(--surface);
-    padding: 22px 24px;
-    font-size: 11px; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--text-secondary);
-    font-weight: 400;
-    transition: background 0.3s, color 0.3s;
-    border: 1px solid transparent;
-    cursor: default;
+    padding: 28px 32px;
+    border: 1px solid var(--border);
   }
-  .skill-tag:hover { background: var(--surface-2); color: var(--gold); border-color: var(--border); }
+  .spec-label {
+    font-size: 9px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 8px; font-weight: 400;
+  }
+  .spec-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 300;
+    color: var(--text-primary);
+  }
+
+  /* Use cases */
+  .use-cases {
+    display: flex; flex-wrap: wrap; gap: 2px;
+    margin-top: 60px; padding-top: 60px;
+    border-top: 1px solid var(--border);
+  }
+  .use-case-tag {
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: 12px 24px;
+  }
 
   /* ─── CTA STRIP ─────────────────────── */
-  #process-cta {
+  #products-cta {
     padding: 120px 0;
     background: var(--deep);
     border-top: 1px solid var(--border);
     text-align: center;
   }
-
   .cta-headline {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(44px, 4vw, 72px);
@@ -352,7 +248,6 @@
     color: var(--text-primary); margin-bottom: 28px;
   }
   .cta-headline em { font-style: italic; color: var(--gold); }
-
   .cta-sub {
     font-size: 14px; line-height: 1.85;
     color: var(--text-secondary); font-weight: 300;
@@ -424,13 +319,8 @@
     .coord-tag { display: none; }
     .section-inner { padding: 0 32px; }
     .page-hero-content { padding: 140px 32px 80px; }
-    .process-detail-step { grid-template-columns: 1fr; direction: ltr !important; }
-    .process-detail-step .process-step-img { min-height: 280px; }
-    .process-step-content { padding: 56px 32px; }
-    .workshop-grid { grid-template-columns: 1fr; }
-    .workshop-center { padding: 60px 32px; }
-    .expertise-layout { grid-template-columns: 1fr; gap: 48px; }
-    .expertise-skills { grid-template-columns: repeat(3, 1fr); }
+    .product-content { grid-template-columns: 1fr; gap: 60px; }
+    .product-full-img { max-height: 320px; }
     .footer-top { grid-template-columns: 1fr; gap: 48px; }
     .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
   }
@@ -459,148 +349,141 @@
 <section id="page-hero">
   <div class="page-hero-content">
     <div class="page-hero-eyebrow">
-      <span>The AIAPM Methodology</span>
+      <span>Material Engineering</span>
     </div>
     <h1 class="page-hero-headline">
-      From Algorithm<br><em>to Installation</em>
+      Engineered for<br><em>Permanence.</em>
     </h1>
     <p class="page-hero-sub">
-      A fully integrated pipeline engineered by Studio Luminant. Every panel begins with computational design and ends with a certified, installed surface — with total in-house control at every stage.
+      Two proprietary material systems — formulated for certified performance, bespoke geometry, and permanent installation.
     </p>
   </div>
 </section>
 
-<!-- 5-STEP PROCESS DETAIL -->
-<section id="process-detail">
-
-  <!-- Step 01: Design — image left, text right -->
-  <div class="process-detail-step">
-    <img src="images/studio-luminant-architectural-concept-relief-wall-panel-bim-specification.png"
-         alt="Studio Luminant parametric design brief — architectural concept and BIM specification"
-         class="process-step-img">
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">01</span>
-      <div class="process-step-label">Step 01 — Design</div>
-      <h2 class="process-step-headline">Parametric<br>Design Brief</h2>
-      <p class="process-step-desc">Every project starts with a computational design brief. We translate the architect's spatial intent — pattern language, depth, geometry — into parametric constraints that drive every downstream decision. BIM-ready outputs are included as standard.</p>
-    </div>
-  </div>
-
-  <!-- Step 02: Modelling — text left, image right (reversed) -->
-  <div class="process-detail-step reverse">
-    <img src="images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.png"
-         alt="Studio Luminant AIAPM 3D CAD modelling to gypsum cast relief panel"
-         class="process-step-img">
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">02</span>
-      <div class="process-step-label">Step 02 — Modelling</div>
-      <h2 class="process-step-headline">AIAPM<br>Digital Modelling</h2>
-      <p class="process-step-desc">Our proprietary AI-Assisted Product Modelling pipeline converts the design brief into high-fidelity 3D surface models. Iteration is fast and non-destructive — changes at this stage cost nothing. The model drives the mould directly, eliminating manual translation error.</p>
-    </div>
-  </div>
-
-  <!-- Step 03: Moulding — image left, text right -->
-  <div class="process-detail-step">
-    <img src="images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png"
-         alt="Studio Luminant AIAPM production process — design, modelling, moulding, casting, finishing"
-         class="process-step-img">
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">03</span>
-      <div class="process-step-label">Step 03 — Moulding</div>
-      <h2 class="process-step-headline">Precision<br>Master Mould</h2>
-      <p class="process-step-desc">CNC-machined master moulds are produced directly from the digital model. Silicone or polyurethane production moulds are cast from the master, enabling unlimited reproduction runs without geometric degradation. Mould costs are absorbed across the production volume.</p>
-    </div>
-  </div>
-
-  <!-- Step 04: Casting — text left, image right (reversed) -->
-  <div class="process-detail-step reverse">
-    <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg"
-         alt="Studio Luminant Lumina PMAG gypsum relief panel — vertical in-house casting"
-         class="process-step-img">
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">04</span>
-      <div class="process-step-label">Step 04 — Casting</div>
-      <h2 class="process-step-headline">Vertical<br>In-House Casting</h2>
-      <p class="process-step-desc">Lumina PMAG™ (Polymer Modified Alpha Gypsum) and Lumina PUCOMP™ panels are cast vertically in our Sakarya facility under controlled conditions. Alpha gypsum produces a denser, harder surface than beta-grade alternatives. Each batch is tested for compressive strength and surface integrity before release.</p>
-    </div>
-  </div>
-
-  <!-- Step 05: Finishing — image left, text right -->
-  <div class="process-detail-step">
-    <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.jpg"
-         alt="Studio Luminant Lumina PMAG gypsum relief panel — automotive-grade 2K finishing"
-         class="process-step-img">
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">05</span>
-      <div class="process-step-label">Step 05 — Finishing</div>
-      <h2 class="process-step-headline">Automotive-Grade<br>2K Finish</h2>
-      <p class="process-step-desc">Every panel is finished using a two-component automotive coating system — the same technology applied to luxury vehicle exteriors. The result is a micro-smooth surface in any RAL or custom colour, resistant to humidity, UV, and impact. Custom textures, metallic effects, and patinas are available.</p>
-    </div>
-  </div>
-
-</section>
-
-<!-- WORKSHOP -->
-<section id="workshop">
-  <div class="workshop-grid">
-    <img src="images/studio-luminant-production-workshop-photo-01.jpeg"
-         alt="Studio Luminant production workshop — Sakarya manufacturing facility"
-         class="workshop-photo">
-    <div class="workshop-center">
-      <div class="eyebrow reveal">Manufacturing HQ</div>
-      <h2 class="workshop-headline reveal">
-        Made in<br><em>Sakarya</em>
-      </h2>
-      <p class="workshop-body reveal">
-        Our 2,400 m² facility in Sakarya / Sapanca houses the full production pipeline under one roof — from CNC moulding through casting to finishing and QA. Vertical integration eliminates sub-contractor delays and gives us total quality control from brief to crate.
-      </p>
-      <p class="workshop-body reveal">
-        Every panel ships with a certified material data sheet and installation drawing. Logistics and on-site installation support available to the Middle East, Caucasus, and Eastern Europe.
-      </p>
-      <span class="workshop-location reveal">Sakarya / Sapanca · Türkiye · 40.7°N 30.4°E</span>
-    </div>
-    <img src="images/studio-luminant-production-workshop-photo-02.jpeg"
-         alt="Studio Luminant production workshop — panel casting and finishing"
-         class="workshop-photo">
-  </div>
-</section>
-
-<!-- CAPABILITIES -->
-<section id="expertise">
+<!-- LUMINA PMAG -->
+<section id="pmag" class="product-section" style="background: var(--deep); border-top: 1px solid var(--border);">
+  <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg"
+       alt="Lumina PMAG polymer modified alpha gypsum relief panel — ceramic-like surface finish"
+       class="product-full-img">
   <div class="section-inner">
-    <div class="expertise-layout">
-      <div class="expertise-label">
-        <div class="eyebrow reveal">Capabilities</div>
-        <h2 class="section-headline reveal">
-          Comprehensive<br><em>Know-How</em>
+    <div class="product-content">
+      <!-- Left: name + description -->
+      <div>
+        <div class="eyebrow reveal">Lumina PMAG™</div>
+        <h2 class="product-name reveal">
+          Polymer Modified<br><em>Alpha Gypsum</em>
         </h2>
+        <p class="product-desc reveal">
+          Lumina PMAG™ is Studio Luminant's primary interior cladding material — a polymer modified alpha gypsum formulated for high-specification architectural installations. Alpha gypsum delivers a compressive strength significantly above beta-grade alternatives, producing a denser, harder panel with a ceramic-like surface finish.
+        </p>
+        <p class="product-desc reveal">
+          Certified A1 non-combustible, moisture resistant, and available in any RAL or custom colour via automotive-grade 2K coating. Ideal for large-scale interior wall and ceiling installations where fire compliance, surface quality, and dimensional accuracy are non-negotiable.
+        </p>
       </div>
-      <div class="expertise-skills reveal">
-        <div class="skill-tag">Concrete Casting</div>
-        <div class="skill-tag">Cold Casting</div>
-        <div class="skill-tag">Polyurethane Casting</div>
-        <div class="skill-tag">GFRC Casting</div>
-        <div class="skill-tag">Silicone Casting</div>
-        <div class="skill-tag">Functional Additives</div>
-        <div class="skill-tag">Automotive Finishing</div>
-        <div class="skill-tag">GRG Casting</div>
-        <div class="skill-tag">2K Finishing</div>
-        <div class="skill-tag">LED / Lighting</div>
-        <div class="skill-tag">Composites</div>
-        <div class="skill-tag">PU Foam Casting</div>
+      <!-- Right: specs grid -->
+      <div class="specs-grid reveal">
+        <div class="spec-cell">
+          <div class="spec-label">Fire Rating</div>
+          <div class="spec-value">A1 Non-Combustible</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Surface</div>
+          <div class="spec-value">Ceramic-Like Smooth</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Application</div>
+          <div class="spec-value">Interior Walls &amp; Ceilings</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Moisture</div>
+          <div class="spec-value">Resistant</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Scale</div>
+          <div class="spec-value">Large-Format Panels</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Finish</div>
+          <div class="spec-value">Automotive 2K Coating</div>
+        </div>
       </div>
+    </div>
+    <!-- Use cases — sibling of product-content, full-width -->
+    <div class="use-cases reveal">
+      <span class="use-case-tag">Luxury Hospitality</span>
+      <span class="use-case-tag">High-End Residential</span>
+      <span class="use-case-tag">Cultural Institutions</span>
+    </div>
+  </div>
+</section>
+
+<!-- LUMINA PUCOMP -->
+<section id="pucomp" class="product-section" style="background: var(--obsidian); border-top: 1px solid var(--border);">
+  <img src="images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg"
+       alt="Lumina PUCOMP polyurethane composite relief panel — complex geometry, exterior rated"
+       class="product-full-img">
+  <div class="section-inner">
+    <div class="product-content">
+      <!-- Left: name + description -->
+      <div>
+        <div class="eyebrow reveal">Lumina PUCOMP™</div>
+        <h2 class="product-name reveal">
+          Polyurethane<br><em>Composite</em>
+        </h2>
+        <p class="product-desc reveal">
+          Lumina PUCOMP™ is a high-performance polyurethane composite engineered for applications where gypsum is unsuitable — exterior cladding, wet areas, high-impact surfaces, and complex three-dimensional geometries. The formulation delivers exceptional strength-to-weight ratio, enabling intricate panel forms that would be prohibitively heavy in mineral-based materials.
+        </p>
+        <p class="product-desc reveal">
+          UV-stable, weather resistant, and impact rated, PUCOMP panels are finished to the same automotive 2K standard as PMAG — maintaining a consistent aesthetic across both material families regardless of installation context.
+        </p>
+      </div>
+      <!-- Right: specs grid -->
+      <div class="specs-grid reveal">
+        <div class="spec-cell">
+          <div class="spec-label">Weight</div>
+          <div class="spec-value">Lightweight</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Application</div>
+          <div class="spec-value">Exterior &amp; Wet Areas</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Geometry</div>
+          <div class="spec-value">Complex Spatial Forms</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Durability</div>
+          <div class="spec-value">Impact Resistant</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Rating</div>
+          <div class="spec-value">UV &amp; Weather Resistant</div>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Finish</div>
+          <div class="spec-value">Automotive 2K Coating</div>
+        </div>
+      </div>
+    </div>
+    <!-- Use cases -->
+    <div class="use-cases reveal">
+      <span class="use-case-tag">High-Impact Areas</span>
+      <span class="use-case-tag">Handles &amp; Fixtures</span>
+      <span class="use-case-tag">HVAC Covers</span>
+      <span class="use-case-tag">Exterior Facades</span>
+      <span class="use-case-tag">Wet Areas</span>
     </div>
   </div>
 </section>
 
 <!-- CTA STRIP -->
-<section id="process-cta">
+<section id="products-cta">
   <div class="section-inner">
     <h2 class="cta-headline reveal">
       Ready to Specify<br><em>Your Project?</em>
     </h2>
     <p class="cta-sub reveal">
-      Share your brief with our team. We'll return a material recommendation, panel sketch, and indicative timeline within 5 working days.
+      Request a material data sheet and BIM file package for your specification.
     </p>
     <a href="contact.htm" class="btn-primary reveal">
       Initiate Project
@@ -672,7 +555,7 @@
   }
   animateRing();
 
-  document.querySelectorAll('a, button, .skill-tag').forEach(el => {
+  document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hover'));
     el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
   });
