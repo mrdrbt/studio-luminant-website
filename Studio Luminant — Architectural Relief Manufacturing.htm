@@ -890,6 +890,7 @@
     .expertise-skills { grid-template-columns: repeat(3, 1fr); }
     .footer-top { grid-template-columns: 1fr; gap: 48px; }
     .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-inner { padding: 0 32px; }
     .nav-links { display: none; }
     .coord-tag { display: none; }
     .portfolio-grid {
@@ -899,6 +900,9 @@
     .portfolio-item--large { grid-column: 1 / span 2; grid-row: 1; }
     .step-image { width: calc(100% + 64px); margin: -56px -32px 36px; }
     .material-img { width: calc(100% + 64px); margin: -56px -32px 36px; }
+  }
+  @media (max-width: 600px) {
+    .expertise-skills { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
