@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(bash \"C:\\\\Users\\\\burak\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\superpowers\\\\5.0.2\\\\skills\\\\brainstorming\\\\scripts\\\\start-server.sh\" --project-dir \"C:\\\\Users\\\\burak\\\\Desktop\\\\SL COWORK\\\\06 — Website\\\\Studio Luminant Website\")",
+      "Bash(pandoc \"C:\\\\Users\\\\burak\\\\Desktop\\\\SL COWORK\\\\02 — Brand & Identity\\\\Studio Luminant High Level.docx\" -o /tmp/sl-brand.md --track-changes=all)",
+      "Read(//tmp/**)",
+      "Bash(python \"C:\\\\Users\\\\burak\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\anthropic-skills\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\burak\\\\Desktop\\\\SL COWORK\\\\02 — Brand & Identity\\\\Studio Luminant High Level.docx\" /tmp/sl-brand-unpacked/)",
+      "Bash(python \"C:\\\\Users\\\\burak\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\527c328b-7134-4d3f-ac11-56074bc05283\\\\9b8f2b15-97a3-4aec-b9a9-c9765b815e84\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\burak\\\\Desktop\\\\SL COWORK\\\\02 — Brand & Identity\\\\Studio Luminant High Level.docx\" /tmp/sl-brand-unpacked/)"
+    ]
+  }
+}
