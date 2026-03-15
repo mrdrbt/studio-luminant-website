@@ -12,6 +12,8 @@ A single static HTML page (`products.htm`) following the same boilerplate patter
 
 ## Page Structure
 
+**Page `<title>`:** `Products — Studio Luminant`
+
 ### 1. Page Hero
 - Background image: `images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg`
 - Same `::before` dark gradient overlay as main page hero and `process.htm`
@@ -40,7 +42,14 @@ A single static HTML page (`products.htm`) following the same boilerplate patter
 | Scale | Large-Format Panels |
 | Finish | Automotive 2K Coating |
 
-- **Use Cases row** (below 2-col, full-width): horizontal flex row of `.use-case-tag` elements:
+- **Use Cases row** — sits as a sibling of `.product-content` (outside the 2-col grid), inside `.section-inner`. This makes it full-width. HTML structure:
+  ```html
+  <div class="section-inner">
+    <div class="product-content"><!-- left + right columns --></div>
+    <div class="use-cases"><!-- use-case-tag elements --></div>
+  </div>
+  ```
+  Tags:
   - Luxury Hospitality
   - High-End Residential
   - Cultural Institutions
@@ -67,7 +76,7 @@ A single static HTML page (`products.htm`) following the same boilerplate patter
 | Rating | UV & Weather Resistant |
 | Finish | Automotive 2K Coating |
 
-- **Use Cases row:**
+- **Use Cases row** — same sibling structure as PMAG (outside `.product-content`, inside `.section-inner`):
   - High-Impact Areas
   - Handles & Fixtures
   - HVAC Covers
@@ -92,21 +101,25 @@ A single static HTML page (`products.htm`) following the same boilerplate patter
 
 ## Nav Update
 
-Update `products.htm` nav link in main page from `#materials` to `products.htm`:
+Update "Products" nav links across all pages to point to `products.htm`:
 
-| Element | From | To |
-|---------|------|----|
-| "Products" nav link (main page) | `#materials` | `products.htm` |
-| "Products" nav link (contact, process, gallery pages) | `Studio Luminant — Architectural Relief Manufacturing.htm#materials` | `products.htm` |
+| Page | Element | From | To |
+|------|---------|------|----|
+| Main `.htm` | "Products" nav link | `#materials` | `products.htm` |
+| `contact.htm` | "Products" nav link | `Studio Luminant — Architectural Relief Manufacturing.htm#materials` | `products.htm` |
+| `process.htm` | "Products" nav link | `Studio Luminant — Architectural Relief Manufacturing.htm#materials` | `products.htm` |
+| `gallery.htm` | "Products" nav link | `Studio Luminant — Architectural Relief Manufacturing.htm#materials` | `products.htm` |
+| `products.htm` | "Products" nav link (self) | — | `products.htm` (self-link, no change needed) |
 
 ---
 
 ## Shared Boilerplate
 
-Same as all other new pages:
-- Head: charset, viewport, fonts link
-- CSS: `:root`, reset, cursor, noise texture, nav, section base, footer, reveal, coord-tag, responsive
-- Nav HTML: logo → `Studio Luminant — Architectural Relief Manufacturing.htm`, links to all 4 pages, CTA → `contact.htm`
+Same as all other new pages. All design tokens including `--border: rgba(201,168,76,0.18)` are defined in the shared `:root` block and do NOT need to be redefined. `.section-inner` (max-width 1280px, margin auto, padding 0 60px) is also shared boilerplate — copy verbatim from other pages.
+
+- Head: charset, viewport, fonts link (`Studio Luminant — Architectural Relief Manufacturing_files/css2.css`)
+- CSS: `:root` (includes `--border: rgba(201,168,76,0.18)` and all other tokens), reset, cursor, noise texture, nav, `section`/`.section-inner`/`.eyebrow`/`.btn-primary`, footer, `.reveal`, `.coord-tag`, responsive
+- Nav HTML: logo → `Studio Luminant — Architectural Relief Manufacturing.htm`, Products → `products.htm`, Process → `process.htm`, Gallery → `gallery.htm`, Contact → `contact.htm`, CTA → `contact.htm`
 - Footer: verbatim from other pages
 - JS: cursor + nav scroll + reveal observer
 
@@ -118,6 +131,15 @@ Same as all other new pages:
 /* Product section */
 .product-section { padding: 0 0 100px; }
 .product-full-img { width: 100%; max-height: 560px; object-fit: cover; display: block; }
+
+/* Product content grid (image + 2-col below) */
+.product-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  padding: 80px 0 0;
+  align-items: start;
+}
 
 /* Specs grid */
 .specs-grid {
@@ -153,13 +175,28 @@ Same as all other new pages:
   border: 1px solid var(--border);
   padding: 12px 24px;
 }
+
+/* CTA strip — page-scoped, include in products.htm <style> block */
+.cta-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 4vw, 72px);
+  font-weight: 300; line-height: 1.0;
+  color: var(--text-primary); margin-bottom: 28px;
+}
+.cta-headline em { font-style: italic; color: var(--gold); }
+.cta-sub {
+  font-size: 14px; line-height: 1.85;
+  color: var(--text-secondary); font-weight: 300;
+  max-width: 520px; margin: 0 auto 48px;
+}
+
+/* Responsive — add these two rules INSIDE the single @media (max-width: 1024px)
+   block. Do NOT create a second @media block. */
+@media (max-width: 1024px) {
+  .product-content { grid-template-columns: 1fr; gap: 60px; }
+  .product-full-img { max-height: 320px; }
+}
 ```
-
----
-
-## Responsive
-- Below 1024px: 2-col product grid stacks to 1-col, nav-links hidden
-- `product-full-img` max-height reduced to 320px on mobile
 
 ---
 
@@ -177,4 +214,4 @@ Same as all other new pages:
 - PUCOMP section visible with correct specs and 5 use case tags
 - All nav links navigate to correct pages from products page
 - CTA links to `contact.htm`
-- Responsive: stacks to single column at 900px viewport width
+- Responsive: stacks to single column at 1024px viewport width (consistent with all other pages)
