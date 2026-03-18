@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Süreç — Studio Luminant</title>
+<meta name="description" content="Studio Luminant'ın AIAPM tasarımdan üretime sürecini keşfedin — yapay zeka destekli ürün modelleme, hassas döküm ve özel mimari rölyef panelleri için 2K bitirme.">
+<link rel="canonical" href="https://www.studioluminant.com/tr/surec.htm">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="Süreç — Studio Luminant">
+<meta property="og:description" content="Studio Luminant'ın AIAPM tasarımdan üretime sürecini keşfedin — yapay zeka destekli ürün modelleme, hassas döküm ve özel mimari rölyef panelleri için 2K bitirme.">
+<meta property="og:url" content="https://www.studioluminant.com/tr/surec.htm">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Süreç — Studio Luminant">
+<meta name="twitter:description" content="Studio Luminant'ın AIAPM tasarımdan üretime sürecini keşfedin — yapay zeka destekli ürün modelleme, hassas döküm ve özel mimari rölyef panelleri için 2K bitirme.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="../Studio%20Luminant%20%E2%80%94%20Architectural%20Relief%20Manufacturing_files/css2.css" rel="stylesheet">
+
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dim: #8A6E2F;
+    --obsidian: #0C0C0E;
+    --deep: #111114;
+    --surface: #18181D;
+    --surface-2: #1F1F26;
+    --border: rgba(201,168,76,0.18);
+    --text-primary: #F0EAD6;
+    --text-secondary: #9A9088;
+    --text-muted: #5A5450;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--obsidian);
+    color: var(--text-primary);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* ─── CUSTOM CURSOR ─────────────────── */
+  .cursor-dot {
+    width: 6px; height: 6px;
+    background: var(--gold); border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: transform 0.08s ease;
+  }
+  .cursor-ring {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(201,168,76,0.5);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9998;
+    transform: translate(-50%,-50%);
+    transition: transform 0.18s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
+  }
+  .cursor-ring.hover { width: 56px; height: 56px; opacity: 0.6; }
+
+  /* ─── NOISE TEXTURE ─────────────────── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1; opacity: 0.4;
+  }
+
+  /* ─── NAV ───────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 28px 60px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(12,12,14,0.9);
+    backdrop-filter: blur(12px);
+    border-color: var(--border);
+    padding: 18px 60px;
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-img { height: 44px; width: auto; display: block; transition: opacity 0.3s ease, height 0.4s ease; }
+  .nav-logo:hover .nav-logo-img { opacity: 0.8; }
+  nav.scrolled .nav-logo-img { height: 34px; }
+  .nav-links { display: flex; align-items: center; gap: 48px; list-style: none; }
+  .nav-links a {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-secondary);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--obsidian);
+    background: var(--gold); padding: 10px 24px;
+    text-decoration: none; transition: background 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* ─── SECTION BASE ──────────────────── */
+  section { position: relative; z-index: 2; }
+  .section-inner { max-width: 1280px; margin: 0 auto; padding: 0 60px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold);
+    font-weight: 400; margin-bottom: 32px;
+  }
+  .eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--obsidian); background: var(--gold);
+    padding: 14px 32px; text-decoration: none;
+    transition: background 0.3s, gap 0.3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); gap: 20px; }
+  .btn-primary svg { width: 14px; height: 14px; }
+
+  /* ─── PAGE HERO ─────────────────────── */
+  #page-hero {
+    min-height: 100vh;
+    background-image: url('../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.png');
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(12,12,14,0.88) 0%,
+      rgba(12,12,14,0.60) 50%,
+      rgba(12,12,14,0.30) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .page-hero-content {
+    position: relative; z-index: 2;
+    padding: 160px 60px 100px;
+    max-width: 800px;
+  }
+
+  .page-hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 16px;
+    margin-bottom: 40px;
+    opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
+  }
+  .page-hero-eyebrow::before {
+    content: ''; display: block; width: 32px; height: 1px; background: var(--gold);
+  }
+  .page-hero-eyebrow span {
+    font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold); font-weight: 400;
+  }
+
+  .page-hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(68px, 7vw, 110px);
+    font-weight: 300; line-height: 0.92;
+    letter-spacing: -0.02em; color: var(--text-primary);
+    margin-bottom: 36px;
+    opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
+  }
+  .page-hero-headline em { font-style: italic; color: var(--gold); }
+
+  .page-hero-sub {
+    font-size: 14px; font-weight: 300;
+    line-height: 1.75; color: var(--text-secondary);
+    max-width: 480px;
+    opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards;
+  }
+
+  /* ─── PROCESS DETAIL ────────────────── */
+  #process-detail {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    padding: 0;
+  }
+
+  .process-detail-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 520px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .process-detail-step:last-child { border-bottom: none; }
+
+  /* Even steps: reverse order */
+  .process-detail-step.reverse { direction: rtl; }
+  .process-detail-step.reverse > * { direction: ltr; }
+
+  .process-step-img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    min-height: 400px;
+    filter: grayscale(10%);
+    transition: filter 0.5s;
+  }
+  .process-detail-step:hover .process-step-img { filter: grayscale(0%); }
+
+  .process-step-content {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .step-ghost-num {
+    position: absolute;
+    top: 40px; right: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px; font-weight: 300;
+    color: rgba(201,168,76,0.06);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .process-step-label {
+    font-size: 9px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--gold);
+    font-weight: 400; margin-bottom: 16px;
+  }
+
+  .process-step-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 300; line-height: 1.05;
+    color: var(--text-primary); margin-bottom: 24px;
+  }
+
+  .process-step-desc {
+    font-size: 14px; line-height: 1.85;
+    color: var(--text-secondary); font-weight: 300;
+    max-width: 400px;
+  }
+
+  .process-step-sustain {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold-dim);
+    font-weight: 400; margin-top: 20px;
+    max-width: 400px;
+  }
+  .process-step-sustain::before {
+    content: ''; display: block;
+    width: 6px; height: 6px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ─── WORKSHOP ──────────────────────── */
+  #workshop {
+    background: var(--obsidian);
+    border-top: 1px solid var(--border);
+  }
+
+  .workshop-grid {
+    display: grid;
+    grid-template-columns: 1fr 480px 1fr;
+    min-height: 560px;
+    gap: 0;
+  }
+
+  .workshop-photo {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    filter: grayscale(20%);
+    transition: filter 0.5s;
+  }
+  .workshop-photo:hover { filter: grayscale(0%); }
+
+  .workshop-center {
+    padding: 80px 60px;
+    background: var(--surface);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .workshop-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px; font-weight: 300;
+    line-height: 1.05; color: var(--text-primary);
+    margin-bottom: 28px;
+  }
+  .workshop-headline em { font-style: italic; color: var(--gold); }
+
+  .workshop-body {
+    font-size: 14px; line-height: 1.85;
+    color: var(--text-secondary); font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .workshop-location {
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-top: 8px;
+  }
+
+  /* ─── CAPABILITIES ──────────────────── */
+  #expertise {
+    padding: 120px 0;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+  }
+
+  .expertise-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 100px; align-items: start;
+  }
+
+  .expertise-label .section-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px; font-weight: 300; line-height: 1.05;
+  }
+  .expertise-label .section-headline em { font-style: italic; color: var(--gold); }
+
+  .expertise-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .skill-tag {
+    background: var(--surface);
+    padding: 22px 24px;
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-secondary);
+    font-weight: 400;
+    transition: background 0.3s, color 0.3s;
+    border: 1px solid transparent;
+    cursor: default;
+  }
+  .skill-tag:hover { background: var(--surface-2); color: var(--gold); border-color: var(--border); }
+
+  /* ─── CTA STRIP ─────────────────────── */
+  #process-cta {
+    padding: 120px 0;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .cta-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 4vw, 72px);
+    font-weight: 300; line-height: 1.0;
+    color: var(--text-primary); margin-bottom: 28px;
+  }
+  .cta-headline em { font-style: italic; color: var(--gold); }
+
+  .cta-sub {
+    font-size: 14px; line-height: 1.85;
+    color: var(--text-secondary); font-weight: 300;
+    max-width: 520px; margin: 0 auto 48px;
+  }
+
+  /* ─── FOOTER ────────────────────────── */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    padding: 100px 0 48px;
+  }
+  .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 60px; }
+  .footer-top {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px; margin-bottom: 80px;
+  }
+  .footer-brand .logo {
+    font-size: 16px; letter-spacing: 0.24em;
+    color: var(--text-primary); text-transform: uppercase;
+    text-decoration: none; display: block; margin-bottom: 20px;
+  }
+  .footer-tagline { font-size: 12px; line-height: 1.75; color: var(--text-muted); font-weight: 300; max-width: 280px; }
+  .footer-col-title { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+  .footer-location-eyebrow { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
+  .footer-location-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: var(--text-primary); margin-bottom: 8px; }
+  .footer-location-note { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+  .footer-cta-block a {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--obsidian); background: var(--gold);
+    padding: 14px 28px; text-decoration: none; transition: background 0.3s;
+  }
+  .footer-cta-block a:hover { background: var(--gold-light); }
+  .footer-cta-block p { font-size: 11px; color: var(--text-muted); margin-top: 14px; font-weight: 300; }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 32px; border-top: 1px solid var(--border);
+  }
+  .footer-copy { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+  .footer-links { display: flex; gap: 32px; list-style: none; }
+  .footer-links a { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-logo-img { height: 52px; width: auto; display: block; margin-bottom: 16px; opacity: 0.9; }
+
+  /* ─── SCROLL REVEAL ─────────────────── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── ANIMATIONS ────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── FLOATING COORD ────────────────── */
+  .coord-tag {
+    position: fixed; bottom: 32px; left: 60px;
+    font-size: 9px; letter-spacing: 0.2em;
+    color: var(--text-muted); text-transform: uppercase; z-index: 100;
+  }
+
+  /* ─── RESPONSIVE ────────────────────── */
+  @media (max-width: 1024px) {
+    nav { padding: 20px 32px; }
+    nav.scrolled { padding: 16px 32px; }
+    .nav-links { display: none; }
+    .coord-tag { display: none; }
+    .section-inner { padding: 0 32px; }
+    .page-hero-content { padding: 140px 32px 80px; }
+    .process-detail-step { grid-template-columns: 1fr; direction: ltr !important; }
+    .process-detail-step .process-step-img { min-height: 280px; }
+    .process-step-content { padding: 56px 32px; }
+    .workshop-grid { grid-template-columns: 1fr; }
+    .workshop-center { padding: 60px 32px; }
+    .expertise-layout { grid-template-columns: 1fr; gap: 48px; }
+    .expertise-skills { grid-template-columns: repeat(3, 1fr); }
+    .footer-top { grid-template-columns: 1fr; gap: 48px; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-inner { padding: 0 32px; }
+  }
+  @media (max-width: 600px) {
+    .expertise-skills { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="Studio Luminant — Mimari Rölyef Üretimi.htm" class="nav-logo">
+    <img src="../images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="urunler.htm">Ürünler</a></li>
+    <li><a href="surec.htm">Süreç</a></li>
+    <li><a href="galeri.htm">Galeri</a></li>
+    <li><a href="iletisim.htm">İletişim</a></li>
+  </ul>
+  <a href="iletisim.htm" class="nav-cta">Proje Başlat</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">
+      <span>AIAPM Metodolojisi</span>
+    </div>
+    <h1 class="page-hero-headline">
+      Algoritmadan<br><em>Montaja</em>
+    </h1>
+    <p class="page-hero-sub">
+      Studio Luminant tarafından tasarlanan tamamen entegre bir üretim hattı. Her panel hesaplamalı tasarımla başlar ve sertifikalı, monte edilmiş bir yüzey olarak son bulur — her aşamada tam kurum içi kontrol ile.
+    </p>
+  </div>
+</section>
+
+<!-- 5-STEP PROCESS DETAIL -->
+<section id="process-detail">
+
+  <!-- Step 01: Design — image left, text right -->
+  <div class="process-detail-step">
+    <img src="../images/studio-luminant-architectural-concept-relief-wall-panel-bim-specification.png"
+         alt="Studio Luminant parametrik tasarım brifingi — mimari konsept ve BIM şartnamesi"
+         class="process-step-img">
+    <div class="process-step-content reveal">
+      <span class="step-ghost-num">01</span>
+      <div class="process-step-label">Adım 01 — Tasarım</div>
+      <h2 class="process-step-headline">Parametrik<br>Tasarım Brifingi</h2>
+      <p class="process-step-desc">Her proje hesaplamalı bir tasarım briefingiyle başlar. Mimarın mekansal niyetini — desen dili, derinlik, geometri — aşağı yöndeki her kararı yönlendirecek parametrik kısıtlamalara dönüştürüyoruz. BIM uyumlu çıktılar standart olarak dahildir.</p>
+      <p class="process-step-sustain">Parametrik kısıtlamalar, malzeme spesifikasyonunu ilk karardan itibaren optimize eder</p>
+    </div>
+  </div>
+
+  <!-- Step 02: Modelling — text left, image right (reversed) -->
+  <div class="process-detail-step reverse">
+    <img src="../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.png"
+         alt="Studio Luminant AIAPM 3D CAD modelleme — alçı dökümü mimari rölyef paneli"
+         class="process-step-img">
+    <div class="process-step-content reveal">
+      <span class="step-ghost-num">02</span>
+      <div class="process-step-label">Adım 02 — Modelleme</div>
+      <h2 class="process-step-headline">AIAPM<br>Dijital Modelleme</h2>
+      <p class="process-step-desc">Tescilli Yapay Zeka Destekli Ürün Modelleme hattımız, tasarım brifingini yüksek kaliteli 3D yüzey modellerine dönüştürür. İterasyon hızlı ve tahribatsızdır — bu aşamadaki değişikliklerin maliyeti sıfırdır. Model, kalıbı doğrudan yönlendirir ve manuel aktarım hatasını ortadan kaldırır.</p>
+      <p class="process-step-sustain">Tahribatsız dijital iterasyon — sıfır fiziksel prototip atığı</p>
+    </div>
+  </div>
+
+  <!-- Step 03: Moulding — image left, text right -->
+  <div class="process-detail-step">
+    <img src="../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png"
+         alt="Studio Luminant AIAPM üretim süreci — tasarım, modelleme, kalıplama, döküm, bitirme"
+         class="process-step-img">
+    <div class="process-step-content reveal">
+      <span class="step-ghost-num">03</span>
+      <div class="process-step-label">Adım 03 — Kalıplama</div>
+      <h2 class="process-step-headline">Hassas<br>Ana Kalıp</h2>
+      <p class="process-step-desc">CNC işlenmiş ana kalıplar doğrudan dijital modelden üretilir. Silikon veya poliüretan üretim kalıpları ana kalıptan dökülerek, geometrik bozulma olmadan sınırsız üretim serisi sağlar. Kalıp maliyetleri üretim hacmi üzerinden dağıtılır.</p>
+      <p class="process-step-sustain">Yeniden kullanılabilir üretim kalıpları — bir ana kalıp tüm üretim serisine hizmet eder</p>
+    </div>
+  </div>
+
+  <!-- Step 04: Casting — text left, image right (reversed) -->
+  <div class="process-detail-step reverse">
+    <img src="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg"
+         alt="Studio Luminant Lumina PMAG alçı rölyef paneli — kurum içi dikey döküm"
+         class="process-step-img">
+    <div class="process-step-content reveal">
+      <span class="step-ghost-num">04</span>
+      <div class="process-step-label">Adım 04 — Döküm</div>
+      <h2 class="process-step-headline">Kurum İçi<br>Dikey Döküm</h2>
+      <p class="process-step-desc">Lumina PMAG™ (Polimer Modifiye Alfa Alçı) ve Lumina PUCOMP™ panelleri, Sakarya tesisimizde kontrollü koşullar altında dikey olarak dökülür. Alfa alçı, beta sınıfı alternatiflere göre daha yoğun, daha sert bir yüzey üretir. Her parti, serbest bırakılmadan önce basınç dayanımı ve yüzey bütünlüğü açısından test edilir.</p>
+      <p class="process-step-sustain">Alfa alçı 150°C'de kalsine edilir — çimento veya seramik işleme enerjisinin çok altında</p>
+    </div>
+  </div>
+
+  <!-- Step 05: Finishing — image left, text right -->
+  <div class="process-detail-step">
+    <img src="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.jpg"
+         alt="Studio Luminant Lumina PMAG alçı rölyef paneli — otomotiv sınıfı 2K bitirme"
+         class="process-step-img">
+    <div class="process-step-content reveal">
+      <span class="step-ghost-num">05</span>
+      <div class="process-step-label">Adım 05 — Bitirme</div>
+      <h2 class="process-step-headline">Otomotiv Sınıfı<br>2K Kaplama</h2>
+      <p class="process-step-desc">Her panel, iki bileşenli otomotiv kaplama sistemi ile bitirilir — lüks araç dış cephelerine uygulanan teknolojinin aynısı. Sonuç, herhangi bir RAL veya özel renkte, neme, UV'ye ve darbeye dayanıklı mikro pürüzsüz bir yüzeydir. Özel dokular, metalik efektler ve patinalar mevcuttur.</p>
+      <p class="process-step-sustain">Otomotiv sınıfı kaplama, hizmet ömrünü uzatır — panel değişimi olmadan noktasal onarım imkanı</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- WORKSHOP -->
+<section id="workshop">
+  <div class="workshop-grid">
+    <img src="../images/studio-luminant-production-workshop-photo-01.jpeg"
+         alt="Studio Luminant üretim atölyesi — Sakarya üretim tesisi"
+         class="workshop-photo">
+    <div class="workshop-center">
+      <div class="eyebrow reveal">Üretim Merkezi</div>
+      <h2 class="workshop-headline reveal">
+        Sakarya<br><em>Üretimi</em>
+      </h2>
+      <p class="workshop-body reveal">
+        Sakarya / Sapanca'daki 2.400 m² tesisimiz, CNC kalıplamadan döküme, bitirme işlemine ve kalite kontrolüne kadar tam üretim hattını tek çatı altında barındırır. Dikey entegrasyon, taşeron gecikmelerini ortadan kaldırır ve brifingden kasaya kadar tam kalite kontrolü sağlar.
+      </p>
+      <p class="workshop-body reveal">
+        Her panel, sertifikalı malzeme veri sayfası ve montaj çizimi ile sevk edilir. Orta Doğu, Kafkasya ve Doğu Avrupa'ya lojistik ve saha montaj desteği mevcuttur.
+      </p>
+      <span class="workshop-location reveal">Sakarya / Sapanca · Türkiye · 40.7°N 30.4°E</span>
+    </div>
+    <img src="../images/studio-luminant-production-workshop-photo-02.jpeg"
+         alt="Studio Luminant üretim atölyesi — panel dökümü ve bitirme"
+         class="workshop-photo">
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="expertise">
+  <div class="section-inner">
+    <div class="expertise-layout">
+      <div class="expertise-label">
+        <div class="eyebrow reveal">Yetenekler</div>
+        <h2 class="section-headline reveal">
+          Kapsamlı<br><em>Bilgi Birikimi</em>
+        </h2>
+      </div>
+      <div class="expertise-skills reveal">
+        <div class="skill-tag">Beton Döküm</div>
+        <div class="skill-tag">Soğuk Döküm</div>
+        <div class="skill-tag">Poliüretan Döküm</div>
+        <div class="skill-tag">GFRC Döküm</div>
+        <div class="skill-tag">Silikon Döküm</div>
+        <div class="skill-tag">Fonksiyonel Katkılar</div>
+        <div class="skill-tag">Otomotiv Bitirme</div>
+        <div class="skill-tag">GRG Döküm</div>
+        <div class="skill-tag">2K Bitirme</div>
+        <div class="skill-tag">LED / Aydınlatma</div>
+        <div class="skill-tag">Kompozitler</div>
+        <div class="skill-tag">PU Köpük Döküm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section id="process-cta">
+  <div class="section-inner">
+    <h2 class="cta-headline reveal">
+      Projenizi Belirlemeye<br><em>Hazır Mısınız?</em>
+    </h2>
+    <p class="cta-sub reveal">
+      Briffinginizi ekibimizle paylaşın. 5 iş günü içinde malzeme önerisi, panel eskizi ve tahmini zaman çizelgesi ile dönüş yapacağız.
+    </p>
+    <a href="iletisim.htm" class="btn-primary reveal">
+      Proje Başlat
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="Studio Luminant — Mimari Rölyef Üretimi.htm" class="logo">
+          <img src="../images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">Üst düzey mimari ve konaklama mekansal tasarımı için öncü üretim ortağı.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Üretim Merkezi</div>
+        <span class="footer-location-eyebrow">Konum</span>
+        <div class="footer-location-name">Sakarya / Sapanca<br>Türkiye</div>
+        <p class="footer-location-note">Küresel Dağıtım ve Montaj Hazır</p>
+      </div>
+      <div class="footer-cta-block">
+        <div class="footer-col-title">Proje Başlat</div>
+        <a href="mailto:strategy@studioluminant.com">
+          Proje Başlat
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+        <p>strategy@studioluminant.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Studio Luminant. Tüm Hakları Saklıdır.</p>
+      <ul class="footer-links">
+        <li><a href="#">BIM Dosyaları</a></li>
+        <li><a href="#">Gizlilik</a></li>
+        <li><a href="#">Uyumluluk</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="coord-tag">40.7°N — 30.4°E — Sakarya, TR</div>
+
+<script>
+  // Cursor
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+  });
+
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  document.querySelectorAll('a, button, .skill-tag').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+  });
+
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => { entry.target.classList.add('visible'); }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

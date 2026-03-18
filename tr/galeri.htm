@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolyo — Studio Luminant</title>
+<meta name="description" content="Studio Luminant'ın lüks iç mekanlar için özel mimari rölyef panel portfolyosunu keşfedin. Konaklama ve üst düzey konut projelerinde Lumina PMAG™ ve PUCOMP™ uygulamaları.">
+<link rel="canonical" href="https://www.studioluminant.com/tr/galeri.htm">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="Portfolyo — Studio Luminant">
+<meta property="og:description" content="Studio Luminant'ın lüks iç mekanlar için özel mimari rölyef panel portfolyosunu keşfedin. Konaklama ve üst düzey konut projelerinde Lumina PMAG™ ve PUCOMP™ uygulamaları.">
+<meta property="og:url" content="https://www.studioluminant.com/tr/galeri.htm">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Portfolyo — Studio Luminant">
+<meta name="twitter:description" content="Studio Luminant'ın lüks iç mekanlar için özel mimari rölyef panel portfolyosunu keşfedin. Konaklama ve üst düzey konut projelerinde Lumina PMAG™ ve PUCOMP™ uygulamaları.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="../Studio%20Luminant%20%E2%80%94%20Architectural%20Relief%20Manufacturing_files/css2.css" rel="stylesheet">
+
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dim: #8A6E2F;
+    --obsidian: #0C0C0E;
+    --deep: #111114;
+    --surface: #18181D;
+    --surface-2: #1F1F26;
+    --border: rgba(201,168,76,0.18);
+    --text-primary: #F0EAD6;
+    --text-secondary: #9A9088;
+    --text-muted: #5A5450;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--obsidian);
+    color: var(--text-primary);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* ─── CUSTOM CURSOR ─────────────────── */
+  .cursor-dot {
+    width: 6px; height: 6px;
+    background: var(--gold); border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: transform 0.08s ease;
+  }
+  .cursor-ring {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(201,168,76,0.5);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9998;
+    transform: translate(-50%,-50%);
+    transition: transform 0.18s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
+  }
+  .cursor-ring.hover { width: 56px; height: 56px; opacity: 0.6; }
+
+  /* ─── NOISE TEXTURE ─────────────────── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1; opacity: 0.4;
+  }
+
+  /* ─── NAV ───────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 28px 60px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(12,12,14,0.9);
+    backdrop-filter: blur(12px);
+    border-color: var(--border);
+    padding: 18px 60px;
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-img { height: 44px; width: auto; display: block; transition: opacity 0.3s ease, height 0.4s ease; }
+  .nav-logo:hover .nav-logo-img { opacity: 0.8; }
+  nav.scrolled .nav-logo-img { height: 34px; }
+  .nav-links { display: flex; align-items: center; gap: 48px; list-style: none; }
+  .nav-links a {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-secondary);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--obsidian);
+    background: var(--gold); padding: 10px 24px;
+    text-decoration: none; transition: background 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* ─── SECTION BASE ──────────────────── */
+  section { position: relative; z-index: 2; }
+  .section-inner { max-width: 1280px; margin: 0 auto; padding: 0 60px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold);
+    font-weight: 400; margin-bottom: 32px;
+  }
+  .eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+
+  /* ─── GALLERY HERO ──────────────────── */
+  #gallery-hero {
+    min-height: 50vh;
+    background: var(--deep);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    padding: 140px 60px 80px;
+  }
+
+  /* Grid-line pattern overlay */
+  #gallery-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px);
+    pointer-events: none;
+  }
+
+  .gallery-hero-inner {
+    position: relative; z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 60px;
+  }
+
+  .gallery-hero-left {}
+
+  .gallery-hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(72px, 7vw, 120px);
+    font-weight: 300; line-height: 0.92;
+    color: var(--text-primary);
+    opacity: 0; animation: fadeUp 0.9s ease 0.3s forwards;
+  }
+  .gallery-hero-headline em { font-style: italic; color: var(--gold); }
+
+  .gallery-hero-right {
+    max-width: 360px; text-align: right; flex-shrink: 0;
+  }
+
+  .gallery-hero-sub {
+    font-size: 14px; line-height: 1.85;
+    color: var(--text-secondary); font-weight: 300;
+    opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
+  }
+
+  /* ─── GALLERY SECTION ───────────────── */
+  #gallery-section {
+    background: var(--obsidian);
+    padding: 80px 0 160px;
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    display: flex; align-items: center; gap: 2px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; font-weight: 400;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+  }
+  .filter-btn:hover { color: var(--gold); border-color: var(--gold); }
+  .filter-btn.active {
+    background: var(--gold);
+    color: var(--obsidian);
+    border-color: var(--gold);
+  }
+
+  /* Masonry grid */
+  .gallery-grid {
+    columns: 3;
+    column-gap: 2px;
+  }
+
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 2px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background: var(--surface);
+  }
+
+  .gallery-item img {
+    width: 100%; display: block;
+    transition: transform 0.6s cubic-bezier(.25,.46,.45,.94), filter 0.4s;
+    filter: grayscale(10%);
+  }
+  .gallery-item:hover img { transform: scale(1.04); filter: grayscale(0%); }
+
+  .gallery-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 40px 20px 16px;
+    background: linear-gradient(to top, rgba(12,12,14,0.85), transparent);
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .gallery-item:hover .gallery-caption { opacity: 1; }
+  .gallery-caption span {
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--text-secondary);
+  }
+
+  /* ─── FOOTER ────────────────────────── */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    padding: 100px 0 48px;
+  }
+  .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 60px; }
+  .footer-top {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px; margin-bottom: 80px;
+  }
+  .footer-brand .logo {
+    font-size: 16px; letter-spacing: 0.24em;
+    color: var(--text-primary); text-transform: uppercase;
+    text-decoration: none; display: block; margin-bottom: 20px;
+  }
+  .footer-tagline { font-size: 12px; line-height: 1.75; color: var(--text-muted); font-weight: 300; max-width: 280px; }
+  .footer-col-title { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+  .footer-location-eyebrow { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
+  .footer-location-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: var(--text-primary); margin-bottom: 8px; }
+  .footer-location-note { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+  .footer-cta-block a {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--obsidian); background: var(--gold);
+    padding: 14px 28px; text-decoration: none; transition: background 0.3s;
+  }
+  .footer-cta-block a:hover { background: var(--gold-light); }
+  .footer-cta-block p { font-size: 11px; color: var(--text-muted); margin-top: 14px; font-weight: 300; }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 32px; border-top: 1px solid var(--border);
+  }
+  .footer-copy { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+  .footer-links { display: flex; gap: 32px; list-style: none; }
+  .footer-links a { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-logo-img { height: 52px; width: auto; display: block; margin-bottom: 16px; opacity: 0.9; }
+
+  /* ─── SCROLL REVEAL ─────────────────── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── ANIMATIONS ────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── FLOATING COORD ────────────────── */
+  .coord-tag {
+    position: fixed; bottom: 32px; left: 60px;
+    font-size: 9px; letter-spacing: 0.2em;
+    color: var(--text-muted); text-transform: uppercase; z-index: 100;
+  }
+
+  /* ─── RESPONSIVE ────────────────────── */
+  @media (max-width: 1024px) {
+    nav { padding: 20px 32px; }
+    nav.scrolled { padding: 16px 32px; }
+    .nav-links { display: none; }
+    .coord-tag { display: none; }
+    .section-inner { padding: 0 32px; }
+    #gallery-hero { padding: 120px 32px 60px; }
+    .gallery-hero-inner { flex-direction: column; align-items: flex-start; gap: 40px; }
+    .gallery-hero-right { text-align: left; }
+    .gallery-grid { columns: 2; }
+    .footer-top { grid-template-columns: 1fr; gap: 48px; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-inner { padding: 0 32px; }
+  }
+  @media (max-width: 600px) {
+    .gallery-grid { columns: 1; }
+    #gallery-section { padding: 60px 0 100px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="Studio Luminant — Mimari Rölyef Üretimi.htm" class="nav-logo">
+    <img src="../images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="urunler.htm">Ürünler</a></li>
+    <li><a href="surec.htm">Süreç</a></li>
+    <li><a href="galeri.htm">Galeri</a></li>
+    <li><a href="iletisim.htm">İletişim</a></li>
+  </ul>
+  <a href="iletisim.htm" class="nav-cta">Proje Başlat</a>
+</nav>
+
+<!-- GALLERY HERO -->
+<section id="gallery-hero">
+  <div class="gallery-hero-inner">
+    <div class="gallery-hero-left">
+      <div class="eyebrow">Tamamlanan İşler</div>
+      <h1 class="gallery-hero-headline">
+        <em>Portfolyo</em>
+      </h1>
+    </div>
+    <div class="gallery-hero-right">
+      <p class="gallery-hero-sub">
+        Geometrik, organik, miras ve konaklama tipolojilerini kapsayan monte edilmiş paneller, prototip çalışmaları ve renderlanmış projelerden bir seçki.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section id="gallery-section">
+  <div class="section-inner">
+
+    <!-- Filter bar -->
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">Tümü</button>
+      <button class="filter-btn" data-filter="geometric">Geometrik</button>
+      <button class="filter-btn" data-filter="organic">Organik</button>
+      <button class="filter-btn" data-filter="heritage">Miras</button>
+      <button class="filter-btn" data-filter="hospitality">Konaklama</button>
+    </div>
+
+    <!-- Masonry grid -->
+    <div class="gallery-grid">
+
+      <!-- GEOMETRIC (17) -->
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.jpg" alt="Petal geometric relief panels — lounge installation" loading="lazy">
+        <div class="gallery-caption"><span>Petal Lounge</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation.jpg" alt="Wave relief wall panels — luxury lounge" loading="lazy">
+        <div class="gallery-caption"><span>Wave Lounge</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.jpg" alt="Circular geometric relief panels — hospitality interior" loading="lazy">
+        <div class="gallery-caption"><span>Circular Geometric</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg" alt="Geometric pinwheel relief wall cladding — lounge" loading="lazy">
+        <div class="gallery-caption"><span>Pinwheel</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-variant.jpg" alt="Geometric pinwheel relief wall cladding — variant" loading="lazy">
+        <div class="gallery-caption"><span>Pinwheel Variant</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1.jpg" alt="Geometric pattern wall panel — variant 1" loading="lazy">
+        <div class="gallery-caption"><span>Geo Pattern I</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2.jpg" alt="Geometric pattern wall panel — variant 2" loading="lazy">
+        <div class="gallery-caption"><span>Geo Pattern II</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-3.jpg" alt="Geometric pattern wall panel — variant 3" loading="lazy">
+        <div class="gallery-caption"><span>Geo Pattern III</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-4.jpg" alt="Geometric pattern wall panel — variant 4" loading="lazy">
+        <div class="gallery-caption"><span>Geo Pattern IV</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-architectural-relief-diagonal-wave-wall-panel.jpg" alt="Diagonal wave wall panel" loading="lazy">
+        <div class="gallery-caption"><span>Diagonal Wave</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-architectural-relief-faceted-crystal-diagonal-wall-panel.jpg" alt="Faceted crystal diagonal wall panel" loading="lazy">
+        <div class="gallery-caption"><span>Faceted Crystal</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2.jpg" alt="50×50cm modular gypsum wall panel — v2" loading="lazy">
+        <div class="gallery-caption"><span>50×50cm Modular II</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v3.jpg" alt="50×50cm modular gypsum wall panel — v3" loading="lazy">
+        <div class="gallery-caption"><span>50×50cm Modular III</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v4.jpg" alt="50×50cm modular gypsum wall panel — v4" loading="lazy">
+        <div class="gallery-caption"><span>50×50cm Modular IV</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-3d-tile-design-variants-architectural-relief-panel.jpg" alt="3D tile design variants — architectural relief panel" loading="lazy">
+        <div class="gallery-caption"><span>3D Tile Variants</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup.jpg" alt="Framed 30×30cm 3D architectural relief panel closeup" loading="lazy">
+        <div class="gallery-caption"><span>Framed 30×30cm</span></div>
+      </div>
+      <div class="gallery-item" data-category="geometric">
+        <img src="../images/studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg" alt="Geometric star relief wall panels — luxury hospitality" loading="lazy">
+        <div class="gallery-caption"><span>Geometric Star</span></div>
+      </div>
+
+      <!-- ORGANIC (8) -->
+      <div class="gallery-item" data-category="organic">
+        <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-2.jpg" alt="Surface wall panel — variant 2" loading="lazy">
+        <div class="gallery-caption"><span>Surface Study II</span></div>
+      </div>
+      <div class="gallery-item" data-category="organic">
+        <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-6.jpg" alt="Surface wall panel — variant 6" loading="lazy">
+        <div class="gallery-caption"><span>Surface Study VI</span></div>
+      </div>
+      <div class="gallery-item" data-category="organic">
+        <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-7.jpg" alt="Surface wall panel — variant 7" loading="lazy">
+        <div class="gallery-caption"><span>Surface Study VII</span></div>
+      </div>
+      <div class="gallery-item" data-category="organic">
+        <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-8.jpg" alt="Surface wall panel — variant 8" loading="lazy">
+        <div class="gallery-caption"><span>Surface Study VIII</span></div>
+      </div>
+      <div class="gallery-item" data-category="organic">
+        <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-9.jpg" alt="Surface wall panel — variant 9" loading="lazy">
+        <div class="gallery-caption"><span>Surface Study IX</span></div>
+      </div>
+      <div class="gallery-item" data-category="organic">
+        <img src="../images/studio-luminant-architectural-relief-wall-panel-product-shot-variant.jpg" alt="Architectural relief wall panel — product shot" loading="lazy">
+        <div class="gallery-caption"><span>Product Study</span></div>
+      </div>
+      <div class="gallery-item" data-category="organic">
+        <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png" alt="Lumina PMAG organic cell relief wall panel" loading="lazy">
+        <div class="gallery-caption"><span>Organic Cell Panel</span></div>
+      </div>
+      <div class="gallery-item" data-category="organic">
+        <img src="../images/studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup.jpg" alt="Bas relief wall panel tile — closeup detail" loading="lazy">
+        <div class="gallery-caption"><span>Bas Relief Closeup</span></div>
+      </div>
+
+      <!-- HERITAGE (5) -->
+      <div class="gallery-item" data-category="heritage">
+        <img src="../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg" alt="Ottoman heritage gypsum relief tile — Islamic geometric pattern" loading="lazy">
+        <div class="gallery-caption"><span>Ottoman Heritage</span></div>
+      </div>
+      <div class="gallery-item" data-category="heritage">
+        <img src="../images/studio-luminant-architectural-relief-compass-star-wall-panel.jpg" alt="Compass star relief wall panel" loading="lazy">
+        <div class="gallery-caption"><span>Compass Star</span></div>
+      </div>
+      <div class="gallery-item" data-category="heritage">
+        <img src="../images/studio-luminant-architectural-relief-fluted-column-wall-panel.jpg" alt="Fluted column relief wall panel" loading="lazy">
+        <div class="gallery-caption"><span>Fluted Column</span></div>
+      </div>
+      <div class="gallery-item" data-category="heritage">
+        <img src="../images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design.jpg" alt="Neo-heritage modular wall panel design" loading="lazy">
+        <div class="gallery-caption"><span>Neo Heritage Modular</span></div>
+      </div>
+      <div class="gallery-item" data-category="heritage">
+        <img src="../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.jpg" alt="Lumina PMAG Ottoman geometric gypsum relief panel — gold accent" loading="lazy">
+        <div class="gallery-caption"><span>Ottoman Gold Accent</span></div>
+      </div>
+
+      <!-- HOSPITALITY (11) -->
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.png" alt="Framed acoustic relief panels — lobby installation" loading="lazy">
+        <div class="gallery-caption"><span>Framed Acoustic Lobby</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception.png" alt="Lumina PMAG organic cell relief panels — hotel lobby reception" loading="lazy">
+        <div class="gallery-caption"><span>Organic Cell Lobby</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-organic-cell-relief-hotel-reception-architectural-render.jpg" alt="Organic cell relief — hotel reception render" loading="lazy">
+        <div class="gallery-caption"><span>Organic Cell Reception</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design.png" alt="Bespoke architectural relief — hospitality lobby design" loading="lazy">
+        <div class="gallery-caption"><span>Bespoke Hospitality Lobby</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.png" alt="Luxury hotel lobby organic relief wall cladding" loading="lazy">
+        <div class="gallery-caption"><span>Luxury Hotel Lobby</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior.png" alt="Geometric relief wall panels — restaurant hospitality interior" loading="lazy">
+        <div class="gallery-caption"><span>Geometric Restaurant</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd.jpg" alt="Architectural relief wall panels — hospitality interior HD" loading="lazy">
+        <div class="gallery-caption"><span>Hospitality Interior</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-architectural-relief-wall-texture-hospitality-installation.jpg" alt="Architectural relief wall texture — hospitality installation" loading="lazy">
+        <div class="gallery-caption"><span>Texture Hospitality</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-architectural-relief-hotel-reception-cladding-presentation.jpg" alt="Architectural relief — hotel reception cladding presentation" loading="lazy">
+        <div class="gallery-caption"><span>Hotel Reception Cladding</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render.png" alt="3D relief wall panels — hotel lobby reception render" loading="lazy">
+        <div class="gallery-caption"><span>3D Relief Hotel Lobby</span></div>
+      </div>
+      <div class="gallery-item" data-category="hospitality">
+        <img src="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.jpg" alt="Lumina PMAG gypsum relief panel — HD detail" loading="lazy">
+        <div class="gallery-caption"><span>Lumina PMAG HD</span></div>
+      </div>
+
+    </div><!-- end gallery-grid -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="Studio Luminant — Mimari Rölyef Üretimi.htm" class="logo">
+          <img src="../images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">Üst düzey mimari ve konaklama mekansal tasarımı için öncü üretim ortağı.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Üretim Merkezi</div>
+        <span class="footer-location-eyebrow">Konum</span>
+        <div class="footer-location-name">Sakarya / Sapanca<br>Türkiye</div>
+        <p class="footer-location-note">Küresel Dağıtım ve Montaj Hazır</p>
+      </div>
+      <div class="footer-cta-block">
+        <div class="footer-col-title">Proje Başlat</div>
+        <a href="mailto:strategy@studioluminant.com">
+          Proje Başlat
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+        <p>strategy@studioluminant.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Studio Luminant. Tüm Hakları Saklıdır.</p>
+      <ul class="footer-links">
+        <li><a href="#">BIM Dosyaları</a></li>
+        <li><a href="#">Gizlilik</a></li>
+        <li><a href="#">Uyumluluk</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="coord-tag">40.7°N — 30.4°E — Sakarya, TR</div>
+
+<script>
+  // Cursor
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+  });
+
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+  });
+
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => { entry.target.classList.add('visible'); }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Gallery filter
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        item.style.display = (f === 'all' || item.dataset.category === f) ? '' : 'none';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

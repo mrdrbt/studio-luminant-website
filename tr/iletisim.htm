@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İletişim — Studio Luminant</title>
+<meta name="description" content="Mimari rölyef panel projenizi görüşmek için Studio Luminant ile iletişime geçin. Lüks konaklama, perakende ve konut geliştiricilerinden gelen talepler memnuniyetle karşılanır.">
+<link rel="canonical" href="https://www.studioluminant.com/tr/iletisim.htm">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="İletişim — Studio Luminant">
+<meta property="og:description" content="Mimari rölyef panel projenizi görüşmek için Studio Luminant ile iletişime geçin. Lüks konaklama, perakende ve konut geliştiricilerinden gelen talepler memnuniyetle karşılanır.">
+<meta property="og:url" content="https://www.studioluminant.com/tr/iletisim.htm">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="İletişim — Studio Luminant">
+<meta name="twitter:description" content="Mimari rölyef panel projenizi görüşmek için Studio Luminant ile iletişime geçin. Lüks konaklama, perakende ve konut geliştiricilerinden gelen talepler memnuniyetle karşılanır.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="../Studio%20Luminant%20%E2%80%94%20Architectural%20Relief%20Manufacturing_files/css2.css" rel="stylesheet">
+
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dim: #8A6E2F;
+    --obsidian: #0C0C0E;
+    --deep: #111114;
+    --surface: #18181D;
+    --surface-2: #1F1F26;
+    --border: rgba(201,168,76,0.18);
+    --text-primary: #F0EAD6;
+    --text-secondary: #9A9088;
+    --text-muted: #5A5450;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--obsidian);
+    color: var(--text-primary);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* ─── CUSTOM CURSOR ─────────────────── */
+  .cursor-dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: transform 0.08s ease;
+  }
+  .cursor-ring {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(201,168,76,0.5);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9998;
+    transform: translate(-50%,-50%);
+    transition: transform 0.18s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
+  }
+  .cursor-ring.hover { width: 56px; height: 56px; opacity: 0.6; }
+
+  /* ─── NOISE TEXTURE ─────────────────── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1; opacity: 0.4;
+  }
+
+  /* ─── NAV ───────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 28px 60px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(12,12,14,0.9);
+    backdrop-filter: blur(12px);
+    border-color: var(--border);
+    padding: 18px 60px;
+  }
+  .nav-logo {
+    display: flex; align-items: center;
+    text-decoration: none; flex-shrink: 0;
+  }
+  .nav-logo-img {
+    height: 44px; width: auto; display: block;
+    transition: opacity 0.3s ease, height 0.4s ease;
+  }
+  .nav-logo:hover .nav-logo-img { opacity: 0.8; }
+  nav.scrolled .nav-logo-img { height: 34px; }
+  .nav-links {
+    display: flex; align-items: center; gap: 48px; list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--text-secondary); text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--obsidian); background: var(--gold);
+    padding: 10px 24px; text-decoration: none;
+    transition: background 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold-light); }
+
+  /* ─── SECTION BASE ──────────────────── */
+  section { position: relative; z-index: 2; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold);
+    font-weight: 400; margin-bottom: 32px;
+  }
+  .eyebrow::before {
+    content: ''; width: 24px; height: 1px; background: var(--gold);
+  }
+
+  /* ─── CONTACT MAIN ──────────────────── */
+  #contact-main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Left panel */
+  .contact-left {
+    background: var(--deep);
+    padding: 160px 80px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid var(--border);
+  }
+
+  .contact-left::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px);
+    pointer-events: none;
+  }
+
+  .contact-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 5vw, 80px);
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 36px;
+    position: relative;
+  }
+  .contact-headline em { font-style: italic; color: var(--gold); }
+
+  .contact-intro {
+    font-size: 14px; line-height: 1.85;
+    color: var(--text-secondary); font-weight: 300;
+    max-width: 400px;
+    margin-bottom: 64px;
+    position: relative;
+  }
+
+  .contact-details {
+    display: flex; flex-direction: column; gap: 32px;
+    position: relative;
+  }
+
+  .contact-detail-item {
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .contact-detail-label {
+    font-size: 9px; letter-spacing: 0.32em;
+    text-transform: uppercase; color: var(--gold);
+    font-weight: 400;
+  }
+  .contact-detail-value {
+    font-size: 14px; color: var(--text-primary);
+    font-weight: 300;
+  }
+  .contact-detail-value a {
+    color: var(--text-primary); text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.3s, border-color 0.3s;
+  }
+  .contact-detail-value a:hover { color: var(--gold); border-color: var(--gold); }
+
+  /* Right panel — form */
+  .contact-right {
+    background: var(--surface);
+    padding: 160px 80px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 48px;
+  }
+
+  .contact-form {
+    display: flex; flex-direction: column; gap: 0;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+
+  .form-field {
+    display: flex; flex-direction: column;
+    margin-bottom: 2px;
+  }
+
+  .form-field label {
+    font-size: 9px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    background: var(--deep);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-family: 'Jost', sans-serif;
+    font-size: 13px; font-weight: 300;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: var(--gold);
+  }
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    color: var(--text-muted);
+  }
+  .form-field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A5450' stroke-width='1.2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+  }
+  .form-field select option {
+    background: var(--deep);
+    color: var(--text-primary);
+  }
+  .form-field textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.7;
+  }
+
+  .form-submit {
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--obsidian); background: var(--gold);
+    padding: 16px 32px;
+    border: none; cursor: pointer;
+    width: 100%;
+    margin-top: 2px;
+    transition: background 0.3s, gap 0.3s;
+  }
+  .form-submit:hover { background: var(--gold-light); gap: 20px; }
+  .form-submit svg { width: 14px; height: 14px; }
+
+  .form-note {
+    font-size: 10px; color: var(--text-muted);
+    margin-top: 14px; font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ─── FOOTER ────────────────────────── */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    padding: 100px 0 48px;
+  }
+  .footer-inner {
+    max-width: 1280px; margin: 0 auto; padding: 0 60px;
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px; margin-bottom: 80px;
+  }
+  .footer-brand .logo {
+    font-family: 'Cinzel', serif;
+    font-size: 16px; letter-spacing: 0.24em;
+    color: var(--text-primary); text-transform: uppercase;
+    text-decoration: none; display: block; margin-bottom: 20px;
+  }
+  .footer-brand .logo span { color: var(--gold); }
+  .footer-tagline {
+    font-size: 12px; line-height: 1.75;
+    color: var(--text-muted); font-weight: 300; max-width: 280px;
+  }
+  .footer-col-title {
+    font-size: 10px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
+  }
+  .footer-location-eyebrow {
+    font-size: 9px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--text-muted);
+    display: block; margin-bottom: 8px;
+  }
+  .footer-location-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 300;
+    color: var(--text-primary); margin-bottom: 8px;
+  }
+  .footer-location-note { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+  .footer-cta-block a {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--obsidian); background: var(--gold);
+    padding: 14px 28px; text-decoration: none;
+    transition: background 0.3s;
+  }
+  .footer-cta-block a:hover { background: var(--gold-light); }
+  .footer-cta-block p { font-size: 11px; color: var(--text-muted); margin-top: 14px; font-weight: 300; }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 32px; border-top: 1px solid var(--border);
+  }
+  .footer-copy { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+  .footer-links { display: flex; gap: 32px; list-style: none; }
+  .footer-links a {
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--text-muted);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-logo-img {
+    height: 52px; width: auto; display: block;
+    margin-bottom: 16px; opacity: 0.9;
+  }
+
+  /* ─── SCROLL REVEAL ─────────────────── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── FLOATING COORD ────────────────── */
+  .coord-tag {
+    position: fixed; bottom: 32px; left: 60px;
+    font-size: 9px; letter-spacing: 0.2em;
+    color: var(--text-muted); text-transform: uppercase;
+    z-index: 100;
+  }
+
+  /* ─── RESPONSIVE ────────────────────── */
+  @media (max-width: 1024px) {
+    nav { padding: 20px 32px; }
+    nav.scrolled { padding: 16px 32px; }
+    .nav-links { display: none; }
+    .coord-tag { display: none; }
+    #contact-main { grid-template-columns: 1fr; }
+    .contact-left { padding: 140px 32px 80px; }
+    .contact-right { padding: 60px 32px 80px; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 48px; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-inner { padding: 0 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="Studio Luminant — Mimari Rölyef Üretimi.htm" class="nav-logo">
+    <img src="../images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="urunler.htm">Ürünler</a></li>
+    <li><a href="surec.htm">Süreç</a></li>
+    <li><a href="galeri.htm">Galeri</a></li>
+    <li><a href="iletisim.htm">İletişim</a></li>
+  </ul>
+  <a href="iletisim.htm" class="nav-cta">Proje Başlat</a>
+</nav>
+
+<!-- CONTACT MAIN -->
+<section id="contact-main">
+
+  <!-- Left: info panel -->
+  <div class="contact-left">
+    <div class="eyebrow reveal">Proje Talepleri</div>
+    <h1 class="contact-headline reveal">
+      Birlikte<br><em>İnşa Edelim.</em>
+    </h1>
+    <p class="contact-intro reveal">
+      Her özel sipariş bir sohbetle başlar. Projenizi anlatın — ölçek, geometri, zaman çizelgesi ve yüzey bitirme hedefleriniz. 5 iş günü içinde malzeme önerisi ve ön eskiz ile yanıt veriyoruz.
+    </p>
+    <div class="contact-details reveal">
+      <div class="contact-detail-item">
+        <span class="contact-detail-label">E-posta</span>
+        <div class="contact-detail-value">
+          <a href="mailto:strategy@studioluminant.com">strategy@studioluminant.com</a>
+        </div>
+      </div>
+      <div class="contact-detail-item">
+        <span class="contact-detail-label">Üretim Merkezi</span>
+        <div class="contact-detail-value">Sakarya / Sapanca, Türkiye</div>
+      </div>
+      <div class="contact-detail-item">
+        <span class="contact-detail-label">Dağıtım</span>
+        <div class="contact-detail-value">Küresel — Orta Doğu · Kafkasya · Doğu Avrupa</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: form -->
+  <div class="contact-right">
+    <div class="form-title reveal">Talep Gönderin</div>
+    <form class="contact-form reveal" action="mailto:strategy@studioluminant.com" method="post" enctype="text/plain">
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">İsim</label>
+          <input type="text" id="name" name="Name" placeholder="Adınız ve soyadınız">
+        </div>
+        <div class="form-field">
+          <label for="company">Firma</label>
+          <input type="text" id="company" name="Company" placeholder="Firma veya ofis">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="project-type">Proje Türü</label>
+        <select id="project-type" name="Project Type">
+          <option value="">Proje Türü Seçin</option>
+          <option value="Luxury Hotel">Lüks Otel</option>
+          <option value="High-End Residential">Üst Düzey Konut</option>
+          <option value="Retail &amp; F&amp;B">Perakende ve Yeme-İçme</option>
+          <option value="Cultural Institution">Kültürel Kurum</option>
+          <option value="Other">Diğer</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="message">Mesaj</label>
+        <textarea id="message" name="Message" placeholder="Projenizi tanımlayın — ölçek, geometri, zaman çizelgesi, yüzey bitirme gereksinimleri…"></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">
+        Talep Gönder
+        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+
+      <p class="form-note">Mesajınız e-posta istemcinizde önceden doldurulmuş olarak açılacaktır.</p>
+    </form>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="Studio Luminant — Mimari Rölyef Üretimi.htm" class="logo">
+          <img src="../images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">Üst düzey mimari ve konaklama mekansal tasarımı için öncü üretim ortağı.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Üretim Merkezi</div>
+        <span class="footer-location-eyebrow">Konum</span>
+        <div class="footer-location-name">Sakarya / Sapanca<br>Türkiye</div>
+        <p class="footer-location-note">Küresel Dağıtım ve Montaj Hazır</p>
+      </div>
+      <div class="footer-cta-block">
+        <div class="footer-col-title">Proje Başlat</div>
+        <a href="mailto:strategy@studioluminant.com">
+          Proje Başlat
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+        <p>strategy@studioluminant.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Studio Luminant. Tüm Hakları Saklıdır.</p>
+      <ul class="footer-links">
+        <li><a href="#">BIM Dosyaları</a></li>
+        <li><a href="#">Gizlilik</a></li>
+        <li><a href="#">Uyumluluk</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="coord-tag">40.7°N — 30.4°E — Sakarya, TR</div>
+
+<script>
+  // Cursor
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+  });
+
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+  });
+
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => { entry.target.classList.add('visible'); }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
