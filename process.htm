@@ -259,6 +259,21 @@
     max-width: 400px;
   }
 
+  .process-step-sustain {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold-dim);
+    font-weight: 400; margin-top: 20px;
+    max-width: 400px;
+  }
+  .process-step-sustain::before {
+    content: ''; display: block;
+    width: 6px; height: 6px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
   /* ─── WORKSHOP ──────────────────────── */
   #workshop {
     background: var(--obsidian);
@@ -497,6 +512,7 @@
       <div class="process-step-label">Step 01 — Design</div>
       <h2 class="process-step-headline">Parametric<br>Design Brief</h2>
       <p class="process-step-desc">Every project starts with a computational design brief. We translate the architect's spatial intent — pattern language, depth, geometry — into parametric constraints that drive every downstream decision. BIM-ready outputs are included as standard.</p>
+      <p class="process-step-sustain">Parametric constraints minimise material specification from the first decision</p>
     </div>
   </div>
 
@@ -510,6 +526,7 @@
       <div class="process-step-label">Step 02 — Modelling</div>
       <h2 class="process-step-headline">AIAPM<br>Digital Modelling</h2>
       <p class="process-step-desc">Our proprietary AI-Assisted Product Modelling pipeline converts the design brief into high-fidelity 3D surface models. Iteration is fast and non-destructive — changes at this stage cost nothing. The model drives the mould directly, eliminating manual translation error.</p>
+      <p class="process-step-sustain">Non-destructive digital iteration — zero physical prototyping waste</p>
     </div>
   </div>
 
@@ -523,6 +540,7 @@
       <div class="process-step-label">Step 03 — Moulding</div>
       <h2 class="process-step-headline">Precision<br>Master Mould</h2>
       <p class="process-step-desc">CNC-machined master moulds are produced directly from the digital model. Silicone or polyurethane production moulds are cast from the master, enabling unlimited reproduction runs without geometric degradation. Mould costs are absorbed across the production volume.</p>
+      <p class="process-step-sustain">Reusable production moulds — one master serves the full production run</p>
     </div>
   </div>
 
@@ -536,6 +554,7 @@
       <div class="process-step-label">Step 04 — Casting</div>
       <h2 class="process-step-headline">Vertical<br>In-House Casting</h2>
       <p class="process-step-desc">Lumina PMAG™ (Polymer Modified Alpha Gypsum) and Lumina PUCOMP™ panels are cast vertically in our Sakarya facility under controlled conditions. Alpha gypsum produces a denser, harder surface than beta-grade alternatives. Each batch is tested for compressive strength and surface integrity before release.</p>
+      <p class="process-step-sustain">Alpha gypsum calcined at 150°C — a fraction of cement or ceramic processing energy</p>
     </div>
   </div>
 
@@ -549,6 +568,7 @@
       <div class="process-step-label">Step 05 — Finishing</div>
       <h2 class="process-step-headline">Automotive-Grade<br>2K Finish</h2>
       <p class="process-step-desc">Every panel is finished using a two-component automotive coating system — the same technology applied to luxury vehicle exteriors. The result is a micro-smooth surface in any RAL or custom colour, resistant to humidity, UV, and impact. Custom textures, metallic effects, and patinas are available.</p>
+      <p class="process-step-sustain">Automotive-grade coating extends service life — spot-repairable without full panel replacement</p>
     </div>
   </div>
 
