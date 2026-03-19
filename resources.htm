@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Studio Luminant</title>
-<meta name="description" content="Commission bespoke architectural elements from Studio Luminant. Enquiries from luxury hospitality, retail, residential developers, and interior designers welcome.">
-<link rel="canonical" href="https://www.studioluminant.com/contact.htm">
+<title>Resources — Studio Luminant</title>
+<meta name="description" content="Technical resources for architects specifying architectural relief panels. Fire ratings, specification guidance, weight data, and structural interface details.">
+<link rel="canonical" href="https://www.studioluminant.com/resources.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
-<meta property="og:title" content="Contact — Studio Luminant">
-<meta property="og:description" content="Commission bespoke architectural elements from Studio Luminant. Enquiries from luxury hospitality, retail, residential developers, and interior designers welcome.">
-<meta property="og:url" content="https://www.studioluminant.com/contact.htm">
+<meta property="og:title" content="Technical Resources — Studio Luminant">
+<meta property="og:description" content="Fire ratings, specification guidance, weight data, and structural details for architects specifying Lumina PMAG™ and PUCOMP™ relief panels.">
+<meta property="og:url" content="https://www.studioluminant.com/resources.htm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact — Studio Luminant">
-<meta name="twitter:description" content="Commission bespoke architectural elements from Studio Luminant. Enquiries from luxury hospitality, retail, residential developers, and interior designers welcome.">
+<meta name="twitter:title" content="Technical Resources — Studio Luminant">
+<meta name="twitter:description" content="Fire ratings, specification guidance, weight data, and structural details for architects specifying Lumina PMAG™ and PUCOMP™ relief panels.">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="Studio%20Luminant%20%E2%80%94%20Bespoke%20Architectural%20Elements_files/css2.css" rel="stylesheet">
@@ -50,8 +50,7 @@
   /* ─── CUSTOM CURSOR ─────────────────── */
   .cursor-dot {
     width: 6px; height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
+    background: var(--gold); border-radius: 50%;
     position: fixed; top: 0; left: 0;
     pointer-events: none; z-index: 9999;
     transform: translate(-50%,-50%);
@@ -96,34 +95,25 @@
     border-color: var(--border);
     padding: 18px 60px;
   }
-  .nav-logo {
-    display: flex; align-items: center;
-    text-decoration: none; flex-shrink: 0;
-  }
-  .nav-logo-img {
-    height: 44px; width: auto; display: block;
-    transition: opacity 0.3s ease, height 0.4s ease;
-  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-img { height: 44px; width: auto; display: block; transition: opacity 0.3s ease, height 0.4s ease; }
   .nav-logo:hover .nav-logo-img { opacity: 0.8; }
   nav.scrolled .nav-logo-img { height: 34px; }
-  .nav-links {
-    display: flex; align-items: center; gap: 48px; list-style: none;
-  }
+  .nav-links { display: flex; align-items: center; gap: 48px; list-style: none; }
   .nav-links a {
     font-family: 'Jost', sans-serif;
-    font-size: 11px; font-weight: 400;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--text-secondary); text-decoration: none;
-    transition: color 0.3s;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-secondary);
+    text-decoration: none; transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--gold); }
   .nav-cta {
     font-family: 'Jost', sans-serif;
-    font-size: 11px; font-weight: 400;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--obsidian); background: var(--gold);
-    padding: 10px 24px; text-decoration: none;
-    transition: background 0.3s;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--obsidian);
+    background: var(--gold); padding: 10px 24px;
+    text-decoration: none; transition: background 0.3s;
   }
   .nav-cta:hover { background: var(--gold-light); }
   .nav-lang {
@@ -134,187 +124,147 @@
 
   /* ─── SECTION BASE ──────────────────── */
   section { position: relative; z-index: 2; }
+  .section-inner { max-width: 1280px; margin: 0 auto; padding: 0 60px; }
   .eyebrow {
     display: inline-flex; align-items: center; gap: 14px;
     font-size: 10px; letter-spacing: 0.3em;
     text-transform: uppercase; color: var(--gold);
     font-weight: 400; margin-bottom: 32px;
   }
-  .eyebrow::before {
-    content: ''; width: 24px; height: 1px; background: var(--gold);
-  }
+  .eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
 
-  /* ─── CONTACT MAIN ──────────────────── */
-  #contact-main {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* Left panel */
-  .contact-left {
-    background: var(--deep);
-    padding: 160px 80px 100px;
+  /* ─── PAGE HERO ──────────────────────── */
+  #page-hero {
+    min-height: 60vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: flex-end;
     position: relative;
-    overflow: hidden;
-    border-right: 1px solid var(--border);
+    background: var(--deep);
+    border-bottom: 1px solid var(--border);
   }
-
-  .contact-left::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px),
-      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px);
-    pointer-events: none;
+  .page-hero-content {
+    position: relative; z-index: 2;
+    padding: 160px 60px 100px;
+    max-width: 800px;
   }
-
-  .contact-headline {
+  .page-hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 16px;
+    margin-bottom: 40px;
+    opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
+  }
+  .page-hero-eyebrow::before {
+    content: ''; display: block; width: 32px; height: 1px; background: var(--gold);
+  }
+  .page-hero-eyebrow span {
+    font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold); font-weight: 400;
+  }
+  .page-hero-headline {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(52px, 5vw, 80px);
-    font-weight: 300;
-    line-height: 1.0;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
+    font-size: clamp(68px, 7vw, 110px);
+    font-weight: 300; line-height: 0.92;
+    letter-spacing: -0.02em; color: var(--text-primary);
     margin-bottom: 36px;
-    position: relative;
+    opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
   }
-  .contact-headline em { font-style: italic; color: var(--gold); }
+  .page-hero-headline em { font-style: italic; color: var(--gold); }
+  .page-hero-sub {
+    font-size: 14px; font-weight: 300;
+    line-height: 1.75; color: var(--text-secondary);
+    max-width: 520px;
+    opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards;
+  }
 
-  .contact-intro {
+  /* ─── RESOURCE CARDS ─────────────────── */
+  .resources-section {
+    padding: 100px 0;
+  }
+  .resource-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .resource-card {
+    background: var(--surface);
+    padding: 48px 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  .resource-card:hover {
+    background: var(--surface-2);
+  }
+  .resource-card-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px; font-weight: 300;
+    color: var(--gold-dim);
+    margin-bottom: 16px;
+  }
+  .resource-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: 300; line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+  }
+  .resource-card-title em { font-style: italic; color: var(--gold); }
+  .resource-card-desc {
+    font-size: 14px; font-weight: 300;
+    line-height: 1.75; color: var(--text-secondary);
+    max-width: 560px;
+  }
+  .resource-card-arrow {
+    width: 48px; height: 48px;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.3s, background 0.3s;
+    flex-shrink: 0;
+  }
+  .resource-card:hover .resource-card-arrow {
+    border-color: var(--gold);
+    background: var(--gold);
+  }
+  .resource-card-arrow svg {
+    width: 16px; height: 16px;
+    color: var(--text-muted);
+    transition: color 0.3s;
+  }
+  .resource-card:hover .resource-card-arrow svg { color: var(--obsidian); }
+
+  /* ─── CTA STRIP ──────────────────────── */
+  #resources-cta {
+    padding: 120px 0;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .cta-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 4vw, 72px);
+    font-weight: 300; line-height: 1.0;
+    color: var(--text-primary); margin-bottom: 28px;
+  }
+  .cta-headline em { font-style: italic; color: var(--gold); }
+  .cta-sub {
     font-size: 14px; line-height: 1.85;
     color: var(--text-secondary); font-weight: 300;
-    max-width: 400px;
-    margin-bottom: 64px;
-    position: relative;
+    max-width: 520px; margin: 0 auto 48px;
   }
-
-  .contact-details {
-    display: flex; flex-direction: column; gap: 32px;
-    position: relative;
-  }
-
-  .contact-detail-item {
-    display: flex; flex-direction: column; gap: 6px;
-  }
-  .contact-detail-label {
-    font-size: 9px; letter-spacing: 0.32em;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 400;
-  }
-  .contact-detail-value {
-    font-size: 14px; color: var(--text-primary);
-    font-weight: 300;
-  }
-  .contact-detail-value a {
-    color: var(--text-primary); text-decoration: none;
-    border-bottom: 1px solid var(--border);
-    transition: color 0.3s, border-color 0.3s;
-  }
-  .contact-detail-value a:hover { color: var(--gold); border-color: var(--gold); }
-
-  /* Right panel — form */
-  .contact-right {
-    background: var(--surface);
-    padding: 160px 80px 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .form-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px; font-weight: 300;
-    color: var(--text-primary);
-    margin-bottom: 48px;
-  }
-
-  .contact-form {
-    display: flex; flex-direction: column; gap: 0;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    margin-bottom: 2px;
-  }
-
-  .form-field {
-    display: flex; flex-direction: column;
-    margin-bottom: 2px;
-  }
-
-  .form-field label {
-    font-size: 9px; letter-spacing: 0.28em;
-    text-transform: uppercase; color: var(--text-muted);
-    margin-bottom: 8px;
-    font-weight: 400;
-  }
-
-  .form-field input,
-  .form-field select,
-  .form-field textarea {
-    background: var(--deep);
-    border: 1px solid var(--border);
-    color: var(--text-primary);
-    font-family: 'Jost', sans-serif;
-    font-size: 13px; font-weight: 300;
-    padding: 14px 16px;
-    outline: none;
-    transition: border-color 0.3s;
-    -webkit-appearance: none;
-    appearance: none;
-  }
-  .form-field input:focus,
-  .form-field select:focus,
-  .form-field textarea:focus {
-    border-color: var(--gold);
-  }
-  .form-field input::placeholder,
-  .form-field textarea::placeholder {
-    color: var(--text-muted);
-  }
-  .form-field select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A5450' stroke-width='1.2' fill='none'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-    padding-right: 40px;
-    cursor: pointer;
-  }
-  .form-field select option {
-    background: var(--deep);
-    color: var(--text-primary);
-  }
-  .form-field textarea {
-    resize: vertical;
-    min-height: 140px;
-    line-height: 1.7;
-  }
-
-  .form-submit {
-    display: flex; align-items: center; justify-content: center; gap: 12px;
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
     font-family: 'Jost', sans-serif;
     font-size: 11px; font-weight: 400;
     letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--obsidian); background: var(--gold);
-    padding: 16px 32px;
-    border: none; cursor: pointer;
-    width: 100%;
-    margin-top: 2px;
+    padding: 14px 32px; text-decoration: none;
     transition: background 0.3s, gap 0.3s;
   }
-  .form-submit:hover { background: var(--gold-light); gap: 20px; }
-  .form-submit svg { width: 14px; height: 14px; }
-
-  .form-note {
-    font-size: 10px; color: var(--text-muted);
-    margin-top: 14px; font-weight: 300;
-    line-height: 1.6;
-  }
+  .btn-primary:hover { background: var(--gold-light); gap: 20px; }
+  .btn-primary svg { width: 14px; height: 14px; }
 
   /* ─── FOOTER ────────────────────────── */
   footer {
@@ -322,47 +272,24 @@
     border-top: 1px solid var(--border);
     padding: 100px 0 48px;
   }
-  .footer-inner {
-    max-width: 1280px; margin: 0 auto; padding: 0 60px;
-  }
+  .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 60px; }
   .footer-top {
     display: grid; grid-template-columns: 1fr 1fr 1fr;
     gap: 80px; margin-bottom: 80px;
   }
-  .footer-brand .logo {
-    font-family: 'Cinzel', serif;
-    font-size: 16px; letter-spacing: 0.24em;
-    color: var(--text-primary); text-transform: uppercase;
-    text-decoration: none; display: block; margin-bottom: 20px;
-  }
-  .footer-brand .logo span { color: var(--gold); }
-  .footer-tagline {
-    font-size: 12px; line-height: 1.75;
-    color: var(--text-muted); font-weight: 300; max-width: 280px;
-  }
-  .footer-col-title {
-    font-size: 10px; letter-spacing: 0.28em;
-    text-transform: uppercase; color: var(--gold); margin-bottom: 24px;
-  }
-  .footer-location-eyebrow {
-    font-size: 9px; letter-spacing: 0.3em;
-    text-transform: uppercase; color: var(--text-muted);
-    display: block; margin-bottom: 8px;
-  }
-  .footer-location-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px; font-weight: 300;
-    color: var(--text-primary); margin-bottom: 8px;
-  }
+  .footer-brand .logo { text-decoration: none; display: block; margin-bottom: 20px; }
+  .footer-logo-img { height: 52px; width: auto; display: block; margin-bottom: 16px; opacity: 0.9; }
+  .footer-tagline { font-size: 12px; line-height: 1.75; color: var(--text-muted); font-weight: 300; max-width: 280px; }
+  .footer-col-title { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+  .footer-location-eyebrow { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
+  .footer-location-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: var(--text-primary); margin-bottom: 8px; }
   .footer-location-note { font-size: 11px; color: var(--text-muted); font-weight: 300; }
   .footer-cta-block a {
     display: inline-flex; align-items: center; gap: 12px;
-    font-family: 'Jost', sans-serif;
-    font-size: 11px; font-weight: 400;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400;
     letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--obsidian); background: var(--gold);
-    padding: 14px 28px; text-decoration: none;
-    transition: background 0.3s;
+    padding: 14px 28px; text-decoration: none; transition: background 0.3s;
   }
   .footer-cta-block a:hover { background: var(--gold-light); }
   .footer-cta-block p { font-size: 11px; color: var(--text-muted); margin-top: 14px; font-weight: 300; }
@@ -372,27 +299,22 @@
   }
   .footer-copy { font-size: 11px; color: var(--text-muted); font-weight: 300; }
   .footer-links { display: flex; gap: 32px; list-style: none; }
-  .footer-links a {
-    font-size: 10px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--text-muted);
-    text-decoration: none; transition: color 0.3s;
-  }
+  .footer-links a { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
   .footer-links a:hover { color: var(--gold); }
-  .footer-logo-img {
-    height: 52px; width: auto; display: block;
-    margin-bottom: 16px; opacity: 0.9;
-  }
 
-  /* ─── SCROLL REVEAL ─────────────────── */
+  /* ─── SCROLL REVEAL ──────────────────── */
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* ─── FLOATING COORD ────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .coord-tag {
     position: fixed; bottom: 32px; left: 60px;
     font-size: 9px; letter-spacing: 0.2em;
-    color: var(--text-muted); text-transform: uppercase;
-    z-index: 100;
+    color: var(--text-muted); text-transform: uppercase; z-index: 100;
   }
 
   /* ─── FOCUS INDICATORS ──────────────── */
@@ -458,7 +380,7 @@
   }
   .nav-mobile-menu a:hover { color: var(--gold); }
 
-  /* ─── RESPONSIVE ────────────────────── */
+  /* ─── RESPONSIVE ─────────────────────── */
   @media (max-width: 1024px) {
     nav { padding: 20px 32px; }
     nav.scrolled { padding: 16px 32px; }
@@ -467,15 +389,18 @@
     .nav-cta { min-height: 48px; display: flex; align-items: center; }
     .nav-lang { min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center; }
     .coord-tag { display: none; }
-    #contact-main { grid-template-columns: 1fr; }
-    .contact-left { padding: 140px 32px 80px; }
-    .contact-right { padding: 60px 32px 80px; }
-    .form-row { grid-template-columns: 1fr; }
+    .section-inner { padding: 0 32px; }
+    .page-hero-content { padding: 140px 32px 80px; }
     .footer-top { grid-template-columns: 1fr; gap: 48px; }
     .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
     .footer-inner { padding: 0 32px; }
+    .resource-card { padding: 36px 32px; }
     .footer-links a { min-height: 48px; display: flex; align-items: center; padding: 12px 8px; }
     .footer-cta-block a { min-height: 48px; display: inline-flex; align-items: center; }
+  }
+  @media (max-width: 600px) {
+    .resource-card { grid-template-columns: 1fr; gap: 24px; }
+    .resource-card-arrow { width: 40px; height: 40px; }
   }
 </style>
 </head>
@@ -493,10 +418,10 @@
     <li><a href="products.htm">Products</a></li>
     <li><a href="process.htm">Process</a></li>
     <li><a href="gallery.htm">Gallery</a></li>
-    <li><a href="resources.htm">Resources</a></li>
+    <li><a href="resources.htm" class="active">Resources</a></li>
     <li><a href="contact.htm">Contact</a></li>
   </ul>
-  <a href="tr/iletisim.htm" class="nav-lang">TR</a>
+  <a href="tr/kaynaklar.htm" class="nav-lang">TR</a>
   <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
     <span></span>
   </button>
@@ -513,80 +438,79 @@
 
 <main>
 
-<!-- CONTACT MAIN -->
-<section id="contact-main">
-
-  <!-- Left: info panel -->
-  <div class="contact-left">
-    <div class="eyebrow reveal">Project Enquiries</div>
-    <h1 class="contact-headline reveal">
-      Let's Build<br><em>Something.</em>
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">
+      <span>Knowledge Base</span>
+    </div>
+    <h1 class="page-hero-headline">
+      Knowledge for<br><em>Specifiers.</em>
     </h1>
-    <p class="contact-intro reveal">
-      Every bespoke commission begins with a conversation. Tell us about your project — scale, geometry, timeline, and finish ambitions. We respond within 5 working days with a material recommendation and preliminary sketch.
+    <p class="page-hero-sub">
+      Technical resources for architects and interior designers specifying architectural relief panels in hospitality and commercial projects.
     </p>
-    <div class="contact-details reveal">
-      <div class="contact-detail-item">
-        <span class="contact-detail-label">Email</span>
-        <div class="contact-detail-value">
-          <a href="mailto:strategy@studioluminant.com">strategy@studioluminant.com</a>
+  </div>
+</section>
+
+<!-- RESOURCE CARDS -->
+<section class="resources-section" style="background: var(--obsidian);">
+  <div class="section-inner">
+    <div class="resource-grid">
+
+      <a href="resources-fire-ratings.htm" class="resource-card reveal">
+        <div>
+          <div class="resource-card-number">01</div>
+          <h2 class="resource-card-title">Fire Ratings <em>Explained</em></h2>
+          <p class="resource-card-desc">A practical guide to EN 13501-1 fire classification. What A1, A2, and B-s1,d0 actually mean — and why the distinction between inherent and achieved fire performance matters for your specification.</p>
         </div>
-      </div>
-      <div class="contact-detail-item">
-        <span class="contact-detail-label">Manufacturing HQ</span>
-        <div class="contact-detail-value">Sakarya / Sapanca, Türkiye</div>
-      </div>
-      <div class="contact-detail-item">
-        <span class="contact-detail-label">Distribution</span>
-        <div class="contact-detail-value">Global — Middle East · Caucasus · Eastern Europe</div>
-      </div>
+        <div class="resource-card-arrow">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+      <a href="resources-specification-guide.htm" class="resource-card reveal">
+        <div>
+          <div class="resource-card-number">02</div>
+          <h2 class="resource-card-title">Specifying <em>Relief Panels</em></h2>
+          <p class="resource-card-desc">Tolerances, fixing systems, substrate interfaces, and what to include in your tender documents. The complete specification checklist for three-dimensional wall cladding.</p>
+        </div>
+        <div class="resource-card-arrow">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+      <a href="resources-weight-structural.htm" class="resource-card reveal">
+        <div>
+          <div class="resource-card-number">03</div>
+          <h2 class="resource-card-title">Weight &amp; <em>Structure</em></h2>
+          <p class="resource-card-desc">Panel weight per square metre, substrate load capacities, material comparisons, and the data your structural engineer needs for sign-off.</p>
+        </div>
+        <div class="resource-card-arrow">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
     </div>
   </div>
+</section>
 
-  <!-- Right: form -->
-  <div class="contact-right">
-    <div class="form-title reveal">Send an Enquiry</div>
-    <form class="contact-form reveal" action="mailto:strategy@studioluminant.com" method="post" enctype="text/plain">
-
-      <div class="form-row">
-        <div class="form-field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="Name" placeholder="Your full name">
-        </div>
-        <div class="form-field">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="Company" placeholder="Firm or practice">
-        </div>
-      </div>
-
-      <div class="form-field">
-        <label for="project-type">Project Type</label>
-        <select id="project-type" name="Project Type">
-          <option value="">Select Project Type</option>
-          <option value="Luxury Hotel">Luxury Hotel</option>
-          <option value="High-End Residential">High-End Residential</option>
-          <option value="Retail &amp; F&amp;B">Retail &amp; F&amp;B</option>
-          <option value="Cultural Institution">Cultural Institution</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div class="form-field">
-        <label for="message">Message</label>
-        <textarea id="message" name="Message" placeholder="Describe your project — scale, geometry, timeline, finish requirements…"></textarea>
-      </div>
-
-      <button type="submit" class="form-submit">
-        Submit Enquiry
-        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-        </svg>
-      </button>
-
-      <p class="form-note">Your message will open in your email client pre-filled.</p>
-    </form>
+<!-- CTA -->
+<section id="resources-cta">
+  <div class="section-inner">
+    <h2 class="cta-headline reveal">
+      Need Project-Specific<br><em>Data?</em>
+    </h2>
+    <p class="cta-sub reveal">
+      Request a material data sheet, fixing detail drawings, or fire test documentation tailored to your specification.
+    </p>
+    <a href="contact.htm" class="btn-primary reveal">
+      Initiate Project
+      <svg viewBox="0 0 14 14" fill="none">
+        <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+      </svg>
+    </a>
   </div>
-
 </section>
 
 </main>
@@ -599,7 +523,7 @@
         <a href="Studio Luminant — Bespoke Architectural Elements.htm" class="logo">
           <img src="images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="footer-logo-img">
         </a>
-        <p class="footer-tagline">Bespoke architectural elements — sculpted, cast, and finished to spec.</p>
+        <p class="footer-tagline">The premier manufacturing partner for high-level architectural and hospitality spatial design.</p>
       </div>
       <div>
         <div class="footer-col-title">Manufacturing HQ</div>

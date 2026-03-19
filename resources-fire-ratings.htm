@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fire Ratings Explained — Studio Luminant</title>
+<meta name="description" content="A practical guide to EN 13501-1 fire classification for architects specifying interior wall panels. Understand A1, A2, and B classes — and why they matter for hospitality projects.">
+<link rel="canonical" href="https://www.studioluminant.com/resources-fire-ratings.htm">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="Fire Ratings Explained — A Practical Guide for Architects">
+<meta property="og:description" content="EN 13501-1 fire classification demystified. What A1, A2, and B-s1,d0 actually mean for interior wall panels in hospitality and commercial projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C96A;
+    --gold-dim: #8A6E2F;
+    --obsidian: #0C0C0E;
+    --deep: #111114;
+    --surface: #18181D;
+    --surface-2: #1F1F26;
+    --border: rgba(201,168,76,0.18);
+    --text-primary: #F0EAD6;
+    --text-secondary: #9A9088;
+    --text-muted: #8A8078;
+    --red: #BF6A6A;
+    --orange: #BF8A6A;
+    --green: #6ABF8A;
+    --blue: #6A9FBF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--obsidian);
+    color: var(--text-primary);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  @media (pointer: fine) {
+    body { cursor: none; }
+  }
+
+  /* ─── CUSTOM CURSOR ─────────────────── */
+  .cursor-dot {
+    width: 6px; height: 6px;
+    background: var(--gold); border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: transform 0.08s ease;
+    display: none;
+  }
+  .cursor-ring {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(201,168,76,0.5);
+    border-radius: 50%;
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9998;
+    transform: translate(-50%,-50%);
+    transition: transform 0.18s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
+    display: none;
+  }
+  .cursor-ring.hover { width: 56px; height: 56px; opacity: 0.6; }
+
+  @media (pointer: fine) {
+    .cursor-dot, .cursor-ring { display: block; }
+  }
+
+  /* ─── NOISE TEXTURE ─────────────────── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1; opacity: 0.4;
+  }
+
+  /* ─── LAYOUT ─────────────────────────── */
+  .article-wrapper {
+    position: relative; z-index: 2;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  /* ─── BACK NAV ───────────────────────── */
+  .back-nav {
+    padding: 40px 0 0;
+  }
+  .back-nav a {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-muted);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .back-nav a:hover { color: var(--gold); }
+  .back-nav svg { width: 14px; height: 14px; }
+
+  /* ─── ARTICLE HEADER ─────────────────── */
+  .article-header {
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 60px;
+  }
+  .article-eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold);
+    font-weight: 400; margin-bottom: 32px;
+  }
+  .article-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+  .article-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 300; line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+  .article-title em { font-style: italic; color: var(--gold); }
+  .article-subtitle {
+    font-size: 15px; font-weight: 300;
+    line-height: 1.8; color: var(--text-secondary);
+    max-width: 600px;
+  }
+
+  /* ─── ARTICLE BODY ───────────────────── */
+  .article-body h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300;
+    color: var(--text-primary);
+    margin: 56px 0 20px;
+    line-height: 1.2;
+  }
+  .article-body h2 em { font-style: italic; color: var(--gold); }
+
+  .article-body p {
+    font-size: 15px; font-weight: 300;
+    line-height: 1.85; color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+
+  .article-body strong {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  /* ─── FIRE CLASSIFICATION TABLE ──────── */
+  .fire-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 36px 0 40px;
+    font-size: 14px;
+  }
+  .fire-table thead th {
+    text-align: left;
+    font-size: 9px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--gold);
+    font-weight: 400; padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .fire-table tbody td {
+    padding: 16px;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    vertical-align: top;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  .fire-table tbody tr:hover { background: var(--surface); }
+
+  .class-badge {
+    display: inline-block;
+    font-size: 12px; font-weight: 500;
+    padding: 4px 12px; border-radius: 3px;
+    color: var(--obsidian);
+    white-space: nowrap;
+  }
+  .class-a1 { background: var(--green); }
+  .class-a2 { background: #8ED1A8; }
+  .class-b { background: var(--blue); }
+  .class-c { background: var(--orange); }
+  .class-d { background: var(--red); }
+
+  /* ─── CALLOUT BOX ────────────────────── */
+  .callout {
+    background: var(--surface);
+    border-left: 3px solid var(--gold);
+    padding: 28px 32px;
+    margin: 36px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout-label {
+    font-size: 9px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 12px; font-weight: 400;
+  }
+  .callout p {
+    font-size: 14px; line-height: 1.75;
+    color: var(--text-secondary); font-weight: 300;
+    margin-bottom: 0;
+  }
+  .callout strong { color: var(--text-primary); font-weight: 500; }
+
+  /* ─── KEY STATS ROW ──────────────────── */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin: 40px 0;
+  }
+  .stat-card {
+    background: var(--surface);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px; font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .stat-label {
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--text-muted);
+  }
+
+  /* ─── CTA STRIP ──────────────────────── */
+  .article-cta {
+    margin: 80px 0;
+    padding: 60px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .article-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px; font-weight: 300;
+    margin-bottom: 16px;
+  }
+  .article-cta h3 em { font-style: italic; color: var(--gold); }
+  .article-cta p {
+    font-size: 14px; color: var(--text-secondary);
+    font-weight: 300; margin-bottom: 32px;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--obsidian); background: var(--gold);
+    padding: 14px 32px; text-decoration: none;
+    transition: background 0.3s, gap 0.3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); gap: 20px; }
+  .btn-primary svg { width: 14px; height: 14px; }
+
+  /* ─── FOOTER MINIMAL ─────────────────── */
+  .article-footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .article-footer p {
+    font-size: 11px; color: var(--text-muted); font-weight: 300;
+  }
+  .article-footer a { color: var(--gold-dim); text-decoration: none; }
+  .article-footer a:hover { color: var(--gold); }
+
+  /* ─── NAV ───────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 28px 60px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(12,12,14,0.9);
+    backdrop-filter: blur(12px);
+    border-color: var(--border);
+    padding: 18px 60px;
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+  .nav-logo-img { height: 44px; width: auto; display: block; transition: opacity 0.3s ease, height 0.4s ease; }
+  .nav-logo:hover .nav-logo-img { opacity: 0.8; }
+  nav.scrolled .nav-logo-img { height: 34px; }
+  .nav-links { display: flex; align-items: center; gap: 48px; list-style: none; }
+  .nav-links a {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-secondary);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--gold); }
+  .nav-cta {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--obsidian);
+    background: var(--gold); padding: 10px 24px;
+    text-decoration: none; transition: background 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold-light); }
+  .nav-lang {
+    color: var(--gold-dim); font-size: 11px; letter-spacing: 0.15em;
+    text-transform: uppercase; text-decoration: none; margin-left: 20px; transition: color 0.3s;
+  }
+  .nav-lang:hover { color: var(--gold); }
+
+  /* ─── FOOTER ────────────────────────── */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    padding: 100px 0 48px;
+    position: relative; z-index: 2;
+  }
+  .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 60px; }
+  .footer-top {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px; margin-bottom: 80px;
+  }
+  .footer-brand .logo { text-decoration: none; display: block; margin-bottom: 20px; }
+  .footer-logo-img { height: 52px; width: auto; display: block; margin-bottom: 16px; opacity: 0.9; }
+  .footer-tagline { font-size: 12px; line-height: 1.75; color: var(--text-muted); font-weight: 300; max-width: 280px; }
+  .footer-col-title { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+  .footer-location-eyebrow { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
+  .footer-location-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: var(--text-primary); margin-bottom: 8px; }
+  .footer-location-note { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+  .footer-cta-block a {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--obsidian); background: var(--gold);
+    padding: 14px 28px; text-decoration: none; transition: background 0.3s;
+  }
+  .footer-cta-block a:hover { background: var(--gold-light); }
+  .footer-cta-block p { font-size: 11px; color: var(--text-muted); margin-top: 14px; font-weight: 300; }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 32px; border-top: 1px solid var(--border);
+  }
+  .footer-copy { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+  .footer-links { display: flex; gap: 32px; list-style: none; }
+  .footer-links a { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ─── SCROLL REVEAL ──────────────────── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── FLOATING COORD ─────────────────── */
+  .coord-tag {
+    position: fixed; bottom: 32px; left: 60px;
+    font-size: 9px; letter-spacing: 0.2em;
+    color: var(--text-muted); text-transform: uppercase; z-index: 100;
+  }
+
+  /* ─── FOCUS INDICATORS ──────────────── */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  /* ─── REDUCED MOTION ──────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+  }
+
+  /* ─── HAMBURGER MENU ──────────────── */
+  .nav-hamburger {
+    display: none;
+    background: none; border: none; cursor: pointer;
+    width: 48px; height: 48px;
+    align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--gold); position: relative;
+    transition: background 0.2s;
+  }
+  .nav-hamburger span::before,
+  .nav-hamburger span::after {
+    content: ''; position: absolute; left: 0;
+    width: 100%; height: 2px; background: var(--gold);
+    transition: transform 0.3s ease;
+  }
+  .nav-hamburger span::before { top: -7px; }
+  .nav-hamburger span::after { top: 7px; }
+  .nav-hamburger[aria-expanded="true"] span { background: transparent; }
+  .nav-hamburger[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .nav-hamburger[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+
+  .nav-mobile-menu {
+    display: none; position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(12,12,14,0.97);
+    z-index: 999;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 32px;
+  }
+  .nav-mobile-menu.open { display: flex; }
+  .nav-mobile-menu a {
+    font-family: 'Jost', sans-serif; font-size: 20px;
+    font-weight: 400; letter-spacing: 0.12em;
+    color: var(--text-primary); text-decoration: none;
+    padding: 12px 24px; min-height: 48px;
+    display: flex; align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-mobile-menu a:hover { color: var(--gold); }
+
+  /* ─── RESPONSIVE ─────────────────────── */
+  @media (max-width: 1024px) {
+    nav { padding: 20px 32px; }
+    nav.scrolled { padding: 16px 32px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-cta { min-height: 48px; display: flex; align-items: center; }
+    .nav-lang { min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center; }
+    .coord-tag { display: none; }
+    .footer-top { grid-template-columns: 1fr; gap: 48px; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .footer-inner { padding: 0 32px; }
+    .footer-links a { min-height: 48px; display: flex; align-items: center; padding: 12px 8px; }
+    .footer-cta-block a { min-height: 48px; display: inline-flex; align-items: center; }
+  }
+  @media (max-width: 768px) {
+    .article-wrapper { padding: 0 24px; }
+    .stats-row { grid-template-columns: 1fr; }
+    .fire-table { font-size: 13px; }
+    .fire-table thead th, .fire-table tbody td { padding: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="Studio Luminant — Bespoke Architectural Elements.htm" class="nav-logo">
+    <img src="images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="products.htm">Products</a></li>
+    <li><a href="process.htm">Process</a></li>
+    <li><a href="gallery.htm">Gallery</a></li>
+    <li><a href="resources.htm" class="active">Resources</a></li>
+    <li><a href="contact.htm">Contact</a></li>
+  </ul>
+  <a href="tr/kaynaklar-yangin-sinifi.htm" class="nav-lang">TR</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span>
+  </button>
+  <a href="contact.htm" class="nav-cta">Initiate Project</a>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile menu">
+  <a href="products.htm">Products</a>
+  <a href="process.htm">Process</a>
+  <a href="gallery.htm">Gallery</a>
+  <a href="resources.htm">Resources</a>
+  <a href="contact.htm">Contact</a>
+</div>
+
+<main>
+
+<div class="article-wrapper">
+
+  <!-- BACK NAV -->
+  <div class="back-nav">
+    <a href="resources.htm">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      Back to Resources
+    </a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="article-header">
+    <div class="article-eyebrow">Technical Resources</div>
+    <h1 class="article-title">
+      Fire Ratings<br><em>Explained.</em>
+    </h1>
+    <p class="article-subtitle">
+      A practical guide to EN 13501-1 fire classification for architects specifying interior wall panels in hospitality and commercial projects.
+    </p>
+  </header>
+
+  <!-- BODY -->
+  <article class="article-body">
+
+    <h2>Why Fire Rating Is <em>Non-Negotiable</em></h2>
+    <p>
+      Every interior cladding material installed in a commercial or hospitality building must carry a fire classification. In Europe and the Middle East, the governing standard is <strong>EN 13501-1</strong> — the harmonised European system that replaced the patchwork of national standards. It classifies materials based on how they react to fire: whether they contribute fuel, produce smoke, or generate burning droplets.
+    </p>
+    <p>
+      For architects specifying wall panels in hotels, restaurants, cultural institutions, and high-traffic public spaces, the fire class isn't just a line item. It determines whether your specification will pass through building control, whether your insurer will underwrite the project, and — in the context of hospitality PIP programmes — whether the brand will approve the materials at all.
+    </p>
+
+    <h2>The <em>Classification System</em></h2>
+    <p>
+      EN 13501-1 assigns materials to one of seven classes based on a battery of tests including small flame attack (EN ISO 11925-2), the Single Burning Item test (EN 13823), and a non-combustibility furnace test (EN ISO 1182) for the highest classifications. The classes range from A1 at the top — a material that is entirely non-combustible — down to F, which indicates no performance has been determined.
+    </p>
+    <p>
+      Classes B through D carry two additional suffixes. The <strong>s-suffix</strong> rates smoke production (s1 = minimal, s2 = moderate, s3 = high). The <strong>d-suffix</strong> rates flaming droplets (d0 = none, d1 = limited, d2 = unrestricted). So a material classified <strong>B-s1,d0</strong> has limited combustibility, minimal smoke, and no flaming droplets.
+    </p>
+
+    <!-- CLASSIFICATION TABLE -->
+    <table class="fire-table">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Meaning</th>
+          <th>Typical Materials</th>
+          <th>Hospitality Use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="class-badge class-a1">A1</span></td>
+          <td>Non-combustible. No organic content, no flame contribution whatsoever.</td>
+          <td>Natural stone, mineral wool, alpha gypsum, glass, ceramics</td>
+          <td>Required for escape routes, high-rise cores, and many brand standards</td>
+        </tr>
+        <tr>
+          <td><span class="class-badge class-a2">A2</span></td>
+          <td>Very limited combustibility. Minimal organic binder permitted (&lt;1% flame contribution).</td>
+          <td>Fibre-cement board, stone-wool panels, some GRC</td>
+          <td>Accepted for most interior specifications alongside A1</td>
+        </tr>
+        <tr>
+          <td><span class="class-badge class-b">B-s1,d0</span></td>
+          <td>Limited combustibility. Low flame spread, minimal smoke, no flaming droplets.</td>
+          <td>Modified PU composites, phenolic resin panels, some HPL</td>
+          <td>Suitable for general interior areas; may not meet escape route requirements</td>
+        </tr>
+        <tr>
+          <td><span class="class-badge class-c">C / D</span></td>
+          <td>Moderate to high combustibility. Greater flame spread and smoke production.</td>
+          <td>Timber, standard MDF, many GRP panels, untreated foam</td>
+          <td>Restricted use. Typically excluded from hotel brand specifications</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>How This Applies to <em>Relief Panels</em></h2>
+    <p>
+      Architectural relief panels present a specific challenge: they have three-dimensional surfaces that increase the effective surface area exposed to flame. A 600×600 mm relief panel with deep sculpting may have 30–40% more exposed surface than a flat panel of the same footprint. This means the fire behaviour of the base material matters even more — there is nowhere to hide poor performance behind a flat surface.
+    </p>
+    <p>
+      Materials that are <strong>inherently non-combustible</strong> — such as alpha gypsum — achieve their fire rating through chemistry, not additives. There are no flame retardant chemicals to degrade over time, no intumescent coatings to maintain, and no risk of a reformulated version losing its certification. The fire performance is permanent and immutable.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">Key Distinction</div>
+      <p>
+        <strong>Inherent A1</strong> (alpha gypsum, stone, ceramics) means the material itself cannot burn — the rating is derived from composition, not treatment. <strong>Achieved fire class</strong> (flame-retardant treated composites) means a combustible base material has been modified to slow flame spread. The distinction matters for long-term performance, insurance, and brand approval.
+      </p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value">A1</div>
+        <div class="stat-label">Lumina PMAG™ Fire Class</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">B-s1,d0</div>
+        <div class="stat-label">Lumina PUCOMP™ Fire Class</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">0%</div>
+        <div class="stat-label">Flame Retardant Additives in PMAG</div>
+      </div>
+    </div>
+
+    <h2>What to Specify in <em>Your Tender Documents</em></h2>
+    <p>
+      When writing a specification clause for decorative wall panels, include the fire classification explicitly. Stating "panels shall be non-combustible" is insufficient — it doesn't reference the standard or the testing regime. A robust specification clause should reference <strong>EN 13501-1</strong> by name, specify the required class (e.g. "minimum A2-s1,d0" or "A1"), and require the manufacturer to provide a valid test report or Declaration of Performance (DoP) issued under the Construction Products Regulation.
+    </p>
+    <p>
+      For hospitality projects, cross-reference the hotel brand's design standard manual. Most international hotel operators (Marriott, Hilton, IHG, Accor) maintain internal material requirements that may exceed local building code — particularly for escape corridors, lobby areas, and back-of-house routes.
+    </p>
+
+  </article>
+
+  <!-- CTA -->
+  <div class="article-cta">
+    <h3>Need a Panel That <em>Passes?</em></h3>
+    <p>Request a material data sheet with full fire test documentation for your specification.</p>
+    <a href="contact.htm" class="btn-primary">
+      Request Spec Sheet
+      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </a>
+  </div>
+
+
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="Studio Luminant — Bespoke Architectural Elements.htm" class="logo">
+          <img src="images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="footer-logo-img">
+        </a>
+        <p class="footer-tagline">The premier manufacturing partner for high-level architectural and hospitality spatial design.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Manufacturing HQ</div>
+        <span class="footer-location-eyebrow">Location</span>
+        <div class="footer-location-name">Sakarya / Sapanca<br>Türkiye</div>
+        <p class="footer-location-note">Global Distribution &amp; Installation Ready</p>
+      </div>
+      <div class="footer-cta-block">
+        <div class="footer-col-title">Start a Project</div>
+        <a href="mailto:strategy@studioluminant.com">
+          Initiate Project
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+        <p>strategy@studioluminant.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Studio Luminant. All Rights Reserved.</p>
+      <ul class="footer-links">
+        <li><a href="resources.htm">BIM Assets</a></li>
+        <li><a href="contact.htm">Privacy</a></li>
+        <li><a href="contact.htm">Compliance</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="coord-tag">40.7°N — 30.4°E — Sakarya, TR</div>
+
+<script>
+  // Cursor
+  if (window.matchMedia('(pointer: fine)').matches) {
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top = my + 'px';
+    });
+
+    function animateRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+    });
+  }
+
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => { entry.target.classList.add('visible'); }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Mobile menu
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !open);
+      hamburger.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+      mobileMenu.classList.toggle('open', !open);
+      document.body.style.overflow = open ? '' : 'hidden';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+</script>
+
+</body>
+</html>

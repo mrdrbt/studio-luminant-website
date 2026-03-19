@@ -4,19 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>İletişim — Studio Luminant</title>
-<meta name="description" content="Mimari rölyef panel projenizi görüşmek için Studio Luminant ile iletişime geçin. Lüks konaklama, perakende ve konut geliştiricilerinden gelen talepler memnuniyetle karşılanır.">
+<meta name="description" content="Studio Luminant'tan özel mimari elemanlar talep edin. Lüks konaklama, perakende, konut geliştiricileri ve iç mimarlardan talepler bekliyoruz.">
 <link rel="canonical" href="https://www.studioluminant.com/tr/iletisim.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="İletişim — Studio Luminant">
-<meta property="og:description" content="Mimari rölyef panel projenizi görüşmek için Studio Luminant ile iletişime geçin. Lüks konaklama, perakende ve konut geliştiricilerinden gelen talepler memnuniyetle karşılanır.">
+<meta property="og:description" content="Studio Luminant'tan özel mimari elemanlar talep edin. Lüks konaklama, perakende, konut geliştiricileri ve iç mimarlardan talepler bekliyoruz.">
 <meta property="og:url" content="https://www.studioluminant.com/tr/iletisim.htm">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="İletişim — Studio Luminant">
-<meta name="twitter:description" content="Mimari rölyef panel projenizi görüşmek için Studio Luminant ile iletişime geçin. Lüks konaklama, perakende ve konut geliştiricilerinden gelen talepler memnuniyetle karşılanır.">
+<meta name="twitter:description" content="Studio Luminant'tan özel mimari elemanlar talep edin. Lüks konaklama, perakende, konut geliştiricileri ve iç mimarlardan talepler bekliyoruz.">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="../Studio%20Luminant%20%E2%80%94%20Architectural%20Relief%20Manufacturing_files/css2.css" rel="stylesheet">
+<link href="../Studio%20Luminant%20%E2%80%94%20Bespoke%20Architectural%20Elements_files/css2.css" rel="stylesheet">
 
 <style>
   :root {
@@ -30,7 +30,7 @@
     --border: rgba(201,168,76,0.18);
     --text-primary: #F0EAD6;
     --text-secondary: #9A9088;
-    --text-muted: #5A5450;
+    --text-muted: #8A8078;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,7 +41,10 @@
     font-family: 'Jost', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
-    cursor: none;
+  }
+
+  @media (pointer: fine) {
+    body { cursor: none; }
   }
 
   /* ─── CUSTOM CURSOR ─────────────────── */
@@ -53,6 +56,7 @@
     pointer-events: none; z-index: 9999;
     transform: translate(-50%,-50%);
     transition: transform 0.08s ease;
+    display: none;
   }
   .cursor-ring {
     width: 32px; height: 32px;
@@ -62,8 +66,13 @@
     pointer-events: none; z-index: 9998;
     transform: translate(-50%,-50%);
     transition: transform 0.18s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
+    display: none;
   }
   .cursor-ring.hover { width: 56px; height: 56px; opacity: 0.6; }
+
+  @media (pointer: fine) {
+    .cursor-dot, .cursor-ring { display: block; }
+  }
 
   /* ─── NOISE TEXTURE ─────────────────── */
   body::before {
@@ -386,11 +395,77 @@
     z-index: 100;
   }
 
+  /* ─── FOCUS INDICATORS ──────────────── */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  /* ─── REDUCED MOTION ──────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+  }
+
+  /* ─── HAMBURGER MENU ──────────────── */
+  .nav-hamburger {
+    display: none;
+    background: none; border: none; cursor: pointer;
+    width: 48px; height: 48px;
+    align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .nav-hamburger span {
+    display: block; width: 22px; height: 2px;
+    background: var(--gold); position: relative;
+    transition: background 0.2s;
+  }
+  .nav-hamburger span::before,
+  .nav-hamburger span::after {
+    content: ''; position: absolute; left: 0;
+    width: 100%; height: 2px; background: var(--gold);
+    transition: transform 0.3s ease;
+  }
+  .nav-hamburger span::before { top: -7px; }
+  .nav-hamburger span::after { top: 7px; }
+  .nav-hamburger[aria-expanded="true"] span { background: transparent; }
+  .nav-hamburger[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .nav-hamburger[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+
+  .nav-mobile-menu {
+    display: none; position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(12,12,14,0.97);
+    z-index: 999;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 32px;
+  }
+  .nav-mobile-menu.open { display: flex; }
+  .nav-mobile-menu a {
+    font-family: 'Jost', sans-serif; font-size: 20px;
+    font-weight: 400; letter-spacing: 0.12em;
+    color: var(--text-primary); text-decoration: none;
+    padding: 12px 24px; min-height: 48px;
+    display: flex; align-items: center;
+    transition: color 0.2s;
+  }
+  .nav-mobile-menu a:hover { color: var(--gold); }
+
   /* ─── RESPONSIVE ────────────────────── */
   @media (max-width: 1024px) {
     nav { padding: 20px 32px; }
     nav.scrolled { padding: 16px 32px; }
     .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-cta { min-height: 48px; display: flex; align-items: center; }
+    .nav-lang { min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center; }
     .coord-tag { display: none; }
     #contact-main { grid-template-columns: 1fr; }
     .contact-left { padding: 140px 32px 80px; }
@@ -399,6 +474,8 @@
     .footer-top { grid-template-columns: 1fr; gap: 48px; }
     .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
     .footer-inner { padding: 0 32px; }
+    .footer-links a { min-height: 48px; display: flex; align-items: center; padding: 12px 8px; }
+    .footer-cta-block a { min-height: 48px; display: inline-flex; align-items: center; }
   }
 </style>
 </head>
@@ -409,18 +486,31 @@
 
 <!-- NAV -->
 <nav id="mainNav">
-  <a href="Studio Luminant — Mimari Rölyef Üretimi.htm" class="nav-logo">
+  <a href="Studio Luminant — Özel Mimari Elemanlar.htm" class="nav-logo">
     <img src="../images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="nav-logo-img">
   </a>
   <ul class="nav-links">
     <li><a href="urunler.htm">Ürünler</a></li>
     <li><a href="surec.htm">Süreç</a></li>
     <li><a href="galeri.htm">Galeri</a></li>
+    <li><a href="kaynaklar.htm">Kaynaklar</a></li>
     <li><a href="iletisim.htm">İletişim</a></li>
   </ul>
   <a href="../contact.htm" class="nav-lang">EN</a>
+  <button class="nav-hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span>
+  </button>
   <a href="iletisim.htm" class="nav-cta">Proje Başlat</a>
 </nav>
+
+<div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobil menü">
+  <a href="urunler.htm">Ürünler</a>
+  <a href="surec.htm">Süreç</a>
+  <a href="galeri.htm">Galeri</a>
+  <a href="iletisim.htm">İletişim</a>
+</div>
+
+<main>
 
 <!-- CONTACT MAIN -->
 <section id="contact-main">
@@ -498,15 +588,17 @@
 
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="Studio Luminant — Mimari Rölyef Üretimi.htm" class="logo">
+        <a href="Studio Luminant — Özel Mimari Elemanlar.htm" class="logo">
           <img src="../images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="footer-logo-img">
         </a>
-        <p class="footer-tagline">Üst düzey mimari ve konaklama mekansal tasarımı için öncü üretim ortağı.</p>
+        <p class="footer-tagline">Özel mimari elemanlar — tasarlanır, dökülür, özenle bitirilir.</p>
       </div>
       <div>
         <div class="footer-col-title">Üretim Merkezi</div>
@@ -528,9 +620,9 @@
     <div class="footer-bottom">
       <p class="footer-copy">© 2026 Studio Luminant. Tüm Hakları Saklıdır.</p>
       <ul class="footer-links">
-        <li><a href="#">BIM Dosyaları</a></li>
-        <li><a href="#">Gizlilik</a></li>
-        <li><a href="#">Uyumluluk</a></li>
+        <li><a href="../resources.htm">BIM Dosyaları</a></li>
+        <li><a href="iletisim.htm">Gizlilik</a></li>
+        <li><a href="iletisim.htm">Uyumluluk</a></li>
       </ul>
     </div>
   </div>
@@ -540,29 +632,31 @@
 
 <script>
   // Cursor
-  const dot = document.getElementById('cursorDot');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
+  if (window.matchMedia('(pointer: fine)').matches) {
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
 
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px';
-    dot.style.top = my + 'px';
-  });
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top = my + 'px';
+    });
 
-  function animateRing() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
-    requestAnimationFrame(animateRing);
+    function animateRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+    });
   }
-  animateRing();
-
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-  });
 
   // Nav scroll
   const nav = document.getElementById('mainNav');
@@ -581,6 +675,27 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Mobile menu
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !open);
+      hamburger.setAttribute('aria-label', open ? 'Menüyü aç' : 'Menüyü kapat');
+      mobileMenu.classList.toggle('open', !open);
+      document.body.style.overflow = open ? '' : 'hidden';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Menüyü aç');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
 </script>
 
 </body>
