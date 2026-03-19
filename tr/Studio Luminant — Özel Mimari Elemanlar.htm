@@ -959,6 +959,14 @@
     transition: color 0.2s;
   }
   .nav-mobile-menu a:hover { color: var(--gold); }
+  .nav-mobile-menu .nav-mobile-lang {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--gold-dim);
+    letter-spacing: 0.15em;
+    padding-top: 24px;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
 
   /* ─── RESPONSIVE ────────────────────── */
   @media (max-width: 1024px) {
@@ -981,7 +989,7 @@
     .nav-links { display: none; }
     .nav-hamburger { display: flex; }
     .nav-cta { display: none; }
-    .nav-lang { min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center; }
+    .nav-lang { display: none; }
     .coord-tag { display: none; }
     .portfolio-grid {
       grid-template-columns: 1fr 1fr;
@@ -1025,6 +1033,7 @@
   <a href="surec.htm">Süreç</a>
   <a href="galeri.htm">Galeri</a>
   <a href="iletisim.htm">İletişim</a>
+  <a href="../Studio%20Luminant%20%E2%80%94%20Bespoke%20Architectural%20Elements.htm" class="nav-mobile-lang">EN</a>
 </div>
 
 <main>
