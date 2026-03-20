@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collection — Standard Architectural Patterns | Studio Luminant</title>
+<meta name="description" content="Browse Studio Luminant's standard collection of architectural relief patterns — geometric, organic, heritage, and surface designs available in Lumina PMAG™ and Lumina PUCOMP™.">
+<link rel="canonical" href="https://www.studioluminant.com/collection.htm">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="Collection — Standard Architectural Patterns | Studio Luminant">
+<meta property="og:description" content="Browse Studio Luminant's standard collection of architectural relief patterns — geometric, organic, heritage, and surface designs available in Lumina PMAG™ and Lumina PUCOMP™.">
+<meta property="og:url" content="https://www.studioluminant.com/collection.htm">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Collection — Standard Architectural Patterns | Studio Luminant">
+<meta name="twitter:description" content="Browse Studio Luminant's standard collection of architectural relief patterns.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="Studio%20Luminant%20%E2%80%94%20Bespoke%20Architectural%20Elements_files/css2.css" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+
+<style>
+  /* ─── COLLECTION HERO ──────────────── */
+  #collection-hero {
+    min-height: 60vh;
+    background: linear-gradient(135deg, var(--deep) 0%, var(--obsidian) 100%);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center;
+    padding: 160px 60px 80px;
+  }
+
+  .collection-hero-inner {
+    max-width: 1280px; margin: 0 auto; width: 100%;
+    display: flex; gap: 48px; align-items: center;
+  }
+
+  .hero-image-wrap {
+    flex: 2; position: relative; overflow: hidden;
+    border-radius: 6px; background: var(--surface-2);
+  }
+  .hero-image-wrap::after {
+    content: ''; position: absolute; inset: 0;
+    border: 1px solid var(--border); border-radius: 6px;
+    pointer-events: none;
+  }
+  .hero-image-wrap img {
+    width: 100%; display: block;
+    opacity: 0; animation: fadeUp 0.9s ease 0.3s forwards;
+  }
+
+  .hero-text { flex: 1; }
+
+  .hero-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: 3px; color: var(--gold);
+    margin-bottom: 16px;
+    opacity: 0; animation: fadeUp 0.9s ease 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px; font-weight: 300; font-style: italic;
+    color: var(--text-primary); line-height: 1.2;
+    margin-bottom: 12px;
+    opacity: 0; animation: fadeUp 0.9s ease 0.35s forwards;
+  }
+
+  .hero-desc {
+    font-size: 14px; line-height: 1.7;
+    color: var(--text-secondary); font-weight: 300;
+    margin-bottom: 24px;
+    opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    background: var(--gold); color: var(--obsidian);
+    padding: 10px 24px; border-radius: 4px;
+    font-family: 'Jost', sans-serif; font-size: 13px;
+    font-weight: 400; text-decoration: none;
+    transition: background 0.3s;
+    opacity: 0; animation: fadeUp 0.9s ease 0.6s forwards;
+  }
+  .hero-cta:hover { background: var(--gold-light); }
+
+  /* ─── FILTERS ──────────────────────── */
+  .collection-filters {
+    max-width: 1280px; margin: 0 auto;
+    padding: 40px 60px 0;
+  }
+
+  .filter-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .filter-row {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-row + .filter-label { margin-top: 14px; }
+
+  .style-pill {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; font-weight: 400;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 8px 20px; border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+  }
+  .style-pill:hover { color: var(--gold); border-color: var(--gold); }
+  .style-pill.active {
+    background: var(--gold);
+    color: var(--obsidian);
+    border-color: var(--gold);
+  }
+
+  .app-tag {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase; font-weight: 400;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 5px 14px; border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .app-tag:hover { color: var(--gold); border-color: var(--gold); }
+  .app-tag.active { border-color: var(--gold); color: var(--gold); }
+
+  .filter-count {
+    margin-left: auto;
+    font-size: 11px; color: var(--text-muted);
+    letter-spacing: 0.15em;
+  }
+
+  /* ─── PATTERN GRID ─────────────────── */
+  .collection-grid-section {
+    max-width: 1280px; margin: 0 auto;
+    padding: 32px 60px 80px;
+  }
+
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .pattern-card {
+    background: var(--surface);
+    border-radius: 6px; overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .pattern-card:hover {
+    border-color: var(--border);
+    transform: translateY(-2px);
+  }
+
+  .card-img-wrap {
+    aspect-ratio: 1;
+    background: var(--surface-2);
+    overflow: hidden;
+  }
+  .card-img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(.25,.46,.45,.94), filter 0.4s;
+    filter: grayscale(10%);
+  }
+  .pattern-card:hover .card-img-wrap img {
+    transform: scale(1.04);
+    filter: grayscale(0%);
+  }
+
+  .card-info {
+    padding: 14px 16px;
+  }
+  .card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; font-weight: 400; font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .card-meta {
+    font-size: 11px; color: var(--text-muted);
+  }
+  .card-meta .cat {
+    color: var(--gold-dim);
+  }
+
+  /* Empty state */
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center; padding: 80px 20px;
+    color: var(--text-muted); font-size: 14px;
+  }
+  .empty-state a {
+    color: var(--gold); text-decoration: none;
+    margin-left: 8px;
+  }
+  .empty-state a:hover { text-decoration: underline; }
+
+  /* ─── LIGHTBOX ─────────────────────── */
+  .lightbox-overlay {
+    position: fixed; inset: 0; z-index: 1000;
+    background: rgba(12,12,14,0.92);
+    backdrop-filter: blur(12px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 40px;
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  .lightbox-overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
+
+  .lightbox-inner {
+    background: var(--deep);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    max-width: 1060px; width: 100%;
+    max-height: 90vh; overflow-y: auto;
+    display: flex; gap: 32px;
+    padding: 32px;
+    position: relative;
+    transform: scale(0.97); transition: transform 0.3s;
+  }
+  .lightbox-overlay.open .lightbox-inner { transform: scale(1); }
+
+  .lb-close {
+    position: absolute; top: 16px; right: 16px;
+    background: none; border: none;
+    color: var(--text-secondary); font-size: 24px;
+    cursor: pointer; line-height: 1;
+    transition: color 0.2s;
+    z-index: 1;
+  }
+  .lb-close:hover { color: var(--gold); }
+
+  .lb-image {
+    flex: 2; border-radius: 6px; overflow: hidden;
+    background: var(--surface-2);
+  }
+  .lb-image img {
+    width: 100%; display: block;
+  }
+
+  .lb-details { flex: 1; padding-top: 4px; }
+
+  .lb-cat {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px; text-transform: uppercase;
+    letter-spacing: 2px; color: var(--gold);
+  }
+  .lb-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300; font-style: italic;
+    color: var(--text-primary);
+    margin: 10px 0 6px;
+  }
+  .lb-apps {
+    font-size: 12px; color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  .lb-desc {
+    font-size: 13px; line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(201,168,76,0.1);
+  }
+  .lb-materials-label {
+    font-size: 9px; text-transform: uppercase;
+    letter-spacing: 1px; color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .lb-materials {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .lb-mat-badge {
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold); padding: 4px 10px;
+    border-radius: 4px; font-size: 11px;
+  }
+  .lb-cta {
+    display: block;
+    background: var(--gold); color: var(--obsidian);
+    padding: 12px 20px; text-align: center;
+    border-radius: 4px; font-size: 13px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400; text-decoration: none;
+    transition: background 0.3s;
+  }
+  .lb-cta:hover { background: var(--gold-light); }
+
+  /* Prev/Next arrows */
+  .lb-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(201,168,76,0.1);
+    border: 1px solid var(--border);
+    color: var(--gold); font-size: 20px;
+    width: 40px; height: 40px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .lb-nav:hover { background: rgba(201,168,76,0.2); }
+  .lb-prev { left: -56px; }
+  .lb-next { right: -56px; }
+
+  /* ─── BOTTOM CTA ───────────────────── */
+  .collection-bottom-cta {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 60px 100px;
+    text-align: center;
+  }
+  .collection-bottom-cta-inner {
+    border-top: 1px solid var(--border);
+    padding-top: 48px;
+  }
+  .collection-bottom-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px; font-weight: 300; font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+  .collection-bottom-cta p {
+    font-size: 14px; color: var(--text-secondary);
+    font-weight: 300; line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 560px; margin-left: auto; margin-right: auto;
+  }
+  .collection-bottom-cta a.bespoke-cta {
+    display: inline-block;
+    border: 1px solid var(--gold); color: var(--gold);
+    padding: 10px 28px; border-radius: 4px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px; text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  .collection-bottom-cta a.bespoke-cta:hover {
+    background: var(--gold); color: var(--obsidian);
+  }
+
+  /* ─── RESPONSIVE ────────────────────── */
+  @media (max-width: 1024px) {
+    #collection-hero { padding: 120px 32px 60px; }
+    .collection-hero-inner { flex-direction: column; gap: 32px; }
+    .collection-filters { padding: 32px 32px 0; }
+    .collection-grid-section { padding: 24px 32px 60px; }
+    .pattern-grid { grid-template-columns: repeat(2, 1fr); }
+    .lightbox-overlay { padding: 20px; }
+    .lightbox-inner { flex-direction: column; gap: 20px; padding: 24px; }
+    .lb-prev { left: 8px; top: auto; bottom: 8px; transform: none; }
+    .lb-next { right: 8px; top: auto; bottom: 8px; transform: none; }
+    .collection-bottom-cta { padding: 0 32px 80px; }
+  }
+  @media (max-width: 600px) {
+    #collection-hero { padding: 100px 24px 48px; }
+    .hero-title { font-size: 28px; }
+    .collection-filters { padding: 24px 24px 0; }
+    .collection-grid-section { padding: 20px 24px 48px; }
+    .pattern-grid { grid-template-columns: 1fr; }
+    .collection-bottom-cta { padding: 0 24px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="site-nav" data-lang="en" data-lang-url="tr/koleksiyon.htm"></div>
+
+<main>
+
+<!-- COLLECTION HERO -->
+<section id="collection-hero">
+  <div class="collection-hero-inner">
+    <div class="hero-image-wrap">
+      <img id="hero-img" src="" alt="" loading="eager">
+    </div>
+    <div class="hero-text">
+      <div class="hero-eyebrow">Featured Design</div>
+      <h1 class="hero-title" id="hero-title"></h1>
+      <p class="hero-desc" id="hero-desc"></p>
+      <a class="hero-cta" id="hero-cta" href="contact.htm">Enquire About This Design →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<section class="collection-filters reveal">
+  <div class="filter-label">Style</div>
+  <div class="filter-row" id="style-filters">
+    <button class="style-pill active" data-style="all" aria-pressed="true">All</button>
+    <button class="style-pill" data-style="geometric" aria-pressed="false">Geometric</button>
+    <button class="style-pill" data-style="organic" aria-pressed="false">Organic</button>
+    <button class="style-pill" data-style="heritage" aria-pressed="false">Heritage</button>
+    <button class="style-pill" data-style="surface" aria-pressed="false">Surface</button>
+    <span class="filter-count" id="filter-count"></span>
+  </div>
+  <div class="filter-label">Application</div>
+  <div class="filter-row" id="app-filters">
+    <button class="app-tag" data-app="wall-panel" aria-pressed="false">Wall Panel</button>
+    <button class="app-tag" data-app="ceiling" aria-pressed="false">Ceiling</button>
+    <button class="app-tag" data-app="column" aria-pressed="false">Column Cladding</button>
+    <button class="app-tag" data-app="sculptural" aria-pressed="false">Sculptural</button>
+  </div>
+</section>
+
+<!-- PATTERN GRID -->
+<section class="collection-grid-section">
+  <div class="pattern-grid" id="pattern-grid"></div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="collection-bottom-cta reveal">
+  <div class="collection-bottom-cta-inner">
+    <h3>Looking for something unique?</h3>
+    <p>Our standard collection is just the beginning. We create fully bespoke patterns through our AIAPM design process.</p>
+    <a href="contact.htm" class="bespoke-cta">Discuss a Bespoke Design →</a>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Pattern detail">
+  <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous pattern">‹</button>
+  <div class="lightbox-inner">
+    <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+    <div class="lb-image">
+      <img id="lb-img" src="" alt="">
+    </div>
+    <div class="lb-details">
+      <div class="lb-cat" id="lb-cat"></div>
+      <h2 class="lb-name" id="lb-name"></h2>
+      <div class="lb-apps" id="lb-apps"></div>
+      <p class="lb-desc" id="lb-desc"></p>
+      <div class="lb-materials-label">Available in</div>
+      <div class="lb-materials" id="lb-materials"></div>
+      <a class="lb-cta" id="lb-cta" href="contact.htm">Enquire About This Pattern →</a>
+    </div>
+  </div>
+  <button class="lb-nav lb-next" id="lb-next" aria-label="Next pattern">›</button>
+</div>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="shared.js"></script>
+<script src="components.js"></script>
+<script>
+// ─── Pattern Data ───
+const patterns = [
+  {
+    id: 'compass-star',
+    name: 'Compass Star',
+    style: 'heritage',
+    applications: ['wall-panel', 'ceiling'],
+    image: 'images/studio-luminant-architectural-relief-compass-star-wall-panel.jpg',
+    description: 'A radiating star motif inspired by classical compass rose geometry. Creates dramatic shadow play under directional lighting.',
+    materials: ['pmag', 'pucomp'],
+    featured: true
+  },
+  {
+    id: 'diagonal-wave',
+    name: 'Diagonal Wave',
+    style: 'geometric',
+    applications: ['wall-panel'],
+    image: 'images/studio-luminant-architectural-relief-diagonal-wave-wall-panel.jpg',
+    description: 'Flowing diagonal wave pattern that creates a sense of movement across wall surfaces. Ideal for feature walls in lobbies and corridors.',
+    materials: ['pmag', 'pucomp'],
+    featured: false
+  },
+  {
+    id: 'faceted-crystal',
+    name: 'Faceted Crystal',
+    style: 'geometric',
+    applications: ['wall-panel', 'column'],
+    image: 'images/studio-luminant-architectural-relief-faceted-crystal-diagonal-wall-panel.jpg',
+    description: 'Sharp geometric facets that catch and reflect light, inspired by crystalline mineral formations.',
+    materials: ['pmag'],
+    featured: false
+  },
+  {
+    id: 'ottoman-heritage',
+    name: 'Ottoman Heritage',
+    style: 'heritage',
+    applications: ['wall-panel', 'ceiling'],
+    image: 'images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg',
+    description: 'Traditional Ottoman geometric pattern reinterpreted in contemporary relief. Bridges historical craft with modern architectural specification.',
+    materials: ['pmag', 'pucomp'],
+    featured: false
+  },
+  {
+    id: 'organic-cell',
+    name: 'Organic Cell',
+    style: 'organic',
+    applications: ['wall-panel', 'sculptural'],
+    image: 'images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png',
+    description: 'Biomorphic cell pattern inspired by natural cellular structures. Soft, flowing forms that add depth and texture.',
+    materials: ['pmag'],
+    featured: false
+  },
+  {
+    id: 'fluted-column',
+    name: 'Fluted Column',
+    style: 'surface',
+    applications: ['column', 'wall-panel'],
+    image: 'images/studio-luminant-architectural-relief-fluted-column-wall-panel.jpg',
+    description: 'Classical fluted surface treatment for column cladding and wall applications. Clean vertical lines with refined shadow detail.',
+    materials: ['pmag', 'pucomp'],
+    featured: false
+  },
+  {
+    id: 'petal-geometric',
+    name: 'Petal Geometric',
+    style: 'geometric',
+    applications: ['wall-panel', 'ceiling'],
+    image: 'images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.jpg',
+    description: 'Repeating petal forms arranged in a geometric grid. Balances organic softness with structured precision.',
+    materials: ['pmag', 'pucomp'],
+    featured: false
+  },
+  {
+    id: 'geometric-star',
+    name: 'Geometric Star',
+    style: 'geometric',
+    applications: ['wall-panel'],
+    image: 'images/studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg',
+    description: 'Bold star relief pattern for statement wall installations. Designed for large-format applications in hospitality interiors.',
+    materials: ['pmag', 'pucomp'],
+    featured: false
+  },
+  {
+    id: 'bas-relief',
+    name: 'Bas Relief',
+    style: 'surface',
+    applications: ['wall-panel'],
+    image: 'images/studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup.jpg',
+    description: 'Subtle low-relief surface texture that adds tactile depth without dominant pattern. Versatile and understated.',
+    materials: ['pmag'],
+    featured: false
+  },
+  {
+    id: 'neo-heritage-modular',
+    name: 'Neo Heritage Modular',
+    style: 'heritage',
+    applications: ['wall-panel', 'ceiling'],
+    image: 'images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design.jpg',
+    description: '50×50cm modular panel system with heritage-inspired relief. Mix and match orientations for unique compositions.',
+    materials: ['pmag', 'pucomp'],
+    featured: false
+  }
+];
+
+// ─── Populate hero from featured pattern ───
+const featured = patterns.find(p => p.featured) || patterns[0];
+document.getElementById('hero-img').src = featured.image;
+document.getElementById('hero-img').alt = featured.name + ' — ' + featured.style + ' pattern';
+document.getElementById('hero-title').textContent = featured.name;
+document.getElementById('hero-desc').textContent = featured.description;
+document.getElementById('hero-cta').href = 'contact.htm?pattern=' + encodeURIComponent(featured.name);
+
+// ─── Application label mapping ───
+const appLabels = {
+  'wall-panel': 'Wall Panel',
+  'ceiling': 'Ceiling',
+  'column': 'Column Cladding',
+  'sculptural': 'Sculptural'
+};
+
+// ─── Local scroll-reveal observer (shared.js observer is module-scoped) ───
+const collectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      setTimeout(() => { entry.target.classList.add('visible'); }, 100);
+      collectionObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+// ─── Cursor hover for dynamic cards (shared.js only binds at load) ───
+const cursorRing = document.getElementById('cursorRing');
+if (cursorRing && window.matchMedia('(pointer: fine)').matches) {
+  document.getElementById('pattern-grid').addEventListener('mouseenter', (e) => {
+    if (e.target.closest('.pattern-card')) cursorRing.classList.add('hover');
+  }, true);
+  document.getElementById('pattern-grid').addEventListener('mouseleave', (e) => {
+    if (e.target.closest('.pattern-card')) cursorRing.classList.remove('hover');
+  }, true);
+}
+
+// ─── Render pattern grid ───
+const grid = document.getElementById('pattern-grid');
+
+function renderGrid() {
+  grid.innerHTML = '';
+  const activeStyle = document.querySelector('.style-pill.active').dataset.style;
+  const activeTags = Array.from(document.querySelectorAll('.app-tag.active')).map(t => t.dataset.app);
+
+  let count = 0;
+  patterns.forEach((p, i) => {
+    const styleMatch = activeStyle === 'all' || p.style === activeStyle;
+    const appMatch = activeTags.length === 0 || activeTags.some(tag => p.applications.includes(tag));
+
+    if (styleMatch && appMatch) {
+      count++;
+      const card = document.createElement('article');
+      card.className = 'pattern-card reveal';
+      card.dataset.index = i;
+      card.innerHTML = `
+        <div class="card-img-wrap">
+          <img src="${p.image}" alt="${p.name} — ${p.style} pattern" loading="lazy"
+               onerror="this.style.display='none'">
+        </div>
+        <div class="card-info">
+          <div class="card-name">${p.name}</div>
+          <div class="card-meta">
+            <span class="cat">${p.style.charAt(0).toUpperCase() + p.style.slice(1)}</span>
+            · ${p.applications.map(a => appLabels[a] || a).join(', ')}
+          </div>
+        </div>`;
+      card.addEventListener('click', () => openLightbox(i));
+      grid.appendChild(card);
+    }
+  });
+
+  // Empty state
+  if (count === 0) {
+    grid.innerHTML = '<div class="empty-state">No patterns match this combination.<a href="#" id="reset-filters">Reset Filters</a></div>';
+    document.getElementById('reset-filters').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelectorAll('.style-pill').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      document.querySelector('.style-pill[data-style="all"]').classList.add('active');
+      document.querySelector('.style-pill[data-style="all"]').setAttribute('aria-pressed', 'true');
+      document.querySelectorAll('.app-tag').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      renderGrid();
+    });
+  }
+
+  document.getElementById('filter-count').textContent = count + ' pattern' + (count !== 1 ? 's' : '');
+
+  // Observe new cards for scroll-reveal
+  grid.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+    collectionObserver.observe(el);
+  });
+}
+
+// ─── Filter event listeners ───
+document.querySelectorAll('.style-pill').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.style-pill').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+    renderGrid();
+  });
+});
+
+document.querySelectorAll('.app-tag').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    btn.setAttribute('aria-pressed', btn.classList.contains('active'));
+    renderGrid();
+  });
+});
+
+renderGrid();
+
+// ─── Lightbox ───
+const overlay = document.getElementById('lightbox');
+let currentIndex = -1;
+
+function getVisibleIndices() {
+  return Array.from(document.querySelectorAll('.pattern-card')).map(c => parseInt(c.dataset.index));
+}
+
+function openLightbox(patternIndex) {
+  currentIndex = patternIndex;
+  const p = patterns[patternIndex];
+
+  document.getElementById('lb-img').src = p.image;
+  document.getElementById('lb-img').alt = p.name + ' — ' + p.style + ' pattern';
+  document.getElementById('lb-cat').textContent = p.style.charAt(0).toUpperCase() + p.style.slice(1);
+  document.getElementById('lb-name').textContent = p.name;
+  document.getElementById('lb-apps').textContent = p.applications.map(a => appLabels[a] || a).join(' · ');
+  document.getElementById('lb-desc').textContent = p.description;
+
+  const matMap = { pmag: 'Lumina PMAG™', pucomp: 'Lumina PUCOMP™' };
+  document.getElementById('lb-materials').innerHTML = p.materials
+    .map(m => '<span class="lb-mat-badge">' + (matMap[m] || m) + '</span>').join('');
+
+  document.getElementById('lb-cta').href = 'contact.htm?pattern=' + encodeURIComponent(p.name);
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lb-close').focus();
+}
+
+function closeLightbox() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  currentIndex = -1;
+}
+
+function navigateLightbox(dir) {
+  const visible = getVisibleIndices();
+  if (visible.length === 0) return;
+  const pos = visible.indexOf(currentIndex);
+  const next = (pos + dir + visible.length) % visible.length;
+  openLightbox(visible[next]);
+}
+
+document.getElementById('lb-close').addEventListener('click', closeLightbox);
+document.getElementById('lb-prev').addEventListener('click', () => navigateLightbox(-1));
+document.getElementById('lb-next').addEventListener('click', () => navigateLightbox(1));
+
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (!overlay.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navigateLightbox(-1);
+  if (e.key === 'ArrowRight') navigateLightbox(1);
+
+  // Focus trap
+  if (e.key === 'Tab') {
+    const focusable = overlay.querySelectorAll('button, a[href]');
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault(); last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault(); first.focus();
+    }
+  }
+});
+</script>
+
+</body>
+</html>
