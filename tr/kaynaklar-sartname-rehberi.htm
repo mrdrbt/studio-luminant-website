@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rölyef Panel Şartname Rehberi — Studio Luminant</title>
+<meta name="description" content="Mimari rölyef panellerin şartnamesi: toleranslar, sabitleme sistemleri, alt yapı arayüzleri ve ihale belgelerinde nelerin yer alması gerektiği. Mimarlar ve şartname yazarları için rehber.">
+<link rel="canonical" href="https://www.studioluminant.com/tr/kaynaklar-sartname-rehberi.htm">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="Rölyef Panellerin Şartnamesi — Mimarlar İçin Rehber">
+<meta property="og:description" content="Mimari rölyef duvar panelleri için toleranslar, sabitleme yöntemleri, alt yapı gereksinimleri ve ihale belgesi rehberi.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+
+<style>
+  .nav-links a.active { color: var(--gold); }
+  .article-wrapper { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; padding: 0 60px; }
+  .back-nav { padding: 40px 0 0; }
+  .back-nav a { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+  .back-nav a:hover { color: var(--gold); }
+  .back-nav svg { width: 14px; height: 14px; }
+  .article-header { padding: 80px 0 60px; border-bottom: 1px solid var(--border); margin-bottom: 60px; }
+  .article-eyebrow { display: inline-flex; align-items: center; gap: 14px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 400; margin-bottom: 32px; }
+  .article-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+  .article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5vw, 64px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 28px; }
+  .article-title em { font-style: italic; color: var(--gold); }
+  .article-subtitle { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--text-secondary); max-width: 600px; }
+  .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text-primary); margin: 56px 0 20px; line-height: 1.2; }
+  .article-body h2 em { font-style: italic; color: var(--gold); }
+  .article-body p { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--text-secondary); margin-bottom: 20px; }
+  .article-body strong { font-weight: 500; color: var(--text-primary); }
+  .spec-checklist { margin: 36px 0; padding: 0; list-style: none; counter-reset: spec-step; }
+  .spec-checklist li { counter-increment: spec-step; display: grid; grid-template-columns: 48px 1fr; gap: 0; margin-bottom: 2px; background: var(--surface); padding: 24px 28px; font-size: 14px; line-height: 1.7; color: var(--text-secondary); font-weight: 300; }
+  .spec-checklist li::before { content: counter(spec-step, decimal-leading-zero); font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--gold); line-height: 1.1; }
+  .spec-checklist li strong { color: var(--text-primary); font-weight: 500; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 36px 0; }
+  .compare-card { background: var(--surface); padding: 28px 24px; }
+  .compare-card-header { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .compare-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(201,168,76,0.06); font-size: 13px; }
+  .compare-row:last-child { border-bottom: none; }
+  .compare-label { color: var(--text-muted); }
+  .compare-value { color: var(--text-primary); font-weight: 400; text-align: right; }
+  .callout { background: var(--surface); border-left: 3px solid var(--gold); padding: 28px 32px; margin: 36px 0; border-radius: 0 4px 4px 0; }
+  .callout-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 400; }
+  .callout p { font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300; margin-bottom: 0; }
+  .callout strong { color: var(--text-primary); font-weight: 500; }
+  .method-table { width: 100%; border-collapse: collapse; margin: 36px 0 40px; font-size: 14px; }
+  .method-table thead th { text-align: left; font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 400; padding: 14px 16px; border-bottom: 1px solid var(--border); background: var(--surface); }
+  .method-table tbody td { padding: 16px; border-bottom: 1px solid rgba(201,168,76,0.08); vertical-align: top; color: var(--text-secondary); font-weight: 300; line-height: 1.6; }
+  .method-table tbody tr:hover { background: var(--surface); }
+  .method-table strong { color: var(--text-primary); font-weight: 500; }
+  .article-cta { margin: 80px 0; padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
+  .article-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin-bottom: 16px; }
+  .article-cta h3 em { font-style: italic; color: var(--gold); }
+  .article-cta p { font-size: 14px; color: var(--text-secondary); font-weight: 300; margin-bottom: 32px; }
+  .article-footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; }
+  .article-footer p { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+  .article-footer a { color: var(--gold-dim); text-decoration: none; }
+  .article-footer a:hover { color: var(--gold); }
+  @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .compare-grid { grid-template-columns: 1fr; } .spec-checklist li { grid-template-columns: 36px 1fr; padding: 20px 20px; } }
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZ0SGLKLH0');
+</script>
+</head>
+<body>
+
+<div id="site-nav" data-lang="tr" data-lang-url="../resources-specification-guide.htm" data-base="../"></div>
+
+<main>
+
+<div class="article-wrapper">
+
+  <div class="back-nav">
+    <a href="kaynaklar.htm">
+      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      Kaynaklara Dön
+    </a>
+  </div>
+
+  <header class="article-header">
+    <div class="article-eyebrow">Teknik Kaynaklar</div>
+    <h1 class="article-title">
+      Rölyef Panel<br><em>Şartnamesi.</em>
+    </h1>
+    <p class="article-subtitle">
+      Mimarların ısmarlama mimari rölyef panellerin şartnamesini hazırlarken toleranslar, sabitleme sistemleri, alt yapı arayüzleri ve ihale belgeleri hakkında bilmesi gerekenler.
+    </p>
+  </header>
+
+  <article class="article-body">
+
+    <h2>Rölyef Paneller <em>Düz Kaplama Değildir</em></h2>
+    <p>
+      Alçıpan, HPL veya taş kaplama gibi düz levha malzemeler için yazılmış standart iç mekan kaplama şartnameleri, üç boyutlu rölyef panellere doğrudan uygulanamaz. Rölyef paneller değişken kalınlık profillerine, alt kesim geometrilerine ve panel yüzeyinde değişen ağırlık dağılımlarına sahiptir. Bunları hesaba katmayan bir şartname, sahada çözülmesi pahalı olan montaj sorunları yaratacaktır.
+    </p>
+    <p>
+      İyi haber şu: rölyef panel şartnamesi, herhangi bir malzeme şartnamesiyle aynı mantığı izler. Sadece düz kaplamanın sahip olmadığı birkaç ek parametreye dikkat edilmesi gerekir.
+    </p>
+
+    <h2><em>Şartname</em> Kontrol Listesi</h2>
+    <p>
+      Eksiksiz bir rölyef panel şartnamesi aşağıdaki parametreleri kapsamalıdır. Bunlardan herhangi birinin atlanması, yüklenicinin ya ihtiyatlı fiyatlandıracağı ya da yanlış çözeceği belirsizlikler yaratır.
+    </p>
+
+    <ol class="spec-checklist">
+      <li><strong>Malzeme ve yangın sınıflandırması.</strong> Malzeme ailesini (ör. polimer modifiye alfa alçı) ve gerekli EN 13501-1 yangın sınıfını belirtin. Varsaymayın — açıkça yazın.</li>
+      <li><strong>Panel boyutları ve toleransları.</strong> Maksimum panel boyutunu, nominal kalınlığı ve izin verilen boyutsal toleransı belirtin. Rölyef paneller için tolerans, rölyef profilinin en ince ve en kalın noktalarında ayrı ayrı belirtilmelidir.</li>
+      <li><strong>Rölyef derinliği ve geometrisi.</strong> Maksimum rölyef derinliğini (arka düzlemden en yüksek noktaya olan mesafe) ve geometrinin tedarik edilen bir 3D dosyasından mı yoksa üreticinin kataloğundan mı olduğunu tanımlayın. 3D dosyasından ise dosya formatını (STEP, OBJ, STL) ve minimum özellik yarıçapını belirtin.</li>
+      <li><strong>Yüzey bitirme.</strong> Kaplama sistemini (ör. 2K poliüretan), renk referansını (RAL, NCS veya özel eşleşme), parlaklık seviyesini ve metalik veya dokulu yüzeylerin gerekli olup olmadığını belirtin.</li>
+      <li><strong>Sabitleme yöntemi ve alt yapı.</strong> Alt yapı tipini (metal dikme + alçıpan, kagir, beton) ve gerekli sabitleme yöntemini belirtin. Panel yükü altında alt yapının izin verilen maksimum sehimini ekleyin.</li>
+      <li><strong>Derz işlemi.</strong> Paneller arası derz genişliğini, derzlerin belirgin (gölge boşluğu) mu yoksa dolgulu (dikişsiz) mü olduğunu ve kabul edilebilir derz toleransını tanımlayın.</li>
+      <li><strong>Desen sürekliliği.</strong> Birden fazla panele yayılan tasarımlar için desen hizalamasının gerekli olup olmadığını ve derzlerdeki izin verilen desen kaymasını belirtin.</li>
+      <li><strong>Belge teslim edilecekler.</strong> Üreticinin sağlaması gerekenleri listeleyin: yangın testi sertifikaları, DoP, yapısal sabitleme hesapları, montaj çizimleri ve bakım kılavuzu.</li>
+    </ol>
+
+    <h2>Sabitleme <em>Yöntemleri</em></h2>
+    <p>
+      Bir rölyef panelin duvara nasıl bağlanacağı üç faktörle belirlenir: panel ağırlığı, alt yapı tipi ve montajın kalıcı mı yoksa gelecekte sökülmek üzere mi tasarlandığı (konaklama sektöründe markalar iç mekan tasarımlarını 7–10 yıllık döngülerle yenilediği için yaygındır).
+    </p>
+
+    <table class="method-table">
+      <thead>
+        <tr>
+          <th>Yöntem</th>
+          <th>En Uygun</th>
+          <th>Panel Ağırlık Sınırı</th>
+          <th>Sökülebilir mi?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Yapıştırıcı bağlantı</strong> (yapı yapıştırıcısı + mekanik destek)</td>
+          <td>Rijit alt yapılar (beton, kagir) üzerinde düz veya düşük rölyefli paneller</td>
+          <td>~30 kg/m²'ye kadar</td>
+          <td>Hayır — tahribatlı söküm</td>
+        </tr>
+        <tr>
+          <td><strong>Gizli Z-klips</strong> (panel arkasında + duvarda birbirine geçen metal klipsler)</td>
+          <td>Orta ağırlıktaki paneller, özellikle gelecekte erişim veya söküm gereken yerlerde</td>
+          <td>~45 kg/m²'ye kadar</td>
+          <td>Evet — tahribatsız</td>
+        </tr>
+        <tr>
+          <td><strong>Dişli insert + ray</strong> (panele gömülü insertler, alüminyum ray sistemine montajlı)</td>
+          <td>Ağır veya derin rölyefli paneller; metal dikme üzeri alçıpan üzerinde büyük formatlı uygulamalar</td>
+          <td>~60 kg/m²'ye kadar</td>
+          <td>Evet — tahribatsız</td>
+        </tr>
+        <tr>
+          <td><strong>Fransız kenet</strong> (panel + duvarda açılı ahşap/metal kenet)</td>
+          <td>Özellikli paneller, sanat enstalasyonları, tek panel vurgu parçaları</td>
+          <td>~40 kg/m²'ye kadar</td>
+          <td>Evet — kaldırarak söküm</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <div class="callout-label">Konaklama Notu</div>
+      <p>
+        Otel PIP programları genellikle <strong>7–10 yıllık yenileme döngüsüyle</strong> çalışır. Müşteriniz bir otel işletmecisiyse sökülebilir bir sabitleme sistemi belirtin — bu, bir sonraki iç mekan yenilemenin maliyetini ve kesintisini azaltır. Z-klips ve ray sistemleri, alt yapıya zarar vermeden panel sökümüne olanak tanır; bu aynı zamanda alçıpan yüklenicisinin garantisini de korur.
+      </p>
+    </div>
+
+    <h2>Alt Yapı <em>Değerlendirmeleri</em></h2>
+    <p>
+      Rölyef panel montajındaki en yaygın hata, alt yapı gereksinimlerinin hafife alınmasıdır. Standart bir metal dikme + 12,5 mm alçıpan bölme duvar, yaklaşık 20–25 kg/m² yüklere göre tasarlanmıştır. 25 mm ortalama kalınlığa sahip derin rölyefli bir PMAG panel 35–40 kg/m² ağırlığındadır — bu, alt yapının kapasitesini aşar.
+    </p>
+    <p>
+      Çözüm daha kalın alçıpan belirtmek değildir (yaygın ama etkisiz bir yaklaşım); sabitleme sisteminin yükü doğrudan metal dikmelere aktarmasını sağlamaktır. Ray tabanlı sabitleme sistemleri dikmeler arasına yayılır ve panel ağırlığını dikme flanşlarına nokta yükler olarak dağıtarak alçıpanı tamamen devre dışı bırakır. Bu yapısal olarak sağlamdır ve zamanla alçıpan delaminasyonu riskini ortadan kaldırır.
+    </p>
+
+    <!-- MALZEME KARŞILAŞTIRMASI -->
+    <h2>PMAG ve PUCOMP — <em>Hangisi Ne Zaman</em></h2>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-card-header">Lumina PMAG™</div>
+        <div class="compare-row"><span class="compare-label">Yangın sınıfı</span><span class="compare-value">A1</span></div>
+        <div class="compare-row"><span class="compare-label">Ağırlık @ 25mm</span><span class="compare-value">35–40 kg/m²</span></div>
+        <div class="compare-row"><span class="compare-label">Maks panel</span><span class="compare-value">3000 × 1500 mm</span></div>
+        <div class="compare-row"><span class="compare-label">Nem</span><span class="compare-value">&lt; %5 emilim</span></div>
+        <div class="compare-row"><span class="compare-label">En uygun</span><span class="compare-value">İç mekan — oteller, lobiler, kaçış yolları</span></div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-card-header">Lumina PUCOMP™</div>
+        <div class="compare-row"><span class="compare-label">Yangın sınıfı</span><span class="compare-value">B-s1,d0</span></div>
+        <div class="compare-row"><span class="compare-label">Ağırlık @ 15mm</span><span class="compare-value">12–18 kg/m²</span></div>
+        <div class="compare-row"><span class="compare-label">Maks panel</span><span class="compare-value">2500 × 1200 mm</span></div>
+        <div class="compare-row"><span class="compare-label">Nem</span><span class="compare-value">&lt; %1 emilim</span></div>
+        <div class="compare-row"><span class="compare-label">En uygun</span><span class="compare-value">Dış mekan, ıslak alanlar, yüksek detay özellikler</span></div>
+      </div>
+    </div>
+
+    <p>
+      PMAG ve PUCOMP arasındaki karar genellikle iki faktöre bağlıdır: <strong>yangın sınıfı gereksinimi</strong> ve <strong>uygulama bağlamı</strong>. Şartname A1 veya A2 yanmazlık gerektiriyorsa — ki bu çoğu otel koridoru, yüksek katlı lobi ve kaçış yolu bitişikliği için geçerlidir — PMAG doğru malzemedir. Uygulama dış mekanda, ıslak alanda veya zorlu bir alt yapı için hafif bir çözüm gerektiriyorsa PUCOMP daha iyi bir seçimdir. Her iki malzeme de aynı 2K otomotiv kaplama sistemini kabul eder, bu nedenle görsel yüzey bitirme aynıdır.
+    </p>
+
+  </article>
+
+  <div class="article-cta">
+    <h3>Şartnamenizi Yazmaya <em>Hazır Mısınız?</em></h3>
+    <p>Projeniz için taslak şartname maddesi, sabitleme detay çizimleri ve yangın testi belgeleri sağlayabiliriz.</p>
+    <a href="iletisim.htm" class="btn-primary">
+      Şartname Desteği Talep Edin
+      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </a>
+  </div>
+
+
+</div>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../shared.js"></script>
+<script src="../components.js"></script>
+
+</body>
+</html>
