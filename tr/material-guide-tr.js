@@ -932,53 +932,17 @@ function MaterialCard({
       position: "relative",
       overflow: "hidden"
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("img", {
+    src: material.id === "pmag" ? "../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png" : "../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
+    alt: material.id === "pmag" ? "Lumina PMAG mimari rölyef panel detayı" : "Lumina PUCOMP cephe uygulaması",
     style: {
       position: "absolute",
       inset: 0,
-      backgroundImage: `linear-gradient(${COLORS.borderGold} 1px, transparent 1px), linear-gradient(90deg, ${COLORS.borderGold} 1px, transparent 1px)`,
-      backgroundSize: "40px 40px",
-      opacity: 0.15
+      width: "100%",
+      height: "100%",
+      objectFit: "cover"
     }
-  }), /*#__PURE__*/React.createElement("svg", {
-    width: "36",
-    height: "36",
-    viewBox: "0 0 24 24",
-    fill: "none",
-    style: {
-      opacity: 0.35
-    }
-  }, /*#__PURE__*/React.createElement("rect", {
-    x: "3",
-    y: "3",
-    width: "18",
-    height: "18",
-    rx: "1",
-    stroke: COLORS.gold,
-    strokeWidth: "1"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M3 16l5-5 4 4 3-3 6 6",
-    stroke: COLORS.gold,
-    strokeWidth: "1",
-    fill: "none"
-  }), /*#__PURE__*/React.createElement("circle", {
-    cx: "15.5",
-    cy: "8.5",
-    r: "1.5",
-    stroke: COLORS.gold,
-    strokeWidth: "1",
-    fill: "none"
-  })), /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: "'Jost',sans-serif",
-      fontSize: 10,
-      fontWeight: 400,
-      color: COLORS.muted,
-      letterSpacing: "0.1em",
-      textTransform: "uppercase",
-      opacity: 0.6
-    }
-  }, material.id === "pmag" ? "Panel detay görseli" : "Cephe uygulama görseli")), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement("div", {
     style: {
       padding: "32px 28px"
     }
