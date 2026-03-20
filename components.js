@@ -74,6 +74,46 @@ ${mobileItemsHtml}
   <a href="${langUrl}" class="nav-mobile-lang">${navLinks.langLabel}</a>
 </div>`;
 
+  // ─── MOBILE MENU ───
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !open);
+      hamburger.setAttribute('aria-label', open ? navLinks.hamburgerOpen : navLinks.hamburgerClose);
+      mobileMenu.classList.toggle('open', !open);
+      document.body.style.overflow = open ? '' : 'hidden';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', navLinks.hamburgerOpen);
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // ─── NAV SCROLL ───
+  const mainNav = document.getElementById('mainNav');
+  if (mainNav) {
+    window.addEventListener('scroll', () => {
+      mainNav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  }
+
+  // ─── CURSOR HOVER (for injected nav elements) ───
+  if (window.matchMedia('(pointer: fine)').matches) {
+    const ring = document.getElementById('cursorRing');
+    if (ring) {
+      document.querySelectorAll('#mainNav a, #mainNav button, .nav-mobile-menu a').forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+      });
+    }
+  }
+
   // ─── FOOTER ───
   if (!footerEl) return;
 
