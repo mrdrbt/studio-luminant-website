@@ -17,140 +17,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="Studio%20Luminant%20%E2%80%94%20Bespoke%20Architectural%20Elements_files/css2.css" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
 
 <style>
-  :root {
-    --gold: #C9A84C;
-    --gold-light: #E8C96A;
-    --gold-dim: #8A6E2F;
-    --obsidian: #0C0C0E;
-    --deep: #111114;
-    --surface: #18181D;
-    --surface-2: #1F1F26;
-    --border: rgba(201,168,76,0.18);
-    --text-primary: #F0EAD6;
-    --text-secondary: #9A9088;
-    --text-muted: #8A8078;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--obsidian);
-    color: var(--text-primary);
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    overflow-x: hidden;
-  }
-
-  @media (pointer: fine) {
-    body { cursor: none; }
-  }
-
-  /* ─── CUSTOM CURSOR ─────────────────── */
-  .cursor-dot {
-    width: 6px; height: 6px;
-    background: var(--gold);
-    border-radius: 50%;
-    position: fixed; top: 0; left: 0;
-    pointer-events: none; z-index: 9999;
-    transform: translate(-50%,-50%);
-    transition: transform 0.08s ease;
-    display: none;
-  }
-  .cursor-ring {
-    width: 32px; height: 32px;
-    border: 1px solid rgba(201,168,76,0.5);
-    border-radius: 50%;
-    position: fixed; top: 0; left: 0;
-    pointer-events: none; z-index: 9998;
-    transform: translate(-50%,-50%);
-    transition: transform 0.18s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
-    display: none;
-  }
-  .cursor-ring.hover { width: 56px; height: 56px; opacity: 0.6; }
-
-  @media (pointer: fine) {
-    .cursor-dot, .cursor-ring { display: block; }
-  }
-
-  /* ─── NOISE TEXTURE ─────────────────── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 1; opacity: 0.4;
-  }
-
-  /* ─── NAV ───────────────────────────── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 28px 60px;
-    border-bottom: 1px solid transparent;
-    transition: all 0.4s ease;
-  }
-  nav.scrolled {
-    background: rgba(12,12,14,0.9);
-    backdrop-filter: blur(12px);
-    border-color: var(--border);
-    padding: 18px 60px;
-  }
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    flex-shrink: 0;
-  }
-  .nav-logo-img {
-    height: 44px;
-    width: auto;
-    display: block;
-    transition: opacity 0.3s ease, height 0.4s ease;
-  }
-  .nav-logo:hover .nav-logo-img { opacity: 0.8; }
-  nav.scrolled .nav-logo-img { height: 34px; }
-  .nav-links {
-    display: flex; align-items: center; gap: 48px;
-    list-style: none;
-  }
-  .nav-links a {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-cta {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--obsidian);
-    background: var(--gold);
-    padding: 10px 24px;
-    text-decoration: none;
-    transition: background 0.3s;
-  }
-  .nav-cta:hover { background: var(--gold-light); }
-  .nav-lang {
-    color: var(--gold-dim);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.3s;
-  }
-  .nav-lang:hover { color: var(--gold); }
-
   /* ─── HERO ──────────────────────────── */
   #hero {
     min-height: 100vh;
@@ -225,18 +94,6 @@
     display: flex; align-items: center; gap: 32px;
     opacity: 0; animation: fadeUp 0.9s ease 0.9s forwards;
   }
-
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 12px;
-    font-family: 'Jost', sans-serif;
-    font-size: 11px; font-weight: 400;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--obsidian); background: var(--gold);
-    padding: 14px 32px; text-decoration: none;
-    transition: background 0.3s, gap 0.3s;
-  }
-  .btn-primary:hover { background: var(--gold-light); gap: 20px; }
-  .btn-primary svg { width: 14px; height: 14px; }
 
   .btn-ghost {
     display: inline-flex; align-items: center; gap: 10px;
@@ -324,25 +181,6 @@
     width: 1px;
     background: linear-gradient(to bottom, transparent, var(--border) 30%, var(--border) 70%, transparent);
     pointer-events: none;
-  }
-
-  /* ─── SECTION BASE ──────────────────── */
-  section { position: relative; z-index: 2; }
-
-  .section-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 14px;
-    font-size: 10px; letter-spacing: 0.3em;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 400; margin-bottom: 32px;
-  }
-  .eyebrow::before {
-    content: ''; width: 24px; height: 1px; background: var(--gold);
   }
 
   /* ─── STRATEGY ──────────────────────── */
@@ -689,127 +527,11 @@
     border-color: var(--border);
   }
 
-  /* ─── FOOTER ────────────────────────── */
-  footer {
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-    padding: 100px 0 48px;
-  }
-
-  .footer-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-
-  .footer-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 80px;
-    margin-bottom: 80px;
-  }
-
-  .footer-brand .logo {
-    font-family: 'Cinzel', serif;
-    font-size: 16px; letter-spacing: 0.24em;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    text-decoration: none; display: block;
-    margin-bottom: 20px;
-  }
-  .footer-brand .logo span { color: var(--gold); }
-
-  .footer-tagline {
-    font-size: 12px; line-height: 1.75;
-    color: var(--text-muted); font-weight: 300;
-    max-width: 280px;
-  }
-
-  .footer-col-title {
-    font-size: 10px; letter-spacing: 0.28em;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: 24px;
-  }
-
-  .footer-location-eyebrow {
-    font-size: 9px; letter-spacing: 0.3em;
-    text-transform: uppercase; color: var(--text-muted);
-    display: block; margin-bottom: 8px;
-  }
-  .footer-location-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px; font-weight: 300;
-    color: var(--text-primary); margin-bottom: 8px;
-  }
-  .footer-location-note {
-    font-size: 11px; color: var(--text-muted); font-weight: 300;
-  }
-
-  .footer-cta-block a {
-    display: inline-flex; align-items: center; gap: 12px;
-    font-family: 'Jost', sans-serif;
-    font-size: 11px; font-weight: 400;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--obsidian); background: var(--gold);
-    padding: 14px 28px; text-decoration: none;
-    transition: background 0.3s;
-  }
-  .footer-cta-block a:hover { background: var(--gold-light); }
-  .footer-cta-block p {
-    font-size: 11px; color: var(--text-muted);
-    margin-top: 14px; font-weight: 300;
-  }
-
-  .footer-bottom {
-    display: flex; align-items: center; justify-content: space-between;
-    padding-top: 32px;
-    border-top: 1px solid var(--border);
-  }
-
-  .footer-copy {
-    font-size: 11px; color: var(--text-muted); font-weight: 300;
-  }
-
-  .footer-links {
-    display: flex; gap: 32px; list-style: none;
-  }
-  .footer-links a {
-    font-size: 10px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .footer-links a:hover { color: var(--gold); }
-
-  /* ─── SCROLL REVEAL ─────────────────── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* ─── ANIMATIONS ────────────────────── */
-  @keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
-    from { opacity: 0; transform: translateY(24px); }
-  }
-
   /* ─── DIVIDER ───────────────────────── */
   .gold-divider {
     width: 100%; height: 1px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
     opacity: 0.2;
-  }
-
-  /* ─── FLOATING COORD ────────────────── */
-  .coord-tag {
-    position: fixed; bottom: 32px; left: 60px;
-    font-size: 9px; letter-spacing: 0.2em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    z-index: 100;
-    writing-mode: horizontal-tb;
   }
 
   /* ─── HERO IMAGE ────────────────────── */
@@ -893,109 +615,18 @@
   }
   .material-card:hover .material-img { opacity: 1; transform: scale(1.02); }
 
-    /* ─── FOOTER LOGO ──────────────────── */
-  .footer-logo-img {
-    height: 52px;
-    width: auto;
-    display: block;
-    margin-bottom: 16px;
-    opacity: 0.9;
-  }
-
-  /* ─── FOCUS INDICATORS ──────────────── */
-  a:focus-visible, button:focus-visible, input:focus-visible,
-  select:focus-visible, textarea:focus-visible {
-    outline: 2px solid var(--gold);
-    outline-offset: 3px;
-  }
-
-  /* ─── REDUCED MOTION ──────────────── */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-    html { scroll-behavior: auto; }
-    .reveal { opacity: 1 !important; transform: none !important; }
-  }
-
-  /* ─── HAMBURGER MENU ──────────────── */
-  .nav-hamburger {
-    display: none;
-    background: none; border: none; cursor: pointer;
-    width: 48px; height: 48px;
-    align-items: center; justify-content: center;
-    padding: 0;
-  }
-  .nav-hamburger span {
-    display: block; width: 22px; height: 2px;
-    background: var(--gold); position: relative;
-    transition: background 0.2s;
-  }
-  .nav-hamburger span::before,
-  .nav-hamburger span::after {
-    content: ''; position: absolute; left: 0;
-    width: 100%; height: 2px; background: var(--gold);
-    transition: transform 0.3s ease;
-  }
-  .nav-hamburger span::before { top: -7px; }
-  .nav-hamburger span::after { top: 7px; }
-  .nav-hamburger[aria-expanded="true"] span { background: transparent; }
-  .nav-hamburger[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
-  .nav-hamburger[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
-
-  .nav-mobile-menu {
-    display: none; position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(12,12,14,0.97);
-    z-index: 999;
-    flex-direction: column; align-items: center; justify-content: center;
-    gap: 32px;
-  }
-  .nav-mobile-menu.open { display: flex; }
-  .nav-mobile-menu a {
-    font-family: 'Jost', sans-serif; font-size: 20px;
-    font-weight: 400; letter-spacing: 0.12em;
-    color: var(--text-primary); text-decoration: none;
-    padding: 12px 24px; min-height: 48px;
-    display: flex; align-items: center;
-    transition: color 0.2s;
-  }
-  .nav-mobile-menu a:hover { color: var(--gold); }
-  .nav-mobile-menu .nav-mobile-lang {
-    margin-top: 16px;
-    font-size: 13px;
-    color: var(--gold-dim);
-    letter-spacing: 0.15em;
-    padding-top: 24px;
-    border-top: 1px solid rgba(201,168,76,0.15);
-  }
-
   /* ─── RESPONSIVE ────────────────────── */
   @media (max-width: 1024px) {
-    nav { padding: 20px 32px; }
-    nav.scrolled { padding: 16px 32px; }
     #hero { grid-template-columns: 1fr; }
     #hero::after { display: none; }
     .hero-right { display: none; }
     .hero-left { padding: 160px 32px 80px; }
-    .section-inner { padding: 0 32px; }
     .strategy-grid, .process-header { grid-template-columns: 1fr; gap: 60px; }
     .process-steps { grid-template-columns: 1fr; }
     .process-step { border-right: none; border-bottom: 1px solid var(--border); }
     .materials-grid { grid-template-columns: 1fr; }
     .expertise-layout { grid-template-columns: 1fr; gap: 48px; }
     .expertise-skills { grid-template-columns: repeat(3, 1fr); }
-    .footer-top { grid-template-columns: 1fr; gap: 48px; }
-    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
-    .footer-inner { padding: 0 32px; }
-    .nav-links { display: none; }
-    .nav-hamburger { display: flex; }
-    .nav-cta { display: none; }
-    .nav-lang { display: none; }
-    .coord-tag { display: none; }
     .portfolio-grid {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 260px 260px 260px;
@@ -1003,8 +634,6 @@
     .portfolio-item--large { grid-column: 1 / span 2; grid-row: 1; }
     .step-image { width: calc(100% + 64px); margin: -56px -32px 36px; }
     .material-img { width: calc(100% + 64px); margin: -56px -32px 36px; }
-    .footer-links a { min-height: 48px; display: flex; align-items: center; padding: 12px 8px; }
-    .footer-cta-block a { min-height: 48px; display: inline-flex; align-items: center; }
   }
   @media (max-width: 600px) {
     .expertise-skills { grid-template-columns: 1fr 1fr; }
@@ -1013,34 +642,7 @@
 </head>
 <body>
 
-<div class="cursor-dot" id="cursorDot" style="left: 1139px; top: 424px;"></div>
-<div class="cursor-ring" id="cursorRing" style="left: 1139px; top: 424px;"></div>
-
-<!-- NAV -->
-<nav id="mainNav">
-  <a href="Studio Luminant — Bespoke Architectural Elements.htm" class="nav-logo"><img src="images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="nav-logo-img"></a>
-  <ul class="nav-links">
-    <li><a href="products.htm">Products</a></li>
-    <li><a href="process.htm">Process</a></li>
-    <li><a href="gallery.htm">Gallery</a></li>
-    <li><a href="resources.htm">Resources</a></li>
-    <li><a href="contact.htm">Contact</a></li>
-  </ul>
-  <a href="tr/Studio%20Luminant%20%E2%80%94%20%C3%96zel%20Mimari%20Elemanlar.htm" class="nav-lang">TR</a>
-  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-    <span></span>
-  </button>
-  <a href="contact.htm" class="nav-cta">Initiate Project</a>
-</nav>
-
-<div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile menu">
-  <a href="products.htm">Products</a>
-  <a href="process.htm">Process</a>
-  <a href="gallery.htm">Gallery</a>
-  <a href="resources.htm">Resources</a>
-  <a href="contact.htm">Contact</a>
-  <a href="tr/Studio%20Luminant%20%E2%80%94%20%C3%96zel%20Mimari%20Elemanlar.htm" class="nav-mobile-lang">TR</a>
-</div>
+<div id="site-nav" data-lang="en" data-lang-url="tr/Studio%20Luminant%20%E2%80%94%20%C3%96zel%20Mimari%20Elemanlar.htm"></div>
 
 <main>
 
@@ -1055,8 +657,8 @@
     </h1>
     <p class="hero-sub">
       We bridge the gap between visionary spatial design and operational
- viability. Utilizing AI-assisted modelling and additive manufacturing 
-to deliver certified, bespoke architectural reliefs with unprecedented 
+ viability. Utilizing AI-assisted modelling and additive manufacturing
+to deliver certified, bespoke architectural reliefs with unprecedented
 lead times.
     </p>
     <div class="hero-ctas">
@@ -1096,15 +698,15 @@ lead times.
         </h2>
         <p class="strategy-body reveal">
           In the luxury hospitality sector, bespoke environments dictate
- premium Average Daily Rates. However, traditional manufacturing 
-pipelines introduce unacceptable friction, exorbitant mold costs, and 
+ premium Average Daily Rates. However, traditional manufacturing
+pipelines introduce unacceptable friction, exorbitant mold costs, and
 critical path delays.
         </p>
         <p class="strategy-body reveal">
-          Studio Luminant mitigates this risk entirely. By vertically 
-integrating design, molding, and finishing, we transform complex, 
-biophilic, and culturally resonant geometries into high-performance 
-structural assets—faster and more cost-effectively than legacy 
+          Studio Luminant mitigates this risk entirely. By vertically
+integrating design, molding, and finishing, we transform complex,
+biophilic, and culturally resonant geometries into high-performance
+structural assets—faster and more cost-effectively than legacy
 providers.
         </p>
         <div class="strategy-features reveal">
@@ -1231,15 +833,15 @@ providers.
         Compliance<br><em>Engineered In.</em>
       </h2>
       <p class="body-text reveal">
-        Aesthetic vision cannot compromise structural integrity or 
-regulatory compliance. We formulate the ideal composition for precise 
-customer needs—optimizing both performance metrics and certification 
+        Aesthetic vision cannot compromise structural integrity or
+regulatory compliance. We formulate the ideal composition for precise
+customer needs—optimizing both performance metrics and certification
 requirements.
       </p>
       <p class="body-text reveal">
-        For architects and asset managers, utilizing Studio Luminant 
-means accessing certified, pre-formulated materials equipped with ready 
-BIM files. We strip the liability out of specifying bespoke 
+        For architects and asset managers, utilizing Studio Luminant
+means accessing certified, pre-formulated materials equipped with ready
+BIM files. We strip the liability out of specifying bespoke
 architectural relief.
       </p>
     </div>
@@ -1322,114 +924,21 @@ architectural relief.
 
 </main>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="Studio Luminant — Bespoke Architectural Elements.htm" class="logo"><img src="images/studio-luminant-logo-white-transparent.png" alt="Studio Luminant" class="footer-logo-img"></a>
-        <p class="footer-tagline">Bespoke architectural elements — sculpted, cast, and finished to spec.</p>
-      </div>
-      <div>
-        <div class="footer-col-title">Manufacturing HQ</div>
-        <span class="footer-location-eyebrow">Location</span>
-        <div class="footer-location-name">Sakarya / Sapanca<br>Türkiye</div>
-        <p class="footer-location-note">Global Distribution &amp; Installation Ready</p>
-      </div>
-      <div class="footer-cta-block">
-        <div class="footer-col-title">Start a Project</div>
-        <a href="mailto:strategy@studioluminant.com">
-          Initiate Project
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
-            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-          </svg>
-        </a>
-        <p>strategy@studioluminant.com</p>
-      </div>
-    </div>
+<div id="site-footer"></div>
 
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 Studio Luminant. All Rights Reserved.</p>
-      <ul class="footer-links">
-        <li><a href="resources.htm">BIM Assets</a></li>
-        <li><a href="contact.htm">Privacy</a></li>
-        <li><a href="contact.htm">Compliance</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-<div class="coord-tag">40.7°N — 30.4°E — Sakarya, TR</div>
-
+<script src="shared.js"></script>
+<script src="components.js"></script>
 <script>
-  // Cursor
+  // Page-specific: add hover cursor effect to skill-tag, material-card, and process-step elements
   if (window.matchMedia('(pointer: fine)').matches) {
-    const dot = document.getElementById('cursorDot');
     const ring = document.getElementById('cursorRing');
-    let mx = 0, my = 0, rx = 0, ry = 0;
-
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.left = mx + 'px';
-      dot.style.top = my + 'px';
-    });
-
-    function animateRing() {
-      rx += (mx - rx) * 0.12;
-      ry += (my - ry) * 0.12;
-      ring.style.left = rx + 'px';
-      ring.style.top = ry + 'px';
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
-    document.querySelectorAll('a, button, .skill-tag, .material-card, .process-step').forEach(el => {
-      el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-    });
-  }
-
-  // Nav scroll
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, 100);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Mobile menu
-  const hamburger = document.querySelector('.nav-hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => {
-      const open = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', !open);
-      hamburger.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
-      mobileMenu.classList.toggle('open', !open);
-      document.body.style.overflow = open ? '' : 'hidden';
-    });
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('aria-label', 'Open menu');
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
+    if (ring) {
+      document.querySelectorAll('.skill-tag, .material-card, .process-step').forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
       });
-    });
+    }
   }
 </script>
-
 
 </body></html>

@@ -6,7 +6,16 @@
       "Bash(pandoc \"C:\\\\Users\\\\burak\\\\Desktop\\\\SL COWORK\\\\02 — Brand & Identity\\\\Studio Luminant High Level.docx\" -o /tmp/sl-brand.md --track-changes=all)",
       "Read(//tmp/**)",
       "Bash(python \"C:\\\\Users\\\\burak\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\anthropic-skills\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\burak\\\\Desktop\\\\SL COWORK\\\\02 — Brand & Identity\\\\Studio Luminant High Level.docx\" /tmp/sl-brand-unpacked/)",
-      "Bash(python \"C:\\\\Users\\\\burak\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\527c328b-7134-4d3f-ac11-56074bc05283\\\\9b8f2b15-97a3-4aec-b9a9-c9765b815e84\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\burak\\\\Desktop\\\\SL COWORK\\\\02 — Brand & Identity\\\\Studio Luminant High Level.docx\" /tmp/sl-brand-unpacked/)"
+      "Bash(python \"C:\\\\Users\\\\burak\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\527c328b-7134-4d3f-ac11-56074bc05283\\\\9b8f2b15-97a3-4aec-b9a9-c9765b815e84\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\burak\\\\Desktop\\\\SL COWORK\\\\02 — Brand & Identity\\\\Studio Luminant High Level.docx\" /tmp/sl-brand-unpacked/)",
+      "Bash(gh repo:*)",
+      "Bash(where gh:*)",
+      "Bash(winget list:*)",
+      "Bash(winget install:*)",
+      "Bash($env:PATH += \";C:\\\\Program Files\\\\GitHub CLI\")",
+      "Bash(gh auth:*)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" auth status)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" repo create studio-luminant-website --public --source=. --remote=origin --push)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" api repos/mrdrbt/studio-luminant-website/pages --method POST --field source='{\"\"branch\"\":\"\"master\"\",\"\"path\"\":\"\"/\"\"}')"
     ]
   }
 }

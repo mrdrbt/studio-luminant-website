@@ -120,9 +120,11 @@ ${mobileItemsHtml}
   const footerContent = lang === 'tr' ? {
     homeHref: 'Studio Luminant — Özel Mimari Elemanlar.htm',
     tagline: 'Özel mimari elemanlar — tasarlanır, dökülür, özenle bitirilir.',
-    hqTitle: 'Üretim Merkezi',
+    hqTitle: 'Genel Merkez',
     locationLabel: 'Konum',
     locationNote: 'Küresel Dağıtım ve Montaj Hazır',
+    productionTitle: 'Üretim Atölyesi',
+    productionLocation: 'Sakarya / Türkiye',
     ctaTitle: 'Proje Başlat',
     ctaBtn: 'Proje Başlat',
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
@@ -135,9 +137,11 @@ ${mobileItemsHtml}
   } : {
     homeHref: 'Studio Luminant — Bespoke Architectural Elements.htm',
     tagline: 'Bespoke architectural elements — sculpted, cast, and finished to spec.',
-    hqTitle: 'Manufacturing HQ',
+    hqTitle: 'Headquarter',
     locationLabel: 'Location',
     locationNote: 'Global Distribution &amp; Installation Ready',
+    productionTitle: 'Production Studio',
+    productionLocation: 'Sakarya / Turkey',
     ctaTitle: 'Start a Project',
     ctaBtn: 'Initiate Project',
     copyright: '© 2026 Studio Luminant. All Rights Reserved.',
@@ -162,8 +166,10 @@ ${mobileItemsHtml}
       <div>
         <div class="footer-col-title">${footerContent.hqTitle}</div>
         <span class="footer-location-eyebrow">${footerContent.locationLabel}</span>
-        <div class="footer-location-name">Sakarya / Sapanca<br>Türkiye</div>
+        <div class="footer-location-name">Levent Plaza, Ortabayır Mah.<br>Talatpaşa Cad. No: 21, İç Kapı No: 501<br>Kağıthane / İstanbul</div>
         <p class="footer-location-note">${footerContent.locationNote}</p>
+        <div class="footer-col-title" style="margin-top:1.2em">${footerContent.productionTitle}</div>
+        <div class="footer-location-name">${footerContent.productionLocation}</div>
       </div>
       <div class="footer-cta-block">
         <div class="footer-col-title">${footerContent.ctaTitle}</div>
@@ -187,6 +193,6 @@ ${mobileItemsHtml}
   </div>
 </footer>
 
-<div class="coord-tag">40.7°N — 30.4°E — Sakarya, TR</div>`;
+<div class="coord-tag">41.1°N — 29.0°E — İstanbul, TR</div>`;
 
 })();

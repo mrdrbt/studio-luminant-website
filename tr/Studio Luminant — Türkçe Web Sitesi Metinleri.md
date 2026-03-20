@@ -220,7 +220,7 @@ UV kararlı, hava koşullarına dayanıklı ve darbe testli PUCOMP panelleri, PM
 
 **Ana Başlık:** Ana Kalıp
 
-**Açıklama:** CNC işlenmiş ana kalıplar doğrudan dijital modelden üretilir. Silikon veya poliüretan üretim kalıpları ana kalıptan dökülerek, geometrik bozulma olmadan sınırsız üretim serisi sağlar. Kalıp maliyetleri üretim hacmi üzerinden dağıtılır.
+**Açıklama:** 3D baskı ile üretilen ana kalıplar doğrudan dijital modelden oluşturulur. Silikon veya poliüretan üretim kalıpları ana kalıptan dökülerek, geometrik bozulma olmadan sınırsız üretim serisi sağlar. Kalıp maliyetleri üretim hacmi üzerinden dağıtılır.
 
 ### Adım 04 — Döküm
 
@@ -242,7 +242,7 @@ UV kararlı, hava koşullarına dayanıklı ve darbe testli PUCOMP panelleri, PM
 
 **Ana Başlık:** Sakarya Üretimi
 
-**Paragraf 1:** Sakarya / Sapanca'daki 2.400 m² tesisimiz, CNC kalıplamadan döküme, bitirme işlemine ve kalite kontrolüne kadar tam üretim hattını tek çatı altında barındırır. Dikey entegrasyon, taşeron gecikmelerini ortadan kaldırır ve brifingden kasaya kadar tam kalite kontrolü sağlar.
+**Paragraf 1:** Sakarya / Sapanca'daki 2.400 m² tesisimiz, eklemeli kalıp üretiminden döküme, bitirme işlemine ve kalite kontrolüne kadar tam üretim hattını tek çatı altında barındırır. Dikey entegrasyon, taşeron gecikmelerini ortadan kaldırır ve brifingden kasaya kadar tam kalite kontrolü sağlar.
 
 **Paragraf 2:** Her panel, sertifikalı malzeme veri sayfası ve montaj çizimi ile sevk edilir. Orta Doğu, Kafkasya ve Doğu Avrupa'ya lojistik ve saha montaj desteği mevcuttur.
 
