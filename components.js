@@ -11,6 +11,19 @@
   const langUrl = navEl.getAttribute('data-lang-url') || '#';
   const base = navEl.getAttribute('data-base') || '';
 
+  // ─── FAVICON ───
+  if (!document.querySelector('link[rel="icon"]')) {
+    const fav = document.createElement('link');
+    fav.rel = 'icon';
+    fav.href = base + 'favicon.ico';
+    fav.type = 'image/x-icon';
+    document.head.appendChild(fav);
+    const apple = document.createElement('link');
+    apple.rel = 'apple-touch-icon';
+    apple.href = base + 'apple-touch-icon.png';
+    document.head.appendChild(apple);
+  }
+
   // ─── NAV ───
   const navLinks = lang === 'tr' ? {
     home: { href: 'Studio Luminant — Özel Mimari Elemanlar.htm', alt: 'Studio Luminant' },
