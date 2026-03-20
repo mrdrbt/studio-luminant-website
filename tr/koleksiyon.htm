@@ -575,6 +575,13 @@ const appLabels = {
   'sculptural': 'Heykelsi'
 };
 
+const styleLabels = {
+  'geometric': 'Geometrik',
+  'organic': 'Organik',
+  'heritage': 'Miras',
+  'surface': 'Yüzey'
+};
+
 // ─── Local scroll-reveal observer (shared.js observer is module-scoped) ───
 const collectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -622,7 +629,7 @@ function renderGrid() {
         <div class="card-info">
           <div class="card-name">${p.name}</div>
           <div class="card-meta">
-            <span class="cat">${p.style.charAt(0).toUpperCase() + p.style.slice(1)}</span>
+            <span class="cat">${(styleLabels[p.style] || p.style)}</span>
             · ${p.applications.map(a => appLabels[a] || a).join(', ')}
           </div>
         </div>`;
@@ -695,7 +702,7 @@ function openLightbox(patternIndex) {
 
   document.getElementById('lb-img').src = p.image;
   document.getElementById('lb-img').alt = p.name + ' — ' + p.style + ' pattern';
-  document.getElementById('lb-cat').textContent = p.style.charAt(0).toUpperCase() + p.style.slice(1);
+  document.getElementById('lb-cat').textContent = (styleLabels[p.style] || p.style);
   document.getElementById('lb-name').textContent = p.name;
   document.getElementById('lb-apps').textContent = p.applications.map(a => appLabels[a] || a).join(' · ');
   document.getElementById('lb-desc').textContent = p.description;
