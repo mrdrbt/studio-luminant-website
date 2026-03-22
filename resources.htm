@@ -14,6 +14,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Technical Resources — Studio Luminant">
 <meta name="twitter:description" content="Fire ratings, specification guidance, weight data, and structural details for architects specifying Lumina PMAG™ and PUCOMP™ relief panels.">
+<meta property="og:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
+<meta name="twitter:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -153,6 +155,85 @@
     .resource-card { grid-template-columns: 1fr; gap: 24px; }
     .resource-card-arrow { width: 40px; height: 40px; }
   }
+
+  /* ─── BIM RESOURCE CARD ──────────────── */
+  .resource-card--bim {
+    background: var(--surface);
+    padding: 48px 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    border-top: 1px solid var(--border);
+  }
+  .bim-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 4px 12px;
+    border: 1px solid var(--gold-dim);
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold);
+    font-weight: 400; margin-bottom: 16px;
+  }
+  .bim-badge svg {
+    width: 14px; height: 14px; color: var(--gold);
+  }
+  .bim-meta {
+    display: flex; gap: 24px; margin-top: 16px;
+  }
+  .bim-meta span {
+    font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--text-muted);
+    font-weight: 400;
+  }
+  .bim-cta-group {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 12px;
+    flex-shrink: 0;
+  }
+  .bim-download-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 28px;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  .bim-download-btn:hover {
+    background: var(--gold);
+    color: var(--obsidian);
+  }
+  .bim-download-btn svg {
+    width: 14px; height: 14px;
+  }
+  .bim-full-library {
+    font-size: 11px; color: var(--text-muted);
+    font-weight: 300;
+  }
+  .bim-full-library a {
+    color: var(--gold-dim);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .bim-full-library a:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  @media (max-width: 1024px) {
+    .resource-card--bim { padding: 36px 32px; }
+  }
+  @media (max-width: 600px) {
+    .resource-card--bim { grid-template-columns: 1fr; gap: 24px; }
+    .bim-cta-group { align-items: flex-start; }
+    .bim-meta { flex-wrap: wrap; gap: 12px; }
+  }
 </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
@@ -167,7 +248,7 @@
 
 <div id="site-nav" data-lang="en" data-lang-url="tr/kaynaklar.htm"></div>
 
-<main>
+<main id="main">
 
 <!-- PAGE HERO -->
 <section id="page-hero">
@@ -223,6 +304,32 @@
       </a>
 
     </div>
+
+      <!-- BIM SAMPLE -->
+      <div class="resource-card--bim reveal">
+        <div>
+          <div class="resource-card-number">04</div>
+          <div class="bim-badge">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            Sample BIM File
+          </div>
+          <h2 class="resource-card-title">BIM <em>for Revit</em></h2>
+          <p class="resource-card-desc">Download a sample Revit family (.rfa) of one of our relief tile profiles — complete with material parameters, dimensional types, and fire classification metadata. A preview of the full BIM library provided to project partners.</p>
+          <div class="bim-meta">
+            <span>Revit .rfa</span>
+            <span>LOD 300</span>
+            <span>Lumina PMAG&trade;</span>
+          </div>
+        </div>
+        <div class="bim-cta-group">
+          <a href="downloads/SL_Sample_Tile_BIM.rfa" class="bim-download-btn" download>
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 2v9M4 8l4 4 4-4M2 13h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download Sample
+          </a>
+          <p class="bim-full-library">Full library available for projects — <a href="contact.htm">request access</a></p>
+        </div>
+      </div>
+
   </div>
 </section>
 

@@ -14,6 +14,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Koleksiyon — Standart Mimari Desenler | Studio Luminant">
 <meta name="twitter:description" content="Studio Luminant'ın standart mimari rölyef desen koleksiyonuna göz atın.">
+<meta property="og:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
+<meta name="twitter:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -350,9 +352,14 @@
   }
 
   /* ─── RESPONSIVE ────────────────────── */
+  .uds-intro { padding: 32px 32px 0 !important; }
+  .uds-intro > div { flex-direction: column !important; gap: 20px !important; }
+
   @media (max-width: 1024px) {
     #collection-hero { padding: 120px 32px 60px; }
     .collection-hero-inner { flex-direction: column; gap: 32px; }
+    .uds-intro { padding: 32px 32px 0 !important; }
+    .uds-intro > div { flex-direction: column !important; gap: 20px !important; }
     .collection-filters { padding: 32px 32px 0; }
     .collection-grid-section { padding: 24px 32px 60px; }
     .pattern-grid { grid-template-columns: repeat(2, 1fr); }
@@ -384,7 +391,7 @@
 
 <div id="site-nav" data-lang="tr" data-lang-url="../collection.htm" data-base="../"></div>
 
-<main>
+<main id="main">
 
 <!-- COLLECTION HERO -->
 <section id="collection-hero">
@@ -397,6 +404,21 @@
       <h1 class="hero-title" id="hero-title"></h1>
       <p class="hero-desc" id="hero-desc"></p>
       <a class="hero-cta" id="hero-cta" href="iletisim.htm">Bu Tasarım Hakkında Bilgi Alın →</a>
+    </div>
+  </div>
+</section>
+
+<!-- UDS INTRO -->
+<section class="uds-intro reveal" style="max-width: 1280px; margin: 0 auto; padding: 48px 60px 0;">
+  <div style="display: flex; gap: 40px; align-items: center; padding: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;">
+    <div style="flex: 1;">
+      <div class="eyebrow" style="margin-bottom: 12px;">Bütünleşik Tasarım Sistemi</div>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--text-primary); line-height: 1.2; margin-bottom: 12px;">Tek Desen. <em style="color: var(--gold);">Her Yüzey.</em></h2>
+      <p style="font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300;">Tek bir rölyef tasarımı belirleyin — duvarlar, tavanlar, kolonlar ve özel elemanlarda üretelim. İki malzeme sistemi, tek tutarlı tasarım dili. Aşağıdaki koleksiyona göz atın veya <a href="iletisim.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">özel desen brifingi verin</a>.</p>
+    </div>
+    <div style="flex: 0 0 auto; display: flex; gap: 12px;">
+      <a href="urunler.htm#pmag" style="display: inline-block; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 20px; border-radius: 4px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.3s, color 0.3s;">PMAG Teknik →</a>
+      <a href="urunler.htm#pucomp" style="display: inline-block; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 20px; border-radius: 4px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.3s, color 0.3s;">PUCOMP Teknik →</a>
     </div>
   </div>
 </section>
@@ -430,7 +452,7 @@
 <section class="collection-bottom-cta reveal">
   <div class="collection-bottom-cta-inner">
     <h3>Benzersiz bir şey mi arıyorsunuz?</h3>
-    <p>Standart koleksiyonumuz sadece başlangıç. AIAPM tasarım sürecimizle tamamen özel desenler üretiyoruz.</p>
+    <p>Standart koleksiyonumuz sadece başlangıç. AIAPM tasarım sürecimizle tamamen özel desenler üretiyoruz. Önce teknik özelliklere mi ihtiyacınız var? <a href="urunler.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Malzeme & Teknik</a> sayfasına bakın.</p>
     <a href="iletisim.htm" class="bespoke-cta">Özel Bir Tasarım Görüşün →</a>
   </div>
 </section>

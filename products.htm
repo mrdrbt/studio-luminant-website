@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products — Studio Luminant</title>
-<meta name="description" content="Lumina PMAG™ and Lumina PUCOMP™ — Studio Luminant's architectural element materials. A1 fire-rated gypsum and high-performance composite for panels, installations, sculptural features, and decorative surfaces.">
+<title>Materials & Specs — Studio Luminant</title>
+<meta name="description" content="Lumina PMAG™ and Lumina PUCOMP™ — technical specifications, fire ratings, dimensions, and performance data for Studio Luminant's architectural element materials.">
 <link rel="canonical" href="https://www.studioluminant.com/products.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
-<meta property="og:title" content="Products — Studio Luminant">
-<meta property="og:description" content="Lumina PMAG™ and Lumina PUCOMP™ — Studio Luminant's architectural element materials. A1 fire-rated gypsum and high-performance composite for panels, installations, sculptural features, and decorative surfaces.">
+<meta property="og:title" content="Materials & Specs — Studio Luminant">
+<meta property="og:description" content="Lumina PMAG™ and Lumina PUCOMP™ — technical specifications, fire ratings, dimensions, and performance data for Studio Luminant's architectural element materials.">
 <meta property="og:url" content="https://www.studioluminant.com/products.htm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Products — Studio Luminant">
-<meta name="twitter:description" content="Lumina PMAG™ and Lumina PUCOMP™ — Studio Luminant's architectural element materials. A1 fire-rated gypsum and high-performance composite for panels, installations, sculptural features, and decorative surfaces.">
+<meta name="twitter:title" content="Materials & Specs — Studio Luminant">
+<meta name="twitter:description" content="Lumina PMAG™ and Lumina PUCOMP™ — technical specifications, fire ratings, dimensions, and performance data for Studio Luminant's architectural element materials.">
+<meta property="og:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
+<meta name="twitter:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -179,19 +181,19 @@
 
 <div id="site-nav" data-lang="en" data-lang-url="tr/urunler.htm"></div>
 
-<main>
+<main id="main">
 
 <!-- PAGE HERO -->
 <section id="page-hero">
   <div class="page-hero-content">
     <div class="page-hero-eyebrow">
-      <span>Unified Design System</span>
+      <span>Materials & Specifications</span>
     </div>
     <h1 class="page-hero-headline">
-      One Pattern.<br><em>Every Surface.</em>
+      Two Materials.<br><em>One Standard.</em>
     </h1>
     <p class="page-hero-sub">
-      Specify one relief design — we produce it across walls, ceilings, columns, and feature elements. Two material systems engineered for performance, united by a single design language.
+      Lumina PMAG™ for fire-rated interiors. Lumina PUCOMP™ for exteriors, wet areas, and complex geometry. Both specified with real numbers, tested data sheets, and BIM-ready deliverables.
     </p>
   </div>
 </section>
@@ -213,42 +215,44 @@
           Lumina PMAG™ is Studio Luminant's primary interior cladding material — a polymer modified alpha gypsum formulated for high-specification architectural installations. Alpha gypsum delivers a compressive strength significantly above beta-grade alternatives, producing a denser, harder panel with a ceramic-like surface finish.
         </p>
         <p class="product-desc reveal">
-          Certified A1 non-combustible, moisture resistant, and available in any RAL or custom colour via automotive-grade 2K coating. Ideal for large-scale interior wall and ceiling installations where fire compliance, surface quality, and dimensional accuracy are non-negotiable.
+          Certified A1 non-combustible under EN 13501-1, moisture resistant, and available in any RAL or custom colour. Ideal for large-scale interior wall and ceiling installations where fire compliance, surface quality, and dimensional accuracy are non-negotiable.
         </p>
       </div>
-      <!-- Right: specs grid -->
-      <div class="specs-grid reveal">
-        <div class="spec-cell">
+      <!-- Right: specs grid — values hydrated from material-specs.js -->
+      <div class="specs-grid reveal" id="pmag-specs">
+        <div class="spec-cell" data-spec="pmag.fire">
           <div class="spec-label">Fire Rating</div>
           <div class="spec-value">A1 Non-Combustible</div>
+          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">EN 13501-1 — no flame retardant additives required</p>
         </div>
-        <div class="spec-cell">
+        <div class="spec-cell" data-spec="pmag.maxPanel">
+          <div class="spec-label">Max Panel Size</div>
+          <div class="spec-value">3000 × 1500 mm</div>
+        </div>
+        <div class="spec-cell" data-spec="pmag.thickness">
+          <div class="spec-label">Thickness Range</div>
+          <div class="spec-value">15 – 40 mm</div>
+        </div>
+        <div class="spec-cell" data-spec="pmag.weight">
+          <div class="spec-label">Weight</div>
+          <div class="spec-value">35 – 40 kg/m² @ 25 mm</div>
+        </div>
+        <div class="spec-cell" data-spec="pmag.surface">
           <div class="spec-label">Surface</div>
-          <div class="spec-value">Ceramic-Like Smooth</div>
+          <div class="spec-value">Ceramic-Smooth Finish</div>
         </div>
-        <div class="spec-cell">
-          <div class="spec-label">Application</div>
-          <div class="spec-value">Interior Walls &amp; Ceilings</div>
+        <div class="spec-cell" data-spec="pmag.finish">
+          <div class="spec-label">Finish</div>
+          <div class="spec-value">Any RAL / Custom Colour</div>
+          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Cold-cast metal, patina, and textured finishes available</p>
         </div>
-        <div class="spec-cell">
+        <div class="spec-cell" data-spec="pmag.moisture">
           <div class="spec-label">Moisture</div>
           <div class="spec-value">Resistant</div>
         </div>
-        <div class="spec-cell">
-          <div class="spec-label">Scale</div>
-          <div class="spec-value">Large-Format Panels</div>
-        </div>
-        <div class="spec-cell">
-          <div class="spec-label">Finish</div>
-          <div class="spec-value">Automotive 2K Coating</div>
-        </div>
-        <div class="spec-cell">
-          <div class="spec-label">Combustion Chemistry</div>
-          <div class="spec-value">No Flame Retardant Additives</div>
-        </div>
-        <div class="spec-cell">
-          <div class="spec-label">Production</div>
-          <div class="spec-value">Made to Order — Zero Overproduction</div>
+        <div class="spec-cell" data-spec="pmag.deliverables">
+          <div class="spec-label">Deliverables</div>
+          <div class="spec-value">TDS + BIM Files Included</div>
         </div>
       </div>
     </div>
@@ -298,40 +302,42 @@
           Lumina PUCOMP™ is a high-performance polyurethane composite engineered for applications where gypsum is unsuitable — exterior cladding, wet areas, high-impact surfaces, and complex three-dimensional geometries. The formulation delivers exceptional strength-to-weight ratio, enabling intricate panel forms that would be prohibitively heavy in mineral-based materials.
         </p>
         <p class="product-desc reveal">
-          UV-stable, weather resistant, and impact rated, PUCOMP panels are finished to the same automotive 2K standard as PMAG — maintaining a consistent aesthetic across both material families regardless of installation context.
+          UV-stable, weather resistant, and impact rated, PUCOMP panels are finished to the same standard as PMAG — maintaining a consistent aesthetic across both material families regardless of installation context.
         </p>
       </div>
-      <!-- Right: specs grid -->
-      <div class="specs-grid reveal">
-        <div class="spec-cell">
+      <!-- Right: specs grid — values hydrated from material-specs.js -->
+      <div class="specs-grid reveal" id="pucomp-specs">
+        <div class="spec-cell" data-spec="pucomp.fire">
+          <div class="spec-label">Fire Rating</div>
+          <div class="spec-value">B-s1,d0</div>
+          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">EN 13501-1 — flame retardant, low smoke</p>
+        </div>
+        <div class="spec-cell" data-spec="pucomp.maxPanel">
+          <div class="spec-label">Max Panel Size</div>
+          <div class="spec-value">2500 × 1200 mm</div>
+        </div>
+        <div class="spec-cell" data-spec="pucomp.thickness">
+          <div class="spec-label">Thickness Range</div>
+          <div class="spec-value">8 – 25 mm</div>
+        </div>
+        <div class="spec-cell" data-spec="pucomp.weight">
           <div class="spec-label">Weight</div>
-          <div class="spec-value">Lightweight</div>
+          <div class="spec-value">12 – 18 kg/m² @ 15 mm</div>
         </div>
-        <div class="spec-cell">
+        <div class="spec-cell" data-spec="pucomp.application">
           <div class="spec-label">Application</div>
-          <div class="spec-value">Exterior &amp; Wet Areas</div>
+          <div class="spec-value">Exterior, Wet Areas &amp; Complex Geometry</div>
         </div>
-        <div class="spec-cell">
-          <div class="spec-label">Geometry</div>
-          <div class="spec-value">Complex Spatial Forms</div>
-        </div>
-        <div class="spec-cell">
-          <div class="spec-label">Durability</div>
-          <div class="spec-value">Impact Resistant</div>
-        </div>
-        <div class="spec-cell">
-          <div class="spec-label">Rating</div>
-          <div class="spec-value">UV &amp; Weather Resistant</div>
-        </div>
-        <div class="spec-cell">
+        <div class="spec-cell" data-spec="pucomp.finish">
           <div class="spec-label">Finish</div>
-          <div class="spec-value">Automotive 2K Coating</div>
+          <div class="spec-value">Any RAL / Custom Colour</div>
+          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Cold-cast metal and textured finishes available</p>
         </div>
-        <div class="spec-cell">
-          <div class="spec-label">Lifecycle</div>
-          <div class="spec-value">UV-Stable — Extended Service Life</div>
+        <div class="spec-cell" data-spec="pucomp.durability">
+          <div class="spec-label">Durability</div>
+          <div class="spec-value">UV-Stable, Impact &amp; Weather Rated</div>
         </div>
-        <div class="spec-cell">
+        <div class="spec-cell" data-spec="pucomp.repairability">
           <div class="spec-label">Repairability</div>
           <div class="spec-value">Spot Repair Without Panel Replacement</div>
         </div>
@@ -387,7 +393,7 @@
       </svg>
     </a>
     <p class="cta-sub reveal" style="margin-top: 24px; margin-bottom: 0;">
-      Or explore our <a href="resources.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s;">Technical Resources</a> for specification guidance.
+      Browse the <a href="collection.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s;">Pattern Collection</a> or explore our <a href="resources.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s;">Technical Resources</a> for specification guidance.
     </p>
   </div>
 </section>
@@ -398,11 +404,40 @@
 
 <script src="shared.js"></script>
 <script src="components.js"></script>
+<script src="material-specs.js?v=2"></script>
+<script>
+// Hydrate spec grids from SL_SPECS (single source of truth)
+(function() {
+  if (!window.SL_SPECS) return;
+  var S = SL_SPECS, F = S.fmt, lang = 'en';
+  document.querySelectorAll('[data-spec]').forEach(function(cell) {
+    var parts = cell.dataset.spec.split('.');
+    var mat = S[parts[0]], key = parts[1];
+    if (!mat || !mat[key]) return;
+    var val = mat[key];
+    var sv = cell.querySelector('.spec-value');
+    var sn = cell.querySelector('.spec-note');
+    if (key === 'fire') {
+      sv.textContent = val.value + ' Non-Combustible'.slice(0, val.value === 'A1' ? 17 : 0);
+      if (sn) sn.textContent = val.standard + ' — ' + val['note_' + lang];
+    } else if (key === 'maxPanel') {
+      sv.textContent = F.panelSize(mat);
+    } else if (key === 'thickness') {
+      sv.textContent = F.thickness(mat);
+    } else if (key === 'weight') {
+      sv.textContent = F.weight(mat);
+    } else if (typeof val === 'object' && val[lang]) {
+      sv.textContent = val[lang];
+      if (sn && val['note_' + lang]) sn.textContent = val['note_' + lang];
+    }
+  });
+})();
+</script>
 
 <!-- Material Guide Engine (React-powered) -->
 <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-<script src="material-guide.js"></script>
+<script src="material-guide.js?v=2"></script>
 
 </body>
 </html>

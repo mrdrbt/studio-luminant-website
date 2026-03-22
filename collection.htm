@@ -14,6 +14,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Collection — Standard Architectural Patterns | Studio Luminant">
 <meta name="twitter:description" content="Browse Studio Luminant's standard collection of architectural relief patterns.">
+<meta property="og:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
+<meta name="twitter:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -315,6 +317,72 @@
   .lb-prev { left: -56px; }
   .lb-next { right: -56px; }
 
+  /* ─── TILING PREVIEW (LIGHTBOX) ────── */
+  .lb-view-toggle {
+    display: flex; gap: 0; margin-bottom: 12px;
+  }
+  .lb-view-btn {
+    flex: 1; padding: 8px 0; text-align: center;
+    font-family: 'Jost', sans-serif; font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-muted); background: transparent;
+    border: 1px solid var(--border); cursor: pointer;
+    transition: color 0.25s, background 0.25s, border-color 0.25s;
+  }
+  .lb-view-btn:first-child { border-radius: 4px 0 0 4px; }
+  .lb-view-btn:last-child  { border-radius: 0 4px 4px 0; border-left: 0; }
+  .lb-view-btn.active {
+    color: var(--obsidian); background: var(--gold);
+    border-color: var(--gold);
+  }
+  .lb-view-btn:not(.active):hover { color: var(--gold); border-color: var(--gold); }
+
+  .lb-tiling-wrap {
+    display: none; flex-direction: column; align-items: center;
+    justify-content: center; min-height: 320px;
+    background: var(--surface-2); border-radius: 6px;
+    padding: 24px; position: relative;
+  }
+  .lb-tiling-wrap.visible { display: flex; }
+
+  .lb-tiling-controls {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 16px; flex-wrap: wrap; justify-content: center;
+  }
+  .lb-tiling-pill {
+    font-family: 'Jost', sans-serif; font-size: 9px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-secondary); background: transparent;
+    border: 1px solid var(--border); padding: 5px 14px;
+    border-radius: 20px; cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .lb-tiling-pill:hover { color: var(--gold); border-color: var(--gold); }
+  .lb-tiling-pill.active {
+    background: var(--gold); color: var(--obsidian);
+    border-color: var(--gold);
+  }
+  .lb-grid-slider {
+    width: 80px; accent-color: var(--gold);
+    cursor: pointer;
+  }
+  .lb-grid-label {
+    font-family: 'Jost', sans-serif; font-size: 9px;
+    letter-spacing: 0.1em; color: var(--text-muted);
+  }
+
+  .lb-tiling-svg-wrap {
+    background: #fff; border-radius: 4px;
+    padding: 12px; display: inline-block; line-height: 0;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  }
+  #lb-tiling-svg { display: block; max-width: 100%; max-height: 50vh; }
+
+  .lb-tiling-hint {
+    margin-top: 10px; font-size: 11px; color: var(--text-muted);
+    font-style: italic;
+  }
+
   /* ─── BOTTOM CTA ───────────────────── */
   .collection-bottom-cta {
     max-width: 1280px; margin: 0 auto;
@@ -351,6 +419,8 @@
 
   /* ─── RESPONSIVE ────────────────────── */
   @media (max-width: 1024px) {
+    .uds-intro { padding: 32px 32px 0 !important; }
+    .uds-intro > div { flex-direction: column !important; gap: 20px !important; }
     #collection-hero { padding: 120px 32px 60px; }
     .collection-hero-inner { flex-direction: column; gap: 32px; }
     .collection-filters { padding: 32px 32px 0; }
@@ -384,7 +454,7 @@
 
 <div id="site-nav" data-lang="en" data-lang-url="tr/koleksiyon.htm"></div>
 
-<main>
+<main id="main">
 
 <!-- COLLECTION HERO -->
 <section id="collection-hero">
@@ -397,6 +467,21 @@
       <h1 class="hero-title" id="hero-title"></h1>
       <p class="hero-desc" id="hero-desc"></p>
       <a class="hero-cta" id="hero-cta" href="contact.htm">Enquire About This Design →</a>
+    </div>
+  </div>
+</section>
+
+<!-- UDS INTRO -->
+<section class="uds-intro reveal" style="max-width: 1280px; margin: 0 auto; padding: 48px 60px 0;">
+  <div style="display: flex; gap: 40px; align-items: center; padding: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;">
+    <div style="flex: 1;">
+      <div class="eyebrow" style="margin-bottom: 12px;">Unified Design System</div>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--text-primary); line-height: 1.2; margin-bottom: 12px;">One Pattern. <em style="color: var(--gold);">Every Surface.</em></h2>
+      <p style="font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300;">Specify one relief design — we produce it across walls, ceilings, columns, and feature elements. Two material systems, one consistent design language. Browse the collection below, or <a href="contact.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">brief us on a bespoke pattern</a>.</p>
+    </div>
+    <div style="flex: 0 0 auto; display: flex; gap: 12px;">
+      <a href="products.htm#pmag" style="display: inline-block; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 20px; border-radius: 4px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.3s, color 0.3s;">PMAG Specs →</a>
+      <a href="products.htm#pucomp" style="display: inline-block; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 20px; border-radius: 4px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.3s, color 0.3s;">PUCOMP Specs →</a>
     </div>
   </div>
 </section>
@@ -430,7 +515,7 @@
 <section class="collection-bottom-cta reveal">
   <div class="collection-bottom-cta-inner">
     <h3>Looking for something unique?</h3>
-    <p>Our standard collection is just the beginning. We create fully bespoke patterns through our AIAPM design process.</p>
+    <p>Our standard collection is just the beginning. We create fully bespoke patterns through our AIAPM design process. Need technical specs first? See <a href="products.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Materials & Specs</a>.</p>
     <a href="contact.htm" class="bespoke-cta">Discuss a Bespoke Design →</a>
   </div>
 </section>
@@ -441,7 +526,27 @@
   <div class="lightbox-inner">
     <button class="lb-close" id="lb-close" aria-label="Close">×</button>
     <div class="lb-image">
+      <div class="lb-view-toggle" id="lb-view-toggle" style="display:none">
+        <button class="lb-view-btn active" data-view="photo">Photo</button>
+        <button class="lb-view-btn" data-view="tiling">Tiling Preview</button>
+      </div>
       <img id="lb-img" src="" alt="">
+      <div class="lb-tiling-wrap" id="lb-tiling-wrap">
+        <div class="lb-tiling-controls">
+          <button class="lb-tiling-pill active" data-arr="random">Random</button>
+          <button class="lb-tiling-pill" data-arr="diagonal">Diagonal</button>
+          <button class="lb-tiling-pill" data-arr="spiral">Spiral</button>
+          <button class="lb-tiling-pill" data-arr="radial">Radial</button>
+          <label class="lb-grid-label">
+            <input type="range" id="lb-grid-size" class="lb-grid-slider" min="4" max="16" value="8">
+            <span id="lb-grid-label">8×8</span>
+          </label>
+        </div>
+        <div class="lb-tiling-svg-wrap">
+          <svg id="lb-tiling-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div class="lb-tiling-hint">Each tile rotated 0°/90°/180°/270° — click Random to regenerate</div>
+      </div>
     </div>
     <div class="lb-details">
       <div class="lb-cat" id="lb-cat"></div>
@@ -473,7 +578,11 @@ const patterns = [
     image: 'images/studio-luminant-architectural-relief-compass-star-wall-panel.jpg',
     description: 'A radiating star motif inspired by classical compass rose geometry. Creates dramatic shadow play under directional lighting.',
     materials: ['pmag', 'pucomp'],
-    featured: true
+    featured: true,
+    tileSvg: {
+      vb: '0 0 192.756 192.756',
+      svg: '<path d="m 0,0 v 72.115 0.166 h 24.093 c 0,-13.28 10.81,-24.09 24.1,-24.09 V 24.284 24.091 c -13.29,0 -24.1,-10.8 -24.1,-24.09 0,-13.29 10.81,-24.09 24.1,-24.09 v -0.182 -23.807 -0.111 c -12.22,0 -23.38,4.55 -31.87,12.05 -10.01,8.82 -16.32,21.75 -16.32,36.14" style="fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,128.50053,96.379333)"/><path d="m 0,0 v 72.115 0.166 h -24.093 c 0,-13.28 -10.81,-24.09 -24.1,-24.09 V 24.284 24.091 c 13.29,0 24.1,-10.8 24.1,-24.09 0,-13.29 -10.81,-24.09 -24.1,-24.09 v -0.182 -23.807 -0.111 c 12.22,0 23.38,4.55 31.87,12.05 10.01,8.82 16.32,21.75 16.32,36.14" style="fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,64.255467,96.379333)"/><path d="m 0,0 c 0,13.28 10.81,24.09 24.09,24.09 13.29,0 24.1,-10.81 24.1,-24.09 h 24.09 c 0,12.22 -4.55,23.38 -12.04,31.87 C 51.4,41.87 38.49,48.18 24.09,48.18 9.7,48.18 -3.22,41.87 -12.05,31.87 -19.55,23.38 -24.1,12.22 -24.1,0 Z" style="fill-rule:nonzero;stroke:none" transform="matrix(1.3333333,0,0,-1.3333333,64.251333,192.75133)"/>'
+    }
   },
   {
     id: 'diagonal-wave',
@@ -483,7 +592,11 @@ const patterns = [
     image: 'images/studio-luminant-architectural-relief-diagonal-wave-wall-panel.jpg',
     description: 'Flowing diagonal wave pattern that creates a sense of movement across wall surfaces. Ideal for feature walls in lobbies and corridors.',
     materials: ['pmag', 'pucomp'],
-    featured: false
+    featured: false,
+    tileSvg: {
+      vb: '0 0 100 100',
+      svg: '<rect width="100" height="100" fill="white"/><path d="M 0,35 C 25,35 25,0 50,0 L 50,0 C 75,0 75,35 100,35 L 100,65 C 75,65 75,100 50,100 L 50,100 C 25,100 25,65 0,65 Z" fill="black"/>'
+    }
   },
   {
     id: 'faceted-crystal',
@@ -493,7 +606,11 @@ const patterns = [
     image: 'images/studio-luminant-architectural-relief-faceted-crystal-diagonal-wall-panel.jpg',
     description: 'Sharp geometric facets that catch and reflect light, inspired by crystalline mineral formations.',
     materials: ['pmag'],
-    featured: false
+    featured: false,
+    tileSvg: {
+      vb: '0 0 100 100',
+      svg: '<rect width="100" height="100" fill="white"/><polygon points="50,0 100,0 100,50 50,100 0,100 0,50" fill="black"/>'
+    }
   },
   {
     id: 'ottoman-heritage',
@@ -503,7 +620,11 @@ const patterns = [
     image: 'images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg',
     description: 'Traditional Ottoman geometric pattern reinterpreted in contemporary relief. Bridges historical craft with modern architectural specification.',
     materials: ['pmag', 'pucomp'],
-    featured: false
+    featured: false,
+    tileSvg: {
+      vb: '0 0 100 100',
+      svg: '<rect width="100" height="100" fill="white"/><path d="M 36,0 A 36,36 0 0,1 0,36 L 0,24 A 24,24 0 0,0 24,0 Z" fill="black"/><path d="M 76,0 A 76,76 0 0,1 0,76 L 0,58 A 58,58 0 0,0 58,0 Z" fill="black"/><path d="M 64,100 A 36,36 0 0,1 100,64 L 100,76 A 24,24 0 0,0 76,100 Z" fill="black"/><path d="M 24,100 A 76,76 0 0,1 100,24 L 100,42 A 58,58 0 0,0 42,100 Z" fill="black"/>'
+    }
   },
   {
     id: 'organic-cell',
@@ -513,7 +634,11 @@ const patterns = [
     image: 'images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png',
     description: 'Biomorphic cell pattern inspired by natural cellular structures. Soft, flowing forms that add depth and texture.',
     materials: ['pmag'],
-    featured: false
+    featured: false,
+    tileSvg: {
+      vb: '0 0 100 100',
+      svg: '<rect width="100" height="100" fill="white"/><path d="M 50,0 C 40,5 35,12 30,22 C 24,34 15,38 0,50 L 0,0 Z" fill="black"/><path d="M 50,100 C 60,95 65,88 70,78 C 76,66 85,62 100,50 L 100,100 Z" fill="black"/><ellipse cx="50" cy="50" rx="8" ry="10" transform="rotate(-30 50 50)" fill="black"/>'
+    }
   },
   {
     id: 'fluted-column',
@@ -533,7 +658,11 @@ const patterns = [
     image: 'images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.jpg',
     description: 'Repeating petal forms arranged in a geometric grid. Balances organic softness with structured precision.',
     materials: ['pmag', 'pucomp'],
-    featured: false
+    featured: false,
+    tileSvg: {
+      vb: '0 0 100 100',
+      svg: '<rect width="100" height="100" fill="white"/><path d="M 50,0 C 50,28 28,50 0,50 L 0,38 C 22,38 38,22 38,0 Z" fill="black"/><path d="M 50,100 C 50,72 72,50 100,50 L 100,62 C 78,62 62,78 62,100 Z" fill="black"/>'
+    }
   },
   {
     id: 'geometric-star',
@@ -543,7 +672,11 @@ const patterns = [
     image: 'images/studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg',
     description: 'Bold star relief pattern for statement wall installations. Designed for large-format applications in hospitality interiors.',
     materials: ['pmag', 'pucomp'],
-    featured: false
+    featured: false,
+    tileSvg: {
+      vb: '0 0 100 100',
+      svg: '<rect width="100" height="100" fill="white"/><polygon points="50,0 0,0 0,50" fill="black"/><polygon points="50,100 100,100 100,50" fill="black"/><polygon points="50,35 65,50 50,65 35,50" fill="black"/>'
+    }
   },
   {
     id: 'bas-relief',
@@ -563,7 +696,11 @@ const patterns = [
     image: 'images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design.jpg',
     description: '50×50cm modular panel system with heritage-inspired relief. Mix and match orientations for unique compositions.',
     materials: ['pmag', 'pucomp'],
-    featured: false
+    featured: false,
+    tileSvg: {
+      vb: '0 0 100 100',
+      svg: '<rect width="100" height="100" fill="white"/><path d="M 50,0 A 50,50 0 0,1 0,50 L 0,0 Z" fill="black"/><path d="M 50,100 A 50,50 0 0,1 100,50 L 100,100 Z" fill="black"/>'
+    }
   }
 ];
 
@@ -758,6 +895,116 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+
+// ─── Tiling Engine ───
+const TILE_SIZE = 50;
+let tilingGrid = 8;
+let tilingArrangement = 'random';
+let tilingRotations = [];
+let currentTileSvg = null;
+
+const arrangements = {
+  random: (g) => Array.from({length: g}, () => Array.from({length: g}, () => Math.floor(Math.random() * 4))),
+  diagonal: (g) => Array.from({length: g}, (_, r) => Array.from({length: g}, (_, c) => (r + c) % 4)),
+  spiral: (g) => {
+    const mid = (g - 1) / 2;
+    return Array.from({length: g}, (_, r) => Array.from({length: g}, (_, c) => {
+      const angle = Math.atan2(r - mid, c - mid);
+      const dist = Math.sqrt((r - mid) ** 2 + (c - mid) ** 2);
+      return Math.floor((angle / Math.PI * 2 + dist * 0.5 + 4) * 2) % 4;
+    }));
+  },
+  radial: (g) => {
+    const mid = (g - 1) / 2;
+    return Array.from({length: g}, (_, r) => Array.from({length: g}, (_, c) => {
+      const angle = Math.atan2(r - mid, c - mid);
+      return ((Math.floor(angle / (Math.PI / 2)) % 4) + 4) % 4;
+    }));
+  }
+};
+
+function renderTiling() {
+  if (!currentTileSvg) return;
+  const svg = document.getElementById('lb-tiling-svg');
+  const total = tilingGrid * TILE_SIZE;
+  svg.setAttribute('width', total);
+  svg.setAttribute('height', total);
+  svg.setAttribute('viewBox', `0 0 ${total} ${total}`);
+
+  let html = `<rect width="${total}" height="${total}" fill="#ffffff"/>`;
+  html += `<defs><symbol id="lb-tile" viewBox="${currentTileSvg.vb}" overflow="hidden">${currentTileSvg.svg}</symbol></defs>`;
+
+  tilingRotations = arrangements[tilingArrangement](tilingGrid);
+  for (let r = 0; r < tilingGrid; r++) {
+    for (let c = 0; c < tilingGrid; c++) {
+      const rot = tilingRotations[r][c];
+      const x = c * TILE_SIZE, y = r * TILE_SIZE;
+      const cx = x + TILE_SIZE / 2, cy = y + TILE_SIZE / 2;
+      html += `<use href="#lb-tile" x="${x}" y="${y}" width="${TILE_SIZE}" height="${TILE_SIZE}" transform="rotate(${rot * 90} ${cx} ${cy})" fill="#1a1a1a"/>`;
+    }
+  }
+  svg.innerHTML = html;
+}
+
+// ─── Lightbox view toggle ───
+const viewToggle = document.getElementById('lb-view-toggle');
+const tilingWrap = document.getElementById('lb-tiling-wrap');
+const lbImg = document.getElementById('lb-img');
+
+viewToggle.addEventListener('click', (e) => {
+  const btn = e.target.closest('.lb-view-btn');
+  if (!btn) return;
+  const view = btn.dataset.view;
+  viewToggle.querySelectorAll('.lb-view-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  if (view === 'tiling') {
+    lbImg.style.display = 'none';
+    tilingWrap.classList.add('visible');
+    renderTiling();
+  } else {
+    lbImg.style.display = '';
+    tilingWrap.classList.remove('visible');
+  }
+});
+
+// Arrangement pills
+document.querySelector('.lb-tiling-controls').addEventListener('click', (e) => {
+  const pill = e.target.closest('.lb-tiling-pill');
+  if (!pill) return;
+  document.querySelectorAll('.lb-tiling-pill').forEach(p => p.classList.remove('active'));
+  pill.classList.add('active');
+  tilingArrangement = pill.dataset.arr;
+  renderTiling();
+});
+
+// Grid size slider
+document.getElementById('lb-grid-size').addEventListener('input', (e) => {
+  tilingGrid = parseInt(e.target.value);
+  document.getElementById('lb-grid-label').textContent = `${tilingGrid}×${tilingGrid}`;
+  renderTiling();
+});
+
+// ─── Patch openLightbox to handle tiling ───
+const _origOpenLightbox = openLightbox;
+openLightbox = function(patternIndex) {
+  // Reset view to photo
+  viewToggle.querySelectorAll('.lb-view-btn').forEach(b => b.classList.remove('active'));
+  viewToggle.querySelector('[data-view="photo"]').classList.add('active');
+  lbImg.style.display = '';
+  tilingWrap.classList.remove('visible');
+
+  const p = patterns[patternIndex];
+  if (p.tileSvg) {
+    currentTileSvg = p.tileSvg;
+    viewToggle.style.display = '';
+  } else {
+    currentTileSvg = null;
+    viewToggle.style.display = 'none';
+  }
+
+  _origOpenLightbox(patternIndex);
+};
 </script>
 
 </body>

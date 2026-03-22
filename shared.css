@@ -23,6 +23,8 @@ body {
   font-family: 'Jost', sans-serif;
   font-weight: 300;
   overflow-x: hidden;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(201,168,76,0.15);
 }
 
 @media (pointer: fine) {
@@ -69,7 +71,7 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 28px 60px;
   border-bottom: 1px solid transparent;
-  transition: all 0.4s ease;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
 }
 nav.scrolled {
   background: rgba(12,12,14,0.9);
@@ -81,14 +83,19 @@ nav.scrolled {
 .nav-logo-img { height: 25px; width: auto; display: block; transition: opacity 0.3s ease, height 0.4s ease; }
 .nav-logo:hover .nav-logo-img { opacity: 0.8; }
 nav.scrolled .nav-logo-img { height: 19px; }
-.nav-links { display: flex; align-items: center; gap: 48px; list-style: none; }
+.nav-links {
+  display: flex; align-items: center; gap: 48px; list-style: none;
+  position: absolute; left: 50%; transform: translateX(-50%);
+}
 .nav-links a {
   font-family: 'Jost', sans-serif;
   font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--text-secondary);
-  text-decoration: none; transition: color 0.3s;
+  text-decoration: none; transition: color 0.3s; white-space: nowrap;
 }
 .nav-links a:hover { color: var(--gold); }
+.nav-links a.active { color: var(--gold); }
+.nav-right { display: flex; align-items: center; gap: 24px; margin-left: auto; }
 .nav-cta {
   font-family: 'Jost', sans-serif;
   font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
@@ -99,7 +106,7 @@ nav.scrolled .nav-logo-img { height: 19px; }
 .nav-cta:hover { background: var(--gold-light); }
 .nav-lang {
   color: var(--gold-dim); font-size: 11px; letter-spacing: 0.15em;
-  text-transform: uppercase; text-decoration: none; margin-left: 20px; transition: color 0.3s;
+  text-transform: uppercase; text-decoration: none; transition: color 0.3s;
 }
 .nav-lang:hover { color: var(--gold); }
 
@@ -182,6 +189,19 @@ footer {
   font-size: 9px; letter-spacing: 0.2em;
   color: var(--text-muted); text-transform: uppercase; z-index: 100;
 }
+
+/* ─── SKIP LINK ────────────────────── */
+.skip-link {
+  position: absolute; top: -100%; left: 16px;
+  background: var(--gold); color: var(--obsidian);
+  padding: 8px 16px; font-size: 13px; font-weight: 400;
+  z-index: 10000; text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 16px; }
+
+/* ─── HEADING TYPOGRAPHY ───────────── */
+h1, h2, h3 { text-wrap: balance; }
 
 /* ─── FOCUS INDICATORS ──────────────── */
 a:focus-visible, button:focus-visible, input:focus-visible,

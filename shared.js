@@ -1,44 +1,41 @@
 // ─── SHARED JS — Studio Luminant ───
-// Custom cursor, nav scroll, scroll reveal, mobile menu
+// Custom cursor, scroll reveal
+// Note: Nav, mobile menu, and cursor elements are injected by components.js
+// Cursor init is deferred until components.js has run.
 
-// Cursor
-if (window.matchMedia('(pointer: fine)').matches) {
+// ─── CURSOR ───
+// Called by components.js after cursor elements are injected
+function initCursor() {
+  if (!window.matchMedia('(pointer: fine)').matches) return;
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
-  if (dot && ring) {
-    let mx = 0, my = 0, rx = 0, ry = 0;
+  if (!dot || !ring) return;
 
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.left = mx + 'px';
-      dot.style.top = my + 'px';
-    });
+  let mx = 0, my = 0, rx = 0, ry = 0;
 
-    function animateRing() {
-      rx += (mx - rx) * 0.12;
-      ry += (my - ry) * 0.12;
-      ring.style.left = rx + 'px';
-      ring.style.top = ry + 'px';
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+  });
 
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-    });
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
   }
-}
+  animateRing();
 
-// Nav scroll
-const nav = document.getElementById('mainNav');
-if (nav) {
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
+  // Hover effect on all interactive elements
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
   });
 }
 
-// Scroll reveal
+// ─── SCROLL REVEAL ───
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -49,24 +46,3 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Mobile menu
-const hamburger = document.querySelector('.nav-hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener('click', () => {
-    const open = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', !open);
-    hamburger.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
-    mobileMenu.classList.toggle('open', !open);
-    document.body.style.overflow = open ? '' : 'hidden';
-  });
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Open menu');
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-}

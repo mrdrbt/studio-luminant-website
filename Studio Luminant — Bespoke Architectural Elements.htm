@@ -14,6 +14,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Studio Luminant — Bespoke Architectural Elements">
 <meta name="twitter:description" content="Studio Luminant crafts bespoke architectural elements in Lumina PMAG™ and PUCOMP™ — sculptural surfaces, wall art, installations, and decorative features for luxury hospitality and high-spec interiors. AIAPM-driven design. Made in Turkey.">
+<meta property="og:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
+<meta name="twitter:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -426,7 +428,7 @@
 
   .materials-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2px;
     margin-bottom: 80px;
   }
@@ -482,6 +484,96 @@
     font-size: 13px; line-height: 1.75;
     color: var(--text-secondary); font-weight: 300;
   }
+
+  /* ─── DESIGN SYSTEM TEASER ─────────── */
+  #design-system-teaser {
+    padding: 100px 0;
+    background: var(--obsidian);
+    border-top: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  #design-system-teaser::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .uds-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .uds-content { position: relative; z-index: 1; }
+  .uds-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+  .uds-content .section-headline { margin-bottom: 28px; }
+  .uds-desc {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+  .uds-applications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .uds-app-tag {
+    padding: 8px 16px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    font-weight: 400;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .uds-app-tag:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .uds-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 400;
+    transition: gap 0.3s;
+  }
+  .uds-link:hover { gap: 18px; }
+  .uds-link svg { width: 14px; height: 14px; }
+  .uds-visual {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    justify-self: end;
+  }
+  .uds-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border);
+    opacity: 0.85;
+    transition: opacity 0.5s;
+  }
+  .uds-image:hover { opacity: 1; }
 
   /* ─── EXPERTISE GRID ────────────────── */
   #expertise {
@@ -625,6 +717,8 @@
     .process-steps { grid-template-columns: 1fr; }
     .process-step { border-right: none; border-bottom: 1px solid var(--border); }
     .materials-grid { grid-template-columns: 1fr; }
+    .uds-layout { grid-template-columns: 1fr; gap: 48px; }
+    .uds-visual { max-width: 100%; justify-self: start; }
     .expertise-layout { grid-template-columns: 1fr; gap: 48px; }
     .expertise-skills { grid-template-columns: repeat(3, 1fr); }
     .portfolio-grid {
@@ -652,7 +746,7 @@
 
 <div id="site-nav" data-lang="en" data-lang-url="tr/Studio%20Luminant%20%E2%80%94%20%C3%96zel%20Mimari%20Elemanlar.htm"></div>
 
-<main>
+<main id="main">
 
 <!-- HERO -->
 <section id="hero">
@@ -670,7 +764,7 @@ to deliver certified, bespoke architectural reliefs with unprecedented
 lead times.
     </p>
     <div class="hero-ctas">
-      <a href="mailto:strategy@studioluminant.com" class="btn-primary">
+      <a href="contact.htm" class="btn-primary">
         Initiate Project
         <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
@@ -700,36 +794,29 @@ lead times.
   <div class="section-inner">
     <div class="strategy-grid">
       <div class="strategy-left">
-        <div class="eyebrow reveal">The Strategic Paradigm</div>
+        <div class="eyebrow reveal">For Architects & Specifiers</div>
         <h2 class="section-headline reveal">
-          Elevating RevPAR through<br><em>Spatial Flow.</em>
+          Design Freedom,<br><em>Zero Specification Risk.</em>
         </h2>
         <p class="strategy-body reveal">
-          In the luxury hospitality sector, bespoke environments dictate
- premium Average Daily Rates. However, traditional manufacturing
-pipelines introduce unacceptable friction, exorbitant mold costs, and
-critical path delays.
+          Bespoke relief panels shouldn't mean bespoke headaches. Traditional fabricators force you to choose between design ambition and programme certainty — complex geometries mean long lead times, uncertain fire compliance, and no BIM data until it's too late.
         </p>
         <p class="strategy-body reveal">
-          Studio Luminant mitigates this risk entirely. By vertically
-integrating design, molding, and finishing, we transform complex,
-biophilic, and culturally resonant geometries into high-performance
-structural assets—faster and more cost-effectively than legacy
-providers.
+          We eliminate that trade-off. Send us a sketch, a reference image, or a concept brief. You'll receive a 3D model within days, physical samples within weeks, and fully certified panels with BIM files ready for your specification package.
         </p>
         <div class="strategy-features reveal">
           <div class="strategy-feature">
             <span class="feature-num">01</span>
             <div>
-              <div class="feature-title">Risk Mitigation</div>
-              <div class="feature-desc">100% certified materials, ready BIM files, and guaranteed compliance for large-scale developments.</div>
+              <div class="feature-title">Spec-Ready from Day One</div>
+              <div class="feature-desc">A1 fire-rated (EN 13501-1), BIM objects included, technical data sheets on request. No last-minute compliance surprises.</div>
             </div>
           </div>
           <div class="strategy-feature">
             <span class="feature-num">02</span>
             <div>
-              <div class="feature-title">Acoustic Luxury</div>
-              <div class="feature-desc">Invisible acoustic treatments embedded in high-resolution geometries to elevate guest comfort.</div>
+              <div class="feature-title">Panels up to 3 × 1.5 m</div>
+              <div class="feature-desc">Large-format PMAG panels reduce joint lines and installation time. PUCOMP at 8–25 mm for curves, columns, and lightweight applications.</div>
             </div>
           </div>
         </div>
@@ -760,9 +847,6 @@ providers.
         <p class="process-header-desc">
           A fully integrated pipeline — from algorithm to installation — engineered to compress timelines and eliminate specification risk for large-scale architectural projects.
         </p>
-        <img src="images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png"
-             alt="Studio Luminant AIAPM production process — design, modelling, molding, casting, finishing"
-             class="process-header-img">
       </div>
     </div>
 
@@ -794,7 +878,7 @@ providers.
         <span class="step-number">03</span>
         <div class="step-title">Precision Casting</div>
         <div class="step-headline">In-House Vertical Control</div>
-        <p class="step-desc">All molding, casting, and finishing occur in-house. From bespoke formulation to automotive-grade 2K finishes, our vertical integration ensures total quality control from Sakarya to the global site.</p>
+        <p class="step-desc">All molding, casting, and finishing occur in-house. From bespoke formulation to artisan surface finishes, our vertical integration ensures total quality control — from first sample to final installation.</p>
         <div class="step-line"></div>
       </div>
     </div>
@@ -886,17 +970,42 @@ architectural relief.
         <div class="material-subtitle">Polyurethane Composite</div>
         <p class="material-desc">High-performance material formulated specifically for lightweight durability and complex spatial geometries. Engineered for exterior applications and wet areas.</p>
       </div>
-      <div class="material-card">
-        <img src="images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.png"
-             alt="Studio Luminant acoustic relief panel profiles — wave and grid pattern panels installed in hotel lobby, engineered frequency absorption and diffusion"
-             class="material-img">
-        <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 2 C20 2 36 10 36 22 C36 31 29 38 20 38 C11 38 4 31 4 22 C4 10 20 2 20 2Z" stroke="#C9A84C" stroke-width="0.8"></path>
-          <path d="M20 10 C20 10 28 15 28 22 C28 27 24.4 31 20 31 C15.6 31 12 27 12 22 C12 15 20 10 20 10Z" stroke="#C9A84C" stroke-width="0.5"></path>
-        </svg>
-        <div class="material-title">Acoustic Profiles</div>
-        <div class="material-subtitle">Performance Optimization</div>
-        <p class="material-desc">Preformulated compositions designed to absorb and diffuse frequency, optimizing lobby and suite acoustics while maintaining architectural integrity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- UNIFIED DESIGN SYSTEM TEASER -->
+<section id="design-system-teaser">
+  <div class="section-inner">
+    <div class="uds-layout">
+      <div class="uds-content reveal">
+        <div class="eyebrow">Design Architecture</div>
+        <div class="uds-tagline">One Pattern. Every Surface.</div>
+        <h2 class="section-headline">
+          Unified<br><em>Design System</em>
+        </h2>
+        <p class="uds-desc">
+          A single AIAPM digital master translates across every application — wall panels, ceilings, columns, feature walls — maintaining design continuity while optimising material and structure for each context.
+        </p>
+        <div class="uds-applications">
+          <span class="uds-app-tag">Wall Panels</span>
+          <span class="uds-app-tag">Ceiling Panels</span>
+          <span class="uds-app-tag">Column Wraps</span>
+          <span class="uds-app-tag">Feature Walls</span>
+          <span class="uds-app-tag">Reception Elements</span>
+          <span class="uds-app-tag">Bulkheads & Soffits</span>
+        </div>
+        <a href="products.htm" class="uds-link">
+          Explore the System
+          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="uds-visual reveal">
+        <img src="images/studio-luminant-unified-design-system-relief-pattern.png"
+             alt="Studio Luminant Unified Design System — same ornamental relief pattern applied to square wall panel and vertical decorative element, demonstrating one pattern across every surface"
+             class="uds-image">
       </div>
     </div>
   </div>
@@ -913,18 +1022,18 @@ architectural relief.
         </h2>
       </div>
       <div class="expertise-skills reveal">
-        <div class="skill-tag">Concrete Casting</div>
-        <div class="skill-tag">Cold Casting</div>
-        <div class="skill-tag">Polyurethane Casting</div>
-        <div class="skill-tag">GFRC Casting</div>
-        <div class="skill-tag">Silicone Casting</div>
-        <div class="skill-tag">Functional Additives</div>
-        <div class="skill-tag">Automotive Finishing</div>
-        <div class="skill-tag">GRG Casting</div>
-        <div class="skill-tag">2K Finishing</div>
-        <div class="skill-tag">LED / Lighting</div>
-        <div class="skill-tag">Composites</div>
-        <div class="skill-tag">PU Foam Casting</div>
+        <div class="skill-tag">Gypsum Casting (PMAG)</div>
+        <div class="skill-tag">Polyurethane Composite</div>
+        <div class="skill-tag">Glass Fibre Reinforced Concrete</div>
+        <div class="skill-tag">Cold-Cast Metal</div>
+        <div class="skill-tag">AI-Assisted Design</div>
+        <div class="skill-tag">Bespoke Patterning</div>
+        <div class="skill-tag">BIM-Ready Deliverables</div>
+        <div class="skill-tag">3D-Printed Mould Tooling</div>
+        <div class="skill-tag">A1 Fire-Rated Materials</div>
+        <div class="skill-tag">Artisan Finishing</div>
+        <div class="skill-tag">Antimicrobial Options</div>
+        <div class="skill-tag">LED Integration</div>
       </div>
     </div>
   </div>

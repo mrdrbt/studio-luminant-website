@@ -14,6 +14,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Studio Luminant — Özel Mimari Elemanlar">
 <meta name="twitter:description" content="Studio Luminant — Lumina PMAG™ ve PUCOMP™ ile özel mimari elemanlar. Lüks konaklama ve yüksek kaliteli iç mekanlar için heykelsi yüzeyler, duvar sanatı, enstalasyonlar ve dekoratif elemanlar. AIAPM tasarım süreci. Türkiye üretimi.">
+<meta property="og:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
+<meta name="twitter:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -417,7 +419,7 @@
 
   .materials-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2px;
     margin-bottom: 80px;
   }
@@ -484,6 +486,96 @@
     transition: opacity 0.4s, transform 0.5s;
   }
   .material-card:hover .material-img { opacity: 1; transform: scale(1.02); }
+
+  /* ─── DESIGN SYSTEM TEASER ─────────── */
+  #design-system-teaser {
+    padding: 100px 0;
+    background: var(--obsidian);
+    border-top: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  #design-system-teaser::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .uds-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .uds-content { position: relative; z-index: 1; }
+  .uds-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+  .uds-content .section-headline { margin-bottom: 28px; }
+  .uds-desc {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+  .uds-applications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .uds-app-tag {
+    padding: 8px 16px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    font-weight: 400;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .uds-app-tag:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .uds-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 400;
+    transition: gap 0.3s;
+  }
+  .uds-link:hover { gap: 18px; }
+  .uds-link svg { width: 14px; height: 14px; }
+  .uds-visual {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    justify-self: end;
+  }
+  .uds-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border);
+    opacity: 0.85;
+    transition: opacity 0.5s;
+  }
+  .uds-image:hover { opacity: 1; }
 
   /* ─── EXPERTISE GRID ────────────────── */
   #expertise {
@@ -581,6 +673,8 @@
     .process-steps { grid-template-columns: 1fr; }
     .process-step { border-right: none; border-bottom: 1px solid var(--border); }
     .materials-grid { grid-template-columns: 1fr; }
+    .uds-layout { grid-template-columns: 1fr; gap: 48px; }
+    .uds-visual { max-width: 100%; justify-self: start; }
     .expertise-layout { grid-template-columns: 1fr; gap: 48px; }
     .expertise-skills { grid-template-columns: repeat(3, 1fr); }
     .portfolio-grid {
@@ -608,7 +702,7 @@
 
 <div id="site-nav" data-lang="tr" data-lang-url="../Studio%20Luminant%20%E2%80%94%20Bespoke%20Architectural%20Elements.htm" data-base="../"></div>
 
-<main>
+<main id="main">
 
 <!-- HERO -->
 <section id="hero">
@@ -623,7 +717,7 @@
       Vizyoner mekansal tasarım ile operasyonel uygulanabilirlik arasındaki boşluğu kapatıyoruz. Yapay zeka destekli modelleme ve katmanlı üretim kullanarak, benzeri görülmemiş teslim süreleriyle sertifikalı, özel mimari rölyefler sunuyoruz.
     </p>
     <div class="hero-ctas">
-      <a href="mailto:strategy@studioluminant.com" class="btn-primary">
+      <a href="iletisim.htm" class="btn-primary">
         Proje Başlat
         <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
@@ -653,29 +747,29 @@
   <div class="section-inner">
     <div class="strategy-grid">
       <div class="strategy-left">
-        <div class="eyebrow reveal">Stratejik Paradigma</div>
+        <div class="eyebrow reveal">Mimarlar & Belirleyiciler İçin</div>
         <h2 class="section-headline reveal">
-          Mekansal Akış ile<br><em>RevPAR'ı Yükseltmek.</em>
+          Tasarım Özgürlüğü,<br><em>Sıfır Şartname Riski.</em>
         </h2>
         <p class="strategy-body reveal">
-          Lüks konaklama sektöründe, özel tasarım mekanlar premium Ortalama Günlük Oranları belirler. Ancak geleneksel üretim süreçleri kabul edilemez sürtünme, aşırı kalıp maliyetleri ve kritik yol gecikmeleri yaratır.
+          Özel rölyef paneller, özel sorunlar anlamına gelmemeli. Geleneksel üreticiler sizi tasarım tutkusu ile proje kesinliği arasında tercih yapmaya zorlar — karmaşık geometriler uzun teslim süreleri, belirsiz yangın uyumluluğu ve çok geç kalana kadar BIM verisi olmaması demektir.
         </p>
         <p class="strategy-body reveal">
-          Studio Luminant bu riski tamamen ortadan kaldırır. Tasarım, kalıplama ve bitirme işlemlerini dikey olarak entegre ederek, karmaşık, biyofilik ve kültürel açıdan zengin geometrileri yüksek performanslı yapısal varlıklara dönüştürüyoruz — geleneksel tedarikçilerden daha hızlı ve daha maliyet etkin şekilde.
+          Biz bu ödünleşimi ortadan kaldırıyoruz. Bir eskiz, referans görsel veya konsept brief gönderin. Günler içinde 3D model, haftalar içinde fiziksel numune ve şartname paketiniz için hazır BIM dosyalarıyla birlikte tam sertifikalı paneller alacaksınız.
         </p>
         <div class="strategy-features reveal">
           <div class="strategy-feature">
             <span class="feature-num">01</span>
             <div>
-              <div class="feature-title">Risk Azaltma</div>
-              <div class="feature-desc">%100 sertifikalı malzemeler, hazır BIM dosyaları ve büyük ölçekli projeler için garantili uyumluluk.</div>
+              <div class="feature-title">İlk Günden Şartnameye Hazır</div>
+              <div class="feature-desc">A1 yangın sınıfı (EN 13501-1), BIM objeleri dahil, talep üzerine teknik veri sayfaları. Son dakika uyumluluk sürprizleri yok.</div>
             </div>
           </div>
           <div class="strategy-feature">
             <span class="feature-num">02</span>
             <div>
-              <div class="feature-title">Akustik Lüks</div>
-              <div class="feature-desc">Misafir konforunu artırmak için yüksek çözünürlüklü geometrilere gömülü görünmez akustik çözümler.</div>
+              <div class="feature-title">3 × 1,5 m'ye Kadar Paneller</div>
+              <div class="feature-desc">Büyük formatlı PMAG paneller derz çizgilerini ve montaj süresini azaltır. Eğriler, kolonlar ve hafif uygulamalar için 8–25 mm PUCOMP.</div>
             </div>
           </div>
         </div>
@@ -740,7 +834,7 @@
         <span class="step-number">03</span>
         <div class="step-title">Hassas Döküm</div>
         <div class="step-headline">Kurum İçi Dikey Kontrol</div>
-        <p class="step-desc">Tüm kalıplama, döküm ve bitirme işlemleri kurum içinde gerçekleştirilir. Özel formülasyondan otomotiv sınıfı 2K bitirme işlemine kadar, dikey entegrasyonumuz Sakarya'dan küresel şantiyeye kadar tam kalite kontrolü sağlar.</p>
+        <p class="step-desc">Tüm kalıplama, döküm ve bitirme işlemleri kurum içinde gerçekleştirilir. Özel formülasyondan zanaatkâr yüzey bitirme işlemlerine kadar, dikey entegrasyonumuz ilk numuneden son montaja kadar tam kalite kontrolü sağlar.</p>
         <div class="step-line"></div>
       </div>
     </div>
@@ -826,17 +920,42 @@
         <div class="material-subtitle">Poliüretan Kompozit</div>
         <p class="material-desc">Yüksek performanslı, hafif dayanıklılık ve karmaşık mekansal geometriler için özel olarak formüle edilmiş malzeme. Dış cephe uygulamaları ve ıslak alanlar için tasarlanmıştır.</p>
       </div>
-      <div class="material-card">
-        <img src="../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.png"
-             alt="Studio Luminant acoustic relief panel profiles — wave and grid pattern panels installed in hotel lobby, engineered frequency absorption and diffusion"
-             class="material-img">
-        <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 2 C20 2 36 10 36 22 C36 31 29 38 20 38 C11 38 4 31 4 22 C4 10 20 2 20 2Z" stroke="#C9A84C" stroke-width="0.8"></path>
-          <path d="M20 10 C20 10 28 15 28 22 C28 27 24.4 31 20 31 C15.6 31 12 27 12 22 C12 15 20 10 20 10Z" stroke="#C9A84C" stroke-width="0.5"></path>
-        </svg>
-        <div class="material-title">Akustik Profiller</div>
-        <div class="material-subtitle">Performans Optimizasyonu</div>
-        <p class="material-desc">Lobi ve süit akustiğini optimize etmek için frekans emme ve dağıtımı yapacak şekilde tasarlanmış önceden formüle edilmiş bileşimler — mimari bütünlüğü koruyarak.</p>
+    </div>
+  </div>
+</section>
+
+<!-- UNIFIED DESIGN SYSTEM TEASER -->
+<section id="design-system-teaser">
+  <div class="section-inner">
+    <div class="uds-layout">
+      <div class="uds-content reveal">
+        <div class="eyebrow">Tasarım Mimarisi</div>
+        <div class="uds-tagline">Tek Desen. Her Yüzey.</div>
+        <h2 class="section-headline">
+          Bütünleşik<br><em>Tasarım Sistemi</em>
+        </h2>
+        <p class="uds-desc">
+          Tek bir AIAPM dijital master, tüm uygulama alanlarına aktarılır — duvar panelleri, tavanlar, kolonlar, öne çıkan yüzeyler — her bağlam için malzeme ve yapıyı optimize ederken tasarım sürekliliğini korur.
+        </p>
+        <div class="uds-applications">
+          <span class="uds-app-tag">Duvar Panelleri</span>
+          <span class="uds-app-tag">Tavan Panelleri</span>
+          <span class="uds-app-tag">Kolon Kaplama</span>
+          <span class="uds-app-tag">Öne Çıkan Duvarlar</span>
+          <span class="uds-app-tag">Resepsiyon Elemanları</span>
+          <span class="uds-app-tag">Alınlık & Saçaklar</span>
+        </div>
+        <a href="urunler.htm" class="uds-link">
+          Sistemi Keşfedin
+          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="uds-visual reveal">
+        <img src="../images/studio-luminant-unified-design-system-relief-pattern.png"
+             alt="Studio Luminant Bütünleşik Tasarım Sistemi — aynı süsleme deseni kare duvar paneli ve dikey dekoratif elemanda uygulanmış, tek desen her yüzeyde"
+             class="uds-image">
       </div>
     </div>
   </div>
@@ -853,18 +972,18 @@
         </h2>
       </div>
       <div class="expertise-skills reveal">
-        <div class="skill-tag">Beton Döküm</div>
-        <div class="skill-tag">Soğuk Döküm</div>
-        <div class="skill-tag">Poliüretan Döküm</div>
-        <div class="skill-tag">GFRC Döküm</div>
-        <div class="skill-tag">Silikon Döküm</div>
-        <div class="skill-tag">Fonksiyonel Katkılar</div>
-        <div class="skill-tag">Otomotiv Bitirme</div>
-        <div class="skill-tag">GRG Döküm</div>
-        <div class="skill-tag">2K Bitirme</div>
-        <div class="skill-tag">LED / Aydınlatma</div>
-        <div class="skill-tag">Kompozitler</div>
-        <div class="skill-tag">PU Köpük Döküm</div>
+        <div class="skill-tag">Alçı Döküm (PMAG)</div>
+        <div class="skill-tag">Poliüretan Kompozit</div>
+        <div class="skill-tag">Cam Elyaf Takviyeli Beton</div>
+        <div class="skill-tag">Soğuk Döküm Metal</div>
+        <div class="skill-tag">Yapay Zeka Destekli Tasarım</div>
+        <div class="skill-tag">Özel Desen Tasarımı</div>
+        <div class="skill-tag">BIM-Uyumlu Teslimat</div>
+        <div class="skill-tag">3D Baskı Kalıp Teknolojisi</div>
+        <div class="skill-tag">A1 Yangın Sınıfı Malzeme</div>
+        <div class="skill-tag">Zanaatkâr Bitirme</div>
+        <div class="skill-tag">Antimikrobiyal Seçenekler</div>
+        <div class="skill-tag">LED Entegrasyonu</div>
       </div>
     </div>
   </div>

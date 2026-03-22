@@ -161,88 +161,46 @@ const finishTypes = [{
   }
 }];
 const colorPalettes = {
-  pmag: [{
-    id: "obsidian",
-    label: "Obsidian",
-    hex: ["#1A1A1A", "#2D2D2D"]
-  }, {
-    id: "charcoal",
-    label: "Charcoal",
-    hex: ["#2C2C2C", "#404040"]
-  }, {
-    id: "stone-grey",
-    label: "Stone Grey",
-    hex: ["#6B6B6B", "#8C8C8C"]
-  }, {
-    id: "warm-taupe",
-    label: "Warm Taupe",
-    hex: ["#6B5D50", "#8A7B6D"]
-  }, {
-    id: "ivory",
-    label: "Ivory",
-    hex: ["#D8D0C4", "#EDE8DF"]
-  }, {
-    id: "arctic-white",
-    label: "Arctic White",
-    hex: ["#E8E4DD", "#F5F2ED"]
-  }, {
-    id: "gold",
-    label: "Gold",
-    hex: ["#8B6914", "#C9A84C"]
-  }, {
-    id: "bronze",
-    label: "Bronze",
-    hex: ["#5C4A2A", "#8B7355"]
-  }, {
-    id: "copper",
-    label: "Copper",
-    hex: ["#7A4A2A", "#B87333"]
-  }, {
-    id: "verdigris",
-    label: "Verdigris",
-    hex: ["#4A6B5C", "#6B8F71"]
-  }],
-  pucomp: [{
-    id: "obsidian",
-    label: "Obsidian",
-    hex: ["#1A1A1A", "#2D2D2D"]
-  }, {
-    id: "charcoal",
-    label: "Charcoal",
-    hex: ["#2C2C2C", "#404040"]
-  }, {
-    id: "stone-grey",
-    label: "Stone Grey",
-    hex: ["#6B6B6B", "#8C8C8C"]
-  }, {
-    id: "warm-taupe",
-    label: "Warm Taupe",
-    hex: ["#6B5D50", "#8A7B6D"]
-  }, {
-    id: "sand",
-    label: "Sand",
-    hex: ["#B5A48A", "#C9BBA3"]
-  }, {
-    id: "arctic-white",
-    label: "Arctic White",
-    hex: ["#E8E4DD", "#F5F2ED"]
-  }, {
-    id: "gold",
-    label: "Gold",
-    hex: ["#8B6914", "#C9A84C"]
-  }, {
-    id: "bronze",
-    label: "Bronze",
-    hex: ["#5C4A2A", "#8B7355"]
-  }, {
-    id: "copper",
-    label: "Copper",
-    hex: ["#7A4A2A", "#B87333"]
-  }, {
-    id: "anthracite",
-    label: "Anthracite",
-    hex: ["#383838", "#505050"]
-  }]
+  pmag: [
+    { group: "Konaklama", colors: [
+      { id: "warm-taupe", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
+      { id: "ivory", label: "Ivory", hex: ["#D8D0C4", "#EDE8DF"] },
+      { id: "bronze", label: "Bronz", hex: ["#5C4A2A", "#8B7355"] },
+      { id: "espresso", label: "Espresso", hex: ["#3C2415", "#5C3A2A"] }
+    ]},
+    { group: "Kurumsal", colors: [
+      { id: "obsidian", label: "Obsidian", hex: ["#1A1A1A", "#2D2D2D"] },
+      { id: "cloud-white", label: "Cloud White", hex: ["#EDEAE4", "#F0EFEB"] },
+      { id: "silhouette", label: "Silhouette", hex: ["#4A433E", "#635C56"] },
+      { id: "gold", label: "Altın", hex: ["#8B6914", "#C9A84C"] }
+    ]},
+    { group: "Konut", colors: [
+      { id: "warm-taupe-r", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
+      { id: "copper", label: "Bakır", hex: ["#7A4A2A", "#B87333"] },
+      { id: "midnight-sage", label: "Midnight Sage", hex: ["#3D503E", "#576B52"] },
+      { id: "ivory-r", label: "Ivory", hex: ["#D8D0C4", "#EDE8DF"] }
+    ]}
+  ],
+  pucomp: [
+    { group: "Konaklama", colors: [
+      { id: "warm-taupe", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
+      { id: "sand", label: "Kum", hex: ["#B5A48A", "#C9BBA3"] },
+      { id: "bronze", label: "Bronz", hex: ["#5C4A2A", "#8B7355"] },
+      { id: "espresso", label: "Espresso", hex: ["#3C2415", "#5C3A2A"] }
+    ]},
+    { group: "Kurumsal", colors: [
+      { id: "obsidian", label: "Obsidian", hex: ["#1A1A1A", "#2D2D2D"] },
+      { id: "cloud-white", label: "Cloud White", hex: ["#EDEAE4", "#F0EFEB"] },
+      { id: "silhouette", label: "Silhouette", hex: ["#4A433E", "#635C56"] },
+      { id: "gold", label: "Altın", hex: ["#8B6914", "#C9A84C"] }
+    ]},
+    { group: "Konut", colors: [
+      { id: "warm-taupe-r", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
+      { id: "copper", label: "Bakır", hex: ["#7A4A2A", "#B87333"] },
+      { id: "midnight-sage", label: "Midnight Sage", hex: ["#3D503E", "#576B52"] },
+      { id: "sand-r", label: "Kum", hex: ["#B5A48A", "#C9BBA3"] }
+    ]}
+  ]
 };
 const radarAxes = [{
   key: "fireSafety",
@@ -269,26 +227,30 @@ const radarAxes = [{
   key: "impactRes",
   label: "Darbe"
 }];
+var _S = window.SL_SPECS || {};
+var _pmag = _S.pmag || {};
+var _pucomp = _S.pucomp || {};
+var _F = _S.fmt || {};
 const studioMaterials = [{
   id: "pmag",
   name: "Lumina PMAG™",
   fullName: "Polymer Modified Alpha Gypsum",
-  tagline: "A2 yangın performanslı iç mekân mimari rölyef panelleri",
+  tagline: "A1 yangın performanslı iç mekân mimari rölyef panelleri",
   domain: "İç Mekân",
   domainIcon: "🏛",
   application: "Özellikli duvarlar, tavan elemanları, resepsiyon alanları, koridor vurgu duvarları",
   specs: {
     density: "1,400–1,600",
-    weight: "18–30",
-    thickness: "15–25",
-    maxSize: "600 × 1500 mm (standard)",
-    fire: "A2-s1,d0 (target)",
+    weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
+    thickness: (_pmag.thickness ? _pmag.thickness.min + '–' + _pmag.thickness.max : "15–40"),
+    maxSize: (_F.panelSize ? _F.panelSize(_pmag) : "3000 × 1500 mm"),
+    fire: (_pmag.fire ? _pmag.fire.value + ' Yanmaz (' + _pmag.fire.standard + ')' : "A1 Yanmaz (EN 13501-1)"),
     moisture: "Moderate — interior dry zones",
     impact: "Moderate (glass fiber reinforced)",
     uv: "—",
     chemical: "—",
     temperature: "—",
-    surface: "Automotive-grade 2K polyurethane — metallic, matte, satin, patina",
+    surface: (_pmag.finish ? _pmag.finish.tr : "Tüm RAL / özel renkler — soğuk döküm metal, patina ve dokulu yüzeyler"),
     customDesign: "AI-assisted parametric design, unlimited patterns",
     voc: "Low — indoor air quality safe",
     acoustic: "Optional backed acoustic fleece",
@@ -317,16 +279,16 @@ const studioMaterials = [{
   application: "Façade panels, spas, pools, bathrooms, covered outdoor areas, signage",
   specs: {
     density: "600–900",
-    weight: "8–16",
-    thickness: "12–20",
-    maxSize: "600 × 1500 mm (standard)",
-    fire: "B-s1,d0 (target)",
+    weight: (_pucomp.weight ? _pucomp.weight.min + '–' + _pucomp.weight.max : "12–18"),
+    thickness: (_pucomp.thickness ? _pucomp.thickness.min + '–' + _pucomp.thickness.max : "8–25"),
+    maxSize: (_F.panelSize ? _F.panelSize(_pucomp) : "2500 × 1200 mm"),
+    fire: (_pucomp.fire ? _pucomp.fire.value + ' (' + _pucomp.fire.standard + ')' : "B-s1,d0 (EN 13501-1)"),
     moisture: "High — closed-cell, hydrophobic",
     impact: "High — flexible polymer matrix",
     uv: "Stabilised + UV-resistant topcoat",
     chemical: "Resistant to mild acids & cleaning agents",
     temperature: "-30 °C to +80 °C",
-    surface: "Automotive-grade 2K polyurethane — same finish library",
+    surface: (_pucomp.finish ? _pucomp.finish.tr : "Tüm RAL / özel renkler — soğuk döküm metal ve dokulu yüzeyler"),
     customDesign: "AI-assisted parametric design, unlimited patterns",
     voc: "Low",
     acoustic: "—",
@@ -675,7 +637,8 @@ function FinishColorSelector({
 }) {
   const [activeFinish, setActiveFinish] = useState("matte");
   const [activeColor, setActiveColor] = useState(null);
-  const colors = colorPalettes[materialId] || colorPalettes.pmag;
+  const colorGroups = colorPalettes[materialId] || colorPalettes.pmag;
+  const allColors = colorGroups.flatMap(g => g.colors);
   const getSwatchStyle = (finish, color) => {
     const [c1, c2] = color.hex;
     const f = finish || finishTypes[0];
@@ -781,14 +744,29 @@ function FinishColorSelector({
       display: "block",
       marginBottom: 10
     }
-  }, "Renk"), /*#__PURE__*/React.createElement("div", {
+  }, "Renk"), colorGroups.map(group => /*#__PURE__*/React.createElement("div", {
+    key: group.group,
+    style: { marginBottom: 16 }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Jost',sans-serif",
+      fontSize: 9,
+      fontWeight: 400,
+      color: COLORS.gold,
+      letterSpacing: "0.12em",
+      textTransform: "uppercase",
+      display: "block",
+      marginBottom: 8,
+      opacity: 0.7
+    }
+  }, group.group), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       gap: 8,
       flexWrap: "wrap",
       paddingBottom: 4
     }
-  }, colors.map(color => {
+  }, group.colors.map(color => {
     const isAct = activeColor === color.id;
     return /*#__PURE__*/React.createElement("div", {
       key: color.id,
@@ -848,7 +826,7 @@ function FinishColorSelector({
         transition: "color 0.2s ease"
       }
     }, color.label));
-  })), activeColor && /*#__PURE__*/React.createElement("div", {
+  })))), activeColor && /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 12,
       padding: "8px 12px",
@@ -864,7 +842,31 @@ function FinishColorSelector({
       color: COLORS.ivory,
       fontWeight: 400
     }
-  }, selectedFinish.label, " \xB7 ", colors.find(c => c.id === activeColor)?.label)));
+  }, selectedFinish.label, " \xB7 ", allColors.find(c => c.id === activeColor)?.label)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 20,
+      padding: "12px 16px",
+      background: "linear-gradient(135deg, rgba(201,168,76,0.06) 0%, rgba(201,168,76,0.02) 100%)",
+      border: `1px solid ${COLORS.borderGold}`,
+      borderRadius: 2,
+      display: "flex",
+      alignItems: "center",
+      gap: 10
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: 16, height: 16, viewBox: "0 0 24 24", fill: "none",
+    stroke: COLORS.gold, strokeWidth: 1.5, strokeLinecap: "round", strokeLinejoin: "round"
+  }, /*#__PURE__*/React.createElement("circle", { cx: 12, cy: 12, r: 10 }),
+  /*#__PURE__*/React.createElement("path", { d: "M12 8v4M12 16h.01" })),
+  /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: "'Jost',sans-serif",
+      fontSize: 11,
+      color: COLORS.muted,
+      fontWeight: 300,
+      lineHeight: 1.4
+    }
+  }, "Özel renk eşleştirme mümkündür \u2014 RAL, NCS veya ısmarlama referans.")));
 }
 function AdvantageArrow({
   advantage

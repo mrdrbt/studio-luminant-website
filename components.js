@@ -11,6 +11,15 @@
   const langUrl = navEl.getAttribute('data-lang-url') || '#';
   const base = navEl.getAttribute('data-base') || '';
 
+  // ─── THEME COLOR & COLOR SCHEME ───
+  if (!document.querySelector('meta[name="theme-color"]')) {
+    const tc = document.createElement('meta');
+    tc.name = 'theme-color';
+    tc.content = '#0C0C0E';
+    document.head.appendChild(tc);
+  }
+  document.documentElement.style.colorScheme = 'dark';
+
   // ─── FAVICON ───
   if (!document.querySelector('link[rel="icon"]')) {
     const fav = document.createElement('link');
@@ -28,12 +37,11 @@
   const navLinks = lang === 'tr' ? {
     home: { href: 'Studio Luminant — Özel Mimari Elemanlar.htm', alt: 'Studio Luminant' },
     items: [
-      { href: 'urunler.htm', text: 'Ürünler' },
       { href: 'koleksiyon.htm', text: 'Koleksiyon' },
-      { href: 'surec.htm', text: 'Süreç' },
+      { href: 'urunler.htm', text: 'Malzeme & Teknik' },
+      { href: 'surec.htm', text: 'Nasıl Çalışırız' },
       { href: 'galeri.htm', text: 'Galeri' },
-      { href: 'kaynaklar.htm', text: 'Kaynaklar' },
-      { href: 'iletisim.htm', text: 'İletişim' }
+      { href: 'kaynaklar.htm', text: 'Kaynaklar' }
     ],
     langLabel: 'EN',
     ctaText: 'Proje Başlat',
@@ -44,12 +52,11 @@
   } : {
     home: { href: 'Studio Luminant — Bespoke Architectural Elements.htm', alt: 'Studio Luminant' },
     items: [
-      { href: 'products.htm', text: 'Products' },
       { href: 'collection.htm', text: 'Collection' },
-      { href: 'process.htm', text: 'Process' },
+      { href: 'products.htm', text: 'Materials & Specs' },
+      { href: 'process.htm', text: 'How We Work' },
       { href: 'gallery.htm', text: 'Gallery' },
-      { href: 'resources.htm', text: 'Resources' },
-      { href: 'contact.htm', text: 'Contact' }
+      { href: 'resources.htm', text: 'Resources' }
     ],
     langLabel: 'TR',
     ctaText: 'Initiate Project',
@@ -65,27 +72,39 @@
   const mobileItemsHtml = navLinks.items.map(i => `  <a href="${i.href}">${i.text}</a>`).join('\n');
 
   navEl.outerHTML = `
+<a href="#main" class="skip-link">${lang === 'tr' ? 'İçeriğe geç' : 'Skip to content'}</a>
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="mainNav">
   <a href="${navLinks.home.href}" class="nav-logo">
-    <img src="${imgBase}" alt="${navLinks.home.alt}" class="nav-logo-img">
+    <img src="${imgBase}" alt="${navLinks.home.alt}" class="nav-logo-img" width="31" height="25">
   </a>
   <ul class="nav-links">
       ${navItemsHtml}
   </ul>
-  <a href="${langUrl}" class="nav-lang">${navLinks.langLabel}</a>
-  <button class="nav-hamburger" aria-label="${navLinks.hamburgerOpen}" aria-expanded="false" aria-controls="mobileMenu">
-    <span></span>
-  </button>
-  <a href="${navLinks.ctaHref}" class="nav-cta">${navLinks.ctaText}</a>
+  <div class="nav-right">
+    <a href="${langUrl}" class="nav-lang">${navLinks.langLabel}</a>
+    <button class="nav-hamburger" aria-label="${navLinks.hamburgerOpen}" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+    </button>
+    <a href="${navLinks.ctaHref}" class="nav-cta">${navLinks.ctaText}</a>
+  </div>
 </nav>
 
 <div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="${navLinks.mobileLabel}">
 ${mobileItemsHtml}
   <a href="${langUrl}" class="nav-mobile-lang">${navLinks.langLabel}</a>
 </div>`;
+
+  // ─── ACTIVE NAV LINK ───
+  const currentPage = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a, .nav-mobile-menu a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href && currentPage === href) {
+      a.classList.add('active');
+    }
+  });
 
   // ─── MOBILE MENU ───
   const hamburger = document.querySelector('.nav-hamburger');
@@ -140,13 +159,10 @@ ${mobileItemsHtml}
     productionLocation: 'Sakarya / Türkiye',
     ctaTitle: 'Proje Başlat',
     ctaBtn: 'Proje Başlat',
+    ctaHref: 'iletisim.htm',
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
     bimHref: '../resources.htm',
-    bimText: 'BIM Dosyaları',
-    privacyHref: 'iletisim.htm',
-    privacyText: 'Gizlilik',
-    complianceHref: 'iletisim.htm',
-    complianceText: 'Uyumluluk'
+    bimText: 'BIM Dosyaları'
   } : {
     homeHref: 'Studio Luminant — Bespoke Architectural Elements.htm',
     tagline: 'Bespoke architectural elements — sculpted, cast, and finished to spec.',
@@ -157,13 +173,10 @@ ${mobileItemsHtml}
     productionLocation: 'Sakarya / Turkey',
     ctaTitle: 'Start a Project',
     ctaBtn: 'Initiate Project',
+    ctaHref: 'contact.htm',
     copyright: '© 2026 Studio Luminant. All Rights Reserved.',
     bimHref: 'resources.htm',
-    bimText: 'BIM Assets',
-    privacyHref: 'contact.htm',
-    privacyText: 'Privacy',
-    complianceHref: 'contact.htm',
-    complianceText: 'Compliance'
+    bimText: 'BIM Assets'
   };
 
   footerEl.outerHTML = `
@@ -172,7 +185,7 @@ ${mobileItemsHtml}
     <div class="footer-top">
       <div class="footer-brand">
         <a href="${footerContent.homeHref}" class="logo">
-          <img src="${imgBase}" alt="Studio Luminant" class="footer-logo-img">
+          <img src="${imgBase}" alt="Studio Luminant" class="footer-logo-img" width="64" height="52">
         </a>
         <p class="footer-tagline">${footerContent.tagline}</p>
       </div>
@@ -186,9 +199,9 @@ ${mobileItemsHtml}
       </div>
       <div class="footer-cta-block">
         <div class="footer-col-title">${footerContent.ctaTitle}</div>
-        <a href="mailto:strategy@studioluminant.com">
+        <a href="${footerContent.ctaHref}">
           ${footerContent.ctaBtn}
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
           </svg>
         </a>
@@ -199,13 +212,21 @@ ${mobileItemsHtml}
       <p class="footer-copy">${footerContent.copyright}</p>
       <ul class="footer-links">
         <li><a href="${footerContent.bimHref}">${footerContent.bimText}</a></li>
-        <li><a href="${footerContent.privacyHref}">${footerContent.privacyText}</a></li>
-        <li><a href="${footerContent.complianceHref}">${footerContent.complianceText}</a></li>
       </ul>
     </div>
   </div>
 </footer>
 
 <div class="coord-tag">41.1°N — 29.0°E — İstanbul, TR</div>`;
+
+  // ─── INIT CURSOR (after elements are injected) ───
+  if (typeof initCursor === 'function') initCursor();
+
+  // ─── RE-OBSERVE REVEAL ELEMENTS (injected content) ───
+  if (typeof observer !== 'undefined') {
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (!el.classList.contains('visible')) observer.observe(el);
+    });
+  }
 
 })();

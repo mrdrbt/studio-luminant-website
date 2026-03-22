@@ -14,6 +14,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="İletişim — Studio Luminant">
 <meta name="twitter:description" content="Studio Luminant'tan özel mimari elemanlar talep edin. Lüks konaklama, perakende, konut geliştiricileri ve iç mimarlardan talepler bekliyoruz.">
+<meta property="og:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
+<meta name="twitter:image" content="https://www.studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -140,7 +142,6 @@
     font-family: 'Jost', sans-serif;
     font-size: 13px; font-weight: 300;
     padding: 14px 16px;
-    outline: none;
     transition: border-color 0.3s;
     -webkit-appearance: none;
     appearance: none;
@@ -213,7 +214,7 @@
 
 <div id="site-nav" data-lang="tr" data-lang-url="../contact.htm" data-base="../"></div>
 
-<main>
+<main id="main">
 
 <!-- CONTACT MAIN -->
 <section id="contact-main">
@@ -252,45 +253,90 @@
   <!-- Right: form -->
   <div class="contact-right">
     <div class="form-title reveal">Talep Gönderin</div>
-    <form class="contact-form reveal" action="mailto:strategy@studioluminant.com" method="post" enctype="text/plain">
+    <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xpqygpjw" method="POST">
 
       <div class="form-row">
         <div class="form-field">
           <label for="name">İsim</label>
-          <input type="text" id="name" name="Name" placeholder="Adınız ve soyadınız">
+          <input type="text" id="name" name="name" placeholder="Adınız ve soyadınız…" autocomplete="name" required>
         </div>
         <div class="form-field">
           <label for="company">Firma</label>
-          <input type="text" id="company" name="Company" placeholder="Firma veya ofis">
+          <input type="text" id="company" name="company" placeholder="Firma veya ofis…" autocomplete="organization">
         </div>
       </div>
 
-      <div class="form-field">
-        <label for="project-type">Proje Türü</label>
-        <select id="project-type" name="Project Type">
-          <option value="">Proje Türü Seçin</option>
-          <option value="Luxury Hotel">Lüks Otel</option>
-          <option value="High-End Residential">Üst Düzey Konut</option>
-          <option value="Retail &amp; F&amp;B">Perakende ve Yeme-İçme</option>
-          <option value="Cultural Institution">Kültürel Kurum</option>
-          <option value="Other">Diğer</option>
-        </select>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="email">E-posta</label>
+          <input type="email" id="email" name="email" placeholder="email@adresiniz.com" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="project-type">Proje Türü</label>
+          <select id="project-type" name="project_type" autocomplete="off">
+            <option value="">Proje Türü Seçin</option>
+            <option value="Luxury Hotel">Lüks Otel</option>
+            <option value="High-End Residential">Üst Düzey Konut</option>
+            <option value="Retail &amp; F&amp;B">Perakende ve Yeme-İçme</option>
+            <option value="Cultural Institution">Kültürel Kurum</option>
+            <option value="Other">Diğer</option>
+          </select>
+        </div>
       </div>
 
       <div class="form-field">
         <label for="message">Mesaj</label>
-        <textarea id="message" name="Message" placeholder="Projenizi tanımlayın — ölçek, geometri, zaman çizelgesi, yüzey bitirme gereksinimleri…"></textarea>
+        <textarea id="message" name="message" placeholder="Projenizi tanımlayın — ölçek, geometri, zaman çizelgesi, yüzey bitirme gereksinimleri…" required></textarea>
       </div>
 
-      <button type="submit" class="form-submit">
+      <input type="hidden" name="_subject" value="Yeni Proje Talebi — Studio Luminant">
+
+      <button type="submit" class="form-submit" id="submitBtn">
         Talep Gönder
         <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
         </svg>
       </button>
 
-      <p class="form-note">Mesajınız e-posta istemcinizde önceden doldurulmuş olarak açılacaktır.</p>
+      <p class="form-note">5 iş günü içinde malzeme önerisi ve ön eskiz ile yanıt veriyoruz.</p>
+
+      <div id="formStatus" style="display:none; margin-top:16px; padding:16px; font-size:13px; line-height:1.6; font-weight:300;"></div>
     </form>
+
+    <script>
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      const btn = document.getElementById('submitBtn');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.innerHTML = 'Gönderiliyor…';
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            status.style.display = 'block';
+            status.style.color = 'var(--gold)';
+            status.style.border = '1px solid var(--gold-dim)';
+            status.textContent = 'Teşekkür ederiz — talebiniz alınmıştır. 5 iş günü içinde sizinle iletişime geçeceğiz.';
+            form.reset();
+            btn.innerHTML = 'Gönderildi ✓';
+          } else {
+            throw new Error();
+          }
+        } catch {
+          status.style.display = 'block';
+          status.style.color = '#e74c3c';
+          status.style.border = '1px solid #e74c3c';
+          status.textContent = 'Bir sorun oluştu. Lütfen bize doğrudan yazın: strategy@studioluminant.com';
+          btn.disabled = false;
+          btn.innerHTML = 'Talep Gönder <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>';
+        }
+      });
+    </script>
   </div>
 
 </section>
