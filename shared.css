@@ -183,13 +183,6 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ─── FLOATING COORD ────────────────── */
-.coord-tag {
-  position: fixed; bottom: 32px; left: 60px;
-  font-size: 9px; letter-spacing: 0.2em;
-  color: var(--text-muted); text-transform: uppercase; z-index: 100;
-}
-
 /* ─── SKIP LINK ────────────────────── */
 /* ─── BETA BANNER ──────────────────── */
 .beta-banner {
@@ -308,7 +301,6 @@ select:focus-visible, textarea:focus-visible {
   .nav-hamburger { display: flex; }
   .nav-cta { display: none; }
   .nav-lang { display: none; }
-  .coord-tag { display: none; }
   .section-inner { padding: 0 32px; }
   .footer-top { grid-template-columns: 1fr; gap: 48px; }
   .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }

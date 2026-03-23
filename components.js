@@ -23,7 +23,7 @@ function pictureTag(src, alt, sizes, opts) {
 }
 
 // ─── COMPONENTS — Studio Luminant ───
-// Injects nav, footer, cursor elements, and coord-tag
+// Injects nav, footer, cursor elements
 // Each page sets: data-lang, data-lang-url, and optionally data-base
 
 (function() {
@@ -285,9 +285,7 @@ ${mobileItemsHtml}
       </ul>
     </div>
   </div>
-</footer>
-
-<div class="coord-tag">41.1°N — 29.0°E — İstanbul, TR</div>`;
+</footer>`;
 
   // ─── INIT CURSOR (after elements are injected) ───
   if (typeof initCursor === 'function') initCursor();
