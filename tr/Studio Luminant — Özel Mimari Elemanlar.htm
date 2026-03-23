@@ -20,6 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<link rel="preload" as="image" type="image/webp" href="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.webp">
 
 <style>
   /* ─── HERO ──────────────────────────── */
@@ -30,6 +31,10 @@
     position: relative;
     overflow: hidden;
     background-image: url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg');
+    background-image: image-set(
+      url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.webp') type('image/webp'),
+      url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg') type('image/jpeg')
+    );
     background-size: cover;
     background-position: center;
   }
@@ -728,9 +733,16 @@
 
   <div class="hero-right">
     <div class="hero-visual">
-      <img src="../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.jpg"
-           alt="Studio Luminant Lumina PMAG custom Ottoman geometric gypsum relief panel — intricate gold-accent detail, bespoke architectural surface manufacturing"
-           class="hero-image">
+      <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent-400w.webp 400w,
+                  ../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent-800w.webp 800w,
+                  ../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.webp 1024w"
+                  sizes="50vw">
+              <img src="../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.jpg"
+                   alt="Studio Luminant Lumina PMAG custom Ottoman geometric gypsum relief panel — intricate gold-accent detail, bespoke architectural surface manufacturing" class="hero-image" width="1024" height="1024"
+                   loading="eager" fetchpriority="high">
+            </picture>
       <div class="hero-image-overlay"></div>
       <div class="relief-grid"></div>
       <div class="hero-corner-tag">
@@ -777,9 +789,16 @@
 
       <div class="strategy-right reveal">
         <div class="strategy-image-frame">
-          <img src="../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.png"
-               alt="Studio Luminant Lumina PMAG organic cell gypsum relief panels installed across full-height luxury hotel lobby reception wall — vertically integrated architectural manufacturing"
-               class="strategy-img">
+          <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding-400w.webp 400w,
+                  ../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding-800w.webp 800w,
+                  ../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.webp 1200w"
+                  sizes="(max-width: 1024px) 100vw, 50vw">
+              <img src="../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.png"
+                   alt="Studio Luminant Lumina PMAG organic cell gypsum relief panels installed across full-height luxury hotel lobby reception wall — vertically integrated architectural manufacturing" class="strategy-img" width="1200" height="1200"
+                   loading="lazy" decoding="async">
+            </picture>
         </div>
       </div>
     </div>
@@ -800,17 +819,33 @@
         <p class="process-header-desc">
           Algoritmadan montaja kadar tamamen entegre bir üretim hattı — büyük ölçekli mimari projeler için zaman çizelgelerini sıkıştırmak ve spesifikasyon riskini ortadan kaldırmak üzere tasarlanmıştır.
         </p>
-        <img src="../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png"
-             alt="Studio Luminant AIAPM production process — design, modelling, molding, casting, finishing"
-             class="process-header-img">
+        <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-400w.webp 400w,
+                  ../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-800w.webp 800w,
+                  ../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-1600w.webp 1600w,
+                  ../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.webp 2816w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <img src="../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png"
+                   alt="Studio Luminant AIAPM production process — design, modelling, molding, casting, finishing" class="process-header-img" width="2816" height="1536"
+                   loading="lazy" decoding="async">
+            </picture>
       </div>
     </div>
 
     <div class="process-steps reveal">
       <div class="process-step">
-        <img src="../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.png"
-             alt="AIAPM — Studio Luminant AI-assisted 3D CAD modelling to cast gypsum relief panel: digital wireframe to physical product"
-             class="step-image">
+        <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-400w.webp 400w,
+                  ../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-800w.webp 800w,
+                  ../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-1600w.webp 1600w,
+                  ../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.webp 2400w"
+                  sizes="(max-width: 1024px) 100vw, 33vw">
+              <img src="../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.png"
+                   alt="AIAPM — Studio Luminant AI-assisted 3D CAD modelling to cast gypsum relief panel: digital wireframe to physical product" class="step-image" width="2400" height="1792"
+                   loading="lazy" decoding="async">
+            </picture>
         <span class="step-number">01</span>
         <div class="step-title">AIAPM Entegrasyonu</div>
         <div class="step-headline">Yapay Zeka Destekli Ürün Modelleme</div>
@@ -818,9 +853,17 @@
         <div class="step-line"></div>
       </div>
       <div class="process-step">
-        <img src="../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png"
-             alt="Studio Luminant high-level production process infographic — design, digital modelling, mold making, casting, finishing"
-             class="step-image">
+        <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-400w.webp 400w,
+                  ../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-800w.webp 800w,
+                  ../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-1600w.webp 1600w,
+                  ../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.webp 2816w"
+                  sizes="(max-width: 1024px) 100vw, 33vw">
+              <img src="../images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png"
+                   alt="Studio Luminant high-level production process infographic — design, digital modelling, mold making, casting, finishing" class="step-image" width="2816" height="1536"
+                   loading="lazy" decoding="async">
+            </picture>
         <span class="step-number">02</span>
         <div class="step-title">Katmanlı Üretim Ustalığı</div>
         <div class="step-headline">Hassas Ana Kalıplar</div>
@@ -828,9 +871,16 @@
         <div class="step-line"></div>
       </div>
       <div class="process-step">
-        <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png"
-             alt="Studio Luminant Lumina PMAG finished organic cell architectural gypsum relief wall panel — precision vacuum-cast, sub-millimetre surface resolution"
-             class="step-image">
+        <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel-400w.webp 400w,
+                  ../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel-800w.webp 800w,
+                  ../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp 1200w"
+                  sizes="(max-width: 1024px) 100vw, 33vw">
+              <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png"
+                   alt="Studio Luminant Lumina PMAG finished organic cell architectural gypsum relief wall panel — precision vacuum-cast, sub-millimetre surface resolution" class="step-image" width="1200" height="1200"
+                   loading="lazy" decoding="async">
+            </picture>
         <span class="step-number">03</span>
         <div class="step-title">Hassas Döküm</div>
         <div class="step-headline">Kurum İçi Dikey Kontrol</div>
@@ -845,28 +895,72 @@
 <section id="portfolio">
   <div class="portfolio-grid">
     <div class="portfolio-item portfolio-item--large">
-      <img src="../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.jpg"
-           alt="Studio Luminant petal geometric gypsum relief wall panels — Luminant Lounge luxury hospitality interior installation">
+      <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality-400w.webp 400w,
+                  ../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality-800w.webp 800w,
+                  ../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality-1600w.webp 1600w,
+                  ../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.webp 5504w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <img src="../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.jpg"
+                   alt="Studio Luminant petal geometric gypsum relief wall panels — Luminant Lounge luxury hospitality interior installation" width="5504" height="3072"
+                   loading="lazy" decoding="async">
+            </picture>
       <div class="portfolio-item-caption"><span>Luminant Lounge — Özellikli Duvar Uygulaması</span></div>
     </div>
     <div class="portfolio-item">
-      <img src="../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation.jpg"
-           alt="Studio Luminant wave-pattern Lumina PMAG architectural relief wall panels in luxury lounge installation">
+      <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation-400w.webp 400w,
+                  ../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation-800w.webp 800w,
+                  ../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation-1600w.webp 1600w,
+                  ../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation.webp 5504w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <img src="../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation.jpg"
+                   alt="Studio Luminant wave-pattern Lumina PMAG architectural relief wall panels in luxury lounge installation" width="5504" height="3072"
+                   loading="lazy" decoding="async">
+            </picture>
       <div class="portfolio-item-caption"><span>Dalga Rölyef — Lüks Lounge</span></div>
     </div>
     <div class="portfolio-item">
-      <img src="../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg"
-           alt="Studio Luminant Ottoman heritage gypsum relief tile — Islamic geometric pattern, architectural wall art panel">
+      <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern-400w.webp 400w,
+                  ../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern-800w.webp 800w,
+                  ../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.webp 832w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <img src="../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg"
+                   alt="Studio Luminant Ottoman heritage gypsum relief tile — Islamic geometric pattern, architectural wall art panel" width="832" height="1248"
+                   loading="lazy" decoding="async">
+            </picture>
       <div class="portfolio-item-caption"><span>Osmanlı Mirası — Rölyef Karo</span></div>
     </div>
     <div class="portfolio-item">
-      <img src="../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.jpg"
-           alt="Studio Luminant circular geometric gypsum relief wall panels installed in luxury hospitality interior">
+      <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior-400w.webp 400w,
+                  ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior-800w.webp 800w,
+                  ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior-1600w.webp 1600w,
+                  ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.webp 5504w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <img src="../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.jpg"
+                   alt="Studio Luminant circular geometric gypsum relief wall panels installed in luxury hospitality interior" width="5504" height="3072"
+                   loading="lazy" decoding="async">
+            </picture>
       <div class="portfolio-item-caption"><span>Dairesel Geometri — Konaklama İç Mekanı</span></div>
     </div>
     <div class="portfolio-item">
-      <img src="../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.png"
-           alt="Studio Luminant framed acoustic relief panels — wave and grid patterns installed in hotel lobby, acoustic performance and aesthetics combined">
+      <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation-400w.webp 400w,
+                  ../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation-800w.webp 800w,
+                  ../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation-1600w.webp 1600w,
+                  ../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.webp 2816w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <img src="../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.png"
+                   alt="Studio Luminant framed acoustic relief panels — wave and grid patterns installed in hotel lobby, acoustic performance and aesthetics combined" width="2816" height="1536"
+                   loading="lazy" decoding="async">
+            </picture>
       <div class="portfolio-item-caption"><span>Akustik Profiller — Lobi Özellikli Paneller</span></div>
     </div>
   </div>
@@ -890,9 +984,16 @@
 
     <div class="materials-grid reveal">
       <div class="material-card">
-        <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png"
-             alt="Lumina PMAG polymer modified alpha gypsum relief wall panel — A1 fire resistance, moisture resistant, ceramic-like surface finish"
-             class="material-img">
+        <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel-400w.webp 400w,
+                  ../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel-800w.webp 800w,
+                  ../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp 1200w"
+                  sizes="(max-width: 1024px) 100vw, 50vw">
+              <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png"
+                   alt="Lumina PMAG polymer modified alpha gypsum relief wall panel — A1 fire resistance, moisture resistant, ceramic-like surface finish" class="material-img" width="1200" height="1200"
+                   loading="lazy" decoding="async">
+            </picture>
         <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="1" width="38" height="38" stroke="#C9A84C" stroke-width="0.8"></rect>
           <rect x="8" y="8" width="24" height="24" stroke="#C9A84C" stroke-width="0.5" transform="rotate(45 20 20)"></rect>
@@ -908,9 +1009,16 @@
         </ul>
       </div>
       <div class="material-card">
-        <img src="../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg"
-             alt="Lumina PUCOMP polyurethane composite architectural relief panel — exterior and wet-area rated, complex spatial geometry, luxury lounge installation"
-             class="material-img">
+        <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-400w.webp 400w,
+                  ../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-800w.webp 800w,
+                  ../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.webp 1376w"
+                  sizes="(max-width: 1024px) 100vw, 50vw">
+              <img src="../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg"
+                   alt="Lumina PUCOMP polyurethane composite architectural relief panel — exterior and wet-area rated, complex spatial geometry, luxury lounge installation" class="material-img" width="1376" height="768"
+                   loading="lazy" decoding="async">
+            </picture>
         <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" stroke="#C9A84C" stroke-width="0.8"></polygon>
           <polygon points="20,10 30,16 30,24 20,30 10,24 10,16" stroke="#C9A84C" stroke-width="0.5"></polygon>
@@ -953,9 +1061,17 @@
         </a>
       </div>
       <div class="uds-visual reveal">
-        <img src="../images/studio-luminant-unified-design-system-relief-pattern.png"
-             alt="Studio Luminant Bütünleşik Tasarım Sistemi — aynı süsleme deseni kare duvar paneli ve dikey dekoratif elemanda uygulanmış, tek desen her yüzeyde"
-             class="uds-image">
+        <picture>
+              <source type="image/webp"
+                  srcset="../images/studio-luminant-unified-design-system-relief-pattern-400w.webp 400w,
+                  ../images/studio-luminant-unified-design-system-relief-pattern-800w.webp 800w,
+                  ../images/studio-luminant-unified-design-system-relief-pattern-1600w.webp 1600w,
+                  ../images/studio-luminant-unified-design-system-relief-pattern.webp 2272w"
+                  sizes="(max-width: 1024px) 100vw, 50vw">
+              <img src="../images/studio-luminant-unified-design-system-relief-pattern.png"
+                   alt="Studio Luminant Bütünleşik Tasarım Sistemi — aynı süsleme deseni kare duvar paneli ve dikey dekoratif elemanda uygulanmış, tek desen her yüzeyde" class="uds-image" width="2272" height="1888"
+                   loading="lazy" decoding="async">
+            </picture>
       </div>
     </div>
   </div>

@@ -1,3 +1,27 @@
+// ─── IMAGE HELPER — WebP <picture> element generator ───
+// Used by collection.htm and other JS-rendered galleries
+function pictureTag(src, alt, sizes, opts) {
+  opts = opts || {};
+  var dot = src.lastIndexOf('.');
+  var base = src.substring(0, dot);
+  var loading = opts.loading || 'lazy';
+  var decode = loading === 'lazy' ? ' decoding="async"' : '';
+  var prio = opts.fetchpriority ? ' fetchpriority="' + opts.fetchpriority + '"' : '';
+  var cls = opts.cls ? ' class="' + opts.cls + '"' : '';
+  var onerror = opts.onerror ? ' onerror="' + opts.onerror + '"' : '';
+  var srcset = [
+    base + '-400w.webp 400w',
+    base + '-800w.webp 800w',
+    base + '-1600w.webp 1600w',
+    base + '.webp 2048w'
+  ].join(', ');
+  return '<picture>' +
+    '<source type="image/webp" srcset="' + srcset + '" sizes="' + sizes + '">' +
+    '<img src="' + src + '" alt="' + alt + '"' + cls +
+    ' loading="' + loading + '"' + decode + prio + onerror + '>' +
+    '</picture>';
+}
+
 // ─── COMPONENTS — Studio Luminant ───
 // Injects nav, footer, cursor elements, and coord-tag
 // Each page sets: data-lang, data-lang-url, and optionally data-base
@@ -110,20 +134,49 @@ ${mobileItemsHtml}
   const hamburger = document.querySelector('.nav-hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
   if (hamburger && mobileMenu) {
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
     hamburger.addEventListener('click', () => {
       const open = hamburger.getAttribute('aria-expanded') === 'true';
       hamburger.setAttribute('aria-expanded', !open);
       hamburger.setAttribute('aria-label', open ? navLinks.hamburgerOpen : navLinks.hamburgerClose);
       mobileMenu.classList.toggle('open', !open);
       document.body.style.overflow = open ? '' : 'hidden';
+      // Focus trap: move focus to first link when opening
+      if (!open && mobileLinks.length) {
+        setTimeout(() => mobileLinks[0].focus(), 50);
+      }
     });
+
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.setAttribute('aria-expanded', 'false');
         hamburger.setAttribute('aria-label', navLinks.hamburgerOpen);
         mobileMenu.classList.remove('open');
         document.body.style.overflow = '';
+        hamburger.focus();
       });
+    });
+
+    // Trap focus within mobile menu when open
+    mobileMenu.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', navLinks.hamburgerOpen);
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+        hamburger.focus();
+        return;
+      }
+      if (e.key === 'Tab' && mobileLinks.length) {
+        const first = mobileLinks[0];
+        const last = mobileLinks[mobileLinks.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      }
     });
   }
 

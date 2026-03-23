@@ -20,12 +20,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
+<link rel="preload" as="image" type="image/webp" href="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.webp">
 
 <style>
   /* ─── PAGE HERO ─────────────────────── */
   #page-hero {
     min-height: 100vh;
     background-image: url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg');
+    background-image: image-set(
+      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.webp') type('image/webp'),
+      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg') type('image/jpeg')
+    );
     background-size: cover;
     background-position: center;
     position: relative;
@@ -200,9 +205,17 @@
 
 <!-- LUMINA PMAG -->
 <section id="pmag" class="product-section" style="background: var(--deep); border-top: 1px solid var(--border);">
-  <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg"
-       alt="Lumina PMAG polymer modified alpha gypsum relief panel — ceramic-like surface finish"
-       class="product-full-img">
+  <picture>
+              <source type="image/webp"
+                  srcset="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-400w.webp 400w,
+                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-800w.webp 800w,
+                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-1600w.webp 1600w,
+                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.webp 4096w"
+                  sizes="100vw">
+              <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg"
+                   alt="Lumina PMAG polymer modified alpha gypsum relief panel — ceramic-like surface finish" class="product-full-img" width="4096" height="4096"
+                   loading="lazy" decoding="async">
+            </picture>
   <div class="section-inner">
     <div class="product-content">
       <!-- Left: name + description -->
@@ -287,9 +300,16 @@
 
 <!-- LUMINA PUCOMP -->
 <section id="pucomp" class="product-section" style="background: var(--obsidian); border-top: 1px solid var(--border);">
-  <img src="images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg"
-       alt="Lumina PUCOMP polyurethane composite relief panel — complex geometry, exterior rated"
-       class="product-full-img">
+  <picture>
+              <source type="image/webp"
+                  srcset="images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-400w.webp 400w,
+                  images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-800w.webp 800w,
+                  images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.webp 1376w"
+                  sizes="100vw">
+              <img src="images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg"
+                   alt="Lumina PUCOMP polyurethane composite relief panel — complex geometry, exterior rated" class="product-full-img" width="1376" height="768"
+                   loading="lazy" decoding="async">
+            </picture>
   <div class="section-inner">
     <div class="product-content">
       <!-- Left: name + description -->

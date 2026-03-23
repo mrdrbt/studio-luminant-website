@@ -397,7 +397,7 @@
 <section id="collection-hero">
   <div class="collection-hero-inner">
     <div class="hero-image-wrap">
-      <img id="hero-img" src="" alt="" loading="eager">
+      <div id="hero-img-container"></div>
     </div>
     <div class="hero-text">
       <div class="hero-eyebrow">Öne Çıkan Tasarım</div>
@@ -463,7 +463,7 @@
   <div class="lightbox-inner">
     <button class="lb-close" id="lb-close" aria-label="Kapat">×</button>
     <div class="lb-image">
-      <img id="lb-img" alt="">
+      <div id="lb-img-container"><img id="lb-img" alt=""></div>
     </div>
     <div class="lb-details">
       <div class="lb-cat" id="lb-cat"></div>
@@ -591,8 +591,12 @@ const patterns = [
 
 // ─── Populate hero from featured pattern ───
 const featured = patterns.find(p => p.featured) || patterns[0];
-document.getElementById('hero-img').src = featured.image;
-document.getElementById('hero-img').alt = featured.name + ' — ' + featured.style + ' pattern';
+document.getElementById('hero-img-container').innerHTML = pictureTag(
+  featured.image,
+  featured.name + ' — ' + featured.style + ' pattern',
+  '(max-width: 1024px) 100vw, 60vw',
+  {loading: 'eager', fetchpriority: 'high', cls: 'hero-img'}
+);
 document.getElementById('hero-title').textContent = featured.name;
 document.getElementById('hero-desc').textContent = featured.description;
 document.getElementById('hero-cta').href = 'iletisim.htm?pattern=' + encodeURIComponent(featured.name);
@@ -653,8 +657,9 @@ function renderGrid() {
       card.dataset.index = i;
       card.innerHTML = `
         <div class="card-img-wrap">
-          <img src="${p.image}" alt="${p.name} — ${p.style} pattern" loading="lazy"
-               onerror="this.style.display='none'">
+          ${pictureTag(p.image, p.name + ' — ' + p.style + ' pattern',
+            '(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw',
+            {onerror: "this.style.display='none'"})}
         </div>
         <div class="card-info">
           <div class="card-name">${p.name}</div>
@@ -730,8 +735,14 @@ function openLightbox(patternIndex) {
   currentIndex = patternIndex;
   const p = patterns[patternIndex];
 
-  document.getElementById('lb-img').src = p.image;
-  document.getElementById('lb-img').alt = p.name + ' — ' + p.style + ' pattern';
+  document.getElementById('lb-img-container').innerHTML = pictureTag(
+    p.image,
+    p.name + ' — ' + p.style + ' pattern',
+    '90vw',
+    {cls: 'lb-img-el'}
+  );
+  var lbImgNew = document.getElementById('lb-img-container').querySelector('img');
+  lbImgNew.id = 'lb-img';
   document.getElementById('lb-cat').textContent = (styleLabels[p.style] || p.style);
   document.getElementById('lb-name').textContent = p.name;
   document.getElementById('lb-apps').textContent = p.applications.map(a => appLabels[a] || a).join(' · ');
