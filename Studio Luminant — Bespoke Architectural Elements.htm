@@ -521,7 +521,14 @@
     letter-spacing: 0.04em;
     margin-bottom: 12px;
   }
-  .uds-content .section-headline { margin-bottom: 28px; }
+  .uds-content .section-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 4vw, 64px);
+    font-weight: 300;
+    line-height: 1.05;
+    margin-bottom: 28px;
+  }
+  .uds-content .section-headline em { font-style: italic; color: var(--gold); }
   .uds-desc {
     font-size: 14px;
     line-height: 1.85;
