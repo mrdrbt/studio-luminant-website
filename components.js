@@ -95,7 +95,15 @@ function pictureTag(src, alt, sizes, opts) {
   const navItemsHtml = navLinks.items.map(i => `<li><a href="${i.href}">${i.text}</a></li>`).join('\n      ');
   const mobileItemsHtml = navLinks.items.map(i => `  <a href="${i.href}">${i.text}</a>`).join('\n');
 
+  const betaDismissed = sessionStorage.getItem('beta-dismissed');
+  const betaBannerHtml = betaDismissed ? '' : `
+<div class="beta-banner" id="betaBanner">
+  <span>${lang === 'tr' ? 'Beta — Bu site geliştirme aşamasındadır' : 'Beta — This site is under active development'}</span>
+  <button class="beta-close" aria-label="${lang === 'tr' ? 'Kapat' : 'Close'}">&times;</button>
+</div>`;
+
   navEl.outerHTML = `
+${betaBannerHtml}
 <a href="#main" class="skip-link">${lang === 'tr' ? 'İçeriğe geç' : 'Skip to content'}</a>
 <div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
@@ -177,6 +185,15 @@ ${mobileItemsHtml}
           e.preventDefault(); first.focus();
         }
       }
+    });
+  }
+
+  // ─── BETA BANNER DISMISS ───
+  const betaBanner = document.getElementById('betaBanner');
+  if (betaBanner) {
+    betaBanner.querySelector('.beta-close').addEventListener('click', () => {
+      betaBanner.style.display = 'none';
+      sessionStorage.setItem('beta-dismissed', '1');
     });
   }
 
