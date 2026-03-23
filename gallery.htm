@@ -149,6 +149,21 @@
     .gallery-grid { columns: 1; }
     #gallery-section { padding: 60px 0 100px; }
   }
+
+  /* ─── GALLERY BOTTOM CTA ─────────────── */
+  #gallery-cta {
+    padding: 100px 0;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .gallery-cta-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 4vw, 72px);
+    font-weight: 300; line-height: 1.0;
+    color: var(--text-primary); margin-bottom: 48px;
+  }
+  .gallery-cta-headline em { font-style: italic; color: var(--gold); }
 </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
@@ -371,6 +386,22 @@
       </div>
 
     </div><!-- end gallery-grid -->
+  </div>
+</section>
+
+<!-- GALLERY CTA -->
+<section id="gallery-cta">
+  <div class="section-inner">
+    <div class="eyebrow reveal">Ready to Specify?</div>
+    <h2 class="gallery-cta-headline reveal">
+      Let's Build Something <em>Extraordinary.</em>
+    </h2>
+    <a href="contact.htm" class="btn-primary reveal">
+      Initiate Project
+      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+      </svg>
+    </a>
   </div>
 </section>
 
