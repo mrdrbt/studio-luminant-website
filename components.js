@@ -231,7 +231,7 @@ ${mobileItemsHtml}
     ctaBtn: 'Proje Başlat',
     ctaHref: 'iletisim.htm',
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
-    bimHref: '../resources.htm',
+    bimHref: 'kaynaklar.htm',
     bimText: 'BIM Dosyaları'
   } : {
     homeHref: 'Studio Luminant — Bespoke Architectural Elements.htm',

@@ -33,3 +33,141 @@
   for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# ─── Language restructure 301 redirects (old → new) ───
+# Old Turkish pages at /tr/ → root
+[[redirects]]
+  from = "/tr/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tr"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tr/urunler.htm"
+  to = "/urunler.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/koleksiyon.htm"
+  to = "/koleksiyon.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/surec.htm"
+  to = "/surec.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/galeri.htm"
+  to = "/galeri.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/iletisim.htm"
+  to = "/iletisim.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/kaynaklar.htm"
+  to = "/kaynaklar.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/kaynaklar-yangin-sinifi.htm"
+  to = "/kaynaklar-yangin-sinifi.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/kaynaklar-sartname-rehberi.htm"
+  to = "/kaynaklar-sartname-rehberi.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/kaynaklar-agirlik-yapisal.htm"
+  to = "/kaynaklar-agirlik-yapisal.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/kaynaklar-yuzey-kaplamalari.htm"
+  to = "/kaynaklar-yuzey-kaplamalari.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/kaynaklar-teslimat-sureci.htm"
+  to = "/kaynaklar-teslimat-sureci.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tr/kaynaklar-surdurulebilirlik.htm"
+  to = "/kaynaklar-surdurulebilirlik.htm"
+  status = 301
+
+# Old English pages at root → /en/
+[[redirects]]
+  from = "/collection.htm"
+  to = "/en/collection.htm"
+  status = 301
+
+[[redirects]]
+  from = "/contact.htm"
+  to = "/en/contact.htm"
+  status = 301
+
+[[redirects]]
+  from = "/gallery.htm"
+  to = "/en/gallery.htm"
+  status = 301
+
+[[redirects]]
+  from = "/process.htm"
+  to = "/en/process.htm"
+  status = 301
+
+[[redirects]]
+  from = "/products.htm"
+  to = "/en/products.htm"
+  status = 301
+
+[[redirects]]
+  from = "/resources.htm"
+  to = "/en/resources.htm"
+  status = 301
+
+[[redirects]]
+  from = "/resources-fire-ratings.htm"
+  to = "/en/resources-fire-ratings.htm"
+  status = 301
+
+[[redirects]]
+  from = "/resources-specification-guide.htm"
+  to = "/en/resources-specification-guide.htm"
+  status = 301
+
+[[redirects]]
+  from = "/resources-weight-structural.htm"
+  to = "/en/resources-weight-structural.htm"
+  status = 301
+
+[[redirects]]
+  from = "/resources-finishes.htm"
+  to = "/en/resources-finishes.htm"
+  status = 301
+
+[[redirects]]
+  from = "/resources-lead-times.htm"
+  to = "/en/resources-lead-times.htm"
+  status = 301
+
+[[redirects]]
+  from = "/resources-sustainability.htm"
+  to = "/en/resources-sustainability.htm"
+  status = 301
+
+[[redirects]]
+  from = "/lookbook.htm"
+  to = "/en/lookbook.htm"
+  status = 301
