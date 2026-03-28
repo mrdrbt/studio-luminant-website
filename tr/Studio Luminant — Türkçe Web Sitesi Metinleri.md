@@ -24,7 +24,7 @@ Tüm sayfalardaki görünür metin içerikleri, sayfa ve bölüm bazında derlen
 
 **Ana Başlık:** Ölçekte Kişiselleştirme.
 
-**Açıklama:** Vizyoner mekansal tasarım ile operasyonel uygulanabilirlik arasındaki boşluğu kapatıyoruz. Yapay zeka destekli modelleme ve katmanlı üretim kullanarak, benzeri görülmemiş teslim süreleriyle sertifikalı, özel mimari rölyefler sunuyoruz.
+**Açıklama:** Vizyoner mekansal tasarım ile operasyonel uygulanabilirlik arasındaki boşluğu kapatıyoruz. Yapay zeka destekli modelleme ve katmanlı üretim kullanarak, benzeri görülmemiş teslim süreleriyle spesifikasyona uygun, özel mimari rölyefler sunuyoruz.
 
 **CTA Buton:** Proje Başlat
 
@@ -42,7 +42,7 @@ Tüm sayfalardaki görünür metin içerikleri, sayfa ve bölüm bazında derlen
 
 **Paragraf 2:** Studio Luminant bu riski tamamen ortadan kaldırır. Tasarım, kalıplama ve bitirme işlemlerini dikey olarak entegre ederek, karmaşık, biyofilik ve kültürel açıdan zengin geometrileri yüksek performanslı yapısal varlıklara dönüştürüyoruz — geleneksel tedarikçilerden daha hızlı ve daha maliyet etkin şekilde.
 
-**Özellik 01 — Risk Azaltma:** %100 sertifikalı malzemeler, hazır BIM dosyaları ve büyük ölçekli projeler için garantili uyumluluk.
+**Özellik 01 — Risk Azaltma:** Önceden formüle edilmiş malzemeler, hazır BIM dosyaları ve büyük ölçekli projeler için garantili uyumluluk.
 
 **Özellik 02 — Akustik Lüks:** Misafir konforunu artırmak için yüksek çözünürlüklü geometrilere gömülü görünmez akustik çözümler.
 
@@ -82,7 +82,7 @@ Açıklama: Tüm kalıplama, döküm ve bitirme işlemleri kurum içinde gerçek
 
 **Paragraf 1:** Estetik vizyon, yapısal bütünlüğü veya mevzuat uyumluluğunu tehlikeye atamaz. Kesin müşteri ihtiyaçları için ideal bileşimi formüle ediyoruz — hem performans metriklerini hem de sertifikasyon gereksinimlerini optimize ederek.
 
-**Paragraf 2:** Mimarlar ve varlık yöneticileri için Studio Luminant'ı tercih etmek, hazır BIM dosyalarıyla donatılmış sertifikalı, önceden formüle edilmiş malzemelere erişim anlamına gelir. Özel mimari rölyef spesifikasyonunun sorumluluğunu ortadan kaldırıyoruz.
+**Paragraf 2:** Mimarlar ve varlık yöneticileri için Studio Luminant'ı tercih etmek, hazır BIM dosyalarıyla donatılmış önceden formüle edilmiş, spesifikasyona uygun malzemelere erişim anlamına gelir. Özel mimari rölyef spesifikasyonunun sorumluluğunu ortadan kaldırıyoruz.
 
 **Lumina PMAG™ — Polimer Modifiye Alfa Alçı**
 - A1 Yangın Direnci
@@ -126,7 +126,7 @@ Küresel Dağıtım ve Montaj Hazır
 
 **Sayfa Başlığı:** Ürünler — Studio Luminant
 
-**Meta Açıklama:** Studio Luminant Lumina PMAG™ ve PUCOMP™ — lüks konaklama, üst düzey konut ve dış cephe uygulamaları için sertifikalı mimari rölyef panel malzemeleri.
+**Meta Açıklama:** Studio Luminant Lumina PMAG™ ve PUCOMP™ — lüks konaklama, üst düzey konut ve dış cephe uygulamaları için mimari rölyef panel malzemeleri.
 
 ### Giriş
 
@@ -134,13 +134,13 @@ Küresel Dağıtım ve Montaj Hazır
 
 **Ana Başlık:** Kalıcılık İçin Tasarlandı.
 
-**Açıklama:** İki tescilli malzeme sistemi — sertifikalı performans, özel geometri ve kalıcı uygulama için formüle edilmiştir.
+**Açıklama:** İki tescilli malzeme sistemi — hedef performans, özel geometri ve kalıcı uygulama için formüle edilmiştir.
 
 ### Lumina PMAG™ — Polimer Modifiye Alfa Alçı
 
 Lumina PMAG™, Studio Luminant'ın birincil iç mekan kaplama malzemesidir — yüksek spesifikasyonlu mimari uygulamalar için formüle edilmiş polimer modifiye alfa alçı. Alfa alçı, beta sınıfı alternatiflerin önemli ölçüde üzerinde basınç dayanımı sunarak daha yoğun, daha sert ve seramik benzeri yüzey kalitesine sahip paneller üretir.
 
-A1 yanmaz sertifikalı, neme dayanıklı ve otomotiv sınıfı 2K kaplama ile herhangi bir RAL veya özel renkte mevcuttur. Yangın uyumluluğu, yüzey kalitesi ve boyutsal hassasiyetin vazgeçilmez olduğu büyük ölçekli iç duvar ve tavan uygulamaları için idealdir.
+A1 yangın performansı*, neme dayanıklı ve otomotiv sınıfı 2K kaplama ile herhangi bir RAL veya özel renkte mevcuttur. Yangın uyumluluğu, yüzey kalitesi ve boyutsal hassasiyetin vazgeçilmez olduğu büyük ölçekli iç duvar ve tavan uygulamaları için idealdir.
 
 **Teknik Özellikler:**
 

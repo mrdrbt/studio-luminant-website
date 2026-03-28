@@ -235,7 +235,7 @@ const studioMaterials = [{
   id: "pmag",
   name: "Lumina PMAG™",
   fullName: "Polymer Modified Alpha Gypsum",
-  tagline: "Interior architectural relief panels with A1 fire performance",
+  tagline: "Interior architectural relief panels with target A1 fire performance",
   domain: "Interior",
   domainIcon: "🏛",
   application: "Feature walls, ceiling elements, reception areas, corridor accent walls",
@@ -244,7 +244,7 @@ const studioMaterials = [{
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
     thickness: (_pmag.thickness ? _pmag.thickness.min + '–' + _pmag.thickness.max : "15–40"),
     maxSize: (_F.panelSize ? _F.panelSize(_pmag) : "3000 × 1500 mm"),
-    fire: (_pmag.fire ? _pmag.fire.value + ' Non-Combustible (' + _pmag.fire.standard + ')' : "A1 Non-Combustible (EN 13501-1)"),
+    fire: (_pmag.fire ? _pmag.fire.value + ' Non-Combustible (' + _pmag.fire.standard + ')' : "A1 Non-Combustible* (EN 13501-1)"),
     moisture: "Moderate — interior dry zones",
     impact: "Moderate (glass fiber reinforced)",
     uv: "—",
@@ -282,7 +282,7 @@ const studioMaterials = [{
     weight: (_pucomp.weight ? _pucomp.weight.min + '–' + _pucomp.weight.max : "12–18"),
     thickness: (_pucomp.thickness ? _pucomp.thickness.min + '–' + _pucomp.thickness.max : "8–25"),
     maxSize: (_F.panelSize ? _F.panelSize(_pucomp) : "2500 × 1200 mm"),
-    fire: (_pucomp.fire ? _pucomp.fire.value + ' (' + _pucomp.fire.standard + ')' : "B-s1,d0 (EN 13501-1)"),
+    fire: (_pucomp.fire ? _pucomp.fire.value + ' (' + _pucomp.fire.standard + ')' : "B-s1,d0* (EN 13501-1)"),
     moisture: "High — closed-cell, hydrophobic",
     impact: "High — flexible polymer matrix",
     uv: "Stabilised + UV-resistant topcoat",
@@ -935,7 +935,7 @@ function MaterialCard({
       overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: material.id === "pmag" ? "images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png" : "images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
+    src: material.id === "pmag" ? "../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png" : "../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
     alt: material.id === "pmag" ? "Lumina PMAG architectural relief panel detail" : "Lumina PUCOMP façade application",
     style: {
       position: "absolute",
@@ -1554,14 +1554,14 @@ function MaterialGuide() {
     }
   }, m.name))))), /*#__PURE__*/React.createElement("p", {
     style: {
-      fontSize: 11,
+      fontSize: 12,
       color: COLORS.muted,
       fontWeight: 300,
       marginTop: 28,
       fontStyle: "italic",
-      opacity: 0.7
+      opacity: 0.85
     }
-  }, "Target classifications pending EN 13501-1 testing. Values represent design specifications."))));
+  }, "Target classifications pending EN 13501-1 testing. Values represent design specifications; certification in progress."))));
 }
 ReactDOM.createRoot(document.getElementById("material-guide-root")).render(/*#__PURE__*/React.createElement(MaterialGuide, null));
 })();

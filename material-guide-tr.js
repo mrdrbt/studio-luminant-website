@@ -235,7 +235,7 @@ const studioMaterials = [{
   id: "pmag",
   name: "Lumina PMAG™",
   fullName: "Polymer Modified Alpha Gypsum",
-  tagline: "A1 yangın performanslı iç mekân mimari rölyef panelleri",
+  tagline: "Hedef A1 yangın performanslı iç mekân mimari rölyef panelleri",
   domain: "İç Mekân",
   domainIcon: "🏛",
   application: "Özellikli duvarlar, tavan elemanları, resepsiyon alanları, koridor vurgu duvarları",
@@ -244,7 +244,7 @@ const studioMaterials = [{
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
     thickness: (_pmag.thickness ? _pmag.thickness.min + '–' + _pmag.thickness.max : "15–40"),
     maxSize: (_F.panelSize ? _F.panelSize(_pmag) : "3000 × 1500 mm"),
-    fire: (_pmag.fire ? _pmag.fire.value + ' Yanmaz (' + _pmag.fire.standard + ')' : "A1 Yanmaz (EN 13501-1)"),
+    fire: (_pmag.fire ? _pmag.fire.value + ' Yanmaz (' + _pmag.fire.standard + ')' : "A1 Yanmaz* (EN 13501-1)"),
     moisture: "Moderate — interior dry zones",
     impact: "Moderate (glass fiber reinforced)",
     uv: "—",
@@ -282,7 +282,7 @@ const studioMaterials = [{
     weight: (_pucomp.weight ? _pucomp.weight.min + '–' + _pucomp.weight.max : "12–18"),
     thickness: (_pucomp.thickness ? _pucomp.thickness.min + '–' + _pucomp.thickness.max : "8–25"),
     maxSize: (_F.panelSize ? _F.panelSize(_pucomp) : "2500 × 1200 mm"),
-    fire: (_pucomp.fire ? _pucomp.fire.value + ' (' + _pucomp.fire.standard + ')' : "B-s1,d0 (EN 13501-1)"),
+    fire: (_pucomp.fire ? _pucomp.fire.value + ' (' + _pucomp.fire.standard + ')' : "B-s1,d0* (EN 13501-1)"),
     moisture: "High — closed-cell, hydrophobic",
     impact: "High — flexible polymer matrix",
     uv: "Stabilised + UV-resistant topcoat",
@@ -935,7 +935,7 @@ function MaterialCard({
       overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: material.id === "pmag" ? "../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png" : "../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
+    src: material.id === "pmag" ? "images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png" : "images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
     alt: material.id === "pmag" ? "Lumina PMAG mimari rölyef panel detayı" : "Lumina PUCOMP cephe uygulaması",
     style: {
       position: "absolute",
@@ -1554,14 +1554,14 @@ function MaterialGuide() {
     }
   }, m.name))))), /*#__PURE__*/React.createElement("p", {
     style: {
-      fontSize: 11,
+      fontSize: 12,
       color: COLORS.muted,
       fontWeight: 300,
       marginTop: 28,
       fontStyle: "italic",
-      opacity: 0.7
+      opacity: 0.85
     }
-  }, "Hedef sınıflandırmalar EN 13501-1 testine tabidir. Değerler tasarım spesifikasyonlarını temsil eder."))));
+  }, "Hedef sınıflandırmalar EN 13501-1 testine tabidir. Değerler tasarım spesifikasyonlarını temsil eder; sertifikasyon sürecindedir."))));
 }
 ReactDOM.createRoot(document.getElementById("material-guide-root")).render(/*#__PURE__*/React.createElement(MaterialGuide, null));
 })();

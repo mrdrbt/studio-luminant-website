@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Koleksiyon — Standart Mimari Desenler | Studio Luminant</title>
 <meta name="description" content="Studio Luminant'ın standart mimari rölyef desen koleksiyonuna göz atın — Lumina PMAG™ ve Lumina PUCOMP™ ile üretilen geometrik, organik, miras ve yüzey tasarımları.">
-<link rel="canonical" href="https://studioluminant.com/tr/koleksiyon.htm">
+<link rel="canonical" href="https://studioluminant.com/koleksiyon.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com/koleksiyon.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com/en/collection.htm">
   <link rel="alternate" hreflang="x-default" href="https://studioluminant.com/">
@@ -13,16 +13,16 @@
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="Koleksiyon — Standart Mimari Desenler | Studio Luminant">
 <meta property="og:description" content="Studio Luminant'ın standart mimari rölyef desen koleksiyonuna göz atın — Lumina PMAG™ ve Lumina PUCOMP™ ile üretilen geometrik, organik, miras ve yüzey tasarımları.">
-<meta property="og:url" content="https://studioluminant.com/tr/koleksiyon.htm">
+<meta property="og:url" content="https://studioluminant.com/koleksiyon.htm">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Koleksiyon — Standart Mimari Desenler | Studio Luminant">
 <meta name="twitter:description" content="Studio Luminant'ın standart mimari rölyef desen koleksiyonuna göz atın.">
-<meta property="og:image" content="https://studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
-<meta name="twitter:image" content="https://studioluminant.com/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg">
+<meta property="og:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
+<meta name="twitter:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../shared.css">
+<link rel="stylesheet" href="shared.css">
 
 <style>
   /* ─── COLLECTION HERO ──────────────── */
@@ -392,7 +392,7 @@
 </head>
 <body>
 
-<div id="site-nav" data-lang="tr" data-lang-url="../collection.htm" data-base="../"></div>
+<div id="site-nav" data-lang="tr" data-lang-url="en/collection.htm"></div>
 
 <main id="main">
 
@@ -485,112 +485,22 @@
 
 <div id="site-footer"></div>
 
-<script src="../shared.js"></script>
-<script src="../components.js"></script>
+<script src="shared.js"></script>
+<script src="components.js"></script>
+<script src="collection-data.js"></script>
 <script>
-// ─── Pattern Data ───
-const patterns = [
-  {
-    id: 'compass-star',
-    name: 'Pusula Yıldızı',
-    style: 'heritage',
-    applications: ['wall-panel', 'ceiling'],
-    image: '../images/studio-luminant-architectural-relief-compass-star-wall-panel.jpg',
-    description: 'Klasik pusula gülü geometrisinden ilham alan ışınsal yıldız motifi. Yönlü aydınlatma altında dramatik gölge oyunu yaratır.',
-    materials: ['pmag', 'pucomp'],
-    featured: true
-  },
-  {
-    id: 'diagonal-wave',
-    name: 'Diyagonal Dalga',
-    style: 'geometric',
-    applications: ['wall-panel'],
-    image: '../images/studio-luminant-architectural-relief-diagonal-wave-wall-panel.jpg',
-    description: 'Duvar yüzeylerinde hareket hissi yaratan akıcı diyagonal dalga deseni. Lobi ve koridorlardaki özellik duvarları için ideal.',
-    materials: ['pmag', 'pucomp'],
-    featured: false
-  },
-  {
-    id: 'faceted-crystal',
-    name: 'Fasetli Kristal',
-    style: 'geometric',
-    applications: ['wall-panel', 'column'],
-    image: '../images/studio-luminant-architectural-relief-faceted-crystal-diagonal-wall-panel.jpg',
-    description: 'Kristal mineral oluşumlarından ilham alan, ışığı yakalayan ve yansıtan keskin geometrik fasetler.',
-    materials: ['pmag'],
-    featured: false
-  },
-  {
-    id: 'ottoman-heritage',
-    name: 'Osmanlı Mirası',
-    style: 'heritage',
-    applications: ['wall-panel', 'ceiling'],
-    image: '../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg',
-    description: 'Çağdaş rölyefte yeniden yorumlanan geleneksel Osmanlı geometrik deseni. Tarihi zanaat ile modern mimari spesifikasyonu arasında köprü kurar.',
-    materials: ['pmag', 'pucomp'],
-    featured: false
-  },
-  {
-    id: 'organic-cell',
-    name: 'Organik Hücre',
-    style: 'organic',
-    applications: ['wall-panel', 'sculptural'],
-    image: '../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png',
-    description: 'Doğal hücresel yapılardan ilham alan biyomorfik hücre deseni. Derinlik ve doku katan yumuşak, akıcı formlar.',
-    materials: ['pmag'],
-    featured: false
-  },
-  {
-    id: 'fluted-column',
-    name: 'Yivli Kolon',
-    style: 'surface',
-    applications: ['column', 'wall-panel'],
-    image: '../images/studio-luminant-architectural-relief-fluted-column-wall-panel.jpg',
-    description: 'Kolon kaplama ve duvar uygulamaları için klasik yivli yüzey işlemi. İnce gölge detaylarıyla temiz dikey çizgiler.',
-    materials: ['pmag', 'pucomp'],
-    featured: false
-  },
-  {
-    id: 'petal-geometric',
-    name: 'Taçyaprağı Geometrik',
-    style: 'geometric',
-    applications: ['wall-panel', 'ceiling'],
-    image: '../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.jpg',
-    description: 'Geometrik bir ızgara içinde düzenlenen tekrarlayan taçyaprağı formları. Organik yumuşaklığı yapısal hassasiyetle dengeler.',
-    materials: ['pmag', 'pucomp'],
-    featured: false
-  },
-  {
-    id: 'geometric-star',
-    name: 'Geometrik Yıldız',
-    style: 'geometric',
-    applications: ['wall-panel'],
-    image: '../images/studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg',
-    description: 'Önemli duvar kurulumları için cesur yıldız rölyef deseni. Konaklama iç mekanlarında büyük formatlı uygulamalar için tasarlanmıştır.',
-    materials: ['pmag', 'pucomp'],
-    featured: false
-  },
-  {
-    id: 'bas-relief',
-    name: 'Alçak Rölyef',
-    style: 'surface',
-    applications: ['wall-panel'],
-    image: '../images/studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup.jpg',
-    description: 'Baskın desen olmadan dokunsal derinlik katan ince alçak rölyef yüzey dokusu. Çok yönlü ve sade.',
-    materials: ['pmag'],
-    featured: false
-  },
-  {
-    id: 'neo-heritage-modular',
-    name: 'Neo Miras Modüler',
-    style: 'heritage',
-    applications: ['wall-panel', 'ceiling'],
-    image: '../images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design.jpg',
-    description: 'Miras ilhamlı rölyefli 50×50cm modüler panel sistemi. Benzersiz kompozisyonlar için yönlendirmeleri karıştırın ve eşleştirin.',
-    materials: ['pmag', 'pucomp'],
-    featured: false
-  }
-];
+// ─── Pattern Data (from Supabase via collection-data.js) ───
+const patterns = window.SL_PATTERNS.map(p => ({
+  id: p.id,
+  name: p.name_tr,
+  style: p.style,
+  applications: p.applications,
+  image: p.image,
+  description: p.description_tr,
+  materials: p.materials,
+  featured: p.featured,
+  tileSvg: p.tileSvg
+}));
 
 // ─── Populate hero from featured pattern ───
 const featured = patterns.find(p => p.featured) || patterns[0];
