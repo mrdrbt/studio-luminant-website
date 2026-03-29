@@ -36,20 +36,24 @@
 
 # ─── Homepage rewrites (serve actual content at clean URLs) ───
 # Fixes /en/ soft-404 in Google Search Console
+# force = true overrides the existing index.html meta-refresh files
 [[redirects]]
   from = "/"
   to = "/Studio Luminant — Özel Mimari Elemanlar.htm"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/en"
   to = "/en/Studio Luminant — Bespoke Architectural Elements.htm"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/en/"
   to = "/en/Studio Luminant — Bespoke Architectural Elements.htm"
   status = 200
+  force = true
 
 # ─── WordPress ghost URLs — 410 Gone ───
 # Domain was previously WordPress; tell Google to drop these
