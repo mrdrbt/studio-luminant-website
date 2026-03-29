@@ -34,6 +34,55 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# ─── Homepage rewrites (serve actual content at clean URLs) ───
+# Fixes /en/ soft-404 in Google Search Console
+[[redirects]]
+  from = "/"
+  to = "/Studio Luminant — Özel Mimari Elemanlar.htm"
+  status = 200
+
+[[redirects]]
+  from = "/en"
+  to = "/en/Studio Luminant — Bespoke Architectural Elements.htm"
+  status = 200
+
+[[redirects]]
+  from = "/en/"
+  to = "/en/Studio Luminant — Bespoke Architectural Elements.htm"
+  status = 200
+
+# ─── WordPress ghost URLs — 410 Gone ───
+# Domain was previously WordPress; tell Google to drop these
+[[redirects]]
+  from = "/feed/*"
+  to = "/404.html"
+  status = 410
+
+[[redirects]]
+  from = "/wp-json/*"
+  to = "/404.html"
+  status = 410
+
+[[redirects]]
+  from = "/wp-content/*"
+  to = "/404.html"
+  status = 410
+
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/404.html"
+  status = 410
+
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/404.html"
+  status = 410
+
+[[redirects]]
+  from = "/xmlrpc.php"
+  to = "/404.html"
+  status = 410
+
 # ─── Language restructure 301 redirects (old → new) ───
 # Old Turkish pages at /tr/ → root
 [[redirects]]
