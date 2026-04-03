@@ -55,6 +55,18 @@
   status = 200
   force = true
 
+# ─── Long-filename homepage URLs → clean URLs ───
+# Prevents Google from indexing the raw .htm filenames
+[[redirects]]
+  from = "/Studio Luminant — Özel Mimari Elemanlar.htm"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/en/Studio Luminant — Bespoke Architectural Elements.htm"
+  to = "/en/"
+  status = 301
+
 # ─── WordPress ghost URLs — 410 Gone ───
 # Domain was previously WordPress; tell Google to drop these
 [[redirects]]
