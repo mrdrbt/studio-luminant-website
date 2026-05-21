@@ -214,111 +214,86 @@
   }
   .empty-state a:hover { text-decoration: underline; }
 
-  /* ─── LIGHTBOX ─────────────────────── */
-  .lightbox-overlay {
-    position: fixed; inset: 0; z-index: 1000;
-    background: rgba(12,12,14,0.92);
-    backdrop-filter: blur(12px);
-    display: flex; align-items: center; justify-content: center;
-    padding: 40px;
-    opacity: 0; visibility: hidden; pointer-events: none;
-    transition: opacity 0.3s, visibility 0.3s;
+  /* ─── LIGHTBOX LAYOUT (sl-modal lightbox mode) ──────────── */
+  .lb-layout {
+    display: flex;
+    gap: 0;
+    height: 100%;
+    overflow: hidden;
   }
-  .lightbox-overlay.open { opacity: 1; visibility: visible; pointer-events: auto; }
-
-  .lightbox-inner {
-    background: var(--deep);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    max-width: 1060px; width: 100%;
-    max-height: 90vh; overflow-y: auto;
-    display: flex; gap: 32px;
-    padding: 32px;
-    position: relative;
-    transform: scale(0.97); transition: transform 0.3s;
-  }
-  .lightbox-overlay.open .lightbox-inner { transform: scale(1); }
-
-  .lb-close {
-    position: absolute; top: 16px; right: 16px;
-    background: none; border: none;
-    color: var(--text-secondary); font-size: 24px;
-    cursor: pointer; line-height: 1;
-    transition: color 0.2s;
-    z-index: 1;
-  }
-  .lb-close:hover { color: var(--gold); }
-
   .lb-image {
-    flex: 2; border-radius: 6px; overflow: hidden;
-    background: var(--surface-2);
+    flex: 1 1 60%;
+    background: var(--obsidian);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
   }
-  .lb-image img {
-    width: 100%; display: block;
+  .lb-img-el {
+    width: 100%; height: 100%;
+    object-fit: contain; display: block;
   }
-
-  .lb-details { flex: 1; padding-top: 4px; }
-
+  .lb-details {
+    flex: 0 0 320px;
+    padding: 48px 32px;
+    overflow-y: auto;
+    border-left: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 16px;
+    background: var(--surface);
+  }
   .lb-cat {
-    font-family: 'Jost', sans-serif;
-    font-size: 10px; text-transform: uppercase;
-    letter-spacing: 2px; color: var(--gold);
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); font-weight: 400;
   }
   .lb-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px; font-weight: 300; font-style: italic;
-    color: var(--text-primary);
-    margin: 10px 0 6px;
+    font-family: var(--font-display); font-size: 32px;
+    font-weight: 300; color: var(--fg); line-height: 1.2;
   }
   .lb-apps {
-    font-size: 12px; color: var(--text-muted);
-    margin-bottom: 16px;
+    font-size: 11px; color: var(--fg-muted); letter-spacing: 0.08em;
   }
   .lb-desc {
-    font-size: 13px; line-height: 1.65;
-    color: var(--text-secondary);
-    margin-bottom: 20px;
-    padding-top: 16px;
-    border-top: 1px solid rgba(201,168,76,0.1);
+    font-size: 14px; color: var(--fg-2); font-weight: 300;
+    line-height: 1.7; flex: 1;
   }
   .lb-materials-label {
-    font-size: 9px; text-transform: uppercase;
-    letter-spacing: 1px; color: var(--text-muted);
-    margin-bottom: 8px;
+    font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--fg-muted);
   }
-  .lb-materials {
-    display: flex; gap: 8px; flex-wrap: wrap;
-    margin-bottom: 24px;
-  }
+  .lb-materials { display: flex; flex-wrap: wrap; gap: 8px; }
   .lb-mat-badge {
-    border: 1px solid rgba(201,168,76,0.3);
-    color: var(--gold); padding: 4px 10px;
-    border-radius: 4px; font-size: 11px;
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--fg-2); border: 1px solid var(--border-mute);
+    padding: 4px 10px;
   }
   .lb-cta {
-    display: block;
-    background: var(--gold); color: var(--obsidian);
-    padding: 12px 20px; text-align: center;
-    border-radius: 4px; font-size: 13px;
-    font-family: 'Jost', sans-serif;
-    font-weight: 400; text-decoration: none;
-    transition: background 0.3s;
+    display: inline-flex; align-items: center;
+    font-family: var(--font-body); font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--obsidian); background: var(--gold);
+    padding: 12px 24px; text-decoration: none;
+    transition: background var(--dur-1) var(--ease);
+    margin-top: auto;
   }
   .lb-cta:hover { background: var(--gold-light); }
-
-  /* Prev/Next arrows */
   .lb-nav {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    background: rgba(201,168,76,0.1);
-    border: 1px solid var(--border);
-    color: var(--gold); font-size: 20px;
-    width: 40px; height: 40px; border-radius: 50%;
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    background: transparent; border: 1px solid var(--border);
+    color: var(--fg-2); font-size: 24px;
+    width: 40px; height: 40px;
     display: flex; align-items: center; justify-content: center;
-    cursor: pointer; transition: background 0.2s;
+    cursor: pointer; z-index: 1;
+    transition: border-color var(--dur-1) var(--ease),
+                color       var(--dur-1) var(--ease);
   }
-  .lb-nav:hover { background: rgba(201,168,76,0.2); }
-  .lb-prev { left: -56px; }
-  .lb-next { right: -56px; }
+  .lb-nav:hover { border-color: var(--gold); color: var(--gold); }
+  .lb-prev { left: var(--s-4); }
+  .lb-next { right: var(--s-4); }
+  @media (max-width: 720px) {
+    .lb-layout { flex-direction: column; }
+    .lb-details { flex: 0 0 auto; padding: 24px 20px; border-left: 0; border-top: 1px solid var(--border); }
+    .lb-image { flex: 0 0 50vh; }
+    .lb-nav { top: 25%; }
+  }
 
   /* ─── BOTTOM CTA ───────────────────── */
   .collection-bottom-cta {
@@ -366,10 +341,6 @@
     .collection-filters { padding: 32px 32px 0; }
     .collection-grid-section { padding: 24px 32px 60px; }
     .pattern-grid { grid-template-columns: repeat(2, 1fr); }
-    .lightbox-overlay { padding: 20px; }
-    .lightbox-inner { flex-direction: column; gap: 20px; padding: 24px; }
-    .lb-prev { left: 8px; top: auto; bottom: 8px; transform: none; }
-    .lb-next { right: 8px; top: auto; bottom: 8px; transform: none; }
     .collection-bottom-cta { padding: 0 32px 80px; }
   }
   @media (max-width: 600px) {
@@ -460,26 +431,6 @@
   </div>
 </section>
 
-<!-- LIGHTBOX -->
-<div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Desen detayı">
-  <button class="lb-nav lb-prev" id="lb-prev" aria-label="Önceki desen">‹</button>
-  <div class="lightbox-inner">
-    <button class="lb-close" id="lb-close" aria-label="Kapat">×</button>
-    <div class="lb-image">
-      <div id="lb-img-container"><img id="lb-img" alt=""></div>
-    </div>
-    <div class="lb-details">
-      <div class="lb-cat" id="lb-cat"></div>
-      <h2 class="lb-name" id="lb-name"></h2>
-      <div class="lb-apps" id="lb-apps"></div>
-      <p class="lb-desc" id="lb-desc"></p>
-      <div class="lb-materials-label">Mevcut Malzemeler</div>
-      <div class="lb-materials" id="lb-materials"></div>
-      <a class="lb-cta" id="lb-cta" href="iletisim.htm">Bu Desen Hakkında Bilgi Alın →</a>
-    </div>
-  </div>
-  <button class="lb-nav lb-next" id="lb-next" aria-label="Sonraki desen">›</button>
-</div>
 
 </main>
 
@@ -636,9 +587,33 @@ document.querySelectorAll('.app-tag').forEach(btn => {
 
 renderGrid();
 
-// ─── Lightbox ───
-const overlay = document.getElementById('lightbox');
+// ─── Lightbox (via SLModal) ───────────────────────────────────────────
 let currentIndex = -1;
+
+const matMap = { pmag: 'Lumina PMAG™', pucomp: 'Lumina PUCOMP™' };
+
+function buildLightboxHtml(p) {
+  const mats = p.materials.length
+    ? p.materials.map(m => '<span class="lb-mat-badge">' + (matMap[m] || m) + '</span>').join('')
+    : '';
+  return (
+    '<div class="lb-layout">' +
+      '<div class="lb-image">' +
+        pictureTag(p.image, p.name + ' — ' + p.style + ' pattern', '60vw', { cls: 'lb-img-el' }) +
+      '</div>' +
+      '<div class="lb-details">' +
+        '<div class="lb-cat">' + (styleLabels[p.style] || p.style) + '</div>' +
+        '<h2 class="lb-name">' + p.name + '</h2>' +
+        '<div class="lb-apps">' + p.applications.map(a => appLabels[a] || a).join(' · ') + '</div>' +
+        '<p class="lb-desc">' + p.description + '</p>' +
+        (mats ? '<div class="lb-materials-label">Mevcut Malzemeler</div><div class="lb-materials">' + mats + '</div>' : '') +
+        '<a class="lb-cta" href="iletisim.htm?pattern=' + encodeURIComponent(p.name) + '">Bu Desen Hakkında Bilgi Alın →</a>' +
+      '</div>' +
+    '</div>' +
+    '<button class="lb-nav lb-prev" aria-label="Önceki desen">‹</button>' +
+    '<button class="lb-nav lb-next" aria-label="Sonraki desen">›</button>'
+  );
+}
 
 function getVisibleIndices() {
   return Array.from(document.querySelectorAll('.pattern-card')).map(c => parseInt(c.dataset.index));
@@ -647,69 +622,24 @@ function getVisibleIndices() {
 function openLightbox(patternIndex) {
   currentIndex = patternIndex;
   const p = patterns[patternIndex];
-
-  document.getElementById('lb-img-container').innerHTML = pictureTag(
-    p.image,
-    p.name + ' — ' + p.style + ' pattern',
-    '90vw',
-    {cls: 'lb-img-el'}
-  );
-  var lbImgNew = document.getElementById('lb-img-container').querySelector('img');
-  lbImgNew.id = 'lb-img';
-  document.getElementById('lb-cat').textContent = (styleLabels[p.style] || p.style);
-  document.getElementById('lb-name').textContent = p.name;
-  document.getElementById('lb-apps').textContent = p.applications.map(a => appLabels[a] || a).join(' · ');
-  document.getElementById('lb-desc').textContent = p.description;
-
-  const matMap = { pmag: 'Lumina PMAG™', pucomp: 'Lumina PUCOMP™' };
-  document.getElementById('lb-materials').innerHTML = p.materials
-    .map(m => '<span class="lb-mat-badge">' + (matMap[m] || m) + '</span>').join('');
-
-  document.getElementById('lb-cta').href = 'iletisim.htm?pattern=' + encodeURIComponent(p.name);
-
-  overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('lb-close').focus();
-}
-
-function closeLightbox() {
-  overlay.classList.remove('open');
-  document.body.style.overflow = '';
-  currentIndex = -1;
+  SLModal.open({ mode: 'lightbox', html: buildLightboxHtml(p), title: p.name });
+  const mb = document.querySelector('.sl-modal-body');
+  mb.querySelector('.lb-prev').addEventListener('click', () => navigateLightbox(-1));
+  mb.querySelector('.lb-next').addEventListener('click', () => navigateLightbox(1));
 }
 
 function navigateLightbox(dir) {
   const visible = getVisibleIndices();
-  if (visible.length === 0) return;
+  if (!visible.length) return;
   const pos = visible.indexOf(currentIndex);
   const next = (pos + dir + visible.length) % visible.length;
   openLightbox(visible[next]);
 }
 
-document.getElementById('lb-close').addEventListener('click', closeLightbox);
-document.getElementById('lb-prev').addEventListener('click', () => navigateLightbox(-1));
-document.getElementById('lb-next').addEventListener('click', () => navigateLightbox(1));
-
-overlay.addEventListener('click', (e) => {
-  if (e.target === overlay) closeLightbox();
-});
-
-document.addEventListener('keydown', (e) => {
-  if (!overlay.classList.contains('open')) return;
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') navigateLightbox(-1);
+document.addEventListener('keydown', e => {
+  if (!document.querySelector('.sl-modal')?.open) return;
+  if (e.key === 'ArrowLeft')  navigateLightbox(-1);
   if (e.key === 'ArrowRight') navigateLightbox(1);
-
-  // Focus trap
-  if (e.key === 'Tab') {
-    const focusable = overlay.querySelectorAll('button, a[href]');
-    const first = focusable[0], last = focusable[focusable.length - 1];
-    if (e.shiftKey && document.activeElement === first) {
-      e.preventDefault(); last.focus();
-    } else if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault(); first.focus();
-    }
-  }
 });
 </script>
 
