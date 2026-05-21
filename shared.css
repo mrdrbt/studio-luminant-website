@@ -1,42 +1,172 @@
 /* ─── SHARED STYLES — Studio Luminant ─── */
 /* Single source of truth for variables, nav, footer, cursor, animations, and responsive rules */
+/* Design system v2 applied 2026-05-21 — tokens expanded, a11y hardened, forms added          */
 
+/* ─── DESIGN TOKENS ─────────────────── */
 :root {
-  --gold: #C9A84C;
-  --gold-light: #E8C96A;
-  --gold-dim: #A8872F;
-  --obsidian: #0C0C0E;
-  --deep: #111114;
-  --surface: #18181D;
-  --surface-2: #1F1F26;
-  --border: rgba(201,168,76,0.18);
-  --text-primary: #F0EAD6;
+
+  /* ── BRAND COLORS ─────────────────── */
+  --gold:        #C9A84C;   /* primary accent */
+  --gold-light:  #E8C96A;   /* hover */
+  --gold-dim:    #A8872F;   /* secondary accent */
+
+  /* ── SURFACES ─────────────────────── */
+  --obsidian:    #0C0C0E;   /* page background */
+  --deep:        #111114;   /* footer / alt bg */
+  --surface:     #18181D;   /* card */
+  --surface-2:   #1F1F26;   /* raised */
+
+  /* ── BORDERS & LINES ──────────────── */
+  --border:         rgba(201,168,76,0.18);   /* translucent gold hairline */
+  --border-strong:  rgba(201,168,76,0.36);
+  --border-mute:    rgba(240,234,214,0.08);
+  /* Neutral rule family — structural dividers, not expressive */
+  --rule-1:         rgba(240,234,214,0.06);
+  --rule-2:         rgba(240,234,214,0.10);
+  --rule-3:         rgba(240,234,214,0.16);
+
+  /* ── TEXT ─────────────────────────── */
+  --text-primary:   #F0EAD6;   /* warm off-white */
   --text-secondary: #B0A89E;
-  --text-muted: #A09890;
+  --text-muted:     #A09890;
+  /* Aliases used by the design system components */
+  --fg:             #F0EAD6;
+  --fg-2:           #B0A89E;
+  --fg-muted:       #A09890;
+  --fg-on-gold:     #0C0C0E;
+
+  /* ── STATE ACCENTS ────────────────── */
+  /* Warm, low-chroma — all AA contrast against --obsidian for text */
+  --accent-error:    #C76A5C;   /* brick-rose */
+  --accent-warn:     #C99A4C;   /* amber */
+  --accent-ok:       #6E9468;   /* moss */
+  --accent-info:     #6E8AA8;   /* slate-blue */
+  --accent-error-bg: rgba(199,106,92,0.10);
+  --accent-warn-bg:  rgba(201,154,76,0.10);
+  --accent-ok-bg:    rgba(110,148,104,0.10);
+  --accent-info-bg:  rgba(110,138,168,0.10);
+
+  /* ── TYPOGRAPHY — Families ────────── */
+  --font-display: "Cormorant Garamond", "Garamond", "Times New Roman", serif;
+  --font-body:    "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* ── TYPOGRAPHY — Weights ─────────── */
+  --w-display: 300;
+  --w-body:    300;
+  --w-label:   400;
+
+  /* ── TYPOGRAPHY — Scale ──────────── */
+  --t-micro:    9px;
+  --t-eyebrow:  10px;
+  --t-label:    11px;
+  --t-body-sm:  14px;
+  --t-body:     16px;
+  --t-body-lg:  18px;
+  --t-h6:       20px;
+  --t-h5:       28px;
+  --t-h4:       36px;
+  --t-h3:       48px;
+  --t-h2:       64px;
+  --t-h1:       96px;
+  --t-display:  128px;
+
+  /* ── TYPOGRAPHY — Tracking ────────── */
+  --tr-tight:   -0.01em;
+  --tr-normal:  0;
+  --tr-wide:    0.15em;
+  --tr-wider:   0.22em;
+  --tr-widest:  0.30em;
+
+  /* ── LAYOUT ───────────────────────── */
+  --maxw:      1280px;
+  --pad-x:     60px;
+  --pad-x-sm:  24px;
+
+  /* ── SPACING (8px base) ───────────── */
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:   12px;
+  --s-4:   16px;
+  --s-5:   24px;
+  --s-6:   32px;
+  --s-7:   48px;
+  --s-8:   64px;
+  --s-8b:  80px;
+  --s-9:   96px;
+  --s-10:  128px;
+  --s-11:  160px;
+
+  /* ── RADII — Square only ──────────── */
+  --r-0:  0;
+  --r-px: 1px;
+
+  /* ── ELEVATION ────────────────────── */
+  --shadow-0:    none;
+  --shadow-1:    0 1px 0 0 var(--border);
+  --shadow-2:    0 24px 60px -20px rgba(0,0,0,0.6);
+  --shadow-gold: 0 0 0 1px var(--gold), 0 0 32px -8px rgba(201,168,76,0.35);
+
+  /* ── MOTION ───────────────────────── */
+  --ease:     cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1:    120ms;
+  --dur-2:    240ms;
+  --dur-3:    480ms;
+  --dur-4:    800ms;
+
+  /* ── A11Y — Focus ring ────────────── */
+  --focus-ring:   0 0 0 2px var(--gold);
+  --focus-offset: 3px;
+  --focus-color:  var(--gold);
+
+  /* ── BREAKPOINTS (reference) ─────── */
+  --bp-sm: 520px;
+  --bp-md: 720px;
+  --bp-lg: 880px;
+  --bp-xl: 1180px;
+
+  /* ── Z-INDEX SCALE ────────────────── */
+  --z-base:            1;
+  --z-grain:           1;
+  --z-nav:             1000;   /* production value — beta-banner sits above at 10001 */
+  --z-overlay:         100;
+  --z-overlay-surface: 101;
+  --z-toast:           200;
+  --z-cursor:          9998;   /* gold ring */
+  --z-cursor-dot:      9999;   /* gold dot */
+
 }
 
+/* ─── STATE COLOR HELPERS ───────────── */
+.sl-state-error { color: var(--accent-error); }
+.sl-state-warn  { color: var(--accent-warn);  }
+.sl-state-ok    { color: var(--accent-ok);    }
+.sl-state-info  { color: var(--accent-info);  }
+.sl-state-error-bg { background: var(--accent-error-bg); }
+.sl-state-warn-bg  { background: var(--accent-warn-bg);  }
+.sl-state-ok-bg    { background: var(--accent-ok-bg);    }
+.sl-state-info-bg  { background: var(--accent-info-bg);  }
+
+/* ─── BASE ──────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
   background: var(--obsidian);
   color: var(--text-primary);
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
   overflow-x: hidden;
   touch-action: manipulation;
   -webkit-tap-highlight-color: rgba(201,168,76,0.15);
 }
 
-@media (pointer: fine) {
-  body { cursor: none; }
-}
-
 /* ─── CUSTOM CURSOR ─────────────────── */
+/* Decorative augmentation only — OS cursor stays visible at all times */
 .cursor-dot {
   width: 6px; height: 6px;
   background: var(--gold); border-radius: 50%;
   position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9999;
+  pointer-events: none; z-index: var(--z-cursor-dot);
   transform: translate(-50%,-50%);
   transition: transform 0.08s ease;
   display: none;
@@ -46,7 +176,7 @@ body {
   border: 1px solid rgba(201,168,76,0.5);
   border-radius: 50%;
   position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9998;
+  pointer-events: none; z-index: var(--z-cursor);
   transform: translate(-50%,-50%);
   transition: transform 0.18s ease, width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
   display: none;
@@ -57,17 +187,23 @@ body {
   .cursor-dot, .cursor-ring { display: block; }
 }
 
+/* Restore system interactive cursors — never hide the OS pointer */
+a, button, [role="button"], [role="link"],
+input[type="submit"], input[type="button"] {
+  cursor: pointer;
+}
+
 /* ─── NOISE TEXTURE ─────────────────── */
 body::before {
   content: '';
   position: fixed; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none; z-index: 1; opacity: 0.4;
+  pointer-events: none; z-index: var(--z-grain); opacity: 0.4;
 }
 
 /* ─── NAV ───────────────────────────── */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-nav);
   display: flex; align-items: center; justify-content: space-between;
   padding: 28px 60px;
   border-bottom: 1px solid transparent;
@@ -88,7 +224,7 @@ nav.scrolled .nav-logo-img { height: 19px; }
   margin: 0 auto; padding: 0 24px;
 }
 .nav-links a {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body);
   font-size: 12px; font-weight: 400; letter-spacing: 0.18em;
   text-transform: uppercase; color: rgba(255,255,255,0.7);
   text-decoration: none; transition: color 0.3s; white-space: nowrap;
@@ -97,7 +233,7 @@ nav.scrolled .nav-logo-img { height: 19px; }
 .nav-links a.active { color: var(--gold); }
 .nav-right { display: flex; align-items: center; gap: 24px; margin-left: auto; }
 .nav-cta {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body);
   font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--obsidian);
   background: var(--gold); padding: 10px 24px;
@@ -122,7 +258,7 @@ section { position: relative; z-index: 2; }
 .eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 12px;
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-body);
   font-size: 11px; font-weight: 400;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--obsidian); background: var(--gold);
@@ -152,11 +288,11 @@ footer {
 .footer-tagline { font-size: 12px; line-height: 1.75; color: var(--text-muted); font-weight: 300; max-width: 280px; }
 .footer-col-title { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
 .footer-location-eyebrow { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
-.footer-location-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: var(--text-primary); margin-bottom: 8px; }
+.footer-location-name { font-family: var(--font-display); font-size: 20px; font-weight: 300; color: var(--text-primary); margin-bottom: 8px; }
 .footer-location-note { font-size: 11px; color: var(--text-muted); font-weight: 300; }
 .footer-cta-block a {
   display: inline-flex; align-items: center; gap: 12px;
-  font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 400;
+  font-family: var(--font-body); font-size: 11px; font-weight: 400;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--obsidian); background: var(--gold);
   padding: 14px 28px; text-decoration: none; transition: background 0.3s;
@@ -180,11 +316,10 @@ footer {
 /* ─── ANIMATIONS ────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ─── SKIP LINK ────────────────────── */
-/* ─── BETA BANNER ──────────────────── */
+/* ─── BETA BANNER + SKIP LINK ────────── */
 .beta-banner {
   display: flex; align-items: center; justify-content: center;
   gap: 16px;
@@ -215,22 +350,48 @@ footer {
 h1, h2, h3 { text-wrap: balance; }
 
 /* ─── FOCUS INDICATORS ──────────────── */
-a:focus-visible, button:focus-visible, input:focus-visible,
-select:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
+/* Gold 2px outline on keyboard focus — never on mouse click */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+}
+
+/* Form fields use the bottom-rule pattern — override to avoid double-painting */
+.sl-field input:focus-visible,
+.sl-field textarea:focus-visible,
+.sl-field select:focus-visible {
+  outline: 0;
+  border-bottom-color: var(--gold);
 }
 
 /* ─── REDUCED MOTION ──────────────── */
 @media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-1: 0ms;
+    --dur-2: 0ms;
+    --dur-3: 0ms;
+    --dur-4: 0ms;
+  }
+
   *, *::before, *::after {
-    animation-duration: 0.01ms !important;
+    animation-duration:        0.001ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration:       0.001ms !important;
+    /* Preserve state-change transitions — opacity/color are not motion */
+    transition-property: opacity, background-color, color, border-color !important;
     scroll-behavior: auto !important;
   }
+
   html { scroll-behavior: auto; }
   .reveal { opacity: 1 !important; transform: none !important; }
+  /* Hide decorative cursor augmentation — OS cursor handles everything */
+  .cursor-dot, .cursor-ring { display: none !important; }
 }
 
 /* ─── HAMBURGER MENU ──────────────── */
@@ -253,10 +414,10 @@ select:focus-visible, textarea:focus-visible {
   transition: transform 0.3s ease;
 }
 .nav-hamburger span::before { top: -7px; }
-.nav-hamburger span::after { top: 7px; }
+.nav-hamburger span::after  { top: 7px; }
 .nav-hamburger[aria-expanded="true"] span { background: transparent; }
 .nav-hamburger[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
-.nav-hamburger[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+.nav-hamburger[aria-expanded="true"] span::after  { top: 0; transform: rotate(-45deg); }
 
 .nav-mobile-menu {
   display: none; position: fixed;
@@ -268,7 +429,7 @@ select:focus-visible, textarea:focus-visible {
 }
 .nav-mobile-menu.open { display: flex; }
 .nav-mobile-menu a {
-  font-family: 'Jost', sans-serif; font-size: 20px;
+  font-family: var(--font-body); font-size: 20px;
   font-weight: 400; letter-spacing: 0.12em;
   color: var(--text-primary); text-decoration: none;
   padding: 12px 24px; min-height: 48px;
@@ -277,11 +438,8 @@ select:focus-visible, textarea:focus-visible {
 }
 .nav-mobile-menu a:hover { color: var(--gold); }
 .nav-mobile-menu .nav-mobile-lang {
-  margin-top: 16px;
-  font-size: 13px;
-  color: var(--gold-dim);
-  letter-spacing: 0.15em;
-  padding-top: 24px;
+  margin-top: 16px; font-size: 13px; color: var(--gold-dim);
+  letter-spacing: 0.15em; padding-top: 24px;
   border-top: 1px solid rgba(201,168,76,0.15);
 }
 
@@ -307,4 +465,278 @@ select:focus-visible, textarea:focus-visible {
   .footer-inner { padding: 0 32px; }
   .footer-links a { min-height: 48px; display: flex; align-items: center; padding: 12px 8px; }
   .footer-cta-block a { min-height: 48px; display: inline-flex; align-items: center; }
+}
+
+/* ══════════════════════════════════════
+   FORM FIELDS — sl-field system (v2)
+   Bottom-rule pattern. Labels above,
+   helper text below, error replaces helper.
+   Use .sl-field wrapper on each field group.
+   ══════════════════════════════════════ */
+
+.sl-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.sl-field label {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Required marker — small gold dot. Never the word "required". */
+.sl-field.is-required label::after {
+  content: "";
+  display: inline-block;
+  width: 4px; height: 4px;
+  background: var(--gold);
+  margin-left: 2px;
+}
+
+.sl-field input,
+.sl-field textarea,
+.sl-field select {
+  background: transparent;
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 10px 0 12px;
+  border: 0;
+  border-bottom: 1px solid var(--border-strong);
+  outline: 0;
+  resize: vertical;
+  transition: border-color var(--dur-1) var(--ease),
+              color       var(--dur-1) var(--ease);
+  width: 100%;
+}
+
+.sl-field textarea { min-height: 96px; }
+
+.sl-field input::placeholder,
+.sl-field textarea::placeholder {
+  color: var(--fg-muted);
+  opacity: 1;
+}
+
+/* ── States ──────────────────────────── */
+.sl-field input:hover:not(:disabled):not(:focus),
+.sl-field textarea:hover:not(:disabled):not(:focus),
+.sl-field select:hover:not(:disabled):not(:focus) {
+  border-bottom-color: var(--gold-dim);
+}
+
+.sl-field input:focus,
+.sl-field textarea:focus,
+.sl-field select:focus {
+  border-bottom-color: var(--gold);
+}
+
+/* Filled — brighter rule signals "this has content" */
+.sl-field input:not(:placeholder-shown),
+.sl-field textarea:not(:placeholder-shown) {
+  border-bottom-color: var(--border-strong);
+}
+
+.sl-field input:disabled,
+.sl-field textarea:disabled,
+.sl-field select:disabled {
+  color: var(--fg-muted);
+  border-bottom-color: var(--rule-2);
+  cursor: not-allowed;
+}
+
+/* Error state — add .is-error to .sl-field wrapper, or use aria-invalid */
+.sl-field.is-error input,
+.sl-field.is-error textarea,
+.sl-field.is-error select,
+.sl-field input[aria-invalid="true"],
+.sl-field textarea[aria-invalid="true"],
+.sl-field select[aria-invalid="true"] {
+  border-bottom-color: var(--accent-error);
+}
+.sl-field.is-error label { color: var(--accent-error); }
+
+/* ── Helper / error text ────────────── */
+.sl-field .sl-helper,
+.sl-field .sl-error {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+  margin-top: 4px;
+}
+.sl-field .sl-error { color: var(--accent-error); display: none; }
+.sl-field.is-error .sl-helper { display: none; }
+.sl-field.is-error .sl-error  { display: block; }
+
+/* ── Checkbox / Radio ───────────────── */
+.sl-check,
+.sl-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--fg);
+}
+
+.sl-check input,
+.sl-radio input {
+  appearance: none;
+  width: 14px; height: 14px;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  transition: border-color var(--dur-1) var(--ease),
+              background   var(--dur-1) var(--ease);
+  flex: 0 0 14px;
+}
+
+.sl-radio input { border-radius: 50%; }
+
+.sl-check input:hover,
+.sl-radio input:hover { border-color: var(--gold); }
+
+.sl-check input:checked {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.sl-check input:checked::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' fill='none' stroke='%230C0C0E' stroke-width='1.5' stroke-linecap='square'><path d='M2 5l2 2 4-4'/></svg>");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sl-radio input:checked {
+  background: radial-gradient(circle, var(--gold) 0 4px, transparent 5px), transparent;
+  border-color: var(--gold);
+}
+
+.sl-check input:disabled,
+.sl-radio input:disabled { border-color: var(--rule-2); cursor: not-allowed; }
+.sl-check input:disabled + span,
+.sl-radio  input:disabled + span,
+.sl-check:has(input:disabled),
+.sl-radio:has(input:disabled) { color: var(--fg-muted); cursor: not-allowed; }
+
+/* ── Select — custom caret ──────────── */
+.sl-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' fill='none' stroke='%23C9A84C' stroke-width='1' stroke-linecap='square'><path d='M1 1l4 4 4-4'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  padding-right: 24px;
+}
+
+/* ══════════════════════════════════════
+   OVERLAY — sl-modal (native <dialog>)
+   ══════════════════════════════════════ */
+
+.sl-modal {
+  /* Reset browser dialog defaults */
+  border: 1px solid var(--border);
+  padding: 0;
+  background: var(--surface);
+  box-shadow: var(--shadow-2);
+  color: var(--fg);
+  /* Centred via auto margins (modern browsers honour this for dialog) */
+  margin: auto;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: visible;
+  /* Positioning context for .sl-overlay-close */
+  position: relative;
+  /* Enter animation */
+  animation: sl-modal-enter var(--dur-2) var(--ease-out) both;
+}
+
+.sl-modal-body {
+  /* Positioning context for .lb-nav buttons in lightbox mode */
+  position: relative;
+}
+
+@keyframes sl-modal-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.sl-modal::backdrop {
+  background: rgba(12,12,14,0.88);
+  backdrop-filter: blur(4px);
+  /* ::backdrop cannot inherit --dur vars, so hardcode matches --dur-2 */
+  animation: sl-backdrop-enter 240ms var(--ease-out) both;
+}
+
+@keyframes sl-backdrop-enter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Image mode ──────────────────────── */
+.sl-modal[data-mode="image"] {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.sl-modal[data-mode="image"] .sl-modal-body {
+  width: min(90vw, 1200px);
+  height: min(90vh, 800px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.sl-modal[data-mode="image"] img {
+  flex: 1;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.sl-modal[data-mode="image"] .sl-overlay-close {
+  position: absolute;
+  top: var(--s-2); right: var(--s-2);
+  background: rgba(12,12,14,0.7);
+}
+
+/* ── Content mode ────────────────────── */
+.sl-modal[data-mode="content"] {
+  width: min(680px, 90vw);
+  max-height: 85vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Lightbox mode (collection — image + detail panel) ── */
+.sl-modal[data-mode="lightbox"] {
+  width: min(1100px, 96vw);
+  max-height: 92vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.sl-modal[data-mode="lightbox"] .sl-modal-body {
+  flex: 1;
+  overflow: hidden;
+  min-height: 0; /* required for flex children to scroll correctly */
 }
