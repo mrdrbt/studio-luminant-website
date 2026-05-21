@@ -131,7 +131,11 @@ const SLModal = (() => {
 
   function close() {
     if (!dialog || !dialog.open) return;
-    dialog.close(); // cleanup handled by 'close' event listener in _init()
+    dialog.close();
+    // Synchronous cleanup — also in 'close' event listener for native ESC path
+    document.body.style.overflow    = '';
+    document.body.style.touchAction = '';
+    _trigger?.focus();
   }
 
   return { open, close };
