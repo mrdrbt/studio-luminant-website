@@ -367,7 +367,7 @@
   @media (max-width: 720px) {
     .lb-layout { flex-direction: column; }
     .lb-details { flex: 0 0 auto; padding: 24px 20px; border-left: 0; border-top: 1px solid var(--border); }
-    .lb-image { flex: 0 0 50vh; }
+    .lb-image { flex: 0 0 50vh; overflow: auto; }
     .lb-nav { top: 25%; }
   }
 
@@ -752,30 +752,30 @@ function buildLightboxHtml(p) {
   const mats = p.materials.length
     ? p.materials.map(m => '<span class="lb-mat-badge">' + (matMap[m] || m) + '</span>').join('')
     : '';
-  const viewToggleHtml = p.tileSvg
+  const tilingHtml = p.tileSvg
     ? '<div class="lb-view-toggle" id="lb-view-toggle">' +
         '<button class="lb-view-btn active" data-view="photo">Photo</button>' +
         '<button class="lb-view-btn" data-view="tiling">Tiling Preview</button>' +
+      '</div>' +
+      '<div class="lb-tiling-wrap" id="lb-tiling-wrap">' +
+        '<div class="lb-tiling-controls">' +
+          '<button class="lb-tiling-pill active" data-arr="random">Random</button>' +
+          '<button class="lb-tiling-pill" data-arr="diagonal">Diagonal</button>' +
+          '<button class="lb-tiling-pill" data-arr="spiral">Spiral</button>' +
+          '<button class="lb-tiling-pill" data-arr="radial">Radial</button>' +
+          '<label class="lb-grid-label"><input type="range" id="lb-grid-size" class="lb-grid-slider" min="4" max="16" value="' + tilingGrid + '"><span id="lb-grid-label">' + tilingGrid + '×' + tilingGrid + '</span></label>' +
+        '</div>' +
+        '<div class="lb-tiling-svg-wrap"><svg id="lb-tiling-svg" xmlns="http://www.w3.org/2000/svg"></svg></div>' +
+        '<div class="lb-tiling-hint">Each tile rotated 0°/90°/180°/270° — click Random to regenerate</div>' +
       '</div>'
     : '';
   return (
     '<div class="lb-layout">' +
       '<div class="lb-image">' +
-        viewToggleHtml +
         '<div class="lb-photo-wrap">' +
           pictureTag(p.image, p.name + ' — ' + p.style + ' pattern', '60vw', { cls: 'lb-img-el' }) +
         '</div>' +
-        '<div class="lb-tiling-wrap" id="lb-tiling-wrap">' +
-          '<div class="lb-tiling-controls">' +
-            '<button class="lb-tiling-pill active" data-arr="random">Random</button>' +
-            '<button class="lb-tiling-pill" data-arr="diagonal">Diagonal</button>' +
-            '<button class="lb-tiling-pill" data-arr="spiral">Spiral</button>' +
-            '<button class="lb-tiling-pill" data-arr="radial">Radial</button>' +
-            '<label class="lb-grid-label"><input type="range" id="lb-grid-size" class="lb-grid-slider" min="4" max="16" value="' + tilingGrid + '"><span id="lb-grid-label">' + tilingGrid + '×' + tilingGrid + '</span></label>' +
-          '</div>' +
-          '<div class="lb-tiling-svg-wrap"><svg id="lb-tiling-svg" xmlns="http://www.w3.org/2000/svg"></svg></div>' +
-          '<div class="lb-tiling-hint">Each tile rotated 0°/90°/180°/270° — click Random to regenerate</div>' +
-        '</div>' +
+        tilingHtml +
       '</div>' +
       '<div class="lb-details">' +
         '<div class="lb-cat">' + (p.style.charAt(0).toUpperCase() + p.style.slice(1)) + '</div>' +
@@ -800,6 +800,7 @@ function openLightbox(patternIndex) {
   const p = patterns[patternIndex];
   currentTileSvg = p.tileSvg || null;
   tilingArrangement = 'random';
+  tilingGrid = 8;
   SLModal.open({ mode: 'lightbox', html: buildLightboxHtml(p), title: p.name });
   const mb = document.querySelector('.sl-modal-body');
   if (!mb) return;
