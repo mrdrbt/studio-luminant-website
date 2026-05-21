@@ -740,3 +740,63 @@ summary:focus-visible,
   overflow: hidden;
   min-height: 0; /* required for flex children to scroll correctly */
 }
+
+/* ══════════════════════════════════════
+   OVERLAY — sl-drawer (<aside>)
+   ══════════════════════════════════════ */
+
+.sl-drawer-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(12,12,14,0.60);
+  z-index: var(--z-overlay);
+  opacity: 0; pointer-events: none;
+  transition: opacity var(--dur-2) var(--ease-out);
+}
+.sl-drawer-backdrop.is-open {
+  opacity: 1; pointer-events: auto;
+}
+
+.sl-drawer {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: min(480px, 90vw);
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: -24px 0 60px -20px rgba(0,0,0,0.7);
+  z-index: var(--z-overlay-surface);
+  display: flex; flex-direction: column;
+  transform: translateX(100%);
+  transition: transform var(--dur-3) var(--ease-out);
+  overflow-y: auto;
+}
+.sl-drawer.is-open {
+  transform: translateX(0);
+}
+
+.sl-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--s-6) var(--s-5);
+}
+
+/* ══════════════════════════════════════
+   OVERLAY — shared close button
+   ══════════════════════════════════════ */
+
+.sl-overlay-close {
+  position: absolute; top: var(--s-4); right: var(--s-4);
+  width: 32px; height: 32px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--fg-2);
+  font-size: var(--t-label);
+  letter-spacing: var(--tr-wider);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color var(--dur-1) var(--ease),
+              color       var(--dur-1) var(--ease);
+  flex-shrink: 0;
+}
+.sl-overlay-close:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
