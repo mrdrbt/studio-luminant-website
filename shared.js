@@ -147,6 +147,7 @@ const SLDrawer = (() => {
     aside    = document.querySelector('.sl-drawer');
     if (!aside) return;
     backdrop = document.querySelector('.sl-drawer-backdrop');
+    if (!backdrop) { aside = null; return; }
     body     = aside.querySelector('.sl-drawer-body');
     backdrop.addEventListener('click', close);
     aside.querySelector('.sl-overlay-close').addEventListener('click', close);
@@ -173,7 +174,7 @@ const SLDrawer = (() => {
   function open({ el, html, label = 'Panel' } = {}) {
     if (!aside) _init();
     if (!aside) return;
-    _trigger = document.activeElement;
+    if (!aside.classList.contains('is-open')) _trigger = document.activeElement;
     body.innerHTML = '';
     if (typeof html === 'string') {
       body.innerHTML = html;
@@ -186,7 +187,7 @@ const SLDrawer = (() => {
     document.body.style.touchAction = 'none';
     aside.classList.add('is-open');
     backdrop.classList.add('is-open');
-    aside.querySelector('.sl-overlay-close').focus();
+    aside.querySelector('.sl-overlay-close')?.focus();
     _trap = _makeTrap(aside);
     document.addEventListener('keydown', _trap);
   }
