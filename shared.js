@@ -133,3 +133,74 @@ const SLModal = (() => {
 
   return { open, close };
 })();
+
+// ─── SLDrawer ────────────────────────────────────────────────────────────────
+// SLDrawer.open({ el, html, label })
+//   el    : DOM node to inject (cloned)
+//   html  : HTML string alternative to el
+//   label : aria-label for the <aside> (default: 'Panel')
+// SLDrawer.close()
+const SLDrawer = (() => {
+  let aside, backdrop, body, _trap, _trigger;
+
+  function _init() {
+    aside    = document.querySelector('.sl-drawer');
+    if (!aside) return;
+    backdrop = document.querySelector('.sl-drawer-backdrop');
+    body     = aside.querySelector('.sl-drawer-body');
+    backdrop.addEventListener('click', close);
+    aside.querySelector('.sl-overlay-close').addEventListener('click', close);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && aside.classList.contains('is-open')) close();
+    });
+  }
+
+  function _makeTrap(el) {
+    const sel = 'a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"]),input,select,textarea';
+    return e => {
+      if (e.key !== 'Tab') return;
+      const nodes = [...el.querySelectorAll(sel)];
+      if (!nodes.length) return;
+      const first = nodes[0], last = nodes[nodes.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    };
+  }
+
+  function open({ el, html, label = 'Panel' } = {}) {
+    if (!aside) _init();
+    if (!aside) return;
+    _trigger = document.activeElement;
+    body.innerHTML = '';
+    if (typeof html === 'string') {
+      body.innerHTML = html;
+    } else if (el) {
+      body.appendChild(el.cloneNode(true));
+    }
+    aside.setAttribute('aria-label', label);
+    aside.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow    = 'hidden';
+    document.body.style.touchAction = 'none';
+    aside.classList.add('is-open');
+    backdrop.classList.add('is-open');
+    aside.querySelector('.sl-overlay-close').focus();
+    _trap = _makeTrap(aside);
+    document.addEventListener('keydown', _trap);
+  }
+
+  function close() {
+    if (!aside || !aside.classList.contains('is-open')) return;
+    aside.classList.remove('is-open');
+    backdrop.classList.remove('is-open');
+    aside.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow    = '';
+    document.body.style.touchAction = '';
+    document.removeEventListener('keydown', _trap);
+    _trigger?.focus();
+  }
+
+  return { open, close };
+})();
