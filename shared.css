@@ -129,8 +129,8 @@
   --z-base:            1;
   --z-grain:           1;
   --z-nav:             1000;   /* production value — beta-banner sits above at 10001 */
-  --z-overlay:         100;
-  --z-overlay-surface: 101;
+  --z-overlay:         1100;
+  --z-overlay-surface: 1101;
   --z-toast:           200;
   --z-cursor:          9998;   /* gold ring */
   --z-cursor-dot:      9999;   /* gold dot */
@@ -766,7 +766,6 @@ summary:focus-visible,
   display: flex; flex-direction: column;
   transform: translateX(100%);
   transition: transform var(--dur-3) var(--ease-out);
-  overflow-y: auto;
 }
 .sl-drawer.is-open {
   transform: translateX(0);
