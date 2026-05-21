@@ -624,6 +624,7 @@ function openLightbox(patternIndex) {
   const p = patterns[patternIndex];
   SLModal.open({ mode: 'lightbox', html: buildLightboxHtml(p), title: p.name });
   const mb = document.querySelector('.sl-modal-body');
+  if (!mb) return;
   mb.querySelector('.lb-prev').addEventListener('click', () => navigateLightbox(-1));
   mb.querySelector('.lb-next').addEventListener('click', () => navigateLightbox(1));
 }
@@ -632,6 +633,7 @@ function navigateLightbox(dir) {
   const visible = getVisibleIndices();
   if (!visible.length) return;
   const pos = visible.indexOf(currentIndex);
+  if (pos === -1) return;
   const next = (pos + dir + visible.length) % visible.length;
   openLightbox(visible[next]);
 }

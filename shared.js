@@ -97,6 +97,12 @@ const SLModal = (() => {
     // Backdrop click (click on dialog itself, not its children)
     dialog.addEventListener('click', e => { if (e.target === dialog) close(); });
     dialog.querySelector('.sl-overlay-close').addEventListener('click', close);
+    // 'close' event fires for native ESC too — ensures scroll lock and focus always clean up
+    dialog.addEventListener('close', () => {
+      document.body.style.overflow    = '';
+      document.body.style.touchAction = '';
+      _trigger?.focus();
+    });
   }
 
   function open({ mode = 'content', src, alt, title, el, html } = {}) {
@@ -125,10 +131,7 @@ const SLModal = (() => {
 
   function close() {
     if (!dialog || !dialog.open) return;
-    dialog.close();
-    document.body.style.overflow    = '';
-    document.body.style.touchAction = '';
-    _trigger?.focus();
+    dialog.close(); // cleanup handled by 'close' event listener in _init()
   }
 
   return { open, close };
