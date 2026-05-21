@@ -92,6 +92,7 @@ const SLModal = (() => {
 
   function _init() {
     dialog = document.querySelector('.sl-modal');
+    if (!dialog) return;
     body   = dialog.querySelector('.sl-modal-body');
     // Backdrop click (click on dialog itself, not its children)
     dialog.addEventListener('click', e => { if (e.target === dialog) close(); });
@@ -100,6 +101,7 @@ const SLModal = (() => {
 
   function open({ mode = 'content', src, alt, title, el, html } = {}) {
     if (!dialog) _init();
+    if (!dialog) return;
     // Only capture trigger on first open — not on navigation re-opens
     if (!dialog.open) _trigger = document.activeElement;
     dialog.dataset.mode = mode;
@@ -122,7 +124,7 @@ const SLModal = (() => {
   }
 
   function close() {
-    if (!dialog) return;
+    if (!dialog || !dialog.open) return;
     dialog.close();
     document.body.style.overflow    = '';
     document.body.style.touchAction = '';
