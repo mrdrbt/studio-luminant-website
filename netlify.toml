@@ -143,7 +143,12 @@
 
 [[redirects]]
   from = "/tr/kaynaklar-yangin-sinifi.htm"
-  to = "/kaynaklar-yangin-sinifi.htm"
+  to = "/kaynaklar.htm"
+  status = 301
+
+[[redirects]]
+  from = "/kaynaklar-yangin-sinifi.htm"
+  to = "/kaynaklar.htm"
   status = 301
 
 [[redirects]]
@@ -204,7 +209,12 @@
 
 [[redirects]]
   from = "/resources-fire-ratings.htm"
-  to = "/en/resources-fire-ratings.htm"
+  to = "/en/resources.htm"
+  status = 301
+
+[[redirects]]
+  from = "/en/resources-fire-ratings.htm"
+  to = "/en/resources.htm"
   status = 301
 
 [[redirects]]
