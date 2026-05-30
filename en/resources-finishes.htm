@@ -219,11 +219,43 @@
     font-weight: 300; margin-bottom: 32px;
   }
 
+  /* ─── SAMPLE BOX SHOWCASE ────────────── */
+  .sample-box { margin: 48px 0 44px; }
+  .sample-box figure { margin: 0; }
+  .sample-box picture, .sample-box img {
+    display: block; width: 100%; height: auto;
+    border: 1px solid var(--border);
+  }
+  .sb-figcap {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 14px; color: var(--text-muted);
+    text-align: center; margin-top: 14px;
+  }
+  .sb-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px; margin-top: 28px;
+  }
+  .sb-card { background: var(--surface); padding: 24px 26px; }
+  .sb-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px; font-weight: 300;
+    color: var(--text-primary); margin-bottom: 5px;
+  }
+  .sb-mat {
+    font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 11px;
+  }
+  .sb-desc {
+    font-size: 13px; font-weight: 300; line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
   /* ─── RESPONSIVE ─────────────────────── */
   @media (max-width: 768px) {
     .article-wrapper { padding: 0 24px; }
     .stats-row { grid-template-columns: 1fr; }
     .compat-grid { grid-template-columns: 1fr; }
+    .sb-grid { grid-template-columns: 1fr; }
     .finish-table { font-size: 13px; }
     .finish-table thead th, .finish-table tbody td { padding: 12px; }
   }
@@ -274,6 +306,45 @@
     <p>
       This means the finish specification is not an afterthought. It is a design decision that shapes how the geometry is perceived, and it should be considered alongside the pattern selection, not after it.
     </p>
+
+    <!-- SAMPLE BOX SHOWCASE -->
+    <h2>Four Finishes, <em>In Hand</em></h2>
+    <p>
+      Our finish sample box puts four surfaces — across two materials and two ways of carrying colour — in front of you at once. It is the fastest way to understand how the same relief reads in metal, in natural matte, and in through-body colour before you commit a single panel to specification.
+    </p>
+
+    <section class="sample-box">
+      <figure>
+        <picture>
+          <source type="image/webp" srcset="../images/studio-luminant-finish-sample-box-open-800w.webp 800w, ../images/studio-luminant-finish-sample-box-open-1600w.webp 1600w" sizes="(max-width: 820px) 100vw, 820px">
+          <img src="../images/studio-luminant-finish-sample-box-open.jpg" alt="Studio Luminant finish sample box, open — four architectural relief finishes" width="1600" height="1073" loading="lazy">
+        </picture>
+        <figcaption class="sb-figcap">The Studio Luminant finish sample box — four finishes, four material systems.</figcaption>
+      </figure>
+
+      <div class="sb-grid">
+        <div class="sb-card">
+          <div class="sb-name">Hammered</div>
+          <div class="sb-mat">Lumina PMAG™ · Metallic finish</div>
+          <p class="sb-desc">A beaten-metal relief in antique gold — cast, not metal. The metallic sits over a ceramic-smooth body, so the relief stays crisp and the weight stays low.</p>
+        </div>
+        <div class="sb-card">
+          <div class="sb-name">Basketweave</div>
+          <div class="sb-mat">Lumina PUCOMP™ · Through-body colour</div>
+          <p class="sb-desc">A woven relief where colour runs through the body, not over it — an edge chip never reveals a different substrate. The deepest texture resolution in the range.</p>
+        </div>
+        <div class="sb-card">
+          <div class="sb-name">Pebble</div>
+          <div class="sb-mat">Lumina PMAG™ · Natural, matte</div>
+          <p class="sb-desc">The material in its own warm off-white under a clear, low-sheen matte. A fine relief that catches raking light and stays quiet under flat light.</p>
+        </div>
+        <div class="sb-card">
+          <div class="sb-name">Reed</div>
+          <div class="sb-mat">Cold-cast metal · Sealed patina</div>
+          <p class="sb-desc">Real cold-cast metal, buffed back to a metal surface and workshop-sealed to a fixed tone. Linear, architectural, and the most restrained of the four.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- FINISH TABLE -->
     <table class="finish-table">
@@ -346,7 +417,7 @@
       <div class="compat-card">
         <div class="compat-card-title">Lumina PUCOMP™</div>
         <div class="compat-card-list">
-          <span class="compat-yes">&#10003;</span> 2K polyurethane paint systems<br>
+          <span class="compat-yes">&#10003;</span> Artisan finishes<br>
           <span class="compat-yes">&#10003;</span> Acrylic paint systems<br>
           <span class="compat-yes">&#10003;</span> Cold-cast metal finishes<br>
           <span class="compat-yes">&#10003;</span> Textured coatings<br>
@@ -357,10 +428,10 @@
     </div>
 
     <p>
-      <strong>PMAG</strong> accepts virtually all interior paint systems. The ceramic-smooth surface produced by alpha gypsum casting provides an excellent bonding substrate without the need for heavy priming. For standard RAL colours, a single primer coat followed by two topcoats is sufficient. Cold-cast metal finishes bond directly to the gypsum surface.
+      <strong>PMAG</strong> accepts virtually all interior paint systems. The ceramic-smooth surface produced by alpha gypsum casting provides an excellent bonding substrate without the need for heavy priming. For standard RAL colours, a single primer coat followed by two finish coats is sufficient. Cold-cast metal finishes bond directly to the gypsum surface.
     </p>
     <p>
-      <strong>PUCOMP</strong> is finished in the mould or immediately post-demoulding. For exterior applications, a UV-stable 2K polyurethane system is standard. For interior applications, the same acrylic systems used on PMAG are compatible. The polyurethane substrate is non-porous, so adhesion-promoting primers are used where required.
+      <strong>PUCOMP</strong> is finished in the mould or immediately post-demoulding. For exterior applications, a UV-stable artisan finish system is standard. For interior applications, the same acrylic systems used on PMAG are compatible. The composite substrate is non-porous, so adhesion-promoting primers are used where required.
     </p>
 
     <!-- STATS -->
