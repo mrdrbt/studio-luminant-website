@@ -696,6 +696,170 @@
   @media (max-width: 600px) {
     .expertise-skills { grid-template-columns: 1fr 1fr; }
   }
+
+  /* ─── FINAL CTA ─────────────────────── */
+  #start { padding: 140px 0; }
+  .start-cta {
+    max-width: 720px; margin: 0 auto; text-align: center;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 80px 0;
+  }
+  .start-cta .eyebrow { margin-bottom: 28px; }
+  .start-headline {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 300; line-height: 1.12;
+    color: var(--text-primary); margin-bottom: 26px;
+  }
+  .start-headline em { color: var(--gold); font-style: italic; }
+  .start-sub {
+    font-size: 15px; line-height: 1.8; font-weight: 300;
+    color: var(--text-secondary);
+    max-width: 540px; margin: 0 auto 40px;
+  }
+  .start-ctas {
+    display: flex; gap: 28px;
+    justify-content: center; align-items: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 600px) {
+    #start { padding: 90px 0; }
+    .start-cta { padding: 60px 0; }
+    .start-ctas { flex-direction: column; gap: 20px; }
+  }
+
+  /* ─── PROOF STRIP ───────────────────── */
+  #proof {
+    background: var(--obsidian);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .proof-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    list-style: none; margin: 0; padding: 0;
+  }
+  .proof-strip li {
+    padding: 32px 28px;
+    font-size: 10px; letter-spacing: 0.16em;
+    text-transform: uppercase; font-weight: 400;
+    color: var(--text-secondary); text-align: center;
+    line-height: 1.7;
+    display: flex; align-items: center; justify-content: center;
+    border-left: 1px solid var(--border);
+  }
+  .proof-strip li:first-child { border-left: none; }
+  .proof-strip .proof-mark { color: var(--gold); margin-right: 6px; }
+  @media (max-width: 760px) {
+    .proof-strip { grid-template-columns: 1fr 1fr; }
+    .proof-strip li:nth-child(odd) { border-left: none; }
+    .proof-strip li:nth-child(n+3) { border-top: 1px solid var(--border); }
+  }
+  @media (max-width: 440px) {
+    .proof-strip { grid-template-columns: 1fr; }
+    .proof-strip li { border-left: none; border-top: 1px solid var(--border); }
+    .proof-strip li:first-child { border-top: none; }
+  }
+
+  /* ─── WHO IT'S FOR ──────────────────── */
+  #audiences {
+    padding: 160px 0;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+  }
+  .audiences-header { max-width: 720px; margin-bottom: 72px; }
+  .audiences-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 4vw, 64px);
+    font-weight: 300; line-height: 1.05;
+  }
+  .audiences-headline em { font-style: italic; color: var(--gold); }
+  .audiences-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+  }
+  .audience-card {
+    background: var(--surface); padding: 52px 44px;
+    position: relative; overflow: hidden;
+    transition: background 0.4s;
+  }
+  .audience-card:hover { background: var(--surface-2); }
+  .audience-card::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+  .audience-card:hover::after { transform: scaleX(1); }
+  .audience-num {
+    font-size: 11px; letter-spacing: 0.2em;
+    color: var(--gold); margin-bottom: 26px;
+  }
+  .audience-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 300;
+    color: var(--text-primary); margin-bottom: 16px;
+  }
+  .audience-desc {
+    font-size: 14px; line-height: 1.85;
+    color: var(--text-secondary); font-weight: 300;
+  }
+  @media (max-width: 900px) {
+    .audiences-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    #audiences { padding: 100px 0; }
+    .audience-card { padding: 44px 32px; }
+  }
+
+  /* ─── FAQ ───────────────────────────── */
+  #faq {
+    padding: 140px 0;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+  }
+  .faq-header { max-width: 720px; margin-bottom: 56px; }
+  .faq-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 3.6vw, 56px);
+    font-weight: 300; line-height: 1.06;
+  }
+  .faq-headline em { font-style: italic; color: var(--gold); }
+  .faq-list { max-width: 860px; }
+  .faq-item { border-top: 1px solid var(--border); }
+  .faq-item:last-child { border-bottom: 1px solid var(--border); }
+  .faq-item summary {
+    list-style: none; cursor: pointer;
+    padding: 28px 52px 28px 0; position: relative;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 300;
+    color: var(--text-primary); transition: color 0.3s;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover { color: var(--gold); }
+  .faq-item summary::after {
+    content: '+'; position: absolute; right: 6px; top: 24px;
+    font-size: 22px; line-height: 1; color: var(--gold);
+  }
+  .faq-item[open] summary::after { content: '–'; }
+  .faq-answer { padding: 0 52px 32px 0; }
+  .faq-answer p {
+    font-size: 14px; line-height: 1.85;
+    color: var(--text-secondary); font-weight: 300;
+    margin: 0 0 16px;
+  }
+  .faq-link {
+    display: inline-block;
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3px; transition: border-color 0.3s;
+  }
+  .faq-link:hover { border-color: var(--gold); }
+  @media (max-width: 600px) {
+    #faq { padding: 100px 0; }
+    .faq-item summary { font-size: 19px; }
+  }
 </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
@@ -763,6 +927,17 @@
   </div>
 </section>
 
+<!-- PROOF STRIP -->
+<section id="proof">
+  <div class="section-inner">
+    <ul class="proof-strip">
+      <li>BIM Objeleri ve Teknik Veri Sayfaları Hazır</li>
+      <li>Sakarya'da Tasarlanır ve Üretilir</li>
+      <li>3 × 1,5 m'ye Kadar Tek Parça Panel</li>
+    </ul>
+  </div>
+</section>
+
 <!-- STRATEGY -->
 <section id="strategy">
   <div class="section-inner">
@@ -773,7 +948,7 @@
           Tasarım Özgürlüğü,<br><em>Sıfır Şartname Riski.</em>
         </h2>
         <p class="strategy-body reveal">
-          Özel rölyef paneller, özel sorunlar anlamına gelmemeli. Geleneksel üreticiler sizi tasarım tutkusu ile proje kesinliği arasında tercih yapmaya zorlar — karmaşık geometriler uzun teslim süreleri, belirsiz yangın uyumluluğu ve çok geç kalana kadar BIM verisi olmaması demektir.
+          Özel rölyef paneller, özel sorunlar anlamına gelmemeli. Geleneksel üreticiler sizi tasarım tutkusu ile proje kesinliği arasında tercih yapmaya zorlar — karmaşık geometriler uzun teslim süreleri ve çok geç kalana kadar BIM verisi olmaması demektir.
         </p>
         <p class="strategy-body reveal">
           Biz bu ödünleşimi ortadan kaldırıyoruz. Bir eskiz, referans görsel veya konsept brief gönderin. Günler içinde 3D model, haftalar içinde fiziksel numune ve şartname paketiniz için hazır BIM dosyalarıyla birlikte spesifikasyona uygun paneller alacaksınız.
@@ -783,7 +958,7 @@
             <span class="feature-num">01</span>
             <div>
               <div class="feature-title">İlk Günden Şartnameye Hazır</div>
-              <div class="feature-desc">A1 yangın sınıfı (EN 13501-1), BIM objeleri dahil, talep üzerine teknik veri sayfaları. Son dakika uyumluluk sürprizleri yok.</div>
+              <div class="feature-desc">BIM objeleri dahil, talep üzerine teknik veri sayfaları. Son dakika uyumluluk sürprizleri yok.</div>
             </div>
           </div>
           <div class="strategy-feature">
@@ -1000,7 +1175,7 @@
                   images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp 1200w"
                   sizes="(max-width: 1024px) 100vw, 50vw">
               <img src="images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png"
-                   alt="Lumina PMAG polymer modified alpha gypsum relief wall panel — A1 fire resistance, moisture resistant, ceramic-like surface finish" class="material-img" width="1200" height="1200"
+                   alt="Lumina PMAG polymer modified alpha gypsum relief wall panel — moisture resistant, ceramic-like surface finish" class="material-img" width="1200" height="1200"
                    loading="lazy" decoding="async">
             </picture>
         <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1011,7 +1186,6 @@
         <div class="material-title">Lumina PMAG™</div>
         <div class="material-subtitle">Polimer Modifiye Alfa Alçı</div>
         <ul class="material-bullets">
-          <li>A1 Yangın Performansı*</li>
           <li>Neme Dayanıklı</li>
           <li>Seramik Benzeri Pürüzsüz Yüzey</li>
           <li>Büyük Ölçekli Kaplamalar İçin İdeal</li>
@@ -1025,7 +1199,7 @@
                   images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.webp 1376w"
                   sizes="(max-width: 1024px) 100vw, 50vw">
               <img src="images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg"
-                   alt="Lumina PUCOMP polyurethane composite architectural relief panel — exterior and wet-area rated, complex spatial geometry, luxury lounge installation" class="material-img" width="1376" height="768"
+                   alt="Lumina PUCOMP architectural relief panel — exterior and wet-area rated, complex spatial geometry, luxury lounge installation" class="material-img" width="1376" height="768"
                    loading="lazy" decoding="async">
             </picture>
         <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1034,11 +1208,259 @@
           <circle cx="20" cy="20" r="4" fill="#C9A84C" opacity="0.3"></circle>
         </svg>
         <div class="material-title">Lumina PUCOMP™</div>
-        <div class="material-subtitle">Poliüretan Kompozit</div>
+        <div class="material-subtitle">Eğriler ve Hafif Uygulamalar İçin</div>
         <p class="material-desc">Yüksek performanslı, hafif dayanıklılık ve karmaşık mekansal geometriler için özel olarak formüle edilmiş malzeme. Dış cephe uygulamaları ve ıslak alanlar için tasarlanmıştır.</p>
       </div>
     </div>
   </div>
+</section>
+
+<!-- INTERACTIVE SAMPLE BOX -->
+<section id="sample-box" aria-labelledby="sbx-title">
+  <style>
+  #sample-box{background:var(--obsidian);border-top:1px solid var(--border);padding:var(--s-10) 0;position:relative;z-index:2;}
+  #sample-box .sbx-head{max-width:720px;margin:0 auto var(--s-7);text-align:center;}
+  #sample-box .sbx-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.02;color:var(--text-primary);margin:.3em 0 .5em;}
+  #sample-box .sbx-title em{font-style:italic;color:var(--gold);}
+  #sample-box .sbx-intro{color:var(--text-secondary);font-size:clamp(1rem,1.6vw,1.12rem);line-height:1.7;}
+
+  #sample-box .sbx-stage{max-width:920px;margin:0 auto;perspective:1400px;}
+  #sample-box .sbx-box{position:relative;display:block;transform-style:preserve-3d;transition:transform .5s var(--ease-out);will-change:transform;}
+  #sample-box .sbx-open,#sample-box .sbx-closed{display:block;margin:0;}
+  #sample-box .sbx-open img{display:block;width:100%;height:auto;border:1px solid var(--border);}
+  #sample-box .sbx-closed{position:absolute;inset:0;}
+  #sample-box .sbx-closed img{display:block;width:100%;height:100%;object-fit:cover;border:1px solid var(--border);}
+  /* reveal: closed lid lifts away, open fades through */
+  #sample-box .sbx-closed{opacity:1;transform:translateY(0) scale(1);transition:opacity .9s var(--ease-out),transform .9s var(--ease-out);}
+  #sample-box[data-state="open"] .sbx-closed{opacity:0;transform:translateY(-34px) scale(1.025);pointer-events:none;}
+
+  /* hotspots */
+  #sample-box .sbx-hotspots{position:absolute;inset:0;opacity:0;transition:opacity .6s var(--ease-out) .35s;pointer-events:none;}
+  #sample-box[data-state="open"] .sbx-hotspots{opacity:1;pointer-events:auto;}
+  #sample-box .sbx-dot{position:absolute;width:38px;height:38px;transform:translate(-50%,-50%);border-radius:50%;
+    background:rgba(12,12,14,.55);border:1px solid var(--gold);color:var(--gold);font-family:var(--font-body);font-size:.78rem;
+    display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(2px);transition:all .3s var(--ease-out);
+    box-shadow:0 0 0 0 rgba(201,168,76,.5);animation:sbx-pulse 2.6s ease-out infinite;}
+  #sample-box .sbx-dot:hover,#sample-box .sbx-dot:focus-visible{background:var(--gold);color:var(--obsidian);transform:translate(-50%,-50%) scale(1.12);outline:none;animation:none;}
+  #sample-box .sbx-dot:focus-visible{box-shadow:0 0 0 3px rgba(201,168,76,.35);}
+  @keyframes sbx-pulse{0%{box-shadow:0 0 0 0 rgba(201,168,76,.45);}70%{box-shadow:0 0 0 14px rgba(201,168,76,0);}100%{box-shadow:0 0 0 0 rgba(201,168,76,0);}}
+
+  #sample-box .sbx-cue{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-size:.7rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--text-primary);background:rgba(12,12,14,.6);padding:7px 14px;border:1px solid var(--border);
+    backdrop-filter:blur(2px);transition:opacity .5s var(--ease-out);pointer-events:none;}
+  #sample-box[data-state="open"] .sbx-cue{opacity:0;}
+
+  /* mobile chip row */
+  #sample-box .sbx-chips{display:none;list-style:none;margin:22px 0 0;padding:0;flex-wrap:wrap;gap:10px;justify-content:center;}
+  #sample-box .sbx-chip{font-family:var(--font-body);font-size:.82rem;letter-spacing:.05em;color:var(--text-primary);
+    background:var(--surface);border:1px solid var(--border);padding:9px 14px;cursor:pointer;transition:all .25s var(--ease-out);
+    display:inline-flex;align-items:baseline;gap:7px;}
+  #sample-box .sbx-chip .n{font-family:var(--font-display);font-style:italic;color:var(--gold);font-size:.9rem;}
+  #sample-box .sbx-chip:hover,#sample-box .sbx-chip:focus-visible{border-color:var(--gold);color:var(--gold-light);outline:none;}
+
+  #sample-box .sbx-cta{display:inline-flex;margin:var(--s-7) auto 0;}
+  #sample-box .sbx-foot{text-align:center;}
+
+  /* drawer + scrim */
+  #sample-box .sbx-scrim{position:fixed;inset:0;background:rgba(8,8,10,.62);backdrop-filter:blur(3px);opacity:0;
+    transition:opacity .4s var(--ease-out);z-index:10002;pointer-events:none;}
+  #sample-box .sbx-scrim.show{opacity:1;pointer-events:auto;}
+  #sample-box .sbx-drawer{position:fixed;top:0;right:0;height:100vh;width:min(440px,92vw);background:var(--deep);
+    border-left:1px solid var(--border);box-shadow:var(--shadow-2);z-index:10003;
+    transform:translateX(100%);transition:transform .55s var(--ease-out);overflow-y:auto;
+    padding:64px 38px 40px;display:flex;flex-direction:column;}
+  #sample-box .sbx-drawer.show{transform:translateX(0);}
+  #sample-box .sbx-close{position:absolute;top:20px;right:22px;width:38px;height:38px;background:transparent;
+    border:1px solid var(--border);color:var(--text-secondary);font-size:1.2rem;line-height:1;cursor:pointer;transition:all .25s var(--ease-out);}
+  #sample-box .sbx-close:hover,#sample-box .sbx-close:focus-visible{color:var(--gold);border-color:var(--gold);outline:none;}
+  #sample-box .sbx-d-index{font-family:var(--font-display);font-style:italic;font-size:1.4rem;color:var(--gold);opacity:.8;margin-bottom:6px;}
+  #sample-box .sbx-d-eyebrow{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  #sample-box .sbx-d-name{font-family:var(--font-display);font-weight:300;font-size:2.6rem;line-height:1;color:var(--text-primary);margin-bottom:18px;}
+  #sample-box .sbx-d-meta{display:grid;grid-template-columns:auto 1fr;gap:5px 16px;margin-bottom:16px;}
+  #sample-box .sbx-d-meta dt{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);padding-top:3px;}
+  #sample-box .sbx-d-meta dd{font-size:.92rem;color:var(--text-primary);line-height:1.4;}
+  #sample-box .sbx-d-rule{height:1px;background:var(--border);margin:0 0 16px;}
+  #sample-box .sbx-d-desc{font-size:.92rem;line-height:1.72;color:var(--text-secondary);margin-bottom:16px;}
+  #sample-box .sbx-d-specs{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:7px;}
+  #sample-box .sbx-d-specs li{position:relative;padding-left:16px;font-size:.82rem;line-height:1.45;color:var(--text-secondary);}
+  #sample-box .sbx-d-specs li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;background:var(--gold);transform:rotate(45deg);}
+  #sample-box .sbx-d-note{font-size:.8rem;line-height:1.55;color:var(--gold-light);background:var(--border);border-left:2px solid var(--gold);padding:10px 12px;margin-bottom:16px;}
+  #sample-box .sbx-d-note:empty{display:none;}
+  #sample-box .sbx-d-nav{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:20px;border-top:1px solid var(--border-mute);}
+  #sample-box .sbx-d-nav button{background:transparent;border:1px solid var(--border);color:var(--text-secondary);width:42px;height:42px;font-size:1.1rem;cursor:pointer;transition:all .25s var(--ease-out);}
+  #sample-box .sbx-d-nav button:hover,#sample-box .sbx-d-nav button:focus-visible{color:var(--gold);border-color:var(--gold);outline:none;}
+  #sample-box .sbx-d-count{font-size:.72rem;letter-spacing:.18em;color:var(--text-muted);}
+
+  @media (max-width:600px){
+    #sample-box .sbx-hotspots{display:none;}
+    #sample-box .sbx-chips{display:flex;}
+    #sample-box .sbx-cue{font-size:.62rem;}
+    #sample-box .sbx-drawer{top:auto;bottom:0;right:0;width:100%;height:auto;max-height:86vh;
+      border-left:none;border-top:1px solid var(--border);transform:translateY(100%);padding:48px 24px 32px;}
+    #sample-box .sbx-drawer.show{transform:translateY(0);}
+  }
+  @media (prefers-reduced-motion:reduce){
+    #sample-box .sbx-box,#sample-box .sbx-closed,#sample-box .sbx-hotspots,#sample-box .sbx-cue,
+    #sample-box .sbx-drawer,#sample-box .sbx-scrim{transition:none!important;}
+    #sample-box .sbx-dot{animation:none!important;}
+  }
+  </style>
+
+  <div class="section-inner">
+    <div class="sbx-head">
+      <div class="eyebrow reveal">Yüzey Numune Kutusu</div>
+      <h2 id="sbx-title" class="sbx-title reveal">Görün.<br><em>Hissedin.</em></h2>
+      <p class="sbx-intro reveal">Her iki malzemede dört yüzey — metalik, doğal mat, gövdeye işlenmiş renk ve soğuk döküm metal — tek bir kutuda. Bir paneli şartnameye bağlamadan önce, bir rölyefin duvarda nasıl okunacağını değerlendirmenin en güvenilir yolu.</p>
+    </div>
+
+    <div class="sbx-stage reveal" data-state="closed">
+      <div class="sbx-box">
+        <picture class="sbx-open">
+          <source type="image/webp" srcset="images/studio-luminant-finish-sample-box-angled-open-800w.webp 800w, images/studio-luminant-finish-sample-box-angled-open-1600w.webp 1600w" sizes="(max-width:1024px) 100vw, 920px">
+          <img src="images/studio-luminant-finish-sample-box-angled-open.jpg" alt="Studio Luminant yüzey numune kutusu — dört yüzey numunesi açık deri kutuda" width="1600" height="1073" loading="lazy" decoding="async">
+        </picture>
+        <picture class="sbx-closed" aria-hidden="true">
+          <source type="image/webp" srcset="images/studio-luminant-finish-sample-box-angled-closed-800w.webp 800w, images/studio-luminant-finish-sample-box-angled-closed-1600w.webp 1600w" sizes="(max-width:1024px) 100vw, 920px">
+          <img src="images/studio-luminant-finish-sample-box-angled-closed.jpg" alt="" width="1600" height="1073" loading="lazy" decoding="async">
+        </picture>
+        <div class="sbx-hotspots">
+          <button type="button" class="sbx-dot" data-i="0" style="left:28%;top:43%" aria-label="FORGE — Metalik artisan yüzey">1</button>
+          <button type="button" class="sbx-dot" data-i="1" style="left:66%;top:40%" aria-label="LOOM — Gövdeye işlenmiş renk">2</button>
+          <button type="button" class="sbx-dot" data-i="2" style="left:54%;top:60%" aria-label="QUARRY — Şeffaf mat artisan yüzey">3</button>
+          <button type="button" class="sbx-dot" data-i="3" style="left:42%;top:26%" aria-label="PEWTER — Soğuk döküm kalay">4</button>
+        </div>
+        <span class="sbx-cue">Açmak için kaydırın</span>
+      </div>
+      <ul class="sbx-chips" role="list">
+        <li><button type="button" class="sbx-chip" data-i="0"><span class="n">01</span> FORGE</button></li>
+        <li><button type="button" class="sbx-chip" data-i="1"><span class="n">02</span> LOOM</button></li>
+        <li><button type="button" class="sbx-chip" data-i="2"><span class="n">03</span> QUARRY</button></li>
+        <li><button type="button" class="sbx-chip" data-i="3"><span class="n">04</span> PEWTER</button></li>
+      </ul>
+    </div>
+
+    <div class="sbx-foot">
+      <a href="iletisim.htm" class="btn-primary reveal sbx-cta">
+        Numune Kutusunu İsteyin
+        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="sbx-scrim" data-sbx-close></div>
+  <aside class="sbx-drawer" role="dialog" aria-modal="true" aria-labelledby="sbx-d-name" hidden>
+    <button type="button" class="sbx-close" data-sbx-close aria-label="Kapat">&times;</button>
+    <div class="sbx-d-index"></div>
+    <div class="sbx-d-eyebrow"></div>
+    <h3 class="sbx-d-name" id="sbx-d-name"></h3>
+    <dl class="sbx-d-meta">
+      <dt>Malzeme</dt><dd class="sbx-d-material"></dd>
+      <dt>Yüzey</dt><dd class="sbx-d-finish"></dd>
+    </dl>
+    <div class="sbx-d-rule"></div>
+    <p class="sbx-d-desc"></p>
+    <ul class="sbx-d-specs"></ul>
+    <div class="sbx-d-note"></div>
+    <div class="sbx-d-nav">
+      <button type="button" class="sbx-prev" aria-label="Önceki yüzey">&lsaquo;</button>
+      <span class="sbx-d-count"></span>
+      <button type="button" class="sbx-next" aria-label="Sonraki yüzey">&rsaquo;</button>
+    </div>
+  </aside>
+
+  <script>
+  (function(){
+    var sec=document.getElementById('sample-box');
+    if(!sec)return;
+    var FIN=[
+      {idx:'01',name:'FORGE',eyebrow:'Çekiçlenmiş rölyef',material:'Lumina PMAG™',finish:'Metalik artisan yüzey · antik altın',
+       desc:'Dövme pirinci andıran, elle çekiçlenmiş bir doku — metal değil, döküm. Metalik, seramik pürüzsüzlüğündeki gövdeye uygulanan bir artisan yüzeydir; rölyef keskin, ağırlık düşük kalır.',
+       specs:['Duvar panelleri, vurgu yüzeyleri, denizlikler','3000 × 1500 mm’ye kadar büyük format','Neme dayanıklı · seramik pürüzsüzlüğünde gövde']},
+      {idx:'02',name:'LOOM',eyebrow:'Hasır örgü rölyef',material:'Lumina PUCOMP™',finish:'Renk gövdeye işlenmiş · kütlesel renk',
+       desc:'Renk yüzeyde değil, gövdenin içindedir — bir kenar çatlağı ya da çizik asla altta farklı bir malzeme açığa çıkarmaz. PUCOMP serideki en yüksek doku çözünürlüğünü taşır; örgünün kesişimleri keskin kalır.',
+       specs:['Kolon kaplamaları, vurgu duvarları, resepsiyon bankoları','Dış mekân & ıslak hacim uygun','İnce profil 8–25 mm · detay-kritik elemanlar']},
+      {idx:'03',name:'QUARRY',eyebrow:'Pütürlü rölyef',material:'Lumina PMAG™ · doğal renk',finish:'Şeffaf mat artisan yüzey · düşük parlaklık',
+       desc:'Malzemenin kendisi — PMAG’ın kendi sıcak, kırık-beyaz tonu, onu gizlemeden koruyan şeffaf mat bir yüzeyle. İnce portakal-kabuğu dokusu yandan gelen ışıkta belirir, düz ışıkta sakin durur.',
+       specs:['Duvar panelleri, tavanlar, denizlikler','Seramik pürüzsüzlüğünde gövde · neme dayanıklı','3000 × 1500 mm’ye kadar büyük format']},
+      {idx:'04',name:'PEWTER',eyebrow:'Kamış rölyef',material:'Soğuk döküm kalay',finish:'Şeffafsız · yaşayan patina',
+       desc:'Gerçek metal, soğuk döküm: reçineyle bağlanmış kalay tozu, metal yüzeye kadar parlatılmış. Ton zamanla koyulaşır ve yaşayan bir patina geliştirir.',
+       specs:['Vurgu yüzeyleri, aksanlar, detay elemanları','Soğuk döküm metal — bronz, bakır, pirinç, alüminyum da'],
+       note:'Şeffafsız sunulur — yaşlanma bilinçlidir. Sabit bir yüzey gerektiğinde, döküm-anı tonu koruyan kapatmalı seçenek mevcuttur.'}
+    ];
+    var COUNT_SEP=' / ';
+    var stage=sec.querySelector('.sbx-stage'),box=sec.querySelector('.sbx-box');
+    var drawer=sec.querySelector('.sbx-drawer'),scrim=sec.querySelector('.sbx-scrim');
+    var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var fine=window.matchMedia('(pointer:fine)').matches;
+    var cur=0,lastFocus=null;
+
+    // reveal on scroll
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){if(e.isIntersecting){sec.setAttribute('data-state','open');io.disconnect();}});
+      },{threshold:0.35});
+      io.observe(stage);
+    }else{sec.setAttribute('data-state','open');}
+
+    // subtle 3D tilt
+    if(fine && !reduce){
+      stage.addEventListener('pointermove',function(ev){
+        if(sec.getAttribute('data-state')!=='open')return;
+        var r=box.getBoundingClientRect();
+        var px=(ev.clientX-r.left)/r.width-0.5, py=(ev.clientY-r.top)/r.height-0.5;
+        box.style.transform='rotateY('+(px*5).toFixed(2)+'deg) rotateX('+(-py*5).toFixed(2)+'deg)';
+      });
+      stage.addEventListener('pointerleave',function(){box.style.transform='';});
+    }
+
+    function fill(i){
+      cur=(i+FIN.length)%FIN.length;var f=FIN[cur];
+      drawer.querySelector('.sbx-d-index').textContent=f.idx;
+      drawer.querySelector('.sbx-d-eyebrow').textContent=f.eyebrow;
+      drawer.querySelector('.sbx-d-name').textContent=f.name;
+      drawer.querySelector('.sbx-d-material').textContent=f.material;
+      drawer.querySelector('.sbx-d-finish').textContent=f.finish;
+      drawer.querySelector('.sbx-d-desc').textContent=f.desc;
+      drawer.querySelector('.sbx-d-specs').innerHTML=f.specs.map(function(s){return '<li>'+s+'</li>';}).join('');
+      drawer.querySelector('.sbx-d-note').textContent=f.note||'';
+      drawer.querySelector('.sbx-d-count').textContent=f.idx+COUNT_SEP+('0'+FIN.length).slice(-2);
+    }
+    function open(i,trigger){
+      lastFocus=trigger||document.activeElement;fill(i);
+      drawer.hidden=false;scrim.hidden=false;
+      requestAnimationFrame(function(){scrim.classList.add('show');drawer.classList.add('show');});
+      document.body.style.overflow='hidden';
+      drawer.querySelector('.sbx-close').focus();
+    }
+    function close(){
+      drawer.classList.remove('show');scrim.classList.remove('show');
+      document.body.style.overflow='';
+      var done=function(){drawer.hidden=true;scrim.hidden=true;drawer.removeEventListener('transitionend',done);};
+      if(reduce){done();}else{drawer.addEventListener('transitionend',done);}
+      if(lastFocus&&lastFocus.focus)lastFocus.focus();
+    }
+
+    sec.querySelectorAll('.sbx-dot,.sbx-chip').forEach(function(b){
+      b.addEventListener('click',function(){open(+b.getAttribute('data-i'),b);});
+    });
+    sec.querySelectorAll('[data-sbx-close]').forEach(function(b){b.addEventListener('click',close);});
+    drawer.querySelector('.sbx-prev').addEventListener('click',function(){fill(cur-1);});
+    drawer.querySelector('.sbx-next').addEventListener('click',function(){fill(cur+1);});
+
+    document.addEventListener('keydown',function(e){
+      if(drawer.hidden)return;
+      if(e.key==='Escape'){close();}
+      else if(e.key==='ArrowLeft'){fill(cur-1);}
+      else if(e.key==='ArrowRight'){fill(cur+1);}
+      else if(e.key==='Tab'){
+        var f=drawer.querySelectorAll('button');if(!f.length)return;
+        var first=f[0],last=f[f.length-1];
+        if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+        else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+      }
+    });
+  })();
+  </script>
 </section>
 
 <!-- UNIFIED DESIGN SYSTEM TEASER -->
@@ -1086,6 +1508,33 @@
   </div>
 </section>
 
+<!-- WHO IT'S FOR -->
+<section id="audiences">
+  <div class="section-inner">
+    <div class="audiences-header">
+      <div class="eyebrow reveal">Uygulama Alanları</div>
+      <h2 class="audiences-headline reveal">Kimler İçin<br><em>Çalışıyoruz.</em></h2>
+    </div>
+    <div class="audiences-grid reveal">
+      <div class="audience-card">
+        <div class="audience-num">01</div>
+        <h3 class="audience-title">Konaklama</h3>
+        <p class="audience-desc">Otel lobileri, resort genel alanları, restoran ve bar konseptleri. Marka kimliğini taşıyan özellikli duvarlar — sıkışık açılış takvimlerine uyan teslim süreleriyle.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-num">02</div>
+        <h3 class="audience-title">Üst Düzey Konut</h3>
+        <p class="audience-desc">Özel villalar, çatı katları, tasarımcı iç mekanları. Tek bir mekan için tasarlanmış, tek parça heykelsi yüzeyler.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-num">03</div>
+        <h3 class="audience-title">Ticari ve Kültürel</h3>
+        <p class="audience-desc">Kurumsal lobiler, perakende konseptleri, kültür yapıları. Büyük ölçekli kaplamalar — şartname güvencesiyle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- EXPERTISE -->
 <section id="expertise">
   <div class="section-inner">
@@ -1098,14 +1547,13 @@
       </div>
       <div class="expertise-skills reveal">
         <div class="skill-tag">Alçı Döküm (PMAG)</div>
-        <div class="skill-tag">Poliüretan Kompozit</div>
+        <div class="skill-tag">Kompozit Döküm (PUCOMP)</div>
         <div class="skill-tag">Cam Elyaf Takviyeli Beton</div>
         <div class="skill-tag">Soğuk Döküm Metal</div>
         <div class="skill-tag">Yapay Zeka Destekli Tasarım</div>
         <div class="skill-tag">Özel Desen Tasarımı</div>
         <div class="skill-tag">BIM-Uyumlu Teslimat</div>
         <div class="skill-tag">3D Baskı Kalıp Teknolojisi</div>
-        <div class="skill-tag">A1 Yangın Performansı*</div>
         <div class="skill-tag">Zanaatkâr Bitirme</div>
         <div class="skill-tag">Antimikrobiyal Seçenekler</div>
         <div class="skill-tag">LED Entegrasyonu</div>
@@ -1114,9 +1562,79 @@
   </div>
 </section>
 
-</main>
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="faq-header">
+      <div class="eyebrow reveal">Sıkça Sorulanlar</div>
+      <h2 class="faq-headline reveal">Şartnameden Önce<br><em>Bilmeniz Gerekenler.</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>Teslim süreniz nedir?</summary>
+        <div class="faq-answer">
+          <p>Konsept brief'ten fiziksel numuneye haftalar, tam proje teslimine ise geleneksel üretimin çok altında bir takvim. Net süre proje ölçeğine göre teklifte verilir.</p>
+          <a href="kaynaklar-teslimat-sureci.htm" class="faq-link">Teslimat Süreci →</a>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Paneller ne kadar ağır — özel taşıyıcı gerekir mi?</summary>
+        <div class="faq-answer">
+          <p>Paneller hafif olacak şekilde formüle edilir; çoğu uygulama standart montaj sistemleriyle çözülür. Yapısal veriler şartname paketinde yer alır.</p>
+          <a href="kaynaklar-agirlik-yapisal.htm" class="faq-link">Ağırlık ve Yapısal Veriler →</a>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Minimum proje büyüklüğü var mı?</summary>
+        <div class="faq-answer">
+          <p>Tek bir özellikli duvardan tam kat kaplamasına kadar çalışıyoruz. Çok küçük işler için önce uygunluğu birlikte değerlendiriyoruz.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>BIM ve şartname dosyası veriyor musunuz?</summary>
+        <div class="faq-answer">
+          <p>Evet — BIM objeleri ve teknik veri sayfaları şartname aşaması için hazırdır, son dakika sürprizi olmaz.</p>
+          <a href="kaynaklar-sartname-rehberi.htm" class="faq-link">Şartname Rehberi →</a>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Montajı siz mi yapıyorsunuz?</summary>
+        <div class="faq-answer">
+          <p>Montaj kılavuzu ve detaylarını sağlıyoruz; sahadaki uygulama proje ekibiyle koordine edilir.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
 
-<p class="cert-footnote" style="font-size: 0.75rem; opacity: 0.6; font-style: italic; text-align: center; margin-top: 2rem;">* Yangın sınıflandırması malzeme bileşimine dayalıdır; EN 13501-1 sertifikasyonu sürecindedir.</p>
+<!-- FINAL CTA -->
+<section id="start">
+  <div class="section-inner">
+    <div class="start-cta reveal">
+      <div class="eyebrow">Projeye Başlayın</div>
+      <h2 class="start-headline">Bir eskizle<br><em>başlayalım.</em></h2>
+      <p class="start-sub">
+        Bir referans görsel, konsept brief veya teknik çizim gönderin. Günler içinde 3D model, haftalar içinde fiziksel numune ile geri dönelim.
+      </p>
+      <div class="start-ctas">
+        <a href="iletisim.htm" class="btn-primary">
+          Proje Başlat
+          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+        <a href="iletisim.htm" class="btn-ghost">
+          Numune Talep Et
+          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <div id="site-footer"></div>
 

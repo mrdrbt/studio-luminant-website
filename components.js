@@ -64,8 +64,8 @@ function pictureTag(src, alt, sizes, opts) {
       { href: 'koleksiyon.htm', text: 'Koleksiyon' },
       { href: 'urunler.htm', text: 'Malzeme & Teknik' },
       { href: 'surec.htm', text: 'Nasıl Çalışırız' },
-      { href: 'galeri.htm', text: 'Galeri' },
-      { href: 'kaynaklar.htm', text: 'Kaynaklar' }
+      { href: 'galeri.htm', text: 'Galeri' }
+      // { href: 'kaynaklar.htm', text: 'Kaynaklar' } // temporarily hidden
     ],
     langLabel: 'EN',
     ctaText: 'Proje Başlat',
@@ -79,8 +79,8 @@ function pictureTag(src, alt, sizes, opts) {
       { href: 'collection.htm', text: 'Collection' },
       { href: 'products.htm', text: 'Materials & Specs' },
       { href: 'process.htm', text: 'How We Work' },
-      { href: 'gallery.htm', text: 'Gallery' },
-      { href: 'resources.htm', text: 'Resources' }
+      { href: 'gallery.htm', text: 'Gallery' }
+      // { href: 'resources.htm', text: 'Resources' } // temporarily hidden
     ],
     langLabel: 'TR',
     ctaText: 'Initiate Project',
@@ -231,8 +231,8 @@ ${mobileItemsHtml}
     ctaBtn: 'Proje Başlat',
     ctaHref: 'iletisim.htm',
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
-    bimHref: 'kaynaklar.htm',
-    bimText: 'BIM Dosyaları'
+    bimHref: '',
+    bimText: ''
   } : {
     homeHref: 'Studio Luminant — Bespoke Architectural Elements.htm',
     tagline: 'Bespoke architectural elements — sculpted, cast, and finished to spec.',
@@ -245,8 +245,8 @@ ${mobileItemsHtml}
     ctaBtn: 'Initiate Project',
     ctaHref: 'contact.htm',
     copyright: '© 2026 Studio Luminant. All Rights Reserved.',
-    bimHref: 'resources.htm',
-    bimText: 'BIM Assets'
+    bimHref: '',
+    bimText: ''
   };
 
   footerEl.outerHTML = `
@@ -281,7 +281,7 @@ ${mobileItemsHtml}
     <div class="footer-bottom">
       <p class="footer-copy">${footerContent.copyright}</p>
       <ul class="footer-links">
-        <li><a href="${footerContent.bimHref}">${footerContent.bimText}</a></li>
+        ${footerContent.bimText ? `<li><a href="${footerContent.bimHref}">${footerContent.bimText}</a></li>` : ''}
       </ul>
     </div>
   </div>

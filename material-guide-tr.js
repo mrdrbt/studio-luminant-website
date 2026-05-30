@@ -33,7 +33,7 @@ const specCategories = [{
   key: "performance",
   label: "Performans",
   icon: "◈",
-  specs: ["fire", "moisture", "impact", "uv", "chemical", "temperature"]
+  specs: ["moisture", "impact", "uv", "chemical", "temperature"]
 }, {
   key: "finish",
   label: "İşlem & Tasarım",
@@ -60,10 +60,6 @@ const specMeta = {
   },
   maxSize: {
     label: "Maks. panel boyutu",
-    unit: ""
-  },
-  fire: {
-    label: "Yangın sınıfı",
     unit: ""
   },
   moisture: {
@@ -203,9 +199,6 @@ const colorPalettes = {
   ]
 };
 const radarAxes = [{
-  key: "fireSafety",
-  label: "Yangın Güvenliği"
-}, {
   key: "weightAdv",
   label: "Hafiflik"
 }, {
@@ -235,7 +228,7 @@ const studioMaterials = [{
   id: "pmag",
   name: "Lumina PMAG™",
   fullName: "Polymer Modified Alpha Gypsum",
-  tagline: "Hedef A1 yangın performanslı iç mekân mimari rölyef panelleri",
+  tagline: "Yüksek spesifikasyonlu iç mekânlar için mimari rölyef panelleri",
   domain: "İç Mekân",
   domainIcon: "🏛",
   application: "Özellikli duvarlar, tavan elemanları, resepsiyon alanları, koridor vurgu duvarları",
@@ -244,7 +237,6 @@ const studioMaterials = [{
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
     thickness: (_pmag.thickness ? _pmag.thickness.min + '–' + _pmag.thickness.max : "15–40"),
     maxSize: (_F.panelSize ? _F.panelSize(_pmag) : "3000 × 1500 mm"),
-    fire: (_pmag.fire ? _pmag.fire.value + ' Yanmaz (' + _pmag.fire.standard + ')' : "A1 Yanmaz* (EN 13501-1)"),
     moisture: "Moderate — interior dry zones",
     impact: "Moderate (glass fiber reinforced)",
     uv: "—",
@@ -260,7 +252,6 @@ const studioMaterials = [{
     leadTime: "4–6 weeks"
   },
   radar: {
-    fireSafety: 0.85,
     weightAdv: 0.6,
     moistureRes: 0.4,
     finishQuality: 0.95,
@@ -272,7 +263,7 @@ const studioMaterials = [{
 }, {
   id: "pucomp",
   name: "Lumina PUCOMP™",
-  fullName: "Polyurethane Composite",
+  fullName: "Advanced Composite",
   tagline: "Üstün dayanıklılığa sahip dış cephe & ıslak alan panelleri",
   domain: "Dış Mekân",
   domainIcon: "🌐",
@@ -282,10 +273,9 @@ const studioMaterials = [{
     weight: (_pucomp.weight ? _pucomp.weight.min + '–' + _pucomp.weight.max : "12–18"),
     thickness: (_pucomp.thickness ? _pucomp.thickness.min + '–' + _pucomp.thickness.max : "8–25"),
     maxSize: (_F.panelSize ? _F.panelSize(_pucomp) : "2500 × 1200 mm"),
-    fire: (_pucomp.fire ? _pucomp.fire.value + ' (' + _pucomp.fire.standard + ')' : "B-s1,d0* (EN 13501-1)"),
     moisture: "High — closed-cell, hydrophobic",
     impact: "High — flexible polymer matrix",
-    uv: "Stabilised + UV-resistant topcoat",
+    uv: "Stabilised + UV-resistant finish",
     chemical: "Resistant to mild acids & cleaning agents",
     temperature: "-30 °C to +80 °C",
     surface: (_pucomp.finish ? _pucomp.finish.tr : "Tüm RAL / özel renkler — soğuk döküm metal ve dokulu yüzeyler"),
@@ -298,7 +288,6 @@ const studioMaterials = [{
     leadTime: "5–7 weeks"
   },
   radar: {
-    fireSafety: 0.55,
     weightAdv: 0.85,
     moistureRes: 0.9,
     finishQuality: 0.95,
@@ -317,7 +306,6 @@ const sectorMaterials = [{
     weight: "15–25",
     thickness: "10–20",
     maxSize: "Varies by supplier",
-    fire: "A1 / A2-s1,d0",
     moisture: "Low — interior dry only",
     impact: "Low–Moderate",
     uv: "—",
@@ -333,7 +321,6 @@ const sectorMaterials = [{
     leadTime: "6–10 weeks"
   },
   radar: {
-    fireSafety: 0.9,
     weightAdv: 0.55,
     moistureRes: 0.2,
     finishQuality: 0.35,
@@ -351,7 +338,6 @@ const sectorMaterials = [{
     weight: "25–45",
     thickness: "10–25",
     maxSize: "Varies by supplier",
-    fire: "A1 (non-combustible)",
     moisture: "High",
     impact: "High",
     uv: "Good",
@@ -367,7 +353,6 @@ const sectorMaterials = [{
     leadTime: "8–14 weeks"
   },
   radar: {
-    fireSafety: 1.0,
     weightAdv: 0.2,
     moistureRes: 0.8,
     finishQuality: 0.3,
@@ -385,7 +370,6 @@ const sectorMaterials = [{
     weight: "50–75",
     thickness: "20+",
     maxSize: "Slab-dependent",
-    fire: "A1",
     moisture: "Variable (porous unless sealed)",
     impact: "Brittle — chips and cracks",
     uv: "Excellent (natural)",
@@ -401,7 +385,6 @@ const sectorMaterials = [{
     leadTime: "10–20 weeks"
   },
   radar: {
-    fireSafety: 1.0,
     weightAdv: 0.05,
     moistureRes: 0.5,
     finishQuality: 0.7,
@@ -419,7 +402,6 @@ const sectorMaterials = [{
     weight: "5–15",
     thickness: "3–12",
     maxSize: "Varies",
-    fire: "B-s2,d0 to C (varies)",
     moisture: "Excellent",
     impact: "High",
     uv: "Moderate (gel coat dependent)",
@@ -435,7 +417,6 @@ const sectorMaterials = [{
     leadTime: "4–8 weeks"
   },
   radar: {
-    fireSafety: 0.35,
     weightAdv: 0.8,
     moistureRes: 0.95,
     finishQuality: 0.25,
@@ -453,7 +434,6 @@ const sectorMaterials = [{
     weight: "10–18",
     thickness: "6–25",
     maxSize: "Standard sheet sizes",
-    fire: "D-s2,d0 (combustible)",
     moisture: "Poor — swells, warps",
     impact: "Moderate",
     uv: "Poor",
@@ -469,7 +449,6 @@ const sectorMaterials = [{
     leadTime: "3–6 weeks"
   },
   radar: {
-    fireSafety: 0.15,
     weightAdv: 0.7,
     moistureRes: 0.1,
     finishQuality: 0.4,
@@ -1158,23 +1137,6 @@ function ComparisonTable({
   const getAdvantage = (sk, slVal, compVal) => {
     if (!slVal || slVal === "—" || !compVal || compVal === "—") return "neutral";
     const a = {
-      fire: () => {
-        const rk = {
-          A1: 6,
-          "A2-s1,d0": 5,
-          "B-s1,d0": 4,
-          "B-s2,d0": 3,
-          C: 2,
-          "D-s2,d0": 1
-        };
-        const g = v => {
-          for (const [k, r] of Object.entries(rk)) if (v.includes(k)) return r;
-          return 0;
-        };
-        const s = g(slVal),
-          c = g(compVal);
-        return s > c ? "better" : s < c ? "worse" : "neutral";
-      },
       moisture: () => {
         const rk = ["Poor", "Low", "Moderate", "Variable", "High", "Excellent"];
         const g = v => rk.findIndex(r => v.includes(r));
@@ -1561,7 +1523,7 @@ function MaterialGuide() {
       fontStyle: "italic",
       opacity: 0.85
     }
-  }, "Hedef sınıflandırmalar EN 13501-1 testine tabidir. Değerler tasarım spesifikasyonlarını temsil eder; sertifikasyon sürecindedir."))));
+  }, "Değerler tasarım spesifikasyonlarını temsil eder."))));
 }
 ReactDOM.createRoot(document.getElementById("material-guide-root")).render(/*#__PURE__*/React.createElement(MaterialGuide, null));
 })();

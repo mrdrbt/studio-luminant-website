@@ -313,6 +313,15 @@
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         btn.disabled = true;
+        // Mirror enquiry into the CRM (non-blocking; never affects the Formspree flow)
+        try {
+          const _crm = Object.fromEntries(new FormData(form).entries());
+          fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'x-sl-key': 'sl_web_lead_k7Qm2P' },
+            body: JSON.stringify(_crm)
+          }).catch(() => {});
+        } catch (_) {}
         btn.innerHTML = 'Gönderiliyor…';
         try {
           const res = await fetch(form.action, {

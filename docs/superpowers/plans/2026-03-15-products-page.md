@@ -412,14 +412,14 @@ Write the complete file:
           Lumina PMAG™ is Studio Luminant's primary interior cladding material — a polymer modified alpha gypsum formulated for high-specification architectural installations. Alpha gypsum delivers a compressive strength significantly above beta-grade alternatives, producing a denser, harder panel with a ceramic-like surface finish.
         </p>
         <p class="product-desc reveal">
-          Certified A1 non-combustible, moisture resistant, and available in any RAL or custom colour via automotive-grade 2K coating. Ideal for large-scale interior wall and ceiling installations where fire compliance, surface quality, and dimensional accuracy are non-negotiable.
+          Certified A2-s1,d0 non-combustible, moisture resistant, and available in any RAL or custom colour via automotive-grade 2K coating. Ideal for large-scale interior wall and ceiling installations where fire compliance, surface quality, and dimensional accuracy are non-negotiable.
         </p>
       </div>
       <!-- Right: specs grid -->
       <div class="specs-grid reveal">
         <div class="spec-cell">
           <div class="spec-label">Fire Rating</div>
-          <div class="spec-value">A1 Non-Combustible</div>
+          <div class="spec-value">A2-s1,d0 Limited Combustibility</div>
         </div>
         <div class="spec-cell">
           <div class="spec-label">Surface</div>

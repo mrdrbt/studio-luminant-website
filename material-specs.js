@@ -1,14 +1,14 @@
 // ─── MATERIAL SPECS — Single Source of Truth ───
-// Generated from Supabase · 2026-03-24
+// Generated from Supabase · 2026-04-04
 // Referenced by: products.htm, tr/urunler.htm, material-guide.js, tr/material-guide-tr.js, lookbook.htm
 
 window.SL_SPECS = {
   "pmag": {
     "fire": {
-      "value": "A1",
+      "value": "A2-s1,d0",
       "standard": "EN 13501-1",
-      "note_en": "No flame retardant additives required",
-      "note_tr": "Alev geciktirici katkı gerektirmez"
+      "note_en": "Euroclass A2 — limited combustibility",
+      "note_tr": "Euroclass A2 — sınırlı yanabilirlik"
     },
     "maxPanel": {
       "w": 3000,

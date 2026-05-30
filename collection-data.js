@@ -1,5 +1,5 @@
 // ─── PATTERN DATA — Single Source of Truth ───
-// Generated from Supabase · 2026-03-24
+// Generated from Supabase · 2026-04-04
 // Referenced by: collection.htm, tr/koleksiyon.htm
 
 window.SL_PATTERNS = [
