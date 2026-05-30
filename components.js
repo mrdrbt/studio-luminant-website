@@ -57,6 +57,29 @@ function pictureTag(src, alt, sizes, opts) {
     document.head.appendChild(apple);
   }
 
+  // ─── ORGANIZATION JSON-LD ───
+  if (!document.querySelector('script[data-sl-org]')) {
+    const ld = document.createElement('script');
+    ld.type = 'application/ld+json';
+    ld.setAttribute('data-sl-org', '');
+    ld.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Studio Luminant",
+      "url": "https://studioluminant.com",
+      "logo": "https://studioluminant.com/images/studio-luminant-logo-white-transparent.png",
+      "email": "strategy@studioluminant.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Talatpaşa Cad. No: 21, İç Kapı No: 501",
+        "addressLocality": "Kağıthane",
+        "addressRegion": "İstanbul",
+        "addressCountry": "TR"
+      }
+    });
+    document.head.appendChild(ld);
+  }
+
   // ─── NAV ───
   const navLinks = lang === 'tr' ? {
     home: { href: 'Studio Luminant — Özel Mimari Elemanlar.htm', alt: 'Studio Luminant' },
