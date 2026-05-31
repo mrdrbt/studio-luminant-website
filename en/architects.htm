@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Architects & Specifiers — Studio Luminant</title>
+<meta name="description" content="One design language, every surface, one supplier. Studio Luminant produces bespoke architectural elements for architects and specifiers — Lumina PMAG™ and PUCOMP™, with BIM-ready specification support.">
+<!-- DRAFT: not yet linked in nav/sitemap. Remove noindex when approved to go live. -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://studioluminant.com/en/architects.htm">
+  <link rel="alternate" hreflang="tr" href="https://studioluminant.com/mimarlar.htm">
+  <link rel="alternate" hreflang="en" href="https://studioluminant.com/en/architects.htm">
+  <link rel="alternate" hreflang="x-default" href="https://studioluminant.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="For Architects & Specifiers — Studio Luminant">
+<meta property="og:description" content="One design language, every surface, one supplier. Bespoke architectural elements with BIM-ready specification support.">
+<meta property="og:url" content="https://studioluminant.com/en/architects.htm">
+<meta property="og:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="For Architects & Specifiers — Studio Luminant">
+<meta name="twitter:description" content="One design language, every surface, one supplier. Bespoke architectural elements with BIM-ready specification support.">
+<meta name="twitter:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<link rel="preload" as="image" type="image/webp" href="../images/studio-luminant-petal-geometric-gold-dining-feature-wall.webp">
+
+<style>
+  /* ─── PAGE HERO ─────────────────────── */
+  #page-hero {
+    min-height: 100vh;
+    background-image: url('../images/studio-luminant-petal-geometric-gold-dining-feature-wall.jpg');
+    background-image: image-set(
+      url('../images/studio-luminant-petal-geometric-gold-dining-feature-wall.webp') type('image/webp'),
+      url('../images/studio-luminant-petal-geometric-gold-dining-feature-wall.jpg') type('image/jpeg')
+    );
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+  #page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to top, rgba(12,12,14,0.92) 0%, rgba(12,12,14,0.55) 34%, rgba(12,12,14,0.10) 64%),
+      linear-gradient(160deg, rgba(12,12,14,0.78) 0%, rgba(12,12,14,0.40) 50%, rgba(12,12,14,0.20) 100%);
+    z-index: 1; pointer-events: none;
+  }
+  .page-hero-content { position: relative; z-index: 2; padding: 160px 60px 100px; max-width: 860px; }
+  .page-hero-eyebrow { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 40px;
+    opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards; }
+  .page-hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+  .page-hero-eyebrow span { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
+  .page-hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(54px, 6.4vw, 104px);
+    font-weight: 300; line-height: 0.96; letter-spacing: -0.02em; color: var(--text-primary);
+    margin-bottom: 32px; opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards; }
+  .page-hero-headline em { font-style: italic; color: var(--gold); }
+  .page-hero-sub { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--text-secondary);
+    max-width: 540px; margin-bottom: 44px; opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards; }
+  .page-hero-cta { opacity: 0; animation: fadeUp 0.9s ease 0.9s forwards; }
+
+  /* ─── GENERIC SECTION SHELL ─────────── */
+  .arc-section { padding: 120px 0; border-top: 1px solid var(--border); }
+  .arc-section.deep { background: var(--deep); }
+  .arc-section.obsidian { background: var(--obsidian); }
+  .arc-head { max-width: 720px; margin-bottom: 64px; }
+  .arc-eyebrow { font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); font-weight: 400; margin-bottom: 20px; }
+  .arc-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 60px);
+    font-weight: 300; line-height: 1.02; color: var(--text-primary); }
+  .arc-title em { font-style: italic; color: var(--gold); }
+  .arc-lead { font-size: 15px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 600px; margin-top: 24px; }
+
+  /* ─── APPLICATION MATRIX ────────────── */
+  .matrix { width: 100%; border-collapse: collapse; }
+  .matrix th, .matrix td { text-align: left; padding: 20px 4px; border-bottom: 1px solid var(--border); vertical-align: baseline; }
+  .matrix th { font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; }
+  .matrix td.surface-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text-primary); width: 34%; }
+  .matrix td.mat { width: 26%; }
+  .matrix td.mat span { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .matrix td.why { font-size: 13px; line-height: 1.6; color: var(--text-secondary); font-weight: 300; }
+  .matrix-note { font-size: 12px; color: var(--text-muted); font-weight: 300; margin-top: 28px; }
+
+  /* ─── MATERIAL CARDS ────────────────── */
+  .mat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .mat-card { background: var(--deep); border: 1px solid var(--border); padding: 56px 48px; }
+  .mat-tag { font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .mat-name { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; color: var(--text-primary); margin-bottom: 28px; }
+  .mat-list { list-style: none; padding: 0; margin: 0 0 32px; }
+  .mat-list li { position: relative; padding-left: 24px; margin-bottom: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); font-weight: 300; }
+  .mat-list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+  .mat-apps { font-size: 11px; line-height: 1.7; color: var(--text-muted); font-weight: 300; border-top: 1px solid var(--border); padding-top: 20px; }
+  .mat-apps b { display: block; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 8px; font-weight: 400; }
+
+  /* ─── DISCIPLINE GRID ───────────────── */
+  .disc-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+  .disc-grid div { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 28px 26px; }
+  .disc-grid .num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold-dim); display: block; margin-bottom: 10px; }
+  .disc-grid .disc-name { font-size: 13px; line-height: 1.5; color: var(--text-secondary); font-weight: 300; }
+
+  /* ─── SPEC STRIP ────────────────────── */
+  .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+  .spec-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text-primary); margin-bottom: 14px; }
+  .spec-item h3 .mk { color: var(--gold); }
+  .spec-item p { font-size: 13.5px; line-height: 1.75; color: var(--text-secondary); font-weight: 300; }
+
+  /* ─── SAMPLE BOX / CTA ──────────────── */
+  #sample { background: var(--deep); border-top: 1px solid var(--border); }
+  .sample-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; }
+  .sample-left { padding: 120px 80px; border-right: 1px solid var(--border); position: relative; overflow: hidden;
+    background-image: url('../images/studio-luminant-sample-box-four-material-systems.jpg');
+    background-image: image-set(
+      url('../images/studio-luminant-sample-box-four-material-systems.webp') type('image/webp'),
+      url('../images/studio-luminant-sample-box-four-material-systems.jpg') type('image/jpeg'));
+    background-size: cover; background-position: center right; }
+  .sample-left::before { content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(12,12,14,0.95) 0%, rgba(12,12,14,0.86) 40%, rgba(12,12,14,0.45) 72%, rgba(12,12,14,0.22) 100%);
+    pointer-events: none; }
+  .sample-left > * { position: relative; }
+  .sample-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 4vw, 64px); font-weight: 300; line-height: 1.0; color: var(--text-primary); margin-bottom: 28px; }
+  .sample-headline em { font-style: italic; color: var(--gold); }
+  .sample-body { font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 420px; margin-bottom: 22px; }
+  .sample-list { list-style: none; padding: 0; margin: 28px 0 0; }
+  .sample-list li { position: relative; padding-left: 22px; margin-bottom: 12px; font-size: 12.5px; color: var(--text-secondary); font-weight: 300; }
+  .sample-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border: 1px solid var(--gold-dim); border-radius: 50%; }
+  .sample-right { padding: 120px 80px; background: var(--surface); display: flex; flex-direction: column; justify-content: center; }
+  .form-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text-primary); margin-bottom: 40px; }
+  .contact-form { display: flex; flex-direction: column; gap: 0; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 2px; }
+  .form-field { display: flex; flex-direction: column; margin-bottom: 2px; }
+  .form-field label { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; font-weight: 400; }
+  .form-field input, .form-field textarea { background: var(--deep); border: 1px solid var(--border); color: var(--text-primary);
+    font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; padding: 14px 16px; transition: border-color 0.3s; -webkit-appearance: none; appearance: none; }
+  .form-field input:focus, .form-field textarea:focus { border-color: var(--gold); }
+  .form-field input::placeholder, .form-field textarea::placeholder { color: var(--text-muted); }
+  .form-field textarea { resize: vertical; min-height: 96px; line-height: 1.7; }
+  .form-submit { display: flex; align-items: center; justify-content: center; gap: 12px; font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; color: var(--obsidian); background: var(--gold);
+    padding: 16px 32px; border: none; cursor: pointer; width: 100%; margin-top: 2px; transition: background 0.3s, gap 0.3s; }
+  .form-submit:hover { background: var(--gold-light); gap: 20px; }
+  .form-submit svg { width: 14px; height: 14px; }
+  .form-note { font-size: 10px; color: var(--text-muted); margin-top: 14px; font-weight: 300; line-height: 1.6; }
+
+  /* ─── RESPONSIVE ────────────────────── */
+  @media (max-width: 1024px) {
+    .page-hero-content { padding: 140px 32px 80px; }
+    .arc-section { padding: 80px 0; }
+    .arc-head { margin-bottom: 44px; }
+    .mat-grid { grid-template-columns: 1fr; }
+    .disc-grid { grid-template-columns: repeat(2, 1fr); }
+    .spec-grid { grid-template-columns: 1fr; gap: 36px; }
+    .sample-grid { grid-template-columns: 1fr; }
+    .sample-left { padding: 64px 32px; border-right: none; border-bottom: 1px solid var(--border); }
+    .sample-right { padding: 56px 32px; }
+    .mat-card { padding: 44px 32px; }
+    .matrix td.surface-name { font-size: 19px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .disc-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZ0SGLKLH0');
+</script>
+</head>
+<body>
+
+<div id="site-nav" data-lang="en" data-lang-url="../mimarlar.htm" data-base="../"></div>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow"><span>For Architects & Specifiers</span></div>
+    <h1 class="page-hero-headline">
+      One design language.<br><em>Every surface.</em>
+    </h1>
+    <p class="page-hero-sub">
+      Studio Luminant produces a single relief pattern across wall, ceiling, column, and feature element — cast in the right material for each. Design, modelling, moulding, casting, and finishing under one roof: fewer handoffs, fewer tolerance gaps, one point of accountability.
+    </p>
+    <div class="page-hero-cta">
+      <a href="#sample" class="btn-primary">
+        Request the Sample Box
+        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- UNIFIED DESIGN SYSTEM -->
+<section class="arc-section deep">
+  <div class="section-inner">
+    <div class="arc-head reveal">
+      <div class="arc-eyebrow">Unified Design System</div>
+      <h2 class="arc-title">Design once,<br><em>deploy everywhere.</em></h2>
+      <p class="arc-lead">
+        Walls, ceilings, columns, and feature elements usually come from separate vendors — each with its own tolerances, lead times, and finish variance, and the coordination falls to you. The AIAPM (AI-Assisted Product Modelling) master is material-agnostic; the geometry is held in one digital master and one silicone mould. Only the casting material changes between surfaces — so spatial coherence is engineered in from the start, not chased on site.
+      </p>
+    </div>
+    <table class="matrix reveal">
+      <thead><tr><th>Surface</th><th>Material</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td class="surface-name">Wall panels</td><td class="mat"><span>Lumina PMAG™</span></td><td class="why">Large format, up to 3000 × 1500 mm</td></tr>
+        <tr><td class="surface-name">Ceiling panels</td><td class="mat"><span>Lumina PMAG™</span></td><td class="why">Weight-sensitive applications</td></tr>
+        <tr><td class="surface-name">Bulkheads & soffits</td><td class="mat"><span>Lumina PMAG™</span></td><td class="why">Continuous architectural detailing</td></tr>
+        <tr><td class="surface-name">Column wraps</td><td class="mat"><span>Lumina PUCOMP™</span></td><td class="why">Complex curvatures, thin profiles 8–25 mm</td></tr>
+        <tr><td class="surface-name">Feature walls</td><td class="mat"><span>Lumina PUCOMP™</span></td><td class="why">Maximum texture resolution</td></tr>
+        <tr><td class="surface-name">Reception desks</td><td class="mat"><span>Lumina PUCOMP™</span></td><td class="why">Detail fidelity, lightweight</td></tr>
+      </tbody>
+    </table>
+    <p class="matrix-note reveal">One silicone mould captures the geometry identically. Only the casting material changes.</p>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="arc-section obsidian">
+  <div class="section-inner">
+    <div class="arc-head reveal">
+      <div class="arc-eyebrow">Materials</div>
+      <h2 class="arc-title">Two engineered <em>formulations.</em></h2>
+    </div>
+    <div class="mat-grid">
+      <div class="mat-card reveal">
+        <div class="mat-tag">Lumina PMAG™ · Polymer Modified Alpha Gypsum</div>
+        <div class="mat-name">PMAG™</div>
+        <ul class="mat-list">
+          <li>Polymer-modified, &gt;95% mineral by mass</li>
+          <li>Moisture resistant, ceramic-smooth finish</li>
+          <li>Large format — up to 3000 × 1500 mm</li>
+          <li>Ships with BIM objects (IFC)</li>
+          <li>Calcined at 150°C; offcuts recyclable</li>
+        </ul>
+        <div class="mat-apps"><b>Applications</b>Wall &amp; ceiling panels · bulkheads · soffits · sculptural surfaces</div>
+      </div>
+      <div class="mat-card reveal">
+        <div class="mat-tag">Lumina PUCOMP™</div>
+        <div class="mat-name">PUCOMP™</div>
+        <ul class="mat-list">
+          <li>Exterior and wet-area rated</li>
+          <li>Complex curvatures achievable</li>
+          <li>Thin profiles — 8 to 25 mm</li>
+          <li>Maximum texture resolution</li>
+        </ul>
+        <div class="mat-apps"><b>Applications</b>Column wraps · feature walls · reception desks · detail-critical elements</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITY DEPTH -->
+<section class="arc-section deep">
+  <div class="section-inner">
+    <div class="arc-head reveal">
+      <div class="arc-eyebrow">Capability Depth</div>
+      <h2 class="arc-title">Twelve disciplines, <em>one facility.</em></h2>
+      <p class="arc-lead">The breadth that makes the Unified Design System deliverable — and hard to replicate.</p>
+    </div>
+    <div class="disc-grid reveal">
+      <div><span class="num">01</span><span class="disc-name">Vacuum casting</span></div>
+      <div><span class="num">02</span><span class="disc-name">Cold-cast metal</span></div>
+      <div><span class="num">03</span><span class="disc-name">Reactive acid staining</span></div>
+      <div><span class="num">04</span><span class="disc-name">Chemical patina</span></div>
+      <div><span class="num">05</span><span class="disc-name">GRG — glass reinforced gypsum</span></div>
+      <div><span class="num">06</span><span class="disc-name">GFRC — glass fibre reinforced concrete</span></div>
+      <div><span class="num">07</span><span class="disc-name">3D-printed mould masters</span></div>
+      <div><span class="num">08</span><span class="disc-name">Silicone mould production</span></div>
+      <div><span class="num">09</span><span class="disc-name">Large-format casting</span></div>
+      <div><span class="num">10</span><span class="disc-name">Multi-material from one mould</span></div>
+      <div><span class="num">11</span><span class="disc-name">Artisan finishing</span></div>
+      <div><span class="num">12</span><span class="disc-name">BIM object production</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILT FOR SPECIFICATION -->
+<section class="arc-section obsidian">
+  <div class="section-inner">
+    <div class="arc-head reveal">
+      <div class="arc-eyebrow">Built for Specification</div>
+      <h2 class="arc-title">Ready for your model, <em>documented.</em></h2>
+    </div>
+    <div class="spec-grid reveal">
+      <div class="spec-item">
+        <h3>BIM-<span class="mk">ready</span></h3>
+        <p>IFC objects, finish schedules, and technical data sheets for your model — they drop straight into your specification.</p>
+      </div>
+      <div class="spec-item">
+        <h3>LuminClip™</h3>
+        <p>Concealed mounting system for clean panel installation. No visible fixings.</p>
+      </div>
+      <div class="spec-item">
+        <h3>Made-<span class="mk">to-order</span></h3>
+        <p>Produced per specification, with zero overproduction. EXW Sapanca; installation quoted per project where required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE BOX + CTA -->
+<section id="sample">
+  <div class="sample-grid">
+    <div class="sample-left">
+      <div class="arc-eyebrow reveal">The Sample Box</div>
+      <h2 class="sample-headline reveal">Four material systems,<br><em>in the hand.</em></h2>
+      <p class="sample-body reveal">
+        Surface quality doesn't photograph. We send a physical sample box — distinct material and finish systems you can read under your own raking light. So the specification decision is made on evidence, not on a render.
+      </p>
+      <ul class="sample-list reveal">
+        <li>Four distinct material and artisan-finish systems</li>
+        <li>Free — no commitment</li>
+        <li>With optional BIM objects and finish schedule</li>
+      </ul>
+    </div>
+    <div class="sample-right">
+      <div class="form-title reveal">Request the Sample Box</div>
+      <!-- DEDICATED sample-box Formspree endpoint (isolated from the main project-enquiry form xpqygpjw).
+           ACTION REQUIRED: create a new form at formspree.io and replace SAMPLE_BOX_FORM_ID below with its ID. -->
+      <form class="contact-form reveal" id="sampleForm" action="https://formspree.io/f/SAMPLE_BOX_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name…" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="company">Practice / Firm</label>
+            <input type="text" id="company" name="company" placeholder="Architecture practice…" autocomplete="organization">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@yourpractice.com" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="address">Shipping City</label>
+            <input type="text" id="address" name="shipping_city" placeholder="Where should we ship the box…">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">Note (optional)</label>
+          <textarea id="message" name="message" placeholder="A pattern, material, or project you have in mind…"></textarea>
+        </div>
+
+        <input type="hidden" name="project_type" value="Sample Box Request">
+        <input type="hidden" name="source" value="architects-landing-en">
+        <input type="hidden" name="_subject" value="Sample Box Request — Architects Page (EN)">
+
+        <button type="submit" class="form-submit" id="sampleSubmitBtn">
+          Request the Sample Box
+          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <p class="form-note">Once we have your request, we'll be in touch for the shipping details.</p>
+        <div id="sampleStatus" style="display:none; margin-top:16px; padding:16px; font-size:13px; line-height:1.6; font-weight:300;"></div>
+      </form>
+      <script>
+        (function(){
+          const form = document.getElementById('sampleForm');
+          const status = document.getElementById('sampleStatus');
+          const btn = document.getElementById('sampleSubmitBtn');
+          const btnLabel = 'Request the Sample Box <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>';
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            btn.disabled = true;
+            // Mirror enquiry into the CRM (non-blocking; never affects the Formspree flow)
+            try {
+              const _crm = Object.fromEntries(new FormData(form).entries());
+              fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'x-sl-key': 'sl_web_lead_k7Qm2P' },
+                body: JSON.stringify(_crm)
+              }).catch(() => {});
+            } catch (_) {}
+            btn.innerHTML = 'Sending…';
+            try {
+              const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+              if (res.ok) {
+                status.style.display = 'block';
+                status.style.color = 'var(--gold)';
+                status.style.border = '1px solid var(--gold-dim)';
+                status.textContent = 'Thank you — your sample box request has been received. We will be in touch shortly with the shipping details.';
+                form.reset();
+                btn.innerHTML = 'Sent ✓';
+              } else { throw new Error(); }
+            } catch {
+              status.style.display = 'block';
+              status.style.color = '#e74c3c';
+              status.style.border = '1px solid #e74c3c';
+              status.textContent = 'Something went wrong. Please write to us directly: strategy@studioluminant.com';
+              btn.disabled = false;
+              btn.innerHTML = btnLabel;
+            }
+          });
+        })();
+      </script>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../shared.js"></script>
+<script src="../components.js"></script>
+
+</body>
+</html>

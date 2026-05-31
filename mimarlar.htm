@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mimarlar & Müellifler İçin — Studio Luminant</title>
+<meta name="description" content="Tek tasarım dili, her yüzey, tek tedarikçi. Studio Luminant mimarlar ve proje müellifleri için özel üretim mimari elemanlar üretir — Lumina PMAG™ ve PUCOMP™, BIM-hazır şartname desteğiyle.">
+<!-- DRAFT: not yet linked in nav/sitemap. Remove noindex when approved to go live. -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://studioluminant.com/mimarlar.htm">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="Mimarlar & Müellifler İçin — Studio Luminant">
+<meta property="og:description" content="Tek tasarım dili, her yüzey, tek tedarikçi. Özel üretim mimari elemanlar — BIM-hazır şartname desteğiyle.">
+<meta property="og:url" content="https://studioluminant.com/mimarlar.htm">
+<meta property="og:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mimarlar & Müellifler İçin — Studio Luminant">
+<meta name="twitter:description" content="Tek tasarım dili, her yüzey, tek tedarikçi. Özel üretim mimari elemanlar — BIM-hazır şartname desteğiyle.">
+<meta name="twitter:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<link rel="preload" as="image" type="image/webp" href="images/studio-luminant-petal-geometric-gold-dining-feature-wall.webp">
+
+<style>
+  /* ─── PAGE HERO ─────────────────────── */
+  #page-hero {
+    min-height: 100vh;
+    background-image: url('images/studio-luminant-petal-geometric-gold-dining-feature-wall.jpg');
+    background-image: image-set(
+      url('images/studio-luminant-petal-geometric-gold-dining-feature-wall.webp') type('image/webp'),
+      url('images/studio-luminant-petal-geometric-gold-dining-feature-wall.jpg') type('image/jpeg')
+    );
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+  #page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to top, rgba(12,12,14,0.92) 0%, rgba(12,12,14,0.55) 34%, rgba(12,12,14,0.10) 64%),
+      linear-gradient(160deg, rgba(12,12,14,0.78) 0%, rgba(12,12,14,0.40) 50%, rgba(12,12,14,0.20) 100%);
+    z-index: 1; pointer-events: none;
+  }
+  .page-hero-content { position: relative; z-index: 2; padding: 160px 60px 100px; max-width: 860px; }
+  .page-hero-eyebrow { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 40px;
+    opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards; }
+  .page-hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+  .page-hero-eyebrow span { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
+  .page-hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(54px, 6.4vw, 104px);
+    font-weight: 300; line-height: 0.96; letter-spacing: -0.02em; color: var(--text-primary);
+    margin-bottom: 32px; opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards; }
+  .page-hero-headline em { font-style: italic; color: var(--gold); }
+  .page-hero-sub { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--text-secondary);
+    max-width: 540px; margin-bottom: 44px; opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards; }
+  .page-hero-cta { opacity: 0; animation: fadeUp 0.9s ease 0.9s forwards; }
+
+  /* ─── GENERIC SECTION SHELL ─────────── */
+  .arc-section { padding: 120px 0; border-top: 1px solid var(--border); }
+  .arc-section.deep { background: var(--deep); }
+  .arc-section.obsidian { background: var(--obsidian); }
+  .arc-section.surface { background: var(--surface); }
+  .arc-head { max-width: 720px; margin-bottom: 64px; }
+  .arc-eyebrow { font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); font-weight: 400; margin-bottom: 20px; }
+  .arc-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 60px);
+    font-weight: 300; line-height: 1.02; color: var(--text-primary); }
+  .arc-title em { font-style: italic; color: var(--gold); }
+  .arc-lead { font-size: 15px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 600px; margin-top: 24px; }
+
+  /* ─── APPLICATION MATRIX ────────────── */
+  .matrix { width: 100%; border-collapse: collapse; }
+  .matrix th, .matrix td { text-align: left; padding: 20px 4px; border-bottom: 1px solid var(--border); vertical-align: baseline; }
+  .matrix th { font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--text-muted); font-weight: 400; }
+  .matrix td.surface-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text-primary); width: 34%; }
+  .matrix td.mat { width: 26%; }
+  .matrix td.mat span { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .matrix td.why { font-size: 13px; line-height: 1.6; color: var(--text-secondary); font-weight: 300; }
+  .matrix-note { font-size: 12px; color: var(--text-muted); font-weight: 300; margin-top: 28px; }
+
+  /* ─── MATERIAL CARDS ────────────────── */
+  .mat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .mat-card { background: var(--deep); border: 1px solid var(--border); padding: 56px 48px; }
+  .mat-tag { font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .mat-name { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; color: var(--text-primary); margin-bottom: 28px; }
+  .mat-list { list-style: none; padding: 0; margin: 0 0 32px; }
+  .mat-list li { position: relative; padding-left: 24px; margin-bottom: 14px; font-size: 13.5px; line-height: 1.6; color: var(--text-secondary); font-weight: 300; }
+  .mat-list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+  .mat-apps { font-size: 11px; line-height: 1.7; color: var(--text-muted); font-weight: 300; border-top: 1px solid var(--border); padding-top: 20px; }
+  .mat-apps b { display: block; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 8px; font-weight: 400; }
+
+  /* ─── DISCIPLINE GRID ───────────────── */
+  .disc-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+  .disc-grid div { border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 28px 26px; }
+  .disc-grid .num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold-dim); display: block; margin-bottom: 10px; }
+  .disc-grid .disc-name { font-size: 13px; line-height: 1.5; color: var(--text-secondary); font-weight: 300; }
+
+  /* ─── SPEC STRIP ────────────────────── */
+  .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+  .spec-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--text-primary); margin-bottom: 14px; }
+  .spec-item h3 .mk { color: var(--gold); }
+  .spec-item p { font-size: 13.5px; line-height: 1.75; color: var(--text-secondary); font-weight: 300; }
+
+  /* ─── SAMPLE BOX / CTA ──────────────── */
+  #numune { background: var(--deep); border-top: 1px solid var(--border); }
+  .sample-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; }
+  .sample-left { padding: 120px 80px; border-right: 1px solid var(--border); position: relative; overflow: hidden;
+    background-image: url('images/studio-luminant-sample-box-four-material-systems.jpg');
+    background-image: image-set(
+      url('images/studio-luminant-sample-box-four-material-systems.webp') type('image/webp'),
+      url('images/studio-luminant-sample-box-four-material-systems.jpg') type('image/jpeg'));
+    background-size: cover; background-position: center right; }
+  .sample-left::before { content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(12,12,14,0.95) 0%, rgba(12,12,14,0.86) 40%, rgba(12,12,14,0.45) 72%, rgba(12,12,14,0.22) 100%);
+    pointer-events: none; }
+  .sample-left > * { position: relative; }
+  .sample-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 4vw, 64px); font-weight: 300; line-height: 1.0; color: var(--text-primary); margin-bottom: 28px; }
+  .sample-headline em { font-style: italic; color: var(--gold); }
+  .sample-body { font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 420px; margin-bottom: 22px; }
+  .sample-list { list-style: none; padding: 0; margin: 28px 0 0; }
+  .sample-list li { position: relative; padding-left: 22px; margin-bottom: 12px; font-size: 12.5px; color: var(--text-secondary); font-weight: 300; }
+  .sample-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border: 1px solid var(--gold-dim); border-radius: 50%; }
+  .sample-right { padding: 120px 80px; background: var(--surface); display: flex; flex-direction: column; justify-content: center; }
+  .form-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text-primary); margin-bottom: 40px; }
+  .contact-form { display: flex; flex-direction: column; gap: 0; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 2px; }
+  .form-field { display: flex; flex-direction: column; margin-bottom: 2px; }
+  .form-field label { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; font-weight: 400; }
+  .form-field input, .form-field textarea { background: var(--deep); border: 1px solid var(--border); color: var(--text-primary);
+    font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; padding: 14px 16px; transition: border-color 0.3s; -webkit-appearance: none; appearance: none; }
+  .form-field input:focus, .form-field textarea:focus { border-color: var(--gold); }
+  .form-field input::placeholder, .form-field textarea::placeholder { color: var(--text-muted); }
+  .form-field textarea { resize: vertical; min-height: 96px; line-height: 1.7; }
+  .form-submit { display: flex; align-items: center; justify-content: center; gap: 12px; font-family: 'Jost', sans-serif;
+    font-size: 11px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; color: var(--obsidian); background: var(--gold);
+    padding: 16px 32px; border: none; cursor: pointer; width: 100%; margin-top: 2px; transition: background 0.3s, gap 0.3s; }
+  .form-submit:hover { background: var(--gold-light); gap: 20px; }
+  .form-submit svg { width: 14px; height: 14px; }
+  .form-note { font-size: 10px; color: var(--text-muted); margin-top: 14px; font-weight: 300; line-height: 1.6; }
+
+  /* ─── RESPONSIVE ────────────────────── */
+  @media (max-width: 1024px) {
+    .page-hero-content { padding: 140px 32px 80px; }
+    .arc-section { padding: 80px 0; }
+    .arc-head { margin-bottom: 44px; }
+    .mat-grid { grid-template-columns: 1fr; }
+    .disc-grid { grid-template-columns: repeat(2, 1fr); }
+    .spec-grid { grid-template-columns: 1fr; gap: 36px; }
+    .sample-grid { grid-template-columns: 1fr; }
+    .sample-left { padding: 64px 32px; border-right: none; border-bottom: 1px solid var(--border); }
+    .sample-right { padding: 56px 32px; }
+    .mat-card { padding: 44px 32px; }
+    .matrix td.surface-name { font-size: 19px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .disc-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZ0SGLKLH0');
+</script>
+</head>
+<body>
+
+<div id="site-nav" data-lang="tr" data-lang-url="en/"></div>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow"><span>Mimarlar & Müellifler İçin</span></div>
+    <h1 class="page-hero-headline">
+      Tek tasarım dili.<br><em>Her yüzey.</em>
+    </h1>
+    <p class="page-hero-sub">
+      Studio Luminant, tek bir rölyef desenini duvardan tavana, kolondan özel duvara kadar üretir — her uygulama için doğru malzemeye dökerek. Tasarım, modelleme, kalıp, döküm ve bitirme tek çatı altında: daha az aktarım, daha az tolerans boşluğu, tek muhatap.
+    </p>
+    <div class="page-hero-cta">
+      <a href="#numune" class="btn-primary">
+        Numune Kutusunu İsteyin
+        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- UNIFIED DESIGN SYSTEM -->
+<section class="arc-section deep">
+  <div class="section-inner">
+    <div class="arc-head reveal">
+      <div class="arc-eyebrow">Bütünleşik Tasarım Sistemi</div>
+      <h2 class="arc-title">Bir kez tasarlayın,<br><em>her yerde uygulayın.</em></h2>
+      <p class="arc-lead">
+        Duvarlar, tavanlar, kolonlar ve özel elemanlar çoğu zaman ayrı tedarikçilerden gelir — her biri kendi toleransı, teslim süresi ve bitirme farklılığıyla. AIAPM (AI-Assisted Product Modelling) masterı malzemeden bağımsızdır; geometri tek bir dijital masterda ve tek bir silikon kalıpta tutulur. Yüzeyler arasında yalnızca döküm malzemesi değişir — yani mekânsal bütünlük sahada kovalanmaz, en baştan tasarıma işlenir.
+      </p>
+    </div>
+    <table class="matrix reveal">
+      <thead><tr><th>Yüzey</th><th>Malzeme</th><th>Neden</th></tr></thead>
+      <tbody>
+        <tr><td class="surface-name">Duvar panelleri</td><td class="mat"><span>Lumina PMAG™</span></td><td class="why">Büyük format, 3000 × 1500 mm'ye kadar</td></tr>
+        <tr><td class="surface-name">Tavan panelleri</td><td class="mat"><span>Lumina PMAG™</span></td><td class="why">Ağırlığa duyarlı uygulamalar</td></tr>
+        <tr><td class="surface-name">Söve & asma tavan geçişleri</td><td class="mat"><span>Lumina PMAG™</span></td><td class="why">Sürekli mimari detay</td></tr>
+        <tr><td class="surface-name">Kolon kaplamaları</td><td class="mat"><span>Lumina PUCOMP™</span></td><td class="why">Karmaşık eğrilikler, 8–25 mm ince profiller</td></tr>
+        <tr><td class="surface-name">Özel duvarlar</td><td class="mat"><span>Lumina PUCOMP™</span></td><td class="why">Maksimum doku çözünürlüğü</td></tr>
+        <tr><td class="surface-name">Resepsiyon bankoları</td><td class="mat"><span>Lumina PUCOMP™</span></td><td class="why">Detay sadakati, hafif</td></tr>
+      </tbody>
+    </table>
+    <p class="matrix-note reveal">Tek silikon kalıp geometriyi birebir alır. Yalnızca döküm malzemesi değişir.</p>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="arc-section obsidian">
+  <div class="section-inner">
+    <div class="arc-head reveal">
+      <div class="arc-eyebrow">Malzemeler</div>
+      <h2 class="arc-title">İki mühendislik <em>formülasyonu.</em></h2>
+    </div>
+    <div class="mat-grid">
+      <div class="mat-card reveal">
+        <div class="mat-tag">Lumina PMAG™ · Polimer Modifiyeli Alfa Alçı</div>
+        <div class="mat-name">PMAG™</div>
+        <ul class="mat-list">
+          <li>Polimer modifiyeli, kütlece %95+ mineral</li>
+          <li>Neme dayanıklı, seramik pürüzsüzlüğünde yüzey</li>
+          <li>Büyük format — 3000 × 1500 mm'ye kadar</li>
+          <li>BIM nesneleriyle teslim (IFC)</li>
+          <li>150°C'de kalsine; kesim artıkları geri dönüştürülebilir</li>
+        </ul>
+        <div class="mat-apps"><b>Uygulamalar</b>Duvar ve tavan panelleri · söve · asma tavan geçişleri · heykelsi yüzeyler</div>
+      </div>
+      <div class="mat-card reveal">
+        <div class="mat-tag">Lumina PUCOMP™</div>
+        <div class="mat-name">PUCOMP™</div>
+        <ul class="mat-list">
+          <li>Dış mekân ve ıslak hacim onaylı</li>
+          <li>Karmaşık eğrilikler mümkün</li>
+          <li>İnce profiller — 8 ila 25 mm</li>
+          <li>Maksimum doku çözünürlüğü</li>
+        </ul>
+        <div class="mat-apps"><b>Uygulamalar</b>Kolon kaplamaları · özel duvarlar · resepsiyon bankoları · detay-kritik elemanlar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITY DEPTH -->
+<section class="arc-section deep">
+  <div class="section-inner">
+    <div class="arc-head reveal">
+      <div class="arc-eyebrow">Yetkinlik Derinliği</div>
+      <h2 class="arc-title">On iki disiplin, <em>tek tesis.</em></h2>
+      <p class="arc-lead">Bütünleşik Tasarım Sistemi'ni uygulanabilir — ve taklit edilmesi zor — kılan genişlik.</p>
+    </div>
+    <div class="disc-grid reveal">
+      <div><span class="num">01</span><span class="disc-name">Vakum döküm</span></div>
+      <div><span class="num">02</span><span class="disc-name">Soğuk döküm metal</span></div>
+      <div><span class="num">03</span><span class="disc-name">Reaktif asit boyama</span></div>
+      <div><span class="num">04</span><span class="disc-name">Kimyasal patina</span></div>
+      <div><span class="num">05</span><span class="disc-name">GRG — cam elyaf takviyeli alçı</span></div>
+      <div><span class="num">06</span><span class="disc-name">GFRC — cam elyaf takviyeli beton</span></div>
+      <div><span class="num">07</span><span class="disc-name">3D baskı master modeller</span></div>
+      <div><span class="num">08</span><span class="disc-name">Silikon kalıp üretimi</span></div>
+      <div><span class="num">09</span><span class="disc-name">Büyük format döküm</span></div>
+      <div><span class="num">10</span><span class="disc-name">Tek kalıptan çok malzeme</span></div>
+      <div><span class="num">11</span><span class="disc-name">Artizan finish</span></div>
+      <div><span class="num">12</span><span class="disc-name">BIM nesne üretimi</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILT FOR SPECIFICATION -->
+<section class="arc-section obsidian">
+  <div class="section-inner">
+    <div class="arc-head reveal">
+      <div class="arc-eyebrow">Şartname İçin Tasarlandı</div>
+      <h2 class="arc-title">Modelinize hazır, <em>belgeli.</em></h2>
+    </div>
+    <div class="spec-grid reveal">
+      <div class="spec-item">
+        <h3>BIM <span class="mk">uyumlu</span></h3>
+        <p>Modeliniz için IFC nesneleri, finish şemaları ve teknik veri sayfaları — şartname sürecinize doğrudan girer.</p>
+      </div>
+      <div class="spec-item">
+        <h3>LuminClip™</h3>
+        <p>Temiz panel montajı için gizli montaj sistemi. Görünür bağlantı yok.</p>
+      </div>
+      <div class="spec-item">
+        <h3>Sipariş <span class="mk">üzerine</span></h3>
+        <p>Şartnameye göre üretim, sıfır fazla üretim. EXW Sapanca; gerektiğinde montaj proje bazında fiyatlanır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE BOX + CTA -->
+<section id="numune">
+  <div class="sample-grid">
+    <div class="sample-left">
+      <div class="arc-eyebrow reveal">Numune Kutusu</div>
+      <h2 class="sample-headline reveal">Dört malzeme sistemi,<br><em>elinizde.</em></h2>
+      <p class="sample-body reveal">
+        Yüzey kalitesi fotoğrafa gelmez. Fiziksel bir numune kutusu gönderiyoruz — kendi ışığınız altında, eğik bakışla inceleyebileceğiniz farklı malzeme ve bitirme sistemleri. Böylece şartname kararı bir render üzerinden değil, kanıt üzerinden verilir.
+      </p>
+      <ul class="sample-list reveal">
+        <li>Dört ayrı malzeme ve artizan finish sistemi</li>
+        <li>Ücretsiz — taahhüt gerektirmez</li>
+        <li>İsteğe bağlı BIM nesneleri ve finish şeması ile birlikte</li>
+      </ul>
+    </div>
+    <div class="sample-right">
+      <div class="form-title reveal">Numune Kutusunu İsteyin</div>
+      <!-- DEDICATED sample-box Formspree endpoint (isolated from the main project-enquiry form xpqygpjw).
+           ACTION REQUIRED: create a new form at formspree.io and replace SAMPLE_BOX_FORM_ID below with its ID. -->
+      <form class="contact-form reveal" id="sampleForm" action="https://formspree.io/f/SAMPLE_BOX_FORM_ID" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">İsim</label>
+            <input type="text" id="name" name="name" placeholder="Adınız ve soyadınız…" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="company">Ofis / Firma</label>
+            <input type="text" id="company" name="company" placeholder="Mimarlık ofisi…" autocomplete="organization">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">E-posta</label>
+            <input type="email" id="email" name="email" placeholder="email@adresiniz.com" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="address">Gönderim Şehri</label>
+            <input type="text" id="address" name="shipping_city" placeholder="Numunenin gönderileceği şehir…">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">Not (isteğe bağlı)</label>
+          <textarea id="message" name="message" placeholder="İlgilendiğiniz bir desen, malzeme ya da proje varsa yazabilirsiniz…"></textarea>
+        </div>
+
+        <input type="hidden" name="project_type" value="Numune Kutusu Talebi">
+        <input type="hidden" name="source" value="mimarlar-landing">
+        <input type="hidden" name="_subject" value="Numune Kutusu Talebi — Mimar Sayfası">
+
+        <button type="submit" class="form-submit" id="sampleSubmitBtn">
+          Numune Kutusunu İste
+          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <p class="form-note">Talebinizi aldıktan sonra adres ve gönderim detayları için sizinle iletişime geçeriz.</p>
+        <div id="sampleStatus" style="display:none; margin-top:16px; padding:16px; font-size:13px; line-height:1.6; font-weight:300;"></div>
+      </form>
+      <script>
+        (function(){
+          const form = document.getElementById('sampleForm');
+          const status = document.getElementById('sampleStatus');
+          const btn = document.getElementById('sampleSubmitBtn');
+          const btnLabel = 'Numune Kutusunu İste <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>';
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            btn.disabled = true;
+            // Mirror enquiry into the CRM (non-blocking; never affects the Formspree flow)
+            try {
+              const _crm = Object.fromEntries(new FormData(form).entries());
+              fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'x-sl-key': 'sl_web_lead_k7Qm2P' },
+                body: JSON.stringify(_crm)
+              }).catch(() => {});
+            } catch (_) {}
+            btn.innerHTML = 'Gönderiliyor…';
+            try {
+              const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+              if (res.ok) {
+                status.style.display = 'block';
+                status.style.color = 'var(--gold)';
+                status.style.border = '1px solid var(--gold-dim)';
+                status.textContent = 'Teşekkür ederiz — numune kutusu talebiniz alınmıştır. Gönderim detayları için kısa süre içinde sizinle iletişime geçeceğiz.';
+                form.reset();
+                btn.innerHTML = 'Gönderildi ✓';
+              } else { throw new Error(); }
+            } catch {
+              status.style.display = 'block';
+              status.style.color = '#e74c3c';
+              status.style.border = '1px solid #e74c3c';
+              status.textContent = 'Bir sorun oluştu. Lütfen bize doğrudan yazın: strategy@studioluminant.com';
+              btn.disabled = false;
+              btn.innerHTML = btnLabel;
+            }
+          });
+        })();
+      </script>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="shared.js"></script>
+<script src="components.js"></script>
+
+</body>
+</html>

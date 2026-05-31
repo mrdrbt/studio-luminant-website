@@ -310,7 +310,7 @@ footer {
 .footer-logo-img { height: 52px; width: auto; display: block; margin-bottom: 16px; opacity: 0.9; }
 
 /* ─── SCROLL REVEAL ─────────────────── */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; transition-delay: var(--reveal-delay, 0s); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ─── ANIMATIONS ────────────────────── */
