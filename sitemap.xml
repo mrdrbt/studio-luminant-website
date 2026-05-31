@@ -127,4 +127,16 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+
+<url>
+  <loc>https://studioluminant.com/compass-star-bim-paketi.htm</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://studioluminant.com/en/compass-star-bim-pack.htm</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
 </urlset>
