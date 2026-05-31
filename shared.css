@@ -128,7 +128,7 @@
   /* ── Z-INDEX SCALE ────────────────── */
   --z-base:            1;
   --z-grain:           1;
-  --z-nav:             1000;   /* production value — beta-banner sits above at 10001 */
+  --z-nav:             1000;
   --z-overlay:         1100;
   --z-overlay-surface: 1101;
   --z-toast:           200;
@@ -319,24 +319,7 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ─── BETA BANNER + SKIP LINK ────────── */
-.beta-banner {
-  display: flex; align-items: center; justify-content: center;
-  gap: 16px;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  padding: 8px 16px;
-  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--text-secondary);
-  position: relative; z-index: 10001;
-}
-.beta-close {
-  background: none; border: none; color: var(--text-muted);
-  font-size: 18px; cursor: pointer; padding: 0 4px;
-  line-height: 1; transition: color 0.2s;
-}
-.beta-close:hover { color: var(--gold); }
-
+/* ─── SKIP LINK ────────── */
 .skip-link {
   position: absolute; top: -100%; left: 16px;
   background: var(--gold); color: var(--obsidian);
