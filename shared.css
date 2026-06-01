@@ -782,3 +782,85 @@ summary:focus-visible,
   border-color: var(--gold);
   color: var(--gold);
 }
+
+/* === Workshop Filmstrip === */
+#workshop-filmstrip {
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+}
+
+.filmstrip-intro {
+  text-align: center;
+  padding: var(--s-10) var(--pad-x);
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.filmstrip-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--t-eyebrow);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--s-4);
+}
+
+.filmstrip-tagline {
+  font-size: var(--t-body-lg);
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.filmstrip-frame {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.filmstrip-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.filmstrip-frame::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 45%;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.65));
+  pointer-events: none;
+}
+
+.filmstrip-caption {
+  position: absolute;
+  bottom: var(--s-7);
+  left: var(--pad-x);
+  z-index: 1;
+  max-width: 480px;
+}
+
+.filmstrip-num {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--t-eyebrow);
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: var(--s-2);
+}
+
+.filmstrip-caption-text {
+  font-family: var(--font-body);
+  font-size: var(--t-body);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .filmstrip-frame { height: 55vh; }
+  .filmstrip-caption { left: var(--pad-x-sm); bottom: var(--s-6); }
+}
