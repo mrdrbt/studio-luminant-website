@@ -263,11 +263,25 @@
   (function(){
     var form=document.getElementById('lead-form'),success=document.getElementById('success');
     function enc(d){return Object.keys(d).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(d[k]);}).join('&');}
-    form.addEventListener('submit',function(e){
+    form.addEventListener('submit',async function(e){
       e.preventDefault();
       var fd=new FormData(form),data={};fd.forEach(function(v,k){data[k]=v;});
-      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc(data)}).catch(function(){}).finally(reveal);
-      if(typeof gtag==='function'){gtag('event','generate_lead',{lead_magnet:'compass-star-bim-pack',firm:data.firm||''});}
+      var btn=form.querySelector('button[type=submit]'); if(btn){btn.disabled=true;}
+      // Notification backup — Netlify Forms (non-blocking; CRM capture below is the source of truth)
+      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc(data)}).catch(function(){});
+      // Primary: capture into the CRM. Map BIM fields -> lead-intake contract (firm -> company).
+      var crm={name:data.name,email:data.email,company:data.firm||'',project_type:'BIM Pack — Compass-Star',
+        message:['Rol: '+(data.role||'—'),'Şehir: '+(data.city||'—')].join('\n')};
+      try{
+        var res=await fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake',{
+          method:'POST',headers:{'Content-Type':'application/json','x-sl-key':'sl_web_lead_k7Qm2P'},body:JSON.stringify(crm)});
+        if(!res.ok){throw new Error();}
+        if(typeof gtag==='function'){gtag('event','generate_lead',{lead_magnet:'compass-star-bim-pack',firm:data.firm||''});}
+        reveal();
+      }catch(_){
+        if(btn){btn.disabled=false;}
+        alert('Bir sorun oluştu. Lütfen tekrar deneyin veya strategy@studioluminant.com adresine yazın.');
+      }
     });
     function reveal(){form.style.display='none';success.classList.add('show');
       success.scrollIntoView({behavior:'smooth',block:'center'});

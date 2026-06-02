@@ -313,21 +313,18 @@
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         btn.disabled = true;
-        // Mirror enquiry into the CRM (non-blocking; never affects the Formspree flow)
+        btn.innerHTML = 'Gönderiliyor…';
+        const data = Object.fromEntries(new FormData(form).entries());
+        // Notification backup — Formspree email (non-blocking; CRM capture below is the source of truth)
+        if (form.action) {
+          fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }).catch(() => {});
+        }
         try {
-          const _crm = Object.fromEntries(new FormData(form).entries());
-          fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake', {
+          // Primary: capture into the CRM
+          const res = await fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'x-sl-key': 'sl_web_lead_k7Qm2P' },
-            body: JSON.stringify(_crm)
-          }).catch(() => {});
-        } catch (_) {}
-        btn.innerHTML = 'Gönderiliyor…';
-        try {
-          const res = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
+            body: JSON.stringify(data)
           });
           if (res.ok) {
             status.style.display = 'block';
