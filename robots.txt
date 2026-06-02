@@ -3,3 +3,4 @@ Allow: /
 Disallow: /downloads/
 
 Sitemap: https://studioluminant.com/sitemap.xml
+Sitemap: https://studioluminant.com/sitemap-images.xml

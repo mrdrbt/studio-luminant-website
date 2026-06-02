@@ -5,138 +5,189 @@
     <loc>https://studioluminant.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/urunler.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/koleksiyon.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/surec.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/galeri.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/kaynaklar.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/kaynaklar-sartname-rehberi.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/kaynaklar-agirlik-yapisal.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/kaynaklar-yuzey-kaplamalari.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/kaynaklar-teslimat-sureci.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/kaynaklar-surdurulebilirlik.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/iletisim.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/mimarlar.htm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <!-- English pages (/en/) -->
   <url>
     <loc>https://studioluminant.com/en/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/products.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/collection.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/process.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/gallery.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/en/case-study-petal-lounge.htm</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/en/case-study-wave-lounge.htm</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/en/architects.htm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/resources.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/resources-specification-guide.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/resources-weight-structural.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/resources-finishes.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/resources-lead-times.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/resources-sustainability.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/lookbook.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com/en/contact.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <lastmod>2026-06-02</lastmod>
   </url>
 
 <url>
   <loc>https://studioluminant.com/compass-star-bim-paketi.htm</loc>
   <changefreq>yearly</changefreq>
   <priority>0.6</priority>
+  <lastmod>2026-06-02</lastmod>
 </url>
 
 <url>
   <loc>https://studioluminant.com/en/compass-star-bim-pack.htm</loc>
   <changefreq>yearly</changefreq>
   <priority>0.6</priority>
+  <lastmod>2026-06-02</lastmod>
 </url>
 </urlset>
