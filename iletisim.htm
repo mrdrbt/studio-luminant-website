@@ -299,6 +299,9 @@
       </div>
 
       <input type="hidden" name="_subject" value="Yeni Proje Talebi — Studio Luminant">
+      <input type="hidden" name="source" value="contact-tr">
+      <!-- honeypot: hidden from people; bots that fill it are silently dropped by lead-intake + Formspree -->
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 
       <button type="submit" class="form-submit" id="submitBtn">
         Talep Gönder

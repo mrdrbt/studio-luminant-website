@@ -277,7 +277,7 @@
       // Notification backup — Netlify Forms (non-blocking; CRM capture below is the source of truth)
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc(data)}).catch(function(){});
       // Primary: capture into the CRM. Map BIM fields -> lead-intake contract (firm -> company).
-      var crm={name:data.name,email:data.email,company:data.firm||'',project_type:'BIM Pack — Compass-Star',
+      var crm={name:data.name,email:data.email,company:data.firm||'',project_type:'BIM Pack — Compass-Star',source:'compass-star-bim-en',_gotcha:data['bot-field']||'',
         message:['Role: '+(data.role||'—'),'City: '+(data.city||'—')].join('\n')};
       try{
         var res=await fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake',{
