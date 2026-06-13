@@ -273,8 +273,9 @@
       // Notification backup — Netlify Forms (non-blocking; CRM capture below is the source of truth)
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc(data)}).catch(function(){});
       // Primary: capture into the CRM. Map BIM fields -> lead-intake contract (firm -> company).
-      var crm={name:data.name,email:data.email,company:data.firm||'',project_type:'BIM Pack — Compass-Star',source:'compass-star-bim',_gotcha:data['bot-field']||'',
-        message:['Rol: '+(data.role||'—'),'Şehir: '+(data.city||'—')].join('\n')};
+      function utm(){var p=new URLSearchParams(location.search),o={};['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(n){var v=p.get(n);if(v){o[n]=v.slice(0,160);}});return o;}
+      var crm=Object.assign({name:data.name,email:data.email,company:data.firm||'',project_type:'BIM Pack — Compass-Star',source:'compass-star-bim',_gotcha:data['bot-field']||'',
+        message:['Rol: '+(data.role||'—'),'Şehir: '+(data.city||'—')].join('\n')},utm());
       try{
         var res=await fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake',{
           method:'POST',headers:{'Content-Type':'application/json','x-sl-key':'sl_web_lead_k7Qm2P'},body:JSON.stringify(crm)});
