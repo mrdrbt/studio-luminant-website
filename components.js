@@ -238,6 +238,8 @@ ${mobileItemsHtml}
     ctaBtn: 'Proje Başlat',
     ctaHref: 'iletisim.htm',
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
+    journalHref: 'makaleler.htm',
+    journalText: 'Makaleler',
     bimHref: '',
     bimText: ''
   } : {
@@ -252,6 +254,8 @@ ${mobileItemsHtml}
     ctaBtn: 'Initiate Project',
     ctaHref: 'contact.htm',
     copyright: '© 2026 Studio Luminant. All Rights Reserved.',
+    journalHref: 'journal.htm',
+    journalText: 'Journal',
     bimHref: '',
     bimText: ''
   };
@@ -288,6 +292,7 @@ ${mobileItemsHtml}
     <div class="footer-bottom">
       <p class="footer-copy">${footerContent.copyright}</p>
       <ul class="footer-links">
+        <li><a href="${footerContent.journalHref}">${footerContent.journalText}</a></li>
         ${footerContent.bimText ? `<li><a href="${footerContent.bimHref}">${footerContent.bimText}</a></li>` : ''}
       </ul>
     </div>

@@ -190,4 +190,48 @@
   <priority>0.6</priority>
   <lastmod>2026-06-02</lastmod>
 </url>
+
+  <!-- Journal / Makaleler (added 2026-06-14) -->
+  <url>
+    <loc>https://studioluminant.com/makaleler.htm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/ozel-uretim-duvar-paneli-mimar-rehberi.htm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/en/journal.htm</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/en/how-to-specify-custom-cast-wall-panels.htm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/mimari-rolyef-panel-nedir.htm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/heykelsi-duvar-paneli-nedir.htm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/en/what-are-sculptural-cast-wall-panels.htm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
 </urlset>

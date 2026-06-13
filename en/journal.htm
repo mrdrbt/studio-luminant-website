@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Architectural Relief Panel Guides — Studio Luminant</title>
+<meta name="description" content="Guides for architects specifying bespoke architectural relief and cast wall panels: how to specify, material choice, specification, and BIM. The Studio Luminant journal.">
+<link rel="canonical" href="https://studioluminant.com/en/journal.htm">
+  <link rel="alternate" hreflang="tr" href="https://studioluminant.com/makaleler.htm">
+  <link rel="alternate" hreflang="en" href="https://studioluminant.com/en/journal.htm">
+  <link rel="alternate" hreflang="x-default" href="https://studioluminant.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="Journal — Studio Luminant">
+<meta property="og:description" content="Guides for architects specifying bespoke architectural relief and cast wall panels.">
+<meta property="og:url" content="https://studioluminant.com/en/journal.htm">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Journal — Studio Luminant">
+<meta name="twitter:description" content="Guides for architects specifying bespoke architectural relief and cast wall panels.">
+<meta property="og:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
+<meta name="twitter:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+
+<style>
+  .nav-links a.active { color: var(--gold); }
+  #page-hero { min-height: 56vh; display: flex; align-items: flex-end; position: relative; background: var(--deep); border-bottom: 1px solid var(--border); }
+  .page-hero-content { position: relative; z-index: 2; padding: 160px 60px 90px; max-width: 800px; }
+  .page-hero-eyebrow { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 40px; opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards; }
+  .page-hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+  .page-hero-eyebrow span { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
+  .page-hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(60px, 7vw, 104px); font-weight: 300; line-height: 0.92; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 36px; opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards; }
+  .page-hero-headline em { font-style: italic; color: var(--gold); }
+  .page-hero-sub { font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--text-secondary); max-width: 540px; opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards; }
+  .articles-section { padding: 100px 0; }
+  .article-grid { display: grid; grid-template-columns: 1fr; gap: 2px; }
+  .article-card { background: var(--surface); padding: 48px 60px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; transition: background 0.3s ease; text-decoration: none; color: inherit; }
+  .article-card:hover { background: var(--surface-2); }
+  .article-card-eyebrow { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 18px; }
+  .article-card-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 36px); font-weight: 300; line-height: 1.1; color: var(--text-primary); margin-bottom: 16px; }
+  .article-card-title em { font-style: italic; color: var(--gold); }
+  .article-card-desc { font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--text-secondary); max-width: 580px; }
+  .article-card-arrow { width: 48px; height: 48px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; transition: border-color 0.3s, background 0.3s; flex-shrink: 0; }
+  .article-card:hover .article-card-arrow { border-color: var(--gold); background: var(--gold); }
+  .article-card-arrow svg { width: 16px; height: 16px; color: var(--text-muted); transition: color 0.3s; }
+  .article-card:hover .article-card-arrow svg { color: var(--obsidian); }
+  .article-card.upcoming { background: transparent; border: 1px dashed var(--border); cursor: default; }
+  .article-card.upcoming:hover { background: transparent; }
+  .article-card.upcoming .article-card-title { color: var(--text-muted); }
+  .article-card.upcoming .article-card-eyebrow { color: var(--text-muted); }
+  #journal-cta { padding: 120px 0; background: var(--deep); border-top: 1px solid var(--border); text-align: center; }
+  .cta-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 4vw, 72px); font-weight: 300; line-height: 1.0; color: var(--text-primary); margin-bottom: 28px; }
+  .cta-headline em { font-style: italic; color: var(--gold); }
+  .cta-sub { font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 520px; margin: 0 auto 48px; }
+  @media (max-width: 1024px) { .page-hero-content { padding: 140px 32px 70px; } .article-card { padding: 36px 32px; } }
+  @media (max-width: 600px) { .article-card { grid-template-columns: 1fr; gap: 24px; } .article-card-arrow { width: 40px; height: 40px; } }
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZ0SGLKLH0');
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com/en/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioluminant.com/en/journal.htm"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Blog", "name": "Studio Luminant Journal", "url": "https://studioluminant.com/en/journal.htm", "inLanguage": "en", "publisher": {"@type": "Organization", "name": "Studio Luminant"}, "blogPost": [{"@type": "BlogPosting", "headline": "How to Specify Custom Cast Wall Panels — An Architect's Guide", "url": "https://studioluminant.com/en/how-to-specify-custom-cast-wall-panels.htm", "datePublished": "2026-06-14"}, {"@type": "BlogPosting", "headline": "What Are Sculptural Cast Wall Panels?", "url": "https://studioluminant.com/en/what-are-sculptural-cast-wall-panels.htm", "datePublished": "2026-06-14"}]}
+</script>
+</head>
+<body>
+
+<div id="site-nav" data-lang="en" data-base="../" data-lang-url="../makaleler.htm"></div>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">
+      <span>Journal</span>
+    </div>
+    <h1 class="page-hero-headline">
+      Guides for<br><em>Specifiers.</em>
+    </h1>
+    <p class="page-hero-sub">
+      Practical guides for architects and interior designers bringing architectural relief and bespoke cast wall panels into their projects — how to specify, which material, which clause.
+    </p>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles-section" style="background: var(--obsidian);">
+  <div class="section-inner">
+    <div class="article-grid">
+
+      <a href="how-to-specify-custom-cast-wall-panels.htm" class="article-card reveal">
+        <div>
+          <div class="article-card-eyebrow">Architect's Guide</div>
+          <h2 class="article-card-title">How to Specify Custom <em>Cast Wall Panels</em></h2>
+          <p class="article-card-desc">Eight steps from brief to installation: context, material, sample, format and m², BIM documents, fixing, delivery, and installation. The complete path to specifying a bespoke relief panel correctly.</p>
+        </div>
+        <div class="article-card-arrow">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+      <a href="what-are-sculptural-cast-wall-panels.htm" class="article-card reveal">
+        <div>
+          <div class="article-card-eyebrow">Definition</div>
+          <h2 class="article-card-title">What Are Sculptural <em>Cast Wall Panels?</em></h2>
+          <p class="article-card-desc">A definitional guide to sculptural, tactile cast surfaces — and how bespoke relief panels differ from modular decorative tiles.</p>
+        </div>
+        <div class="article-card-arrow">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+      <div class="article-card upcoming reveal">
+        <div>
+          <div class="article-card-eyebrow">In Preparation</div>
+          <h2 class="article-card-title">GRG vs GRC for Interior Surfaces — <em>Where Mineral Cast Fits</em></h2>
+          <p class="article-card-desc">A specifier's comparison of common cast systems and where a mineral cast relief panel sits among them.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="journal-cta">
+  <div class="section-inner">
+    <h2 class="cta-headline reveal">
+      Let's Talk About<br><em>Your Project.</em>
+    </h2>
+    <p class="cta-sub reveal">
+      Share your brief and we will respond with a material recommendation, a draft specification clause, and a physical sample.
+    </p>
+    <a href="contact.htm" class="btn-primary reveal">
+      Initiate Project
+      <svg viewBox="0 0 14 14" fill="none">
+        <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+      </svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../shared.js"></script>
+<script src="../components.js"></script>
+
+</body>
+</html>

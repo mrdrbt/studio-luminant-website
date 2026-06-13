@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Makaleler — Mimari Rölyef Panel Rehberleri — Studio Luminant</title>
+<meta name="description" content="Mimari rölyef ve özel üretim duvar panellerini belirleyen mimarlar için rehberler: nasıl sipariş edilir, malzeme seçimi, şartname ve BIM. Studio Luminant makaleleri.">
+<link rel="canonical" href="https://studioluminant.com/makaleler.htm">
+  <link rel="alternate" hreflang="tr" href="https://studioluminant.com/makaleler.htm">
+  <link rel="alternate" hreflang="en" href="https://studioluminant.com/en/journal.htm">
+  <link rel="alternate" hreflang="x-default" href="https://studioluminant.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="Makaleler — Studio Luminant">
+<meta property="og:description" content="Mimari rölyef ve özel üretim duvar panellerini belirleyen mimarlar için rehberler.">
+<meta property="og:url" content="https://studioluminant.com/makaleler.htm">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Makaleler — Studio Luminant">
+<meta name="twitter:description" content="Mimari rölyef ve özel üretim duvar panellerini belirleyen mimarlar için rehberler.">
+<meta property="og:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
+<meta name="twitter:image" content="https://studioluminant.com/images/studio-luminant-og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+
+<style>
+  .nav-links a.active { color: var(--gold); }
+  #page-hero { min-height: 56vh; display: flex; align-items: flex-end; position: relative; background: var(--deep); border-bottom: 1px solid var(--border); }
+  .page-hero-content { position: relative; z-index: 2; padding: 160px 60px 90px; max-width: 800px; }
+  .page-hero-eyebrow { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 40px; opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards; }
+  .page-hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+  .page-hero-eyebrow span { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
+  .page-hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(60px, 7vw, 104px); font-weight: 300; line-height: 0.92; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 36px; opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards; }
+  .page-hero-headline em { font-style: italic; color: var(--gold); }
+  .page-hero-sub { font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--text-secondary); max-width: 540px; opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards; }
+  .articles-section { padding: 100px 0; }
+  .article-grid { display: grid; grid-template-columns: 1fr; gap: 2px; }
+  .article-card { background: var(--surface); padding: 48px 60px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; transition: background 0.3s ease; text-decoration: none; color: inherit; }
+  .article-card:hover { background: var(--surface-2); }
+  .article-card-eyebrow { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 18px; }
+  .article-card-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 36px); font-weight: 300; line-height: 1.1; color: var(--text-primary); margin-bottom: 16px; }
+  .article-card-title em { font-style: italic; color: var(--gold); }
+  .article-card-desc { font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--text-secondary); max-width: 580px; }
+  .article-card-arrow { width: 48px; height: 48px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; transition: border-color 0.3s, background 0.3s; flex-shrink: 0; }
+  .article-card:hover .article-card-arrow { border-color: var(--gold); background: var(--gold); }
+  .article-card-arrow svg { width: 16px; height: 16px; color: var(--text-muted); transition: color 0.3s; }
+  .article-card:hover .article-card-arrow svg { color: var(--obsidian); }
+  .article-card.upcoming { background: transparent; border: 1px dashed var(--border); cursor: default; }
+  .article-card.upcoming:hover { background: transparent; }
+  .article-card.upcoming .article-card-title { color: var(--text-muted); }
+  .article-card.upcoming .article-card-eyebrow { color: var(--text-muted); }
+  #journal-cta { padding: 120px 0; background: var(--deep); border-top: 1px solid var(--border); text-align: center; }
+  .cta-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 4vw, 72px); font-weight: 300; line-height: 1.0; color: var(--text-primary); margin-bottom: 28px; }
+  .cta-headline em { font-style: italic; color: var(--gold); }
+  .cta-sub { font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 520px; margin: 0 auto 48px; }
+  @media (max-width: 1024px) { .page-hero-content { padding: 140px 32px 70px; } .article-card { padding: 36px 32px; } }
+  @media (max-width: 600px) { .article-card { grid-template-columns: 1fr; gap: 24px; } .article-card-arrow { width: 40px; height: 40px; } }
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PZ0SGLKLH0');
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com/"}, {"@type": "ListItem", "position": 2, "name": "Makaleler", "item": "https://studioluminant.com/makaleler.htm"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Blog", "name": "Studio Luminant Makaleler", "url": "https://studioluminant.com/makaleler.htm", "inLanguage": "tr", "publisher": {"@type": "Organization", "name": "Studio Luminant"}, "blogPost": [{"@type": "BlogPosting", "headline": "Özel Üretim Duvar Paneli Nasıl Sipariş Edilir — Mimar Rehberi", "url": "https://studioluminant.com/ozel-uretim-duvar-paneli-mimar-rehberi.htm", "datePublished": "2026-06-14"}, {"@type": "BlogPosting", "headline": "Mimari Rölyef Panel Nedir ve Nasıl Sipariş Edilir?", "url": "https://studioluminant.com/mimari-rolyef-panel-nedir.htm", "datePublished": "2026-06-14"}, {"@type": "BlogPosting", "headline": "Heykelsi Duvar Paneli Nedir?", "url": "https://studioluminant.com/heykelsi-duvar-paneli-nedir.htm", "datePublished": "2026-06-14"}]}
+</script>
+</head>
+<body>
+
+<div id="site-nav" data-lang="tr" data-lang-url="en/journal.htm"></div>
+
+<main id="main">
+
+<!-- PAGE HERO -->
+<section id="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">
+      <span>Makaleler</span>
+    </div>
+    <h1 class="page-hero-headline">
+      Belirleyiciler İçin<br><em>Rehberler.</em>
+    </h1>
+    <p class="page-hero-sub">
+      Mimari rölyef ve özel üretim duvar panellerini projelerine taşıyan mimarlar ve iç mimarlar için pratik rehberler — nasıl sipariş edilir, hangi malzeme, hangi şartname.
+    </p>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles-section" style="background: var(--obsidian);">
+  <div class="section-inner">
+    <div class="article-grid">
+
+      <a href="ozel-uretim-duvar-paneli-mimar-rehberi.htm" class="article-card reveal">
+        <div>
+          <div class="article-card-eyebrow">Mimar Rehberi</div>
+          <h2 class="article-card-title">Özel Üretim Duvar Paneli: <em>Sipariş Rehberi</em></h2>
+          <p class="article-card-desc">Brief'ten montaja kadar sekiz adım: bağlam, malzeme, numune, format ve m², BIM belgeleri, sabitleme, teslimat ve montaj. Özel üretim bir rölyef paneli doğru belirlemenin tam yolu.</p>
+        </div>
+        <div class="article-card-arrow">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+      <a href="mimari-rolyef-panel-nedir.htm" class="article-card reveal">
+        <div>
+          <div class="article-card-eyebrow">Giriş Rehberi</div>
+          <h2 class="article-card-title">Mimari Rölyef Panel Nedir ve <em>Nasıl Sipariş Edilir?</em></h2>
+          <p class="article-card-desc">Rölyef panelin ne olduğu, nerede kullanıldığı ve bir mimarın sipariş sürecini nasıl yürüttüğüne dair giriş rehberi.</p>
+        </div>
+        <div class="article-card-arrow">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+      <a href="heykelsi-duvar-paneli-nedir.htm" class="article-card reveal">
+        <div>
+          <div class="article-card-eyebrow">Tanım</div>
+          <h2 class="article-card-title">Heykelsi Duvar Paneli <em>Nedir?</em></h2>
+          <p class="article-card-desc">Heykelsi, dokunsal döküm yüzeylerin tanımı — modüler karo ile özel üretim rölyef panel arasındaki fark.</p>
+        </div>
+        <div class="article-card-arrow">
+          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="journal-cta">
+  <div class="section-inner">
+    <h2 class="cta-headline reveal">
+      Projeniz İçin<br><em>Konuşalım.</em>
+    </h2>
+    <p class="cta-sub reveal">
+      Brief'inizi paylaşın; malzeme önerisi, taslak şartname maddesi ve fiziksel numune ile yanıt verelim.
+    </p>
+    <a href="iletisim.htm" class="btn-primary reveal">
+      Proje Başlat
+      <svg viewBox="0 0 14 14" fill="none">
+        <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+      </svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="shared.js"></script>
+<script src="components.js"></script>
+
+</body>
+</html>
