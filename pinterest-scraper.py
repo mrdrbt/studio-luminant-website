@@ -28,7 +28,9 @@ environment's network egress settings, or just run this script locally.
 
 import argparse
 import json
+import random
 import re
+import string
 import sys
 import time
 from pathlib import Path
@@ -38,8 +40,9 @@ import requests
 
 # ── Config ──────────────────────────────────────────────────────────────────
 
+BASE = "https://www.pinterest.com"
 DEFAULT_OUT = Path(__file__).parent / "ref" / "pinterest"
-PAGE_SIZE = 25                  # pins per BoardFeedResource request
+PAGE_SIZE = 250                 # pins per BoardFeedResource request (max)
 REQUEST_DELAY = 0.7             # polite delay between requests (seconds)
 TIMEOUT = 20
 
@@ -51,13 +54,37 @@ HEADERS = {
     "Accept": "application/json, text/javascript, */*; q=0.01",
     "Accept-Language": "en-US,en;q=0.9",
     "X-Requested-With": "XMLHttpRequest",
-    "X-APP-VERSION": "ab1af2a",
+    "X-APP-VERSION": "31461e0",
     "X-Pinterest-AppState": "active",
-    "Referer": "https://www.pinterest.com/",
+    "Origin": BASE,
+    "Referer": BASE + "/",
 }
 
-FEED_URL = "https://www.pinterest.com/resource/BoardFeedResource/get/"
-BOARD_URL = "https://www.pinterest.com/resource/BoardResource/get/"
+FEED_URL = BASE + "/resource/BoardFeedResource/get/"
+BOARD_URL = BASE + "/resource/BoardResource/get/"
+
+
+def make_session():
+    """
+    Build a session with Pinterest's double-submit CSRF token: the same random
+    value is sent as both the `csrftoken` cookie and the `X-CSRFToken` header,
+    which is what lets the public /resource/ endpoints respond instead of 403.
+    """
+    token = "".join(random.choices(string.ascii_letters + string.digits, k=16))
+    s = requests.Session()
+    s.headers.update(HEADERS)
+    s.headers["X-CSRFToken"] = token
+    s.cookies.set("csrftoken", token, domain=".pinterest.com")
+    return s
+
+
+def _call(session, url, options, source_url=""):
+    """Make one Pinterest resource API call and return the parsed JSON."""
+    params = {"source_url": source_url,
+              "data": json.dumps({"options": options, "context": {}})}
+    r = session.get(url, params=params, timeout=TIMEOUT)
+    r.raise_for_status()
+    return r.json()
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -75,40 +102,29 @@ def slug_from_url(board_url):
 
 def get_board_id(session, board_path):
     """Resolve a board's numeric id via the public BoardResource endpoint."""
-    options = {"slug": board_path.strip("/").split("/")[1],
-               "username": board_path.strip("/").split("/")[0],
-               "field_set_key": "detailed"}
-    params = {"source_url": board_path,
-              "data": json.dumps({"options": options, "context": {}})}
-    r = session.get(BOARD_URL, params=params, timeout=TIMEOUT)
-    r.raise_for_status()
-    data = r.json()
+    username, slug = board_path.strip("/").split("/")[:2]
+    options = {"slug": slug, "username": username, "field_set_key": "detailed"}
+    data = _call(session, BOARD_URL, options, source_url=board_path)
     board = data["resource_response"]["data"]
     return board["id"], board.get("name", "")
 
 
 def iter_pins(session, board_id, board_path, limit=None):
     """Yield pin dicts from a board, paging through BoardFeedResource."""
-    bookmarks = [None]
+    options = {"board_id": board_id, "page_size": PAGE_SIZE}
     fetched = 0
     while True:
-        options = {"board_id": board_id, "page_size": PAGE_SIZE,
-                   "bookmarks": bookmarks}
-        params = {"source_url": board_path,
-                  "data": json.dumps({"options": options, "context": {}})}
-        r = session.get(FEED_URL, params=params, timeout=TIMEOUT)
-        r.raise_for_status()
-        payload = r.json()
+        payload = _call(session, FEED_URL, options, source_url=board_path)
         pins = payload["resource_response"]["data"]
         for pin in pins:
             yield pin
             fetched += 1
             if limit and fetched >= limit:
                 return
-        bookmarks = payload["resource_response"].get("bookmark")
-        bookmarks = [bookmarks] if isinstance(bookmarks, str) else bookmarks
-        if not bookmarks or bookmarks == ["-end-"] or not pins:
+        bookmark = payload["resource_response"].get("bookmark")
+        if not bookmark or bookmark == "-end-" or not pins:
             return
+        options["bookmarks"] = [bookmark]
         time.sleep(REQUEST_DELAY)
 
 
@@ -206,15 +222,7 @@ def main():
     if not urls:
         ap.error("Provide at least one board URL, or --boards <file>.")
 
-    session = requests.Session()
-    session.headers.update(HEADERS)
-    # Prime cookies so Pinterest's resource endpoints respond
-    try:
-        session.get("https://www.pinterest.com/", timeout=TIMEOUT)
-    except requests.RequestException as e:
-        print(f"WARNING: could not reach pinterest.com ({e}). "
-              f"Check network egress allowlist (www.pinterest.com, i.pinimg.com).",
-              file=sys.stderr)
+    session = make_session()
 
     all_records = []
     for url in urls:
