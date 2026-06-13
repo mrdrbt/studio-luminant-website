@@ -192,6 +192,13 @@ def iter_pins(session, board_path, slug, limit=None):
     """Yield unique pins: those embedded in the HTML page, then API pages."""
     html = fetch_board_page(session, board_path)
     board_id, board_name, html_pins = parse_board_page(html, slug)
+    # Fall back to the board id carried on the pins themselves
+    if not board_id:
+        for p in html_pins:
+            b = p.get("board")
+            if isinstance(b, dict) and str(b.get("id", "")).isdigit():
+                board_id = b["id"]
+                break
     print(f"   board id: {board_id or '?'} | {len(html_pins)} pins on first page")
 
     seen, fetched = set(), 0
@@ -325,7 +332,7 @@ def main():
         manifest.write_text(json.dumps(
             {"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
              "count": len(all_records), "pins": all_records},
-            indent=2, ensure_ascii=False))
+            indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"\n✅ Wrote {len(all_records)} pins to {manifest}")
     elif args.dry_run:
         print(f"\n(dry run) {len(all_records)} pins found across {len(urls)} board(s)")
