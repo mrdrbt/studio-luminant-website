@@ -1013,9 +1013,9 @@
   "studio-luminant-compass-star-relief-panel.png": {
     "original": {
       "file": "studio-luminant-compass-star-relief-panel.png",
-      "size": 105828,
       "w": 1200,
-      "h": 1200
+      "h": 1200,
+      "size": 105828
     },
     "webp": "studio-luminant-compass-star-relief-panel.webp",
     "variants": {
@@ -1717,6 +1717,27 @@
       }
     }
   },
+  "studio-luminant-organic-cell-relief-restaurant-interior-white.jpg": {
+    "original": {
+      "file": "studio-luminant-organic-cell-relief-restaurant-interior-white.jpg",
+      "size": 566746,
+      "w": 1536,
+      "h": 2048
+    },
+    "webp": "studio-luminant-organic-cell-relief-restaurant-interior-white.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-organic-cell-relief-restaurant-interior-white-400w.webp",
+        "w": 400,
+        "h": 533
+      },
+      "800": {
+        "file": "studio-luminant-organic-cell-relief-restaurant-interior-white-800w.webp",
+        "w": 800,
+        "h": 1067
+      }
+    }
+  },
   "studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg": {
     "original": {
       "file": "studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg",
@@ -1814,9 +1835,9 @@
   "studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.jpg": {
     "original": {
       "file": "studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.jpg",
-      "size": 156829,
       "w": 1152,
-      "h": 928
+      "h": 928,
+      "size": 156829
     },
     "webp": "studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.webp",
     "variants": {
