@@ -942,6 +942,27 @@
       }
     }
   },
+  "studio-luminant-art-deco-charcoal-relief-cocktail-bar.jpg": {
+    "original": {
+      "file": "studio-luminant-art-deco-charcoal-relief-cocktail-bar.jpg",
+      "w": 1024,
+      "h": 1024,
+      "size": 251524
+    },
+    "webp": "studio-luminant-art-deco-charcoal-relief-cocktail-bar.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-art-deco-charcoal-relief-cocktail-bar-400w.webp",
+        "w": 400,
+        "h": 400
+      },
+      "800": {
+        "file": "studio-luminant-art-deco-charcoal-relief-cocktail-bar-800w.webp",
+        "w": 800,
+        "h": 800
+      }
+    }
+  },
   "studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup.jpg": {
     "original": {
       "file": "studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup.jpg",
@@ -981,6 +1002,27 @@
         "file": "studio-luminant-bespoke-architectural-relief-hospitality-lobby-design-800w.webp",
         "w": 800,
         "h": 800
+      }
+    }
+  },
+  "studio-luminant-biophilic-coral-relief-tree-medallion-lobby.jpg": {
+    "original": {
+      "file": "studio-luminant-biophilic-coral-relief-tree-medallion-lobby.jpg",
+      "size": 252629,
+      "w": 1376,
+      "h": 768
+    },
+    "webp": "studio-luminant-biophilic-coral-relief-tree-medallion-lobby.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-biophilic-coral-relief-tree-medallion-lobby-400w.webp",
+        "w": 400,
+        "h": 223
+      },
+      "800": {
+        "file": "studio-luminant-biophilic-coral-relief-tree-medallion-lobby-800w.webp",
+        "w": 800,
+        "h": 447
       }
     }
   },
@@ -1720,21 +1762,21 @@
   "studio-luminant-organic-cell-relief-restaurant-interior-white.jpg": {
     "original": {
       "file": "studio-luminant-organic-cell-relief-restaurant-interior-white.jpg",
-      "size": 566746,
       "w": 1536,
-      "h": 2048
+      "h": 1920,
+      "size": 542887
     },
     "webp": "studio-luminant-organic-cell-relief-restaurant-interior-white.webp",
     "variants": {
       "400": {
         "file": "studio-luminant-organic-cell-relief-restaurant-interior-white-400w.webp",
         "w": 400,
-        "h": 533
+        "h": 500
       },
       "800": {
         "file": "studio-luminant-organic-cell-relief-restaurant-interior-white-800w.webp",
         "w": 800,
-        "h": 1067
+        "h": 1000
       }
     }
   },
