@@ -5,3 +5,7 @@ docs/test-reports/
 
 # Scraped Pinterest reference images + manifest (third-party, local LLM ref only)
 ref/pinterest/
+
+# Python bytecode cache
+__pycache__/
+*.pyc
