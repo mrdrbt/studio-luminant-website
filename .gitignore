@@ -2,3 +2,6 @@
 desktop.ini
 Görseller V2/
 docs/test-reports/
+
+# Scraped Pinterest reference images + manifest (third-party, local LLM ref only)
+ref/pinterest/
