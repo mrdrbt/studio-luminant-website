@@ -182,12 +182,38 @@
       }
     }
   },
+  "studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr.png": {
+    "original": {
+      "file": "studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr.png",
+      "w": 2816,
+      "h": 1536,
+      "size": 3383625
+    },
+    "webp": "studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr-400w.webp",
+        "w": 400,
+        "h": 218
+      },
+      "800": {
+        "file": "studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr-800w.webp",
+        "w": 800,
+        "h": 436
+      },
+      "1600": {
+        "file": "studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr-1600w.webp",
+        "w": 1600,
+        "h": 873
+      }
+    }
+  },
   "studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png": {
     "original": {
       "file": "studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png",
       "w": 2816,
       "h": 1536,
-      "size": 6571498
+      "size": 3164159
     },
     "webp": "studio-luminant-aiapm-production-process-design-modelling-casting-infographic.webp",
     "variants": {
@@ -984,6 +1010,27 @@
       }
     }
   },
+  "studio-luminant-compass-star-relief-panel.png": {
+    "original": {
+      "file": "studio-luminant-compass-star-relief-panel.png",
+      "size": 105828,
+      "w": 1200,
+      "h": 1200
+    },
+    "webp": "studio-luminant-compass-star-relief-panel.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-compass-star-relief-panel-400w.webp",
+        "w": 400,
+        "h": 400
+      },
+      "800": {
+        "file": "studio-luminant-compass-star-relief-panel-800w.webp",
+        "w": 800,
+        "h": 800
+      }
+    }
+  },
   "studio-luminant-finish-sample-box-angled-closed.jpg": {
     "original": {
       "file": "studio-luminant-finish-sample-box-angled-closed.jpg",
@@ -1694,9 +1741,9 @@
   "studio-luminant-petal-geometric-gold-dining-feature-wall.jpg": {
     "original": {
       "file": "studio-luminant-petal-geometric-gold-dining-feature-wall.jpg",
-      "size": 639931,
       "w": 2752,
-      "h": 1536
+      "h": 1536,
+      "size": 639931
     },
     "webp": "studio-luminant-petal-geometric-gold-dining-feature-wall.webp",
     "variants": {
@@ -1761,6 +1808,27 @@
         "file": "studio-luminant-petal-star-relief-panels-restaurant-dining-interior-800w.webp",
         "w": 800,
         "h": 800
+      }
+    }
+  },
+  "studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.jpg": {
+    "original": {
+      "file": "studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.jpg",
+      "size": 156829,
+      "w": 1152,
+      "h": 928
+    },
+    "webp": "studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-pmag-vacuum-cast-relief-panels-macchiato-400w.webp",
+        "w": 400,
+        "h": 322
+      },
+      "800": {
+        "file": "studio-luminant-pmag-vacuum-cast-relief-panels-macchiato-800w.webp",
+        "w": 800,
+        "h": 644
       }
     }
   },
