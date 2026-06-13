@@ -46,45 +46,88 @@ PAGE_SIZE = 250                 # pins per BoardFeedResource request (max)
 REQUEST_DELAY = 0.7             # polite delay between requests (seconds)
 TIMEOUT = 20
 
-HEADERS = {
+# Headers for fetching the board's HTML page (browser-like, primes cookies)
+BROWSER_HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     ),
-    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
-    "X-Requested-With": "XMLHttpRequest",
-    "X-APP-VERSION": "31461e0",
-    "X-Pinterest-AppState": "active",
-    "Origin": BASE,
-    "Referer": BASE + "/",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Upgrade-Insecure-Requests": "1",
 }
 
 FEED_URL = BASE + "/resource/BoardFeedResource/get/"
-BOARD_URL = BASE + "/resource/BoardResource/get/"
 
 
 def make_session():
-    """
-    Build a session with Pinterest's double-submit CSRF token: the same random
-    value is sent as both the `csrftoken` cookie and the `X-CSRFToken` header,
-    which is what lets the public /resource/ endpoints respond instead of 403.
-    """
+    """Session seeded with a random CSRF token (double-submit cookie pattern)."""
     token = "".join(random.choices(string.ascii_letters + string.digits, k=16))
     s = requests.Session()
-    s.headers.update(HEADERS)
-    s.headers["X-CSRFToken"] = token
+    s.headers.update(BROWSER_HEADERS)
     s.cookies.set("csrftoken", token, domain=".pinterest.com")
     return s
 
 
-def _call(session, url, options, source_url=""):
-    """Make one Pinterest resource API call and return the parsed JSON."""
-    params = {"source_url": source_url,
-              "data": json.dumps({"options": options, "context": {}})}
-    r = session.get(url, params=params, timeout=TIMEOUT)
-    r.raise_for_status()
-    return r.json()
+# ── Embedded-data parsing ─────────────────────────────────────────────────────
+
+def _iter_json_scripts(html):
+    """Yield the parsed contents of every <script type=application/json> block."""
+    pattern = re.compile(
+        r'<script[^>]*type="application/json"[^>]*>(.*?)</script>',
+        re.DOTALL)
+    for raw in pattern.findall(html):
+        try:
+            yield json.loads(raw.strip())
+        except (ValueError, json.JSONDecodeError):
+            continue
+
+
+def _looks_like_pin(obj):
+    """A pin object has an id and an images map with url-bearing variants."""
+    if not isinstance(obj, dict) or "id" not in obj:
+        return False
+    imgs = obj.get("images")
+    return isinstance(imgs, dict) and any(
+        isinstance(v, dict) and "url" in v for v in imgs.values())
+
+
+def _walk(obj, on_dict):
+    """Depth-first walk over nested dicts/lists, calling on_dict for each dict."""
+    if isinstance(obj, dict):
+        on_dict(obj)
+        for v in obj.values():
+            _walk(v, on_dict)
+    elif isinstance(obj, list):
+        for v in obj:
+            _walk(v, on_dict)
+
+
+def parse_board_page(html, slug):
+    """
+    Extract (board_id, board_name, pins) from a board page's embedded JSON.
+    Walks all JSON blobs collecting pin-like objects (deduped by id) and the
+    board object whose slug matches, so it survives Pinterest's layout changes.
+    """
+    pins, board_id, board_name = {}, None, ""
+
+    def visit(d):
+        nonlocal board_id, board_name
+        if _looks_like_pin(d):
+            pins.setdefault(d["id"], d)
+        # Board object: has a slug + a numeric id + a pin_count
+        if (d.get("slug") == slug and "pin_count" in d
+                and str(d.get("id", "")).isdigit()):
+            board_id = d["id"]
+            board_name = d.get("name", "")
+
+    for blob in _iter_json_scripts(html):
+        _walk(blob, visit)
+
+    return board_id, board_name, list(pins.values())
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -97,35 +140,80 @@ def slug_from_url(board_url):
         raise ValueError(f"Not a board URL (need /user/board/): {board_url}")
     username, board = parts[0], parts[1]
     slug = re.sub(r"[^a-z0-9]+", "-", board.lower()).strip("-")
-    return f"/{username}/{board}/", slug
+    return f"/{username}/{board}/", slug, board
 
 
-def get_board_id(session, board_path):
-    """Resolve a board's numeric id via the public BoardResource endpoint."""
-    username, slug = board_path.strip("/").split("/")[:2]
-    options = {"slug": slug, "username": username, "field_set_key": "detailed"}
-    data = _call(session, BOARD_URL, options, source_url=board_path)
-    board = data["resource_response"]["data"]
-    return board["id"], board.get("name", "")
+def fetch_board_page(session, board_path):
+    """Load the board's HTML page (primes cookies) and return the HTML."""
+    r = session.get(BASE + board_path, timeout=TIMEOUT)
+    r.raise_for_status()
+    # Echo Pinterest's own csrftoken cookie back in the API header
+    token = session.cookies.get("csrftoken")
+    if token:
+        session.headers["X-CSRFToken"] = token
+    return r.text
 
 
-def iter_pins(session, board_id, board_path, limit=None):
-    """Yield pin dicts from a board, paging through BoardFeedResource."""
+def api_pins(session, board_id, board_path, slug, after_id):
+    """
+    Page through BoardFeedResource for pins beyond what the HTML page held.
+    Best-effort: yields nothing (rather than raising) if the API rejects us.
+    """
     options = {"board_id": board_id, "page_size": PAGE_SIZE}
-    fetched = 0
+    headers = {
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "X-Requested-With": "XMLHttpRequest",
+        "X-Pinterest-AppState": "active",
+        "X-Pinterest-PWS-Handler": "www/[username]/[slug].js",
+        "Referer": BASE + board_path,
+        "Origin": BASE,
+    }
     while True:
-        payload = _call(session, FEED_URL, options, source_url=board_path)
+        params = {"source_url": board_path,
+                  "data": json.dumps({"options": options, "context": {}})}
+        try:
+            r = session.get(FEED_URL, params=params, headers=headers, timeout=TIMEOUT)
+            r.raise_for_status()
+            payload = r.json()
+        except (requests.RequestException, ValueError) as e:
+            print(f"   (api pagination stopped: {e})", file=sys.stderr)
+            return
         pins = payload["resource_response"]["data"]
         for pin in pins:
             yield pin
-            fetched += 1
-            if limit and fetched >= limit:
-                return
         bookmark = payload["resource_response"].get("bookmark")
         if not bookmark or bookmark == "-end-" or not pins:
             return
         options["bookmarks"] = [bookmark]
         time.sleep(REQUEST_DELAY)
+
+
+def iter_pins(session, board_path, slug, limit=None):
+    """Yield unique pins: those embedded in the HTML page, then API pages."""
+    html = fetch_board_page(session, board_path)
+    board_id, board_name, html_pins = parse_board_page(html, slug)
+    print(f"   board id: {board_id or '?'} | {len(html_pins)} pins on first page")
+
+    seen, fetched = set(), 0
+    for pin in html_pins:
+        if pin["id"] in seen:
+            continue
+        seen.add(pin["id"])
+        yield pin
+        fetched += 1
+        if limit and fetched >= limit:
+            return
+
+    if not board_id:
+        return  # no id -> can't paginate; HTML pins are all we get
+    for pin in api_pins(session, board_id, board_path, slug, None):
+        if pin.get("id") in seen:
+            continue
+        seen.add(pin["id"])
+        yield pin
+        fetched += 1
+        if limit and fetched >= limit:
+            return
 
 
 def best_image_url(pin):
@@ -161,7 +249,8 @@ def download(session, url, dest):
     """Download an image to dest. Returns True if written, False if skipped."""
     if dest.exists() and dest.stat().st_size > 0:
         return False
-    r = session.get(url, timeout=TIMEOUT, headers={"User-Agent": HEADERS["User-Agent"]})
+    r = session.get(url, timeout=TIMEOUT,
+                    headers={"User-Agent": BROWSER_HEADERS["User-Agent"]})
     r.raise_for_status()
     dest.write_bytes(r.content)
     return True
@@ -170,17 +259,16 @@ def download(session, url, dest):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def scrape_board(session, board_url, out_dir, limit, dry_run):
-    board_path, slug = slug_from_url(board_url)
-    username, board = board_path.strip("/").split("/")[:2]
-    board_id, board_name = get_board_id(session, board_path)
-    print(f"\n▸ Board '{board_name or board}' ({username}) — id {board_id}")
+    board_path, slug, board = slug_from_url(board_url)
+    username = board_path.strip("/").split("/")[0]
+    print(f"\n▸ Board '{board}' ({username})")
 
     board_dir = out_dir / slug
     if not dry_run:
         board_dir.mkdir(parents=True, exist_ok=True)
 
     records, n_dl, n_skip = [], 0, 0
-    for pin in iter_pins(session, board_id, board_path, limit):
+    for pin in iter_pins(session, board_path, slug, limit):
         img_url = best_image_url(pin)
         if not img_url:
             continue
