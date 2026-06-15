@@ -191,6 +191,21 @@
   <lastmod>2026-06-02</lastmod>
 </url>
 
+  <!-- Specifier Kit lead magnet (added 2026-06-15) -->
+  <url>
+  <loc>https://studioluminant.com/tasarim-dosyasi.htm</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <lastmod>2026-06-15</lastmod>
+</url>
+
+<url>
+  <loc>https://studioluminant.com/en/specifier-kit.htm</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <lastmod>2026-06-15</lastmod>
+</url>
+
   <!-- Journal / Makaleler (added 2026-06-14) -->
   <url>
     <loc>https://studioluminant.com/makaleler.htm</loc>

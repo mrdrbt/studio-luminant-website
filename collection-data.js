@@ -1,10 +1,12 @@
 // ─── PATTERN DATA — Single Source of Truth ───
-// Generated from Supabase · 2026-04-04
+// Generated from Supabase · 2026-06-02
 // Referenced by: collection.htm, tr/koleksiyon.htm
 
 window.SL_PATTERNS = [
   {
     "id": "compass-star",
+    "code": "SIG-CMP",
+    "collection": "SIG",
     "name_en": "Compass Star",
     "name_tr": "Pusula Yıldızı",
     "style": "heritage",
@@ -27,6 +29,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "diagonal-wave",
+    "code": "SIG-DGW",
+    "collection": "SIG",
     "name_en": "Diagonal Wave",
     "name_tr": "Diyagonal Dalga",
     "style": "geometric",
@@ -48,6 +52,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "faceted-crystal",
+    "code": "SIG-FAC",
+    "collection": "SIG",
     "name_en": "Faceted Crystal",
     "name_tr": "Fasetli Kristal",
     "style": "geometric",
@@ -69,6 +75,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "ottoman-heritage",
+    "code": "SIG-OTT",
+    "collection": "SIG",
     "name_en": "Ottoman Heritage",
     "name_tr": "Osmanlı Mirası",
     "style": "heritage",
@@ -91,6 +99,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "organic-cell",
+    "code": "SIG-ORG",
+    "collection": "SIG",
     "name_en": "Organic Cell",
     "name_tr": "Organik Hücre",
     "style": "organic",
@@ -112,6 +122,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "fluted-column",
+    "code": "SIG-FLC",
+    "collection": "SIG",
     "name_en": "Fluted Column",
     "name_tr": "Yivli Kolon",
     "style": "surface",
@@ -130,6 +142,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "petal-geometric",
+    "code": "SIG-PTG",
+    "collection": "SIG",
     "name_en": "Petal Geometric",
     "name_tr": "Taçyaprağı Geometrik",
     "style": "geometric",
@@ -152,6 +166,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "geometric-star",
+    "code": "SIG-GST",
+    "collection": "SIG",
     "name_en": "Geometric Star",
     "name_tr": "Geometrik Yıldız",
     "style": "geometric",
@@ -173,6 +189,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "bas-relief",
+    "code": "SIG-BAS",
+    "collection": "SIG",
     "name_en": "Bas Relief",
     "name_tr": "Alçak Rölyef",
     "style": "surface",
@@ -189,6 +207,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "neo-heritage-modular",
+    "code": "SIG-NHM",
+    "collection": "SIG",
     "name_en": "Neo Heritage Modular",
     "name_tr": "Neo Miras Modüler",
     "style": "heritage",
@@ -211,6 +231,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "honeycomb-hexagonal",
+    "code": "SIG-HNY",
+    "collection": "SIG",
     "name_en": "Honeycomb",
     "name_tr": "Bal Peteği",
     "style": "organic",
@@ -233,6 +255,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "diamond-faceted-crystal",
+    "code": "SIG-DMF",
+    "collection": "SIG",
     "name_en": "Diamond Faceted",
     "name_tr": "Elmas Fasetli",
     "style": "geometric",
@@ -253,6 +277,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "diamond-origami-fold",
+    "code": "SIG-ORI",
+    "collection": "SIG",
     "name_en": "Origami Fold",
     "name_tr": "Origami Kıvrım",
     "style": "geometric",
@@ -274,6 +300,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "petal-star-concave",
+    "code": "SIG-PTS",
+    "collection": "SIG",
     "name_en": "Petal Star",
     "name_tr": "Taçyaprağı Yıldız",
     "style": "geometric",
@@ -295,6 +323,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "baroque-acanthus-scroll",
+    "code": "SIG-ACA",
+    "collection": "SIG",
     "name_en": "Acanthus Scroll",
     "name_tr": "Akantus Süsleme",
     "style": "heritage",
@@ -316,6 +346,8 @@ window.SL_PATTERNS = [
   },
   {
     "id": "fluted-spherical",
+    "code": "SIG-FLS",
+    "collection": "SIG",
     "name_en": "Fluted Spherical",
     "name_tr": "Yivli Küresel",
     "style": "surface",
