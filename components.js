@@ -87,7 +87,8 @@ function pictureTag(src, alt, sizes, opts) {
       { href: 'koleksiyon.htm', text: 'Koleksiyon' },
       { href: 'urunler.htm', text: 'Malzeme & Teknik' },
       { href: 'surec.htm', text: 'Nasıl Çalışırız' },
-      { href: 'galeri.htm', text: 'Galeri' }
+      { href: 'galeri.htm', text: 'Galeri' },
+      { href: 'makaleler.htm', text: 'Makaleler' }
       // { href: 'kaynaklar.htm', text: 'Kaynaklar' } // temporarily hidden
     ],
     langLabel: 'EN',
@@ -102,7 +103,8 @@ function pictureTag(src, alt, sizes, opts) {
       { href: 'collection.htm', text: 'Collection' },
       { href: 'products.htm', text: 'Materials & Specs' },
       { href: 'process.htm', text: 'How We Work' },
-      { href: 'gallery.htm', text: 'Gallery' }
+      { href: 'gallery.htm', text: 'Gallery' },
+      { href: 'journal.htm', text: 'Journal' }
       // { href: 'resources.htm', text: 'Resources' } // temporarily hidden
     ],
     langLabel: 'TR',
