@@ -1,4 +1,4 @@
-// ─── IMAGE HELPER — WebP <picture> element generator ───
+﻿// ─── IMAGE HELPER — WebP <picture> element generator ───
 // Used by collection.htm and other JS-rendered galleries
 function pictureTag(src, alt, sizes, opts) {
   opts = opts || {};
@@ -68,7 +68,7 @@ function pictureTag(src, alt, sizes, opts) {
       "name": "Studio Luminant",
       "url": "https://studioluminant.com",
       "logo": "https://studioluminant.com/images/studio-luminant-logo-white-transparent.png",
-      "email": "strategy@studioluminant.com",
+      "email": "info@studioluminant.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Talatpaşa Cad. No: 21, İç Kapı No: 501",
@@ -288,7 +288,7 @@ ${mobileItemsHtml}
             <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
           </svg>
         </a>
-        <p>strategy@studioluminant.com</p>
+        <p>info@studioluminant.com</p>
       </div>
     </div>
     <div class="footer-bottom">
