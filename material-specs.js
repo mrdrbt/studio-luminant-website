@@ -10,11 +10,6 @@ window.SL_SPECS = {
       "note_en": "Euroclass A2 — limited combustibility",
       "note_tr": "Euroclass A2 — sınırlı yanabilirlik"
     },
-    "maxPanel": {
-      "w": 3000,
-      "h": 1500,
-      "unit": "mm"
-    },
     "thickness": {
       "min": 15,
       "max": 40,
@@ -64,11 +59,6 @@ window.SL_SPECS = {
       "standard": "EN 13501-1",
       "note_en": "Flame retardant, low smoke",
       "note_tr": "Alev geciktirici, düşük duman"
-    },
-    "maxPanel": {
-      "w": 2500,
-      "h": 1200,
-      "unit": "mm"
     },
     "thickness": {
       "min": 8,
@@ -125,7 +115,6 @@ window.SL_SPECS = {
 
 // ─── HELPER: format spec strings ───
 window.SL_SPECS.fmt = {
-  panelSize:  function(m) { return m.maxPanel.w + ' × ' + m.maxPanel.h + ' ' + m.maxPanel.unit; },
   thickness:  function(m) { return m.thickness.min + ' – ' + m.thickness.max + ' ' + m.thickness.unit; },
   weight:     function(m) { return m.weight.min + ' – ' + m.weight.max + ' ' + m.weight.unit + ' @ ' + m.weight.refThickness + ' ' + m.thickness.unit; },
   density:    function(m) { return m.density.min.toLocaleString() + '–' + m.density.max.toLocaleString(); },

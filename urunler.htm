@@ -239,10 +239,6 @@
       </div>
       <!-- Right: specs grid -->
       <div class="specs-grid reveal" id="pmag-specs">
-        <div class="spec-cell" data-spec="pmag.maxPanel">
-          <div class="spec-label">Maksimum Panel Boyutu</div>
-          <div class="spec-value">3000 × 1500 mm</div>
-        </div>
         <div class="spec-cell" data-spec="pmag.thickness">
           <div class="spec-label">Kalınlık</div>
           <div class="spec-value">15 – 40 mm</div>
@@ -278,7 +274,7 @@
         <div class="spec-cell">
           <div class="spec-label">Duvar Panelleri</div>
           <div class="spec-value">Büyük Format Kaplama</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">3000 x 1500 mm'ye kadar tek parça. Lobi duvarları, koridorlar, kamusal alanlar.</p>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Lobi duvarları, koridorlar, kamusal alanlar.</p>
         </div>
         <div class="spec-cell">
           <div class="spec-label">Tavan Panelleri</div>
@@ -329,10 +325,6 @@
       </div>
       <!-- Right: specs grid -->
       <div class="specs-grid reveal" id="pucomp-specs">
-        <div class="spec-cell" data-spec="pucomp.maxPanel">
-          <div class="spec-label">Maksimum Panel Boyutu</div>
-          <div class="spec-value">2500 × 1200 mm</div>
-        </div>
         <div class="spec-cell" data-spec="pucomp.thickness">
           <div class="spec-label">Kalınlık</div>
           <div class="spec-value">8 – 25 mm</div>
@@ -468,9 +460,7 @@
     var val = mat[key];
     var sv = cell.querySelector('.spec-value');
     var sn = cell.querySelector('.spec-note');
-    if (key === 'maxPanel') {
-      sv.textContent = F.panelSize(mat);
-    } else if (key === 'thickness') {
+    if (key === 'thickness') {
       sv.textContent = F.thickness(mat);
     } else if (key === 'weight') {
       sv.textContent = F.weight(mat);

@@ -28,7 +28,7 @@ const specCategories = [{
   key: "physical",
   label: "Physical",
   icon: "⬡",
-  specs: ["density", "weight", "thickness", "maxSize"]
+  specs: ["density", "weight", "thickness"]
 }, {
   key: "performance",
   label: "Performance",
@@ -57,10 +57,6 @@ const specMeta = {
   thickness: {
     label: "Panel thickness",
     unit: "mm"
-  },
-  maxSize: {
-    label: "Max panel size",
-    unit: ""
   },
   moisture: {
     label: "Moisture resistance",
@@ -236,7 +232,6 @@ const studioMaterials = [{
     density: "1,400–1,600",
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
     thickness: (_pmag.thickness ? _pmag.thickness.min + '–' + _pmag.thickness.max : "15–40"),
-    maxSize: (_F.panelSize ? _F.panelSize(_pmag) : "3000 × 1500 mm"),
     moisture: "Moderate — interior dry zones",
     impact: "Moderate (glass fiber reinforced)",
     uv: "—",
@@ -272,7 +267,6 @@ const studioMaterials = [{
     density: "600–900",
     weight: (_pucomp.weight ? _pucomp.weight.min + '–' + _pucomp.weight.max : "12–18"),
     thickness: (_pucomp.thickness ? _pucomp.thickness.min + '–' + _pucomp.thickness.max : "8–25"),
-    maxSize: (_F.panelSize ? _F.panelSize(_pucomp) : "2500 × 1200 mm"),
     moisture: "High — closed-cell, hydrophobic",
     impact: "High — flexible polymer matrix",
     uv: "Stabilised + UV-resistant finish",
@@ -305,7 +299,6 @@ const sectorMaterials = [{
     density: "1,000–1,300",
     weight: "15–25",
     thickness: "10–20",
-    maxSize: "Varies by supplier",
     moisture: "Low — interior dry only",
     impact: "Low–Moderate",
     uv: "—",
@@ -337,7 +330,6 @@ const sectorMaterials = [{
     density: "1,800–2,200",
     weight: "25–45",
     thickness: "10–25",
-    maxSize: "Varies by supplier",
     moisture: "High",
     impact: "High",
     uv: "Good",
@@ -369,7 +361,6 @@ const sectorMaterials = [{
     density: "2,300–2,800",
     weight: "50–75",
     thickness: "20+",
-    maxSize: "Slab-dependent",
     moisture: "Variable (porous unless sealed)",
     impact: "Brittle — chips and cracks",
     uv: "Excellent (natural)",
@@ -401,7 +392,6 @@ const sectorMaterials = [{
     density: "1,500–2,000",
     weight: "5–15",
     thickness: "3–12",
-    maxSize: "Varies",
     moisture: "Excellent",
     impact: "High",
     uv: "Moderate (gel coat dependent)",
@@ -433,7 +423,6 @@ const sectorMaterials = [{
     density: "600–800",
     weight: "10–18",
     thickness: "6–25",
-    maxSize: "Standard sheet sizes",
     moisture: "Poor — swells, warps",
     impact: "Moderate",
     uv: "Poor",
