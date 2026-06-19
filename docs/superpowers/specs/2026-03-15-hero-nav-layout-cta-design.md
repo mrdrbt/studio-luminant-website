@@ -1,4 +1,4 @@
-# Studio Luminant Website — Design Fixes Spec
+﻿# Studio Luminant Website — Design Fixes Spec
 **Date:** 2026-03-15
 **Scope:** Four targeted improvements to the existing single-file HTML website
 
@@ -34,7 +34,7 @@
   - "View BIM Specifications" text link → removed
   - "Request Consultation" in footer → replaced with "Initiate Project"
 - The nav "Initiate Project" button remains unchanged (gold filled style)
-- All CTA links point to `mailto:strategy@studioluminant.com` (existing contact mechanism)
+- All CTA links point to `mailto:info@studioluminant.com` (existing contact mechanism)
 
 ---
 

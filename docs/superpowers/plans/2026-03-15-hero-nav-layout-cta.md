@@ -1,4 +1,4 @@
-# Studio Luminant — Hero, Nav, Split Layout & CTA Implementation Plan
+﻿# Studio Luminant — Hero, Nav, Split Layout & CTA Implementation Plan
 
 > **For agentic workers:** REQUIRED: Use superpowers:subagent-driven-development (if subagents available) or superpowers:executing-plans to implement this plan. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -184,7 +184,7 @@ Replace with:
     <li><a href="#materials">Products</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#portfolio">Gallery</a></li>
-    <li><a href="mailto:strategy@studioluminant.com">Contact</a></li>
+    <li><a href="mailto:info@studioluminant.com">Contact</a></li>
 </ul>
 ```
 
@@ -220,9 +220,9 @@ Find:
 </a>
 ```
 
-Replace `href="#process"` with `href="mailto:strategy@studioluminant.com"` and change the text to `Initiate Project`:
+Replace `href="#process"` with `href="mailto:info@studioluminant.com"` and change the text to `Initiate Project`:
 ```html
-<a href="mailto:strategy@studioluminant.com" class="btn-primary">
+<a href="mailto:info@studioluminant.com" class="btn-primary">
     Initiate Project
     <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
@@ -241,7 +241,7 @@ Find and delete this entire element:
 
 Find:
 ```html
-<a href="mailto:strategy@studioluminant.com">
+<a href="mailto:info@studioluminant.com">
     Request Consultation
     <svg ...>...</svg>
 </a>
@@ -249,7 +249,7 @@ Find:
 
 Replace inner text only:
 ```html
-<a href="mailto:strategy@studioluminant.com">
+<a href="mailto:info@studioluminant.com">
     Initiate Project
     <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
         <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
@@ -277,5 +277,5 @@ After all tasks:
 - [ ] Nav shows: Products · Process · Gallery · Contact · Initiate Project
 - [ ] All four nav links scroll/navigate to the correct targets
 - [ ] Zero instances of "Explore Capabilities", "View BIM Specifications", "Request Consultation" remain
-- [ ] All "Initiate Project" CTAs open `mailto:strategy@studioluminant.com`
+- [ ] All "Initiate Project" CTAs open `mailto:info@studioluminant.com`
 - [ ] No broken layouts or missing images in the preview

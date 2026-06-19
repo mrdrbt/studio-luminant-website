@@ -1,4 +1,4 @@
-# Products Page Implementation Plan
+﻿# Products Page Implementation Plan
 
 > **For agentic workers:** REQUIRED: Use superpowers:subagent-driven-development (if subagents available) or superpowers:executing-plans to implement this plan. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -547,13 +547,13 @@ Write the complete file:
       </div>
       <div class="footer-cta-block">
         <div class="footer-col-title">Start a Project</div>
-        <a href="mailto:strategy@studioluminant.com">
+        <a href="mailto:info@studioluminant.com">
           Initiate Project
           <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
             <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
           </svg>
         </a>
-        <p>strategy@studioluminant.com</p>
+        <p>info@studioluminant.com</p>
       </div>
     </div>
     <div class="footer-bottom">

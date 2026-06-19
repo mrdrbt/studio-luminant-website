@@ -1,4 +1,4 @@
-# Studio Luminant — Türkçe Web Sitesi Metinleri
+﻿# Studio Luminant — Türkçe Web Sitesi Metinleri
 
 Tüm sayfalardaki görünür metin içerikleri, sayfa ve bölüm bazında derlenmiştir.
 
@@ -112,7 +112,7 @@ Etiketler: Beton Döküm · Soğuk Döküm · Poliüretan Döküm · GFRC Dökü
 Konum: Sakarya / Sapanca, Türkiye
 Küresel Dağıtım ve Montaj Hazır
 
-**CTA:** Proje Başlat — strategy@studioluminant.com
+**CTA:** Proje Başlat — info@studioluminant.com
 
 **Alt Satır:** © 2026 Studio Luminant. Tüm Hakları Saklıdır.
 
@@ -346,7 +346,7 @@ Tümü · Geometrik · Organik · Miras · Konaklama
 
 ### İletişim Bilgileri
 
-**E-posta:** strategy@studioluminant.com
+**E-posta:** info@studioluminant.com
 
 **Üretim Merkezi:** Sakarya / Sapanca, Türkiye
 
@@ -382,7 +382,7 @@ Tümü · Geometrik · Organik · Miras · Konaklama
 Konum: Sakarya / Sapanca, Türkiye
 Küresel Dağıtım ve Montaj Hazır
 
-**CTA:** Proje Başlat — strategy@studioluminant.com
+**CTA:** Proje Başlat — info@studioluminant.com
 
 **Alt Satır:** © 2026 Studio Luminant. Tüm Hakları Saklıdır.
 
