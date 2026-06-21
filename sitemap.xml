@@ -318,8 +318,20 @@
   </url>
   <url>
     <loc>https://studioluminant.com/mimari-rolyef-panel-nedir.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/mimari-rolyef-panel-nedir.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/what-is-an-architectural-relief-panel.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com/en/what-is-an-architectural-relief-panel.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/mimari-rolyef-panel-nedir.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/what-is-an-architectural-relief-panel.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
     <lastmod>2026-06-14</lastmod>
   </url>
   <url>
