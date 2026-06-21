@@ -250,7 +250,7 @@
       // Primary: capture into the CRM. Map kit fields -> lead-intake contract (firm -> company).
       function utm(){var p=new URLSearchParams(location.search),o={};['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(n){var v=p.get(n);if(v){o[n]=v.slice(0,160);}});return o;}
       var localPart=(data.email||'').split('@')[0];
-      var crm=Object.assign({name:localPart||data.email,email:data.email,company:'',project_type:'Specifier Kit',source:'specifier-kit',_gotcha:data['bot-field']||''},utm());
+      var crm=Object.assign({name:localPart||data.email,email:data.email,company:'',project_type:'Specifier Kit',source:'specifier-kit-en',_gotcha:data['bot-field']||''},utm());
       try{
         var res=await fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake',{
           method:'POST',headers:{'Content-Type':'application/json','x-sl-key':'sl_web_lead_k7Qm2P'},body:JSON.stringify(crm)});
