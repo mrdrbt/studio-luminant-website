@@ -1,14 +1,14 @@
 // ─── MATERIAL SPECS — Single Source of Truth ───
-// Generated from Supabase · 2026-04-04
+// Generated from Supabase · 2026-06-21
 // Referenced by: products.htm, tr/urunler.htm, material-guide.js, tr/material-guide-tr.js, lookbook.htm
 
 window.SL_SPECS = {
   "pmag": {
     "fire": {
-      "value": "A2-s1,d0",
-      "standard": "EN 13501-1",
-      "note_en": "Euroclass A2 — limited combustibility",
-      "note_tr": "Euroclass A2 — sınırlı yanabilirlik"
+      "value": null,
+      "standard": null,
+      "note_en": null,
+      "note_tr": null
     },
     "thickness": {
       "min": 15,
@@ -55,10 +55,10 @@ window.SL_SPECS = {
   },
   "pucomp": {
     "fire": {
-      "value": "B-s1,d0",
-      "standard": "EN 13501-1",
-      "note_en": "Flame retardant, low smoke",
-      "note_tr": "Alev geciktirici, düşük duman"
+      "value": null,
+      "standard": null,
+      "note_en": null,
+      "note_tr": null
     },
     "thickness": {
       "min": 8,
