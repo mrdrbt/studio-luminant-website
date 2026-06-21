@@ -34,6 +34,8 @@ function pictureTag(src, alt, sizes, opts) {
   const lang = navEl.getAttribute('data-lang') || 'en';
   const langUrl = navEl.getAttribute('data-lang-url') || '#';
   const base = navEl.getAttribute('data-base') || '';
+  // Hide the language switcher on twin-less pages (no valid data-lang-url) rather than rendering a broken link.
+  const hasTwin = !!langUrl && langUrl !== '#';
 
   // ─── THEME COLOR & COLOR SCHEME ───
   if (!document.querySelector('meta[name="theme-color"]')) {
@@ -65,6 +67,7 @@ function pictureTag(src, alt, sizes, opts) {
     ld.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://studioluminant.com/#organization",
       "name": "Studio Luminant",
       "url": "https://studioluminant.com",
       "logo": "https://studioluminant.com/images/studio-luminant-logo-white-transparent.png",
@@ -133,7 +136,7 @@ function pictureTag(src, alt, sizes, opts) {
       ${navItemsHtml}
   </ul>
   <div class="nav-right">
-    <a href="${langUrl}" class="nav-lang">${navLinks.langLabel}</a>
+    ${hasTwin ? `<a href="${langUrl}" class="nav-lang">${navLinks.langLabel}</a>` : ''}
     <button class="nav-hamburger" aria-label="${navLinks.hamburgerOpen}" aria-expanded="false" aria-controls="mobileMenu">
       <span></span>
     </button>
@@ -143,7 +146,7 @@ function pictureTag(src, alt, sizes, opts) {
 
 <div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="${navLinks.mobileLabel}">
 ${mobileItemsHtml}
-  <a href="${langUrl}" class="nav-mobile-lang">${navLinks.langLabel}</a>
+  ${hasTwin ? `<a href="${langUrl}" class="nav-mobile-lang">${navLinks.langLabel}</a>` : ''}
 </div>`;
 
   // ─── ACTIVE NAV LINK ───

@@ -219,12 +219,11 @@
 
         <div class="lm-success" id="success" aria-live="polite">
           <div class="lm-check">✓</div>
-          <h3>İşte dosyanız.</h3>
-          <p class="lm-sub" style="margin-top:var(--s-2)">Teşekkürler — Studio Luminant tasarım dosyanız aşağıda hazır. İndirme otomatik başlar.</p>
+          <h3>Talebiniz alındı.</h3>
+          <p class="lm-sub" style="margin-top:var(--s-2)">Teşekkürler — Studio Luminant tasarım dosyanız kısa süre içinde e-posta adresinize gönderilecek. Gelen kutunuzu (gerekirse spam klasörünü) kontrol etmeyi unutmayın.</p>
           <ul class="lm-dl">
             <li><span><span class="f">Tasarım Dosyası</span> — lookbook + şartname rehberi + stüdyo sunumu</span><span>PDF</span></li>
           </ul>
-          <a class="lm-btn" id="dl-link" href="downloads/SL_Tasarim_Dosyasi.pdf" download>Dosyayı indir →</a>
           <a class="lm-btn ghost" href="mailto:info@studioluminant.com?subject=Tasar%C4%B1m%20Dosyas%C4%B1%20%E2%80%94%20fiziksel%20numune%20talebi&body=Merhaba%20Studio%20Luminant%2C%20fiziksel%20numune%20talep%20etmek%20istiyorum." style="margin-top:var(--s-3)">Fiziksel numune talep et</a>
         </div>
       </div>
@@ -263,8 +262,7 @@
       }
     });
     function reveal(){form.style.display='none';success.classList.add('show');
-      success.scrollIntoView({behavior:'smooth',block:'center'});
-      setTimeout(function(){document.getElementById('dl-link').click();},400);}
+      success.scrollIntoView({behavior:'smooth',block:'center'});}
   })();
 </script>
 

@@ -386,6 +386,8 @@
         <input type="hidden" name="project_type" value="Sample Box Request">
         <input type="hidden" name="source" value="architects-landing-en">
         <input type="hidden" name="_subject" value="Sample Box Request — Architects Page (EN)">
+        <!-- honeypot: hidden from people; bots that fill it are silently dropped by lead-intake + Formspree -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 
         <button type="submit" class="form-submit" id="sampleSubmitBtn">
           Request the Sample Box

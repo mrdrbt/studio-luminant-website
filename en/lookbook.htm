@@ -70,6 +70,20 @@ body {
   font-size: 10px; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--gold-dim);
 }
+.nav-logo-link { display: inline-flex; align-items: center; }
+.nav-links {
+  display: flex; align-items: center; gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 10px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--text-secondary); text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+@media (max-width: 820px) {
+  .nav-links { display: none; }
+}
 
 /* ===================== HERO ===================== */
 .hero {
@@ -389,7 +403,16 @@ section { padding: 120px 60px; }
 
 <!-- NAV -->
 <nav class="lookbook-nav" id="nav">
-  <img src="../images/studio-luminant-wordmark-white-transparent.png" alt="Studio Luminant" class="nav-logo">
+  <a href="Studio Luminant — Bespoke Architectural Elements.htm" class="nav-logo-link" aria-label="Studio Luminant — Home">
+    <img src="../images/studio-luminant-wordmark-white-transparent.png" alt="Studio Luminant" class="nav-logo">
+  </a>
+  <ul class="nav-links">
+    <li><a href="collection.htm">Collection</a></li>
+    <li><a href="products.htm">Materials &amp; Specs</a></li>
+    <li><a href="process.htm">How We Work</a></li>
+    <li><a href="gallery.htm">Gallery</a></li>
+    <li><a href="journal.htm">Journal</a></li>
+  </ul>
   <span class="nav-label">Design Lookbook</span>
 </nav>
 

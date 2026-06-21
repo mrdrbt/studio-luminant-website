@@ -387,6 +387,8 @@
         <input type="hidden" name="project_type" value="Numune Kutusu Talebi">
         <input type="hidden" name="source" value="mimarlar-landing">
         <input type="hidden" name="_subject" value="Numune Kutusu Talebi — Mimar Sayfası">
+        <!-- honeypot: hidden from people; bots that fill it are silently dropped by lead-intake + Formspree -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 
         <button type="submit" class="form-submit" id="sampleSubmitBtn">
           Numune Kutusunu İste

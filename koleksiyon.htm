@@ -214,6 +214,72 @@
   }
   .empty-state a:hover { text-decoration: underline; }
 
+  /* ─── TILING PREVIEW (LIGHTBOX) ────── */
+  .lb-view-toggle {
+    display: flex; gap: 0; margin-bottom: 12px;
+  }
+  .lb-view-btn {
+    flex: 1; padding: 8px 0; text-align: center;
+    font-family: 'Jost', sans-serif; font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-muted); background: transparent;
+    border: 1px solid var(--border); cursor: pointer;
+    transition: color 0.25s, background 0.25s, border-color 0.25s;
+  }
+  .lb-view-btn:first-child { border-radius: 4px 0 0 4px; }
+  .lb-view-btn:last-child  { border-radius: 0 4px 4px 0; border-left: 0; }
+  .lb-view-btn.active {
+    color: var(--obsidian); background: var(--gold);
+    border-color: var(--gold);
+  }
+  .lb-view-btn:not(.active):hover { color: var(--gold); border-color: var(--gold); }
+
+  .lb-tiling-wrap {
+    display: none; flex-direction: column; align-items: center;
+    justify-content: center; min-height: 320px;
+    background: var(--surface-2); border-radius: 6px;
+    padding: 24px; position: relative;
+  }
+  .lb-tiling-wrap.visible { display: flex; }
+
+  .lb-tiling-controls {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 16px; flex-wrap: wrap; justify-content: center;
+  }
+  .lb-tiling-pill {
+    font-family: 'Jost', sans-serif; font-size: 9px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-secondary); background: transparent;
+    border: 1px solid var(--border); padding: 5px 14px;
+    border-radius: 20px; cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .lb-tiling-pill:hover { color: var(--gold); border-color: var(--gold); }
+  .lb-tiling-pill.active {
+    background: var(--gold); color: var(--obsidian);
+    border-color: var(--gold);
+  }
+  .lb-grid-slider {
+    width: 80px; accent-color: var(--gold);
+    cursor: pointer;
+  }
+  .lb-grid-label {
+    font-family: 'Jost', sans-serif; font-size: 9px;
+    letter-spacing: 0.1em; color: var(--text-muted);
+  }
+
+  .lb-tiling-svg-wrap {
+    background: #fff; border-radius: 4px;
+    padding: 12px; display: inline-block; line-height: 0;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  }
+  #lb-tiling-svg { display: block; max-width: 100%; max-height: 50vh; }
+
+  .lb-tiling-hint {
+    margin-top: 10px; font-size: 11px; color: var(--text-muted);
+    font-style: italic;
+  }
+
   /* ─── LIGHTBOX LAYOUT (sl-modal lightbox mode) ──────────── */
   .lb-layout {
     display: flex;
@@ -224,6 +290,11 @@
   .lb-image {
     flex: 1 1 60%;
     background: var(--obsidian);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+  .lb-photo-wrap {
+    flex: 1;
     display: flex; align-items: center; justify-content: center;
     overflow: hidden;
   }
@@ -291,7 +362,7 @@
   @media (max-width: 720px) {
     .lb-layout { flex-direction: column; }
     .lb-details { flex: 0 0 auto; padding: 24px 20px; border-left: 0; border-top: 1px solid var(--border); }
-    .lb-image { flex: 0 0 50vh; }
+    .lb-image { flex: 0 0 50vh; overflow: auto; }
     .lb-nav { top: 25%; }
   }
 
@@ -560,7 +631,13 @@ function renderGrid() {
             · ${p.applications.map(a => appLabels[a] || a).join(', ')}
           </div>
         </div>`;
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', p.name + ' desenini görüntüle');
       card.addEventListener('click', () => openLightbox(i));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(i); }
+      });
       grid.appendChild(card);
     }
   });
@@ -620,14 +697,119 @@ let currentIndex = -1;
 
 const matMap = { pmag: 'Lumina PMAG™', pucomp: 'Lumina PUCOMP™' };
 
+// ─── Tiling Engine ───
+const TILE_SIZE = 50;
+let tilingGrid = 8;
+let tilingArrangement = 'random';
+let tilingRotations = [];
+let currentTileSvg = null;
+
+const arrangements = {
+  random: (g) => Array.from({length: g}, () => Array.from({length: g}, () => Math.floor(Math.random() * 4))),
+  diagonal: (g) => Array.from({length: g}, (_, r) => Array.from({length: g}, (_, c) => (r + c) % 4)),
+  spiral: (g) => {
+    const mid = (g - 1) / 2;
+    return Array.from({length: g}, (_, r) => Array.from({length: g}, (_, c) => {
+      const angle = Math.atan2(r - mid, c - mid);
+      const dist = Math.sqrt((r - mid) ** 2 + (c - mid) ** 2);
+      return Math.floor((angle / Math.PI * 2 + dist * 0.5 + 4) * 2) % 4;
+    }));
+  },
+  radial: (g) => {
+    const mid = (g - 1) / 2;
+    return Array.from({length: g}, (_, r) => Array.from({length: g}, (_, c) => {
+      const angle = Math.atan2(r - mid, c - mid);
+      return ((Math.floor(angle / (Math.PI / 2)) % 4) + 4) % 4;
+    }));
+  }
+};
+
+function renderTiling() {
+  if (!currentTileSvg) return;
+  const svg = document.getElementById('lb-tiling-svg');
+  if (!svg) return;
+  const total = tilingGrid * TILE_SIZE;
+  svg.setAttribute('width', total);
+  svg.setAttribute('height', total);
+  svg.setAttribute('viewBox', `0 0 ${total} ${total}`);
+  let html = `<rect width="${total}" height="${total}" fill="#ffffff"/>`;
+  html += `<defs><symbol id="lb-tile" viewBox="${currentTileSvg.vb}" overflow="hidden">${currentTileSvg.svg}</symbol></defs>`;
+  tilingRotations = arrangements[tilingArrangement](tilingGrid);
+  for (let r = 0; r < tilingGrid; r++) {
+    for (let c = 0; c < tilingGrid; c++) {
+      const rot = tilingRotations[r][c];
+      const x = c * TILE_SIZE, y = r * TILE_SIZE;
+      const cx = x + TILE_SIZE / 2, cy = y + TILE_SIZE / 2;
+      html += `<use href="#lb-tile" x="${x}" y="${y}" width="${TILE_SIZE}" height="${TILE_SIZE}" transform="rotate(${rot * 90} ${cx} ${cy})" fill="#1a1a1a"/>`;
+    }
+  }
+  svg.innerHTML = html;
+}
+
+function wireTilingEvents(mb) {
+  const viewToggle = mb.querySelector('#lb-view-toggle');
+  if (!viewToggle) return;
+  const tilingWrap = mb.querySelector('#lb-tiling-wrap');
+  const photoWrap  = mb.querySelector('.lb-photo-wrap');
+  viewToggle.addEventListener('click', e => {
+    const btn = e.target.closest('.lb-view-btn');
+    if (!btn) return;
+    const view = btn.dataset.view;
+    viewToggle.querySelectorAll('.lb-view-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (view === 'tiling') {
+      if (photoWrap) photoWrap.style.display = 'none';
+      tilingWrap.classList.add('visible');
+      renderTiling();
+    } else {
+      if (photoWrap) photoWrap.style.display = '';
+      tilingWrap.classList.remove('visible');
+    }
+  });
+  mb.querySelector('.lb-tiling-controls').addEventListener('click', e => {
+    const pill = e.target.closest('.lb-tiling-pill');
+    if (!pill) return;
+    mb.querySelectorAll('.lb-tiling-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    tilingArrangement = pill.dataset.arr;
+    renderTiling();
+  });
+  mb.querySelector('#lb-grid-size').addEventListener('input', e => {
+    tilingGrid = parseInt(e.target.value);
+    const label = mb.querySelector('#lb-grid-label');
+    if (label) label.textContent = `${tilingGrid}×${tilingGrid}`;
+    renderTiling();
+  });
+}
+
 function buildLightboxHtml(p) {
   const mats = p.materials.length
     ? p.materials.map(m => '<span class="lb-mat-badge">' + (matMap[m] || m) + '</span>').join('')
     : '';
+  const tilingHtml = p.tileSvg
+    ? '<div class="lb-view-toggle" id="lb-view-toggle">' +
+        '<button class="lb-view-btn active" data-view="photo">Fotoğraf</button>' +
+        '<button class="lb-view-btn" data-view="tiling">Döşeme Önizleme</button>' +
+      '</div>' +
+      '<div class="lb-tiling-wrap" id="lb-tiling-wrap">' +
+        '<div class="lb-tiling-controls">' +
+          '<button class="lb-tiling-pill active" data-arr="random">Rastgele</button>' +
+          '<button class="lb-tiling-pill" data-arr="diagonal">Çapraz</button>' +
+          '<button class="lb-tiling-pill" data-arr="spiral">Spiral</button>' +
+          '<button class="lb-tiling-pill" data-arr="radial">Radyal</button>' +
+          '<label class="lb-grid-label"><input type="range" id="lb-grid-size" class="lb-grid-slider" min="4" max="16" value="' + tilingGrid + '"><span id="lb-grid-label">' + tilingGrid + '×' + tilingGrid + '</span></label>' +
+        '</div>' +
+        '<div class="lb-tiling-svg-wrap"><svg id="lb-tiling-svg" xmlns="http://www.w3.org/2000/svg"></svg></div>' +
+        '<div class="lb-tiling-hint">Her karo 0°/90°/180°/270° döndürülür — yeniden oluşturmak için Rastgele\'ye tıklayın</div>' +
+      '</div>'
+    : '';
   return (
     '<div class="lb-layout">' +
       '<div class="lb-image">' +
-        pictureTag(p.image, p.name + ' — ' + p.style + ' pattern', '60vw', { cls: 'lb-img-el' }) +
+        '<div class="lb-photo-wrap">' +
+          pictureTag(p.image, p.name + ' — ' + p.style + ' pattern', '60vw', { cls: 'lb-img-el' }) +
+        '</div>' +
+        tilingHtml +
       '</div>' +
       '<div class="lb-details">' +
         '<div class="lb-cat">' + (styleLabels[p.style] || p.style) + '</div>' +
@@ -650,11 +832,15 @@ function getVisibleIndices() {
 function openLightbox(patternIndex) {
   currentIndex = patternIndex;
   const p = patterns[patternIndex];
+  currentTileSvg = p.tileSvg || null;
+  tilingArrangement = 'random';
+  tilingGrid = 8;
   SLModal.open({ mode: 'lightbox', html: buildLightboxHtml(p), title: p.name });
   const mb = document.querySelector('.sl-modal-body');
   if (!mb) return;
   mb.querySelector('.lb-prev').addEventListener('click', () => navigateLightbox(-1));
   mb.querySelector('.lb-next').addEventListener('click', () => navigateLightbox(1));
+  wireTilingEvents(mb);
 }
 
 function navigateLightbox(dir) {
