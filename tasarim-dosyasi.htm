@@ -62,7 +62,7 @@
   .lm-section h2{font-family:var(--font-display);font-weight:var(--w-display);
     font-size:clamp(var(--t-h5),5vw,var(--t-h3));letter-spacing:var(--tr-tight);margin:0 0 var(--s-3)}
   .lm-sub{font-family:var(--font-body);color:var(--text-secondary);max-width:60ch;margin:0}
-  .lm-inside{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-4);margin-top:var(--s-7)}
+  .lm-inside{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s-4);margin-top:var(--s-7)}
   @media(max-width:880px){.lm-inside{grid-template-columns:1fr}}
   .lm-card{border:1px solid var(--border);padding:var(--s-6);background:var(--surface)}
   .lm-card .tag{font-family:var(--font-body);font-size:var(--t-label);letter-spacing:var(--tr-wide);
@@ -134,7 +134,7 @@
       <div>
         <p class="lm-eyebrow">Mimarlar ve şartname uzmanları için</p>
         <h1>Tüm koleksiyon, yüzey şeması ve şartname bilgisi — <em>tek dosyada.</em></h1>
-        <p class="lm-lede">Lookbook, şartname & yüzey rehberi ve stüdyo sunumu bir arada. İş e-postanızı bırakın; dosya, e-posta beklemeden anında sizin olsun.</p>
+        <p class="lm-lede">Koleksiyon lookbook'u ve stüdyo sunumu tek dosyada bir arada. İş e-postanızı bırakın; dosya, e-posta beklemeden anında sizin olsun.</p>
         <ul class="lm-list">
           <li>Önce mimar masasına göre hazırlandı — projeye doğrudan referans</li>
           <li>Hangi koleksiyon, hangi modül, hangi yüzey: tek bakışta</li>
@@ -149,7 +149,7 @@
 
     <div class="lm-wrap">
       <div class="lm-specs">
-        <div><div class="k">İçerik</div><div class="v">Lookbook + Rehber + Sunum</div></div>
+        <div><div class="k">İçerik</div><div class="v">Lookbook + Sunum</div></div>
         <div><div class="k">Format</div><div class="v">Tek PDF</div></div>
         <div><div class="k">Ücret</div><div class="v">Ücretsiz</div></div>
         <div><div class="k">Teslim</div><div class="v">Anında indirme</div></div>
@@ -162,19 +162,13 @@
     <div class="lm-wrap">
       <p class="lm-eyebrow">Dosyanın içinde</p>
       <h2>Bir yüzeyi şartnameye almak için gereken her şey.</h2>
-      <p class="lm-sub">Üç parça, tek dosya: ne yaptığımızı görün, nasıl belirleneceğini öğrenin, kiminle çalıştığınızı tanıyın.</p>
+      <p class="lm-sub">İki parça, tek dosya: ne yaptığımızı görün ve kiminle çalıştığınızı tanıyın.</p>
       <div class="lm-inside">
         <div class="lm-card">
           <div class="tag">Lookbook</div>
           <h3>Koleksiyon ve rölyef desenleri</h3>
           <p>Koleksiyon ve rölyef desenleri, ışıkla okunan matte döküm yüzeylerde — mekân ölçeğinde nasıl durduğunu gösteren kareler.</p>
           <div class="lm-chips"><span class="lm-chip">Koleksiyon</span><span class="lm-chip">Rölyef desenleri</span></div>
-        </div>
-        <div class="lm-card">
-          <div class="tag">Rehber</div>
-          <h3>Şartname & yüzey rehberi</h3>
-          <p>Modül ölçüleri, artizan finiş şeması, teslimat süreleri ve montaj notları — şartnameye doğrudan aktarabileceğiniz biçimde.</p>
-          <div class="lm-chips"><span class="lm-chip">Modül & ölçü</span><span class="lm-chip">Artizan finiş</span><span class="lm-chip">BIM</span></div>
         </div>
         <div class="lm-card">
           <div class="tag">Sunum</div>
@@ -219,11 +213,12 @@
 
         <div class="lm-success" id="success" aria-live="polite">
           <div class="lm-check">✓</div>
-          <h3>Talebiniz alındı.</h3>
-          <p class="lm-sub" style="margin-top:var(--s-2)">Teşekkürler — Studio Luminant tasarım dosyanız kısa süre içinde e-posta adresinize gönderilecek. Gelen kutunuzu (gerekirse spam klasörünü) kontrol etmeyi unutmayın.</p>
+          <h3>Dosyanız hazır.</h3>
+          <p class="lm-sub" style="margin-top:var(--s-2)">Teşekkürler — Studio Luminant tasarım dosyanız aşağıda hazır. İndirme otomatik başlar.</p>
           <ul class="lm-dl">
-            <li><span><span class="f">Tasarım Dosyası</span> — lookbook + şartname rehberi + stüdyo sunumu</span><span>PDF</span></li>
+            <li><span><span class="f">Tasarım Dosyası</span> — lookbook + stüdyo sunumu</span><span>PDF</span></li>
           </ul>
+          <a class="lm-btn" id="dl-link" href="downloads/SL_Specifier_Kit_TR.pdf" download>Dosyayı indir →</a>
           <a class="lm-btn ghost" href="mailto:info@studioluminant.com?subject=Tasar%C4%B1m%20Dosyas%C4%B1%20%E2%80%94%20fiziksel%20numune%20talebi&body=Merhaba%20Studio%20Luminant%2C%20fiziksel%20numune%20talep%20etmek%20istiyorum." style="margin-top:var(--s-3)">Fiziksel numune talep et</a>
         </div>
       </div>
@@ -262,7 +257,8 @@
       }
     });
     function reveal(){form.style.display='none';success.classList.add('show');
-      success.scrollIntoView({behavior:'smooth',block:'center'});}
+      success.scrollIntoView({behavior:'smooth',block:'center'});
+      setTimeout(function(){var d=document.getElementById('dl-link');if(d){d.click();}},400);}
   })();
 </script>
 

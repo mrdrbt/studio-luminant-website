@@ -62,7 +62,7 @@
   .lm-section h2{font-family:var(--font-display);font-weight:var(--w-display);
     font-size:clamp(var(--t-h5),5vw,var(--t-h3));letter-spacing:var(--tr-tight);margin:0 0 var(--s-3)}
   .lm-sub{font-family:var(--font-body);color:var(--text-secondary);max-width:60ch;margin:0}
-  .lm-inside{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-4);margin-top:var(--s-7)}
+  .lm-inside{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s-4);margin-top:var(--s-7)}
   @media(max-width:880px){.lm-inside{grid-template-columns:1fr}}
   .lm-card{border:1px solid var(--border);padding:var(--s-6);background:var(--surface)}
   .lm-card .tag{font-family:var(--font-body);font-size:var(--t-label);letter-spacing:var(--tr-wide);
@@ -134,7 +134,7 @@
       <div>
         <p class="lm-eyebrow">For architects &amp; specifiers</p>
         <h1>The whole collection, finish schedule and spec — <em>in one file.</em></h1>
-        <p class="lm-lede">The lookbook, the specification &amp; finishes guide, and the studio presentation, together. Leave your work email; the kit is yours in seconds — no waiting on an inbox.</p>
+        <p class="lm-lede">The collection lookbook and the studio presentation, together in one file. Leave your work email; the kit is yours in seconds — no waiting on an inbox.</p>
         <ul class="lm-list">
           <li>Built for the specifier's desk — drop it straight into a project</li>
           <li>Which collection, which module, which finish — at a glance</li>
@@ -149,7 +149,7 @@
 
     <div class="lm-wrap">
       <div class="lm-specs">
-        <div><div class="k">Inside</div><div class="v">Lookbook + Guide + Presentation</div></div>
+        <div><div class="k">Inside</div><div class="v">Lookbook + Presentation</div></div>
         <div><div class="k">Format</div><div class="v">Single PDF</div></div>
         <div><div class="k">Price</div><div class="v">Free</div></div>
         <div><div class="k">Delivery</div><div class="v">Instant download</div></div>
@@ -162,19 +162,13 @@
     <div class="lm-wrap">
       <p class="lm-eyebrow">What's inside</p>
       <h2>Everything you need to specify a surface.</h2>
-      <p class="lm-sub">Three parts, one file: see what we make, learn how to specify it, and know who you'd be working with.</p>
+      <p class="lm-sub">Two parts, one file: see what we make, and know who you'd be working with.</p>
       <div class="lm-inside">
         <div class="lm-card">
           <div class="tag">Lookbook</div>
           <h3>The collection &amp; relief patterns</h3>
           <p>The collection and relief patterns shot on light-reading matte cast surfaces — frames that show how each reads at room scale.</p>
           <div class="lm-chips"><span class="lm-chip">Collection</span><span class="lm-chip">Relief patterns</span></div>
-        </div>
-        <div class="lm-card">
-          <div class="tag">Guide</div>
-          <h3>Specification &amp; finishes guide</h3>
-          <p>Module sizes, the artisan-finish schedule, lead times and mounting notes — in a form you can lift straight into a specification.</p>
-          <div class="lm-chips"><span class="lm-chip">Modules &amp; sizes</span><span class="lm-chip">Artisan finishes</span><span class="lm-chip">BIM</span></div>
         </div>
         <div class="lm-card">
           <div class="tag">Presentation</div>
@@ -219,11 +213,12 @@
 
         <div class="lm-success" id="success" aria-live="polite">
           <div class="lm-check">✓</div>
-          <h3>Request received.</h3>
-          <p class="lm-sub" style="margin-top:var(--s-2)">Thanks — your Studio Luminant Specifier Kit will be emailed to you shortly. Keep an eye on your inbox (and your spam folder, just in case).</p>
+          <h3>Here's your kit.</h3>
+          <p class="lm-sub" style="margin-top:var(--s-2)">Thanks — your Studio Luminant Specifier Kit is ready below. The download starts automatically.</p>
           <ul class="lm-dl">
-            <li><span><span class="f">Specifier Kit</span> — lookbook + finishes guide + studio presentation</span><span>PDF</span></li>
+            <li><span><span class="f">Specifier Kit</span> — lookbook + studio presentation</span><span>PDF</span></li>
           </ul>
+          <a class="lm-btn" id="dl-link" href="../downloads/SL_Specifier_Kit_EN.pdf" download>Download the kit →</a>
           <a class="lm-btn ghost" href="mailto:info@studioluminant.com?subject=Specifier%20Kit%20%E2%80%94%20physical%20sample%20request&body=Hello%20Studio%20Luminant%2C%20I%27d%20like%20to%20request%20a%20physical%20sample." style="margin-top:var(--s-3)">Request a physical sample</a>
         </div>
       </div>
@@ -262,7 +257,8 @@
       }
     });
     function reveal(){form.style.display='none';success.classList.add('show');
-      success.scrollIntoView({behavior:'smooth',block:'center'});}
+      success.scrollIntoView({behavior:'smooth',block:'center'});
+      setTimeout(function(){var d=document.getElementById('dl-link');if(d){d.click();}},400);}
   })();
 </script>
 
