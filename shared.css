@@ -286,6 +286,10 @@ footer {
 }
 .footer-brand .logo span { color: var(--gold); }
 .footer-tagline { font-size: 12px; line-height: 1.75; color: var(--text-muted); font-weight: 300; max-width: 280px; }
+.footer-social { display: flex; gap: 16px; margin-top: 24px; }
+.footer-social a { display: inline-flex; align-items: center; justify-content: center; color: var(--text-muted); transition: color 0.3s; }
+.footer-social a:hover { color: var(--gold); }
+.footer-social svg { width: 20px; height: 20px; display: block; }
 .footer-col-title { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
 .footer-location-eyebrow { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
 .footer-location-name { font-family: var(--font-display); font-size: 20px; font-weight: 300; color: var(--text-primary); margin-bottom: 8px; }
@@ -447,6 +451,8 @@ summary:focus-visible,
   .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
   .footer-inner { padding: 0 32px; }
   .footer-links a { min-height: 48px; display: flex; align-items: center; padding: 12px 8px; }
+  .footer-social { justify-content: center; gap: 8px; }
+  .footer-social a { min-height: 48px; min-width: 48px; }
   .footer-cta-block a { min-height: 48px; display: inline-flex; align-items: center; }
 }
 

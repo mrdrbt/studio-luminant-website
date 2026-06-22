@@ -72,6 +72,10 @@ function pictureTag(src, alt, sizes, opts) {
       "url": "https://studioluminant.com",
       "logo": "https://studioluminant.com/images/studio-luminant-logo-white-transparent.png",
       "email": "info@studioluminant.com",
+      "sameAs": [
+        "https://www.instagram.com/studio_luminant",
+        "https://www.linkedin.com/company/studioluminant"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Talatpaşa Cad. No: 21, İç Kapı No: 501",
@@ -245,6 +249,8 @@ ${mobileItemsHtml}
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
     journalHref: 'makaleler.htm',
     journalText: 'Makaleler',
+    igLabel: "Instagram'da Studio Luminant",
+    liLabel: "LinkedIn'de Studio Luminant",
     bimHref: '',
     bimText: ''
   } : {
@@ -261,6 +267,8 @@ ${mobileItemsHtml}
     copyright: '© 2026 Studio Luminant. All Rights Reserved.',
     journalHref: 'journal.htm',
     journalText: 'Journal',
+    igLabel: 'Studio Luminant on Instagram',
+    liLabel: 'Studio Luminant on LinkedIn',
     bimHref: '',
     bimText: ''
   };
@@ -274,6 +282,20 @@ ${mobileItemsHtml}
           <img src="${imgBase}" alt="Studio Luminant" class="footer-logo-img" width="64" height="52">
         </a>
         <p class="footer-tagline">${footerContent.tagline}</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/studio_luminant" target="_blank" rel="noopener" aria-label="${footerContent.igLabel}">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="1.5"></rect>
+              <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"></circle>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/studioluminant" target="_blank" rel="noopener" aria-label="${footerContent.liLabel}">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.2 9h3.56v11.5H3.2zM9.2 9h3.41v1.57h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.32h-3.56v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96v5.7H9.2z"></path>
+            </svg>
+          </a>
+        </div>
       </div>
       <div>
         <div class="footer-col-title">${footerContent.hqTitle}</div>
