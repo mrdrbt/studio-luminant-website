@@ -249,6 +249,8 @@ ${mobileItemsHtml}
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
     journalHref: 'makaleler.htm',
     journalText: 'Makaleler',
+    sitemapHref: 'site-haritasi.htm',
+    sitemapText: 'Site Haritası',
     igLabel: "Instagram'da Studio Luminant",
     liLabel: "LinkedIn'de Studio Luminant",
     bimHref: '',
@@ -267,6 +269,8 @@ ${mobileItemsHtml}
     copyright: '© 2026 Studio Luminant. All Rights Reserved.',
     journalHref: 'journal.htm',
     journalText: 'Journal',
+    sitemapHref: 'site-map.htm',
+    sitemapText: 'Site Map',
     igLabel: 'Studio Luminant on Instagram',
     liLabel: 'Studio Luminant on LinkedIn',
     bimHref: '',
@@ -320,6 +324,7 @@ ${mobileItemsHtml}
       <p class="footer-copy">${footerContent.copyright}</p>
       <ul class="footer-links">
         <li><a href="${footerContent.journalHref}">${footerContent.journalText}</a></li>
+        <li><a href="${footerContent.sitemapHref}">${footerContent.sitemapText}</a></li>
         ${footerContent.bimText ? `<li><a href="${footerContent.bimHref}">${footerContent.bimText}</a></li>` : ''}
       </ul>
     </div>
