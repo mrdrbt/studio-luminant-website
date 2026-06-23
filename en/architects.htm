@@ -423,6 +423,7 @@
                 body: JSON.stringify(data)
               });
               if (res.ok) {
+                if (typeof gtag === 'function') { gtag('event', 'generate_lead', { source: data.source || '' }); }
                 status.style.display = 'block';
                 status.style.color = 'var(--gold)';
                 status.style.border = '1px solid var(--gold-dim)';
