@@ -67,11 +67,11 @@ function pictureTag(src, alt, sizes, opts) {
     ld.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      "@id": "https://studioluminant.com/#organization",
+      "@id": "https://studioluminant.com.tr/#organization",
       "name": "Studio Luminant",
-      "url": "https://studioluminant.com",
-      "logo": "https://studioluminant.com/images/studio-luminant-logo-white-transparent.png",
-      "email": "info@studioluminant.com",
+      "url": "https://studioluminant.com.tr",
+      "logo": "https://studioluminant.com.tr/images/studio-luminant-logo-white-transparent.png",
+      "email": "info@studioluminant.com.tr",
       "sameAs": [
         "https://www.instagram.com/studio_luminant",
         "https://www.linkedin.com/company/studioluminant"
@@ -317,7 +317,7 @@ ${mobileItemsHtml}
             <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
           </svg>
         </a>
-        <p>info@studioluminant.com</p>
+        <p>info@studioluminant.com.tr</p>
       </div>
     </div>
     <div class="footer-bottom">

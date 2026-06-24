@@ -1,10 +1,26 @@
 [build]
   publish = "."
 
-# Redirect www to non-www (canonical)
+# ─── Domain cutover: studioluminant.com → studioluminant.com.tr (permanent 301) ───
+# .com still resolves to this Netlify site; force-redirect every old-domain
+# request to the new domain, path-preserved, so the old domain stops serving
+# duplicate content and consolidates to .com.tr.
+[[redirects]]
+  from = "https://studioluminant.com/*"
+  to = "https://studioluminant.com.tr/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "https://www.studioluminant.com/*"
-  to = "https://studioluminant.com/:splat"
+  to = "https://studioluminant.com.tr/:splat"
+  status = 301
+  force = true
+
+# Redirect www to non-www (canonical)
+[[redirects]]
+  from = "https://www.studioluminant.com.tr/*"
+  to = "https://studioluminant.com.tr/:splat"
   status = 301
   force = true
 

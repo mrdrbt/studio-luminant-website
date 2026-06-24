@@ -3,236 +3,236 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Turkish pages (root / default) -->
   <url>
-    <loc>https://studioluminant.com/</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/urunler.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/urunler.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/products.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/urunler.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/urunler.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/products.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/koleksiyon.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/koleksiyon.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/collection.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/koleksiyon.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/koleksiyon.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/collection.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/surec.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/surec.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/process.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/surec.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/surec.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/process.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/galeri.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/galeri.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/gallery.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/galeri.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/galeri.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/gallery.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/kaynaklar.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/kaynaklar.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/kaynaklar-sartname-rehberi.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-sartname-rehberi.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-specification-guide.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/kaynaklar-sartname-rehberi.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-sartname-rehberi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-specification-guide.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/kaynaklar-agirlik-yapisal.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-agirlik-yapisal.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-weight-structural.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/kaynaklar-agirlik-yapisal.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-agirlik-yapisal.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-weight-structural.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/kaynaklar-yuzey-kaplamalari.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-yuzey-kaplamalari.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-finishes.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/kaynaklar-yuzey-kaplamalari.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-yuzey-kaplamalari.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-finishes.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/kaynaklar-teslimat-sureci.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-teslimat-sureci.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-lead-times.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/kaynaklar-teslimat-sureci.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-teslimat-sureci.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-lead-times.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/kaynaklar-surdurulebilirlik.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-surdurulebilirlik.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-sustainability.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/kaynaklar-surdurulebilirlik.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-surdurulebilirlik.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-sustainability.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/iletisim.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/iletisim.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/contact.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/iletisim.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/iletisim.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/contact.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <!-- English pages (/en/) -->
   <url>
-    <loc>https://studioluminant.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/products.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/urunler.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/products.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/products.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/urunler.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/products.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/collection.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/koleksiyon.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/collection.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/collection.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/koleksiyon.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/collection.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/process.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/surec.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/process.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/process.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/surec.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/process.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/gallery.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/galeri.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/gallery.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/gallery.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/galeri.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/gallery.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/case-study-petal-lounge.htm</loc>
+    <loc>https://studioluminant.com.tr/en/case-study-petal-lounge.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/case-study-wave-lounge.htm</loc>
+    <loc>https://studioluminant.com.tr/en/case-study-wave-lounge.htm</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/resources.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/resources.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/resources-specification-guide.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-sartname-rehberi.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-specification-guide.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/resources-specification-guide.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-sartname-rehberi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-specification-guide.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/resources-weight-structural.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-agirlik-yapisal.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-weight-structural.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/resources-weight-structural.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-agirlik-yapisal.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-weight-structural.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/resources-finishes.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-yuzey-kaplamalari.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-finishes.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/resources-finishes.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-yuzey-kaplamalari.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-finishes.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/resources-lead-times.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-teslimat-sureci.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-lead-times.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/resources-lead-times.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-teslimat-sureci.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-lead-times.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/resources-sustainability.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/kaynaklar-surdurulebilirlik.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/resources-sustainability.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/resources-sustainability.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-surdurulebilirlik.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-sustainability.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/lookbook.htm</loc>
+    <loc>https://studioluminant.com.tr/en/lookbook.htm</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/contact.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/iletisim.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/contact.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/contact.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/iletisim.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/contact.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
@@ -240,20 +240,20 @@
 
   <!-- Specifier Kit lead magnet (added 2026-06-15) -->
   <url>
-  <loc>https://studioluminant.com/tasarim-dosyasi.htm</loc>
-  <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/tasarim-dosyasi.htm"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/specifier-kit.htm"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+  <loc>https://studioluminant.com.tr/tasarim-dosyasi.htm</loc>
+  <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-dosyasi.htm"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/specifier-kit.htm"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
   <lastmod>2026-06-15</lastmod>
 </url>
 
 <url>
-  <loc>https://studioluminant.com/en/specifier-kit.htm</loc>
-  <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/tasarim-dosyasi.htm"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/specifier-kit.htm"/>
-  <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+  <loc>https://studioluminant.com.tr/en/specifier-kit.htm</loc>
+  <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-dosyasi.htm"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/specifier-kit.htm"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
   <lastmod>2026-06-15</lastmod>
@@ -261,73 +261,73 @@
 
   <!-- Journal / Makaleler (added 2026-06-14) -->
   <url>
-    <loc>https://studioluminant.com/makaleler.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/makaleler.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/journal.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/makaleler.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/makaleler.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/journal.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-14</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/ozel-uretim-duvar-paneli-mimar-rehberi.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/ozel-uretim-duvar-paneli-mimar-rehberi.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/how-to-specify-custom-cast-wall-panels.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/how-to-specify-custom-cast-wall-panels.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-14</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/journal.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/makaleler.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/journal.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/journal.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/makaleler.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/journal.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-14</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/how-to-specify-custom-cast-wall-panels.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/ozel-uretim-duvar-paneli-mimar-rehberi.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/how-to-specify-custom-cast-wall-panels.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/how-to-specify-custom-cast-wall-panels.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/how-to-specify-custom-cast-wall-panels.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-14</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/mimari-rolyef-panel-nedir.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/mimari-rolyef-panel-nedir.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/what-is-an-architectural-relief-panel.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-14</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/what-is-an-architectural-relief-panel.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/mimari-rolyef-panel-nedir.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/what-is-an-architectural-relief-panel.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-14</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/heykelsi-duvar-paneli-nedir.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/heykelsi-duvar-paneli-nedir.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/what-are-sculptural-cast-wall-panels.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/heykelsi-duvar-paneli-nedir.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/heykelsi-duvar-paneli-nedir.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/what-are-sculptural-cast-wall-panels.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-06-14</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/what-are-sculptural-cast-wall-panels.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/heykelsi-duvar-paneli-nedir.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/what-are-sculptural-cast-wall-panels.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/what-are-sculptural-cast-wall-panels.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/heykelsi-duvar-paneli-nedir.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/what-are-sculptural-cast-wall-panels.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-14</lastmod>
@@ -335,19 +335,19 @@
 
   <!-- HTML site map (crawl hub, added 2026-06-22) -->
   <url>
-    <loc>https://studioluminant.com/site-haritasi.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/site-haritasi.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/site-map.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/site-haritasi.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/site-haritasi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/site-map.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-06-22</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com/en/site-map.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com/site-haritasi.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com/en/site-map.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com/"/>
+    <loc>https://studioluminant.com.tr/en/site-map.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/site-haritasi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/site-map.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <lastmod>2026-06-22</lastmod>
