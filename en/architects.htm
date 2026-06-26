@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://studioluminant.com.tr/en/architects.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/mimarlar.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/architects.htm">
-  <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/">
+  <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/mimarlar.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="For Architects & Specifiers — Studio Luminant">
@@ -357,9 +357,8 @@
     </div>
     <div class="sample-right">
       <div class="form-title reveal">Request the Sample Box</div>
-      <!-- DEDICATED sample-box Formspree endpoint (isolated from the main project-enquiry form xpqygpjw).
-           ACTION REQUIRED: create a new form at formspree.io and replace SAMPLE_BOX_FORM_ID below with its ID. -->
-      <form class="contact-form reveal" id="sampleForm" action="https://formspree.io/f/SAMPLE_BOX_FORM_ID" method="POST">
+      <!-- Sample-box requests reuse the shared Formspree endpoint (xpqygpjw); tagged via _subject/source so they stay filterable. Primary capture is the Supabase CRM below. -->
+      <form class="contact-form reveal" id="sampleForm" action="https://formspree.io/f/xpqygpjw" method="POST">
         <div class="form-row">
           <div class="form-field">
             <label for="name">Name</label>
@@ -411,10 +410,8 @@
             btn.disabled = true;
             btn.innerHTML = 'Sending…';
             const data = Object.fromEntries(new FormData(form).entries());
-            // Notification backup — only fire if a real Formspree endpoint is configured (skips the placeholder)
-            if (form.action && form.action.indexOf('SAMPLE_BOX_FORM_ID') === -1) {
-              fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }).catch(() => {});
-            }
+            // Notification backup — Formspree email (shared endpoint, tagged via _subject/source)
+            fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }).catch(() => {});
             try {
               // Primary: capture into the CRM (source of truth)
               const res = await fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake', {
