@@ -110,6 +110,15 @@
     <priority>0.7</priority>
     <lastmod>2026-06-02</lastmod>
   </url>
+  <url>
+    <loc>https://studioluminant.com.tr/mimarlar.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/mimarlar.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/architects.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/mimarlar.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-26</lastmod>
+  </url>
   <!-- English pages (/en/) -->
   <url>
     <loc>https://studioluminant.com.tr/en/</loc>
@@ -236,6 +245,15 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-02</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/architects.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/mimarlar.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/architects.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/mimarlar.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
   </url>
 
   <!-- Specifier Kit lead magnet (added 2026-06-15) -->
