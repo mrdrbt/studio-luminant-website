@@ -285,7 +285,23 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/makaleler.htm"/>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-06-14</lastmod>
+    <lastmod>2026-06-26</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-26</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-06-27</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm</loc>

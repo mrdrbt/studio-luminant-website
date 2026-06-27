@@ -60,32 +60,9 @@ function pictureTag(src, alt, sizes, opts) {
   }
 
   // ─── ORGANIZATION JSON-LD ───
-  if (!document.querySelector('script[data-sl-org]')) {
-    const ld = document.createElement('script');
-    ld.type = 'application/ld+json';
-    ld.setAttribute('data-sl-org', '');
-    ld.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://studioluminant.com.tr/#organization",
-      "name": "Studio Luminant",
-      "url": "https://studioluminant.com.tr",
-      "logo": "https://studioluminant.com.tr/images/studio-luminant-logo-white-transparent.png",
-      "email": "info@studioluminant.com.tr",
-      "sameAs": [
-        "https://www.instagram.com/studio_luminant",
-        "https://www.linkedin.com/company/studioluminant"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Talatpaşa Cad. No: 21, İç Kapı No: 501",
-        "addressLocality": "Kağıthane",
-        "addressRegion": "İstanbul",
-        "addressCountry": "TR"
-      }
-    });
-    document.head.appendChild(ld);
-  }
+  // Single-sourced as static markup in the homepage <head> (canonical brand entity, full
+  // NAP + telephone + @id) to avoid duplicate/conflicting Organization nodes. Intentionally
+  // NOT injected per-page here — the brand entity only needs to exist once, on the homepage.
 
   // ─── NAV ───
   const navLinks = lang === 'tr' ? {
