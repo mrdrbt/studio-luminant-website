@@ -270,11 +270,35 @@
   gtag('js', new Date());
   gtag('config', 'G-PZ0SGLKLH0');
 </script>
+  <!-- Meta Pixel -->
+  <script>
+  (function(){
+    try{
+      var h=location.hostname;
+      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
+      if(localStorage.getItem('sl_internal')==='1'){return;}
+    }catch(e){}
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1437127258139677');
+    fbq('track', 'PageView');
+  })();
+  </script>
+  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Finishes, Coatings & Colour", "item": "https://studioluminant.com.tr/en/resources-finishes.htm"}]}
 </script>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
+/></noscript>
 
 <div id="site-nav" data-lang="en" data-lang-url="../kaynaklar-yuzey-kaplamalari.htm" data-base="../"></div>
 
