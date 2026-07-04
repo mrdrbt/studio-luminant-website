@@ -66,7 +66,7 @@ function pictureTag(src, alt, sizes, opts) {
 
   // ─── NAV ───
   const navLinks = lang === 'tr' ? {
-    home: { href: 'Studio Luminant — Özel Mimari Elemanlar.htm', alt: 'Studio Luminant' },
+    home: { href: '/', alt: 'Studio Luminant' },
     items: [
       { href: 'koleksiyon.htm', text: 'Koleksiyon' },
       { href: 'urunler.htm', text: 'Malzeme & Teknik' },
@@ -83,7 +83,7 @@ function pictureTag(src, alt, sizes, opts) {
     hamburgerClose: 'Menüyü kapat',
     mobileLabel: 'Mobil menü'
   } : {
-    home: { href: 'Studio Luminant — Bespoke Architectural Elements.htm', alt: 'Studio Luminant' },
+    home: { href: '/en/', alt: 'Studio Luminant' },
     items: [
       { href: 'collection.htm', text: 'Collection' },
       { href: 'products.htm', text: 'Materials & Specs' },
@@ -215,7 +215,7 @@ ${mobileItemsHtml}
   if (!footerEl) return;
 
   const footerContent = lang === 'tr' ? {
-    homeHref: 'Studio Luminant — Özel Mimari Elemanlar.htm',
+    homeHref: '/',
     tagline: 'Özel mimari elemanlar — tasarlanır, dökülür, özenle bitirilir.',
     hqTitle: 'Genel Merkez',
     locationLabel: 'Konum',
@@ -235,7 +235,7 @@ ${mobileItemsHtml}
     bimHref: '',
     bimText: ''
   } : {
-    homeHref: 'Studio Luminant — Bespoke Architectural Elements.htm',
+    homeHref: '/en/',
     tagline: 'Bespoke architectural elements — sculpted, cast, and finished to spec.',
     hqTitle: 'Headquarter',
     locationLabel: 'Location',
