@@ -217,11 +217,9 @@ ${mobileItemsHtml}
   const footerContent = lang === 'tr' ? {
     homeHref: '/',
     tagline: 'Özel mimari elemanlar — tasarlanır, dökülür, özenle bitirilir.',
-    hqTitle: 'Genel Merkez',
+    hqTitle: 'Stüdyo &amp; Atölye',
     locationLabel: 'Konum',
     locationNote: 'Küresel Dağıtım ve Montaj Hazır',
-    productionTitle: 'Üretim Atölyesi',
-    productionLocation: 'Sakarya / Türkiye',
     ctaTitle: 'Proje Başlat',
     ctaBtn: 'Proje Başlat',
     ctaHref: 'iletisim.htm',
@@ -237,11 +235,9 @@ ${mobileItemsHtml}
   } : {
     homeHref: '/en/',
     tagline: 'Bespoke architectural elements — sculpted, cast, and finished to spec.',
-    hqTitle: 'Headquarter',
+    hqTitle: 'Studio &amp; Workshop',
     locationLabel: 'Location',
     locationNote: 'Global Distribution &amp; Installation Ready',
-    productionTitle: 'Production Studio',
-    productionLocation: 'Sakarya / Turkey',
     ctaTitle: 'Start a Project',
     ctaBtn: 'Initiate Project',
     ctaHref: 'contact.htm',
@@ -283,10 +279,8 @@ ${mobileItemsHtml}
       <div>
         <div class="footer-col-title">${footerContent.hqTitle}</div>
         <span class="footer-location-eyebrow">${footerContent.locationLabel}</span>
-        <div class="footer-location-name">Levent Plaza, Ortabayır Mah.<br>Talatpaşa Cad. No: 21, İç Kapı No: 501<br>Kağıthane / İstanbul</div>
+        <div class="footer-location-name">Rüstempaşa Mah. İstasyon Cad.<br>No: 58, PK 54600<br>Sapanca / Sakarya</div>
         <p class="footer-location-note">${footerContent.locationNote}</p>
-        <div class="footer-col-title" style="margin-top:1.2em">${footerContent.productionTitle}</div>
-        <div class="footer-location-name">${footerContent.productionLocation}</div>
       </div>
       <div class="footer-cta-block">
         <div class="footer-col-title">${footerContent.ctaTitle}</div>
