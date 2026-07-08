@@ -1,0 +1,43 @@
+#!/bin/sh
+# SL fire-hold pre-push gate for the Studio Luminant website.
+#
+# Blocks a push if any fire-cert LEAK is found in this (published) website tree. The
+# canonical fire patterns live in the UMBRELLA repo (VAULT/10 — AI & Tools/prompt_lint.py),
+# which Netlify's build checkout never sees — so a Netlify build command would just SKIP.
+# This gate therefore runs LOCALLY, on the last hop before code leaves this machine and
+# Netlify auto-deploys it. See this repo's CLAUDE.md ("Fire-hold pre-push gate").
+#
+# Fail-OPEN only when the scanner cannot be located or run (e.g. this repo was cloned
+# standalone, away from the umbrella) — a broken gate must not brick deploys.
+# Fail-CLOSED on an actual leak: exit 1 aborts the push.
+set -u
+
+repo_root=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+umbrella=$(cd "$repo_root/../../.." 2>/dev/null && pwd) || umbrella=""
+scanner="$umbrella/.claude/tools/fire_leak_scan.py"
+scope="VAULT/06 — Website/Studio Luminant Website"
+
+if [ -z "$umbrella" ] || [ ! -f "$scanner" ]; then
+  echo "[SL fire-hold] scanner not found (expected the umbrella repo three levels up) — skipping; push allowed." >&2
+  exit 0
+fi
+
+py=$(command -v python || command -v py || command -v python3) || {
+  echo "[SL fire-hold] no python on PATH — skipping; push allowed." >&2
+  exit 0
+}
+
+echo "[SL fire-hold] scanning the website tree for fire-cert leaks..." >&2
+"$py" "$scanner" "$scope"
+status=$?
+
+if [ "$status" -ne 0 ]; then
+  echo "" >&2
+  echo "[SL fire-hold] PUSH BLOCKED — fire-cert language found in the published website tree (fire hold active)." >&2
+  echo "               Remove the flagged token(s) above. Only if you have confirmed a false" >&2
+  echo "               positive, re-push with:  git push --no-verify" >&2
+  exit 1
+fi
+
+echo "[SL fire-hold] clean — no fire-cert leaks; push allowed." >&2
+exit 0
