@@ -85,7 +85,7 @@ Açıklama: Tüm kalıplama, döküm ve bitirme işlemleri kurum içinde gerçek
 **Paragraf 2:** Mimarlar ve varlık yöneticileri için Studio Luminant'ı tercih etmek, hazır BIM dosyalarıyla donatılmış önceden formüle edilmiş, spesifikasyona uygun malzemelere erişim anlamına gelir. Özel mimari rölyef spesifikasyonunun sorumluluğunu ortadan kaldırıyoruz.
 
 **Lumina PMAG™ — Polimer Modifiye Alfa Alçı**
-- A2-s1,d0 Yangın Direnci
+- Mineral Bazlı Alçı Kompozit
 - Neme Dayanıklı
 - Seramik Benzeri Pürüzsüz Yüzey
 - Büyük Ölçekli Kaplamalar İçin İdeal
@@ -112,7 +112,7 @@ Etiketler: Beton Döküm · Soğuk Döküm · Poliüretan Döküm · GFRC Dökü
 Konum: Sakarya / Sapanca, Türkiye
 Küresel Dağıtım ve Montaj Hazır
 
-**CTA:** Proje Başlat — info@studioluminant.com
+**CTA:** Proje Başlat — info@studioluminant.com.tr
 
 **Alt Satır:** © 2026 Studio Luminant. Tüm Hakları Saklıdır.
 
@@ -140,13 +140,13 @@ Küresel Dağıtım ve Montaj Hazır
 
 Lumina PMAG™, Studio Luminant'ın birincil iç mekan kaplama malzemesidir — yüksek spesifikasyonlu mimari uygulamalar için formüle edilmiş polimer modifiye alfa alçı. Alfa alçı, beta sınıfı alternatiflerin önemli ölçüde üzerinde basınç dayanımı sunarak daha yoğun, daha sert ve seramik benzeri yüzey kalitesine sahip paneller üretir.
 
-A2-s1,d0 yangın performansı*, neme dayanıklı ve otomotiv sınıfı 2K kaplama ile herhangi bir RAL veya özel renkte mevcuttur. Yangın uyumluluğu, yüzey kalitesi ve boyutsal hassasiyetin vazgeçilmez olduğu büyük ölçekli iç duvar ve tavan uygulamaları için idealdir.
+Neme dayanıklı ve artizan finish ile herhangi bir RAL veya özel renkte mevcuttur. Yüzey kalitesi ve boyutsal hassasiyetin vazgeçilmez olduğu büyük ölçekli iç duvar ve tavan uygulamaları için idealdir.
 
 **Teknik Özellikler:**
 
 | Özellik | Değer |
 |---------|-------|
-| Yangın Sınıfı | A2-s1,d0 Yanmaz |
+| Malzeme | Polimer Modifiye Alfa Alçı |
 | Yüzey | Seramik Benzeri Pürüzsüz |
 | Uygulama | İç Duvar & Tavanlar |
 | Nem | Dayanıklı |
@@ -346,7 +346,7 @@ Tümü · Geometrik · Organik · Miras · Konaklama
 
 ### İletişim Bilgileri
 
-**E-posta:** info@studioluminant.com
+**E-posta:** info@studioluminant.com.tr
 
 **Üretim Merkezi:** Sakarya / Sapanca, Türkiye
 
@@ -382,7 +382,7 @@ Tümü · Geometrik · Organik · Miras · Konaklama
 Konum: Sakarya / Sapanca, Türkiye
 Küresel Dağıtım ve Montaj Hazır
 
-**CTA:** Proje Başlat — info@studioluminant.com
+**CTA:** Proje Başlat — info@studioluminant.com.tr
 
 **Alt Satır:** © 2026 Studio Luminant. Tüm Hakları Saklıdır.
 
