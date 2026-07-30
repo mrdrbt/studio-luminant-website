@@ -903,7 +903,7 @@ function MaterialCard({
       overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: material.id === "pmag" ? "images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png" : "images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
+    src: material.id === "pmag" ? "images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp" : "images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
     alt: material.id === "pmag" ? "Lumina PMAG mimari rölyef panel detayı" : "Lumina PUCOMP cephe uygulaması",
     style: {
       position: "absolute",

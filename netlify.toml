@@ -1,6 +1,16 @@
 [build]
   publish = "."
 
+# ─── Pretty URLs OFF ───
+# Netlify's post-processing was rewriting every internal link from
+# href="koleksiyon.htm" to href='/koleksiyon', while every canonical tag and
+# every sitemap <loc> still points at the .htm form. Both forms return 200, so
+# the canonical URLs received ZERO internal links — Ahrefs flagged all 41 pages
+# as "Canonical URL has no incoming internal links" (crawl depth 0, discovered
+# only via sitemap). Turning this off makes served links match canonical.
+[build.processing.html]
+  pretty_urls = false
+
 # ─── Domain cutover: studioluminant.com → studioluminant.com.tr (permanent 301) ───
 # .com still resolves to this Netlify site; force-redirect every old-domain
 # request to the new domain, path-preserved, so the old domain stops serving
