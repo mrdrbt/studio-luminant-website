@@ -29,7 +29,7 @@ Tüm sayfalardaki görünür metin içerikleri, sayfa ve bölüm bazında derlen
 **CTA Buton:** Proje Başlat
 
 **Köşe Etiketi:**
-- Tescilli Süreç
+- Özgün Süreç
 - Dikey Entegre Üretim
 
 ### Strateji Bölümü
@@ -134,7 +134,7 @@ Küresel Dağıtım ve Montaj Hazır
 
 **Ana Başlık:** Kalıcılık İçin Tasarlandı.
 
-**Açıklama:** İki tescilli malzeme sistemi — hedef performans, özel geometri ve kalıcı uygulama için formüle edilmiştir.
+**Açıklama:** İki özgün malzeme sistemi — hedef performans, özel geometri ve kalıcı uygulama için formüle edilmiştir.
 
 ### Lumina PMAG™ — Polimer Modifiye Alfa Alçı
 
@@ -212,7 +212,7 @@ UV kararlı, hava koşullarına dayanıklı ve darbe testli PUCOMP panelleri, PM
 
 **Ana Başlık:** Dijital Modelleme
 
-**Açıklama:** Tescilli Yapay Zeka Destekli Ürün Modelleme hattımız, tasarım brifingini yüksek kaliteli 3D yüzey modellerine dönüştürür. İterasyon hızlı ve tahribatsızdır — bu aşamadaki değişikliklerin maliyeti sıfırdır. Model, kalıbı doğrudan yönlendirir ve manuel aktarım hatasını ortadan kaldırır.
+**Açıklama:** Özgün Yapay Zeka Destekli Ürün Modelleme hattımız, tasarım brifingini yüksek kaliteli 3D yüzey modellerine dönüştürür. İterasyon hızlı ve tahribatsızdır — bu aşamadaki değişikliklerin maliyeti sıfırdır. Model, kalıbı doğrudan yönlendirir ve manuel aktarım hatasını ortadan kaldırır.
 
 ### Adım 03 — Kalıplama
 

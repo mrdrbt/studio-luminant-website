@@ -1298,7 +1298,7 @@ function MaterialGuide() {
       color: COLORS.muted,
       margin: "0 0 20px"
     }
-  }, "İki tescilli kompozit. Mimari ifade için tasarlandı."), /*#__PURE__*/React.createElement("div", {
+  }, "İki özgün kompozit. Mimari ifade için tasarlandı."), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 48,
       height: 1,
