@@ -231,7 +231,13 @@ ${mobileItemsHtml}
     igLabel: "Instagram'da Studio Luminant",
     liLabel: "LinkedIn'de Studio Luminant",
     bimHref: '',
-    bimText: ''
+    bimText: '',
+    legalEntity: 'Studio Luminant İleri İmalat ve Yapı Çözümleri Ltd. Şti. · MERSİS: 0781115737600001 · Ortabayır Mah. Talatpaşa Cad. No: 21/501, Kağıthane / İstanbul',
+    privacyHref: 'gizlilik.htm',
+    privacyText: 'Aydınlatma Metni',
+    cookieHref: 'cerez-politikasi.htm',
+    cookieText: 'Çerez Politikası',
+    cookieSettingsText: 'Çerez tercihleri'
   } : {
     homeHref: '/en/',
     tagline: 'Bespoke architectural elements — sculpted, cast, and finished to spec.',
@@ -249,7 +255,13 @@ ${mobileItemsHtml}
     igLabel: 'Studio Luminant on Instagram',
     liLabel: 'Studio Luminant on LinkedIn',
     bimHref: '',
-    bimText: ''
+    bimText: '',
+    legalEntity: 'Studio Luminant İleri İmalat ve Yapı Çözümleri Ltd. Şti. · MERSİS: 0781115737600001 · Ortabayır Mah. Talatpaşa Cad. No: 21/501, Kağıthane / İstanbul, Türkiye',
+    privacyHref: 'privacy.htm',
+    privacyText: 'Privacy Notice',
+    cookieHref: 'cookie-policy.htm',
+    cookieText: 'Cookie Policy',
+    cookieSettingsText: 'Cookie preferences'
   };
 
   footerEl.outerHTML = `
@@ -299,8 +311,12 @@ ${mobileItemsHtml}
         <li><a href="${footerContent.journalHref}">${footerContent.journalText}</a></li>
         <li><a href="${footerContent.sitemapHref}">${footerContent.sitemapText}</a></li>
         ${footerContent.bimText ? `<li><a href="${footerContent.bimHref}">${footerContent.bimText}</a></li>` : ''}
+        <li><a href="${footerContent.privacyHref}">${footerContent.privacyText}</a></li>
+        <li><a href="${footerContent.cookieHref}">${footerContent.cookieText}</a></li>
+        <li><a href="#" data-cookie-settings>${footerContent.cookieSettingsText}</a></li>
       </ul>
     </div>
+    <p class="footer-legal-entity">${footerContent.legalEntity}</p>
   </div>
 </footer>`;
 
