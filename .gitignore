@@ -2,3 +2,5 @@
 desktop.ini
 Görseller V2/
 docs/test-reports/
+__pycache__/
+*.pyc
