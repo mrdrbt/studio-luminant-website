@@ -203,6 +203,14 @@
   to = "/kaynaklar-surdurulebilirlik.htm"
   status = 301
 
+# Content-page URL migration: anadolu page moved onto the market noun
+# force = true so this overrides the old static .htm still in the repo
+[[redirects]]
+  from = "/anadolu-motifleri-cagdas-rolyef.htm"
+  to = "/anadolu-motifleri-duvar-paneli.htm"
+  status = 301
+  force = true
+
 # Old English pages at root → /en/
 [[redirects]]
   from = "/collection.htm"
