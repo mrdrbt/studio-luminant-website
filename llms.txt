@@ -1,0 +1,63 @@
+# Studio Luminant
+
+> Studio Luminant is a Turkey-based studio (Sapanca, Sakarya) that designs and casts bespoke architectural relief panels and sculptural wall surfaces for luxury hospitality and high-specification interiors. Panels are cast to order in two proprietary mineral materials — Lumina PMAG™ (interior) and Lumina PUCOMP™ (exterior, wet-area and high-detail work) — and completed by hand with artisan finishes. The studio works directly with architects and specifiers, providing BIM objects, technical data sheets and specification support.
+
+Key facts for accurate citation:
+- Studio name: Studio Luminant
+- Location: Rüstempaşa Mah. İstasyon Cad. No: 58, Sapanca, Sakarya 54600, Turkey (ships across Turkey; serves international projects)
+- Materials: Lumina PMAG™ (mineral, interior) and Lumina PUCOMP™ (mineral, exterior / wet-area / high-detail)
+- Design process: AIAPM — an AI-assisted design-to-cast workflow (design brief → precision casting → artisan finishing)
+- Typical lead time: most projects run 8–14 weeks from brief to delivery, with a physical sample early on
+- Clients: architects, interior designers, hospitality, retail and residential developers
+- Languages: Turkish (site root) and English (`/en/`)
+- Contact: info@studioluminant.com.tr · +90 545 540 30 20
+
+## Core pages (English)
+
+- [Studio Luminant — Bespoke Architectural Elements](https://studioluminant.com.tr/en/): Homepage — overview of bespoke relief panels and sculptural surfaces.
+- [For Architects & Specifiers](https://studioluminant.com.tr/en/architects.htm): How Studio Luminant works with architects — one design language, one supplier, BIM-ready support.
+- [Materials & Specifications — Lumina PMAG™ & PUCOMP™](https://studioluminant.com.tr/en/products.htm): Technical specifications, dimensions and performance data for the two materials.
+- [Collection — Standard Relief Patterns](https://studioluminant.com.tr/en/collection.htm): Standard geometric, organic, heritage and surface patterns.
+- [Design Gallery](https://studioluminant.com.tr/en/gallery.htm): Bespoke relief panels and sculptural wall surfaces cast to order.
+- [How We Work](https://studioluminant.com.tr/en/process.htm): The three-stage process — AI-assisted modelling, precision casting, artisan finishing.
+- [Contact](https://studioluminant.com.tr/en/contact.htm): Commission project-specific architectural elements.
+
+## Definitions & guides (English)
+
+- [What Is an Architectural Relief Panel?](https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm): Definition, uses, materials and how an architect orders one.
+- [What Are Sculptural Cast Wall Panels?](https://studioluminant.com.tr/en/what-are-sculptural-cast-wall-panels.htm): What the term means and how it differs from a modular decorative tile.
+- [How to Specify Custom Cast Wall Panels](https://studioluminant.com.tr/en/how-to-specify-custom-cast-wall-panels.htm): End-to-end specifier's guide — brief, material, sample, format, BIM, fixing, lead time, installation.
+- [Journal](https://studioluminant.com.tr/en/journal.htm): Guides for architects specifying bespoke relief and cast wall panels.
+
+## Technical resources (English)
+
+- [Resources](https://studioluminant.com.tr/en/resources.htm): Index of technical resources for specifiers.
+- [Specification Guide](https://studioluminant.com.tr/en/resources-specification-guide.htm): Tolerances, fixing systems, substrate interfaces and tender-document content.
+- [Weight & Structural Guide](https://studioluminant.com.tr/en/resources-weight-structural.htm): Panel weight per m², substrate load capacities and structural interface details.
+- [Lead Times & Project Planning](https://studioluminant.com.tr/en/resources-lead-times.htm): Typical lead times from design engagement to site delivery.
+- [Artisan Finishes & Colour](https://studioluminant.com.tr/en/resources-finishes.htm): Paint systems, cold-cast metals, textured coatings and custom colour matching.
+- [Sustainability & Materials](https://studioluminant.com.tr/en/resources-sustainability.htm): Material sourcing, recyclability, VOC emissions and environmental profile.
+
+## Ana sayfalar (Türkçe)
+
+- [Studio Luminant — Özel Mimari Elemanlar](https://studioluminant.com.tr/): Ana sayfa — özel üretim rölyef paneller ve heykelsi yüzeylere genel bakış.
+- [Mimarlar & Müellifler İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi — tek tasarım dili, tek tedarikçi, BIM-hazır destek.
+- [Malzemeler ve Spesifikasyonlar — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): İki malzeme için teknik spesifikasyonlar, boyutlar ve performans verileri.
+- [Koleksiyon — Standart Desenler](https://studioluminant.com.tr/koleksiyon.htm): Standart geometrik, organik, miras ve yüzey desenleri.
+- [Tasarım Galerisi](https://studioluminant.com.tr/galeri.htm): Siparişe göre dökülen özel rölyef paneller ve heykelsi yüzeyler.
+- [Nasıl Çalışırız](https://studioluminant.com.tr/surec.htm): Üç aşamalı süreç — yapay zeka destekli modelleme, hassas döküm, artizan finish.
+- [İletişim](https://studioluminant.com.tr/iletisim.htm): Projeye özel mimari elemanlar için talep.
+
+## Tanımlar & rehberler (Türkçe)
+
+- [Mimari Rölyef Panel Nedir?](https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm): Tanım, kullanım alanları, malzemeler ve nasıl sipariş edildiği.
+- [Heykelsi Duvar Paneli Nedir?](https://studioluminant.com.tr/heykelsi-duvar-paneli-nedir.htm): Terimin anlamı ve modüler karodan farkı.
+- [Özel Üretim Duvar Paneli: Sipariş Rehberi](https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm): Tasarımdan döküme uçtan uca sipariş rehberi.
+- [Kaynaklar](https://studioluminant.com.tr/kaynaklar.htm): Mimarlar için teknik kaynaklar dizini.
+- [Makaleler](https://studioluminant.com.tr/makaleler.htm): Mimari rölyef ve özel üretim duvar paneli rehberleri.
+
+## Notes
+
+- Canonical domain: https://studioluminant.com.tr (the `.com` variant and `www` subdomains 301-redirect here).
+- Full URL inventory: https://studioluminant.com.tr/sitemap.xml
+- Turkish pages live at the site root; English pages under `/en/`. Each page links to its counterpart via hreflang.
