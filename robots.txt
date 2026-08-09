@@ -1,6 +1,63 @@
+# ─── Default policy ───
 User-agent: *
 Allow: /
 Disallow: /downloads/
 
+# ─── AI answer engines & crawlers (explicitly welcomed) ───
+# Studio Luminant wants to be discoverable and citable by AI search /
+# answer engines. These bots are explicitly allowed; see llms.txt for a
+# curated content map: https://studioluminant.com.tr/llms.txt
+
+# OpenAI (ChatGPT search index, live browsing, model training)
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /downloads/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /downloads/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /downloads/
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+Disallow: /downloads/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /downloads/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /downloads/
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /downloads/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /downloads/
+
+# Google AI (Gemini / AI Overviews training signal)
+User-agent: Google-Extended
+Allow: /
+Disallow: /downloads/
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /downloads/
+
+# Common Crawl (feeds many LLM training sets)
+User-agent: CCBot
+Allow: /
+Disallow: /downloads/
+
+# ─── Sitemaps ───
 Sitemap: https://studioluminant.com.tr/sitemap.xml
 Sitemap: https://studioluminant.com.tr/sitemap-images.xml
