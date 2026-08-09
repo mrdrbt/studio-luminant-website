@@ -2,6 +2,10 @@
 User-agent: *
 Allow: /
 Disallow: /downloads/
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /tr/
+Disallow: /_build_process/
 
 # ─── AI answer engines & crawlers (explicitly welcomed) ───
 # Studio Luminant wants to be discoverable and citable by AI search /
