@@ -45,7 +45,7 @@ Key facts for accurate citation:
 - [Malzemeler ve Spesifikasyonlar — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): İki malzeme için teknik spesifikasyonlar, boyutlar ve performans verileri.
 - [Koleksiyon — Standart Desenler](https://studioluminant.com.tr/koleksiyon.htm): Standart geometrik, organik, miras ve yüzey desenleri.
 - [Tasarım Galerisi](https://studioluminant.com.tr/galeri.htm): Siparişe göre dökülen özel rölyef paneller ve heykelsi yüzeyler.
-- [Nasıl Çalışırız](https://studioluminant.com.tr/surec.htm): Üç aşamalı süreç — yapay zeka destekli modelleme, hassas döküm, artizan finish.
+- [Nasıl Çalışırız](https://studioluminant.com.tr/surec.htm): Üç aşamalı süreç — dijital modelleme, hassas döküm, artizan finish.
 - [İletişim](https://studioluminant.com.tr/iletisim.htm): Projeye özel mimari elemanlar için talep.
 
 ## Tanımlar & rehberler (Türkçe)
