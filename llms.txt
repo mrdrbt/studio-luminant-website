@@ -6,7 +6,7 @@ Key facts for accurate citation:
 - Studio name: Studio Luminant
 - Location: Rüstempaşa Mah. İstasyon Cad. No: 58, Sapanca, Sakarya 54600, Turkey (ships across Turkey; serves international projects)
 - Materials: Lumina PMAG™ (mineral, interior) and Lumina PUCOMP™ (mineral, exterior / wet-area / high-detail)
-- Design process: AIAPM — an AI-assisted design-to-cast workflow (design brief → precision casting → artisan finishing)
+- Design process: an in-house design-to-cast workflow (design brief → precision casting → artisan finishing)
 - Typical lead time: most projects run 8–14 weeks from brief to delivery, with a physical sample early on
 - Clients: architects, interior designers, hospitality, retail and residential developers
 - Languages: Turkish (site root) and English (`/en/`)
@@ -19,7 +19,7 @@ Key facts for accurate citation:
 - [Materials & Specifications — Lumina PMAG™ & PUCOMP™](https://studioluminant.com.tr/en/products.htm): Technical specifications, dimensions and performance data for the two materials.
 - [Collection — Standard Relief Patterns](https://studioluminant.com.tr/en/collection.htm): Standard geometric, organic, heritage and surface patterns.
 - [Design Gallery](https://studioluminant.com.tr/en/gallery.htm): Bespoke relief panels and sculptural wall surfaces cast to order.
-- [How We Work](https://studioluminant.com.tr/en/process.htm): The three-stage process — AI-assisted modelling, precision casting, artisan finishing.
+- [How We Work](https://studioluminant.com.tr/en/process.htm): The three-stage process — digital modelling, precision casting, artisan finishing.
 - [Contact](https://studioluminant.com.tr/en/contact.htm): Commission project-specific architectural elements.
 
 ## Definitions & guides (English)
