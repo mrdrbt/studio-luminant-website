@@ -68,7 +68,7 @@ function pictureTag(src, alt, sizes, opts) {
   const navLinks = lang === 'tr' ? {
     home: { href: '/', alt: 'Studio Luminant' },
     items: [
-      { href: 'koleksiyon.htm', text: 'Koleksiyon' },
+      { href: 'koleksiyon.htm', text: 'Konsept Çalışmaları' },
       { href: 'urunler.htm', text: 'Malzeme & Teknik' },
       { href: 'surec.htm', text: 'Nasıl Çalışırız' },
       { href: 'galeri.htm', text: 'Galeri' },
@@ -85,7 +85,7 @@ function pictureTag(src, alt, sizes, opts) {
   } : {
     home: { href: '/en/', alt: 'Studio Luminant' },
     items: [
-      { href: 'collection.htm', text: 'Collection' },
+      { href: 'collection.htm', text: 'Concept Work' },
       { href: 'products.htm', text: 'Materials & Specs' },
       { href: 'process.htm', text: 'How We Work' },
       { href: 'gallery.htm', text: 'Gallery' },
