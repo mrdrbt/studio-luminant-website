@@ -3,6 +3,11 @@
 // Note: Nav, mobile menu, and cursor elements are injected by components.js
 // Cursor init is deferred until components.js has run.
 
+// ─── JS-PRESENT FLAG ───
+// Mark the document as JS-enabled so the CSS reveal rule only hides content
+// when JS is confirmed running (fail-open if JS is blocked/errors/races paint).
+document.documentElement.classList.add('js');
+
 // ─── CURSOR ───
 // Called by components.js after cursor elements are injected
 function initCursor() {
