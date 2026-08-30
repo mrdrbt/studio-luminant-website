@@ -288,12 +288,12 @@
     <lastmod>2026-06-26</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com.tr/anadolu-motifleri-duvar-paneli.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/anadolu-motifleri-duvar-paneli.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/anadolu-motifleri-duvar-paneli.htm"/>
+    <loc>https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-07-30</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm</loc>
@@ -365,6 +365,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/grg-grc-farki.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/grg-grc-farki.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/grg-vs-grc-interior-surfaces.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/grg-grc-farki.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-08-16</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/grg-vs-grc-interior-surfaces.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/grg-grc-farki.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/grg-vs-grc-interior-surfaces.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/grg-grc-farki.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-08-18</lastmod>
   </url>
 
   <!-- HTML site map (crawl hub, added 2026-06-22) -->

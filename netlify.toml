@@ -43,6 +43,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.facebook.com; connect-src 'self' https://mjmeqgljpyenuqorarte.supabase.co https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net; frame-src 'none'; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'"
 
 # Long cache for images (1 year, immutable content-hashed filenames)
 [[headers]]
@@ -93,6 +94,16 @@
   from = "/en/Studio Luminant — Bespoke Architectural Elements.htm"
   to = "/en/"
   status = 301
+
+# ─── Duplicate-content consolidation ───
+# anadolu-motifleri-duvar-paneli.htm was a near-identical clone (99.3% same body)
+# of anadolu-motifleri-cagdas-rolyef.htm. Google had already chosen cagdas-rolyef
+# as canonical (pos 6.0; the clone had zero impressions), so the clone folds into it.
+[[redirects]]
+  from = "/anadolu-motifleri-duvar-paneli.htm"
+  to = "/anadolu-motifleri-cagdas-rolyef.htm"
+  status = 301
+  force = true
 
 # ─── WordPress ghost URLs — 410 Gone ───
 # Domain was previously WordPress; tell Google to drop these
