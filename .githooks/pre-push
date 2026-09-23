@@ -40,4 +40,22 @@ if [ "$status" -ne 0 ]; then
 fi
 
 echo "[SL fire-hold] clean — no fire-cert leaks; push allowed." >&2
+
+# ─── Sitemap freshness ───
+# A hook cannot add a commit to the push in flight, so a stale <lastmod> is fixed in
+# the working tree and the push is blocked until that sitemap.xml is committed.
+# Fail-OPEN if the tool itself errors (exit >1); exit 1 means it rewrote dates.
+"$py" "$repo_root/tools/sitemap_lastmod.py" --apply
+status=$?
+if [ "$status" -eq 1 ]; then
+  echo "" >&2
+  echo "[SL sitemap] PUSH BLOCKED — sitemap.xml <lastmod> lagged the pages; it has been updated." >&2
+  echo "             Commit it and push again:" >&2
+  echo "               git add sitemap.xml && git commit -m 'chore(seo): refresh sitemap lastmod'" >&2
+  exit 1
+elif [ "$status" -ne 0 ]; then
+  echo "[SL sitemap] date check failed to run — skipping; push allowed." >&2
+else
+  echo "[SL sitemap] lastmod dates current." >&2
+fi
 exit 0
