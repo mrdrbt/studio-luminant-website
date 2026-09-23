@@ -1,5 +1,5 @@
 // ─── PATTERN DATA — Single Source of Truth ───
-// Generated from Supabase · 2026-06-02
+// Generated from Supabase · 2026-09-23
 // Referenced by: collection.htm, tr/koleksiyon.htm
 
 window.SL_PATTERNS = [
@@ -39,7 +39,7 @@ window.SL_PATTERNS = [
     ],
     "image": "images/studio-luminant-architectural-relief-diagonal-wave-wall-panel.jpg",
     "description_en": "Flowing diagonal wave pattern that creates a sense of movement across wall surfaces. Ideal for feature walls in lobbies and corridors.",
-    "description_tr": "Duvar yüzeylerinde hareket hissi yaratan akıcı diyagonal dalga deseni. Lobi ve koridorlardaki özellik duvarları için ideal.",
+    "description_tr": "Duvar yüzeylerinde hareket hissi yaratan akıcı diyagonal dalga deseni. Lobi ve koridorlardaki vurgu yüzeyleri için ideal.",
     "materials": [
       "pmag",
       "pucomp"
