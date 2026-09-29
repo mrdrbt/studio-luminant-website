@@ -12,7 +12,6 @@ function pictureTag(src, alt, sizes, opts) {
   var srcset = [
     base + '-400w.webp 400w',
     base + '-800w.webp 800w',
-    base + '-1600w.webp 1600w',
     base + '.webp 2048w'
   ].join(', ');
   return '<picture>' +
@@ -48,10 +47,17 @@ function pictureTag(src, alt, sizes, opts) {
 
   // ─── FAVICON ───
   if (!document.querySelector('link[rel="icon"]')) {
+    const favSvg = document.createElement('link');
+    favSvg.rel = 'icon';
+    favSvg.href = base + 'favicon.svg';
+    favSvg.type = 'image/svg+xml';
+    favSvg.setAttribute('sizes', 'any');
+    document.head.appendChild(favSvg);
     const fav = document.createElement('link');
     fav.rel = 'icon';
     fav.href = base + 'favicon.ico';
     fav.type = 'image/x-icon';
+    fav.setAttribute('sizes', '16x16 32x32 48x48');
     document.head.appendChild(fav);
     const apple = document.createElement('link');
     apple.rel = 'apple-touch-icon';
@@ -101,7 +107,7 @@ function pictureTag(src, alt, sizes, opts) {
     mobileLabel: 'Mobile menu'
   };
 
-  const imgBase = base + 'images/studio-luminant-logo-white-transparent.png';
+  const imgBase = base + 'images/studio-luminant-logo-white.svg';
 
   const navItemsHtml = navLinks.items.map(i => `<li><a href="${i.href}">${i.text}</a></li>`).join('\n      ');
   const mobileItemsHtml = navLinks.items.map(i => `  <a href="${i.href}">${i.text}</a>`).join('\n');

@@ -23,16 +23,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
-<link rel="preload" as="image" type="image/webp" href="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.webp">
+<link rel="preload" as="image" type="image/webp" href="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-1920w.webp">
 
 <style>
   /* ─── PAGE HERO ─────────────────────── */
   #page-hero {
     min-height: 100vh;
-    background-image: url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg');
+    background-image: url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg');
     background-image: image-set(
-      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.webp') type('image/webp'),
-      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg') type('image/jpeg')
+      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-1920w.webp') type('image/webp'),
+      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg') type('image/jpeg')
     );
     background-size: cover;
     background-position: center;
@@ -40,6 +40,13 @@
     display: flex;
     align-items: flex-end;
   }
+
+  @media (min-width: 1921px) {
+    #page-hero {
+      background-image: image-set(url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.webp') type('image/webp'), url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg') type('image/jpeg'));
+    }
+  }
+
   #page-hero::before {
     content: '';
     position: absolute; inset: 0;
@@ -245,7 +252,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.webp 4096w"
                   sizes="100vw">
               <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg"
-                   alt="Lumina PMAG polimer modifiye alfa alçı rölyef panel — seramik benzeri yüzey kaplaması" class="product-full-img" width="4096" height="4096"
+                   alt="İnce dikey yivler ve dört küre formu taşıyan krem panel, yumuşak stüdyo ışığı" class="product-full-img" width="4096" height="4096"
                    loading="lazy" decoding="async">
             </picture>
   <div class="section-inner">
@@ -331,7 +338,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   images/studio-luminant-biophilic-coral-relief-tree-medallion-lobby.webp 1376w"
                   sizes="100vw">
               <img src="images/studio-luminant-biophilic-coral-relief-tree-medallion-lobby.jpg"
-                   alt="Lumina PUCOMP kompozit rölyef panel — biyofilik mercan dokulu duvar, merkezi ağaç madalyonu, lobi uygulaması" class="product-full-img" width="1376" height="768"
+                   alt="Ortasında ağaç madalyonu olan, ince mercan dokulu rölyef iç mekân duvarı, altında ahşap bank" class="product-full-img" width="1376" height="768"
                    loading="lazy" decoding="async">
             </picture>
   <div class="section-inner">
@@ -420,7 +427,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <div>
         <picture>
           <source type="image/webp" srcset="images/studio-luminant-finish-sample-box-closed-800w.webp 800w, images/studio-luminant-finish-sample-box-closed-1600w.webp 1600w" sizes="(max-width: 1024px) 100vw, 50vw">
-          <img src="images/studio-luminant-finish-sample-box-closed.jpg" alt="Studio Luminant yüzey numune kutusu — deri portföy" width="1600" height="1195" style="display:block; width:100%; height:auto; border:1px solid var(--border);" loading="lazy" decoding="async">
+          <img src="images/studio-luminant-finish-sample-box-closed.jpg" alt="Kapağında Studio Luminant monogramı olan kapalı siyah portföy tipi numune kutusu" width="1600" height="1195" style="display:block; width:100%; height:auto; border:1px solid var(--border);" loading="lazy" decoding="async">
         </picture>
       </div>
       <div>

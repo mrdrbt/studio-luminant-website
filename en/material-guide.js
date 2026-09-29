@@ -903,8 +903,8 @@ function MaterialCard({
       overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: material.id === "pmag" ? "../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png" : "../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
-    alt: material.id === "pmag" ? "Lumina PMAG architectural relief panel detail" : "Lumina PUCOMP façade application",
+    src: material.id === "pmag" ? "../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp" : "../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
+    alt: material.id === "pmag" ? "Upright cream panel with a cellular, pebble-like relief pattern in soft light" : "Pale pinwheel relief wall lit from above, curved sofa in a quiet lounge",
     style: {
       position: "absolute",
       inset: 0,

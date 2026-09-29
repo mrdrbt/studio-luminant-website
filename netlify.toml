@@ -298,3 +298,150 @@
   to = "/en/specifier-kit.htm"
   status = 301
   force = true
+
+# ─── Renamed image files (Wave 0, 2026-09-30) — old indexed image URLs → new names ───
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-1600w.webp"
+  to = "/images/studio-luminant-3d-model-to-cast-relief-panel-1600w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-400w.webp"
+  to = "/images/studio-luminant-3d-model-to-cast-relief-panel-400w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-800w.webp"
+  to = "/images/studio-luminant-3d-model-to-cast-relief-panel-800w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.png"
+  to = "/images/studio-luminant-3d-model-to-cast-relief-panel.png"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.webp"
+  to = "/images/studio-luminant-3d-model-to-cast-relief-panel.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-1600w.webp"
+  to = "/images/studio-luminant-production-process-infographic-1600w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-400w.webp"
+  to = "/images/studio-luminant-production-process-infographic-400w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-800w.webp"
+  to = "/images/studio-luminant-production-process-infographic-800w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr-1600w.webp"
+  to = "/images/studio-luminant-production-process-infographic-tr-1600w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr-400w.webp"
+  to = "/images/studio-luminant-production-process-infographic-tr-400w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr-800w.webp"
+  to = "/images/studio-luminant-production-process-infographic-tr-800w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr.png"
+  to = "/images/studio-luminant-production-process-infographic-tr.png"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic-tr.webp"
+  to = "/images/studio-luminant-production-process-infographic-tr.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.png"
+  to = "/images/studio-luminant-production-process-infographic.png"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-aiapm-production-process-design-modelling-casting-infographic.webp"
+  to = "/images/studio-luminant-production-process-infographic.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-architectural-relief-wall-texture-hospitality-installation-400w.webp"
+  to = "/images/studio-luminant-architectural-relief-wall-texture-hospitality-concept-400w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-architectural-relief-wall-texture-hospitality-installation-800w.webp"
+  to = "/images/studio-luminant-architectural-relief-wall-texture-hospitality-concept-800w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-architectural-relief-wall-texture-hospitality-installation.jpg"
+  to = "/images/studio-luminant-architectural-relief-wall-texture-hospitality-concept.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-architectural-relief-wall-texture-hospitality-installation.webp"
+  to = "/images/studio-luminant-architectural-relief-wall-texture-hospitality-concept.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-framed-acoustic-relief-panels-lobby-installation-1600w.webp"
+  to = "/images/studio-luminant-petal-geometric-relief-corridor-concept-1600w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-framed-acoustic-relief-panels-lobby-installation-400w.webp"
+  to = "/images/studio-luminant-petal-geometric-relief-corridor-concept-400w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-framed-acoustic-relief-panels-lobby-installation-800w.webp"
+  to = "/images/studio-luminant-petal-geometric-relief-corridor-concept-800w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.png"
+  to = "/images/studio-luminant-petal-geometric-relief-corridor-concept.png"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.webp"
+  to = "/images/studio-luminant-petal-geometric-relief-corridor-concept.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation-1600w.webp"
+  to = "/images/studio-luminant-wave-relief-wall-panels-lounge-concept-1600w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation-400w.webp"
+  to = "/images/studio-luminant-wave-relief-wall-panels-lounge-concept-400w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation-800w.webp"
+  to = "/images/studio-luminant-wave-relief-wall-panels-lounge-concept-800w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation.jpg"
+  to = "/images/studio-luminant-wave-relief-wall-panels-lounge-concept.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation.webp"
+  to = "/images/studio-luminant-wave-relief-wall-panels-lounge-concept.webp"
+  status = 301
+

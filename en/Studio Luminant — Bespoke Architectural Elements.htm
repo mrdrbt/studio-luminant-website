@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
-<link rel="preload" as="image" type="image/webp" href="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.webp">
+<link rel="preload" as="image" type="image/webp" href="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-1920w.webp">
 
 <style>
   /* ─── HERO ──────────────────────────── */
@@ -33,13 +33,19 @@
     grid-template-columns: 1fr 1fr;
     position: relative;
     overflow: hidden;
-    background-image: url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg');
+    background-image: url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg');
     background-image: image-set(
-      url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.webp') type('image/webp'),
-      url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg') type('image/jpeg')
+      url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-1920w.webp') type('image/webp'),
+      url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg') type('image/jpeg')
     );
     background-size: cover;
     background-position: center;
+  }
+
+  @media (min-width: 1921px) {
+    #hero {
+      background-image: image-set(url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.webp') type('image/webp'), url('../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg') type('image/jpeg'));
+    }
   }
 
   #hero::before {
@@ -960,7 +966,7 @@
   "@type": "Organization", "@id": "https://studioluminant.com.tr/#organization",
   "name": "Studio Luminant",
   "url": "https://studioluminant.com.tr/",
-  "logo": "https://studioluminant.com.tr/images/studio-luminant-logo-white-transparent.png",
+  "logo": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png",
   "description": "Studio Luminant crafts bespoke architectural elements in Lumina PMAG™ and PUCOMP™ — sculptural surfaces, wall art, installations, and decorative features for luxury hospitality and high-spec interiors. Made in Turkey.",
   "address": {
     "@type": "PostalAddress",
@@ -1078,7 +1084,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   ../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.webp 1024w"
                   sizes="50vw">
               <img src="../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.jpg"
-                   alt="Studio Luminant Lumina PMAG custom Ottoman geometric gypsum relief panel — intricate gold-accent detail, bespoke architectural surface manufacturing" class="hero-image" width="1024" height="1024"
+                   alt="Cream relief panel with an eight-pointed star and floral arabesque, hung on a dark wall" class="hero-image" width="1024" height="1024"
                    loading="eager" fetchpriority="high">
             </picture>
       <div class="hero-image-overlay"></div>
@@ -1145,7 +1151,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   ../images/studio-luminant-organic-cell-relief-restaurant-interior-white.webp 1536w"
                   sizes="(max-width: 1024px) 100vw, 50vw">
               <img src="../images/studio-luminant-organic-cell-relief-restaurant-interior-white.jpg"
-                   alt="Studio Luminant Lumina PMAG organic cell relief wall in a luxury restaurant interior — full-height faceted gypsum panels above green velvet banquette seating" class="strategy-img" width="1536" height="1920"
+                   alt="White cellular relief wall rising above green banquettes in a restaurant" class="strategy-img" width="1536" height="1920"
                    loading="lazy" decoding="async">
             </picture>
         </div>
@@ -1175,13 +1181,13 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <div class="process-step">
         <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-400w.webp 400w,
-                  ../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-800w.webp 800w,
-                  ../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-1600w.webp 1600w,
-                  ../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.webp 2400w"
+                  srcset="../images/studio-luminant-3d-model-to-cast-relief-panel-400w.webp 400w,
+                  ../images/studio-luminant-3d-model-to-cast-relief-panel-800w.webp 800w,
+                  ../images/studio-luminant-3d-model-to-cast-relief-panel-1600w.webp 1600w,
+                  ../images/studio-luminant-3d-model-to-cast-relief-panel.webp 2000w"
                   sizes="(max-width: 1024px) 100vw, 33vw">
-              <img src="../images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel.webp"
-                   alt="Studio Luminant 3D CAD modelling to cast gypsum relief panel: digital design to physical product" class="step-image" width="2400" height="1662"
+              <img src="../images/studio-luminant-3d-model-to-cast-relief-panel.webp"
+                   alt="3D model of a scroll ornament on a grid, beside the cream relief panel of the same motif" class="step-image" width="2400" height="1662"
                    loading="lazy" decoding="async">
             </picture>
         <span class="step-number">01</span>
@@ -1198,7 +1204,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   ../images/studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.webp 1152w"
                   sizes="(max-width: 1024px) 100vw, 33vw">
               <img src="../images/studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.jpg"
-                   alt="Studio Luminant Lumina PMAG vacuum-cast relief panels in a warm neutral artisan finish" class="step-image" width="1152" height="928"
+                   alt="Two tan cast relief panels beside their white moulds on a workshop bench, spirit level above" class="step-image" width="1152" height="928"
                    loading="lazy" decoding="async">
             </picture>
         <span class="step-number">02</span>
@@ -1215,7 +1221,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   ../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp 1200w"
                   sizes="(max-width: 1024px) 100vw, 33vw">
               <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp"
-                   alt="Studio Luminant Lumina PMAG finished organic cell architectural gypsum relief wall panel — precision vacuum-cast, sub-millimetre surface resolution" class="step-image" width="1200" height="1200"
+                   alt="Upright cream panel with a cellular, pebble-like relief pattern in soft light" class="step-image" width="1200" height="1200"
                    loading="lazy" decoding="async">
             </picture>
         <span class="step-number">03</span>
@@ -1255,7 +1261,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   srcset="../images/studio-luminant-art-deco-charcoal-relief-cocktail-bar-400w.webp 400w, ../images/studio-luminant-art-deco-charcoal-relief-cocktail-bar-800w.webp 800w, ../images/studio-luminant-art-deco-charcoal-relief-cocktail-bar.webp 1024w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
               <img src="../images/studio-luminant-art-deco-charcoal-relief-cocktail-bar.jpg"
-                   alt="Studio Luminant art deco charcoal relief wall panels — cocktail bar lounge interior" width="1024" height="1024"
+                   alt="Charcoal relief wall of arches and sunbursts behind a tan leather banquette and marble table" width="1024" height="1024"
                    loading="lazy" decoding="async">
             </picture>
       <span class="portfolio-concept-tag">Concept</span>
@@ -1264,13 +1270,13 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="portfolio-item">
       <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation-400w.webp 400w,
-                  ../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation-800w.webp 800w,
-                  ../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation-1600w.webp 1600w,
-                  ../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation.webp 5504w"
+                  srcset="../images/studio-luminant-wave-relief-wall-panels-lounge-concept-400w.webp 400w,
+                  ../images/studio-luminant-wave-relief-wall-panels-lounge-concept-800w.webp 800w,
+                  ../images/studio-luminant-wave-relief-wall-panels-lounge-concept-1600w.webp 1600w,
+                  ../images/studio-luminant-wave-relief-wall-panels-lounge-concept.webp 2000w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-wave-relief-wall-panels-luxury-lounge-installation.jpg"
-                   alt="Studio Luminant wave-pattern Lumina PMAG architectural relief wall panels in luxury lounge installation" width="5504" height="3072"
+              <img src="../images/studio-luminant-wave-relief-wall-panels-lounge-concept.jpg"
+                   alt="Pale wave-relief wall under cove lighting, sculptural seating and a reception desk" width="5504" height="3072"
                    loading="lazy" decoding="async">
             </picture>
       <span class="portfolio-concept-tag">Concept</span>
@@ -1284,7 +1290,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   ../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.webp 832w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
               <img src="../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg"
-                   alt="Studio Luminant Ottoman heritage gypsum relief tile — Islamic geometric pattern, architectural wall art panel" width="832" height="1248"
+                   alt="Dark bronze-toned panel with a dense Ottoman geometric medallion and arabesque relief" width="832" height="1248"
                    loading="lazy" decoding="async">
             </picture>
       <span class="portfolio-concept-tag">Concept</span>
@@ -1296,10 +1302,10 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   srcset="../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior-400w.webp 400w,
                   ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior-800w.webp 800w,
                   ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior-1600w.webp 1600w,
-                  ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.webp 5504w"
+                  ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.webp 2752w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
               <img src="../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.jpg"
-                   alt="Studio Luminant fluted spherical gypsum relief wall panels installed in a luxury hospitality corridor" width="5504" height="3072"
+                   alt="Corridor wall of fluted spherical relief modules in warm amber, terrazzo floor" width="5504" height="3072"
                    loading="lazy" decoding="async">
             </picture>
       <span class="portfolio-concept-tag">Concept</span>
@@ -1308,13 +1314,13 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="portfolio-item">
       <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation-400w.webp 400w,
-                  ../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation-800w.webp 800w,
-                  ../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation-1600w.webp 1600w,
-                  ../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.webp 2816w"
+                  srcset="../images/studio-luminant-petal-geometric-relief-corridor-concept-400w.webp 400w,
+                  ../images/studio-luminant-petal-geometric-relief-corridor-concept-800w.webp 800w,
+                  ../images/studio-luminant-petal-geometric-relief-corridor-concept-1600w.webp 1600w,
+                  ../images/studio-luminant-petal-geometric-relief-corridor-concept.webp 2000w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-framed-acoustic-relief-panels-lobby-installation.webp"
-                   alt="Studio Luminant petal geometric relief panels installed in a luxury hospitality corridor" width="2816" height="1536"
+              <img src="../images/studio-luminant-petal-geometric-relief-corridor-concept.webp"
+                   alt="Petal-geometric relief wall along a warm brown corridor, tall windows at the far end" width="2816" height="1536"
                    loading="lazy" decoding="async">
             </picture>
       <span class="portfolio-concept-tag">Concept</span>
@@ -1348,7 +1354,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   ../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp 1200w"
                   sizes="(max-width: 1024px) 100vw, 50vw">
               <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp"
-                   alt="Lumina PMAG polymer modified alpha gypsum relief wall panel — moisture resistant, ceramic-like surface finish" class="material-img" width="1200" height="1200"
+                   alt="Upright cream panel with a cellular, pebble-like relief pattern in soft light" class="material-img" width="1200" height="1200"
                    loading="lazy" decoding="async">
             </picture>
         <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1371,7 +1377,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   ../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.webp 1376w"
                   sizes="(max-width: 1024px) 100vw, 50vw">
               <img src="../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg"
-                   alt="Lumina PUCOMP architectural relief panel — exterior and wet-area rated, complex spatial geometry, luxury lounge installation" class="material-img" width="1376" height="768"
+                   alt="Pale pinwheel relief wall lit from above, curved sofa in a quiet lounge" class="material-img" width="1376" height="768"
                    loading="lazy" decoding="async">
             </picture>
         <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1489,11 +1495,11 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <div class="sbx-box">
         <picture class="sbx-open">
           <source type="image/webp" srcset="../images/studio-luminant-finish-sample-box-angled-open-800w.webp 800w, ../images/studio-luminant-finish-sample-box-angled-open-1600w.webp 1600w" sizes="(max-width:1024px) 100vw, 920px">
-          <img src="../images/studio-luminant-finish-sample-box-angled-open.jpg" alt="Studio Luminant finish sample box — open, showing four surface finish samples" width="1600" height="1073" loading="lazy" decoding="async">
+          <img src="../images/studio-luminant-finish-sample-box-angled-open.jpg" alt="Open black sample box at an angle, four finish samples side by side" width="1600" height="1073" loading="lazy" decoding="async">
         </picture>
         <picture class="sbx-closed" aria-hidden="true">
           <source type="image/webp" srcset="../images/studio-luminant-finish-sample-box-angled-closed-800w.webp 800w, ../images/studio-luminant-finish-sample-box-angled-closed-1600w.webp 1600w" sizes="(max-width:1024px) 100vw, 920px">
-          <img src="../images/studio-luminant-finish-sample-box-angled-closed.jpg" alt="Studio Luminant finish sample box — closed leather portfolio" width="1600" height="1073" loading="lazy" decoding="async">
+          <img src="../images/studio-luminant-finish-sample-box-angled-closed.jpg" alt="" width="1600" height="1073" loading="lazy" decoding="async">
         </picture>
         <div class="sbx-hotspots">
           <button type="button" class="sbx-dot" data-i="0" style="left:28%;top:43%" aria-label="FORGE — Metallic artisan finish">1</button>
@@ -1670,7 +1676,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                   ../images/studio-luminant-unified-design-system-relief-pattern.webp 2272w"
                   sizes="(max-width: 1024px) 100vw, 50vw">
               <img src="../images/studio-luminant-unified-design-system-relief-pattern.webp"
-                   alt="Studio Luminant Unified Design System — same ornamental relief pattern applied to square wall panel and vertical decorative element, demonstrating one pattern across every surface" class="uds-image" width="2272" height="1888"
+                   alt="Two white framed relief panels, one square and one tall, sharing the same ornamental scroll pattern" class="uds-image" width="2272" height="1888"
                    loading="lazy" decoding="async">
             </picture>
       </div>

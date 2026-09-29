@@ -904,7 +904,7 @@ function MaterialCard({
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: material.id === "pmag" ? "images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp" : "images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
-    alt: material.id === "pmag" ? "Lumina PMAG mimari rölyef panel detayı" : "Lumina PUCOMP cephe uygulaması",
+    alt: material.id === "pmag" ? "Yumuşak ışıkta hücresel, çakıl benzeri rölyef desenli dik duran krem panel" : "Yukarıdan aydınlatılmış açık renkli fırıldak rölyef duvar, önünde kavisli bir koltuk",
     style: {
       position: "absolute",
       inset: 0,
