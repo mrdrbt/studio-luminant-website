@@ -603,6 +603,9 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 // ─── Pattern Data (from Supabase via collection-data.js) ───
 const patterns = window.SL_PATTERNS.map(p => ({
   id: p.id,
+  code: p.code,
+  collection: p.collection,
+  nameEn: p.name_en,
   name: p.name_en,
   style: p.style,
   applications: p.applications,
@@ -721,6 +724,7 @@ function renderGrid() {
   grid.querySelectorAll('.reveal:not(.visible)').forEach(el => {
     collectionObserver.observe(el);
   });
+  return count;
 }
 
 // ─── Filter event listeners ───
@@ -732,7 +736,8 @@ document.querySelectorAll('.style-pill').forEach(btn => {
     });
     btn.classList.add('active');
     btn.setAttribute('aria-pressed', 'true');
-    renderGrid();
+    const count = renderGrid();
+    slTrack('filter_select', { filter_type: 'style', filter_value: btn.dataset.style, filter_state: 'on', result_count: count });
   });
 });
 
@@ -740,7 +745,8 @@ document.querySelectorAll('.app-tag').forEach(btn => {
   btn.addEventListener('click', () => {
     btn.classList.toggle('active');
     btn.setAttribute('aria-pressed', btn.classList.contains('active'));
-    renderGrid();
+    const count = renderGrid();
+    slTrack('filter_select', { filter_type: 'application', filter_value: btn.dataset.app, filter_state: btn.classList.contains('active') ? 'on' : 'off', result_count: count });
   });
 });
 
@@ -882,13 +888,17 @@ function getVisibleIndices() {
   return Array.from(document.querySelectorAll('.pattern-card')).map(c => parseInt(c.dataset.index));
 }
 
-function openLightbox(patternIndex) {
+function openLightbox(patternIndex, viewMethod = 'card') {
   currentIndex = patternIndex;
   const p = patterns[patternIndex];
   currentTileSvg = p.tileSvg || null;
   tilingArrangement = 'random';
   tilingGrid = 8;
   SLModal.open({ mode: 'lightbox', html: buildLightboxHtml(p), title: p.name });
+  slTrack('view_design', {
+    content_type: 'pattern', design_id: p.id, design_name: p.nameEn, design_code: p.code,
+    collection: p.collection, style: p.style, view_method: viewMethod
+  });
   const mb = document.querySelector('.sl-modal-body');
   if (!mb) return;
   mb.querySelector('.lb-prev').addEventListener('click', () => navigateLightbox(-1));
@@ -902,7 +912,7 @@ function navigateLightbox(dir) {
   const pos = visible.indexOf(currentIndex);
   if (pos === -1) return;
   const next = (pos + dir + visible.length) % visible.length;
-  openLightbox(visible[next]);
+  openLightbox(visible[next], 'lightbox_nav');
 }
 
 document.addEventListener('keydown', e => {

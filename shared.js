@@ -8,6 +8,13 @@
 // when JS is confirmed running (fail-open if JS is blocked/errors/races paint).
 document.documentElement.classList.add('js');
 
+// ─── GA4 CUSTOM EVENTS ───
+// Event + param names are documented in docs/ga4-events.md — keep them in sync.
+// No-op when gtag is absent (no consent, internal traffic, blocked script).
+function slTrack(name, params) {
+  if (typeof gtag === 'function') gtag('event', name, params);
+}
+
 // ─── CURSOR ───
 // Called by components.js after cursor elements are injected
 function initCursor() {

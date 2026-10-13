@@ -875,9 +875,13 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const f = btn.dataset.filter;
+      let count = 0;
       document.querySelectorAll('.gallery-item').forEach(item => {
-        item.style.display = (f === 'all' || item.dataset.category === f) ? '' : 'none';
+        const show = f === 'all' || item.dataset.category === f;
+        item.style.display = show ? '' : 'none';
+        if (show) count++;
       });
+      slTrack('filter_select', { filter_type: 'category', filter_value: f, filter_state: 'on', result_count: count });
     });
   });
 </script>
