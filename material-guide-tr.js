@@ -238,13 +238,13 @@ const studioMaterials = [{
     chemical: "—",
     temperature: "—",
     surface: (_pmag.finish ? _pmag.finish.tr : "Tüm RAL / özel renkler — soğuk döküm metal, patina ve dokulu yüzeyler"),
-    customDesign: "AI-assisted parametric design, unlimited patterns",
+    customDesign: "Parametric design, unlimited patterns",
     voc: "Low — indoor air quality safe",
     acoustic: "Optional backed acoustic fleece",
     antimicrobial: "Optional antimicrobial additive",
     method: "LuminClip™ concealed rail system",
     speed: "20–30 sec per panel",
-    leadTime: "4–6 weeks"
+    leadTime: "Teklifte netleşir"
   },
   radar: {
     weightAdv: 0.6,
@@ -273,13 +273,13 @@ const studioMaterials = [{
     chemical: "Resistant to mild acids & cleaning agents",
     temperature: "-30 °C to +80 °C",
     surface: (_pucomp.finish ? _pucomp.finish.tr : "Tüm RAL / özel renkler — soğuk döküm metal ve dokulu yüzeyler"),
-    customDesign: "AI-assisted parametric design, unlimited patterns",
+    customDesign: "Parametric design, unlimited patterns",
     voc: "Low",
     acoustic: "—",
     antimicrobial: "—",
     method: "LuminClip™ or mechanical fixing (stainless steel)",
     speed: "Application-dependent",
-    leadTime: "5–7 weeks"
+    leadTime: "Teklifte netleşir"
   },
   radar: {
     weightAdv: 0.85,
