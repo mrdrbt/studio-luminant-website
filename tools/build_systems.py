@@ -19,6 +19,7 @@ DOMAIN = "https://studioluminant.com.tr/"
 UI = {
     "tr": {"back": "← Kütüphane", "index": "koleksiyon.htm", "eyebrow": "Sistem {code}",
            "sample": "Numune kutusu isteyin", "adapt": "Projenize uyarlayalım", "contact": "iletisim.htm",
+           "sample_href": "iletisim.htm#numune",
            "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey"},
            "material": "Projeye göre Lumina PMAG™ ya da Lumina PUCOMP™",
            "finish": "Artizan finish: Canvas, Veil, Grit, Tide",
@@ -31,6 +32,7 @@ UI = {
            "studies": "Tasarım etütleri"},
     "en": {"back": "← Library", "index": "collection.htm", "eyebrow": "System {code}",
            "sample": "Request the Sample Box", "adapt": "Adapt it to your project", "contact": "contact.htm",
+           "sample_href": "contact.htm#sample",
            "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface"},
            "material": "Lumina PMAG™ or Lumina PUCOMP™, chosen for the project",
            "finish": "Artisan finishes: Canvas, Veil, Grit, Tide",
@@ -134,7 +136,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <h1 class="sys-name">{esc(c['name'])}</h1>
     <p class="sys-lede">{esc(c['lede'])}</p>
     <div class="sys-ctas">
-      <a href="{u['contact']}" class="btn-primary">{u['sample']}</a>
+      <a href="{u['sample_href']}" class="btn-primary">{u['sample']}</a>
       <a href="#sys-door" class="sys-link">{u['adapt']}</a>
     </div>
   </div>
