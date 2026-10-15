@@ -63,6 +63,9 @@
   .article-cta h3 em { font-style: italic; color: var(--gold); }
   .article-cta p { font-size: 14px; color: var(--text-secondary); font-weight: 300; margin-bottom: 32px; }
   @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .spec-grid { grid-template-columns: 1fr; } }
+  .article-figure { margin: 8px auto 44px; max-width: 520px; }
+  .article-figure picture, .article-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
+  .article-figure figcaption { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--text-secondary); text-align: center; margin-top: 14px; }
 </style>
 <!-- Google Analytics -->
 <!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
@@ -140,6 +143,20 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p>
       Bu rehber, konseptin motife çevrilmesini, bakış mesafesini, ışığı ve kullanım yükünü sırayla ele alır. Süreç, <a href="otel-lobisi-karsilama-duvari.htm">otel lobisi karşılama duvarı rehberindeki</a> süreçle aynıdır; farklar ise restoranın kendi koşullarından doğar.
     </p>
+
+    <figure class="article-figure">
+      <picture>
+            <source type="image/webp"
+                srcset="images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait-400w.webp 400w,
+                images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait-800w.webp 800w,
+                images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.webp 1080w"
+                sizes="(max-width: 600px) calc(100vw - 48px), 520px">
+            <img src="images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.jpg"
+                 alt="Kafede deri banketin arkasında, dikey dalgalı şeritlerden oluşan kum rengi rölyef duvar; önde mermer tablalı küçük bir masa ve ahşap sandalye" width="1080" height="1440"
+                 loading="lazy" decoding="async">
+          </picture>
+      <figcaption>Konsept: deri banketin üstünde, dikey dalgalarla yükselen kum rengi rölyef duvar.</figcaption>
+    </figure>
 
     <h2>Konseptten <em>Duvara</em></h2>
 
