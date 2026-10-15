@@ -62,6 +62,9 @@
   .article-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin-bottom: 16px; }
   .article-cta h3 em { font-style: italic; color: var(--gold); }
   .article-cta p { font-size: 14px; color: var(--text-secondary); font-weight: 300; margin-bottom: 32px; }
+  .article-figure { margin: 8px 0 44px; }
+  .article-figure picture, .article-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
+  .article-figure figcaption { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--text-secondary); text-align: center; margin-top: 14px; }
   @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .spec-grid { grid-template-columns: 1fr; } }
 </style>
 <!-- Google Analytics -->
@@ -140,6 +143,21 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p>
       Bu rehber, bir mimarın otel lobisi karşılama duvarını özel üretim döküm rölyef panel üzerinden nasıl spesifiye ettiğini özetler. Format kararından aydınlatma açısına, artizan finish seçiminden BIM teslim sürecine kadar.
     </p>
+
+    <figure class="article-figure">
+      <picture>
+            <source type="image/webp"
+                srcset="images/studio-luminant-cellular-relief-wall-hotel-reception-concept-400w.webp 400w,
+                images/studio-luminant-cellular-relief-wall-hotel-reception-concept-800w.webp 800w,
+                images/studio-luminant-cellular-relief-wall-hotel-reception-concept-1200w.webp 1200w,
+                images/studio-luminant-cellular-relief-wall-hotel-reception-concept.webp 1536w"
+                sizes="(max-width: 768px) calc(100vw - 48px), 700px">
+            <img src="images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg"
+                 alt="Otel resepsiyonunda traverten bankonun arkasında yükselen, sıcak yalama ışıkla aydınlanan hücre desenli rölyef duvar" width="1536" height="1024"
+                 loading="lazy" decoding="async">
+          </picture>
+      <figcaption>Konsept: resepsiyon bankosunun arkasında, üstten gelen sıcak ışıkla belirginleşen hücre desenli rölyef duvar.</figcaption>
+    </figure>
 
     <h2>Lobi Duvar Kaplamasında <em>Asıl Karar</em></h2>
 
