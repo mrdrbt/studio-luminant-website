@@ -196,7 +196,7 @@ const colorPalettes = {
 };
 const radarAxes = [{
   key: "weightAdv",
-  label: "Hafiflik"
+  label: "Ağırlık"
 }, {
   key: "moistureRes",
   label: "Nem"
@@ -237,7 +237,7 @@ const studioMaterials = [{
     uv: "—",
     chemical: "—",
     temperature: "—",
-    surface: (_pmag.finish ? _pmag.finish.tr : "Tüm RAL / özel renkler — soğuk döküm metal, patina ve dokulu yüzeyler"),
+    surface: (_pmag.finish ? _pmag.finish.tr : "Tüm RAL / özel renkler — artizan finish, pürüzsüz ya da dokulu"),
     customDesign: "Parametric design, unlimited patterns",
     voc: "Low — indoor air quality safe",
     acoustic: "Optional backed acoustic fleece",
@@ -259,7 +259,7 @@ const studioMaterials = [{
   id: "pucomp",
   name: "Lumina PUCOMP™",
   fullName: "Advanced Composite",
-  tagline: "Üstün dayanıklılığa sahip dış cephe & ıslak alan panelleri",
+  tagline: "Dış cephe ve ıslak hacimler için, karmaşık eğrilere uygun paneller",
   domain: "Dış Mekân",
   domainIcon: "🌐",
   application: "Façade panels, spas, pools, bathrooms, covered outdoor areas, signage",
@@ -267,12 +267,12 @@ const studioMaterials = [{
     density: "600–900",
     weight: (_pucomp.weight ? _pucomp.weight.min + '–' + _pucomp.weight.max : "12–18"),
     thickness: (_pucomp.thickness ? _pucomp.thickness.min + '–' + _pucomp.thickness.max : "8–25"),
-    moisture: "High — closed-cell, hydrophobic",
-    impact: "High — flexible polymer matrix",
+    moisture: "High — exterior & wet-area rated",
+    impact: "—",
     uv: "Stabilised + UV-resistant finish",
     chemical: "Resistant to mild acids & cleaning agents",
     temperature: "-30 °C to +80 °C",
-    surface: (_pucomp.finish ? _pucomp.finish.tr : "Tüm RAL / özel renkler — soğuk döküm metal ve dokulu yüzeyler"),
+    surface: (_pucomp.finish ? _pucomp.finish.tr : "Tüm RAL / özel renkler — artizan finish, pürüzsüz ya da dokulu"),
     customDesign: "Parametric design, unlimited patterns",
     voc: "Low",
     acoustic: "—",
