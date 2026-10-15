@@ -39,18 +39,19 @@
     'precision highp float;',
     'uniform sampler2D uNormal;  // RGB tangent-space normal, +Y up',
     'uniform sampler2D uHeight;  // R = relief 0..1, G = albedo variation (0.5 = neutral)',
-    'uniform vec2 uRes, uPanelPx, uDir;',
+    'uniform vec2 uRes, uPanelPx, uPanelSize, uPanelMm, uDir;',
     'uniform vec3 uL, uAlbedo;',
-    'uniform float uPanelSizePx, uPanelMm, uBaseMm, uReliefMm;',
+    'uniform float uBaseMm, uReliefMm;',
     'uniform float uTanEl, uTanPen, uExposure, uDepth, uStrength, uStepPow;',
     'uniform float uAmbient, uBounce, uShoulder, uSpec, uSpecPow, uAlbedoVar;',
-    'uniform int uSteps;',
+    'uniform int uSteps, uField;  // uField = 1: the relief repeats across the whole canvas (no wall)',
     'out vec4 outColor;',
     'bool onPanel(vec2 q){return q.x>=0.0&&q.y>=0.0&&q.x<=1.0&&q.y<=1.0;}',
     'void main(){',
     '  vec2 fc=vec2(gl_FragCoord.x,uRes.y-gl_FragCoord.y);',
-    '  vec2 uv=(fc-uPanelPx)/uPanelSizePx;',
-    '  bool inside=onPanel(uv);',
+    '  vec2 uv=(fc-uPanelPx)/uPanelSize;',
+    '  bool field=uField==1;',
+    '  bool inside=field||onPanel(uv);',
     '  float relief=uReliefMm*uDepth;',
     '  vec3 N=vec3(0.0,0.0,1.0); float h0=0.0, av=0.0;',
     '  if(inside){',
@@ -65,7 +66,7 @@
     '  vec2 inv=1.0/(abs(d)+1e-12)*sign(d+1e-12);',
     '  vec2 ta=(vec2(0.0)-uv)*inv, tb=(vec2(1.0)-uv)*inv;',
     '  vec2 tn=min(ta,tb), tf=max(ta,tb);',
-    '  float tIn=max(max(tn.x,tn.y),0.0), tEnd=min(min(tf.x,tf.y),tMax);',
+    '  float tIn=field?0.0:max(max(tn.x,tn.y),0.0), tEnd=field?tMax:min(min(tf.x,tf.y),tMax);',
     '  float s=1.0;',
     '  if(tIn<tEnd){',
     '    float fs=float(uSteps);',
@@ -73,7 +74,7 @@
     '      if(i>=uSteps) break;',
     '      float t=tIn+(tEnd-tIn)*pow((float(i)+1.0)/fs,uStepPow);',
     '      vec2 q=uv+d*t;',
-    '      if(!onPanel(q)) continue;',
+    '      if(!field&&!onPanel(q)) continue;',
     '      float hs=uBaseMm+textureLod(uHeight,q,0.0).r*relief;',
     '      s=min(s,(h0+t*uTanEl-hs)/(t*uTanPen));',
     '      if(s<=0.0) break;',
@@ -103,7 +104,7 @@
     });
   }
 
-  function texture(gl, img, unit, mips) {
+  function texture(gl, img, unit, mips, wrap) {
     var tex = gl.createTexture();
     gl.activeTexture(gl.TEXTURE0 + unit);
     gl.bindTexture(gl.TEXTURE_2D, tex);
@@ -112,8 +113,8 @@
     if (mips) gl.generateMipmap(gl.TEXTURE_2D);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, mips ? gl.LINEAR_MIPMAP_LINEAR : gl.LINEAR);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, wrap ? gl.REPEAT : gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, wrap ? gl.REPEAT : gl.CLAMP_TO_EDGE);
     return tex;
   }
 
@@ -163,7 +164,7 @@
     var M, prog, running = false, visible = false, dirty = true, lastT = 0, lastPointer = -Infinity;
     var idleT0 = 0, azPhase = 0, elPhase = 0, idleTimer = 0;
     var drawn = { az: NaN, el: NaN };
-    var panel = { x: 0, y: 0, size: 1 };
+    var panel = { x: 0, y: 0, w: 1, h: 1 };
     var steps = FINE ? 40 : 24;
     var maxDpr = FINE ? 1.5 : 1.25;
 
@@ -174,10 +175,18 @@
       if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
       var p = poster.getBoundingClientRect();
       var sx = w / Math.max(1, c.width);
-      var inset = p.width * M.marginMm / (M.panelMm + 2 * M.marginMm);
-      panel.x = (p.left + inset - c.left) * sx;
-      panel.y = (p.top + inset - c.top) * sx;
-      panel.size = (p.width - 2 * inset) * sx;
+      if (M.layout === 'field') {
+        panel.x = (p.left - c.left) * sx;
+        panel.y = (p.top - c.top) * sx;
+        panel.w = p.width / M.fieldTiles[0] * sx;
+        panel.h = p.height / M.fieldTiles[1] * sx;
+      } else {
+        var pw = M.panelWmm + 2 * M.marginMm, ph = M.panelHmm + 2 * M.marginMm;
+        panel.x = (p.left + p.width * M.marginMm / pw - c.left) * sx;
+        panel.y = (p.top + p.height * M.marginMm / ph - c.top) * sx;
+        panel.w = p.width * M.panelWmm / pw * sx;
+        panel.h = p.height * M.panelHmm / ph * sx;
+      }
       dirty = true;
     }
 
@@ -187,7 +196,7 @@
       gl.viewport(0, 0, canvas.width, canvas.height);
       gl.uniform2f(U.uRes, canvas.width, canvas.height);
       gl.uniform2f(U.uPanelPx, panel.x, panel.y);
-      gl.uniform1f(U.uPanelSizePx, panel.size);
+      gl.uniform2f(U.uPanelSize, panel.w, panel.h);
       gl.uniform2f(U.uDir, Math.cos(az), Math.sin(az));
       gl.uniform3f(U.uL, ce * Math.cos(az), ce * Math.sin(az), Math.sin(elv));
       gl.uniform1f(U.uTanEl, Math.tan(elv));
@@ -201,7 +210,8 @@
       gl.useProgram(prog.p);
       gl.uniform1i(U.uNormal, 0);
       gl.uniform1i(U.uHeight, 1);
-      gl.uniform1f(U.uPanelMm, M.panelMm);
+      gl.uniform2f(U.uPanelMm, M.panelWmm, M.panelHmm);
+      gl.uniform1i(U.uField, M.layout === 'field' ? 1 : 0);
       gl.uniform1f(U.uBaseMm, M.baseMm);
       gl.uniform1f(U.uReliefMm, M.reliefMm);
       gl.uniform3f(U.uAlbedo, S.albedo[0] / 255, S.albedo[1] / 255, S.albedo[2] / 255);
@@ -313,8 +323,14 @@
       .then(function (r) { if (!r.ok) throw new Error('relief-light: manifest ' + r.status); return r.json(); })
       .then(function (m) {
         M = m;
+        M.panelWmm = m.panelWmm || m.panelMm;
+        M.panelHmm = m.panelHmm || m.panelMm;
+        M.layout = m.layout || 'panel';
+        M.fieldTiles = m.fieldTiles || [1, 1];
         var dpr = Math.min(window.devicePixelRatio || 1, maxDpr);
-        var need = poster.getBoundingClientRect().width * dpr;
+        var pr = poster.getBoundingClientRect();
+        var need = (M.layout === 'field' ? Math.max(pr.width / M.fieldTiles[0], pr.height / M.fieldTiles[1])
+                                         : Math.max(pr.width, pr.height)) * dpr;   // texture keys = long side
         var sizes = Object.keys(m.textures).map(Number).sort(function (a, b) { return a - b; });
         var pick = sizes.filter(function (s) { return s >= need * 0.9; })[0] || sizes[sizes.length - 1];
         state.textures = m.textures[pick];
@@ -325,8 +341,8 @@
       .then(function (imgs) {
         prog = program(gl);
         gl.bindVertexArray(gl.createVertexArray());
-        texture(gl, imgs[0], 0, true);
-        texture(gl, imgs[1], 1, false);
+        texture(gl, imgs[0], 0, true, M.layout === 'field');
+        texture(gl, imgs[1], 1, false, M.layout === 'field');
         setStatic();
         layout();
         draw();                                   // first frame = the poster's light
