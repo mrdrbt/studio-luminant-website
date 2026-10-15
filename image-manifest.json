@@ -25,95 +25,6 @@
       }
     }
   },
-  "studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render.png": {
-    "original": {
-      "file": "studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render.png",
-      "w": 1200,
-      "h": 1200,
-      "size": 1780868
-    },
-    "webp": "studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
-  "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2.jpg": {
-    "original": {
-      "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2.jpg",
-      "w": 1024,
-      "h": 1024,
-      "size": 384284
-    },
-    "webp": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
-  "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v3.jpg": {
-    "original": {
-      "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v3.jpg",
-      "w": 2000,
-      "h": 2000,
-      "size": 299796
-    },
-    "webp": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v3.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v3-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v3-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v3-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
-  "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v4.jpg": {
-    "original": {
-      "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v4.jpg",
-      "w": 1024,
-      "h": 1024,
-      "size": 233547
-    },
-    "webp": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v4.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v4-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v4-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
   "studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design.jpg": {
     "original": {
       "file": "studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design.jpg",
@@ -348,32 +259,6 @@
       }
     }
   },
-  "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-4.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-4.jpg",
-      "w": 2000,
-      "h": 2000,
-      "size": 347809
-    },
-    "webp": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-4.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-4-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-4-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-4-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
   "studio-luminant-architectural-relief-honeycomb-hexagonal-wall-panel.jpg": {
     "original": {
       "file": "studio-luminant-architectural-relief-honeycomb-hexagonal-wall-panel.jpg",
@@ -397,27 +282,6 @@
         "file": "studio-luminant-architectural-relief-honeycomb-hexagonal-wall-panel-1600w.webp",
         "w": 1600,
         "h": 1600
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-hotel-reception-cladding-presentation.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-hotel-reception-cladding-presentation.jpg",
-      "w": 1024,
-      "h": 1024,
-      "size": 237308
-    },
-    "webp": "studio-luminant-architectural-relief-hotel-reception-cladding-presentation.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-hotel-reception-cladding-presentation-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-hotel-reception-cladding-presentation-800w.webp",
-        "w": 800,
-        "h": 800
       }
     }
   },
@@ -465,27 +329,6 @@
         "file": "studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup-800w.webp",
         "w": 800,
         "h": 447
-      }
-    }
-  },
-  "studio-luminant-bespoke-architectural-relief-hospitality-lobby-design.png": {
-    "original": {
-      "file": "studio-luminant-bespoke-architectural-relief-hospitality-lobby-design.png",
-      "w": 1024,
-      "h": 1024,
-      "size": 1696353
-    },
-    "webp": "studio-luminant-bespoke-architectural-relief-hospitality-lobby-design.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-bespoke-architectural-relief-hospitality-lobby-design-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-bespoke-architectural-relief-hospitality-lobby-design-800w.webp",
-        "w": 800,
-        "h": 800
       }
     }
   },
@@ -751,27 +594,6 @@
       }
     }
   },
-  "studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup.jpg": {
-    "original": {
-      "file": "studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup.jpg",
-      "w": 1024,
-      "h": 1024,
-      "size": 230581
-    },
-    "webp": "studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
   "studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg": {
     "original": {
       "file": "studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg",
@@ -864,27 +686,6 @@
       }
     }
   },
-  "studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.jpg": {
-    "original": {
-      "file": "studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.jpg",
-      "w": 1024,
-      "h": 1024,
-      "size": 362506
-    },
-    "webp": "studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
   "studio-luminant-og-image.jpg": {
     "original": {
       "file": "studio-luminant-og-image.jpg",
@@ -903,27 +704,6 @@
         "file": "studio-luminant-og-image-800w.webp",
         "w": 800,
         "h": 420
-      }
-    }
-  },
-  "studio-luminant-organic-cell-relief-hotel-reception-architectural-render.jpg": {
-    "original": {
-      "file": "studio-luminant-organic-cell-relief-hotel-reception-architectural-render.jpg",
-      "w": 1024,
-      "h": 1024,
-      "size": 267897
-    },
-    "webp": "studio-luminant-organic-cell-relief-hotel-reception-architectural-render.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-organic-cell-relief-hotel-reception-architectural-render-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-organic-cell-relief-hotel-reception-architectural-render-800w.webp",
-        "w": 800,
-        "h": 800
       }
     }
   },
