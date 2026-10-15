@@ -24,86 +24,72 @@
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
-<link rel="preload" as="image" type="image/webp" href="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-1920w.webp">
+<link rel="preload" as="image" href="assets/relief/080-iznik-cypress/poster-1680.jpg" imagesrcset="assets/relief/080-iznik-cypress/poster-840.jpg 840w, assets/relief/080-iznik-cypress/poster-1680.jpg 1680w" imagesizes="(orientation: portrait) 130vw, 84vh" fetchpriority="high">
 
 <style>
-  /* ─── HERO ──────────────────────────── */
+  /* ─── HERO (v3: relief-light engine) ───
+     The panel stands in the right ~60%, contained, as sculpture on a flat plaster wall; the
+     poster is the panel plus 120 mm of wall each side (1.4 × the panel, offset 0.2). The copy
+     sits over flat wall on the left. relief-light.js reads the panel rect from the poster. */
   #hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    overflow: hidden;
-    background-image: url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg');
-    background-image: image-set(
-      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-1920w.webp') type('image/webp'),
-      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg') type('image/jpeg')
-    );
-    background-size: cover;
-    background-position: center;
+    --relief-wall: #DFD8CA;
+    --m: max(24px, 6svh);
+    --top: 96px;                       /* clear of the nav */
+    --S: min(60vw - 2 * var(--m), 100svh - var(--top) - var(--m));
+    height: 100svh; min-height: 560px;
   }
-
-  @media (min-width: 1921px) {
-    #hero {
-      background-image: image-set(url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.webp') type('image/webp'), url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg') type('image/jpeg'));
-    }
-  }
-
-  #hero::before {
-    content: '';
+  #hero .relief-light__poster {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      105deg,
-      rgba(var(--bg-rgb),0.82) 0%,
-      rgba(var(--bg-rgb),0.55) 50%,
-      rgba(var(--bg-rgb),0.35) 100%
-    );
-    z-index: 1;
-    pointer-events: none;
+    width: calc(1.4 * var(--S)); height: calc(1.4 * var(--S));
+    left: calc(40vw + (60vw - var(--S)) / 2 - 0.2 * var(--S));
+    top: calc(var(--top) + (100svh - var(--top) - var(--m) - var(--S)) / 2 - 0.2 * var(--S));
   }
 
   .hero-left {
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 160px 60px 100px;
-    position: relative; z-index: 2;
+    position: absolute; z-index: 2; isolation: isolate;
+    left: var(--pad-x); bottom: clamp(48px, 10svh, 100px);
+    width: min(560px, 44vw - var(--pad-x));
+    display: flex; flex-direction: column;
+  }
+  /* soft wall-coloured scrim: keeps the copy legible when a low light throws the panel's
+     shadow toward it */
+  .hero-left::before {
+    content: ''; position: absolute; inset: -56px; z-index: -1; pointer-events: none;
+    border-radius: 56px; background: rgba(223, 216, 202, 0.55); filter: blur(28px);
   }
 
   .hero-eyebrow {
     display: flex; align-items: center; gap: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
     opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
   }
   .hero-eyebrow::before {
     content: ''; display: block;
-    width: 32px; height: 1px; background: var(--gold);
+    width: 32px; height: 1px; background: var(--accent);
   }
   .hero-eyebrow span {
     font-size: 10px; letter-spacing: 0.3em;
-    text-transform: uppercase; color: var(--gold);
+    text-transform: uppercase; color: var(--accent);
     font-weight: 400;
   }
 
   .hero-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(68px, 7vw, 110px);
+    font-family: var(--font-display);
+    font-size: clamp(44px, 4vw, 76px);
     font-weight: 300;
-    line-height: 0.92;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-    margin-bottom: 36px;
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 28px;
     opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
   }
-  .hero-headline em {
-    font-style: italic;
-    color: var(--gold);
-  }
+  .hero-headline em { font-style: italic; color: var(--accent); }
 
   .hero-sub {
     font-size: 14px; font-weight: 300;
-    line-height: 1.75; color: var(--text-secondary);
-    max-width: 420px;
-    margin-bottom: 56px;
+    line-height: 1.75; color: var(--ink-2);
+    max-width: 440px;
+    margin-bottom: 40px;
     opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards;
   }
 
@@ -114,108 +100,29 @@
 
   .btn-ghost {
     display: inline-flex; align-items: center; gap: 10px;
-    font-family: 'Jost', sans-serif;
+    font-family: var(--font-body);
     font-size: 11px; font-weight: 400;
     letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--text-secondary);
+    color: var(--ink-2);
     text-decoration: none;
     border-bottom: 1px solid var(--border);
     padding-bottom: 2px;
     transition: color 0.3s, border-color 0.3s;
   }
-  .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
+  .btn-ghost:hover { color: var(--accent); border-color: var(--accent); }
 
-  .hero-right {
-    position: relative; overflow: hidden;
-    z-index: 2;
-  }
-
-  /* Geometric relief pattern for hero right */
-  .hero-visual {
-    position: absolute; inset: 0;
-    background:
-      linear-gradient(135deg, var(--surface) 0%, var(--deep) 100%);
-    overflow: hidden;
-  }
-
-  .relief-grid {
-    position: absolute; inset: 0;
-    background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(var(--accent-rgb),0.06) 60px),
-      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(var(--accent-rgb),0.06) 60px);
-    animation: gridPan 20s linear infinite;
-    z-index: 2;
-  }
-
-  @keyframes gridPan {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(60px); }
-  }
-
-  .relief-ornament {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 480px; height: 480px;
-  }
-
-  .relief-ornament svg {
-    width: 100%; height: 100%;
-    opacity: 0.15;
-    animation: slowSpin 60s linear infinite;
-  }
-
-  @keyframes slowSpin {
-    to { transform: rotate(360deg); }
-  }
-
-  .hero-corner-tag {
-    position: absolute; bottom: 60px; right: 60px;
-    text-align: right;
-    z-index: 3;
-    background: rgba(var(--bg-rgb),0.62);
-    padding: 8px 14px;
-    border-radius: 2px;
-  }
-  .hero-corner-tag .tag-eyebrow {
-    font-size: 9px; letter-spacing: 0.3em; color: var(--gold);
-    text-transform: uppercase; display: block; margin-bottom: 6px;
-  }
-  .hero-corner-tag .tag-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px; font-weight: 300;
-    color: var(--text-primary);
-    line-height: 1.2;
-  }
-
-  .hero-bottom-rule {
-    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    opacity: 0.3;
-  }
-
-  /* Diagonal separator */
-  #hero::after {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 50%;
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, var(--border) 30%, var(--border) 70%, transparent);
-    pointer-events: none;
-  }
-
-  /* ─── HERO IMAGE ────────────────────── */
-  .hero-image {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover; object-position: center;
-    z-index: 0;
-  }
-  .hero-image-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(160deg, rgba(var(--bg-rgb),0.2) 0%, rgba(var(--bg-rgb),0.6) 100%);
-    z-index: 1;
+  /* phones and portrait screens: panel on top, copy below it in the flow */
+  @media (orientation: portrait), (max-width: 820px) {
+    #hero { height: auto; min-height: 100svh; --S: min(100vw - 48px, 56svh - 88px); }
+    #hero .relief-light__poster {
+      left: calc((100vw - var(--S)) / 2 - 0.2 * var(--S));
+      top: calc(88px - 0.2 * var(--S));
+    }
+    .hero-left {
+      position: relative; left: auto; bottom: auto; width: auto;
+      padding: calc(88px + var(--S) + 40px) var(--pad-x-sm) 64px;
+    }
+    .hero-left::before { display: none; }
   }
 
   /* ─── STRATEGY ──────────────────────── */
@@ -697,10 +604,6 @@
 
   /* ─── RESPONSIVE ────────────────────── */
   @media (max-width: 1024px) {
-    #hero { grid-template-columns: 1fr; }
-    #hero::after { display: none; }
-    .hero-right { display: none; }
-    .hero-left { padding: 160px 32px 80px; }
     .hero-ctas { flex-wrap: wrap; gap: 16px 24px; }
     .strategy-grid, .process-header { grid-template-columns: 1fr; gap: 60px; }
     .process-steps { grid-template-columns: 1fr; }
@@ -1011,20 +914,24 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <main id="main">
 
 <!-- HERO -->
-<section id="hero">
+<section id="hero" class="relief-light" data-relief-light="assets/relief/080-iznik-cypress/" data-input="auto">
+  <img class="relief-light__poster" src="assets/relief/080-iznik-cypress/poster-1680.jpg"
+       srcset="assets/relief/080-iznik-cypress/poster-840.jpg 840w, assets/relief/080-iznik-cypress/poster-1680.jpg 1680w"
+       sizes="(orientation: portrait) 130vw, 84vh" width="1680" height="1680" fetchpriority="high"
+       alt="Kemerli çerçevede servi ve çiçek motifli dökme rölyef panel, yalama ışık altında">
   <div class="hero-left">
     <div class="hero-eyebrow">
-      <span>Dijital fabrikasyon, artizan üretim</span>
+      <span>Özel üretim döküm rölyef · Sapanca</span>
     </div>
     <h1 class="hero-headline">
-      Sunduğunuz görsel,<br><em>döktüğümüz rölyeftir.</em>
+      Nasıl çizdiyseniz,<br><em>öyle dökeriz.</em>
     </h1>
     <p class="hero-sub">
-      Bir eskiz ya da referans gönderin; dökümü bu modelden yaptığımız 3D modelin üzerine kurulu bir konsept görselini, BIM dosyalarıyla birlikte size ulaştırırız. Böylece müşterinizin onayladığı tasarım, daha baştan üretilebilir olur. Tasarımın sahibi sizsiniz; modelleme ve dökümü kendi atölyemizde yapar, kalıptan panele mikron ölçeğinde yüzey detayını koruruz. Günler içinde 3D model, haftalar içinde numune, sekiz ila on dört haftada bitmiş panel.
+      Elle çizilmiş bir eskiz de olur, ölçülü bir teknik çizim de. Ana modeli hazırlarız; silikon kalıp onu en ince detayına ve ters açılarına kadar her panele aktarır. Ana modelin render'ını önce onayınıza sunarız; onayınız olmadan döküme geçmeyiz.
     </p>
     <div class="hero-ctas">
       <a href="iletisim.htm" class="btn-primary">
-        Bir Eskizle Başlayın
+        Çiziminizi gönderin
         <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
         </svg>
@@ -1032,27 +939,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     </div>
   </div>
 
-  <div class="hero-right">
-    <div class="hero-visual">
-      <picture>
-              <source type="image/webp"
-                  srcset="images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent-400w.webp 400w,
-                  images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent-800w.webp 800w,
-                  images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.webp 1024w"
-                  sizes="50vw">
-              <img src="images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.jpg"
-                   alt="Koyu duvarda asılı, sekiz köşeli yıldız ve çiçekli arabesk işlenmiş krem rölyef panel" class="hero-image" width="1024" height="1024"
-                   loading="eager" fetchpriority="high">
-            </picture>
-      <div class="hero-image-overlay"></div>
-      <div class="relief-grid"></div>
-      <div class="hero-corner-tag">
-        <span class="tag-eyebrow">Özgün Süreç</span>
-        <div class="tag-title">Dikey Entegre<br>Üretim</div>
-      </div>
-    </div>
-    <div class="hero-bottom-rule"></div>
-  </div>
 </section>
 
 <!-- PROOF STRIP -->
@@ -1890,6 +1776,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   </nav>
 </div>
 
+<script src="relief-light.js" defer></script>
 <script src="shared.js"></script>
 <script src="components.js"></script>
 
