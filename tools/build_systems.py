@@ -1,4 +1,4 @@
-"""Build the Library System profile pages (TR sistem-<code>.htm, EN en/system-<code>.htm) from tools/systems.json.
+"""Build the Library System profile pages (TR sistem-<slug>.htm, EN en/system-<slug>.htm) from tools/systems.json.
 
 Each page: a live relief hero (relief-light.js over the baked poster in assets/relief/<asset>/), a spec block, the
 Library render and wall strip as WebP (made here from VAULT/Library/Relief/<library>/), and the bespoke door.
@@ -25,7 +25,7 @@ UI = {
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
            "door": "Bu sistemi projenize uyarlayabiliriz: ölçüyü, derinliği ve desen yoğunluğunu çiziminize göre yeniden kurarız.",
            "door_cta": "Çiziminizi gönderin", "title": "{name}: Kütüphane | Studio Luminant", "home": "Ana Sayfa",
-           "lib": "Kütüphane", "idx_file": "koleksiyon.htm", "page": "sistem-{code}.htm",
+           "lib": "Kütüphane", "idx_file": "koleksiyon.htm", "page": "sistem-{slug}.htm",
            "idx_title": "Kütüphane sistemleri",
            "idx_lede": "Ölçüsü, derinliği ve dizilişi tanımlanmış rölyef sistemleri. Her birini sayfasında canlı ışıkta inceleyin.",
            "studies": "Tasarım etütleri"},
@@ -37,7 +37,7 @@ UI = {
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
            "door": "We can adapt this system to your project, rebuilding its size, depth and pattern density from your drawing.",
            "door_cta": "Send Your Drawing", "title": "{name}: Library | Studio Luminant", "home": "Home",
-           "lib": "Library", "idx_file": "en/collection.htm", "page": "system-{code}.htm",
+           "lib": "Library", "idx_file": "en/collection.htm", "page": "system-{slug}.htm",
            "idx_title": "Library systems",
            "idx_lede": "Relief systems with a defined size, depth and layout. See each one in live light on its own page.",
            "studies": "Design studies"},
@@ -69,7 +69,7 @@ def page(sysd, lang, track, figs):
     c, u = sysd[lang], UI[lang]
     pre = "" if lang == "tr" else "../"
     rel = f"{pre}assets/relief/{sysd['asset']}/"
-    tr_url, en_url = f"sistem-{sysd['code']}.htm", f"en/system-{sysd['code']}.htm"
+    tr_url, en_url = f"sistem-{sysd['slug']}.htm", f"en/system-{sysd['slug']}.htm"
     url = tr_url if lang == "tr" else en_url
     twin = f"{pre}{en_url}" if lang == "tr" else f"../{tr_url}"
     man = json.loads((SITE / "assets" / "relief" / sysd["asset"] / "manifest.json").read_text(encoding="utf-8"))
@@ -183,7 +183,7 @@ def systems_block(data, lang):
         c = s[lang]
         w, h = Image.open(SITE / "assets" / "relief" / s["asset"] / "object.webp").size
         pre = "" if lang == "tr" else "../"
-        cards.append(f'''    <a class="sys-card" href="{u['page'].format(code=s['code'])}">
+        cards.append(f'''    <a class="sys-card" href="{u['page'].format(slug=s['slug'])}">
       <img src="{pre}assets/relief/{s['asset']}/object.webp" width="{w}" height="{h}" loading="lazy" alt="{esc(c['object_alt'])}">
       <span class="sys-card__code">{u['eyebrow'].format(code=s['code'])}</span>
       <span class="sys-card__name">{esc(c['name'])}</span>
@@ -234,7 +234,7 @@ def main():
         figs = {"object": webp(lib / "render.png", out / "object.webp", 1200)}
         if (lib / "wall_strip.png").exists() and s["tr"]["strip_alt"]:
             figs["strip"] = webp(lib / "wall_strip.png", out / "strip.webp", 1600)
-        for lang, path in (("tr", SITE / f"sistem-{s['code']}.htm"), ("en", SITE / "en" / f"system-{s['code']}.htm")):
+        for lang, path in (("tr", SITE / f"sistem-{s['slug']}.htm"), ("en", SITE / "en" / f"system-{s['slug']}.htm")):
             path.write_text(page(s, lang, track, figs), encoding="utf-8")
             print("wrote", path.relative_to(SITE))
     for lang in ("tr", "en"):
