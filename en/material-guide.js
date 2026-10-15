@@ -903,8 +903,8 @@ function MaterialCard({
       overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: material.id === "pmag" ? "../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp" : "../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
-    alt: material.id === "pmag" ? "Upright cream panel with a cellular, pebble-like relief pattern in soft light" : "Pale pinwheel relief wall lit from above, curved sofa in a quiet lounge",
+    src: material.id === "pmag" ? "../images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg" : "../images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg",
+    alt: material.id === "pmag" ? "Relief panel of drifting vertical fibres, close up in raking light" : "Pale grey relief wall of drifting vertical fibres behind a living-room sofa, with daylight raking across it",
     style: {
       position: "absolute",
       inset: 0,

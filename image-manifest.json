@@ -1,4 +1,30 @@
 {
+  "studio-luminant-3d-model-to-cast-relief-panel.png": {
+    "original": {
+      "file": "studio-luminant-3d-model-to-cast-relief-panel.png",
+      "w": 2000,
+      "h": 1385,
+      "size": 5212701
+    },
+    "webp": "studio-luminant-3d-model-to-cast-relief-panel.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-3d-model-to-cast-relief-panel-400w.webp",
+        "w": 400,
+        "h": 277
+      },
+      "800": {
+        "file": "studio-luminant-3d-model-to-cast-relief-panel-800w.webp",
+        "w": 800,
+        "h": 554
+      },
+      "1600": {
+        "file": "studio-luminant-3d-model-to-cast-relief-panel-1600w.webp",
+        "w": 1600,
+        "h": 1108
+      }
+    }
+  },
   "studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render.png": {
     "original": {
       "file": "studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render.png",
@@ -17,27 +43,6 @@
         "file": "studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render-800w.webp",
         "w": 800,
         "h": 800
-      }
-    }
-  },
-  "studio-luminant-3d-tile-design-variants-architectural-relief-panel.jpg": {
-    "original": {
-      "file": "studio-luminant-3d-tile-design-variants-architectural-relief-panel.jpg",
-      "w": 832,
-      "h": 1248,
-      "size": 313057
-    },
-    "webp": "studio-luminant-3d-tile-design-variants-architectural-relief-panel.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-3d-tile-design-variants-architectural-relief-panel-400w.webp",
-        "w": 400,
-        "h": 600
-      },
-      "800": {
-        "file": "studio-luminant-3d-tile-design-variants-architectural-relief-panel-800w.webp",
-        "w": 800,
-        "h": 1200
       }
     }
   },
@@ -132,84 +137,6 @@
         "file": "studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design-1600w.webp",
         "w": 1600,
         "h": 1195
-      }
-    }
-  },
-  "studio-luminant-3d-model-to-cast-relief-panel.png": {
-    "original": {
-      "file": "studio-luminant-3d-model-to-cast-relief-panel.png",
-      "w": 2000,
-      "h": 1385,
-      "size": 5212701
-    },
-    "webp": "studio-luminant-3d-model-to-cast-relief-panel.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-3d-model-to-cast-relief-panel-400w.webp",
-        "w": 400,
-        "h": 277
-      },
-      "800": {
-        "file": "studio-luminant-3d-model-to-cast-relief-panel-800w.webp",
-        "w": 800,
-        "h": 554
-      },
-      "1600": {
-        "file": "studio-luminant-3d-model-to-cast-relief-panel-1600w.webp",
-        "w": 1600,
-        "h": 1108
-      }
-    }
-  },
-  "studio-luminant-production-process-infographic-tr.png": {
-    "original": {
-      "file": "studio-luminant-production-process-infographic-tr.png",
-      "w": 2000,
-      "h": 1091,
-      "size": 2006965
-    },
-    "webp": "studio-luminant-production-process-infographic-tr.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-production-process-infographic-tr-400w.webp",
-        "w": 400,
-        "h": 218
-      },
-      "800": {
-        "file": "studio-luminant-production-process-infographic-tr-800w.webp",
-        "w": 800,
-        "h": 436
-      },
-      "1600": {
-        "file": "studio-luminant-production-process-infographic-tr-1600w.webp",
-        "w": 1600,
-        "h": 873
-      }
-    }
-  },
-  "studio-luminant-production-process-infographic.png": {
-    "original": {
-      "file": "studio-luminant-production-process-infographic.png",
-      "w": 2000,
-      "h": 1091,
-      "size": 1923857
-    },
-    "webp": "studio-luminant-production-process-infographic.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-production-process-infographic-400w.webp",
-        "w": 400,
-        "h": 218
-      },
-      "800": {
-        "file": "studio-luminant-production-process-infographic-800w.webp",
-        "w": 800,
-        "h": 436
-      },
-      "1600": {
-        "file": "studio-luminant-production-process-infographic-1600w.webp",
-        "w": 1600,
-        "h": 873
       }
     }
   },
@@ -421,84 +348,6 @@
       }
     }
   },
-  "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1.jpg",
-      "w": 2048,
-      "h": 2048,
-      "size": 214350
-    },
-    "webp": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2.jpg",
-      "w": 2000,
-      "h": 2000,
-      "size": 317149
-    },
-    "webp": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-3.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-3.jpg",
-      "w": 2048,
-      "h": 2048,
-      "size": 227906
-    },
-    "webp": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-3.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-3-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-3-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-3-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
   "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-4.jpg": {
     "original": {
       "file": "studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-4.jpg",
@@ -598,230 +447,6 @@
       }
     }
   },
-  "studio-luminant-architectural-relief-surface-wall-panel-variant-2.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-2.jpg",
-      "w": 2048,
-      "h": 2048,
-      "size": 180930
-    },
-    "webp": "studio-luminant-architectural-relief-surface-wall-panel-variant-2.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-2-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-2-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-2-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-surface-wall-panel-variant-6.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-6.jpg",
-      "w": 2048,
-      "h": 2048,
-      "size": 182132
-    },
-    "webp": "studio-luminant-architectural-relief-surface-wall-panel-variant-6.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-6-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-6-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-6-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-surface-wall-panel-variant-7.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-7.jpg",
-      "w": 2000,
-      "h": 2000,
-      "size": 299010
-    },
-    "webp": "studio-luminant-architectural-relief-surface-wall-panel-variant-7.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-7-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-7-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-7-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-surface-wall-panel-variant-8.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-8.jpg",
-      "w": 2048,
-      "h": 2048,
-      "size": 180148
-    },
-    "webp": "studio-luminant-architectural-relief-surface-wall-panel-variant-8.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-8-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-8-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-8-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-surface-wall-panel-variant-9.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-9.jpg",
-      "w": 2048,
-      "h": 2048,
-      "size": 187580
-    },
-    "webp": "studio-luminant-architectural-relief-surface-wall-panel-variant-9.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-9-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-9-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-surface-wall-panel-variant-9-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-wall-panel-product-shot-variant.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-wall-panel-product-shot-variant.jpg",
-      "w": 1696,
-      "h": 2528,
-      "size": 219979
-    },
-    "webp": "studio-luminant-architectural-relief-wall-panel-product-shot-variant.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-wall-panel-product-shot-variant-400w.webp",
-        "w": 400,
-        "h": 596
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-wall-panel-product-shot-variant-800w.webp",
-        "w": 800,
-        "h": 1192
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-wall-panel-product-shot-variant-1600w.webp",
-        "w": 1600,
-        "h": 2385
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd.jpg",
-      "w": 2000,
-      "h": 1116,
-      "size": 377696
-    },
-    "webp": "studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd-400w.webp",
-        "w": 400,
-        "h": 223
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd-800w.webp",
-        "w": 800,
-        "h": 447
-      },
-      "1600": {
-        "file": "studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd-1600w.webp",
-        "w": 1600,
-        "h": 893
-      }
-    }
-  },
-  "studio-luminant-architectural-relief-wall-texture-hospitality-concept.jpg": {
-    "original": {
-      "file": "studio-luminant-architectural-relief-wall-texture-hospitality-concept.jpg",
-      "w": 1024,
-      "h": 1024,
-      "size": 291567
-    },
-    "webp": "studio-luminant-architectural-relief-wall-texture-hospitality-concept.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-architectural-relief-wall-texture-hospitality-concept-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-architectural-relief-wall-texture-hospitality-concept-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
-  "studio-luminant-art-deco-charcoal-relief-cocktail-bar.jpg": {
-    "original": {
-      "file": "studio-luminant-art-deco-charcoal-relief-cocktail-bar.jpg",
-      "w": 1024,
-      "h": 1024,
-      "size": 251524
-    },
-    "webp": "studio-luminant-art-deco-charcoal-relief-cocktail-bar.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-art-deco-charcoal-relief-cocktail-bar-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-art-deco-charcoal-relief-cocktail-bar-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
   "studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup.jpg": {
     "original": {
       "file": "studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup.jpg",
@@ -882,6 +507,95 @@
         "file": "studio-luminant-biophilic-coral-relief-tree-medallion-lobby-800w.webp",
         "w": 800,
         "h": 447
+      }
+    }
+  },
+  "studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait.jpg": {
+    "original": {
+      "file": "studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait.jpg",
+      "w": 1050,
+      "h": 1400,
+      "size": 269734
+    },
+    "webp": "studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait-400w.webp",
+        "w": 400,
+        "h": 533
+      },
+      "800": {
+        "file": "studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait-800w.webp",
+        "w": 800,
+        "h": 1067
+      }
+    }
+  },
+  "studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg": {
+    "original": {
+      "file": "studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg",
+      "w": 1536,
+      "h": 1024,
+      "size": 282632
+    },
+    "webp": "studio-luminant-cellular-relief-wall-hotel-reception-concept.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-cellular-relief-wall-hotel-reception-concept-400w.webp",
+        "w": 400,
+        "h": 267
+      },
+      "800": {
+        "file": "studio-luminant-cellular-relief-wall-hotel-reception-concept-800w.webp",
+        "w": 800,
+        "h": 533
+      },
+      "1200": {
+        "file": "studio-luminant-cellular-relief-wall-hotel-reception-concept-1200w.webp",
+        "w": 1200,
+        "h": 800
+      }
+    }
+  },
+  "studio-luminant-cellular-relief-wall-hotel-reception-concept-square.jpg": {
+    "original": {
+      "file": "studio-luminant-cellular-relief-wall-hotel-reception-concept-square.jpg",
+      "w": 1024,
+      "h": 1024,
+      "size": 205848
+    },
+    "webp": "studio-luminant-cellular-relief-wall-hotel-reception-concept-square.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-cellular-relief-wall-hotel-reception-concept-square-400w.webp",
+        "w": 400,
+        "h": 400
+      },
+      "800": {
+        "file": "studio-luminant-cellular-relief-wall-hotel-reception-concept-square-800w.webp",
+        "w": 800,
+        "h": 800
+      }
+    }
+  },
+  "studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg": {
+    "original": {
+      "file": "studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg",
+      "w": 1120,
+      "h": 1400,
+      "size": 290989
+    },
+    "webp": "studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept-400w.webp",
+        "w": 400,
+        "h": 500
+      },
+      "800": {
+        "file": "studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept-800w.webp",
+        "w": 800,
+        "h": 1000
       }
     }
   },
@@ -1016,6 +730,48 @@
       }
     }
   },
+  "studio-luminant-flowing-fibre-relief-panel-raking-light.jpg": {
+    "original": {
+      "file": "studio-luminant-flowing-fibre-relief-panel-raking-light.jpg",
+      "w": 1280,
+      "h": 512,
+      "size": 106717
+    },
+    "webp": "studio-luminant-flowing-fibre-relief-panel-raking-light.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-flowing-fibre-relief-panel-raking-light-400w.webp",
+        "w": 400,
+        "h": 160
+      },
+      "800": {
+        "file": "studio-luminant-flowing-fibre-relief-panel-raking-light-800w.webp",
+        "w": 800,
+        "h": 320
+      }
+    }
+  },
+  "studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg": {
+    "original": {
+      "file": "studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg",
+      "w": 1122,
+      "h": 449,
+      "size": 120139
+    },
+    "webp": "studio-luminant-flowing-fibre-relief-wall-living-room-concept.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-flowing-fibre-relief-wall-living-room-concept-400w.webp",
+        "w": 400,
+        "h": 160
+      },
+      "800": {
+        "file": "studio-luminant-flowing-fibre-relief-wall-living-room-concept-800w.webp",
+        "w": 800,
+        "h": 320
+      }
+    }
+  },
   "studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup.jpg": {
     "original": {
       "file": "studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup.jpg",
@@ -1034,79 +790,6 @@
         "file": "studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup-800w.webp",
         "w": 800,
         "h": 800
-      }
-    }
-  },
-  "studio-luminant-petal-geometric-relief-corridor-concept.png": {
-    "original": {
-      "file": "studio-luminant-petal-geometric-relief-corridor-concept.png",
-      "w": 2000,
-      "h": 1091,
-      "size": 2778775
-    },
-    "webp": "studio-luminant-petal-geometric-relief-corridor-concept.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-petal-geometric-relief-corridor-concept-400w.webp",
-        "w": 400,
-        "h": 218
-      },
-      "800": {
-        "file": "studio-luminant-petal-geometric-relief-corridor-concept-800w.webp",
-        "w": 800,
-        "h": 436
-      },
-      "1600": {
-        "file": "studio-luminant-petal-geometric-relief-corridor-concept-1600w.webp",
-        "w": 1600,
-        "h": 873
-      }
-    }
-  },
-  "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-variant.jpg": {
-    "original": {
-      "file": "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-variant.jpg",
-      "w": 2000,
-      "h": 1116,
-      "size": 301067
-    },
-    "webp": "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-variant.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-variant-400w.webp",
-        "w": 400,
-        "h": 223
-      },
-      "800": {
-        "file": "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-variant-800w.webp",
-        "w": 800,
-        "h": 447
-      },
-      "1600": {
-        "file": "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-variant-1600w.webp",
-        "w": 1600,
-        "h": 893
-      }
-    }
-  },
-  "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg": {
-    "original": {
-      "file": "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
-      "w": 1376,
-      "h": 768,
-      "size": 228883
-    },
-    "webp": "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-400w.webp",
-        "w": 400,
-        "h": 223
-      },
-      "800": {
-        "file": "studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-800w.webp",
-        "w": 800,
-        "h": 447
       }
     }
   },
@@ -1152,6 +835,15 @@
       }
     }
   },
+  "studio-luminant-logo-512.png": {
+    "original": {
+      "file": "studio-luminant-logo-512.png",
+      "w": 512,
+      "h": 512,
+      "size": 11091
+    },
+    "variants": {}
+  },
   "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg": {
     "original": {
       "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg",
@@ -1180,32 +872,6 @@
         "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-2560w.webp",
         "w": 2560,
         "h": 2560
-      }
-    }
-  },
-  "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.jpg": {
-    "original": {
-      "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.jpg",
-      "w": 2000,
-      "h": 2000,
-      "size": 194429
-    },
-    "webp": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-1600w.webp",
-        "w": 1600,
-        "h": 1600
       }
     }
   },
@@ -1250,27 +916,6 @@
       }
     }
   },
-  "studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception.png": {
-    "original": {
-      "file": "studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception.png",
-      "w": 1200,
-      "h": 1200,
-      "size": 1611678
-    },
-    "webp": "studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
   "studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png": {
     "original": {
       "file": "studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.png",
@@ -1308,27 +953,6 @@
       },
       "800": {
         "file": "studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
-  "studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.png": {
-    "original": {
-      "file": "studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.png",
-      "w": 1200,
-      "h": 1200,
-      "size": 1617421
-    },
-    "webp": "studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding-800w.webp",
         "w": 800,
         "h": 800
       }
@@ -1376,27 +1000,6 @@
       }
     }
   },
-  "studio-luminant-organic-cell-relief-restaurant-interior-white.jpg": {
-    "original": {
-      "file": "studio-luminant-organic-cell-relief-restaurant-interior-white.jpg",
-      "w": 1536,
-      "h": 1920,
-      "size": 353862
-    },
-    "webp": "studio-luminant-organic-cell-relief-restaurant-interior-white.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-organic-cell-relief-restaurant-interior-white-400w.webp",
-        "w": 400,
-        "h": 500
-      },
-      "800": {
-        "file": "studio-luminant-organic-cell-relief-restaurant-interior-white-800w.webp",
-        "w": 800,
-        "h": 1000
-      }
-    }
-  },
   "studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg": {
     "original": {
       "file": "studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg",
@@ -1415,32 +1018,6 @@
         "file": "studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern-800w.webp",
         "w": 800,
         "h": 1200
-      }
-    }
-  },
-  "studio-luminant-petal-geometric-gold-dining-feature-wall.jpg": {
-    "original": {
-      "file": "studio-luminant-petal-geometric-gold-dining-feature-wall.jpg",
-      "w": 2000,
-      "h": 1116,
-      "size": 348773
-    },
-    "webp": "studio-luminant-petal-geometric-gold-dining-feature-wall.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-petal-geometric-gold-dining-feature-wall-400w.webp",
-        "w": 400,
-        "h": 223
-      },
-      "800": {
-        "file": "studio-luminant-petal-geometric-gold-dining-feature-wall-800w.webp",
-        "w": 800,
-        "h": 447
-      },
-      "1600": {
-        "file": "studio-luminant-petal-geometric-gold-dining-feature-wall-1600w.webp",
-        "w": 1600,
-        "h": 893
       }
     }
   },
@@ -1491,50 +1068,155 @@
       }
     }
   },
-  "studio-luminant-production-workshop-photo-01.jpeg": {
+  "studio-luminant-production-process-infographic-tr.png": {
     "original": {
-      "file": "studio-luminant-production-workshop-photo-01.jpeg",
+      "file": "studio-luminant-production-process-infographic-tr.png",
       "w": 2000,
-      "h": 2000,
-      "size": 744077
+      "h": 1091,
+      "size": 2006965
     },
-    "webp": "studio-luminant-production-workshop-photo-01.webp",
+    "webp": "studio-luminant-production-process-infographic-tr.webp",
     "variants": {
       "400": {
-        "file": "studio-luminant-production-workshop-photo-01-400w.webp",
+        "file": "studio-luminant-production-process-infographic-tr-400w.webp",
+        "w": 400,
+        "h": 218
+      },
+      "800": {
+        "file": "studio-luminant-production-process-infographic-tr-800w.webp",
+        "w": 800,
+        "h": 436
+      },
+      "1600": {
+        "file": "studio-luminant-production-process-infographic-tr-1600w.webp",
+        "w": 1600,
+        "h": 873
+      }
+    }
+  },
+  "studio-luminant-sage-relief-wall-homeware-showroom-concept.jpg": {
+    "original": {
+      "file": "studio-luminant-sage-relief-wall-homeware-showroom-concept.jpg",
+      "w": 1122,
+      "h": 1402,
+      "size": 327725
+    },
+    "webp": "studio-luminant-sage-relief-wall-homeware-showroom-concept.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sage-relief-wall-homeware-showroom-concept-400w.webp",
+        "w": 400,
+        "h": 500
+      },
+      "800": {
+        "file": "studio-luminant-sage-relief-wall-homeware-showroom-concept-800w.webp",
+        "w": 800,
+        "h": 1000
+      }
+    }
+  },
+  "studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait.jpg": {
+    "original": {
+      "file": "studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait.jpg",
+      "w": 1050,
+      "h": 1400,
+      "size": 307025
+    },
+    "webp": "studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait-400w.webp",
+        "w": 400,
+        "h": 533
+      },
+      "800": {
+        "file": "studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait-800w.webp",
+        "w": 800,
+        "h": 1067
+      }
+    }
+  },
+  "studio-luminant-sage-relief-wall-homeware-showroom-concept-square.jpg": {
+    "original": {
+      "file": "studio-luminant-sage-relief-wall-homeware-showroom-concept-square.jpg",
+      "w": 1122,
+      "h": 1122,
+      "size": 285152
+    },
+    "webp": "studio-luminant-sage-relief-wall-homeware-showroom-concept-square.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sage-relief-wall-homeware-showroom-concept-square-400w.webp",
         "w": 400,
         "h": 400
       },
       "800": {
-        "file": "studio-luminant-production-workshop-photo-01-800w.webp",
+        "file": "studio-luminant-sage-relief-wall-homeware-showroom-concept-square-800w.webp",
         "w": 800,
         "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-production-workshop-photo-01-1600w.webp",
-        "w": 1600,
-        "h": 1600
       }
     }
   },
-  "studio-luminant-production-workshop-photo-02.jpeg": {
+  "studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg": {
     "original": {
-      "file": "studio-luminant-production-workshop-photo-02.jpeg",
-      "w": 1390,
-      "h": 801,
-      "size": 283611
+      "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg",
+      "w": 1536,
+      "h": 1024,
+      "size": 184225
     },
-    "webp": "studio-luminant-production-workshop-photo-02.webp",
+    "webp": "studio-luminant-sage-relief-wall-hotel-guestroom-concept.webp",
     "variants": {
       "400": {
-        "file": "studio-luminant-production-workshop-photo-02-400w.webp",
+        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-400w.webp",
         "w": 400,
-        "h": 231
+        "h": 267
       },
       "800": {
-        "file": "studio-luminant-production-workshop-photo-02-800w.webp",
+        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-800w.webp",
         "w": 800,
-        "h": 461
+        "h": 533
+      },
+      "1200": {
+        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-1200w.webp",
+        "w": 1200,
+        "h": 800
+      }
+    }
+  },
+  "studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.jpg": {
+    "original": {
+      "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.jpg",
+      "w": 768,
+      "h": 1024,
+      "size": 116096
+    },
+    "webp": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait-400w.webp",
+        "w": 400,
+        "h": 533
+      }
+    }
+  },
+  "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square.jpg": {
+    "original": {
+      "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square.jpg",
+      "w": 1024,
+      "h": 1024,
+      "size": 146444
+    },
+    "webp": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square-400w.webp",
+        "w": 400,
+        "h": 400
+      },
+      "800": {
+        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square-800w.webp",
+        "w": 800,
+        "h": 800
       }
     }
   },
@@ -1556,6 +1238,48 @@
         "file": "studio-luminant-sample-box-four-material-systems-800w.webp",
         "w": 800,
         "h": 536
+      }
+    }
+  },
+  "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.jpg": {
+    "original": {
+      "file": "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.jpg",
+      "w": 1080,
+      "h": 1440,
+      "size": 173480
+    },
+    "webp": "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait-400w.webp",
+        "w": 400,
+        "h": 533
+      },
+      "800": {
+        "file": "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait-800w.webp",
+        "w": 800,
+        "h": 1067
+      }
+    }
+  },
+  "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square.jpg": {
+    "original": {
+      "file": "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square.jpg",
+      "w": 1080,
+      "h": 1080,
+      "size": 136122
+    },
+    "webp": "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square-400w.webp",
+        "w": 400,
+        "h": 400
+      },
+      "800": {
+        "file": "studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square-800w.webp",
+        "w": 800,
+        "h": 800
       }
     }
   },
@@ -1610,15 +1334,6 @@
         "h": 893
       }
     }
-  },
-  "studio-luminant-logo-white-transparent.png": {
-    "original": {
-      "file": "studio-luminant-logo-white-transparent.png",
-      "w": 172,
-      "h": 140,
-      "size": 4324
-    },
-    "variants": {}
   },
   "studio-luminant-wordmark-white-transparent.png": {
     "original": {

@@ -903,8 +903,8 @@ function MaterialCard({
       overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: material.id === "pmag" ? "images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp" : "images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
-    alt: material.id === "pmag" ? "Yumuşak ışıkta hücresel, çakıl benzeri rölyef desenli dik duran krem panel" : "Yukarıdan aydınlatılmış açık renkli fırıldak rölyef duvar, önünde kavisli bir koltuk",
+    src: material.id === "pmag" ? "images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg" : "images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg",
+    alt: material.id === "pmag" ? "Dikey akan liflerden oluşan rölyef panel, yalama ışıkta yakından" : "Oturma odasında kanepenin arkasında, dikey akan liflerden oluşan açık gri rölyef duvar; yüzeyi yandan vuran gün ışığı",
     style: {
       position: "absolute",
       inset: 0,
