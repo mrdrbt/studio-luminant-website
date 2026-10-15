@@ -13,11 +13,11 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="Özel Üretim Rölyef Duvar Paneli | Studio Luminant">
-<meta property="og:description" content="Studio Luminant — Lumina PMAG™ ve PUCOMP™ ile özel mimari elemanlar. Lüks konaklama ve yüksek kaliteli iç mekanlar için heykelsi yüzeyler, duvar sanatı, enstalasyonlar ve dekoratif elemanlar. Türkiye üretimi.">
+<meta property="og:description" content="Studio Luminant — Lumina PMAG™ ile özel mimari elemanlar. Konaklama ve nitelikli iç mekânlar için heykelsi yüzeyler, duvar sanatı, enstalasyonlar ve dekoratif elemanlar. Türkiye üretimi.">
 <meta property="og:url" content="https://studioluminant.com.tr/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Özel Üretim Rölyef Duvar Paneli | Studio Luminant">
-<meta name="twitter:description" content="Studio Luminant — Lumina PMAG™ ve PUCOMP™ ile özel mimari elemanlar. Lüks konaklama ve yüksek kaliteli iç mekanlar için heykelsi yüzeyler, duvar sanatı, enstalasyonlar ve dekoratif elemanlar. Türkiye üretimi.">
+<meta name="twitter:description" content="Studio Luminant — Lumina PMAG™ ile özel mimari elemanlar. Konaklama ve nitelikli iç mekânlar için heykelsi yüzeyler, duvar sanatı, enstalasyonlar ve dekoratif elemanlar. Türkiye üretimi.">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -334,7 +334,7 @@
 
   .materials-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2px;
   }
 
@@ -400,6 +400,19 @@
     transition: opacity 0.4s, transform 0.5s;
   }
   .material-card:hover .material-img { opacity: 1; transform: scale(1.02); }
+  .material-card--lead .material-img { height: 320px; object-position: center 40%; }
+  @media (min-width: 769px) {
+    .material-card--lead { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); column-gap: 64px; align-items: center; padding: 0 48px 0 0; }
+    .material-card--lead .material-img { width: 100%; height: auto; aspect-ratio: 4 / 5; margin: 0; }
+    .material-card--lead .material-body { padding: 56px 0; }
+  }
+  .material-card--lead .material-desc { max-width: 640px; margin-bottom: 24px; }
+  .material-note { background: var(--surface); padding: 28px 48px; border-top: 1px solid var(--border); }
+  .material-note p { font-size: 13px; line-height: 1.75; color: var(--text-secondary); font-weight: 300; margin: 0; }
+  @media (max-width: 600px) {
+    .material-card--lead .material-img { height: 220px; }
+    .material-note { padding: 24px 24px; }
+  }
 
   /* ─── DESIGN SYSTEM TEASER ─────────── */
   #design-system-teaser {
@@ -834,7 +847,7 @@
   "name": "Studio Luminant",
   "url": "https://studioluminant.com.tr/",
   "logo": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png",
-  "description": "Studio Luminant — Lumina PMAG™ ve PUCOMP™ ile özel mimari elemanlar. Lüks konaklama ve yüksek kaliteli iç mekanlar için heykelsi yüzeyler, duvar sanatı, enstalasyonlar ve dekoratif elemanlar. Türkiye üretimi.",
+  "description": "Studio Luminant — Lumina PMAG™ ile özel mimari elemanlar. Konaklama ve nitelikli iç mekânlar için heykelsi yüzeyler, duvar sanatı, enstalasyonlar ve dekoratif elemanlar. Türkiye üretimi.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rüstempaşa Mah. İstasyon Cad. No: 58",
@@ -1058,7 +1071,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <span class="step-number">02</span>
         <div class="step-title">Kalıp &amp; Döküm</div>
         <h3 class="step-headline">3D-Baskı Master, Hassas Döküm</h3>
-        <p class="step-desc">Kalıp masterını doğrudan modelden 3D basar, ardından her paneli kontrollü koşullarda Lumina PMAG™ veya Lumina PUCOMP™ ile vakum-döker, kalıbın yüzeyini her panele birebir aktarırız; her parti, atölyeden çıkmadan önce yüzey bütünlüğü açısından kontrol edilir.</p>
+        <p class="step-desc">Kalıp masterını doğrudan modelden 3D basar, ardından her paneli kontrollü koşullarda Lumina PMAG™ ile vakum-döker, kalıbın yüzeyini her panele birebir aktarırız; her parti, atölyeden çıkmadan önce yüzey bütünlüğü açısından kontrol edilir.</p>
         <div class="step-line"></div>
       </div>
       <div class="process-step">
@@ -1183,61 +1196,41 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="materials-header">
       <div class="eyebrow reveal">Malzemeler</div>
       <h2 class="section-headline reveal">
-        İki Malzeme,<br><em>Tek Standart.</em>
+        Tek Malzeme,<br><em>Tek Standart.</em>
       </h2>
       <p class="body-text reveal">
-        Tek bir yüzey kalitesi ve iki malzeme sayesinde aynı tasarım, ister kuru bir lobi duvarında ister ıslak, kavisli ve dış mekâna açılan bir öğede aynı şekilde çalışır. Projenin bağlamına uygun malzeme seçilir ya da formüle edilir, ardından teknik veri sayfasıyla şartnameye yazılır.
+        Lobi duvarından banko önüne, tavandan kolon kaplamasına kadar iç mekânın yüzeyleri tek bir malzemeyle, Lumina PMAG™ ile çözülür. Her proje, teknik veri sayfasıyla birlikte şartnameye yazılır.
       </p>
     </div>
 
     <div class="materials-grid reveal">
-      <div class="material-card">
+      <div class="material-card material-card--lead">
         <picture>
               <source type="image/webp"
-                  srcset="images/studio-luminant-flowing-fibre-relief-panel-raking-light-400w.webp 400w,
-                  images/studio-luminant-flowing-fibre-relief-panel-raking-light-800w.webp 800w,
-                  images/studio-luminant-flowing-fibre-relief-panel-raking-light.webp 1280w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg"
-                   alt="Dikey akan liflerden oluşan rölyef panel, yalama ışıkta yakından" class="material-img" width="1280" height="512"
+                  srcset="images/studio-luminant-flowing-fibre-relief-panel-raking-light-portrait-400w.webp 400w,
+                  images/studio-luminant-flowing-fibre-relief-panel-raking-light-portrait-800w.webp 800w,
+                  images/studio-luminant-flowing-fibre-relief-panel-raking-light-portrait.webp 880w"
+                  sizes="(max-width: 768px) 100vw, 460px">
+              <img src="images/studio-luminant-flowing-fibre-relief-panel-raking-light-portrait.jpg"
+                   alt="Dikey akan liflerden oluşan rölyef panel, yalama ışıkta yakından" class="material-img" width="880" height="1100"
                    loading="lazy" decoding="async">
             </picture>
+        <div class="material-body">
         <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="1" width="38" height="38" style="stroke:var(--accent)" stroke-width="0.8"></rect>
           <rect x="8" y="8" width="24" height="24" style="stroke:var(--accent)" stroke-width="0.5" transform="rotate(45 20 20)"></rect>
           <circle cx="20" cy="20" r="6" style="stroke:var(--accent)" stroke-width="0.8"></circle>
         </svg>
         <h3 class="material-title">Lumina PMAG™</h3>
-        <div class="material-subtitle">İç Mekân Duvar &amp; Tavan Panelleri</div>
+        <div class="material-subtitle">İç Mekân Panelleri ve Elemanları</div>
+        <p class="material-desc">İç mekân duvarları ve tavanları, kolon kaplamaları, tezgâh ve masa önleri, vurgu yüzeyleri.</p>
         <ul class="material-bullets">
           <li>Seramik-pürüzsüz, neme dayanıklı</li>
           <li>Her RAL veya özel renk</li>
         </ul>
+        </div>
       </div>
-      <div class="material-card">
-        <picture>
-              <source type="image/webp"
-                  srcset="images/studio-luminant-flowing-fibre-relief-wall-living-room-concept-400w.webp 400w,
-                  images/studio-luminant-flowing-fibre-relief-wall-living-room-concept-800w.webp 800w,
-                  images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.webp 1122w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg"
-                   alt="Oturma odasında kanepenin arkasında, dikey akan liflerden oluşan açık gri rölyef duvar; yüzeyi yandan vuran gün ışığı" class="material-img" width="1122" height="449"
-                   loading="lazy" decoding="async">
-            </picture>
-        <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" style="stroke:var(--accent)" stroke-width="0.8"></polygon>
-          <polygon points="20,10 30,16 30,24 20,30 10,24 10,16" style="stroke:var(--accent)" stroke-width="0.5"></polygon>
-          <circle cx="20" cy="20" r="4" style="fill:var(--accent)" opacity="0.3"></circle>
-        </svg>
-        <h3 class="material-title">Lumina PUCOMP™</h3>
-        <div class="material-subtitle">Kavisler, Dış Mekânlar &amp; Islak Alanlar</div>
-        <ul class="material-bullets">
-          <li>Dış mekân ve ıslak hacimlere uygun</li>
-          <li>İnce profiller, 8–25 mm</li>
-          <li>En derin dokuyu tutar</li>
-        </ul>
-      </div>
+      <div class="material-note"><p>Dış mekân ve ıslak hacimler için aynı tasarım Lumina PUCOMP™ ile dökülür.</p></div>
     </div>
   </div>
 </section>
@@ -1333,7 +1326,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="sbx-head">
       <div class="eyebrow reveal">Yüzey Numune Kutusu</div>
       <h2 id="sbx-title" class="sbx-title reveal">Görün.<br><em>Hissedin.</em></h2>
-      <p class="sbx-intro reveal">Kutuda, birkaç rölyef kalıbından Lumina PMAG™ ve Lumina PUCOMP™ ile dökülmüş, artizan finish uygulanmış numuneler yer alır; kutuyu her projeye özel hazırlıyoruz. Rölyefi, yüzeyi ve rengi kendi mekânınızın ışığında, paneli şartnameye yazmadan önce değerlendirin.</p>
+      <p class="sbx-intro reveal">Kutuda, birkaç rölyef kalıbından Lumina PMAG™ ile dökülmüş, artizan finish uygulanmış numuneler yer alır; kutuyu her projeye özel hazırlıyoruz. Rölyefi, yüzeyi ve rengi kendi mekânınızın ışığında, paneli şartnameye yazmadan önce değerlendirin.</p>
     </div>
 
     <div class="sbx-stage reveal" data-state="closed">
@@ -1555,7 +1548,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       </div>
       <div class="expertise-skills reveal">
         <div class="skill-tag">Alçı Döküm (PMAG)</div>
-        <div class="skill-tag">Kompozit Döküm (PUCOMP)</div>
+        <div class="skill-tag">Rölyef Modelleme</div>
         <div class="skill-tag">Vakum Döküm</div>
         <div class="skill-tag">Büyük Ebatlı Panel Dökümü</div>
         <div class="skill-tag">3D Baskıyla Ana Model Üretimi</div>

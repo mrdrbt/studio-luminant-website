@@ -45,8 +45,8 @@ window.SL_SPECS = {
       "tr": "İç Mekân"
     },
     "application": {
-      "en": "Interior Walls & Ceilings",
-      "tr": "İç Mekân Duvar & Tavan"
+      "en": "Interior Walls, Ceilings, Columns & Counters",
+      "tr": "İç Mekân Duvar, Tavan, Kolon & Banko"
     },
     "deliverables": {
       "en": "Technical Data Sheet + Installation Drawing",
@@ -87,7 +87,7 @@ window.SL_SPECS = {
       "note_tr": "Artizan finish; pürüzsüz ya da dokulu yüzey."
     },
     "moisture": {
-      "en": "High — exterior & wet-area rated",
+      "en": "High — suited to exterior & wet areas",
       "tr": "Yüksek — dış mekân ve ıslak hacimlere uygun"
     },
     "domain": {
@@ -95,15 +95,15 @@ window.SL_SPECS = {
       "tr": "Dış Mekân"
     },
     "application": {
-      "en": "Exterior, Wet Areas & Complex Geometry",
-      "tr": "Dış Cephe, Islak Hacim & Karmaşık Geometri"
+      "en": "Exterior Facades & Wet Areas",
+      "tr": "Dış Cephe & Islak Hacim"
     },
     "deliverables": {
       "en": "Technical Data Sheet + Installation Drawing",
       "tr": "Teknik Veri Sayfası + Montaj Çizimi"
     },
     "durability": {
-      "en": "Exterior & Wet-Area Rated",
+      "en": "Suited to Exterior & Wet Areas",
       "tr": "Dış Mekân & Islak Hacme Uygun"
     },
     "repairability": {

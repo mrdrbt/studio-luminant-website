@@ -227,7 +227,7 @@ const studioMaterials = [{
   tagline: "Yüksek spesifikasyonlu iç mekânlar için mimari rölyef panelleri",
   domain: "İç Mekân",
   domainIcon: "🏛",
-  application: "Özellikli duvarlar, tavan elemanları, resepsiyon alanları, koridor vurgu duvarları",
+  application: "Öne çıkan duvarlar, tavan elemanları, kolon kaplamaları, banko ve tezgâh önleri, vurgu yüzeyleri, resepsiyon alanları, koridor vurgu duvarları",
   specs: {
     density: "1,400–1,600",
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
@@ -259,7 +259,7 @@ const studioMaterials = [{
   id: "pucomp",
   name: "Lumina PUCOMP™",
   fullName: "Advanced Composite",
-  tagline: "Dış cephe ve ıslak hacimler için, karmaşık eğrilere uygun paneller",
+  tagline: "Lumina PMAG™'in dış cephe ve ıslak hacim varyantı; aynı tasarım, aynı artizan finish",
   domain: "Dış Mekân",
   domainIcon: "🌐",
   application: "Façade panels, spas, pools, bathrooms, covered outdoor areas, signage",
@@ -1243,7 +1243,7 @@ function ComparisonTable({
 
 // ─── MAIN ───
 function MaterialGuide() {
-  const [expandedMaterial, setExpandedMaterial] = useState(null);
+  const [expandedMaterial, setExpandedMaterial] = useState("pmag");
   const [compareMode, setCompareMode] = useState(false);
   const [compareMaterial, setCompareMaterial] = useState("pmag");
   const [activeSector, setActiveSector] = useState(["grg", "grc", "stone"]);
@@ -1298,7 +1298,7 @@ function MaterialGuide() {
       color: COLORS.muted,
       margin: "0 0 20px"
     }
-  }, "İki özgün kompozit. Mimari ifade için tasarlandı."), /*#__PURE__*/React.createElement("div", {
+  }, "İç mekânda Lumina PMAG™; dış cephe ve ıslak hacimde Lumina PUCOMP™."), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 48,
       height: 1,

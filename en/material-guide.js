@@ -227,7 +227,7 @@ const studioMaterials = [{
   tagline: "Interior architectural relief panels for high-specification interiors",
   domain: "Interior",
   domainIcon: "🏛",
-  application: "Feature walls, ceiling elements, reception areas, corridor accent walls",
+  application: "Feature walls, ceiling elements, column wraps, counter and desk fronts, accent surfaces, reception areas, corridor accent walls",
   specs: {
     density: "1,400–1,600",
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
@@ -259,7 +259,7 @@ const studioMaterials = [{
   id: "pucomp",
   name: "Lumina PUCOMP™",
   fullName: "Advanced Composite",
-  tagline: "Exterior & wet-area panels for complex curvatures",
+  tagline: "The exterior and wet-area variant of Lumina PMAG™, in the same designs and artisan finishes",
   domain: "Exterior",
   domainIcon: "🌐",
   application: "Façade panels, spas, pools, bathrooms, covered outdoor areas, signage",
@@ -1243,7 +1243,7 @@ function ComparisonTable({
 
 // ─── MAIN ───
 function MaterialGuide() {
-  const [expandedMaterial, setExpandedMaterial] = useState(null);
+  const [expandedMaterial, setExpandedMaterial] = useState("pmag");
   const [compareMode, setCompareMode] = useState(false);
   const [compareMaterial, setCompareMaterial] = useState("pmag");
   const [activeSector, setActiveSector] = useState(["grg", "grc", "stone"]);
@@ -1298,7 +1298,7 @@ function MaterialGuide() {
       color: COLORS.muted,
       margin: "0 0 20px"
     }
-  }, "Two proprietary composites. Engineered for architectural expression."), /*#__PURE__*/React.createElement("div", {
+  }, "Lumina PMAG™ for interiors; Lumina PUCOMP™ for exteriors and wet areas."), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 48,
       height: 1,
