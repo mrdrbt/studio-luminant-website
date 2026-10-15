@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Relief light — lab</title>
+<link rel="preload" as="image" href="../assets/relief/080-iznik-cypress/poster-1680.jpg" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Jost:wght@300;400&display=swap">
+<link rel="stylesheet" href="../shared.css">
+<style>
+  /* lab layout only: hero = panel in the right 60%, copy over flat wall on the left */
+  .lab-hero { --relief-wall: #DFD8CA; height: 100svh; min-height: 520px; }
+  .lab-hero .relief-light__poster {
+    --m: max(24px, 6svh);
+    --S: min(60vw - 2 * var(--m), 100svh - 2 * var(--m));
+    position: absolute;
+    width: calc(1.4 * var(--S)); height: calc(1.4 * var(--S));
+    left: calc(40vw + (60vw - var(--S)) / 2 - 0.2 * var(--S));
+    top: calc((100svh - var(--S)) / 2 - 0.2 * var(--S));
+  }
+  @media (orientation: portrait) {
+    .lab-hero .relief-light__poster {
+      --S: min(100vw - 48px, 60svh - 72px);
+      left: calc((100vw - var(--S)) / 2 - 0.2 * var(--S));
+      top: calc(72px - 0.2 * var(--S));
+    }
+  }
+  .lab-copy { position: absolute; left: clamp(16px, 4vw, 56px); bottom: clamp(40px, 9vh, 88px); z-index: 2; max-width: min(40vw, 520px); }
+  @media (orientation: portrait) { .lab-copy { max-width: calc(100vw - 32px); } }
+  .lab-copy h1 { font: 300 clamp(36px, 4.2vw, 64px)/1.05 var(--font-display); color: var(--ink); margin: 0; }
+  .lab-copy p { font: 400 15px/1.5 var(--font-body); color: var(--ink-2); margin: 18px 0 0; }
+  .lab-gap { padding: 30vh 24px; text-align: center; color: var(--ink-muted); font: 300 16px/1.6 var(--font-body); }
+  .lab-sun { --relief-wall: #DFD8CA; height: 90vh; }
+  .lab-sun .relief-light__poster { position: absolute; height: 120%; width: auto; aspect-ratio: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+  .lab-readout { position: fixed; right: 12px; bottom: 12px; z-index: 50; font: 12px/1.5 ui-monospace, Consolas, monospace;
+    background: rgba(var(--ink-rgb), 0.85); color: var(--bg); padding: 8px 10px; white-space: pre; }
+  body::before { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <figure class="relief-light lab-hero" data-relief-light="../assets/relief/080-iznik-cypress/" data-input="auto">
+    <img class="relief-light__poster" src="../assets/relief/080-iznik-cypress/poster-1680.jpg"
+         srcset="../assets/relief/080-iznik-cypress/poster-840.jpg 840w, ../assets/relief/080-iznik-cypress/poster-1680.jpg 1680w"
+         sizes="(orientation: portrait) 130vw, 84vh" width="1680" height="1680" fetchpriority="high"
+         alt="Cast relief panel: a cypress under an arch, grazed by low raking light">
+    <figcaption class="lab-copy"><h1>Your drawing, cast faithfully.</h1><p>Lab: hero in auto mode (pointer on desktop, scroll on touch).</p></figcaption>
+  </figure>
+  <p class="lab-gap">Scroll on. The next panel is driven by scroll only: its light travels from dawn to dusk as it crosses the screen.</p>
+  <figure class="relief-light lab-sun" data-relief-light="../assets/relief/080-iznik-cypress/" data-input="scroll">
+    <img class="relief-light__poster" src="../assets/relief/080-iznik-cypress/poster-840.jpg"
+         srcset="../assets/relief/080-iznik-cypress/poster-840.jpg 840w, ../assets/relief/080-iznik-cypress/poster-1680.jpg 1680w"
+         sizes="108vh" width="1680" height="1680" loading="lazy" alt="">
+  </figure>
+  <p class="lab-gap">End of lab.</p>
+</main>
+<div class="lab-readout" id="readout" aria-hidden="true"></div>
+<script src="../relief-light.js" defer></script>
+<script>
+  // lab-only readout of each instance's state
+  setInterval(function () {
+    var out = [];
+    document.querySelectorAll('[data-relief-light]').forEach(function (el, i) {
+      var s = el.reliefLight;
+      out.push(i + ': ' + (s ? s.mode + (s.idle ? '/idle' : '') + ' az ' + s.light.az.toFixed(1) + ' el ' + s.light.el.toFixed(1) +
+        ' frames ' + s.frames + (s.textures ? ' ' + s.textures.normal : '') : 'not mounted'));
+    });
+    document.getElementById('readout').textContent = out.join('\n');
+  }, 250);
+</script>
+</body>
+</html>

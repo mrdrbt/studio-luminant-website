@@ -359,6 +359,17 @@ footer {
 .js .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; transition-delay: var(--reveal-delay, 0s); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+/* ─── RELIEF LIGHT (relief-light.js) ── */
+/* The container sets the wall colour (the manifest's "wall") so the poster edge disappears.
+   The template positions .relief-light__poster; the canvas covers the container and fades in. */
+.relief-light { position: relative; overflow: hidden; background: var(--relief-wall, #DFD8CA); margin: 0; }
+.relief-light__poster { display: block; }
+.relief-light__canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  opacity: 0; transition: opacity var(--dur-4) var(--ease); pointer-events: none;
+}
+.relief-light__canvas.is-on { opacity: 1; }
+
 /* ─── ANIMATIONS ────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
