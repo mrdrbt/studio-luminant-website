@@ -793,27 +793,6 @@
       }
     }
   },
-  "studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior.png": {
-    "original": {
-      "file": "studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior.png",
-      "w": 1024,
-      "h": 1024,
-      "size": 1500881
-    },
-    "webp": "studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
   "studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg": {
     "original": {
       "file": "studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg",
