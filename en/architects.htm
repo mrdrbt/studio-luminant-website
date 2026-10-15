@@ -44,8 +44,8 @@
     content: '';
     position: absolute; inset: 0;
     background:
-      linear-gradient(to top, rgba(12,12,14,0.92) 0%, rgba(12,12,14,0.55) 34%, rgba(12,12,14,0.10) 64%),
-      linear-gradient(160deg, rgba(12,12,14,0.78) 0%, rgba(12,12,14,0.40) 50%, rgba(12,12,14,0.20) 100%);
+      linear-gradient(to top, rgba(var(--bg-rgb),0.92) 0%, rgba(var(--bg-rgb),0.55) 34%, rgba(var(--bg-rgb),0.10) 64%),
+      linear-gradient(160deg, rgba(var(--bg-rgb),0.78) 0%, rgba(var(--bg-rgb),0.40) 50%, rgba(var(--bg-rgb),0.20) 100%);
     z-index: 1; pointer-events: none;
   }
   .page-hero-content { position: relative; z-index: 2; padding: 160px 60px 100px; max-width: 860px; }
@@ -115,7 +115,7 @@
       url('../images/studio-luminant-sample-box-four-material-systems.jpg') type('image/jpeg'));
     background-size: cover; background-position: center right; }
   .sample-left::before { content: ''; position: absolute; inset: 0;
-    background: linear-gradient(to right, rgba(12,12,14,0.95) 0%, rgba(12,12,14,0.86) 40%, rgba(12,12,14,0.45) 72%, rgba(12,12,14,0.22) 100%);
+    background: linear-gradient(to right, rgba(var(--bg-rgb),0.95) 0%, rgba(var(--bg-rgb),0.86) 40%, rgba(var(--bg-rgb),0.45) 72%, rgba(var(--bg-rgb),0.22) 100%);
     pointer-events: none; }
   .sample-left > * { position: relative; }
   .sample-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 4vw, 64px); font-weight: 300; line-height: 1.0; color: var(--text-primary); margin-bottom: 28px; }

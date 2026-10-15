@@ -13,13 +13,13 @@ const {
 // ─────────────────────────────────────────────
 
 const COLORS = {
-  bg: "#0C0C0E",
-  surface: "#18181D",
-  borderGold: "rgba(201,168,76,0.18)",
-  gold: "#C9A84C",
-  goldLight: "#E8C96A",
-  ivory: "#F0EAD6",
-  muted: "#9A9088",
+  bg: "var(--bg)",
+  surface: "var(--surface)",
+  borderGold: "rgba(var(--accent-rgb),0.18)",
+  gold: "var(--accent)",
+  goldLight: "var(--accent-hover)",
+  ivory: "var(--ink)",
+  muted: "var(--ink-muted)",
   sage: "#6B8F71",
   amber: "#C4956A",
   crimson: "#A65D5D"
@@ -814,7 +814,7 @@ function FinishColorSelector({
     style: {
       marginTop: 20,
       padding: "12px 16px",
-      background: "linear-gradient(135deg, rgba(201,168,76,0.06) 0%, rgba(201,168,76,0.02) 100%)",
+      background: "linear-gradient(135deg, rgba(var(--accent-rgb),0.06) 0%, rgba(var(--accent-rgb),0.02) 100%)",
       border: `1px solid ${COLORS.borderGold}`,
       borderRadius: 2,
       display: "flex",

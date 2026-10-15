@@ -132,7 +132,7 @@
     text-transform: uppercase; font-weight: 400;
     color: var(--text-muted);
     background: transparent;
-    border: 1px solid rgba(201,168,76,0.15);
+    border: 1px solid rgba(var(--accent-rgb),0.15);
     padding: 5px 14px; border-radius: 4px;
     cursor: pointer;
     transition: border-color 0.3s, color 0.3s;
@@ -183,7 +183,7 @@
     .pattern-card:hover {
       border-color: var(--border);
       transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 4px 20px rgba(201, 168, 76, 0.12);
+      box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.12);
     }
     .pattern-card:hover .card-img-wrap img {
       transform: scale(1.04);

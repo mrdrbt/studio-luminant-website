@@ -42,7 +42,7 @@
   .article-body h2 em { font-style: italic; color: var(--gold); }
   .article-body p { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--text-secondary); margin-bottom: 20px; }
   .article-body strong { font-weight: 500; color: var(--text-primary); }
-  .article-body a { color: var(--gold-dim); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.25); transition: color 0.3s, border-color 0.3s; }
+  .article-body a { color: var(--gold-dim); text-decoration: none; border-bottom: 1px solid rgba(var(--accent-rgb),0.25); transition: color 0.3s, border-color 0.3s; }
   .article-body a:hover { color: var(--gold); border-color: var(--gold); }
   .spec-checklist { margin: 36px 0; padding: 0; list-style: none; counter-reset: spec-step; }
   .spec-checklist li { counter-increment: spec-step; display: grid; grid-template-columns: 48px 1fr; gap: 0; margin-bottom: 2px; background: var(--surface); padding: 24px 28px; font-size: 14px; line-height: 1.7; color: var(--text-secondary); font-weight: 300; }
@@ -50,10 +50,10 @@
   .spec-checklist li strong { color: var(--text-primary); font-weight: 500; }
   .timeline-table { width: 100%; border-collapse: collapse; margin: 36px 0 40px; font-size: 14px; }
   .timeline-table thead th { text-align: left; font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 400; padding: 14px 16px; border-bottom: 1px solid var(--border); background: var(--surface); }
-  .timeline-table tbody td { padding: 16px; border-bottom: 1px solid rgba(201,168,76,0.08); vertical-align: top; color: var(--text-secondary); font-weight: 300; line-height: 1.6; }
+  .timeline-table tbody td { padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); vertical-align: top; color: var(--text-secondary); font-weight: 300; line-height: 1.6; }
   .timeline-table tbody tr:hover { background: var(--surface); }
   .timeline-table strong { color: var(--text-primary); font-weight: 500; }
-  .phase-badge { display: inline-block; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 3px; color: var(--obsidian); white-space: nowrap; }
+  .phase-badge { display: inline-block; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 3px; color: var(--ink); border: 1px solid var(--border-strong); white-space: nowrap; }
   .phase-design { background: var(--blue); }
   .phase-production { background: var(--amber); }
   .phase-delivery { background: var(--green); }
@@ -61,7 +61,7 @@
   .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 36px 0; }
   .compare-card { background: var(--surface); padding: 28px 24px; }
   .compare-card-header { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-  .compare-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(201,168,76,0.06); font-size: 13px; }
+  .compare-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(var(--accent-rgb),0.06); font-size: 13px; }
   .compare-row:last-child { border-bottom: none; }
   .compare-label { color: var(--text-muted); }
   .compare-value { color: var(--text-primary); font-weight: 400; text-align: right; }

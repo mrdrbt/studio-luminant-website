@@ -40,10 +40,10 @@ function pictureTag(src, alt, sizes, opts) {
   if (!document.querySelector('meta[name="theme-color"]')) {
     const tc = document.createElement('meta');
     tc.name = 'theme-color';
-    tc.content = '#0C0C0E';
+    tc.content = '#EFE8D5';
     document.head.appendChild(tc);
   }
-  document.documentElement.style.colorScheme = 'dark';
+  document.documentElement.style.colorScheme = 'light';
 
   // ─── FAVICON ───
   if (!document.querySelector('link[rel="icon"]')) {
@@ -107,7 +107,8 @@ function pictureTag(src, alt, sizes, opts) {
     mobileLabel: 'Mobile menu'
   };
 
-  const imgBase = base + 'images/studio-luminant-logo-white.svg';
+  const imgBase = base + 'images/studio-luminant-logo-ink.svg';
+  const imgBaseNight = base + 'images/studio-luminant-logo-white.svg';
 
   const navItemsHtml = navLinks.items.map(i => `<li><a href="${i.href}">${i.text}</a></li>`).join('\n      ');
   const mobileItemsHtml = navLinks.items.map(i => `  <a href="${i.href}">${i.text}</a>`).join('\n');
@@ -276,7 +277,7 @@ ${mobileItemsHtml}
     <div class="footer-top">
       <div class="footer-brand">
         <a href="${footerContent.homeHref}" class="logo">
-          <img src="${imgBase}" alt="Studio Luminant" class="footer-logo-img" width="64" height="52">
+          <img src="${imgBaseNight}" alt="Studio Luminant" class="footer-logo-img" width="64" height="52">
         </a>
         <p class="footer-tagline">${footerContent.tagline}</p>
         <div class="footer-social">

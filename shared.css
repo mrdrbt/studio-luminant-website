@@ -5,46 +5,34 @@
 /* ─── DESIGN TOKENS ─────────────────── */
 :root {
 
-  /* ── BRAND COLORS ─────────────────── */
-  --gold:        #C9A84C;   /* primary accent */
-  --gold-light:  #E8C96A;   /* hover */
-  --gold-dim:    #A8872F;   /* secondary accent */
+  /* ── v3 SEMANTIC PALETTE — "Bone & Shadow" (decision #99, 2026-10-15) ──
+     Light by default. A `.night` scope (below) flips the same names to the dark
+     register for the footer and night bands. Contrast (WCAG) on --bg:
+     ink 14.2 · ink-2 9.6 · ink-muted 5.8 · accent 5.7 · on-accent/accent 6.2. */
+  --bg:           #EFE8D5;   /* bone — page ground */
+  --bg-rgb:       239, 232, 213;
+  --bg-alt:       #E7DEC8;   /* alternate band */
+  --surface:      #F5F0E3;   /* card, raised */
+  --surface-2:    #E4DAC3;   /* recessed / pressed */
+  --ink:          #1D1A16;   /* text */
+  --ink-rgb:      29, 26, 22;
+  --ink-2:        #3D372F;   /* secondary text */
+  --ink-muted:    #5F574C;   /* captions, small print */
+  --accent:       #8E4426;   /* clay — the one accent */
+  --accent-rgb:   142, 68, 38;
+  --accent-hover: #6E3018;
+  --on-accent:    #F6F1E6;   /* text on an accent fill */
+  --night:        #1D1A16;   /* ground of night bands */
 
-  /* ── SURFACES ─────────────────────── */
-  --obsidian:    #0C0C0E;   /* page background */
-  --deep:        #111114;   /* footer / alt bg */
-  --surface:     #18181D;   /* card */
-  --surface-2:   #1F1F26;   /* raised */
-
-  /* ── BORDERS & LINES ──────────────── */
-  --border:         rgba(201,168,76,0.18);   /* translucent gold hairline */
-  --border-strong:  rgba(201,168,76,0.36);
-  --border-mute:    rgba(240,234,214,0.08);
-  /* Neutral rule family — structural dividers, not expressive */
-  --rule-1:         rgba(240,234,214,0.06);
-  --rule-2:         rgba(240,234,214,0.10);
-  --rule-3:         rgba(240,234,214,0.16);
-
-  /* ── TEXT ─────────────────────────── */
-  --text-primary:   #F0EAD6;   /* warm off-white */
-  --text-secondary: #B0A89E;
-  --text-muted:     #A09890;
-  /* Aliases used by the design system components */
-  --fg:             #F0EAD6;
-  --fg-2:           #B0A89E;
-  --fg-muted:       #A09890;
-  --fg-on-gold:     #0C0C0E;
-
-  /* ── STATE ACCENTS ────────────────── */
-  /* Warm, low-chroma — all AA contrast against --obsidian for text */
-  --accent-error:    #C76A5C;   /* brick-rose */
-  --accent-warn:     #C99A4C;   /* amber */
-  --accent-ok:       #6E9468;   /* moss */
-  --accent-info:     #6E8AA8;   /* slate-blue */
-  --accent-error-bg: rgba(199,106,92,0.10);
-  --accent-warn-bg:  rgba(201,154,76,0.10);
-  --accent-ok-bg:    rgba(110,148,104,0.10);
-  --accent-info-bg:  rgba(110,138,168,0.10);
+  /* ── STATE ACCENTS (darkened for the light ground; all ≥4.5:1 on --bg) ── */
+  --accent-error:    #A3402F;
+  --accent-warn:     #85571A;
+  --accent-ok:       #3F6B3A;
+  --accent-info:     #3D5E80;
+  --accent-error-bg: rgba(163,64,47,0.10);
+  --accent-warn-bg:  rgba(133,87,26,0.10);
+  --accent-ok-bg:    rgba(63,107,58,0.10);
+  --accent-info-bg:  rgba(61,94,128,0.10);
 
   /* ── TYPOGRAPHY — Families ────────── */
   --font-display: "Cormorant Garamond", "Garamond", "Times New Roman", serif;
@@ -102,9 +90,7 @@
 
   /* ── ELEVATION ────────────────────── */
   --shadow-0:    none;
-  --shadow-1:    0 1px 0 0 var(--border);
   --shadow-2:    0 24px 60px -20px rgba(0,0,0,0.6);
-  --shadow-gold: 0 0 0 1px var(--gold), 0 0 32px -8px rgba(201,168,76,0.35);
 
   /* ── MOTION ───────────────────────── */
   --ease:     cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -115,9 +101,7 @@
   --dur-4:    800ms;
 
   /* ── A11Y — Focus ring ────────────── */
-  --focus-ring:   0 0 0 2px var(--gold);
   --focus-offset: 3px;
-  --focus-color:  var(--gold);
 
   /* ── BREAKPOINTS (reference) ─────── */
   --bp-sm: 520px;
@@ -135,6 +119,55 @@
   --z-cursor:          9998;   /* gold ring */
   --z-cursor-dot:      9999;   /* gold dot */
 
+}
+
+/* ─── NIGHT SCOPE ─────────────────────────
+   Same token names, dark register. Applied to the footer and any `.night` band.
+   Contrast on --bg (night): ink 14.2 · ink-2 9.6 · ink-muted 6.5 · accent 6.7. */
+.night, footer, #workshop-filmstrip {
+  --bg:           #1D1A16;
+  --bg-rgb:       29, 26, 22;
+  --bg-alt:       #161310;
+  --surface:      #26221D;
+  --surface-2:    #2E2924;
+  --ink:          #EFE8D5;
+  --ink-rgb:      239, 232, 213;
+  --ink-2:        #C9C0AE;
+  --ink-muted:    #A79E8E;
+  --accent:       #D4926F;
+  --accent-rgb:   212, 146, 111;
+  --accent-hover: #E3AA8A;
+  --on-accent:    #1D1A16;
+}
+.night { background-color: var(--bg); }
+.night, footer, #workshop-filmstrip { color: var(--ink); }
+
+/* ─── LEGACY ALIASES (v2 names → v3 semantic) ───
+   Declared on every scope so they re-resolve inside `.night`. Remove once no
+   page references the v2 names. */
+:root, .night, footer, #workshop-filmstrip {
+  --gold:           var(--accent);
+  --gold-light:     var(--accent-hover);
+  --gold-dim:       var(--accent);
+  --obsidian:       var(--bg);
+  --deep:           var(--bg-alt);
+  --border:         rgba(var(--ink-rgb), 0.14);
+  --border-strong:  rgba(var(--ink-rgb), 0.30);
+  --border-mute:    rgba(var(--ink-rgb), 0.08);
+  --rule-1:         rgba(var(--ink-rgb), 0.06);
+  --rule-2:         rgba(var(--ink-rgb), 0.10);
+  --rule-3:         rgba(var(--ink-rgb), 0.16);
+  --text-primary:   var(--ink);
+  --text-secondary: var(--ink-2);
+  --text-muted:     var(--ink-muted);
+  --fg:             var(--ink);
+  --fg-2:           var(--ink-2);
+  --fg-muted:       var(--ink-muted);
+  --fg-on-gold:     var(--on-accent);
+  --shadow-1:       0 1px 0 0 var(--border);
+  --shadow-gold:    0 0 0 1px var(--accent), 0 0 32px -8px rgba(var(--accent-rgb), 0.35);
+  --focus-ring:     0 0 0 2px var(--accent);
+  --focus-color:    var(--accent);
 }
 
 /* ─── STATE COLOR HELPERS ───────────── */
@@ -157,7 +190,7 @@ body {
   font-weight: 300;
   overflow-x: hidden;
   touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(201,168,76,0.15);
+  -webkit-tap-highlight-color: rgba(var(--accent-rgb), 0.15);
 }
 
 /* ─── CUSTOM CURSOR ─────────────────── */
@@ -173,7 +206,7 @@ body {
 }
 .cursor-ring {
   width: 32px; height: 32px;
-  border: 1px solid rgba(201,168,76,0.5);
+  border: 1px solid rgba(var(--accent-rgb), 0.5);
   border-radius: 50%;
   position: fixed; top: 0; left: 0;
   pointer-events: none; z-index: var(--z-cursor);
@@ -210,7 +243,7 @@ nav {
   transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
 }
 nav.scrolled {
-  background: rgba(12,12,14,0.9);
+  background: rgba(var(--bg-rgb), 0.92);
   backdrop-filter: blur(12px);
   border-color: var(--border);
   padding: 18px 60px;
@@ -226,10 +259,10 @@ nav.scrolled .nav-logo-img { height: 19px; }
 .nav-links a {
   font-family: var(--font-body);
   font-size: 12px; font-weight: 400; letter-spacing: 0.18em;
-  text-transform: uppercase; color: rgba(255,255,255,0.7);
+  text-transform: uppercase; color: rgba(var(--ink-rgb), 0.72);
   text-decoration: none; transition: color 0.3s; white-space: nowrap;
 }
-.nav-links a:hover { color: #fff; }
+.nav-links a:hover { color: var(--ink); }
 .nav-links a.active { color: var(--gold); }
 .nav-right { display: flex; align-items: center; gap: 24px; margin-left: auto; }
 .nav-cta {
@@ -267,6 +300,9 @@ section { position: relative; z-index: 2; }
 }
 .btn-primary:hover { background: var(--gold-light); gap: 20px; }
 .btn-primary svg { width: 14px; height: 14px; }
+/* Article link styles must not repaint the filled button (was gold-dim on gold in v2) */
+.article-body .btn-primary,
+.article-body .btn-primary:hover { color: var(--on-accent); border-bottom: 0; }
 
 /* ─── FOOTER ────────────────────────── */
 footer {
@@ -312,7 +348,7 @@ footer {
   font-size: 10px; line-height: 1.7; font-weight: 300;
   color: var(--text-muted); opacity: 0.65;
   margin-top: 18px; padding-top: 16px;
-  border-top: 1px solid rgba(201,168,76,0.06);
+  border-top: 1px solid var(--rule-1);
 }
 .footer-links { display: flex; gap: 32px; list-style: none; }
 .footer-links a { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
@@ -415,7 +451,7 @@ summary:focus-visible,
 .nav-mobile-menu {
   display: none; position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(12,12,14,0.97);
+  background: rgba(var(--bg-rgb), 0.97);
   z-index: 999;
   flex-direction: column; align-items: center; justify-content: center;
   gap: 32px;
@@ -433,7 +469,7 @@ summary:focus-visible,
 .nav-mobile-menu .nav-mobile-lang {
   margin-top: 16px; font-size: 13px; color: var(--gold-dim);
   letter-spacing: 0.15em; padding-top: 24px;
-  border-top: 1px solid rgba(201,168,76,0.15);
+  border-top: 1px solid var(--border);
 }
 
 /* ─── RESPONSIVE (shared elements) ──── */
@@ -617,7 +653,7 @@ summary:focus-visible,
   content: "";
   position: absolute;
   inset: 2px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' fill='none' stroke='%230C0C0E' stroke-width='1.5' stroke-linecap='square'><path d='M2 5l2 2 4-4'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' fill='none' stroke='%23F6F1E6' stroke-width='1.5' stroke-linecap='square'><path d='M2 5l2 2 4-4'/></svg>");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -638,7 +674,7 @@ summary:focus-visible,
 /* ── Select — custom caret ──────────── */
 .sl-field select {
   appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' fill='none' stroke='%23C9A84C' stroke-width='1' stroke-linecap='square'><path d='M1 1l4 4 4-4'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' fill='none' stroke='%238E4426' stroke-width='1' stroke-linecap='square'><path d='M1 1l4 4 4-4'/></svg>");
   background-repeat: no-repeat;
   background-position: right 0 center;
   padding-right: 24px;
@@ -677,7 +713,7 @@ summary:focus-visible,
 }
 
 .sl-modal::backdrop {
-  background: rgba(12,12,14,0.88);
+  background: rgba(29,26,22,0.6);
   backdrop-filter: blur(4px);
   /* ::backdrop cannot inherit CSS custom properties — hardcode easing + duration */
   animation: sl-backdrop-enter 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -710,7 +746,7 @@ summary:focus-visible,
 .sl-modal[data-mode="image"] .sl-overlay-close {
   position: absolute;
   top: var(--s-2); right: var(--s-2);
-  background: rgba(12,12,14,0.7);
+  background: rgba(var(--bg-rgb), 0.8);
 }
 
 /* ── Content mode ────────────────────── */
@@ -742,7 +778,7 @@ summary:focus-visible,
 
 .sl-drawer-backdrop {
   position: fixed; inset: 0;
-  background: rgba(12,12,14,0.60);
+  background: rgba(var(--ink-rgb), 0.45);
   z-index: var(--z-overlay);
   opacity: 0; pointer-events: none;
   transition: opacity var(--dur-2) var(--ease-out);

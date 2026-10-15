@@ -46,9 +46,9 @@
     position: absolute; inset: 0;
     background: linear-gradient(
       160deg,
-      rgba(12,12,14,0.88) 0%,
-      rgba(12,12,14,0.60) 50%,
-      rgba(12,12,14,0.30) 100%
+      rgba(var(--bg-rgb),0.88) 0%,
+      rgba(var(--bg-rgb),0.60) 50%,
+      rgba(var(--bg-rgb),0.30) 100%
     );
     z-index: 1;
     pointer-events: none;
@@ -134,7 +134,7 @@
     top: 40px; right: 40px;
     font-family: 'Cormorant Garamond', serif;
     font-size: 120px; font-weight: 300;
-    color: rgba(201,168,76,0.06);
+    color: rgba(var(--accent-rgb),0.06);
     line-height: 1;
     letter-spacing: -0.04em;
     pointer-events: none;

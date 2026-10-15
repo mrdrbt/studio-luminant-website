@@ -42,12 +42,12 @@
   .article-body h2 em { font-style: italic; color: var(--gold); }
   .article-body p { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--text-secondary); margin-bottom: 20px; }
   .article-body strong { font-weight: 500; color: var(--text-primary); }
-  .article-body a { color: var(--gold-dim); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.25); transition: color 0.3s, border-color 0.3s; }
+  .article-body a { color: var(--gold-dim); text-decoration: none; border-bottom: 1px solid rgba(var(--accent-rgb),0.25); transition: color 0.3s, border-color 0.3s; }
   .article-body a:hover { color: var(--gold); border-color: var(--gold); }
   .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 36px 0; }
   .compare-card { background: var(--surface); padding: 28px 24px; }
   .compare-card-header { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-  .compare-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(201,168,76,0.06); font-size: 13px; gap: 16px; }
+  .compare-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(var(--accent-rgb),0.06); font-size: 13px; gap: 16px; }
   .compare-row:last-child { border-bottom: none; }
   .compare-label { color: var(--text-muted); }
   .compare-value { color: var(--text-primary); font-weight: 400; text-align: right; }
