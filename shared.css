@@ -243,7 +243,7 @@ nav {
   transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
 }
 nav.scrolled {
-  background: rgba(var(--bg-rgb), 0.92);
+  background: var(--bg);   /* opaque: a translucent bar showed blurred page text through it */
   backdrop-filter: blur(12px);
   border-color: var(--border);
   padding: 18px 60px;
@@ -346,7 +346,7 @@ footer {
 .footer-copy { font-size: 11px; color: var(--text-muted); font-weight: 300; }
 .footer-legal-entity {
   font-size: 10px; line-height: 1.7; font-weight: 300;
-  color: var(--text-muted); opacity: 0.65;
+  color: var(--text-muted);
   margin-top: 18px; padding-top: 16px;
   border-top: 1px solid var(--rule-1);
 }
@@ -509,7 +509,7 @@ summary:focus-visible,
   .footer-inner { padding: 0 32px; }
   .footer-links { flex-wrap: wrap; justify-content: center; gap: 4px 20px; }
   .footer-links a { min-height: 48px; display: flex; align-items: center; padding: 12px 8px; }
-  .footer-social { justify-content: center; gap: 8px; }
+  .footer-social { justify-content: flex-start; gap: 8px; margin-left: -14px; }  /* 48px targets; icon edge on the text edge */
   .footer-social a { min-height: 48px; min-width: 48px; }
   .footer-cta-block a { min-height: 48px; display: inline-flex; align-items: center; }
 }

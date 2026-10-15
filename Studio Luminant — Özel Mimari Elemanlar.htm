@@ -110,6 +110,7 @@
     transition: color 0.3s, border-color 0.3s;
   }
   .btn-ghost:hover { color: var(--accent); border-color: var(--accent); }
+  .btn-ghost svg { width: 14px; height: 14px; flex-shrink: 0; }
 
   /* phones and portrait screens: panel on top, copy below it in the flow */
   @media (orientation: portrait), (max-width: 820px) {
@@ -201,8 +202,8 @@
   }
 
   .strategy-img {
-    width: 100%; aspect-ratio: 4/5;
-    object-fit: cover; display: block;
+    width: 100%; aspect-ratio: 4/5; max-height: min(640px, 78svh);
+    object-fit: cover; object-position: 50% 22%; display: block;
     transition: transform 0.7s cubic-bezier(.25,.46,.45,.94);
   }
   .strategy-image-frame:hover .strategy-img { transform: scale(1.03); }
@@ -217,9 +218,9 @@
   .process-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px;
+    gap: 72px;
     align-items: end;
-    margin-bottom: 100px;
+    margin-bottom: 64px;
   }
 
   .process-header .section-headline {
@@ -244,14 +245,6 @@
     align-self: end;
   }
 
-  .process-header-img {
-    width: 100%;
-    max-height: 280px;
-    object-fit: cover;
-    display: block;
-    border: 1px solid var(--border);
-  }
-
   .process-steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -270,13 +263,10 @@
   .process-step:hover { background: var(--surface); }
 
   .step-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 80px; font-weight: 300;
-    color: rgba(var(--accent-rgb),0.08);
-    line-height: 1;
-    margin-bottom: 32px;
     display: block;
-    letter-spacing: -0.04em;
+    font-size: 11px; letter-spacing: 0.2em;
+    color: var(--accent);
+    margin-bottom: 16px;
   }
 
   .step-title {
@@ -346,7 +336,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2px;
-    margin-bottom: 80px;
   }
 
   .material-card {
@@ -612,7 +601,7 @@
     .uds-layout { grid-template-columns: 1fr; gap: 48px; }
     .uds-visual { max-width: 100%; justify-self: start; }
     .expertise-layout { grid-template-columns: 1fr; gap: 48px; }
-    .expertise-skills { grid-template-columns: repeat(3, 1fr); }
+    .expertise-skills { grid-template-columns: repeat(2, 1fr); }
     .portfolio-grid {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 260px 260px 260px;
@@ -623,6 +612,7 @@
   }
   @media (max-width: 600px) {
     .expertise-skills { grid-template-columns: 1fr 1fr; }
+    .strategy-img { max-height: 60svh; }
   }
 
   /* ─── FINAL CTA ─────────────────────── */
@@ -664,7 +654,7 @@
     border-bottom: 1px solid var(--border);
   }
   .proof-strip {
-    display: grid; grid-template-columns: repeat(4, 1fr);
+    display: grid; grid-template-columns: repeat(3, 1fr);
     list-style: none; margin: 0; padding: 0;
   }
   .proof-strip li {
@@ -788,6 +778,21 @@
     #faq { padding: 100px 0; }
     .faq-item summary { font-size: 19px; }
   }
+
+  /* ─── SECTION RHYTHM ────────────────── */
+  /* One vertical padding for every content band, so section boundaries carry no empty bands.
+     Outranks the per-section paddings above and in the inline <style> blocks below. */
+  #main > section:is(#strategy, #process, #studio, #materials, #sample-box, #design-system-teaser,
+                     #audiences, #expertise, #faq, #start-ladder, #journal-latest, #start) {
+    padding-block: var(--s-9);
+  }
+  #studio .materials-header { margin-bottom: 0; }
+  @media (max-width: 600px) {
+    #main > section:is(#strategy, #process, #studio, #materials, #sample-box, #design-system-teaser,
+                       #audiences, #expertise, #faq, #start-ladder, #journal-latest, #start) {
+      padding-block: var(--s-8);
+    }
+  }
 </style>
 <!-- Google Analytics -->
 <!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
@@ -862,10 +867,10 @@
     },
     {
       "@type": "Question",
-      "name": "Paneller ne kadar ağır — özel taşıyıcı gerekir mi?",
+      "name": "Paneller ne kadar ağır — özel bir taşıyıcı sistem gerekir mi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ağırlık, malzemeye ve panel kalınlığına göre değişir; çoğu uygulama standart montaj sistemleriyle çözülür. Yapısal veriler şartname paketinde yer alır."
+        "text": "Ağırlık, malzemeye ve panel kalınlığına göre değişir; çoğu uygulama standart montaj sistemleriyle çözülür. Statik veriler şartname dokümanlarında yer alır."
       }
     },
     {
@@ -873,7 +878,7 @@
       "name": "Minimum proje büyüklüğü var mı?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tek bir özellikli duvardan tam kat kaplamasına kadar çalışıyoruz. Çok küçük işler için önce uygunluğu birlikte değerlendiriyoruz."
+        "text": "Tek bir vurgu duvarından bir katın tamamına kadar her ölçekte çalışıyoruz. Çok küçük işlerde, işin uygun olup olmadığını önce birlikte değerlendiriyoruz."
       }
     },
     {
@@ -886,10 +891,10 @@
     },
     {
       "@type": "Question",
-      "name": "Şartname ve montaj ne kadar farklı?",
+      "name": "GRC/GRG'ye göre şartnamesi ve montajı ne kadar farklı?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Çok değil. Ofisiniz hâlihazırda GRC veya GRG kullanıyorsa, Lumina PMAG™'i de aynı şekilde şartnameye yazarsınız; montaj sistemleri ve altyapı detayları benzerdir. Şartname rehberimiz, ihale dosyanıza doğrudan ekleyebileceğiniz madde ve montaj detaylarını verir."
+        "text": "Çok değil. Ofisiniz hâlihazırda GRC veya GRG kullanıyorsa, Lumina PMAG™'i de aynı şekilde şartnameye yazarsınız; montaj sistemleri ve alt konstrüksiyon detayları benzerdir. Şartname rehberimiz, ihale dosyanıza doğrudan ekleyebileceğiniz şartname maddelerini ve montaj detaylarını verir."
       }
     },
     {
@@ -897,7 +902,7 @@
       "name": "Montajı siz mi yapıyorsunuz?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Her panel, müteahhidiniz için montaj çizimleri ve detaylarıyla gelir. Sahada bize ihtiyaç duyduğunuzda montajı proje bazında ayrıca fiyatlandırırız. Paneller varsayılan olarak EXW Sapanca teslim edilir."
+        "text": "Her panelle birlikte müteahhidiniz için montaj çizimleri ve detayları teslim edilir. Sahada bize ihtiyaç duyduğunuzda montajı her proje için ayrıca fiyatlandırırız. Paneller, aksi belirtilmedikçe EXW Sapanca teslim edilir."
       }
     }
   ]
@@ -1010,24 +1015,13 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <div>
         <div class="eyebrow reveal">Nasıl Çalışıyoruz</div>
         <h2 class="section-headline reveal">
-          Brief'ten Montaja,<br><em>Tek Çatı Altında.</em>
+          Eskizden Sevkiyata,<br><em>Tek Çatı Altında.</em>
         </h2>
       </div>
       <div class="process-header-right reveal">
         <p class="process-header-desc">
           Tasarım, kalıp, döküm ve finish tek bir atölyede tek bir hat üzerinde yürür. Bu kurgu, tasarım çizimden döküme giderken el değiştirmesin diye seçilmiştir.
         </p>
-        <picture>
-              <source type="image/webp"
-                  srcset="images/studio-luminant-production-process-infographic-tr-400w.webp 400w,
-                  images/studio-luminant-production-process-infographic-tr-800w.webp 800w,
-                  images/studio-luminant-production-process-infographic-tr-1600w.webp 1600w,
-                  images/studio-luminant-production-process-infographic-tr.webp 2000w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="images/studio-luminant-production-process-infographic-tr.webp"
-                   alt="Beş adımlı üretim süreci şeması: tasarım, modelleme, kalıplama, döküm, finish" class="process-header-img" width="2816" height="1536"
-                   loading="lazy" decoding="async">
-            </picture>
       </div>
     </div>
 
@@ -1239,7 +1233,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <h3 class="material-title">Lumina PUCOMP™</h3>
         <div class="material-subtitle">Kavisler, Dış Mekânlar &amp; Islak Alanlar</div>
         <ul class="material-bullets">
-          <li>Dış mekân &amp; ıslak alan onaylı</li>
+          <li>Dış mekân ve ıslak hacimlere uygun</li>
           <li>İnce profiller, 8–25 mm</li>
           <li>En derin dokuyu tutar</li>
         </ul>
@@ -1252,6 +1246,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <section id="sample-box" aria-labelledby="sbx-title">
   <style>
   #sample-box{background:var(--obsidian);border-top:1px solid var(--border);padding:var(--s-10) 0;position:relative;z-index:2;}
+  /* an open drawer (and its scrim) must sit above the sticky nav, or the close button hides under it */
+  #sample-box:has(.sbx-drawer.show){z-index:calc(var(--z-nav) + 1);}
   #sample-box .sbx-head{max-width:720px;margin:0 auto var(--s-7);text-align:center;}
   #sample-box .sbx-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.02;color:var(--text-primary);margin:.3em 0 .5em;}
   #sample-box .sbx-title em{font-style:italic;color:var(--gold);}
@@ -1299,26 +1295,19 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     transition:opacity .4s var(--ease-out);z-index:10002;pointer-events:none;}
   #sample-box .sbx-scrim.show{opacity:1;pointer-events:auto;}
   #sample-box .sbx-drawer{position:fixed;top:0;right:0;height:100vh;width:min(440px,92vw);background:var(--deep);
-    border-left:1px solid var(--border);box-shadow:var(--shadow-2);z-index:10003;
+    border-left:1px solid var(--border);z-index:10003;
     transform:translateX(100%);transition:transform .55s var(--ease-out);overflow-y:auto;
     padding:64px 38px 40px;display:flex;flex-direction:column;}
-  #sample-box .sbx-drawer.show{transform:translateX(0);}
+  #sample-box .sbx-drawer.show{transform:translateX(0);box-shadow:var(--shadow-2);}
   #sample-box .sbx-close{position:absolute;top:20px;right:22px;width:38px;height:38px;background:transparent;
     border:1px solid var(--border);color:var(--text-secondary);font-size:1.2rem;line-height:1;cursor:pointer;transition:all .25s var(--ease-out);}
   #sample-box .sbx-close:hover,#sample-box .sbx-close:focus-visible{color:var(--gold);border-color:var(--gold);outline:none;}
   #sample-box .sbx-d-index{font-family:var(--font-display);font-style:italic;font-size:1.4rem;color:var(--gold);opacity:.8;margin-bottom:6px;}
   #sample-box .sbx-d-eyebrow{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
   #sample-box .sbx-d-name{font-family:var(--font-display);font-weight:300;font-size:2.6rem;line-height:1;color:var(--text-primary);margin-bottom:18px;}
-  #sample-box .sbx-d-meta{display:grid;grid-template-columns:auto 1fr;gap:5px 16px;margin-bottom:16px;}
-  #sample-box .sbx-d-meta dt{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);padding-top:3px;}
-  #sample-box .sbx-d-meta dd{font-size:.92rem;color:var(--text-primary);line-height:1.4;}
   #sample-box .sbx-d-rule{height:1px;background:var(--border);margin:0 0 16px;}
   #sample-box .sbx-d-desc{font-size:.92rem;line-height:1.72;color:var(--text-secondary);margin-bottom:16px;}
-  #sample-box .sbx-d-specs{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:7px;}
-  #sample-box .sbx-d-specs li{position:relative;padding-left:16px;font-size:.82rem;line-height:1.45;color:var(--text-secondary);}
-  #sample-box .sbx-d-specs li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;background:var(--gold);transform:rotate(45deg);}
   #sample-box .sbx-d-note{font-size:.8rem;line-height:1.55;color:var(--gold-light);background:var(--border);border-left:2px solid var(--gold);padding:10px 12px;margin-bottom:16px;}
-  #sample-box .sbx-d-note:empty{display:none;}
   #sample-box .sbx-d-nav{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:20px;border-top:1px solid var(--border-mute);}
   #sample-box .sbx-d-nav button{background:transparent;border:1px solid var(--border);color:var(--text-secondary);width:42px;height:42px;font-size:1.1rem;cursor:pointer;transition:all .25s var(--ease-out);}
   #sample-box .sbx-d-nav button:hover,#sample-box .sbx-d-nav button:focus-visible{color:var(--gold);border-color:var(--gold);outline:none;}
@@ -1326,7 +1315,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
   @media (max-width:600px){
     #sample-box .sbx-hotspots{display:none;}
-    #sample-box .sbx-chips{display:flex;}
+    #sample-box .sbx-chips{display:grid;grid-template-columns:1fr 1fr;}
+    #sample-box .sbx-chip{width:100%;justify-content:center;}
     #sample-box .sbx-cue{font-size:.62rem;}
     #sample-box .sbx-drawer{top:auto;bottom:0;right:0;width:100%;height:auto;max-height:86vh;
       border-left:none;border-top:1px solid var(--border);transform:translateY(100%);padding:48px 24px 32px;}
@@ -1343,32 +1333,32 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="sbx-head">
       <div class="eyebrow reveal">Yüzey Numune Kutusu</div>
       <h2 id="sbx-title" class="sbx-title reveal">Görün.<br><em>Hissedin.</em></h2>
-      <p class="sbx-intro reveal">Her iki malzemede dört yüzey — metalik, doğal mat, gövdeye işlenmiş renk ve soğuk döküm metal — tek bir kutuda. Bir paneli şartnameye bağlamadan önce, bir rölyefin duvarda nasıl okunacağını değerlendirmenin en güvenilir yolu.</p>
+      <p class="sbx-intro reveal">Kutuda, birkaç rölyef kalıbından Lumina PMAG™ ve Lumina PUCOMP™ ile dökülmüş, artizan finish uygulanmış numuneler yer alır; kutuyu her projeye özel hazırlıyoruz. Rölyefi, yüzeyi ve rengi kendi mekânınızın ışığında, paneli şartnameye yazmadan önce değerlendirin.</p>
     </div>
 
     <div class="sbx-stage reveal" data-state="closed">
       <div class="sbx-box">
         <picture class="sbx-open">
           <source type="image/webp" srcset="images/studio-luminant-finish-sample-box-angled-open-800w.webp 800w, images/studio-luminant-finish-sample-box-angled-open-1600w.webp 1600w" sizes="(max-width:1024px) 100vw, 920px">
-          <img src="images/studio-luminant-finish-sample-box-angled-open.jpg" alt="Açılı duran siyah numune kutusu, yan yana dört yüzey örneği" width="1600" height="1073" loading="lazy" decoding="async">
+          <img src="images/studio-luminant-finish-sample-box-angled-open.jpg" alt="Açılı duran siyah numune kutusu, yan yana dört rölyef numunesi" width="1600" height="1073" loading="lazy" decoding="async">
         </picture>
         <picture class="sbx-closed" aria-hidden="true">
           <source type="image/webp" srcset="images/studio-luminant-finish-sample-box-angled-closed-800w.webp 800w, images/studio-luminant-finish-sample-box-angled-closed-1600w.webp 1600w" sizes="(max-width:1024px) 100vw, 920px">
           <img src="images/studio-luminant-finish-sample-box-angled-closed.jpg" alt="" width="1600" height="1073" loading="lazy" decoding="async">
         </picture>
         <div class="sbx-hotspots">
-          <button type="button" class="sbx-dot" data-i="0" style="left:28%;top:43%" aria-label="FORGE — Metalik artisan yüzey">1</button>
-          <button type="button" class="sbx-dot" data-i="1" style="left:66%;top:40%" aria-label="LOOM — Gövdeye işlenmiş renk">2</button>
-          <button type="button" class="sbx-dot" data-i="2" style="left:54%;top:60%" aria-label="QUARRY — Şeffaf mat artisan yüzey">3</button>
-          <button type="button" class="sbx-dot" data-i="3" style="left:42%;top:26%" aria-label="PEWTER — Soğuk döküm kalay">4</button>
+          <button type="button" class="sbx-dot" data-i="0" style="left:28%;top:43%" aria-label="Numune 1: Çekiç İzi">1</button>
+          <button type="button" class="sbx-dot" data-i="1" style="left:66%;top:40%" aria-label="Numune 2: Hasır Örgü">2</button>
+          <button type="button" class="sbx-dot" data-i="2" style="left:54%;top:60%" aria-label="Numune 3: Pütürlü Doku">3</button>
+          <button type="button" class="sbx-dot" data-i="3" style="left:42%;top:26%" aria-label="Numune 4: Kamış">4</button>
         </div>
         <span class="sbx-cue">Açmak için kaydırın</span>
       </div>
       <ul class="sbx-chips" role="list">
-        <li><button type="button" class="sbx-chip" data-i="0"><span class="n">01</span> FORGE</button></li>
-        <li><button type="button" class="sbx-chip" data-i="1"><span class="n">02</span> LOOM</button></li>
-        <li><button type="button" class="sbx-chip" data-i="2"><span class="n">03</span> QUARRY</button></li>
-        <li><button type="button" class="sbx-chip" data-i="3"><span class="n">04</span> PEWTER</button></li>
+        <li><button type="button" class="sbx-chip" data-i="0"><span class="n">01</span> Çekiç İzi</button></li>
+        <li><button type="button" class="sbx-chip" data-i="1"><span class="n">02</span> Hasır Örgü</button></li>
+        <li><button type="button" class="sbx-chip" data-i="2"><span class="n">03</span> Pütürlü Doku</button></li>
+        <li><button type="button" class="sbx-chip" data-i="3"><span class="n">04</span> Kamış</button></li>
       </ul>
     </div>
 
@@ -1384,20 +1374,15 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   <aside class="sbx-drawer" role="dialog" aria-modal="true" aria-labelledby="sbx-d-name" hidden>
     <button type="button" class="sbx-close" data-sbx-close aria-label="Kapat">&times;</button>
     <div class="sbx-d-index"></div>
-    <div class="sbx-d-eyebrow"></div>
+    <div class="sbx-d-eyebrow">Rölyef numunesi</div>
     <h3 class="sbx-d-name" id="sbx-d-name"></h3>
-    <dl class="sbx-d-meta">
-      <dt>Malzeme</dt><dd class="sbx-d-material"></dd>
-      <dt>Yüzey</dt><dd class="sbx-d-finish"></dd>
-    </dl>
     <div class="sbx-d-rule"></div>
     <p class="sbx-d-desc"></p>
-    <ul class="sbx-d-specs"></ul>
-    <div class="sbx-d-note"></div>
+    <p class="sbx-d-note">Malzeme, finish ve renk projenize göre seçilir.</p>
     <div class="sbx-d-nav">
-      <button type="button" class="sbx-prev" aria-label="Önceki yüzey">&lsaquo;</button>
+      <button type="button" class="sbx-prev" aria-label="Önceki numune">&lsaquo;</button>
       <span class="sbx-d-count"></span>
-      <button type="button" class="sbx-next" aria-label="Sonraki yüzey">&rsaquo;</button>
+      <button type="button" class="sbx-next" aria-label="Sonraki numune">&rsaquo;</button>
     </div>
   </aside>
 
@@ -1406,19 +1391,14 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     var sec=document.getElementById('sample-box');
     if(!sec)return;
     var FIN=[
-      {idx:'01',name:'FORGE',eyebrow:'Çekiçlenmiş rölyef',material:'Lumina PMAG™',finish:'Metalik artisan yüzey · antik altın',
-       desc:'Dövme pirinci andıran, elle çekiçlenmiş bir doku — metal değil, döküm. Metalik, seramik pürüzsüzlüğündeki gövdeye uygulanan bir artisan yüzeydir; rölyef keskin, ağırlık düşük kalır.',
-       specs:['Duvar panelleri, vurgu yüzeyleri, denizlikler','Neme dayanıklı · seramik pürüzsüzlüğünde gövde']},
-      {idx:'02',name:'LOOM',eyebrow:'Hasır örgü rölyef',material:'Lumina PUCOMP™',finish:'Renk gövdeye işlenmiş · kütlesel renk',
-       desc:'Renk yüzeyde değil, gövdenin içindedir — bir kenar çatlağı ya da çizik asla altta farklı bir malzeme açığa çıkarmaz. PUCOMP serideki en yüksek doku çözünürlüğünü taşır; örgünün kesişimleri keskin kalır.',
-       specs:['Kolon kaplamaları, vurgu duvarları, resepsiyon bankoları','Dış mekân & ıslak hacim uygun','İnce profil 8–25 mm · detay-kritik elemanlar']},
-      {idx:'03',name:'QUARRY',eyebrow:'Pütürlü rölyef',material:'Lumina PMAG™ · doğal renk',finish:'Şeffaf mat artisan yüzey · düşük parlaklık',
-       desc:'Malzemenin kendisi — PMAG’ın kendi sıcak, kırık-beyaz tonu, onu gizlemeden koruyan şeffaf mat bir yüzeyle. İnce portakal-kabuğu dokusu yandan gelen ışıkta belirir, düz ışıkta sakin durur.',
-       specs:['Duvar panelleri, tavanlar, denizlikler','Seramik pürüzsüzlüğünde gövde · neme dayanıklı']},
-      {idx:'04',name:'PEWTER',eyebrow:'Kamış rölyef',material:'Soğuk döküm kalay',finish:'Şeffafsız · yaşayan patina',
-       desc:'Gerçek metal, soğuk döküm: reçineyle bağlanmış kalay tozu, metal yüzeye kadar parlatılmış. Ton zamanla koyulaşır ve yaşayan bir patina geliştirir.',
-       specs:['Vurgu yüzeyleri, aksanlar, detay elemanları','Soğuk döküm metal — bronz, bakır, pirinç, alüminyum da'],
-       note:'Şeffafsız sunulur — yaşlanma bilinçlidir. Sabit bir yüzey gerektiğinde, döküm-anı tonu koruyan kapatmalı seçenek mevcuttur.'}
+      {idx:'01',name:'Çekiç İzi',
+       desc:'Çekiçle dövülmüş izlenimi veren, sığ ve birbirine geçen çukurlar. Yandan vuran ışıkta her çukur kendi küçük gölgesini düşürür; cepheden gelen ışıkta yüzey sakinleşir.'},
+      {idx:'02',name:'Hasır Örgü',
+       desc:'Birbirinin altından ve üstünden geçen yassı şeritler. Bir şeridin ötekinin altına daldığı her kesişimde rölyef bir kademe iner.'},
+      {idx:'03',name:'Pütürlü Doku',
+       desc:'Portakal kabuğunu andıran ince, düzensiz bir doku. Yandan gelen ışığı yakalar; cepheden gelen ışıkta neredeyse pürüzsüz görünür.'},
+      {idx:'04',name:'Kamış',
+       desc:'Yan yana dizilmiş, yuvarlak sırtlı ince dikey kamışlar. Yüzeyi yalayan ışık, sıra sıra ince paralel gölgeler çizer.'}
     ];
     var COUNT_SEP=' / ';
     var stage=sec.querySelector('.sbx-stage'),box=sec.querySelector('.sbx-box');
@@ -1449,13 +1429,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     function fill(i){
       cur=(i+FIN.length)%FIN.length;var f=FIN[cur];
       drawer.querySelector('.sbx-d-index').textContent=f.idx;
-      drawer.querySelector('.sbx-d-eyebrow').textContent=f.eyebrow;
       drawer.querySelector('.sbx-d-name').textContent=f.name;
-      drawer.querySelector('.sbx-d-material').textContent=f.material;
-      drawer.querySelector('.sbx-d-finish').textContent=f.finish;
       drawer.querySelector('.sbx-d-desc').textContent=f.desc;
-      drawer.querySelector('.sbx-d-specs').innerHTML=f.specs.map(function(s){return '<li>'+s+'</li>';}).join('');
-      drawer.querySelector('.sbx-d-note').textContent=f.note||'';
       drawer.querySelector('.sbx-d-count').textContent=f.idx+COUNT_SEP+('0'+FIN.length).slice(-2);
     }
     function open(i,trigger){
@@ -1581,15 +1556,12 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <div class="expertise-skills reveal">
         <div class="skill-tag">Alçı Döküm (PMAG)</div>
         <div class="skill-tag">Kompozit Döküm (PUCOMP)</div>
-        <div class="skill-tag">Cam Elyaf Takviyeli Beton</div>
-        <div class="skill-tag">Soğuk Döküm Metal</div>
-        <div class="skill-tag">Yapay Zeka Destekli Tasarım</div>
-        <div class="skill-tag">Özel Desen Tasarımı</div>
+        <div class="skill-tag">Vakum Döküm</div>
+        <div class="skill-tag">Büyük Ebatlı Panel Dökümü</div>
+        <div class="skill-tag">3D Baskıyla Ana Model Üretimi</div>
         <div class="skill-tag">Silikon Kalıp Üretimi</div>
-        <div class="skill-tag">3D Baskı Kalıp Teknolojisi</div>
         <div class="skill-tag">Artizan <span lang="en">Finish</span></div>
-        <div class="skill-tag">Reaktif Asit Boyama</div>
-        <div class="skill-tag">Kimyasal Patina</div>
+        <div class="skill-tag">Yapay Zeka Destekli Tasarım</div>
       </div>
     </div>
   </div>
@@ -1611,16 +1583,16 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         </div>
       </details>
       <details class="faq-item">
-        <summary>Paneller ne kadar ağır — özel taşıyıcı gerekir mi?</summary>
+        <summary>Paneller ne kadar ağır — özel bir taşıyıcı sistem gerekir mi?</summary>
         <div class="faq-answer">
-          <p>Ağırlık, malzemeye ve panel kalınlığına göre değişir; çoğu uygulama standart montaj sistemleriyle çözülür. Yapısal veriler şartname paketinde yer alır.</p>
+          <p>Ağırlık, malzemeye ve panel kalınlığına göre değişir; çoğu uygulama standart montaj sistemleriyle çözülür. Statik veriler şartname dokümanlarında yer alır.</p>
           <a href="kaynaklar-agirlik-yapisal.htm" class="faq-link">Ağırlık ve Yapısal Veriler →</a>
         </div>
       </details>
       <details class="faq-item">
         <summary>Minimum proje büyüklüğü var mı?</summary>
         <div class="faq-answer">
-          <p>Tek bir özellikli duvardan tam kat kaplamasına kadar çalışıyoruz. Çok küçük işler için önce uygunluğu birlikte değerlendiriyoruz.</p>
+          <p>Tek bir vurgu duvarından bir katın tamamına kadar her ölçekte çalışıyoruz. Çok küçük işlerde, işin uygun olup olmadığını önce birlikte değerlendiriyoruz.</p>
         </div>
       </details>
       <details class="faq-item">
@@ -1631,16 +1603,16 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         </div>
       </details>
       <details class="faq-item">
-        <summary>Şartname ve montaj ne kadar farklı?</summary>
+        <summary>GRC/GRG'ye göre şartnamesi ve montajı ne kadar farklı?</summary>
         <div class="faq-answer">
-          <p>Çok değil. Ofisiniz hâlihazırda GRC veya GRG kullanıyorsa, Lumina PMAG™'i de aynı şekilde şartnameye yazarsınız; montaj sistemleri ve altyapı detayları benzerdir. Şartname rehberimiz, ihale dosyanıza doğrudan ekleyebileceğiniz madde ve montaj detaylarını verir.</p>
+          <p>Çok değil. Ofisiniz hâlihazırda GRC veya GRG kullanıyorsa, Lumina PMAG™'i de aynı şekilde şartnameye yazarsınız; montaj sistemleri ve alt konstrüksiyon detayları benzerdir. Şartname rehberimiz, ihale dosyanıza doğrudan ekleyebileceğiniz şartname maddelerini ve montaj detaylarını verir.</p>
           <a href="kaynaklar-sartname-rehberi.htm" class="faq-link">Şartname Rehberi →</a>
         </div>
       </details>
       <details class="faq-item">
         <summary>Montajı siz mi yapıyorsunuz?</summary>
         <div class="faq-answer">
-          <p>Her panel, müteahhidiniz için montaj çizimleri ve detaylarıyla gelir. Sahada bize ihtiyaç duyduğunuzda montajı proje bazında ayrıca fiyatlandırırız. Paneller varsayılan olarak EXW Sapanca teslim edilir.</p>
+          <p>Her panelle birlikte müteahhidiniz için montaj çizimleri ve detayları teslim edilir. Sahada bize ihtiyaç duyduğunuzda montajı her proje için ayrıca fiyatlandırırız. Paneller, aksi belirtilmedikçe EXW Sapanca teslim edilir.</p>
         </div>
       </details>
     </div>
@@ -1660,12 +1632,12 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div class="audience-num">01</div>
         <h3 class="audience-title">Tasarım dosyasını indirin</h3>
         <p class="audience-desc">Lookbook ve stüdyo sunumu tek PDF'te; yüzey şeması ve şartname bilgisi de içinde. İş e-postanızı bırakın, indirme hemen başlar.</p>
-        <a href="tasarim-dosyasi.htm" class="faq-link">Dosyayı İndir →</a>
+        <a href="tasarim-dosyasi.htm" class="faq-link">Dosyayı İndirin →</a>
       </div>
       <div class="audience-card">
         <div class="audience-num">02</div>
         <h3 class="audience-title">Numune kutusunu isteyin</h3>
-        <p class="audience-desc">Her iki malzemede dört yüzey, elinizde. Bir paneli bağlamadan önce rölyefi değerlendirmenin en güvenilir yolu.</p>
+        <p class="audience-desc">İki malzemeden dökülmüş, artizan finish uygulanmış rölyef numunelerini elinizde inceleyin. Paneli şartnameye yazmadan önce rölyefi değerlendirmenin en güvenilir yolu.</p>
         <a href="iletisim.htm" class="faq-link">Numune İsteyin →</a>
       </div>
       <div class="audience-card">
@@ -1711,11 +1683,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div class="jc-title">Mimari Rölyef Panel Nedir?</div>
         <div class="jc-desc">Rölyef panelin tanımı, kullanım alanları, malzemesi ve sipariş süreci.</div>
       </a>
-      <a class="journal-card" href="anadolu-motifleri-cagdas-rolyef.htm">
-        <div class="jc-eyebrow">Miras &amp; Tasarım</div>
-        <div class="jc-title">Anadolu Motifleriyle Özel Üretim Duvar Panelleri</div>
-        <div class="jc-desc">Çintemani, İznik ve Selçuklu geometrisini ışıkla okunan bir döküm derinliği olarak yorumlamak.</div>
-      </a>
     </div>
     <div class="journal-more">
       <a href="makaleler.htm" class="faq-link">Tüm Makaleler →</a>
@@ -1734,13 +1701,13 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       </p>
       <div class="start-ctas">
         <a href="iletisim.htm" class="btn-primary">
-          Proje Başlat
+          Proje Başlatın
           <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
           </svg>
         </a>
         <a href="iletisim.htm" class="btn-ghost">
-          Numune Talep Et
+          Numune Talep Edin
           <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
           </svg>
