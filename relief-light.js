@@ -13,9 +13,12 @@
  *            rising then falling (dawn → noon → dusk). An element already on screen at load (a hero)
  *            starts at the poster's light and only sets as the page scrolls, so nothing jumps.
  *   auto     pointer on a fine hover pointer, scroll everywhere else (default)
+ * data-scroll-for="<selector>" measures the scroll progress on that element instead: a relief in a sticky
+ * stage does not move, so it takes its sun from the section scrolling past it.
  *
  * Never runs under prefers-reduced-motion or without WebGL2 (the poster stays). Sleeps when settled,
- * off-screen or in a hidden tab. Exposes window.ReliefLight.mount(el) and el.reliefLight (state, for QA).
+ * off-screen or in a hidden tab. Exposes window.ReliefLight.mount(el) and el.reliefLight (state, for QA);
+ * el.reliefLight.hold(true) also sleeps it while a page hides it some other way (a crossfaded layer).
  */
 (function () {
   'use strict';
@@ -146,6 +149,7 @@
     var poster = el.querySelector('.relief-light__poster');
     if (!poster) return null;
     var input = el.getAttribute('data-input') || 'auto';
+    var scrollSel = el.getAttribute('data-scroll-for'), scrollEl = (scrollSel && document.querySelector(scrollSel)) || el;
     var mode = input === 'auto' ? (FINE ? 'pointer' : 'scroll') : input;
 
     var canvas = document.createElement('canvas');
@@ -160,8 +164,9 @@
       light: { az: 125, el: 16, vAz: 0, vEl: 0, tAz: 125, tEl: 16 }
     };
     el.reliefLight = state;
+    state.hold = function (h) { held = !!h; if (!held) wake(); };
 
-    var M, prog, running = false, visible = false, dirty = true, lastT = 0, lastPointer = -Infinity;
+    var M, prog, running = false, visible = false, held = false, dirty = true, lastT = 0, lastPointer = -Infinity;
     var idleT0 = 0, azPhase = 0, elPhase = 0, idleTimer = 0;
     var drawn = { az: NaN, el: NaN };
     var panel = { x: 0, y: 0, w: 1, h: 1 };
@@ -229,7 +234,7 @@
     }
 
     function scrollProgress() {
-      var r = el.getBoundingClientRect(), vh = window.innerHeight;
+      var r = scrollEl.getBoundingClientRect(), vh = window.innerHeight;
       return clamp01((vh - r.top) / (vh + r.height));
     }
 
@@ -268,7 +273,7 @@
     }
 
     function tick(now) {
-      if (!visible || !state.ready) { running = false; return; }
+      if (!visible || held || !state.ready) { running = false; return; }
       var dt = Math.min(0.05, Math.max(0, (now - lastT) / 1000));
       lastT = now;
       var L = state.light;
@@ -285,7 +290,7 @@
     }
 
     function wake() {
-      if (running || !visible || !state.ready) return;
+      if (running || !visible || held || !state.ready) return;
       running = true;
       lastT = performance.now();
       requestAnimationFrame(tick);

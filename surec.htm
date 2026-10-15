@@ -3,262 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nasıl Çalışırız — Studio Luminant</title>
-<meta name="description" content="Tasarım brifingi'nden montaja — Studio Luminant'ın özel mimari elemanlar için üç aşamalı süreci. Dijital modelleme, hassas döküm ve artizan finish.">
+<title>Nasıl Çalışırız: Çizimden Döküme | Studio Luminant</title>
+<meta name="description" content="Çizimden dökme rölyef panele: derinlik haritası, yalama ışıkta onay, ana model, silikon kalıp, döküm ve artizan finish. Hepsi Sapanca&#x27;daki atölyemizde.">
 <link rel="canonical" href="https://studioluminant.com.tr/surec.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/surec.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/process.htm">
   <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/surec.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
-<meta property="og:title" content="Nasıl Çalışırız — Studio Luminant">
-<meta property="og:description" content="Tasarım brifingi'nden montaja — Studio Luminant'ın özel mimari elemanlar için üç aşamalı süreci. Dijital modelleme, hassas döküm ve artizan finish.">
+<meta property="og:title" content="Nasıl Çalışırız: Çizimden Döküme | Studio Luminant">
+<meta property="og:description" content="Çizimden dökme rölyef panele: derinlik haritası, yalama ışıkta onay, ana model, silikon kalıp, döküm ve artizan finish. Hepsi Sapanca&#x27;daki atölyemizde.">
 <meta property="og:url" content="https://studioluminant.com.tr/surec.htm">
+<meta property="og:image" content="https://studioluminant.com.tr/assets/relief/012-iznik-cypress/poster-1680.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nasıl Çalışırız — Studio Luminant">
-<meta name="twitter:description" content="Tasarım brifingi'nden montaja — Studio Luminant'ın özel mimari elemanlar için üç aşamalı süreci. Dijital modelleme, hassas döküm ve artizan finish.">
-<meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
-<meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
+<link rel="preload" as="image" href="assets/process/cantus/concept-1200.webp" imagesrcset="assets/process/cantus/concept-600.webp 600w, assets/process/cantus/concept-1200.webp 1200w" imagesizes="(orientation: portrait) 46svh, 50vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
-<link rel="preload" as="image" type="image/webp" href="images/studio-luminant-3d-model-to-cast-relief-panel.webp">
-
-<style>
-  /* ─── PAGE HERO ─────────────────────── */
-  #page-hero {
-    min-height: 100vh;
-    background-image: url('images/studio-luminant-3d-model-to-cast-relief-panel.webp');
-    background-image: image-set(
-      url('images/studio-luminant-3d-model-to-cast-relief-panel.webp') type('image/webp'),
-      url('images/studio-luminant-3d-model-to-cast-relief-panel.webp') type('image/png')
-    );
-    background-size: cover;
-    background-position: center top;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  #page-hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(
-      160deg,
-      rgba(var(--bg-rgb),0.88) 0%,
-      rgba(var(--bg-rgb),0.60) 50%,
-      rgba(var(--bg-rgb),0.30) 100%
-    );
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  .page-hero-content {
-    position: relative; z-index: 2;
-    padding: 160px 60px 100px;
-    max-width: 800px;
-  }
-
-  .page-hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 16px;
-    margin-bottom: 40px;
-    opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
-  }
-  .page-hero-eyebrow::before {
-    content: ''; display: block; width: 32px; height: 1px; background: var(--gold);
-  }
-  .page-hero-eyebrow span {
-    font-size: 10px; letter-spacing: 0.3em;
-    text-transform: uppercase; color: var(--gold); font-weight: 400;
-  }
-
-  .page-hero-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(68px, 7vw, 110px);
-    font-weight: 300; line-height: 0.92;
-    letter-spacing: -0.02em; color: var(--text-primary);
-    margin-bottom: 36px;
-    opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
-  }
-  .page-hero-headline em { font-style: italic; color: var(--gold); }
-
-  .page-hero-sub {
-    font-size: 14px; font-weight: 300;
-    line-height: 1.75; color: var(--text-secondary);
-    max-width: 480px;
-    opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards;
-  }
-
-  /* ─── PROCESS DETAIL ────────────────── */
-  #process-detail {
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-    padding: 0;
-  }
-
-  .process-detail-step {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    min-height: 520px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .process-detail-step:last-child { border-bottom: none; }
-
-  /* Even steps: reverse order */
-  .process-detail-step.reverse { direction: rtl; }
-  .process-detail-step.reverse > * { direction: ltr; }
-
-  .process-step-img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    min-height: 400px;
-    filter: grayscale(10%);
-    transition: filter 0.5s;
-  }
-  .process-detail-step:hover .process-step-img { filter: grayscale(0%); }
-
-  .process-step-content {
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .step-ghost-num {
-    position: absolute;
-    top: 40px; right: 40px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 120px; font-weight: 300;
-    color: rgba(var(--accent-rgb),0.06);
-    line-height: 1;
-    letter-spacing: -0.04em;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  .process-step-label {
-    font-size: 9px; letter-spacing: 0.32em;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 400; margin-bottom: 16px;
-  }
-
-  .process-step-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 3vw, 48px);
-    font-weight: 300; line-height: 1.05;
-    color: var(--text-primary); margin-bottom: 24px;
-  }
-
-  .process-step-desc {
-    font-size: 14px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    max-width: 400px;
-  }
-
-  .process-step-sustain {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-size: 10px; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--gold-dim);
-    font-weight: 400; margin-top: 20px;
-    max-width: 400px;
-  }
-  .process-step-sustain::before {
-    content: ''; display: block;
-    width: 6px; height: 6px;
-    border: 1px solid var(--gold-dim);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  /* ─── WORKSHOP ──────────────────────── */
-  #workshop {
-    background: var(--obsidian);
-    border-top: 1px solid var(--border);
-  }
-
-  .workshop-grid {
-    display: grid;
-    grid-template-columns: 1fr 480px 1fr;
-    min-height: 560px;
-    gap: 0;
-  }
-
-  .workshop-photo {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    filter: grayscale(20%);
-    transition: filter 0.5s;
-  }
-  .workshop-photo:hover { filter: grayscale(0%); }
-
-  .workshop-center {
-    padding: 80px 60px;
-    background: var(--surface);
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .workshop-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px; font-weight: 300;
-    line-height: 1.05; color: var(--text-primary);
-    margin-bottom: 28px;
-  }
-  .workshop-headline em { font-style: italic; color: var(--gold); }
-
-  .workshop-body {
-    font-size: 14px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    margin-bottom: 20px;
-  }
-
-  .workshop-location {
-    font-size: 10px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--text-muted);
-    margin-top: 8px;
-  }
-
-
-  /* ─── CTA STRIP ─────────────────────── */
-  #process-cta {
-    padding: 120px 0;
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-    text-align: center;
-  }
-
-  .cta-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(44px, 4vw, 72px);
-    font-weight: 300; line-height: 1.0;
-    color: var(--text-primary); margin-bottom: 28px;
-  }
-  .cta-headline em { font-style: italic; color: var(--gold); }
-
-  .cta-sub {
-    font-size: 14px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    max-width: 520px; margin: 0 auto 48px;
-  }
-
-  /* ─── RESPONSIVE ────────────────────── */
-  @media (max-width: 1024px) {
-    .page-hero-content { padding: 140px 32px 80px; }
-    .process-detail-step { grid-template-columns: 1fr; direction: ltr !important; }
-    .process-detail-step .process-step-img { min-height: 280px; }
-    .process-step-content { padding: 56px 32px; }
-    .workshop-grid { grid-template-columns: 1fr; }
-    .workshop-center { padding: 60px 32px; }
-  }
-</style>
+<link rel="stylesheet" href="process.css">
 <!-- Google Analytics -->
 <!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
 <script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
@@ -302,201 +65,93 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <div id="site-nav" data-lang="tr" data-lang-url="en/process.htm"></div>
 
 <main id="main">
-
-<!-- PAGE HERO -->
-<section id="page-hero">
-  <div class="page-hero-content">
-    <div class="page-hero-eyebrow">
-      <span>Nasıl Çalışırız</span>
+<section class="pseq" id="pseq" data-pseq>
+  <div class="pseq__stage">
+    <div class="pseq__frame">
+      <figure class="pseq__layer" data-layer="0"><img src="assets/process/cantus/concept-1200.webp" srcset="assets/process/cantus/concept-600.webp 600w, assets/process/cantus/concept-1200.webp 1200w" sizes="(orientation: portrait) 46svh, 50vw" width="1200" height="1200" decoding="async" fetchpriority="high" alt="Kemerli çerçevede servi, lale, karanfil ve gül motifli rölyef panelin kavram görseli"></figure>
+      <figure class="pseq__layer" data-layer="1"><img src="assets/process/cantus/depth-1200.webp" srcset="assets/process/cantus/depth-600.webp 600w, assets/process/cantus/depth-1200.webp 1200w" sizes="(orientation: portrait) 46svh, 50vw" width="1200" height="1200" decoding="async" loading="lazy" alt="Cantus panelinin siyahtan beyaza derinlik haritası"></figure>
+      <figure class="pseq__layer" data-layer="2"><img src="assets/process/cantus/light-1200.webp" srcset="assets/process/cantus/light-600.webp 600w, assets/process/cantus/light-1200.webp 1200w" sizes="(orientation: portrait) 46svh, 50vw" width="1200" height="1200" decoding="async" loading="lazy" alt="Cantus panelinin yalama ışıkta dijital testi"></figure>
+      <figure class="pseq__layer pseq__layer--live" data-layer="3">
+        <div class="pseq__relief relief-light" data-relief-light="assets/relief/012-iznik-cypress/" data-input="auto" data-scroll-for="#pseq">
+          <img class="relief-light__poster" src="assets/relief/012-iznik-cypress/poster-1680.jpg" srcset="assets/relief/012-iznik-cypress/poster-840.jpg 840w, assets/relief/012-iznik-cypress/poster-1680.jpg 1680w" sizes="(orientation: portrait) 64svh, 70vw" width="1680" height="1680" loading="lazy" decoding="async" alt="Cantus rölyefinin derinlik haritasından hesaplanan gerçek zamanlı render&#x27;ı, yalama ışıkta">
+        </div>
+      </figure>
     </div>
-    <h1 class="page-hero-headline">
-      Brifingden<br><em>Montaja</em>
-    </h1>
-    <p class="page-hero-sub">
-      Üç aşama, tek tesis, tam kontrol. Her panel Sakarya atölyemizde tasarlanır, dökülür ve bitirilir — ilk çiziminizden spesifikasyona uygun, monte edilmiş yüzeye kadar.
-    </p>
+    <div class="pseq__caps" aria-hidden="true">
+      <span class="pseq__cap" data-layer="0">Cantus, kavram görseli</span>
+      <span class="pseq__cap" data-layer="1">Cantus, derinlik haritası</span>
+      <span class="pseq__cap" data-layer="2">Cantus, yalama ışık testi</span>
+      <span class="pseq__cap" data-layer="3">Cantus, gerçek zamanlı render, yalama ışık</span>
+    </div>
+  </div>
+  <div class="pseq__text">
+    <header class="pseq__intro">
+      <div class="eyebrow">Nasıl Çalışırız</div>
+      <h1 class="pseq__title">Çizimden<br><em>döküme.</em></h1>
+      <p class="pseq__lede">Bir projenin çizimi, Sapanca&#x27;daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, Kütüphane sistemlerimizden Cantus&#x27;u özel üretim bir çizimin izlediği yoldan geçiriyoruz.</p>
+    </header>
+    <ol class="pseq__steps">
+    <li class="pseq__step" data-layer="0">
+      <span class="pseq__num">01</span>
+      <h2 class="pseq__h">Çizim ya da görsel</h2>
+      <p class="pseq__p">Her proje bir çizim ya da görselle başlar. Elle çizilmiş bir eskiz, ölçülü bir teknik çizim ya da bir referans görsel olabilir. Cantus&#x27;un çıkış noktası, İznik çini geleneğinin servi, lale, karanfil ve gül motiflerini kemerli bir çerçevede toplayan bu kavram görseliydi.</p>
+    </li>
+    <li class="pseq__step" data-layer="1">
+      <span class="pseq__num">02</span>
+      <h2 class="pseq__h">Derinlik haritası</h2>
+      <p class="pseq__p">Görseli bir derinlik haritasına çeviririz. Haritadaki her gri tonu bir yüksekliğe karşılık gelir. Siyah, panelin zeminidir; beyaz, en yüksek noktası. Cantus&#x27;ta rölyef derinliği, zeminden en yüksek noktaya 16 mm&#x27;dir. Kemerli çerçeveyi bu aşamada kaldırıp motifi tüm panele yaydık. Değişiklikler dijitalde kaldığı için kalıp ya da malzeme maliyeti doğurmaz.</p>
+    </li>
+    <li class="pseq__step" data-layer="2">
+      <span class="pseq__num">03</span>
+      <h2 class="pseq__h">Yalama ışıkta okuma</h2>
+      <p class="pseq__p">Döküme geçmeden önce yüzeyi alçak açıdan, yandan vuran bir ışıkta dijital olarak okuruz. Rölyefin gölgesi burada belirir; sığ formların nerede düzleştiği, derin olanların nerede gölgeye gömüldüğü bu aşamada görülür. Ortaya çıkan render&#x27;ı onayınıza sunarız; onayınız olmadan döküme geçmeyiz.</p>
+    </li>
+    <li class="pseq__step" data-layer="3">
+      <span class="pseq__num">04</span>
+      <h2 class="pseq__h">Rölyef</h2>
+      <p class="pseq__p">Onaylanan yüzeyden 3D baskıyla ana model üretilir. Bu sayfadaki rölyef ise aynı derinlik haritasından gerçek zamanlı hesaplanır; imleci gezdirdikçe ya da sayfayı kaydırdıkça ışığın yönü ve gölgeler değişir.</p>
+    </li>
+    </ol>
   </div>
 </section>
 
-<!-- 3-STEP PROCESS DETAIL -->
-<section id="process-detail">
-
-  <!-- Step 01: Design & Modelling — image left, text right -->
-  <div class="process-detail-step">
-    <picture>
-              <source type="image/webp"
-                  srcset="images/studio-luminant-3d-model-to-cast-relief-panel-400w.webp 400w,
-                  images/studio-luminant-3d-model-to-cast-relief-panel-800w.webp 800w,
-                  images/studio-luminant-3d-model-to-cast-relief-panel-1600w.webp 1600w,
-                  images/studio-luminant-3d-model-to-cast-relief-panel.webp 2000w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="images/studio-luminant-3d-model-to-cast-relief-panel.webp"
-                   alt="Kıvrım süsleme motifinin ızgara üzerindeki 3D modeli ve yanında aynı motifin krem rölyef paneli" class="process-step-img" width="2400" height="1662"
-                   loading="lazy" decoding="async">
-            </picture>
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">01</span>
-      <div class="process-step-label">Adım 01 — Tasarım & Modelleme</div>
-      <h2 class="process-step-headline">Brifingden<br>Dijital Modele</h2>
-      <p class="process-step-desc">Mekânsal niyetinizi — desen dili, derinlik, geometri — dijital modelleme hattımız ile parametrik kısıtlamalara dönüştürüyoruz. Tasarım brifingi yüksek çözünürlüklü bir 3D yüzey modeline dönüşür. Değişiklikler hızlı ve geri alınabilir — bu aşamada maliyeti sıfır. BIM-hazır çıktılar standarttır.</p>
-      <p class="process-step-sustain">Dijital iterasyon — sıfır fiziksel prototip atığı</p>
-    </div>
+<section id="workshop-filmstrip">
+  <div class="filmstrip-intro reveal">
+    <p class="filmstrip-eyebrow">Atölyede</p>
+    <p class="filmstrip-tagline">Ana modelden artizan finish&#x27;e kadar her adım Sapanca&#x27;daki atölyemizde atılır.</p>
   </div>
-
-  <!-- Step 02: Casting — text left, image right (reversed) -->
-  <div class="process-detail-step reverse">
-    <picture>
-              <source type="image/webp"
-                  srcset="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-400w.webp 400w,
-                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-800w.webp 800w,
-                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-1600w.webp 1600w,
-                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.webp 4096w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg"
-                   alt="İnce dikey yivler ve dört küre formu taşıyan krem panel, yumuşak stüdyo ışığı" class="process-step-img" width="4096" height="4096"
-                   loading="lazy" decoding="async">
-            </picture>
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">02</span>
-      <div class="process-step-label">Adım 02 — Kalıp & Döküm</div>
-      <h2 class="process-step-headline">3D Baskı Kalıp.<br>Hassas Döküm.</h2>
-      <p class="process-step-desc">Ana kalıplar dijital modelden doğrudan 3D baskı ile üretilir, ardından sınırsız üretim çalışmaları için silikon veya elastomerik kalıba çoğaltılır. Lumina PMAG™ ve PUCOMP™ paneller kontrollü koşullarda dikey olarak dökülür — her parti basma dayanımı ve yüzey bütünlüğü açısından test edilir.</p>
-      <p class="process-step-sustain">Yeniden kullanılabilir üretim kalıpları — tek ana kalıp tüm üretimi karşılar</p>
-    </div>
+  <div class="filmstrip-frame reveal">
+    <img src="img/workshop/workshop-01-mould-prep.jpg" width="1800" height="2400" style="object-position:center 30%" alt="Döküm öncesi beyaz silikon kalıba fırçayla ayırıcı madde sürülüyor" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">01</span><span class="filmstrip-caption-text">Her dökümden önce silikon kalıba ayırıcı sürülür.</span></div>
   </div>
-
-  <!-- Step 03: Finishing — image left, text right -->
-  <div class="process-detail-step">
-    <picture>
-              <source type="image/webp"
-                  srcset="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-400w.webp 400w,
-                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-800w.webp 800w,
-                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-1600w.webp 1600w,
-                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.webp 4096w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.jpg"
-                   alt="Ortada buluşan dört yaprak formlu krem rölyef panel, yumuşak stüdyo ışığı" class="process-step-img" width="4096" height="4096"
-                   loading="lazy" decoding="async">
-            </picture>
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">03</span>
-      <div class="process-step-label">Adım 03 — Bitirme & Teslimat</div>
-      <h2 class="process-step-headline">Artizan Finish.<br>Teslimat.</h2>
-      <p class="process-step-desc">Her panel hassas yüzey bitirmesi alır — tüm RAL veya özel renkler, soğuk döküm metal, patina ve dokulu seçenekler mevcuttur. Sonuç nem, UV ve darbeye dayanıklı mikro-pürüzsüz bir yüzeydir. Her panel malzeme veri sayfası, montaj çizimi ve BIM dosyası ile gönderilir.</p>
-      <p class="process-step-sustain">Panel değişimi olmadan nokta onarım — uzun hizmet ömrü</p>
-    </div>
+  <div class="filmstrip-frame reveal">
+    <img src="img/workshop/workshop-02-casting.jpg" width="1152" height="928" alt="Kalıba dökülen PMAG yüzeyi atölye masasında elle düzleştiriliyor" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">02</span><span class="filmstrip-caption-text">Lumina PMAG™ kalıba dökülür ve priz alana kadar bekletilir.</span></div>
   </div>
-
-</section>
-
-<!-- WORKSHOP -->
-<section id="workshop">
-  <div class="workshop-grid">
-    <picture>
-              <source type="image/webp"
-                  srcset="images/studio-luminant-production-workshop-photo-01-400w.webp 400w,
-                  images/studio-luminant-production-workshop-photo-01-800w.webp 800w,
-                  images/studio-luminant-production-workshop-photo-01-1600w.webp 1600w,
-                  images/studio-luminant-production-workshop-photo-01.webp 2048w"
-                  sizes="(max-width: 1024px) 100vw, calc((100vw - 480px) / 2)">
-              <img src="images/studio-luminant-production-workshop-photo-01.jpeg"
-                   alt="Salonda tavan spotlarıyla aydınlatılan uzun, koyu antrasit dokulu duvar paneli" class="workshop-photo" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-    <div class="workshop-center">
-      <div class="eyebrow reveal">Üretim Merkezi</div>
-      <h2 class="workshop-headline reveal">
-        Sakarya<br><em>Üretimi</em>
-      </h2>
-      <p class="workshop-body reveal">
-        Sakarya'daki tesisimiz, eklemeli kalıp üretiminden döküme, bitirme işlemine ve kalite kontrolüne kadar tam üretim hattını tek çatı altında barındırır. Dikey entegrasyon, taşeron gecikmelerini ortadan kaldırır ve brifingden kasaya kadar tam kalite kontrolü sağlar.
-      </p>
-      <p class="workshop-body reveal">
-        Her panel, malzeme veri sayfası ve montaj çizimi ile sevk edilir. Orta Doğu, Kafkasya ve Doğu Avrupa'ya lojistik ve saha montaj desteği mevcuttur.
-      </p>
-      <span class="workshop-location reveal">Sakarya · Türkiye</span>
-    </div>
-    <picture>
-              <source type="image/webp"
-                  srcset="images/studio-luminant-production-workshop-photo-02-400w.webp 400w,
-                  images/studio-luminant-production-workshop-photo-02-800w.webp 800w,
-                  images/studio-luminant-production-workshop-photo-02.webp 1390w"
-                  sizes="(max-width: 1024px) 100vw, calc((100vw - 480px) / 2)">
-              <img src="images/studio-luminant-production-workshop-photo-02.jpeg"
-                   alt="Krem küp modüllü rölyef duvar, kavisli koltuklar ve sıcak gizli aydınlatma" class="workshop-photo" width="1390" height="801"
-                   loading="lazy" decoding="async">
-            </picture>
+  <div class="filmstrip-frame reveal">
+    <img src="img/workshop/workshop-03-demoulding.jpg" width="1800" height="2400" style="object-position:center 15%" alt="Döküm rölyef panel beyaz silikon kalıptan kaldırılıyor, kalıptaki negatif form görünüyor" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">03</span><span class="filmstrip-caption-text">Kalıptan çıkarma: panel ilk kez görünür.</span></div>
+  </div>
+  <div class="filmstrip-frame reveal">
+    <img src="img/workshop/workshop-04-negative-positive.jpg" width="1800" height="2400" alt="Döküm rölyef paneller silikon kalıbın yanında: pozitif ve negatif form" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">04</span><span class="filmstrip-caption-text">Negatif kalıp ve pozitif panel yan yana. Kalıp, ana modelin ters açılarını da panele aktarır.</span></div>
+  </div>
+  <div class="filmstrip-frame reveal">
+    <img src="img/workshop/workshop-05-finishing.jpg" width="1152" height="928" alt="Döküm rölyef panelin yüzeyi tezgâhta elle zımparalanıyor" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">05</span><span class="filmstrip-caption-text">Yüzey elde son kez düzeltilir, ardından artizan finish uygulanır.</span></div>
   </div>
 </section>
 
-      <section id="workshop-filmstrip">
-        <div class="filmstrip-intro reveal">
-          <p class="filmstrip-eyebrow">Atölyede</p>
-          <p class="filmstrip-tagline">Her panel, aynı eller dizisinden geçer.</p>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="img/workshop/workshop-01-mould-prep.jpg" width="1800" height="2400" style="object-position:center 30%" alt="Döküm öncesi beyaz silikon kalıba fırçayla ayırıcı madde sürülüyor" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">01</span>
-            <span class="filmstrip-caption-text">Her döküm öncesi kalıp hazırlanır.</span>
-          </div>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="img/workshop/workshop-02-casting.jpg" width="1152" height="928" alt="Kalıba dökülen PMAG yüzeyi atölye masasında elle düzleştiriliyor" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">02</span>
-            <span class="filmstrip-caption-text">Döküm dökülür ve kürlenmeye bırakılır.</span>
-          </div>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="img/workshop/workshop-03-demoulding.jpg" width="1800" height="2400" style="object-position:center 15%" alt="Döküm rölyef panel beyaz silikon kalıptan kaldırılıyor, kalıptaki negatif form görünüyor" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">03</span>
-            <span class="filmstrip-caption-text">Kalıp açılır. Panel ilk kez ortaya çıkar.</span>
-          </div>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="img/workshop/workshop-04-negative-positive.jpg" width="1800" height="2400" alt="Döküm rölyef paneller silikon kalıbın yanında: pozitif ve negatif form" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">04</span>
-            <span class="filmstrip-caption-text">Negatif ve pozitif — her tasarımın iki yüzü.</span>
-          </div>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="img/workshop/workshop-05-finishing.jpg" width="1152" height="928" alt="Döküm rölyef panelin yüzeyi tezgâhta elle zımparalanıyor" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">05</span>
-            <span class="filmstrip-caption-text">Son yüzey düzeltmesiyle panel teslimata hazır olur.</span>
-          </div>
-        </div>
-      </section>
-
-<!-- CTA STRIP -->
-<section id="process-cta">
-  <div class="section-inner">
-    <h2 class="cta-headline reveal">
-      Projenizi Belirlemeye<br><em>Hazır Mısınız?</em>
-    </h2>
-    <p class="cta-sub reveal">
-      Brifinginizi ekibimizle paylaşın. 5 iş günü içinde malzeme önerisi, panel eskizi ve tahmini zaman çizelgesi ile dönüş yapacağız.
-    </p>
-    <p class="cta-sub reveal" style="margin-bottom: 48px;">
-      Ya da <a href="koleksiyon.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s;">Konsept Çalışmaları</a>'na göz atın veya <a href="urunler.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s;">Malzeme & Teknik</a> sayfasını inceleyin.
-    </p>
-    <a href="iletisim.htm" class="btn-primary reveal">
-      Proje Başlat
-      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-      </svg>
-    </a>
+<section class="p-door night">
+  <div class="p-door__inner">
+    <h2 class="p-door__h reveal">Çiziminizi gönderin.</h2>
+    <p class="p-door__p reveal">Bir eskiz, bir çizim ya da bir referans görsel; elinizde ne varsa başlamak için yeterli.</p>
+    <div class="p-door__ctas reveal">
+      <a href="iletisim.htm" class="btn-primary">Çiziminizi gönderin</a>
+      <a href="koleksiyon.htm" class="p-door__link">Kütüphane sistemlerine bakın</a>
+    </div>
   </div>
 </section>
-
 </main>
 
 <div id="site-footer">
@@ -522,6 +177,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   </nav>
 </div>
 
+<script src="relief-light.js" defer></script>
+<script src="process-seq.js" defer></script>
 <script src="shared.js"></script>
 <script src="components.js"></script>
 
