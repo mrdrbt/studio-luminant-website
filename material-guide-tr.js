@@ -903,8 +903,8 @@ function MaterialCard({
       overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: material.id === "pmag" ? "images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg" : "images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg",
-    alt: material.id === "pmag" ? "Dikey akan liflerden oluşan rölyef panel, yalama ışıkta yakından" : "Oturma odasında kanepenin arkasında, dikey akan liflerden oluşan açık gri rölyef duvar; yüzeyi yandan vuran gün ışığı",
+    src: material.id === "pmag" ? "images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg" : "images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg",
+    alt: material.id === "pmag" ? "Güzellik merkezinin bekleme salonunda dikey akan kıvrımlarla antrasit rölyef duvar, önünde pudra pembesi bir bank" : "Otel resepsiyonunda traverten bankonun arkasında yükselen, sıcak yalama ışıkla aydınlanan hücre desenli rölyef duvar",
     style: {
       position: "absolute",
       inset: 0,

@@ -489,27 +489,6 @@
       }
     }
   },
-  "studio-luminant-biophilic-coral-relief-tree-medallion-lobby.jpg": {
-    "original": {
-      "file": "studio-luminant-biophilic-coral-relief-tree-medallion-lobby.jpg",
-      "w": 1376,
-      "h": 768,
-      "size": 252629
-    },
-    "webp": "studio-luminant-biophilic-coral-relief-tree-medallion-lobby.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-biophilic-coral-relief-tree-medallion-lobby-400w.webp",
-        "w": 400,
-        "h": 223
-      },
-      "800": {
-        "file": "studio-luminant-biophilic-coral-relief-tree-medallion-lobby-800w.webp",
-        "w": 800,
-        "h": 447
-      }
-    }
-  },
   "studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait.jpg": {
     "original": {
       "file": "studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait.jpg",
@@ -822,37 +801,6 @@
       "size": 11091
     },
     "variants": {}
-  },
-  "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg": {
-    "original": {
-      "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg",
-      "w": 2000,
-      "h": 2000,
-      "size": 298762
-    },
-    "webp": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-800w.webp",
-        "w": 800,
-        "h": 800
-      },
-      "1600": {
-        "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-1600w.webp",
-        "w": 1600,
-        "h": 1600
-      },
-      "2560": {
-        "file": "studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-2560w.webp",
-        "w": 2560,
-        "h": 2560
-      }
-    }
   },
   "studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg": {
     "original": {
@@ -1285,32 +1233,6 @@
         "file": "studio-luminant-unified-design-system-relief-pattern-1600w.webp",
         "w": 1600,
         "h": 1330
-      }
-    }
-  },
-  "studio-luminant-wave-relief-wall-panels-lounge-concept.jpg": {
-    "original": {
-      "file": "studio-luminant-wave-relief-wall-panels-lounge-concept.jpg",
-      "w": 2000,
-      "h": 1116,
-      "size": 335290
-    },
-    "webp": "studio-luminant-wave-relief-wall-panels-lounge-concept.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-wave-relief-wall-panels-lounge-concept-400w.webp",
-        "w": 400,
-        "h": 223
-      },
-      "800": {
-        "file": "studio-luminant-wave-relief-wall-panels-lounge-concept-800w.webp",
-        "w": 800,
-        "h": 447
-      },
-      "1600": {
-        "file": "studio-luminant-wave-relief-wall-panels-lounge-concept-1600w.webp",
-        "w": 1600,
-        "h": 893
       }
     }
   },

@@ -525,3 +525,28 @@
   from = "/en/system-033"
   to = "/en/system-tremolo.htm"
   status = 301
+
+# ─── Retired design studies (gridded renders, #80-5) → gallery ───
+[[redirects]]
+  from = "/en/case-study-petal-lounge.htm"
+  to = "/en/gallery.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/case-study-petal-lounge"
+  to = "/en/gallery.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/case-study-wave-lounge.htm"
+  to = "/en/gallery.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/case-study-wave-lounge"
+  to = "/en/gallery.htm"
+  status = 301
+  force = true

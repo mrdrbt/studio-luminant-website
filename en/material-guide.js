@@ -903,8 +903,8 @@ function MaterialCard({
       overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: material.id === "pmag" ? "../images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg" : "../images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg",
-    alt: material.id === "pmag" ? "Relief panel of drifting vertical fibres, close up in raking light" : "Pale grey relief wall of drifting vertical fibres behind a living-room sofa, with daylight raking across it",
+    src: material.id === "pmag" ? "../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg" : "../images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg",
+    alt: material.id === "pmag" ? "Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front" : "Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs",
     style: {
       position: "absolute",
       inset: 0,
