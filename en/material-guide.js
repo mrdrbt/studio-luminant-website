@@ -258,7 +258,7 @@ const studioMaterials = [{
 }, {
   id: "pucomp",
   name: "Lumina PUCOMP™",
-  fullName: "Advanced Composite",
+  fullName: "Exterior and wet-area variant",
   tagline: "The exterior and wet-area variant of Lumina PMAG™, in the same designs and artisan finishes",
   domain: "Exterior",
   domainIcon: "🌐",

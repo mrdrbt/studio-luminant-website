@@ -1,6 +1,6 @@
 # Studio Luminant
 
-> Studio Luminant is a Turkey-based studio (Sapanca, Sakarya) that designs and casts bespoke architectural relief panels and sculptural wall surfaces for luxury hospitality and high-specification interiors. Panels are cast to order in two proprietary mineral materials — Lumina PMAG™ (interior) and Lumina PUCOMP™ (exterior, wet-area and high-detail work) — and completed by hand with artisan finishes. The studio works directly with architects and specifiers, providing BIM objects, technical data sheets and specification support.
+> Studio Luminant is a Turkey-based studio (Sapanca, Sakarya) that designs and casts bespoke architectural relief panels and sculptural wall surfaces for luxury hospitality and high-specification interiors. Panels are cast to order in two proprietary mineral materials — Lumina PMAG™ (interior) and Lumina PUCOMP™ (exterior, wet-area and high-detail work) — and completed by hand with artisan finishes. The studio works directly with architects and specifiers, providing technical data sheets, installation drawings and specification support.
 
 Key facts for accurate citation:
 - Studio name: Studio Luminant
@@ -15,7 +15,7 @@ Key facts for accurate citation:
 ## Core pages (English)
 
 - [Studio Luminant — Bespoke Architectural Elements](https://studioluminant.com.tr/en/): Homepage — overview of bespoke relief panels and sculptural surfaces.
-- [For Architects & Specifiers](https://studioluminant.com.tr/en/architects.htm): How Studio Luminant works with architects — one design language, one supplier, BIM-ready support.
+- [For Architects & Specifiers](https://studioluminant.com.tr/en/architects.htm): How Studio Luminant works with architects — one design language, one supplier, specification support.
 - [Materials & Specifications — Lumina PMAG™ & PUCOMP™](https://studioluminant.com.tr/en/products.htm): Technical specifications, dimensions and performance data for the two materials.
 - [Collection — Standard Relief Patterns](https://studioluminant.com.tr/en/collection.htm): Standard geometric, organic, heritage and surface patterns.
 - [Design Gallery](https://studioluminant.com.tr/en/gallery.htm): Bespoke relief panels and sculptural wall surfaces cast to order.
@@ -26,7 +26,7 @@ Key facts for accurate citation:
 
 - [What Is an Architectural Relief Panel?](https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm): Definition, uses, materials and how an architect orders one.
 - [What Are Sculptural Cast Wall Panels?](https://studioluminant.com.tr/en/what-are-sculptural-cast-wall-panels.htm): What the term means and how it differs from a modular decorative tile.
-- [How to Specify Custom Cast Wall Panels](https://studioluminant.com.tr/en/how-to-specify-custom-cast-wall-panels.htm): End-to-end specifier's guide — brief, material, sample, format, BIM, fixing, lead time, installation.
+- [How to Specify Custom Cast Wall Panels](https://studioluminant.com.tr/en/how-to-specify-custom-cast-wall-panels.htm): End-to-end specifier's guide — brief, material, sample, format, technical data sheet and installation drawing, fixing, lead time, installation.
 - [Journal](https://studioluminant.com.tr/en/journal.htm): Guides for architects specifying bespoke relief and cast wall panels.
 
 ## Technical resources (English)
@@ -41,7 +41,7 @@ Key facts for accurate citation:
 ## Ana sayfalar (Türkçe)
 
 - [Studio Luminant — Özel Mimari Elemanlar](https://studioluminant.com.tr/): Ana sayfa — özel üretim rölyef paneller ve heykelsi yüzeylere genel bakış.
-- [Mimarlar & Müellifler İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi — tek tasarım dili, tek tedarikçi, BIM-hazır destek.
+- [Mimarlar & Müellifler İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi — tek tasarım dili, tek tedarikçi, şartname desteği.
 - [Malzemeler ve Spesifikasyonlar — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): İki malzeme için teknik spesifikasyonlar, boyutlar ve performans verileri.
 - [Koleksiyon — Standart Desenler](https://studioluminant.com.tr/koleksiyon.htm): Standart geometrik, organik, miras ve yüzey desenleri.
 - [Tasarım Galerisi](https://studioluminant.com.tr/galeri.htm): Siparişe göre dökülen özel rölyef paneller ve heykelsi yüzeyler.

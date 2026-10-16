@@ -258,7 +258,7 @@ const studioMaterials = [{
 }, {
   id: "pucomp",
   name: "Lumina PUCOMP™",
-  fullName: "Advanced Composite",
+  fullName: "Dış mekân ve ıslak alan varyantı",
   tagline: "Lumina PMAG™'in dış cephe ve ıslak hacim varyantı; aynı tasarım, aynı artizan finish",
   domain: "Dış Mekân",
   domainIcon: "🌐",
