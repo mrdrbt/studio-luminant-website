@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Makaleler — Mimari Rölyef Panel Rehberleri — Studio Luminant</title>
 <meta name="description" content="Mimari rölyef ve özel üretim duvar paneli belirleyen mimarlar için rehberler: nasıl sipariş edilir, malzeme seçimi ve teknik belgeler. Studio Luminant makaleleri.">
 <link rel="canonical" href="https://studioluminant.com.tr/makaleler.htm">
@@ -31,21 +32,24 @@
   .page-hero-eyebrow { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 40px; opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards; }
   .page-hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
   .page-hero-eyebrow span { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
-  .page-hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(60px, 7vw, 104px); font-weight: 300; line-height: 0.92; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 36px; opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards; }
+  .page-hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(60px, 7vw, 104px); font-weight: 300; line-height: 0.92; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 36px; animation: riseIn 0.5s ease both; }
   .page-hero-headline em { font-style: italic; color: var(--gold); }
   .page-hero-sub { font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--text-secondary); max-width: 540px; opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards; }
   .articles-section { padding: 100px 0; }
   .article-grid { display: grid; grid-template-columns: 1fr; gap: 2px; }
   .article-card { background: var(--surface); padding: 48px 60px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; transition: background 0.3s ease; text-decoration: none; color: inherit; }
   .article-card:hover { background: var(--surface-2); }
+  .article-card:focus-visible { background: var(--surface-2); }
   .article-card-eyebrow { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 18px; }
   .article-card-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 36px); font-weight: 300; line-height: 1.1; color: var(--text-primary); margin-bottom: 16px; }
   .article-card-title em { font-style: italic; color: var(--gold); }
   .article-card-desc { font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--text-secondary); max-width: 580px; }
   .article-card-arrow { width: 48px; height: 48px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; transition: border-color 0.3s, background 0.3s; flex-shrink: 0; }
   .article-card:hover .article-card-arrow { border-color: var(--gold); background: var(--gold); }
+  .article-card:focus-visible .article-card-arrow { border-color: var(--gold); background: var(--gold); }
   .article-card-arrow svg { width: 16px; height: 16px; color: var(--text-muted); transition: color 0.3s; }
   .article-card:hover .article-card-arrow svg { color: var(--obsidian); }
+  .article-card:focus-visible .article-card-arrow svg { color: var(--obsidian); }
   .article-card.upcoming { background: transparent; border: 1px dashed var(--border); cursor: default; }
   .article-card.upcoming:hover { background: transparent; }
   .article-card.upcoming .article-card-title { color: var(--text-muted); }
@@ -56,38 +60,11 @@
   .cta-sub { font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 520px; margin: 0 auto 48px; }
   @media (max-width: 1024px) { .page-hero-content { padding: 140px 32px 70px; } .article-card { padding: 36px 32px; } }
   @media (max-width: 600px) { .article-card { grid-template-columns: 1fr; gap: 24px; } .article-card-arrow { width: 40px; height: 40px; } }
+  /* a11y pass */
+  @keyframes riseIn { from { transform: translateY(16px); } to { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .page-hero-eyebrow, .page-hero-sub { animation-delay: 0s; } .page-hero-headline { animation: none; } }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Makaleler", "item": "https://studioluminant.com.tr/makaleler.htm"}]}
 </script>
@@ -96,9 +73,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="tr" data-lang-url="en/journal.htm"></div>
 
@@ -131,7 +105,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
           <p class="article-card-desc">Cam elyaf takviyeli alçı ile beton nedir, bir mimar ikisi arasında nasıl seçim yapar ve özel üretim döküm rölyef panel, ikisinin de yapmak için kurgulanmadığı yerde nasıl durur?</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -142,7 +116,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
           <p class="article-card-desc">Çintemani, İznik ve Selçuklu geometrisini düz bir desen olarak değil, ışıkla okunan bir döküm derinliği olarak yorumlamak — ve pastişten kaçınmak.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -150,10 +124,10 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div>
           <div class="article-card-eyebrow">Mimar Rehberi</div>
           <h2 class="article-card-title">Özel Üretim Duvar Paneli: <em>Sipariş Rehberi</em></h2>
-          <p class="article-card-desc">Brief'ten montaja kadar sekiz adım: bağlam, malzeme, numune, format ve m², teknik veri sayfası, montaj çizimi, sabitleme, teslimat ve montaj. Özel üretim bir rölyef paneli doğru belirlemenin tam yolu.</p>
+          <p class="article-card-desc">Brief’ten montaja kadar sekiz adım: bağlam, malzeme, numune, format ve m², teknik veri sayfası, montaj çizimi, sabitleme, teslimat ve montaj. Özel üretim bir rölyef paneli doğru belirlemenin tam yolu.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -164,7 +138,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
           <p class="article-card-desc">Boyut, rölyef derinliği, aydınlatma açısı ve artizan finish — özel üretim lobi rölyef paneli için adım adım spesifikasyon rehberi.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -175,7 +149,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
           <p class="article-card-desc">Bakış mesafesi, loş ışıkta yalama açısı ve kullanım yüküne göre malzeme — restoran için özel üretim rölyef panel rehberi.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -186,7 +160,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
           <p class="article-card-desc">Rölyef panelin ne olduğu, nerede kullanıldığı ve bir mimarın sipariş sürecini nasıl yürüttüğüne dair giriş rehberi.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -197,7 +171,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
           <p class="article-card-desc">Heykelsi, dokunsal döküm yüzeylerin tanımı — modüler karo ile özel üretim rölyef panel arasındaki fark.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -212,11 +186,11 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Projeniz İçin<br><em>Konuşalım.</em>
     </h2>
     <p class="cta-sub reveal">
-      Brief'inizi paylaşın; malzeme önerisi, taslak şartname maddesi ve fiziksel numune ile yanıt verelim.
+      Brief’inizi paylaşın; malzeme önerisi, taslak şartname maddesi ve fiziksel numune ile yanıt verelim.
     </p>
     <a href="iletisim.htm" class="btn-primary reveal">
       Proje Başlat
-      <svg viewBox="0 0 14 14" fill="none">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none">
         <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
       </svg>
     </a>
@@ -253,5 +227,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="shared.js"></script>
 <script src="components.js"></script>
 
+<script src="consent.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Architectural Wall Panels — Lumina PMAG™ | Studio Luminant</title>
 <meta name="description" content="Lumina PMAG™ — technical specifications, dimensions and interior applications. Lumina PUCOMP™ for exteriors and wet areas. A technical data sheet and installation drawing for every project.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/products.htm">
@@ -21,6 +22,7 @@
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <link rel="preload" as="image" type="image/webp" href="../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.webp">
@@ -29,6 +31,7 @@
   /* ─── PAGE HERO ─────────────────────── */
   #page-hero {
     min-height: 100vh;
+    min-height: 100svh;
     background-image: url('../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg');
     background-image: image-set(
       url('../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.webp') type('image/webp'),
@@ -129,6 +132,7 @@
     margin-bottom: 8px; font-weight: 400;
   }
   .spec-value {
+    font-variant-numeric: tabular-nums;
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px; font-weight: 300;
     color: var(--text-primary);
@@ -178,45 +182,11 @@
     .spec-cell { padding: 20px 24px; }
   }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Products — Lumina PMAG™ & PUCOMP™", "item": "https://studioluminant.com.tr/en/products.htm"}]}
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="en" data-lang-url="../urunler.htm" data-base="../"></div>
 
@@ -232,7 +202,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Wall to Ceiling.<br><em>One Material.</em>
     </h1>
     <p class="page-hero-sub">
-      Lumina PMAG™ is the Studio Luminant material. Indoors, walls, ceilings, column wraps, counter fronts and accent surfaces are cast in it. For exteriors and wet areas, the same design is made in Lumina PUCOMP™. Each project gets a technical data sheet and an installation drawing.
+      <span translate="no">Lumina PMAG™</span> is the <span translate="no">Studio Luminant</span> material. Indoors, walls, ceilings, column wraps, counter fronts and accent surfaces are cast in it. For exteriors and wet areas, the same design is made in <span translate="no">Lumina PUCOMP™</span>. Each project gets a technical data sheet and an installation drawing.
     </p>
   </div>
 </section>
@@ -253,12 +223,12 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="product-content">
       <!-- Left: name + description -->
       <div>
-        <div class="eyebrow reveal">Lumina PMAG™</div>
+        <div class="eyebrow reveal"><span translate="no">Lumina PMAG™</span></div>
         <h2 class="product-name reveal">
           Polymer Modified<br><em>Alpha Gypsum</em>
         </h2>
         <p class="product-desc reveal">
-          Lumina PMAG™ is Studio Luminant's core material — a polymer modified alpha gypsum formulated for high-specification architectural installations. Alpha gypsum delivers a compressive strength significantly above beta-grade alternatives, producing a denser, harder panel with a ceramic-like surface finish.
+          <span translate="no">Lumina PMAG™</span> is <span translate="no">Studio Luminant</span>’s core material — a polymer modified alpha gypsum formulated for high-specification architectural installations. Alpha gypsum delivers a compressive strength significantly above beta-grade alternatives, producing a denser, harder panel with a ceramic-like surface finish.
         </p>
         <p class="product-desc reveal">
           Moisture resistant and available in any RAL or custom colour. Ideal for large-scale interior applications where surface quality and dimensional accuracy are non-negotiable: walls, ceilings, column wraps, counter fronts and accent surfaces.
@@ -268,11 +238,11 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <div class="specs-grid reveal" id="pmag-specs">
         <div class="spec-cell" data-spec="pmag.thickness">
           <div class="spec-label">Thickness Range</div>
-          <div class="spec-value">15 – 40 mm</div>
+          <div class="spec-value">15 – 40 mm</div>
         </div>
         <div class="spec-cell" data-spec="pmag.weight">
           <div class="spec-label">Weight</div>
-          <div class="spec-value">35 – 40 kg/m² @ 25 mm</div>
+          <div class="spec-value">35 – 40 kg/m² @ 25 mm</div>
         </div>
         <div class="spec-cell" data-spec="pmag.surface">
           <div class="spec-label">Surface</div>
@@ -300,7 +270,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div class="spec-cell">
           <div class="spec-label">Feature Walls</div>
           <div class="spec-value">Large-Format Cladding</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Panels up to 3000 × 1500 mm for lobby walls, corridors and public areas.</p>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Panels up to 3000 × 1500 mm for lobby walls, corridors and public areas.</p>
         </div>
         <div class="spec-cell">
           <div class="spec-label">Ceilings &amp; Soffits</div>
@@ -325,7 +295,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div class="spec-cell">
           <div class="spec-label">Brand Relief</div>
           <div class="spec-value">Logo &amp; Brand Motif</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">A brand's own logo or motif, cast faithfully as a bespoke relief wall for multi-site rollouts and flagship stores.</p>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">A brand’s own logo or motif, cast faithfully as a bespoke relief wall for multi-site rollouts and flagship stores.</p>
         </div>
         <div class="spec-cell" style="grid-column: 1 / -1;">
           <div class="spec-label">Sectors</div>
@@ -343,12 +313,12 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="product-content" style="padding-top: 70px;">
       <!-- Left: name + description -->
       <div>
-        <div class="eyebrow reveal"><span lang="en">Lumina PUCOMP™</span></div>
+        <div class="eyebrow reveal"><span lang="en"><span translate="no">Lumina PUCOMP™</span></span></div>
         <h2 class="product-name reveal" style="font-size: clamp(26px, 2.4vw, 32px);">
           Exterior<br><em>Variant</em>
         </h2>
         <p class="product-desc reveal">
-          Lumina PUCOMP™ is used for exterior facades and wet areas. The design and the artisan finishes are the same as Lumina PMAG™.
+          <span translate="no">Lumina PUCOMP™</span> is used for exterior facades and wet areas. The design and the artisan finishes are the same as <span translate="no">Lumina PMAG™</span>.
         </p>
         <p class="product-desc reveal"><span style="color: var(--gold); letter-spacing: 0.08em;">Exterior &amp; Wet Areas</span> — Facades, covered terraces, bathrooms and spa walls.</p>
       </div>
@@ -356,11 +326,11 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <div class="specs-grid reveal" id="pucomp-specs">
         <div class="spec-cell" data-spec="pucomp.thickness">
           <div class="spec-label">Thickness Range</div>
-          <div class="spec-value">8 – 25 mm</div>
+          <div class="spec-value">8 – 25 mm</div>
         </div>
         <div class="spec-cell" data-spec="pucomp.weight">
           <div class="spec-label">Weight</div>
-          <div class="spec-value">12 – 18 kg/m² @ 15 mm</div>
+          <div class="spec-value">12 – 18 kg/m² @ 15 mm</div>
         </div>
         <div class="spec-cell" data-spec="pucomp.application">
           <div class="spec-label">Application</div>
@@ -403,7 +373,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div class="eyebrow reveal">Finish Sample Box</div>
         <h2 class="product-name reveal">See It.<br><em>Feel It.</em></h2>
         <p class="product-desc reveal">
-          Samples cast from several relief moulds in Lumina PMAG™, with artisan finishes, and cast to suit your project. Lumina PUCOMP™ samples are available on request for exterior and wet-area projects. Hold them in your own light to judge relief, surface and colour before a panel goes into the specification.
+          Samples cast from several relief moulds in <span translate="no">Lumina PMAG™</span>, with artisan finishes, and cast to suit your project. <span translate="no">Lumina PUCOMP™</span> samples are available on request for exterior and wet-area projects. Hold them in your own light to judge relief, surface and colour before a panel goes into the specification.
         </p>
         <a href="architects.htm#sampleForm" class="btn-primary reveal" style="margin-top: 8px;">
           Request the Sample Box
@@ -494,9 +464,9 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     var sv = cell.querySelector('.spec-value');
     var sn = cell.querySelector('.spec-note');
     if (key === 'thickness') {
-      sv.textContent = F.thickness(mat);
+      sv.textContent = F.thickness(mat).replace(/ /g, '\u00a0');
     } else if (key === 'weight') {
-      sv.textContent = F.weight(mat);
+      sv.textContent = F.weight(mat).replace(/ /g, '\u00a0');
     } else if (typeof val === 'object' && val[lang]) {
       sv.textContent = val[lang];
       if (sn && val['note_' + lang]) sn.textContent = val['note_' + lang];
@@ -510,5 +480,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="material-guide.js?v=3"></script>
 
+<script src="../consent.js"></script>
 </body>
 </html>

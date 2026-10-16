@@ -51,6 +51,14 @@
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' fill='none' stroke='%23A79E8E' stroke-width='1' stroke-linecap='square'><path d='M1 1l4 4 4-4'/></svg>");
 }
 .ct-field select option { background: var(--surface); color: var(--ink); }
+/* dark band: native controls, autofill and the picker follow the night palette */
+.night .ct-field input, .night .ct-field select, .night .ct-field textarea { color-scheme: dark; }
+.ct-field input:-webkit-autofill, .ct-field input:-webkit-autofill:hover, .ct-field input:-webkit-autofill:focus,
+.ct-field textarea:-webkit-autofill, .ct-field select:-webkit-autofill {
+  -webkit-text-fill-color: var(--ink); caret-color: var(--ink);
+  box-shadow: 0 0 0 1000px var(--surface) inset; -webkit-box-shadow: 0 0 0 1000px var(--surface) inset;
+  transition: background-color 9999s ease-out 0s;
+}
 .ct-help { font-size: var(--t-body-sm); line-height: 1.6; color: var(--ink-muted); margin: var(--s-1) 0 0; }
 .ct-help a { color: var(--ink-2); }
 
@@ -59,11 +67,15 @@
 .ct-note { font-size: var(--t-body-sm); line-height: 1.6; color: var(--ink-muted); margin: 0; }
 .ct-status { font-size: var(--t-body-sm); line-height: 1.6; color: var(--ink); margin: 0;
   padding: var(--s-3) var(--s-4); border-left: 2px solid var(--accent); background: rgba(var(--ink-rgb), 0.04); }
-.ct-status[hidden] { display: none; }
+.ct-req { color: var(--accent); }
+.ct-legend { margin: 0; }
+.ct-status:empty { padding: 0; border: 0; background: none; margin: 0; }
+.ct-status:focus-visible { outline: 2px solid var(--focus-color); outline-offset: 2px; }
+.ct-submit[aria-disabled="true"] { cursor: progress; opacity: 0.75; }
 .ct-status.is-error { border-left-color: var(--accent-error); }
 
 /* sample box: the night band */
-.ct-sample { padding: var(--s-10) var(--pad-x); }
+.ct-sample { padding: var(--s-10) var(--pad-x); color-scheme: dark; }
 /* inner width = the hero's content box (its max-width includes its own side padding) */
 .ct-sample__inner { max-width: calc(var(--maxw) - 2 * var(--pad-x)); margin: 0 auto;
   display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: var(--s-8); align-items: start; }

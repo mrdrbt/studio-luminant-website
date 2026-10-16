@@ -38,8 +38,12 @@
 
 .pseq__steps { list-style: none; margin: 0; padding: 0 0 30svh; }
 .pseq__step { min-height: 85svh; display: flex; flex-direction: column; justify-content: center; max-width: 460px;
-  opacity: 0.35; transition: opacity var(--dur-3) var(--ease); }
-.pseq__step.is-active, html:not(.js) .pseq__step { opacity: 1; }
+  transition: color var(--dur-3) var(--ease); }
+/* inactive steps dim by colour (muted ink, >=4.5:1 on bone), never by opacity on the text */
+.pseq__h, .pseq__p { transition: color var(--dur-3) var(--ease); }
+.pseq__step:not(.is-active) .pseq__h, .pseq__step:not(.is-active) .pseq__p { color: var(--ink-muted); }
+html:not(.js) .pseq__step .pseq__h { color: var(--ink); }
+html:not(.js) .pseq__step .pseq__p { color: var(--ink-2); }
 .pseq__num { font-size: var(--t-label); letter-spacing: var(--tr-wider); color: var(--accent); margin-bottom: var(--s-3); }
 .pseq__h { font-family: var(--font-display); font-weight: 300; font-size: clamp(32px, 3vw, 48px); line-height: 1.05;
   color: var(--ink); margin: 0 0 var(--s-4); }

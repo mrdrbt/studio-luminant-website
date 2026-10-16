@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Özel Üretim Duvar Paneli Teslim Süresi ve Proje Takvimi | Studio Luminant</title>
 <meta name="description" content="Özel üretim mimari rölyef paneller için tipik teslimat süreleri — tasarımdan sahaya. Proje zaman çizelgesini yöneten mimarlar için planlama rehberi.">
 <link rel="canonical" href="https://studioluminant.com.tr/kaynaklar-teslimat-sureci.htm">
@@ -201,38 +202,13 @@
     .timeline-table { font-size: 13px; }
     .timeline-table thead th, .timeline-table tbody td { padding: 12px; }
   }
+  /* a11y pass */
+  .timeline-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .timeline-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .timeline-table tbody td, .timeline-table tbody th { font-variant-numeric: tabular-nums; }
+  .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Teslimat Süreleri ve Proje Planlaması", "item": "https://studioluminant.com.tr/kaynaklar-teslimat-sureci.htm"}]}
 </script>
@@ -244,9 +220,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="tr" data-lang-url="en/resources-lead-times.htm"></div>
 
@@ -257,7 +230,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   <!-- BACK NAV -->
   <div class="back-nav">
     <a href="kaynaklar.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Kaynaklara Dön
     </a>
   </div>
@@ -285,42 +258,45 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     </p>
 
     <!-- PHASE TABLE -->
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Proje aşamaları ve süreler">
     <table class="timeline-table">
+      <caption>Proje aşamaları ve süreler</caption>
       <thead>
         <tr>
-          <th>Aşama</th>
-          <th>Süre</th>
-          <th>Yapılan İşler</th>
-          <th>Sizden Gerekenler</th>
+          <th scope="col">Aşama</th>
+          <th scope="col">Süre</th>
+          <th scope="col">Yapılan İşler</th>
+          <th scope="col">Sizden Gerekenler</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="phase-badge phase-design">Tasarım</span></td>
-          <td>1 – 3 hafta</td>
+          <th scope="row"><span class="phase-badge phase-design">Tasarım</span></th>
+          <td>1 – 3&nbsp;hafta</td>
           <td>Desen seçimi veya özel tasarım geliştirme. 3D modelleme, rölyef derinlik çalışmaları, tekrar yerleşim çizimleri. Gerekirse numune onayı.</td>
-          <td>Tasarım niyeti, cephe çizimleri, desen tercihleri, malzeme seçimi (Lumina PMAG™; dış mekân ve ıslak alanlar için PUCOMP™)</td>
+          <td>Tasarım niyeti, cephe çizimleri, desen tercihleri, malzeme seçimi (<span translate="no">Lumina PMAG™</span>; dış mekân ve ıslak alanlar için PUCOMP™)</td>
         </tr>
         <tr>
-          <td><span class="phase-badge phase-production">Kalıp</span></td>
-          <td>1 – 2 hafta</td>
+          <th scope="row"><span class="phase-badge phase-production">Kalıp</span></th>
+          <td>1 – 2&nbsp;hafta</td>
           <td>3B baskı master desen, kalıp imalatı, onaylı 3D modele karşı kalite doğrulaması.</td>
-          <td>Nihai tasarım onayı. Kalıp sonrası değişiklikler 1–2 hafta ekler.</td>
+          <td>Nihai tasarım onayı. Kalıp sonrası değişiklikler 1–2&nbsp;hafta ekler.</td>
         </tr>
         <tr>
-          <td><span class="phase-badge phase-production">Üretim</span></td>
-          <td>3 – 6 hafta</td>
+          <th scope="row"><span class="phase-badge phase-production">Üretim</span></th>
+          <td>3 – 6&nbsp;hafta</td>
           <td>Döküm, kürlenme, yüzey işleme, kalite kontrolü. Tüm sipariş boyunca parti tutarlılık kontrolleri.</td>
           <td>Kesinleşmiş miktarlar, yüzey işleme şartnamesi, RAL/NCS renk referansı</td>
         </tr>
         <tr>
-          <td><span class="phase-badge phase-delivery">Teslimat</span></td>
-          <td>1 – 2 hafta</td>
+          <th scope="row"><span class="phase-badge phase-delivery">Teslimat</span></th>
+          <td>1 – 2&nbsp;hafta</td>
           <td>Koruyucu paketleme, uluslararası nakliye için sandıklama. Sahaya veya belirlenmiş depoya nakliye.</td>
           <td>Teslimat adresi, erişim kısıtlamaları, saha hazırlık onayı</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <!-- STATS -->
     <div class="stats-row">
@@ -333,7 +309,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div class="stat-label">İdeal İletişim Aşaması</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">1 hafta</div>
+        <div class="stat-value">1&nbsp;hafta</div>
         <div class="stat-label">Tipik Numune Süresi</div>
       </div>
     </div>
@@ -349,22 +325,22 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="callout">
       <div class="callout-label">Program İpucu</div>
       <p>
-        Projeniz farklı alanlarda (örneğin lobi, koridorlar, restoran) <strong>birden fazla desen tasarımı</strong> içeriyorsa, kalıp süreçlerini kademelendirmek için yeterince erken iletişime geçin. Her benzersiz desen kendi kalıbını gerektirir — bunları sıralı yerine paralel çalıştırmak kritik yolda 2–4 hafta tasarruf sağlayabilir.
+        Projeniz farklı alanlarda (örneğin lobi, koridorlar, restoran) <strong>birden fazla desen tasarımı</strong> içeriyorsa, kalıp süreçlerini kademelendirmek için yeterince erken iletişime geçin. Her benzersiz desen kendi kalıbını gerektirir — bunları sıralı yerine paralel çalıştırmak kritik yolda 2–4&nbsp;hafta tasarruf sağlayabilir.
       </p>
     </div>
 
     <h2><em>Teslimat Süresini</em> Etkileyen Faktörler</h2>
     <p>
-      <strong>Rölyef derinliği.</strong> Sığ rölyef paneller (5–15 mm derinlik) daha hızlı dökülür ve kürlenir. Derin heykelsi paneller (25–50 mm) daha uzun kürlenme süreleri ve daha dikkatli kalıptan çıkarma gerektirir, bu da üretim süresini uzatır.
+      <strong>Rölyef derinliği.</strong> Sığ rölyef paneller (5–15&nbsp;mm derinlik) daha hızlı dökülür ve kürlenir. Derin heykelsi paneller (25–50&nbsp;mm) daha uzun kürlenme süreleri ve daha dikkatli kalıptan çıkarma gerektirir, bu da üretim süresini uzatır.
     </p>
     <p>
-      <strong>Panel boyutu.</strong> Standart paneller tipik süreyi takip eder. Büyük boyutlu paneller daha büyük kalıplar, daha uzun kürlenme ve daha dikkatli taşıma gerektirir — genellikle 1–2 hafta eklenir.
+      <strong>Panel boyutu.</strong> Standart paneller tipik süreyi takip eder. Büyük boyutlu paneller daha büyük kalıplar, daha uzun kürlenme ve daha dikkatli taşıma gerektirir — genellikle 1–2&nbsp;hafta eklenir.
     </p>
     <p>
       <strong>Yüzey işleme karmaşıklığı.</strong> RAL renginde standart boyalı yüzey minimum süre ekler. Soğuk döküm metal yüzeyler (bronz, pirinç, bakır patina) ek el işçiliği aşamaları içerir. Dokulu veya çok tonlu yüzeyler üretim süresini yaklaşık bir hafta uzatır.
     </p>
     <p>
-      <strong>Miktar.</strong> Küçük siparişler (20 m² altı) üretimden daha hızlı geçer. Büyük ölçekli kurulumlar (200+ m²) parti planlaması, aşamalı kalite kontrolleri ve kademeli teslimat programlaması gerektirir.
+      <strong>Miktar.</strong> Küçük siparişler (20&nbsp;m² altı) üretimden daha hızlı geçer. Büyük ölçekli kurulumlar (200+ m²) parti planlaması, aşamalı kalite kontrolleri ve kademeli teslimat programlaması gerektirir.
     </p>
 
     <h2>Üretim Öncesi <em>Neler Teslim Ederiz</em></h2>
@@ -372,7 +348,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Tek bir panel dökülmeden önce, her proje belirsizliği ortadan kaldırmak ve sahaya ne geleceği konusunda tam görünürlük sağlamak üzere tasarlanmış bir ön üretim teslim seti alır. Bunlar arasında üretim ölçeğinde onaylı desenin <strong>3D modeli</strong>, cephenizde tekrar düzenini gösteren <strong>panel yerleşim çizimi</strong>, <strong>malzeme ve yüzey işleme şartname sayfası</strong> ve — talep edilmesi halinde — belirtilen malzeme ve yüzeyde <strong>fiziksel numune</strong> yer alır.
     </p>
     <p>
-      Fiziksel numuneler genellikle onaylı desenin 300 × 300 mm bölümleri olup üretim standardında yüzey işlemiyle hazırlanır. Renk, doku ve yüzey kalitesi için sözleşmesel referans görevi görürler. Numune süresi, tasarım onayından itibaren yaklaşık <strong>bir haftadır</strong>.
+      Fiziksel numuneler genellikle onaylı desenin 300 × 300&nbsp;mm bölümleri olup üretim standardında yüzey işlemiyle hazırlanır. Renk, doku ve yüzey kalitesi için sözleşmesel referans görevi görürler. Numune süresi, tasarım onayından itibaren yaklaşık <strong>bir haftadır</strong>.
     </p>
 
     <h2>Özel Panelleri <em>Programınıza</em> Yerleştirme</h2>
@@ -391,7 +367,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p>Proje zaman çizelgenizi paylaşın, üretim programımızı programınıza eşleştirelim.</p>
     <a href="iletisim.htm" class="btn-primary">
       Zaman Çizelgenizi Görüşün
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -425,5 +401,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="shared.js"></script>
 <script src="components.js"></script>
 
+<script src="consent.js"></script>
 </body>
 </html>

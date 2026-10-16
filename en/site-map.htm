@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Site Map — Studio Luminant</title>
 <meta name="description" content="An index of every page on the Studio Luminant website — concept work, materials, resources, and architectural relief panel guides.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/site-map.htm">
@@ -26,7 +27,7 @@
 
 <style>
   #sitemap-main {
-    min-height: 100vh;
+    min-height: 100svh;
     background: var(--obsidian);
     padding: 160px var(--pad-x) 120px;
   }
@@ -69,45 +70,11 @@
     .sitemap-grid { gap: 44px 32px; }
   }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Site Map", "item": "https://studioluminant.com.tr/en/site-map.htm"}]}
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="en" data-lang-url="../site-haritasi.htm" data-base="../"></div>
 
@@ -118,7 +85,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <header class="sitemap-header reveal">
       <span class="eyebrow">Site Map</span>
       <h1>All Pages</h1>
-      <p>Every page on the Studio Luminant website, in one place.</p>
+      <p>Every page on the <span translate="no">Studio Luminant</span> website, in one place.</p>
     </header>
 
     <div class="sitemap-grid">
@@ -136,7 +103,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <h2>Concept Work &amp; Materials</h2>
         <ul>
           <li><a href="collection.htm">Concept Work — Architectural Relief</a></li>
-          <li><a href="products.htm">Products — Lumina PMAG™</a></li>
+          <li><a href="products.htm">Products — <span translate="no">Lumina PMAG™</span></a></li>
           <li><a href="gallery.htm">Design Gallery</a></li>
           <li><a href="specifier-kit.htm">Specifier Kit</a></li>
           <li><a href="lookbook.htm">Design Lookbook</a></li>
@@ -166,6 +133,24 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         </ul>
       </div>
 
+      <div class="sitemap-col reveal">
+        <h2>Library Systems</h2>
+        <ul>
+          <li><a href="system-cantus.htm">Cantus</a></li>
+          <li><a href="system-glissando.htm">Glissando</a></li>
+          <li><a href="system-ostinato.htm">Ostinato</a></li>
+          <li><a href="system-tremolo.htm">Tremolo</a></li>
+        </ul>
+      </div>
+
+      <div class="sitemap-col reveal">
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.htm">Personal Data Privacy Notice</a></li>
+          <li><a href="cookie-policy.htm">Cookie Policy</a></li>
+          <li><a href="consent.htm">Commercial Electronic Message Consent Statement</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -192,12 +177,13 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
     <a href="contact.htm">Contact</a>
-    <a href="site-map.htm">Site Map</a>
+    <a href="site-map.htm" aria-current="page">Site Map</a>
   </nav>
 </div>
 
 <script src="../shared.js"></script>
 <script src="../components.js"></script>
 
+<script src="../consent.js"></script>
 </body>
 </html>

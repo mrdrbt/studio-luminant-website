@@ -20,23 +20,44 @@
     return data;
   }
 
+  // The status node is an always-present live region: it is emptied at load and only its text changes.
+  // (A `hidden` attribute from the markup is dropped so the region exists in the a11y tree from the start;
+  // contact.css collapses it while empty.)
   function showStatus(el, text, isError) {
-    el.textContent = text;
     el.classList.toggle('is-error', isError);
-    el.hidden = false;
+    el.textContent = '';
+    // set the text on the next frame so assistive tech sees a change, not an insertion
+    requestAnimationFrame(function () {
+      el.textContent = text;
+      el.focus({ preventScroll: true });
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      el.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+    });
   }
 
   function wire(form) {
     var btn = form.querySelector('button[type="submit"]');
     var status = form.querySelector('.ct-status');
-    var idleLabel = btn.innerHTML;
+    // the button holds label text + an arrow svg: only the text node is ever rewritten
+    var labelNode = Array.prototype.find.call(btn.childNodes, function (n) { return n.nodeType === 3 && n.nodeValue.trim(); });
+    var idleLabel = labelNode ? labelNode.nodeValue : '';
+    function setLabel(t) { if (labelNode) labelNode.nodeValue = t; }
     var msg = form.dataset;
+    var busy = false;
+
+    status.hidden = false;
+    status.textContent = '';
+    status.setAttribute('tabindex', '-1');
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
 
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      btn.disabled = true;
-      btn.textContent = msg.msgSending;
-      status.hidden = true;
+      if (busy) return;           // double-submit guard; the button keeps focus (aria-disabled, not disabled)
+      busy = true;
+      btn.setAttribute('aria-disabled', 'true');
+      setLabel(msg.msgSending);
+      status.textContent = '';
       var data = leadPayload(form);
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }).catch(function () {});
       try {
@@ -46,11 +67,13 @@
         trackLead(msg.formType, data.source);
         showStatus(status, msg.msgOk, false);
         form.reset();
-        btn.textContent = msg.msgSent;
+        setLabel(msg.msgSent);
       } catch (err) {
         showStatus(status, msg.msgError, true);
-        btn.disabled = false;
-        btn.innerHTML = idleLabel;
+        setLabel(idleLabel);
+      } finally {
+        busy = false;
+        btn.removeAttribute('aria-disabled');   // re-enabled after success as well as failure
       }
     });
   }

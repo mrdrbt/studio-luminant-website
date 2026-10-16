@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Lead Times &amp; Project Planning — Studio Luminant</title>
 <meta name="description" content="Typical lead times for bespoke architectural relief panels, from design engagement to site delivery. A planning guide for architects managing project timelines.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/resources-lead-times.htm">
@@ -201,38 +202,13 @@
     .timeline-table { font-size: 13px; }
     .timeline-table thead th, .timeline-table tbody td { padding: 12px; }
   }
+  /* a11y pass */
+  .timeline-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .timeline-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .timeline-table tbody td, .timeline-table tbody th { font-variant-numeric: tabular-nums; }
+  .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Lead Times & Project Planning", "item": "https://studioluminant.com.tr/en/resources-lead-times.htm"}]}
 </script>
@@ -244,9 +220,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="en" data-lang-url="../kaynaklar-teslimat-sureci.htm" data-base="../"></div>
 
@@ -257,7 +230,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   <!-- BACK NAV -->
   <div class="back-nav">
     <a href="resources.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Back to Resources
     </a>
   </div>
@@ -285,42 +258,45 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     </p>
 
     <!-- PHASE TABLE -->
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Project phases and durations">
     <table class="timeline-table">
+      <caption>Project phases and durations</caption>
       <thead>
         <tr>
-          <th>Phase</th>
-          <th>Duration</th>
-          <th>What Happens</th>
-          <th>Your Input</th>
+          <th scope="col">Phase</th>
+          <th scope="col">Duration</th>
+          <th scope="col">What Happens</th>
+          <th scope="col">Your Input</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="phase-badge phase-design">Design</span></td>
-          <td>1 – 3 weeks</td>
+          <th scope="row"><span class="phase-badge phase-design">Design</span></th>
+          <td>1 – 3&nbsp;weeks</td>
           <td>Pattern selection or bespoke design development. 3D modelling, relief depth studies, repeat layout drawings. Sample approval if required.</td>
-          <td>Design intent, elevation drawings, pattern preferences, material choice (Lumina PMAG™; PUCOMP™ for exterior and wet areas)</td>
+          <td>Design intent, elevation drawings, pattern preferences, material choice (<span translate="no">Lumina PMAG™</span>; PUCOMP™ for exterior and wet areas)</td>
         </tr>
         <tr>
-          <td><span class="phase-badge phase-production">Tooling</span></td>
-          <td>1 – 2 weeks</td>
+          <th scope="row"><span class="phase-badge phase-production">Tooling</span></th>
+          <td>1 – 2&nbsp;weeks</td>
           <td>3D-printed master pattern, mould fabrication, quality verification against approved 3D model.</td>
-          <td>Final design sign-off. Changes after tooling add 1–2 weeks.</td>
+          <td>Final design sign-off. Changes after tooling add 1–2&nbsp;weeks.</td>
         </tr>
         <tr>
-          <td><span class="phase-badge phase-production">Production</span></td>
-          <td>3 – 6 weeks</td>
+          <th scope="row"><span class="phase-badge phase-production">Production</span></th>
+          <td>3 – 6&nbsp;weeks</td>
           <td>Casting, curing, finishing, quality inspection. Batch consistency checks across the full order.</td>
           <td>Confirmed quantities, finish specification, RAL/NCS colour reference</td>
         </tr>
         <tr>
-          <td><span class="phase-badge phase-delivery">Delivery</span></td>
-          <td>1 – 2 weeks</td>
+          <th scope="row"><span class="phase-badge phase-delivery">Delivery</span></th>
+          <td>1 – 2&nbsp;weeks</td>
           <td>Protective packaging, crating for international transport. Freight to site or nominated warehouse.</td>
           <td>Delivery address, access constraints, site readiness confirmation</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <!-- STATS -->
     <div class="stats-row">
@@ -333,7 +309,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div class="stat-label">Ideal Engagement Stage</div>
       </div>
       <div class="stat-card">
-        <div class="stat-value">1 week</div>
+        <div class="stat-value">1&nbsp;week</div>
         <div class="stat-label">Typical Sample Turnaround</div>
       </div>
     </div>
@@ -349,22 +325,22 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="callout">
       <div class="callout-label">Programme Tip</div>
       <p>
-        If your project involves <strong>multiple pattern designs</strong> across different areas (e.g. lobby, corridors, restaurant), engage early enough to stagger tooling. Each unique pattern requires its own mould — running them in parallel rather than sequence can save 2–4 weeks on the critical path.
+        If your project involves <strong>multiple pattern designs</strong> across different areas (e.g. lobby, corridors, restaurant), engage early enough to stagger tooling. Each unique pattern requires its own mould — running them in parallel rather than sequence can save 2–4&nbsp;weeks on the critical path.
       </p>
     </div>
 
     <h2>Factors That <em>Affect Lead Time</em></h2>
     <p>
-      <strong>Relief depth.</strong> Shallow relief panels (5–15 mm depth) cast and cure faster. Deep sculptural panels (25–50 mm) require longer curing cycles and more careful demoulding, adding production time.
+      <strong>Relief depth.</strong> Shallow relief panels (5–15&nbsp;mm depth) cast and cure faster. Deep sculptural panels (25–50&nbsp;mm) require longer curing cycles and more careful demoulding, adding production time.
     </p>
     <p>
-      <strong>Panel size.</strong> Standard panels follow the typical timeline. Oversized panels require larger moulds, longer curing, and more careful handling — typically adding 1–2 weeks.
+      <strong>Panel size.</strong> Standard panels follow the typical timeline. Oversized panels require larger moulds, longer curing, and more careful handling — typically adding 1–2&nbsp;weeks.
     </p>
     <p>
       <strong>Finish complexity.</strong> A standard painted finish in a RAL colour adds minimal time. Cold-cast metal finishes (bronze, brass, copper patina) involve additional hand-finishing stages. Textured or multi-tone finishes extend the production window by approximately one week.
     </p>
     <p>
-      <strong>Quantity.</strong> Small orders (under 20 m²) move faster through production. Large-scale installations (200+ m²) require batch planning, staged quality checks, and phased delivery scheduling.
+      <strong>Quantity.</strong> Small orders (under 20&nbsp;m²) move faster through production. Large-scale installations (200+ m²) require batch planning, staged quality checks, and phased delivery scheduling.
     </p>
 
     <h2>What We Deliver <em>Before Production</em></h2>
@@ -372,7 +348,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Before a single panel is cast, every project receives a set of pre-production deliverables designed to eliminate ambiguity and give you full visibility of what will arrive on site. These include a <strong>3D model</strong> of the approved pattern at production scale, a <strong>panel layout drawing</strong> showing the repeat arrangement on your elevation, a <strong>material and finish specification sheet</strong>, and — where requested — a <strong>physical sample</strong> in the specified material and finish.
     </p>
     <p>
-      Physical samples are typically 300 × 300 mm sections of the approved pattern, finished to production standard. They serve as the contractual reference for colour, texture, and surface quality. Sample turnaround is approximately <strong>one week</strong> from design approval.
+      Physical samples are typically 300 × 300&nbsp;mm sections of the approved pattern, finished to production standard. They serve as the contractual reference for colour, texture, and surface quality. Sample turnaround is approximately <strong>one week</strong> from design approval.
     </p>
 
     <h2>Fitting Bespoke Panels into <em>Your Programme</em></h2>
@@ -388,10 +364,10 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   <!-- CTA -->
   <div class="article-cta">
     <h3>Ready to Start <em>Planning?</em></h3>
-    <p>Share your project timeline and we'll map our production schedule to your programme.</p>
+    <p>Share your project timeline and we’ll map our production schedule to your programme.</p>
     <a href="contact.htm" class="btn-primary">
       Discuss Your Timeline
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -426,5 +402,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="../shared.js"></script>
 <script src="../components.js"></script>
 
+<script src="../consent.js"></script>
 </body>
 </html>

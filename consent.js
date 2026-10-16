@@ -106,6 +106,10 @@
     try {
       var h = location.hostname;
       if (h === 'localhost' || h === '127.0.0.1' || h === '::1' || h === '') return true;
+      // ?internal=1 once per browser stops measurement; ?internal=0 re-enables it.
+      var flag = new URLSearchParams(location.search).get('internal');
+      if (flag === '1') localStorage.setItem('sl_internal', '1');
+      else if (flag === '0') localStorage.removeItem('sl_internal');
       if (localStorage.getItem('sl_internal') === '1') return true;
     } catch (e) { /* storage blocked — treat as external */ }
     return false;
@@ -165,25 +169,30 @@
     '#sl-consent .sl-c-cat span{opacity:0.75}',
     '#sl-consent .sl-c-actions{display:flex;flex-direction:column;gap:10px;min-width:210px}',
     '#sl-consent button{font-family:inherit;font-size:10px;letter-spacing:0.22em;',
-    'text-transform:uppercase;padding:14px 22px;cursor:pointer;transition:all .3s;',
+    'text-transform:uppercase;padding:14px 22px;cursor:pointer;transition:border-color .3s,color .3s,background-color .3s;',
     'border:1px solid rgba(212,146,111,0.4);background:transparent;color:#B9B4AC}',
     '#sl-consent button:hover{border-color:#D4926F;color:#D4926F}',
     '#sl-consent button.sl-c-primary{background:#D4926F;border-color:#D4926F;color:#12100E;font-weight:500}',
     '#sl-consent button.sl-c-primary:hover{background:#E3AA8A;color:#12100E}',
+    '#sl-consent :focus-visible{outline:2px solid #EDE9E3;outline-offset:3px}',
     '@media(max-width:820px){#sl-consent{padding:22px 20px}',
     '#sl-consent .sl-c-inner{grid-template-columns:1fr;gap:20px}',
     '#sl-consent .sl-c-actions{min-width:0}}'
   ].join('');
 
   var el = null;
+  var returnFocus = null;
 
   function close() {
     if (el && el.parentNode) el.parentNode.removeChild(el);
     el = null;
+    if (returnFocus && document.contains(returnFocus)) returnFocus.focus();
+    returnFocus = null;
   }
 
   function open(current) {
     if (el) return;
+    returnFocus = document.activeElement !== document.body ? document.activeElement : null;
     if (!document.getElementById('sl-consent-style')) {
       var st = document.createElement('style');
       st.id = 'sl-consent-style';
@@ -218,6 +227,8 @@
         '</div>' +
       '</div>';
     document.body.appendChild(el);
+    // Re-opened from a footer link: move focus in. First visit: leave focus on the page.
+    if (returnFocus) el.querySelector('#sl-c-accept').focus();
 
     function commit(prefs) { write(prefs); apply(prefs); close(); }
 

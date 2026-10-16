@@ -19,6 +19,9 @@
 <meta name="twitter:description" content="Studio Luminant Design Lookbook — Bespoke architectural relief panels for hospitality and commercial interiors. Lumina PMAG™.">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="../images/studio-luminant-cellular-relief-wall-hotel-reception-concept.webp" type="image/webp" fetchpriority="high">
+<meta name="theme-color" content="#0C0C0E">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -32,11 +35,13 @@
   --text-secondary: #9A9088;
   --text-muted: #8A8078;
   --border: rgba(201,168,76,0.18);
+  color-scheme: dark;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 body {
   font-family: 'Jost', sans-serif;
@@ -87,7 +92,7 @@ body {
 
 /* ===================== HERO ===================== */
 .hero {
-  position: relative; height: 100vh; min-height: 700px;
+  position: relative; height: 100vh; height: 100svh; min-height: 700px;
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 0 60px 100px;
   overflow: hidden;
@@ -174,6 +179,8 @@ section { padding: 120px 60px; }
   columns: 3; column-gap: 3px;
 }
 .grid-item {
+  display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit;
+  font: inherit; text-align: left;
   break-inside: avoid; margin-bottom: 3px; position: relative;
   overflow: hidden; cursor: pointer;
   opacity: 0; transform: translateY(20px);
@@ -186,21 +193,23 @@ section { padding: 120px 60px; }
   filter: grayscale(8%);
   transition: transform 0.6s cubic-bezier(.25,.46,.45,.94), filter 0.4s;
 }
-.grid-item:hover img { transform: scale(1.04); filter: grayscale(0%); }
+.grid-item:hover img, .grid-item:focus-visible img { transform: scale(1.04); filter: grayscale(0%); }
+.grid-item:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
 .grid-caption {
-  position: absolute; bottom: 0; left: 0; right: 0;
+  display: block; position: absolute; bottom: 0; left: 0; right: 0;
   padding: 40px 20px 16px;
   background: linear-gradient(to top, rgba(12,12,14,0.85) 0%, transparent 100%);
   opacity: 0; transform: translateY(8px);
   transition: opacity 0.4s, transform 0.4s;
 }
-.grid-item:hover .grid-caption { opacity: 1; transform: translateY(0); }
+.grid-item:hover .grid-caption, .grid-item:focus-visible .grid-caption { opacity: 1; transform: translateY(0); }
+@media (hover: none) { .grid-caption { opacity: 1; transform: none; } }
 .caption-name {
-  font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 18px;
+  display: block; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 18px;
   color: var(--text-primary); margin-bottom: 4px;
 }
 .caption-meta {
-  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  display: block; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gold-dim);
 }
 
@@ -210,7 +219,7 @@ section { padding: 120px 60px; }
   background: rgba(12,12,14,0.96);
   backdrop-filter: blur(20px);
   display: none; align-items: center; justify-content: center;
-  cursor: zoom-out;
+  cursor: zoom-out; overscroll-behavior: contain;
 }
 .lightbox.open { display: flex; }
 .lightbox img {
@@ -220,16 +229,19 @@ section { padding: 120px 60px; }
 @keyframes lbIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 .lightbox-close {
   position: absolute; top: 24px; right: 32px;
+  background: none; border: 0; padding: 8px;
   font-size: 13px; color: var(--text-secondary); cursor: pointer;
   font-family: 'Jost', sans-serif; letter-spacing: 0.15em; text-transform: uppercase;
   transition: color 0.3s;
 }
-.lightbox-close:hover { color: var(--gold); }
+.lightbox-close:hover, .lightbox-close:focus-visible { color: var(--gold); }
+.lightbox-close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .lightbox-caption {
   position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
   text-align: center;
 }
 .lightbox-caption .caption-name { font-size: 24px; }
+.spec-value { font-variant-numeric: tabular-nums; }
 .lightbox-caption .caption-meta { font-size: 10px; margin-top: 6px; }
 
 /* ===================== MATERIAL SPECS ===================== */
@@ -382,53 +394,21 @@ section { padding: 120px 60px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .scroll-cue { animation: none; opacity: 1; }
   .reveal { opacity: 1; transform: none; }
   .grid-item { opacity: 1; transform: none; }
 }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Studio Luminant — Design Lookbook", "item": "https://studioluminant.com.tr/en/lookbook.htm"}]}
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <!-- NAV -->
-<nav class="lookbook-nav" id="nav">
+<nav class="lookbook-nav" id="nav" aria-label="Main">
   <a href="/en/" class="nav-logo-link" aria-label="Studio Luminant — Home">
     <img src="../images/studio-luminant-wordmark-white-transparent.png" alt="Studio Luminant" class="nav-logo">
   </a>
@@ -442,6 +422,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   <span class="nav-label">Design Lookbook</span>
 </nav>
 
+<main id="main">
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -464,15 +445,16 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <h2 class="section-title reveal">The <em>Studies</em></h2>
     <p class="section-desc reveal">Each pattern begins as a parametric model, refined through iterative prototyping, and cast in our proprietary materials.</p>
 
-    <div class="filter-bar reveal">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="context">In Context</button>
+    <div class="filter-bar reveal" role="group" aria-label="Filter designs">
+      <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-filter="context" aria-pressed="false">In Context</button>
     </div>
+    <p class="sr-only" id="result-count" aria-live="polite">6 designs shown</p>
 
     <div class="masonry" id="gallery">
 
       <!-- IN CONTEXT (6) — recent concept renders -->
-      <div class="grid-item" data-cat="context">
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
                   srcset="../images/studio-luminant-cellular-relief-wall-hotel-reception-concept-400w.webp 400w,
@@ -484,9 +466,9 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                    alt="Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs" width="1536" height="1024"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Hotel Reception</div><div class="caption-meta">Hospitality &middot; Concept</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
+        <span class="grid-caption"><span class="caption-name">Hotel Reception</span><span class="caption-meta">Hospitality &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
                   srcset="../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept-400w.webp 400w,
@@ -497,9 +479,9 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                    alt="Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front" width="1120" height="1400"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Beauty Salon</div><div class="caption-meta">Wellness &middot; Concept</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
+        <span class="grid-caption"><span class="caption-name">Beauty Salon</span><span class="caption-meta">Wellness &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
                   srcset="../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-400w.webp 400w,
@@ -511,9 +493,9 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                    alt="Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line" width="1536" height="1024"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Hotel Guestroom</div><div class="caption-meta">Hospitality &middot; Concept</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
+        <span class="grid-caption"><span class="caption-name">Hotel Guestroom</span><span class="caption-meta">Hospitality &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
                   srcset="../images/studio-luminant-sage-relief-wall-homeware-showroom-concept-400w.webp 400w,
@@ -524,9 +506,9 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                    alt="Raking daylight across a sage relief of stacked wave bands in a homeware showroom; oak plinths, ceramics and folded textiles below" width="1122" height="1402"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Homeware Showroom</div><div class="caption-meta">Retail &middot; Concept</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
+        <span class="grid-caption"><span class="caption-name">Homeware Showroom</span><span class="caption-meta">Retail &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
                   srcset="../images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square-400w.webp 400w,
@@ -537,9 +519,9 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                    alt="Sand-coloured relief of vertical wave bands above a tan leather banquette in a café; a small marble table and a bentwood chair in front" width="1080" height="1080"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Café</div><div class="caption-meta">F&amp;B &middot; Concept</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
+        <span class="grid-caption"><span class="caption-name">Café</span><span class="caption-meta">F&amp;B &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
                   srcset="../images/studio-luminant-flowing-fibre-relief-wall-living-room-concept-400w.webp 400w,
@@ -550,8 +532,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
                    alt="Pale grey relief wall of drifting vertical fibres behind a living-room sofa, with daylight raking across it" width="1122" height="449"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Living Room</div><div class="caption-meta">Residential &middot; Concept</div></div>
-      </div>
+        <span class="grid-caption"><span class="caption-name">Living Room</span><span class="caption-meta">Residential &middot; Concept</span></span>
+      </button>
     </div>
   </div>
 </section>
@@ -561,25 +543,25 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   <div class="section-inner">
     <div class="section-eyebrow reveal">Materials</div>
     <h2 class="section-title reveal">One Material,<br><em>Infinite Surfaces</em></h2>
-    <p class="section-desc reveal">Lumina PMAG™ is engineered for architectural relief.</p>
+    <p class="section-desc reveal"><span translate="no">Lumina PMAG™</span> is engineered for architectural relief.</p>
 
     <div class="materials-grid">
       <div class="material-card reveal">
-        <div class="material-name">Lumina PMAG&trade;</div>
+        <div class="material-name"><span translate="no">Lumina PMAG&trade;</span></div>
         <div class="material-full">Polymer Modified Alpha Gypsum</div>
         <div class="material-desc">Mineral-based casting compound engineered for interior architectural surfaces. Over 95% mineral by mass. Interior walls and ceilings, column wraps, counter and desk fronts, accent surfaces.</div>
         <div class="specs-grid">
           <div class="spec-cell"><div class="spec-label">Application</div><div class="spec-value">Interior</div></div>
           <div class="spec-cell"><div class="spec-label">Surface Finish</div><div class="spec-value">Any RAL / Custom</div></div>
-          <div class="spec-cell"><div class="spec-label">Thickness</div><div class="spec-value">15 &ndash; 40 mm</div></div>
-          <div class="spec-cell"><div class="spec-label">Weight</div><div class="spec-value">35–40 kg/m&sup2;</div></div>
+          <div class="spec-cell"><div class="spec-label">Thickness</div><div class="spec-value">15&nbsp;&ndash;&nbsp;40&nbsp;mm</div></div>
+          <div class="spec-cell"><div class="spec-label">Weight</div><div class="spec-value">35&nbsp;–&nbsp;40&nbsp;kg/m&sup2;</div></div>
         </div>
       </div>
 
       <div class="material-card reveal">
-        <div class="material-name">Lumina PUCOMP&trade;</div>
+        <div class="material-name"><span translate="no">Lumina PUCOMP&trade;</span></div>
         <div class="material-full">Exterior &amp; wet-area variant</div>
-        <div class="material-desc">For exterior and wet areas, the same design is cast in Lumina PUCOMP&trade;.</div>
+        <div class="material-desc">For exterior and wet areas, the same design is cast in <span translate="no">Lumina PUCOMP&trade;</span>.</div>
       </div>
     </div>
   </div>
@@ -692,15 +674,17 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer class="lookbook-footer">
-  <div class="footer-left">&copy; 2026 Studio Luminant. All rights reserved.</div>
+  <div class="footer-left">&copy; 2026 <span translate="no">Studio Luminant</span>. All rights reserved.</div>
   <div class="footer-right">Sakarya, Turkey &middot; studioluminant.com.tr</div>
 </footer>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <div class="lightbox-close">Close &times;</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged design image" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Close enlarged image">Close <span aria-hidden="true">&times;</span></button>
   <img alt="">
   <div class="lightbox-caption">
     <div class="caption-name"></div>
@@ -736,20 +720,39 @@ items.forEach(el => itemObs.observe(el));
 
 // FILTER
 const filterBtns = document.querySelectorAll('.filter-btn');
+const resultCount = document.getElementById('result-count');
+function applyFilter(cat) {
+  let count = 0;
+  filterBtns.forEach(b => {
+    const on = b.dataset.filter === cat;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+  items.forEach(item => {
+    const show = cat === 'all' || item.dataset.cat === cat;
+    item.classList.toggle('hidden', !show);
+    if (show) {
+      item.classList.add('visible');
+      count++;
+    }
+  });
+  resultCount.textContent = count + '\u00a0' + (count === 1 ? 'design' : 'designs') + ' shown';
+  return count;
+}
+// URL STATE: ?cat=<category>
+function syncUrl() {
+  const p = new URLSearchParams(location.search);
+  const active = document.querySelector('.filter-btn.active');
+  const cat = active ? active.dataset.filter : 'all';
+  if (cat === 'all') p.delete('cat'); else p.set('cat', cat);
+  const q = p.toString();
+  history.replaceState(null, '', location.pathname + (q ? '?' + q : '') + location.hash);
+}
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
     const cat = btn.dataset.filter;
-    let count = 0;
-    items.forEach(item => {
-      const show = cat === 'all' || item.dataset.cat === cat;
-      item.classList.toggle('hidden', !show);
-      if (show) {
-        item.classList.add('visible');
-        count++;
-      }
-    });
+    const count = applyFilter(cat);
+    syncUrl();
     if (typeof gtag === 'function') gtag('event', 'filter_select', { filter_type: 'category', filter_value: cat, filter_state: 'on', result_count: count });
   });
 });
@@ -760,17 +763,29 @@ const lbImg = lightbox.querySelector('img');
 const lbName = lightbox.querySelector('.caption-name');
 const lbMeta = lightbox.querySelector('.caption-meta');
 
+let lbOpener = null;
+const lbClose = lightbox.querySelector('.lightbox-close');
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (lbOpener && document.contains(lbOpener)) lbOpener.focus();
+  lbOpener = null;
+}
 items.forEach(item => {
   item.addEventListener('click', () => {
+    lbOpener = item;
     const img = item.querySelector('img');
     const name = item.querySelector('.caption-name');
     const meta = item.querySelector('.caption-meta');
-    lbImg.src = img.src;
+    lbImg.src = img.currentSrc || img.src;
     lbImg.alt = img.alt;
     lbName.textContent = name ? name.textContent : '';
     lbMeta.textContent = meta ? meta.textContent : '';
     lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    lbClose.focus();
     // Scene images carry no pattern id — the image file stem is the stable key.
     const stem = img.getAttribute('src').split('/').pop().replace(/\.[a-z]+$/i, '').replace(/^studio-luminant-/, '');
     if (typeof gtag === 'function') gtag('event', 'view_design', {
@@ -781,18 +796,22 @@ items.forEach(item => {
 });
 
 lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
+  if (e.target === lightbox || e.target.closest('.lightbox-close')) closeLightbox();
 });
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') { closeLightbox(); return; }
+  // Focus trap: the close button is the only focusable control in the dialog.
+  if (e.key === 'Tab') { e.preventDefault(); lbClose.focus(); }
 });
+
+// RESTORE URL STATE
+(function () {
+  const cat = new URLSearchParams(location.search).get('cat');
+  if (cat && Array.from(filterBtns).some(b => b.dataset.filter === cat)) applyFilter(cat);
+})();
 </script>
 
+<script src="../consent.js"></script>
 </body>
 </html>

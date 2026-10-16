@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Relief Panel Specification Guide — Studio Luminant</title>
 <meta name="description" content="How to specify architectural relief panels: tolerances, fixing systems, substrate interfaces &amp; what to include in tender documents. For specifiers.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/resources-specification-guide.htm">
@@ -222,38 +223,14 @@
     .compare-grid { grid-template-columns: 1fr; }
     .spec-checklist li { grid-template-columns: 36px 1fr; padding: 20px 20px; }
   }
+  /* a11y pass */
+  .method-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .method-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .method-table tbody td, .method-table tbody th { font-variant-numeric: tabular-nums; }
+  h3.compare-card-header { font-family: inherit; font-weight: inherit; line-height: normal; margin-top: 0; }
+  .compare-card dl, .compare-row dt, .compare-row dd { margin: 0; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Relief Panel Specification Guide", "item": "https://studioluminant.com.tr/en/resources-specification-guide.htm"}]}
 </script>
@@ -265,9 +242,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="en" data-lang-url="../kaynaklar-sartname-rehberi.htm" data-base="../"></div>
 
@@ -277,7 +251,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
   <div class="back-nav">
     <a href="resources.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Back to Resources
     </a>
   </div>
@@ -296,10 +270,10 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <h2>Relief Panels Are Not <em>Flat Cladding</em></h2>
     <p>
-      Standard interior cladding specifications — written for flat sheet materials like plasterboard, HPL, or stone veneer — don't translate directly to three-dimensional relief panels. Relief panels have variable thickness profiles and weight distributions that change across the panel face. A specification that doesn't account for this will create problems at installation that are expensive to resolve on site.
+      Standard interior cladding specifications — written for flat sheet materials like plasterboard, HPL, or stone veneer — don’t translate directly to three-dimensional relief panels. Relief panels have variable thickness profiles and weight distributions that change across the panel face. A specification that doesn’t account for this will create problems at installation that are expensive to resolve on site.
     </p>
     <p>
-      The good news: relief panel specification follows the same logic as any material specification. It just requires attention to a few additional parameters that flat cladding doesn't have.
+      The good news: relief panel specification follows the same logic as any material specification. It just requires attention to a few additional parameters that flat cladding doesn’t have.
     </p>
 
     <h2>The <em>Specification Checklist</em></h2>
@@ -307,10 +281,10 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       A complete relief panel specification should address the following parameters. Missing any of these creates ambiguity that the contractor will either price conservatively or resolve incorrectly.
     </p>
 
-    <ol class="spec-checklist">
-      <li><strong>Material.</strong> State the material family (e.g. polymer modified alpha gypsum). Don't assume — write it explicitly.</li>
+    <ol class="spec-checklist" role="list">
+      <li><strong>Material.</strong> State the material family (e.g. polymer modified alpha gypsum). Don’t assume — write it explicitly.</li>
       <li><strong>Panel dimensions and tolerances.</strong> Specify maximum panel size, nominal thickness, and the allowable dimensional tolerance. For relief panels, tolerance should be stated at both the thinnest and thickest points of the relief profile.</li>
-      <li><strong>Relief depth and geometry.</strong> Define the maximum relief depth (distance from the back plane to the highest point) and whether the geometry is from a supplied 3D file or from the manufacturer's catalogue. If from a 3D file, state the file format (STEP, OBJ, STL) and the minimum feature radius.</li>
+      <li><strong>Relief depth and geometry.</strong> Define the maximum relief depth (distance from the back plane to the highest point) and whether the geometry is from a supplied 3D file or from the manufacturer’s catalogue. If from a 3D file, state the file format (STEP, OBJ, STL) and the minimum feature radius.</li>
       <li><strong>Surface finish.</strong> Specify the finish system (e.g. artisan finishes), the colour reference (RAL, NCS, or custom match), the gloss level, and whether metallic or textured finishes are required.</li>
       <li><strong>Fixing method and substrate.</strong> State the substrate type (metal stud + plasterboard, masonry, concrete) and the required fixing method. Include maximum allowable deflection of the substrate under panel load.</li>
       <li><strong>Joint treatment.</strong> Define the joint width between panels, whether joints are expressed (shadow gap) or filled (seamless), and the acceptable joint tolerance.</li>
@@ -320,56 +294,59 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <h2>Fixing <em>Methods</em></h2>
     <p>
-      How a relief panel attaches to the wall is determined by three factors: panel weight, substrate type, and whether the installation is permanent or designed for future removal (common in hospitality where brands rotate interior schemes on a 7–10 year cycle).
+      How a relief panel attaches to the wall is determined by three factors: panel weight, substrate type, and whether the installation is permanent or designed for future removal (common in hospitality where brands rotate interior schemes on a 7–10&nbsp;year cycle).
     </p>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Fixing methods compared">
     <table class="method-table">
+      <caption>Fixing methods compared</caption>
       <thead>
         <tr>
-          <th>Method</th>
-          <th>Best For</th>
-          <th>Panel Weight Limit</th>
-          <th>Removable?</th>
+          <th scope="col">Method</th>
+          <th scope="col">Best For</th>
+          <th scope="col">Panel Weight Limit</th>
+          <th scope="col">Removable?</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Adhesive bond</strong> (construction adhesive + mechanical backup)</td>
+          <th scope="row"><strong>Adhesive bond</strong> (construction adhesive + mechanical backup)</th>
           <td>Flat or low-relief panels on rigid substrates (concrete, masonry)</td>
-          <td>Up to ~30 kg/m²</td>
+          <td>Up to ~30&nbsp;kg/m²</td>
           <td>No — destructive removal</td>
         </tr>
         <tr>
-          <td><strong>Concealed Z-clip</strong> (interlocking metal clips on panel back + wall)</td>
+          <th scope="row"><strong>Concealed Z-clip</strong> (interlocking metal clips on panel back + wall)</th>
           <td>Medium-weight panels, especially where future access or removal is needed</td>
-          <td>Up to ~45 kg/m²</td>
+          <td>Up to ~45&nbsp;kg/m²</td>
           <td>Yes — non-destructive</td>
         </tr>
         <tr>
-          <td><strong>Threaded insert + rail</strong> (embedded inserts in panel, mounted to aluminium rail system)</td>
+          <th scope="row"><strong>Threaded insert + rail</strong> (embedded inserts in panel, mounted to aluminium rail system)</th>
           <td>Heavy or deep-relief panels; large-format installations over plasterboard on metal stud</td>
-          <td>Up to ~60 kg/m²</td>
+          <td>Up to ~60&nbsp;kg/m²</td>
           <td>Yes — non-destructive</td>
         </tr>
         <tr>
-          <td><strong>French cleat</strong> (angled timber/metal cleat on panel + wall)</td>
+          <th scope="row"><strong>French cleat</strong> (angled timber/metal cleat on panel + wall)</th>
           <td>Feature panels, art installations, single-panel accent pieces</td>
-          <td>Up to ~40 kg/m²</td>
+          <td>Up to ~40&nbsp;kg/m²</td>
           <td>Yes — lift-off</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <div class="callout">
       <div class="callout-label">Hospitality Note</div>
       <p>
-        Hotel PIP programmes typically operate on a <strong>7–10 year renovation cycle</strong>. If your client is a hotel operator, specify a removable fixing system — it reduces the cost and disruption of the next interior refresh. Z-clip and rail systems allow panel removal without damaging the substrate, which also protects the drywall contractor's warranty.
+        Hotel PIP programmes typically operate on a <strong>7–10&nbsp;year renovation cycle</strong>. If your client is a hotel operator, specify a removable fixing system — it reduces the cost and disruption of the next interior refresh. Z-clip and rail systems allow panel removal without damaging the substrate, which also protects the drywall contractor’s warranty.
       </p>
     </div>
 
     <h2>Substrate <em>Considerations</em></h2>
     <p>
-      The most common mistake in relief panel installation is underestimating the substrate requirements. A standard metal stud + 12.5 mm plasterboard partition is designed for loads of approximately 20–25 kg/m². A deep-relief PMAG panel at 25 mm average thickness weighs 35–40 kg/m² — which exceeds the substrate's capacity.
+      The most common mistake in relief panel installation is underestimating the substrate requirements. A standard metal stud + 12.5&nbsp;mm plasterboard partition is designed for loads of approximately 20–25&nbsp;kg/m². A deep-relief PMAG panel at 25&nbsp;mm average thickness weighs 35–40&nbsp;kg/m² — which exceeds the substrate’s capacity.
     </p>
     <p>
       The solution is not to specify thicker plasterboard (a common but ineffective response), but to ensure the fixing system transfers load directly into the metal studs. Rail-based fixing systems span between studs and distribute the panel weight as point loads on the stud flanges, bypassing the plasterboard entirely. This is structurally sound and eliminates the risk of plasterboard delamination over time.
@@ -380,15 +357,19 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <div class="compare-grid">
       <div class="compare-card">
-        <div class="compare-card-header">Lumina PMAG™</div>
-        <div class="compare-row"><span class="compare-label">Weight @ 25mm</span><span class="compare-value">35–40 kg/m²</span></div>
-        <div class="compare-row"><span class="compare-label">Moisture</span><span class="compare-value">&lt; 5% absorption</span></div>
-        <div class="compare-row"><span class="compare-label">Best for</span><span class="compare-value">Interior — hotels, lobbies, column wraps, counter fronts, accent surfaces</span></div>
+        <h3 class="compare-card-header"><span translate="no">Lumina PMAG™</span></h3>
+        <dl>
+        <div class="compare-row"><dt class="compare-label">Weight @ 25mm</dt><dd class="compare-value">35–40&nbsp;kg/m²</dd></div>
+        <div class="compare-row"><dt class="compare-label">Moisture</dt><dd class="compare-value">&lt; 5% absorption</dd></div>
+        <div class="compare-row"><dt class="compare-label">Best for</dt><dd class="compare-value">Interior — hotels, lobbies, column wraps, counter fronts, accent surfaces</dd></div>
+        </dl>
       </div>
       <div class="compare-card">
-        <div class="compare-card-header">Lumina PUCOMP™ · exterior / wet-area variant</div>
-        <div class="compare-row"><span class="compare-label">Weight @ 15mm</span><span class="compare-value">12–18 kg/m²</span></div>
-        <div class="compare-row"><span class="compare-label">Best for</span><span class="compare-value">Exterior and wet areas</span></div>
+        <h3 class="compare-card-header"><span translate="no">Lumina PUCOMP™</span> · exterior / wet-area variant</h3>
+        <dl>
+        <div class="compare-row"><dt class="compare-label">Weight @ 15mm</dt><dd class="compare-value">12–18&nbsp;kg/m²</dd></div>
+        <div class="compare-row"><dt class="compare-label">Best for</dt><dd class="compare-value">Exterior and wet areas</dd></div>
+        </dl>
       </div>
     </div>
 
@@ -403,7 +384,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p>We can provide a draft specification clause and fixing detail drawings for your project.</p>
     <a href="contact.htm" class="btn-primary">
       Request Specification Support
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -439,5 +420,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="../shared.js"></script>
 <script src="../components.js"></script>
 
+<script src="../consent.js"></script>
 </body>
 </html>

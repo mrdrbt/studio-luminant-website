@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Lobi Duvar Kaplama &amp; Otel Karşılama Duvarı | Studio Luminant</title>
 <meta name="description" content="Lobi duvar kaplaması için adım adım spesifikasyon rehberi: otel karşılama duvarında boyut, derinlik, aydınlatma ve artizan finish kararları.">
 <link rel="canonical" href="https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm">
@@ -57,6 +58,7 @@
   .related-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
   .related-list a { display: flex; justify-content: space-between; align-items: center; background: var(--surface); padding: 18px 24px; font-size: 14px; color: var(--text-secondary); text-decoration: none; border: none; transition: background 0.3s, color 0.3s; }
   .related-list a:hover { background: var(--surface-2); color: var(--text-primary); }
+  .related-list a:focus-visible { background: var(--surface-2); color: var(--text-primary); }
   .related-list a span.tag { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
   .article-cta { margin: 80px 0; padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
   .article-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin-bottom: 16px; }
@@ -66,38 +68,9 @@
   .article-figure picture, .article-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
   .article-figure figcaption { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--text-secondary); text-align: center; margin-top: 14px; }
   @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .spec-grid { grid-template-columns: 1fr; } }
+  /* a11y pass */
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://studioluminant.com.tr/"},{"@type":"ListItem","position":2,"name":"Makaleler","item":"https://studioluminant.com.tr/makaleler.htm"},{"@type":"ListItem","position":3,"name":"Otel Lobisi için Heykelsi Karşılama Duvarı","item":"https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm"}]}
 </script>
@@ -106,9 +79,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="tr" data-lang-url=""></div>
 
@@ -118,7 +88,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
   <div class="back-nav">
     <a href="makaleler.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Makalelere Dön
     </a>
   </div>
@@ -131,7 +101,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p class="article-subtitle">
       Lobi spesifikasyonunda en kritik karar genellikle karşılama duvarıdır. Boyut, rölyef derinliği, aydınlatma açısı ve artizan finish — özel üretim döküm rölyef panel için adım adım rehber.
     </p>
-    <div class="article-meta"><span lang="en">Studio Luminant</span> · Spesifikasyon Rehberi · 6 dk okuma</div>
+    <div class="article-meta"><span lang="en"><span translate="no">Studio Luminant</span></span> · Spesifikasyon Rehberi · 6 dk okuma</div>
   </header>
 
   <article class="article-body">
@@ -205,7 +175,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <div class="spec-card">
         <div class="spec-card-label">01 — Format ve Boyut</div>
         <div class="spec-card-title">Panel ölçeği ve eklem detayı</div>
-        <p>Lumina PMAG™ panellerinin ölçüsü ve derz yerleşimi, duvarın ölçüsüne göre her projede ayrıca çözülür. Derzin görünür bir ızgara mı olacağını, yoksa rölyefin içinde mi kaybolacağını projenin ışık planı ve uygulama toleransı birlikte belirler.</p>
+        <p><span translate="no">Lumina PMAG™</span> panellerinin ölçüsü ve derz yerleşimi, duvarın ölçüsüne göre her projede ayrıca çözülür. Derzin görünür bir ızgara mı olacağını, yoksa rölyefin içinde mi kaybolacağını projenin ışık planı ve uygulama toleransı birlikte belirler.</p>
       </div>
       <div class="spec-card">
         <div class="spec-card-label">02 — Rölyef Derinliği</div>
@@ -226,13 +196,13 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <div class="callout">
       <div class="callout-label">Aydınlatma Notu</div>
-      <p>Lobi aydınlatma planı hazır olmadan rölyef derinliğini netleştirmeye çalışmak, kör bir spesifikasyondur. Armatür konumu, duvardan uzaklık ve ışık açısı birlikte belirlendiğinde rölyef sahneyi taşır; aksi takdirde yalnızca tekstür olarak okunur. <strong>Studio Luminant her teslimatta yalama açısı spesifikasyonu gönderir</strong> — bu belgeyi doğrudan elektrik mühendisinize iletebilirsiniz.</p>
+      <p>Lobi aydınlatma planı hazır olmadan rölyef derinliğini netleştirmeye çalışmak, kör bir spesifikasyondur. Armatür konumu, duvardan uzaklık ve ışık açısı birlikte belirlendiğinde rölyef sahneyi taşır; aksi takdirde yalnızca tekstür olarak okunur. <strong><span translate="no">Studio Luminant</span> her teslimatta yalama açısı spesifikasyonu gönderir</strong> — bu belgeyi doğrudan elektrik mühendisinize iletebilirsiniz.</p>
     </div>
 
     <h2>Lobi Ötesinde: Restoran, <em>Spa ve Koridor</em></h2>
 
     <p>
-      Karşılama duvarında belirlenen motif, aynı otelin diğer mekânlarına taşınabilir. Bunu mümkün kılan, ürettiğimiz dijital masterin malzeme-agnostik olmasıdır: aynı geometri lobi, sütun giydirme ve resepsiyon tezgâhı için Lumina PMAG™ ile; teras ve ıslak alanlar için Lumina PUCOMP™ ile üretilebilir.
+      Karşılama duvarında belirlenen motif, aynı otelin diğer mekânlarına taşınabilir. Bunu mümkün kılan, ürettiğimiz dijital masterin malzeme-agnostik olmasıdır: aynı geometri lobi, sütun giydirme ve resepsiyon tezgâhı için <span translate="no">Lumina PMAG™</span> ile; teras ve ıslak alanlar için <span translate="no">Lumina PUCOMP™</span> ile üretilebilir.
     </p>
 
     <p>
@@ -240,7 +210,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     </p>
 
     <p>
-      <strong>Spa ve ıslak alanlar.</strong> Islak hacimlerde aynı tasarım, dış mekân ve ıslak alan varyantı Lumina PUCOMP™ ile dökülür. Hamam çevresi, duş bölmesi çerçeveleri ve havuz kenarı detayları için uygundur. Bu mekânlarda yüzey şeması ayrıca değerlendirilir.
+      <strong>Spa ve ıslak alanlar.</strong> Islak hacimlerde aynı tasarım, dış mekân ve ıslak alan varyantı <span translate="no">Lumina PUCOMP™</span> ile dökülür. Hamam çevresi, duş bölmesi çerçeveleri ve havuz kenarı detayları için uygundur. Bu mekânlarda yüzey şeması ayrıca değerlendirilir.
     </p>
 
     <p>
@@ -255,7 +225,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <p>
       <strong>1. Duvar boyutları.</strong> Brüt alanı ve net kaplama alanını ayrı belirtin. Panel grid tercihini (büyük format / orta format) not edin.<br><br>
-      <strong>2. Motif referansı.</strong> Bir fotoğraf, eskiz veya marka öğesi yeterlidir. "Düz bir kayadan esinlenen organik doku" gibi yönlendirici bir tanımlama da çalışır.<br><br>
+      <strong>2. Motif referansı.</strong> Bir fotoğraf, eskiz veya marka öğesi yeterlidir. “Düz bir kayadan esinlenen organik doku” gibi yönlendirici bir tanımlama da çalışır.<br><br>
       <strong>3. Finish yönü.</strong> Sıcak mı, soğuk mu? Mat mı, hafif saten mi? Varsa referans görseller ekleyin.<br><br>
       <strong>4. Aydınlatma planı.</strong> Armatür türü ve duvardan mesafe, derinlik kararını doğrudan etkiler. Henüz netleşmediyse, bu konuşmayı birlikte yaparız.
     </p>
@@ -277,8 +247,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <strong>Termin:</strong> onaylı tasarımdan teslimata kadar geçen süre kapsama ve finishe göre değişir; teklifte kesinleşir. Montaj gerektiğinde proje bazında ayrıca fiyatlandırılır; teslim varsayılanı EXW Sapanca.
     </p>
 
-    <div class="related">
-      <div class="related-label">İlgili Makaleler</div>
+    <div class="related" role="navigation" aria-labelledby="related-label">
+      <div class="related-label" id="related-label">İlgili Makaleler</div>
       <ul class="related-list">
         <li><a href="ozel-uretim-duvar-paneli-mimar-rehberi.htm">Özel Üretim Duvar Paneli: Mimar Rehberi <span class="tag">Rehber</span></a></li>
         <li><a href="mimari-rolyef-panel-nedir.htm">Mimari Rölyef Panel Nedir? <span class="tag">Giriş</span></a></li>
@@ -323,5 +293,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 </div>
 <script src="shared.js"></script>
 <script src="components.js"></script>
+<script src="consent.js"></script>
 </body>
 </html>

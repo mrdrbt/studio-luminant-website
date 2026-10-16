@@ -7,6 +7,8 @@ function pictureTag(src, alt, sizes, opts) {
   var loading = opts.loading || 'lazy';
   var decode = loading === 'lazy' ? ' decoding="async"' : '';
   var prio = opts.fetchpriority ? ' fetchpriority="' + opts.fetchpriority + '"' : '';
+  var dims = (opts.width && opts.height) ? ' width="' + opts.width + '" height="' + opts.height + '"' : '';
+  alt = String(alt == null ? '' : alt).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
   var cls = opts.cls ? ' class="' + opts.cls + '"' : '';
   var onerror = opts.onerror ? ' onerror="' + opts.onerror + '"' : '';
   var srcset = [
@@ -17,7 +19,7 @@ function pictureTag(src, alt, sizes, opts) {
   return '<picture>' +
     '<source type="image/webp" srcset="' + srcset + '" sizes="' + sizes + '">' +
     '<img src="' + src + '" alt="' + alt + '"' + cls +
-    ' loading="' + loading + '"' + decode + prio + onerror + '>' +
+    dims + ' loading="' + loading + '"' + decode + prio + onerror + '>' +
     '</picture>';
 }
 
@@ -126,7 +128,7 @@ function pictureTag(src, alt, sizes, opts) {
       ${navItemsHtml}
   </ul>
   <div class="nav-right">
-    ${hasTwin ? `<a href="${langUrl}" class="nav-lang">${navLinks.langLabel}</a>` : ''}
+    ${hasTwin ? `<a href="${langUrl}" class="nav-lang" hreflang="${lang === 'tr' ? 'en' : 'tr'}" lang="${lang === 'tr' ? 'en' : 'tr'}">${navLinks.langLabel}</a>` : ''}
     <button class="nav-hamburger" aria-label="${navLinks.hamburgerOpen}" aria-expanded="false" aria-controls="mobileMenu">
       <span></span>
     </button>
@@ -136,7 +138,7 @@ function pictureTag(src, alt, sizes, opts) {
 
 <div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="${navLinks.mobileLabel}">
 ${mobileItemsHtml}
-  ${hasTwin ? `<a href="${langUrl}" class="nav-mobile-lang">${navLinks.langLabel}</a>` : ''}
+  ${hasTwin ? `<a href="${langUrl}" class="nav-mobile-lang" hreflang="${lang === 'tr' ? 'en' : 'tr'}" lang="${lang === 'tr' ? 'en' : 'tr'}">${navLinks.langLabel}</a>` : ''}
 </div>`;
 
   // ─── ACTIVE NAV LINK ───
@@ -145,6 +147,7 @@ ${mobileItemsHtml}
     const href = a.getAttribute('href');
     if (href && currentPage === href) {
       a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
     }
   });
 
@@ -204,7 +207,7 @@ ${mobileItemsHtml}
   if (mainNav) {
     window.addEventListener('scroll', () => {
       mainNav.classList.toggle('scrolled', window.scrollY > 60);
-    });
+    }, { passive: true });
   }
 
   // ─── CURSOR HOVER (for injected nav elements) ───
@@ -320,12 +323,17 @@ ${mobileItemsHtml}
         ${footerContent.bimText ? `<li><a href="${footerContent.bimHref}">${footerContent.bimText}</a></li>` : ''}
         <li><a href="${footerContent.privacyHref}">${footerContent.privacyText}</a></li>
         <li><a href="${footerContent.cookieHref}">${footerContent.cookieText}</a></li>
-        <li><a href="#" data-cookie-settings>${footerContent.cookieSettingsText}</a></li>
+        <li data-cookie-item><button type="button" data-cookie-settings>${footerContent.cookieSettingsText}</button></li>
       </ul>
     </div>
     <p class="footer-legal-entity">${footerContent.legalEntity}</p>
   </div>
 </footer>`;
+
+  // cookie-settings is an action: keep it only where consent.js (loaded after this file) is present
+  window.addEventListener('load', () => {
+    if (!window.slConsent) document.querySelectorAll('[data-cookie-item]').forEach(li => li.remove());
+  });
 
   // ─── INIT CURSOR (after elements are injected) ───
   if (typeof initCursor === 'function') initCursor();

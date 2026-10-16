@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Duvar Paneli Yüzey Kaplamaları, Renk ve Artizan Finish | Studio Luminant</title>
 <meta name="description" content="Mimari rölyef paneller için yüzey işlemleri: boya sistemleri, soğuk döküm metaller, dokulu kaplamalar ve özel renk eşleştirme. Mimarlar için rehber.">
 <link rel="canonical" href="https://studioluminant.com.tr/kaynaklar-yuzey-kaplamalari.htm">
@@ -259,38 +260,13 @@
     .finish-table { font-size: 13px; }
     .finish-table thead th, .finish-table tbody td { padding: 12px; }
   }
+  /* a11y pass */
+  .finish-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .finish-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .finish-table tbody td, .finish-table tbody th { font-variant-numeric: tabular-nums; }
+  .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Yüzey Kaplamaları, Boyalar ve Renk", "item": "https://studioluminant.com.tr/kaynaklar-yuzey-kaplamalari.htm"}]}
 </script>
@@ -302,9 +278,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="tr" data-lang-url="en/resources-finishes.htm"></div>
 
@@ -315,7 +288,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   <!-- BACK NAV -->
   <div class="back-nav">
     <a href="kaynaklar.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Kaynaklara Dön
     </a>
   </div>
@@ -336,7 +309,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <h2>Yüzey İşlemi Neden <em>Rölyefte</em> Daha Önemlidir</h2>
     <p>
-      Düz bir yüzeyde kaplama basitçe bir renktir. Üç boyutlu bir rölyef panelde ise kaplama bir aydınlatma enstrümanına dönüşür. Yüzey kaplaması, rölyef derinliği ve ortam ışığı arasındaki etkileşim, gün boyunca değişen gölge gradyanları, vurgu çıkıntıları ve tonal derinlik yaratır. 30 mm rölyefli mat beyaz bir panel, aynı geometrinin yarı parlak bronz halinden tamamen farklı okunacaktır — form değişmediği halde, ışık yüzeyle temelden farklı şekillerde etkileşime girdiği için.
+      Düz bir yüzeyde kaplama basitçe bir renktir. Üç boyutlu bir rölyef panelde ise kaplama bir aydınlatma enstrümanına dönüşür. Yüzey kaplaması, rölyef derinliği ve ortam ışığı arasındaki etkileşim, gün boyunca değişen gölge gradyanları, vurgu çıkıntıları ve tonal derinlik yaratır. 30&nbsp;mm rölyefli mat beyaz bir panel, aynı geometrinin yarı parlak bronz halinden tamamen farklı okunacaktır — form değişmediği halde, ışık yüzeyle temelden farklı şekillerde etkileşime girdiği için.
     </p>
     <p>
       Bu, yüzey işleme şartnamesinin sonradan düşünülecek bir kalem olmadığı anlamına gelir. Geometrinin nasıl algılandığını şekillendiren bir tasarım kararıdır ve desen seçimiyle birlikte düşünülmelidir, sonra değil.
@@ -354,13 +327,13 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
           <source type="image/webp" srcset="images/studio-luminant-finish-sample-box-open-800w.webp 800w, images/studio-luminant-finish-sample-box-open-1600w.webp 1600w" sizes="(max-width: 820px) 100vw, 820px">
           <img src="images/studio-luminant-finish-sample-box-open.jpg" alt="Açık siyah numune kutusunda dört yüzey örneği: dokuma altın, sepet örgü, çekiçlenmiş metalik, beyaz taneli" width="1600" height="1073" loading="lazy">
         </picture>
-        <figcaption class="sb-figcap">Studio Luminant yüzey numune kutusu — dört yüzey, dört malzeme sistemi.</figcaption>
+        <figcaption class="sb-figcap"><span translate="no">Studio Luminant</span> yüzey numune kutusu — dört yüzey, dört malzeme sistemi.</figcaption>
       </figure>
 
       <div class="sb-grid">
         <div class="sb-card">
           <div class="sb-name">Çekiçlenmiş</div>
-          <div class="sb-mat"><span lang="en">Lumina PMAG™</span> · Metalik yüzey</div>
+          <div class="sb-mat"><span lang="en"><span translate="no">Lumina PMAG™</span></span> · Metalik yüzey</div>
           <p class="sb-desc">Antik altın tonunda dövme-metal rölyef — metal değil, döküm. Metalik, seramik pürüzsüzlüğündeki gövdeye uygulanır; rölyef keskin kalır.</p>
         </div>
         <div class="sb-card">
@@ -370,7 +343,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         </div>
         <div class="sb-card">
           <div class="sb-name">Pütürlü</div>
-          <div class="sb-mat"><span lang="en">Lumina PMAG™</span> · Doğal, mat</div>
+          <div class="sb-mat"><span lang="en"><span translate="no">Lumina PMAG™</span></span> · Doğal, mat</div>
           <p class="sb-desc">Malzemenin kendi sıcak kırık-beyaz tonu, şeffaf ve düşük parlaklıkta mat bir yüzeyle. İnce doku yandan gelen ışıkta belirir, düz ışıkta sakin durur.</p>
         </div>
         <div class="sb-card">
@@ -382,49 +355,52 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     </section>
 
     <!-- FINISH TABLE -->
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Yüzey türleri">
     <table class="finish-table">
+      <caption>Yüzey türleri</caption>
       <thead>
         <tr>
-          <th>Yüzey Türü</th>
-          <th>Açıklama</th>
-          <th>Uygun Kullanım</th>
-          <th>Süre Etkisi</th>
+          <th scope="col">Yüzey Türü</th>
+          <th scope="col">Açıklama</th>
+          <th scope="col">Uygun Kullanım</th>
+          <th scope="col">Süre Etkisi</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="finish-badge finish-standard">Standart Boya</span></td>
+          <th scope="row"><span class="finish-badge finish-standard">Standart Boya</span></th>
           <td>Sprey uygulamalı akrilik veya mineral boya sistemi. Herhangi bir RAL veya NCS referansı. Mat, saten veya yarı parlak parlaklık seviyeleri.</td>
           <td>Genel iç mekanlar, otel koridorları, lobilerdeki vurgu yüzeyleri, tavan panelleri</td>
           <td>Standart süreye dahil</td>
         </tr>
         <tr>
-          <td><span class="finish-badge finish-metal">Soğuk Döküm Metal</span></td>
+          <th scope="row"><span class="finish-badge finish-metal">Soğuk Döküm Metal</span></th>
           <td>Gerçek metal parçacıkları (bronz, pirinç, bakır, demir) reçine matriste bağlanarak panel yüzeyine el ile uygulanır. Şartnameye göre cilalanabilir, patina verilebilir veya eskitilebilir.</td>
           <td>Vurgu yüzeyleri, resepsiyon masaları, asansör lobileri, premium konaklama</td>
-          <td>El işçiliği için +5–7 gün</td>
+          <td>El işçiliği için +5–7&nbsp;gün</td>
         </tr>
         <tr>
-          <td><span class="finish-badge finish-texture">Dokulu Kaplama</span></td>
+          <th scope="row"><span class="finish-badge finish-texture">Dokulu Kaplama</span></th>
           <td>Dokunsal yüzey dokusu ekleyen çok katmanlı kaplama sistemleri — taş dokusu, beton efekti, oksitlenmiş metal. Temel rölyef geometrisi üzerine uygulanır.</td>
           <td>Restoranlar, spa alanları, kültürel mekanlar, perakende özellik kurulumları</td>
-          <td>Katmanlı uygulama için +3–5 gün</td>
+          <td>Katmanlı uygulama için +3–5&nbsp;gün</td>
         </tr>
         <tr>
-          <td><span class="finish-badge finish-custom">Özel / Çok Tonlu</span></td>
+          <th scope="row"><span class="finish-badge finish-custom">Özel / Çok Tonlu</span></th>
           <td>Özel renk geliştirme, gradyan efektleri, iki tonlu işlemler veya fiziksel numune eşleştirme. Sağlanan swatch, Pantone veya fiziksel nesneye göre renk eşleştirilir.</td>
           <td>Marka özelinde kurulumlar, sanat komisyonları, tasarımcı iş birlikleri</td>
-          <td>Renk onay süreci dahil +5–10 gün</td>
+          <td>Renk onay süreci dahil +5–10&nbsp;gün</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h2>Rölyef Derinliği <em>Yüzeyle</em> Nasıl Etkileşir</h2>
     <p>
-      Sığ rölyef (5–15 mm) ince gölge oyunları üretir. Mat parlaklıkta açık renkli yüzeyler, yumuşak gradyanlar aracılığıyla geometriyi vurgular. Sığ rölyefte koyu renkli yüzeyler algılanan derinliği düzleştirebilir — gölgeler taban renginin içinde kaybolur.
+      Sığ rölyef (5–15&nbsp;mm) ince gölge oyunları üretir. Mat parlaklıkta açık renkli yüzeyler, yumuşak gradyanlar aracılığıyla geometriyi vurgular. Sığ rölyefte koyu renkli yüzeyler algılanan derinliği düzleştirebilir — gölgeler taban renginin içinde kaybolur.
     </p>
     <p>
-      Derin rölyef (25–50 mm) renk ne olursa olsun dramatik kontrastlar yaratır. Ancak <strong>parlaklık seviyesi</strong> kritik hale gelir: derin rölyefte yüksek parlak bir yüzey, deseni bastırabilecek sert speküler vurgular oluşturur. Aynı geometride mat veya saten bir yüzey, gözün tam üç boyutlu formu okumasına izin verir. Çoğu mimari uygulama için <strong>mat ile düşük saten</strong> arası en kontrollü sonucu üretir.
+      Derin rölyef (25–50&nbsp;mm) renk ne olursa olsun dramatik kontrastlar yaratır. Ancak <strong>parlaklık seviyesi</strong> kritik hale gelir: derin rölyefte yüksek parlak bir yüzey, deseni bastırabilecek sert speküler vurgular oluşturur. Aynı geometride mat veya saten bir yüzey, gözün tam üç boyutlu formu okumasına izin verir. Çoğu mimari uygulama için <strong>mat ile düşük saten</strong> arası en kontrollü sonucu üretir.
     </p>
 
     <div class="callout">
@@ -439,7 +415,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <!-- COMPATIBILITY GRID -->
     <div class="compat-grid">
       <div class="compat-card">
-        <div class="compat-card-title">Lumina PMAG™</div>
+        <div class="compat-card-title"><span translate="no">Lumina PMAG™</span></div>
         <div class="compat-card-list">
           <span class="compat-yes">&#10003;</span> Akrilik boya sistemleri<br>
           <span class="compat-yes">&#10003;</span> Mineral silikat boya<br>
@@ -450,7 +426,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         </div>
       </div>
       <div class="compat-card">
-        <div class="compat-card-title">Lumina PUCOMP™ · dış mekân / ıslak alan</div>
+        <div class="compat-card-title"><span translate="no">Lumina PUCOMP™</span> · dış mekân / ıslak alan</div>
         <div class="compat-card-list">
           <span class="compat-yes">&#10003;</span> Artizan finish<br>
           <span class="compat-yes">&#10003;</span> Akrilik boya sistemleri<br>
@@ -494,7 +470,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <h2><em>Şartnamenize</em> Neleri Dahil Etmeli</h2>
     <p>
-      Rölyef paneller için eksiksiz bir yüzey işleme şartnamesi şunları içermelidir: <strong>renk referansı</strong> (RAL, NCS, Pantone veya "onaylı numuneye eşle"), <strong>parlaklık seviyesi</strong> (mat, saten, yarı parlak veya parlak), <strong>yüzey türü</strong> (standart boya, soğuk döküm metal, dokulu veya özel) ve ortama özgü <strong>performans gereksinimleri</strong> — yiyecek hizmet alanları için yıkanabilirlik veya güneşe maruz iç mekanlar için UV direnci gibi.
+      Rölyef paneller için eksiksiz bir yüzey işleme şartnamesi şunları içermelidir: <strong>renk referansı</strong> (RAL, NCS, Pantone veya “onaylı numuneye eşle”), <strong>parlaklık seviyesi</strong> (mat, saten, yarı parlak veya parlak), <strong>yüzey türü</strong> (standart boya, soğuk döküm metal, dokulu veya özel) ve ortama özgü <strong>performans gereksinimleri</strong> — yiyecek hizmet alanları için yıkanabilirlik veya güneşe maruz iç mekanlar için UV direnci gibi.
     </p>
     <p>
       Soğuk döküm metal yüzeyler için taban metali (bronz, pirinç, bakır, demir) ve istenen yüzey işlemini (cilalı, fırçalanmış, patinalı veya doğal eskitilmiş) belirtin. Patina yüzeyler atölyede uygulanır ve mühürlenir — sahada oksitlenmeye devam etmezler.
@@ -508,7 +484,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p>Malzeme ve renginizde bitmiş bir rölyef numune talep edin — yüzeyi onaylamanın en güvenilir yolu.</p>
     <a href="iletisim.htm" class="btn-primary">
       Numune Talep Edin
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -542,5 +518,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="shared.js"></script>
 <script src="components.js"></script>
 
+<script src="consent.js"></script>
 </body>
 </html>

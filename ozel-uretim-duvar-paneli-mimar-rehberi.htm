@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Özel Üretim Duvar Paneli Sipariş Rehberi — Studio Luminant</title>
 <meta name="description" content="Mimarlar için özel üretim rölyef duvar panelleri ve heykelsi yüzeyler. Tasarımdan döküme tek atölye — Lumina PMAG™. Sapanca'dan tüm Türkiye'ye.">
 <link rel="canonical" href="https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm">
@@ -25,6 +26,13 @@
 <link rel="stylesheet" href="shared.css">
 
 <style>
+  :root {
+    --green: #3F6B3A;
+    --blue: #3D5E80;
+    --orange: #8E4426;
+    --amber: #85571A;
+  }
+
   .nav-links a.active { color: var(--gold); }
   .article-wrapper { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; padding: 0 60px; }
   .back-nav { padding: 40px 0 0; }
@@ -53,7 +61,7 @@
   .timeline-table tbody td { padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); vertical-align: top; color: var(--text-secondary); font-weight: 300; line-height: 1.6; }
   .timeline-table tbody tr:hover { background: var(--surface); }
   .timeline-table strong { color: var(--text-primary); font-weight: 500; }
-  .phase-badge { display: inline-block; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 3px; color: var(--ink); border: 1px solid var(--border-strong); white-space: nowrap; }
+  .phase-badge { display: inline-block; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 3px; color: var(--obsidian); border: 1px solid var(--border-strong); white-space: nowrap; }
   .phase-design { background: var(--blue); }
   .phase-production { background: var(--amber); }
   .phase-delivery { background: var(--green); }
@@ -74,44 +82,21 @@
   .related-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
   .related-list a { display: flex; justify-content: space-between; align-items: center; background: var(--surface); padding: 18px 24px; font-size: 14px; color: var(--text-secondary); text-decoration: none; border: none; transition: background 0.3s, color 0.3s; }
   .related-list a:hover { background: var(--surface-2); color: var(--text-primary); }
+  .related-list a:focus-visible { background: var(--surface-2); color: var(--text-primary); }
   .related-list a span.tag { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
   .article-cta { margin: 80px 0; padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
   .article-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin-bottom: 16px; }
   .article-cta h3 em { font-style: italic; color: var(--gold); }
   .article-cta p { font-size: 14px; color: var(--text-secondary); font-weight: 300; margin-bottom: 32px; }
   @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .compare-grid { grid-template-columns: 1fr; } .spec-checklist li { grid-template-columns: 36px 1fr; padding: 20px 20px; } }
+  /* a11y pass */
+  .timeline-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .timeline-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .timeline-table tbody td, .timeline-table tbody th { font-variant-numeric: tabular-nums; }
+  h3.compare-card-header { font-family: inherit; font-weight: inherit; line-height: normal; margin-top: 0; }
+  .compare-card dl, .compare-row dt, .compare-row dd { margin: 0; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Makaleler", "item": "https://studioluminant.com.tr/makaleler.htm"}, {"@type": "ListItem", "position": 3, "name": "Özel Üretim Duvar Paneli: Mimar Rehberi", "item": "https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm"}]}
 </script>
@@ -121,9 +106,6 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "tr", "mainEntity": [{"@type": "Question", "name": "PUCOMP ne zaman kullanılır?", "acceptedAnswer": {"@type": "Answer", "text": "İç mekânlar PMAG ile çözülür; PUCOMP dış mekân ve ıslak alanlar için kullanılan varyanttır. Aşağıdaki özet karar için yeterlidir; ağırlık ve yapısal veriler için Ağırlık ve Yapısal sayfasına bakın."}}, {"@type": "Question", "name": "Teslimat ve montaj nasıl yapılır?", "acceptedAnswer": {"@type": "Answer", "text": "Paneller EXW Sapanca teslim edilir; sevkiyat ve gümrük düzenlemeleri proje konumuna göre planlanır. Studio Luminant, projenin gerektirdiği durumlarda montajı üstlenir; montaj, projeye özel olarak ayrıca teklif edilir. Montajın kapsamı, alt yapı tipine ve sabitleme yöntemine göre erkenden tanımlanmalıdır."}}]}</script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="tr" data-lang-url="en/how-to-specify-custom-cast-wall-panels.htm"></div>
 
@@ -133,7 +115,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
   <div class="back-nav">
     <a href="makaleler.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Makalelere Dön
     </a>
   </div>
@@ -144,9 +126,9 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Özel Üretim Duvar Paneli<br><em>Sipariş Rehberi.</em>
     </h1>
     <p class="article-subtitle">
-      Özel üretim bir mimari rölyef duvar paneli, raftan seçilen bir ürün değildir — tasarım aşamasında verilen bir karardır. İlk brief'ten montaja kadar süreci sekiz adımda açıklıyoruz.
+      Özel üretim bir mimari rölyef duvar paneli, raftan seçilen bir ürün değildir — tasarım aşamasında verilen bir karardır. İlk brief’ten montaja kadar süreci sekiz adımda açıklıyoruz.
     </p>
-    <div class="article-meta"><span lang="en">Studio Luminant</span> · Mimar Rehberi · 8 dk okuma</div>
+    <div class="article-meta"><span lang="en"><span translate="no">Studio Luminant</span></span> · Mimar Rehberi · 8 dk okuma</div>
   </header>
 
   <article class="article-body">
@@ -163,15 +145,15 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Özel üretim bir panel siparişi, aşağıdaki sekiz parametrenin tanımlanmasıyla netleşir. Bu adımları erken netleştirmek, teslimat süresini öngörülebilir kılar.
     </p>
 
-    <ol class="spec-checklist">
+    <ol class="spec-checklist" role="list">
       <li><span><strong>Brief ve bağlam.</strong> Panelin nerede kullanılacağını (lobi, restoran, bar, asansör holü), duvarın yaklaşık alanını ve panelin projedeki rolünü (vurgu duvarı, sürekli yüzey, tek parça) tanımlayın. Aydınlatma yönü erkenden konuşulmalıdır — rölyef, ışığı yakalayarak okunur.</span></li>
       <li><span><strong>Referans ve motif.</strong> Motif, mevcut bir tasarım dilinden, bir desenden veya sıfırdan geliştirilebilir. Elinizdeki görsel, eskiz veya 3D dosyayı paylaşın; yoksa konsept geliştirme süreci buradan başlar.</span></li>
-      <li><span><strong>Malzeme.</strong> Sütun giydirme, tezgâh önü ve vurgu yüzeyleri dahil tüm iç mekân uygulamaları için <a href="urunler.htm">Lumina PMAG™</a>, yalnızca dış mekân ve ıslak alan işleri için <strong>Lumina PUCOMP™</strong> seçilir. İkisi de aynı artizan finish'i kabul eder.</span></li>
+      <li><span><strong>Malzeme.</strong> Sütun giydirme, tezgâh önü ve vurgu yüzeyleri dahil tüm iç mekân uygulamaları için <a href="urunler.htm"><span translate="no">Lumina PMAG™</span></a>, yalnızca dış mekân ve ıslak alan işleri için <strong><span translate="no">Lumina PUCOMP™</span></strong> seçilir. İkisi de aynı artizan finish’i kabul eder.</span></li>
       <li><span><strong>Numune.</strong> Bir yüzeyin ışığı nasıl yakaladığı render üzerinde tam okunmaz. Üretime geçmeden önce fiziksel bir numune — motif parçası veya bitiş örneği — talep edin.</span></li>
       <li><span><strong>Format ve m².</strong> Maksimum panel boyutunu, nominal kalınlığı ve toplam yüzey alanını belirleyin. Format hem kalıp stratejisini hem de panel ağırlığını belirler.</span></li>
       <li><span><strong>Artizan finish ve renk.</strong> Bitiş sistemini, renk referansını (RAL, NCS veya özel eşleşme) ve parlaklık seviyesini tanımlayın. Yüzey seçimi, üç boyutlu rölyefin nasıl algılandığını doğrudan etkiler.</span></li>
       <li><span><strong>Teknik belgeler.</strong> Şartname yazımı ve koordinasyon için <a href="iletisim.htm">teknik veri sayfası ve montaj çizimi</a> talep edin. Bunlar çizim setine erkenden girdiğinde çakışmalar tasarım masasında çözülür, sahada değil.</span></li>
-      <li><span><strong>Sabitleme ve alt yapı.</strong> Alt yapı tipini ve sabitleme yöntemini netleştirin. Derin rölyefli paneller standart bir bölme duvarın taşıma kapasitesini aşabilir — detay için <a href="kaynaklar-sartname-rehberi.htm">Şartname Rehberi'ne</a> bakın.</span></li>
+      <li><span><strong>Sabitleme ve alt yapı.</strong> Alt yapı tipini ve sabitleme yöntemini netleştirin. Derin rölyefli paneller standart bir bölme duvarın taşıma kapasitesini aşabilir — detay için <a href="kaynaklar-sartname-rehberi.htm">Şartname Rehberi’ne</a> bakın.</span></li>
     </ol>
 
     <h2>Tipik <em>Zaman Çizelgesi</em></h2>
@@ -179,33 +161,36 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Özel üretim bir panel, dört ana safhadan geçer. Aşağıdaki süreler gösterge niteliğindedir ve yüzey alanına, motif karmaşıklığına ve kalıp sayısına göre değişir; projenize özel güncel süreler için <a href="kaynaklar-teslimat-sureci.htm">Teslimat Süreleri</a> sayfasına bakın.
     </p>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Özel üretim safhaları ve gösterge süreler">
     <table class="timeline-table">
+      <caption>Özel üretim safhaları ve gösterge süreler</caption>
       <thead>
-        <tr><th>Safha</th><th>Kapsam</th><th>Gösterge Süre</th></tr>
+        <tr><th scope="col">Safha</th><th scope="col">Kapsam</th><th scope="col">Gösterge Süre</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="phase-badge phase-design">Tasarım</span></td>
+          <th scope="row"><span class="phase-badge phase-design">Tasarım</span></th>
           <td>Konsept, motif geliştirme, numune onayı</td>
-          <td>2–4 hafta</td>
+          <td>2–4&nbsp;hafta</td>
         </tr>
         <tr>
-          <td><span class="phase-badge phase-production">Kalıp & Üretim</span></td>
+          <th scope="row"><span class="phase-badge phase-production">Kalıp &amp; Üretim</span></th>
           <td>Master üretimi, kalıp alımı, döküm ve <strong>artizan finish</strong></td>
-          <td>4–8 hafta (m²'ye bağlı)</td>
+          <td>4–8&nbsp;hafta (m²’ye bağlı)</td>
         </tr>
         <tr>
-          <td><span class="phase-badge phase-delivery">Teslimat</span></td>
+          <th scope="row"><span class="phase-badge phase-delivery">Teslimat</span></th>
           <td>Paketleme ve sevkiyat — <strong>EXW Sapanca</strong></td>
           <td>Proje konumuna göre</td>
         </tr>
         <tr>
-          <td><span class="phase-badge phase-install">Montaj</span></td>
+          <th scope="row"><span class="phase-badge phase-install">Montaj</span></th>
           <td>Yerinde montaj — gerektiğinde, proje bazında ayrı teklif</td>
           <td>Proje bazında</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <div class="callout">
       <div class="callout-label">Planlama Notu</div>
@@ -221,25 +206,29 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <div class="compare-grid">
       <div class="compare-card">
-        <div class="compare-card-header"><span lang="en">Lumina PMAG™</span></div>
-        <div class="compare-row"><span class="compare-label">Ağırlık @ 25mm</span><span class="compare-value">35–40 kg/m²</span></div>
-        <div class="compare-row"><span class="compare-label">En uygun</span><span class="compare-value">İç mekân — oteller, lobiler, sütun giydirme, tezgâh önü, vurgu yüzeyleri</span></div>
+        <h3 class="compare-card-header"><span lang="en"><span translate="no">Lumina PMAG™</span></span></h3>
+        <dl>
+        <div class="compare-row"><dt class="compare-label">Ağırlık @ 25mm</dt><dd class="compare-value">35–40&nbsp;kg/m²</dd></div>
+        <div class="compare-row"><dt class="compare-label">En uygun</dt><dd class="compare-value">İç mekân — oteller, lobiler, sütun giydirme, tezgâh önü, vurgu yüzeyleri</dd></div>
+        </dl>
       </div>
       <div class="compare-card">
-        <div class="compare-card-header"><span lang="en">Lumina PUCOMP™</span> · dış mekân / ıslak alan</div>
-        <div class="compare-row"><span class="compare-label">Ağırlık @ 15mm</span><span class="compare-value">12–18 kg/m²</span></div>
-        <div class="compare-row"><span class="compare-label">En uygun</span><span class="compare-value">Dış mekân ve ıslak alan</span></div>
+        <h3 class="compare-card-header"><span lang="en"><span translate="no">Lumina PUCOMP™</span></span> · dış mekân / ıslak alan</h3>
+        <dl>
+        <div class="compare-row"><dt class="compare-label">Ağırlık @ 15mm</dt><dd class="compare-value">12–18&nbsp;kg/m²</dd></div>
+        <div class="compare-row"><dt class="compare-label">En uygun</dt><dd class="compare-value">Dış mekân ve ıslak alan</dd></div>
+        </dl>
       </div>
     </div>
 
 
     <h2>Teslimat ve <em>Montaj</em></h2>
     <p>
-      Paneller <strong>EXW Sapanca</strong> teslim edilir; sevkiyat ve gümrük düzenlemeleri proje konumuna göre planlanır. Studio Luminant, projenin gerektirdiği durumlarda montajı üstlenir; montaj, projeye özel olarak ayrıca teklif edilir. Montajın kapsamı, alt yapı tipine ve sabitleme yöntemine göre erkenden tanımlanmalıdır.
+      Paneller <strong>EXW Sapanca</strong> teslim edilir; sevkiyat ve gümrük düzenlemeleri proje konumuna göre planlanır. <span translate="no">Studio Luminant</span>, projenin gerektirdiği durumlarda montajı üstlenir; montaj, projeye özel olarak ayrıca teklif edilir. Montajın kapsamı, alt yapı tipine ve sabitleme yöntemine göre erkenden tanımlanmalıdır.
     </p>
 
-    <div class="related">
-      <div class="related-label">İlgili Kaynaklar</div>
+    <div class="related" role="navigation" aria-labelledby="related-label">
+      <div class="related-label" id="related-label">İlgili Kaynaklar</div>
       <ul class="related-list">
         <li><a href="kaynaklar-sartname-rehberi.htm"><span>Rölyef Panel Şartname Rehberi</span><span class="tag">Teknik</span></a></li>
         <li><a href="kaynaklar-agirlik-yapisal.htm"><span>Ağırlık ve Yapısal Veriler</span><span class="tag">Teknik</span></a></li>
@@ -253,10 +242,10 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
   <div class="article-cta">
     <h3>Projeniz İçin Bir <em>Numuneyle</em> Başlayın</h3>
-    <p>Brief'inizi paylaşın; malzeme önerisi, taslak şartname maddesi ve fiziksel numune ile yanıt verelim.</p>
+    <p>Brief’inizi paylaşın; malzeme önerisi, taslak şartname maddesi ve fiziksel numune ile yanıt verelim.</p>
     <a href="iletisim.htm" class="btn-primary">
       Numune Talep Edin
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -290,5 +279,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="shared.js"></script>
 <script src="components.js"></script>
 
+<script src="consent.js"></script>
 </body>
 </html>

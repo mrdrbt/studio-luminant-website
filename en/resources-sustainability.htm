@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Sustainability &amp; Materials — Studio Luminant</title>
 <meta name="description" content="Material sourcing, recyclability, VOC emissions &amp; environmental profile of Lumina PMAG™ relief panels — data for green building specs.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/resources-sustainability.htm">
@@ -234,38 +235,13 @@
   @media (max-width: 480px) {
     .lifecycle-grid { grid-template-columns: 1fr; }
   }
+  /* a11y pass */
+  .env-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .env-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .env-table tbody td, .env-table tbody th { font-variant-numeric: tabular-nums; }
+  .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Sustainability & Materials", "item": "https://studioluminant.com.tr/en/resources-sustainability.htm"}]}
 </script>
@@ -277,9 +253,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="en" data-lang-url="../kaynaklar-surdurulebilirlik.htm" data-base="../"></div>
 
@@ -290,7 +263,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   <!-- BACK NAV -->
   <div class="back-nav">
     <a href="resources.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Back to Resources
     </a>
   </div>
@@ -311,15 +284,15 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <h2>Why Material Choice Is an <em>Environmental Decision</em></h2>
     <p>
-      Every square metre of interior cladding carries an environmental footprint — from raw material extraction through manufacturing, transport, installation, service life, and eventual disposal. For architects working within BREEAM, LEED, or WELL frameworks, the material specification is one of the most direct levers available for improving the building's environmental performance. The choice is not simply between "sustainable" and "unsustainable" materials — it is about understanding the full lifecycle and making an informed trade-off.
+      Every square metre of interior cladding carries an environmental footprint — from raw material extraction through manufacturing, transport, installation, service life, and eventual disposal. For architects working within BREEAM, LEED, or WELL frameworks, the material specification is one of the most direct levers available for improving the building’s environmental performance. The choice is not simply between “sustainable” and “unsustainable” materials — it is about understanding the full lifecycle and making an informed trade-off.
     </p>
     <p>
       Architectural relief panels occupy a distinctive position in this conversation. They are decorative, which sometimes leads to the assumption that they are environmentally discretionary. But the material used here, mineral gypsum, has a measurable environmental profile that compares favourably to many conventional alternatives when the full picture is considered.
     </p>
 
-    <h2>Lumina PMAG™ — <em>Gypsum as a Material</em></h2>
+    <h2><span translate="no">Lumina PMAG™</span> — <em>Gypsum as a Material</em></h2>
     <p>
-      Lumina PMAG™ is based on <strong>alpha gypsum</strong> (calcium sulphate dihydrate), a naturally occurring mineral that is also produced as a by-product of industrial processes such as flue-gas desulphurisation at power stations. Gypsum is one of the few construction materials that can be <strong>recycled indefinitely</strong> without loss of performance — the hydration process that forms the set material is fully reversible. Crushed gypsum can be re-calcined and re-cast into new products with no degradation in material properties.
+      <span translate="no">Lumina PMAG™</span> is based on <strong>alpha gypsum</strong> (calcium sulphate dihydrate), a naturally occurring mineral that is also produced as a by-product of industrial processes such as flue-gas desulphurisation at power stations. Gypsum is one of the few construction materials that can be <strong>recycled indefinitely</strong> without loss of performance — the hydration process that forms the set material is fully reversible. Crushed gypsum can be re-calcined and re-cast into new products with no degradation in material properties.
     </p>
     <p>
       The manufacturing process for PMAG panels is low-energy compared to alternatives. Gypsum casting occurs at ambient temperature — there are no kilns, no high-temperature curing ovens, and no sintering processes. The primary energy input is the calcination of raw gypsum (typically at 120–180°C), which is significantly lower than the temperatures required for ceramics (1000–1200°C), glass (1500°C+), or metal casting.
@@ -341,61 +314,64 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       </div>
     </div>
 
-    <h2>Lumina PUCOMP™ — <em>Exterior and Wet-Area Variant</em></h2>
+    <h2><span translate="no">Lumina PUCOMP™</span> — <em>Exterior and Wet-Area Variant</em></h2>
     <p>
-      Lumina PUCOMP™ is the exterior and wet-area variant; every interior surface is specified in PMAG. The figures on this page describe PMAG. For an exterior or wet-area project, contact us and we will go through the specification with you.
+      <span translate="no">Lumina PUCOMP™</span> is the exterior and wet-area variant; every interior surface is specified in PMAG. The figures on this page describe PMAG. For an exterior or wet-area project, contact us and we will go through the specification with you.
     </p>
 
     <div class="callout">
       <div class="callout-label">Lifecycle Perspective</div>
       <p>
-        A common mistake in sustainability assessments is focusing on <strong>embodied carbon at manufacture</strong> while ignoring service life. A material with moderate embodied carbon that lasts 30 years will have a lower annualised carbon footprint than a "greener" material that requires replacement every 10 years — particularly when replacement involves demolition waste, new manufacturing, and additional transport.
+        A common mistake in sustainability assessments is focusing on <strong>embodied carbon at manufacture</strong> while ignoring service life. A material with moderate embodied carbon that lasts 30&nbsp;years will have a lower annualised carbon footprint than a “greener” material that requires replacement every 10&nbsp;years — particularly when replacement involves demolition waste, new manufacturing, and additional transport.
       </p>
     </div>
 
     <h2>Environmental <em>Comparison</em></h2>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Lumina PMAG™ vs natural stone: environmental comparison">
     <table class="env-table">
+      <caption><span translate="no">Lumina PMAG™</span> vs natural stone: environmental comparison</caption>
       <thead>
         <tr>
-          <th>Factor</th>
-          <th>Lumina PMAG™</th>
-          <th>Natural Stone</th>
+          <th scope="col">Factor</th>
+          <th scope="col"><span translate="no">Lumina PMAG™</span></th>
+          <th scope="col">Natural Stone</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Raw material source</strong></td>
+          <th scope="row"><strong>Raw material source</strong></th>
           <td>Natural/FGD gypsum</td>
           <td>Quarried stone</td>
         </tr>
         <tr>
-          <td><strong>Manufacturing energy</strong></td>
+          <th scope="row"><strong>Manufacturing energy</strong></th>
           <td><span class="rating-badge rating-high">Low</span></td>
           <td><span class="rating-badge rating-low">High</span> (cutting, polishing)</td>
         </tr>
         <tr>
-          <td><strong>End-of-life recyclability</strong></td>
+          <th scope="row"><strong>End-of-life recyclability</strong></th>
           <td><span class="rating-badge rating-high">Full</span> — re-calcinable</td>
           <td><span class="rating-badge rating-high">Full</span> — re-cuttable</td>
         </tr>
         <tr>
-          <td><strong>VOC emissions (installed)</strong></td>
+          <th scope="row"><strong>VOC emissions (installed)</strong></th>
           <td><span class="rating-badge rating-high">Very Low</span></td>
           <td><span class="rating-badge rating-high">None</span></td>
         </tr>
         <tr>
-          <td><strong>Weight (transport impact)</strong></td>
-          <td>35–40 kg/m² @ 25 mm</td>
-          <td>65–80 kg/m² @ 25 mm</td>
+          <th scope="row"><strong>Weight (transport impact)</strong></th>
+          <td>35–40&nbsp;kg/m² @ 25&nbsp;mm</td>
+          <td>65–80&nbsp;kg/m² @ 25&nbsp;mm</td>
         </tr>
         <tr>
-          <td><strong>Typical service life</strong></td>
+          <th scope="row"><strong>Typical service life</strong></th>
           <td>30+ years (interior)</td>
           <td>50+ years</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h2>The Material <em>Lifecycle</em></h2>
 
@@ -429,10 +405,10 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <h2>What to Include in <em>Green Specifications</em></h2>
     <p>
-      For projects targeting BREEAM, LEED, or WELL certification, include the following in your specification clause: a requirement for <strong>low-VOC paint systems</strong> (compliant with EU Directive 2004/42/CE or equivalent), a request for the manufacturer's <strong>Environmental Product Declaration (EPD)</strong> or equivalent lifecycle data, confirmation of <strong>recyclability pathway</strong> at end of life, and documentation of <strong>manufacturing waste management</strong> practices.
+      For projects targeting BREEAM, LEED, or WELL certification, include the following in your specification clause: a requirement for <strong>low-VOC paint systems</strong> (compliant with EU Directive 2004/42/CE or equivalent), a request for the manufacturer’s <strong>Environmental Product Declaration (EPD)</strong> or equivalent lifecycle data, confirmation of <strong>recyclability pathway</strong> at end of life, and documentation of <strong>manufacturing waste management</strong> practices.
     </p>
     <p>
-      We are committed to providing transparent environmental data. Where formal EPDs are not yet available for a specific product configuration, we supply material composition declarations, VOC test data, and recyclability statements that can be submitted as part of the project's sustainability documentation.
+      We are committed to providing transparent environmental data. Where formal EPDs are not yet available for a specific product configuration, we supply material composition declarations, VOC test data, and recyclability statements that can be submitted as part of the project’s sustainability documentation.
     </p>
 
   </article>
@@ -443,7 +419,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p>Request material composition data, VOC test reports, or recyclability documentation for your sustainability assessment.</p>
     <a href="contact.htm" class="btn-primary">
       Request Data
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -478,5 +454,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="../shared.js"></script>
 <script src="../components.js"></script>
 
+<script src="../consent.js"></script>
 </body>
 </html>

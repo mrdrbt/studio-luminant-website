@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Sürdürülebilirlik ve Malzemeler — Studio Luminant</title>
 <meta name="description" content="Lumina PMAG™ rölyef panellerinin malzeme kaynağı, geri dönüşüm, VOC emisyonları ve çevresel profili — yeşil bina şartnameleri için veriler.">
 <link rel="canonical" href="https://studioluminant.com.tr/kaynaklar-surdurulebilirlik.htm">
@@ -234,38 +235,13 @@
   @media (max-width: 480px) {
     .lifecycle-grid { grid-template-columns: 1fr; }
   }
+  /* a11y pass */
+  .env-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .env-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .env-table tbody td, .env-table tbody th { font-variant-numeric: tabular-nums; }
+  .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Sürdürülebilirlik ve Malzemeler", "item": "https://studioluminant.com.tr/kaynaklar-surdurulebilirlik.htm"}]}
 </script>
@@ -277,9 +253,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="tr" data-lang-url="en/resources-sustainability.htm"></div>
 
@@ -290,7 +263,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   <!-- BACK NAV -->
   <div class="back-nav">
     <a href="kaynaklar.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Kaynaklara Dön
     </a>
   </div>
@@ -311,15 +284,15 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <h2>Malzeme Seçimi Neden Bir <em>Çevresel Karardır</em></h2>
     <p>
-      Her metrekare iç mekan kaplaması bir çevresel ayak izi taşır — ham madde çıkarımından imalata, nakliyeye, kuruluma, servis ömrüne ve nihai bertarafa kadar. BREEAM, LEED veya WELL çerçevelerinde çalışan mimarlar için malzeme şartnamesi, binanın çevresel performansını iyileştirmek için mevcut en doğrudan araçlardan biridir. Seçim basitçe "sürdürülebilir" ile "sürdürülebilir olmayan" malzemeler arasında değildir — tam yaşam döngüsünü anlamak ve bilinçli bir denge kurmaktır.
+      Her metrekare iç mekan kaplaması bir çevresel ayak izi taşır — ham madde çıkarımından imalata, nakliyeye, kuruluma, servis ömrüne ve nihai bertarafa kadar. BREEAM, LEED veya WELL çerçevelerinde çalışan mimarlar için malzeme şartnamesi, binanın çevresel performansını iyileştirmek için mevcut en doğrudan araçlardan biridir. Seçim basitçe “sürdürülebilir” ile “sürdürülebilir olmayan” malzemeler arasında değildir — tam yaşam döngüsünü anlamak ve bilinçli bir denge kurmaktır.
     </p>
     <p>
       Mimari rölyef paneller bu tartışmada kendine özgü bir konuma sahiptir. Dekoratif oldukları için bazen çevresel açıdan isteğe bağlı oldukları varsayılır. Ancak burada kullanılan malzeme, yani mineral alçı, tam resme bakıldığında birçok geleneksel alternatifle olumlu biçimde karşılaştırılan ölçülebilir bir çevresel profile sahiptir.
     </p>
 
-    <h2>Lumina PMAG™ — <em>Bir Malzeme Olarak Alçı</em></h2>
+    <h2><span translate="no">Lumina PMAG™</span> — <em>Bir Malzeme Olarak Alçı</em></h2>
     <p>
-      Lumina PMAG™, doğal olarak oluşan ve ayrıca elektrik santrallerindeki baca gazı desülfürizasyonu gibi endüstriyel süreçlerin yan ürünü olarak da üretilen <strong>alfa alçı</strong> (kalsiyum sülfat dihidrat) üzerine kuruludur. Alçı, performans kaybı olmadan <strong>sonsuz kez geri dönüştürülebilen</strong> az sayıdaki yapı malzemesinden biridir — prizini almış malzemeyi oluşturan hidrasyon süreci tamamen geri dönüşümlüdür. Kırılmış alçı, malzeme özelliklerinde herhangi bir bozulma olmadan yeniden kalsine edilip yeni ürünlere dönüştürülebilir.
+      <span translate="no">Lumina PMAG™</span>, doğal olarak oluşan ve ayrıca elektrik santrallerindeki baca gazı desülfürizasyonu gibi endüstriyel süreçlerin yan ürünü olarak da üretilen <strong>alfa alçı</strong> (kalsiyum sülfat dihidrat) üzerine kuruludur. Alçı, performans kaybı olmadan <strong>sonsuz kez geri dönüştürülebilen</strong> az sayıdaki yapı malzemesinden biridir — prizini almış malzemeyi oluşturan hidrasyon süreci tamamen geri dönüşümlüdür. Kırılmış alçı, malzeme özelliklerinde herhangi bir bozulma olmadan yeniden kalsine edilip yeni ürünlere dönüştürülebilir.
     </p>
     <p>
       PMAG panellerin imalat süreci alternatiflere kıyasla düşük enerji tüketimlidir. Alçı döküm ortam sıcaklığında gerçekleşir — fırın yok, yüksek sıcaklıkta kür fırınları yok ve sinterleme işlemi yok. Birincil enerji girdisi ham alçının kalsinasyonudur (tipik olarak 120–180°C), bu da seramikler (1000–1200°C), cam (1500°C+) veya metal döküm için gereken sıcaklıklardan önemli ölçüde düşüktür.
@@ -341,61 +314,64 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       </div>
     </div>
 
-    <h2>Lumina PUCOMP™ — <em>Dış Mekân ve Islak Alan Varyantı</em></h2>
+    <h2><span translate="no">Lumina PUCOMP™</span> — <em>Dış Mekân ve Islak Alan Varyantı</em></h2>
     <p>
-      Lumina PUCOMP™ dış mekân ve ıslak alan varyantıdır; iç mekân yüzeylerinin tamamı PMAG ile şartnameye bağlanır. Bu sayfadaki veriler PMAG içindir. Dış mekân veya ıslak alan projeleri için şartnameyi birlikte gözden geçirmek üzere bize yazın.
+      <span translate="no">Lumina PUCOMP™</span> dış mekân ve ıslak alan varyantıdır; iç mekân yüzeylerinin tamamı PMAG ile şartnameye bağlanır. Bu sayfadaki veriler PMAG içindir. Dış mekân veya ıslak alan projeleri için şartnameyi birlikte gözden geçirmek üzere bize yazın.
     </p>
 
     <div class="callout">
       <div class="callout-label">Yaşam Döngüsü Perspektifi</div>
       <p>
-        Sürdürülebilirlik değerlendirmelerinde yaygın bir hata, servis ömrünü göz ardı ederek <strong>imalattaki gömülü karbona</strong> odaklanmaktır. Orta düzeyde gömülü karbona sahip ancak 30 yıl dayanıklı bir malzeme, her 10 yılda değiştirilmesi gereken "daha yeşil" bir malzemeden daha düşük yıllık karbon ayak izine sahip olacaktır — özellikle değiştirme söküm atığı, yeni imalat ve ek nakliye içerdiğinde.
+        Sürdürülebilirlik değerlendirmelerinde yaygın bir hata, servis ömrünü göz ardı ederek <strong>imalattaki gömülü karbona</strong> odaklanmaktır. Orta düzeyde gömülü karbona sahip ancak 30&nbsp;yıl dayanıklı bir malzeme, her 10 yılda değiştirilmesi gereken “daha yeşil” bir malzemeden daha düşük yıllık karbon ayak izine sahip olacaktır — özellikle değiştirme söküm atığı, yeni imalat ve ek nakliye içerdiğinde.
       </p>
     </div>
 
     <h2>Çevresel <em>Karşılaştırma</em></h2>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Lumina PMAG™ ve doğal taş: çevresel karşılaştırma">
     <table class="env-table">
+      <caption><span translate="no">Lumina PMAG™</span> ve doğal taş: çevresel karşılaştırma</caption>
       <thead>
         <tr>
-          <th>Faktör</th>
-          <th><span lang="en">Lumina PMAG™</span></th>
-          <th>Doğal Taş</th>
+          <th scope="col">Faktör</th>
+          <th scope="col"><span lang="en"><span translate="no">Lumina PMAG™</span></span></th>
+          <th scope="col">Doğal Taş</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Ham madde kaynağı</strong></td>
+          <th scope="row"><strong>Ham madde kaynağı</strong></th>
           <td>Doğal/FGD alçı</td>
           <td>Ocaktan çıkarılan taş</td>
         </tr>
         <tr>
-          <td><strong>İmalat enerjisi</strong></td>
+          <th scope="row"><strong>İmalat enerjisi</strong></th>
           <td><span class="rating-badge rating-high">Düşük</span></td>
           <td><span class="rating-badge rating-low">Yüksek</span> (kesme, cilalama)</td>
         </tr>
         <tr>
-          <td><strong>Ömür sonu geri dönüşüm</strong></td>
+          <th scope="row"><strong>Ömür sonu geri dönüşüm</strong></th>
           <td><span class="rating-badge rating-high">Tam</span> — yeniden kalsine</td>
           <td><span class="rating-badge rating-high">Tam</span> — yeniden kesilebilir</td>
         </tr>
         <tr>
-          <td><strong>VOC emisyonları (kurulu)</strong></td>
+          <th scope="row"><strong>VOC emisyonları (kurulu)</strong></th>
           <td><span class="rating-badge rating-high">Çok Düşük</span></td>
           <td><span class="rating-badge rating-high">Yok</span></td>
         </tr>
         <tr>
-          <td><strong>Ağırlık (nakliye etkisi)</strong></td>
-          <td>35–40 kg/m² @ 25 mm</td>
-          <td>65–80 kg/m² @ 25 mm</td>
+          <th scope="row"><strong>Ağırlık (nakliye etkisi)</strong></th>
+          <td>35–40&nbsp;kg/m² @ 25&nbsp;mm</td>
+          <td>65–80&nbsp;kg/m² @ 25&nbsp;mm</td>
         </tr>
         <tr>
-          <td><strong>Tipik servis ömrü</strong></td>
+          <th scope="row"><strong>Tipik servis ömrü</strong></th>
           <td>30+ yıl (iç mekan)</td>
           <td>50+ yıl</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h2>Malzeme <em>Yaşam Döngüsü</em></h2>
 
@@ -432,7 +408,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       BREEAM, LEED veya WELL sertifikasyonu hedefleyen projeler için şartname maddenize şunları dahil edin: <strong>düşük VOC boya sistemleri</strong> gereksinimi (AB Direktifi 2004/42/CE veya eşdeğerine uygun), üreticinin <strong>Çevresel Ürün Beyannamesi (EPD)</strong> veya eşdeğer yaşam döngüsü verisi talebi, ömür sonunda <strong>geri dönüşüm yolu</strong> onayı ve <strong>imalat atık yönetimi</strong> uygulamalarının belgelenmesi.
     </p>
     <p>
-      Şeffaf çevresel veri sağlamayı taahhüt ediyoruz. Belirli bir ürün konfigürasyonu için resmi EPD'lerin henüz mevcut olmadığı durumlarda, projenin sürdürülebilirlik belgelerinin bir parçası olarak sunulabilecek malzeme bileşim beyanları, VOC test verileri ve geri dönüşüm beyanları sağlıyoruz.
+      Şeffaf çevresel veri sağlamayı taahhüt ediyoruz. Belirli bir ürün konfigürasyonu için resmi EPD’lerin henüz mevcut olmadığı durumlarda, projenin sürdürülebilirlik belgelerinin bir parçası olarak sunulabilecek malzeme bileşim beyanları, VOC test verileri ve geri dönüşüm beyanları sağlıyoruz.
     </p>
 
   </article>
@@ -443,7 +419,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p>Sürdürülebilirlik değerlendirmeniz için malzeme bileşim verileri, VOC test raporları veya geri dönüşüm belgeleri talep edin.</p>
     <a href="iletisim.htm" class="btn-primary">
       Veri Talep Edin
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -477,5 +453,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="shared.js"></script>
 <script src="components.js"></script>
 
+<script src="consent.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Duvar Paneli Şartnamesi Nasıl Yazılır? Mimar Rehberi | Studio Luminant</title>
 <meta name="description" content="Duvar paneli şartnamesi nasıl yazılır: toleranslar, sabitleme sistemleri, alt yapı arayüzleri ve ihale belgelerinde neler yer almalı — mimarlar için rehber.">
 <link rel="canonical" href="https://studioluminant.com.tr/kaynaklar-sartname-rehberi.htm">
@@ -67,38 +68,14 @@
   .article-footer a { color: var(--gold-dim); text-decoration: none; }
   .article-footer a:hover { color: var(--gold); }
   @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .compare-grid { grid-template-columns: 1fr; } .spec-checklist li { grid-template-columns: 36px 1fr; padding: 20px 20px; } }
+  /* a11y pass */
+  .method-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .method-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .method-table tbody td, .method-table tbody th { font-variant-numeric: tabular-nums; }
+  h3.compare-card-header { font-family: inherit; font-weight: inherit; line-height: normal; margin-top: 0; }
+  .compare-card dl, .compare-row dt, .compare-row dd { margin: 0; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Rölyef Panel Şartname Rehberi", "item": "https://studioluminant.com.tr/kaynaklar-sartname-rehberi.htm"}]}
 </script>
@@ -110,9 +87,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="tr" data-lang-url="en/resources-specification-guide.htm"></div>
 
@@ -122,7 +96,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
   <div class="back-nav">
     <a href="kaynaklar.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Kaynaklara Dön
     </a>
   </div>
@@ -152,7 +126,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Eksiksiz bir rölyef panel şartnamesi aşağıdaki parametreleri kapsamalıdır. Bunlardan herhangi birinin atlanması, yüklenicinin ya ihtiyatlı fiyatlandıracağı ya da yanlış çözeceği belirsizlikler yaratır.
     </p>
 
-    <ol class="spec-checklist">
+    <ol class="spec-checklist" role="list">
       <li><strong>Malzeme ailesi.</strong> Malzeme ailesini (ör. polimer modifiye alfa alçı) belirtin. Varsaymayın — açıkça yazın.</li>
       <li><strong>Panel boyutları ve toleransları.</strong> Maksimum panel boyutunu, nominal kalınlığı ve izin verilen boyutsal toleransı belirtin. Rölyef paneller için tolerans, rölyef profilinin en ince ve en kalın noktalarında ayrı ayrı belirtilmelidir.</li>
       <li><strong>Rölyef derinliği ve geometrisi.</strong> Maksimum rölyef derinliğini (arka düzlemden en yüksek noktaya olan mesafe) ve geometrinin tedarik edilen bir 3D dosyasından mı yoksa üreticinin kataloğundan mı olduğunu tanımlayın. 3D dosyasından ise dosya formatını (STEP, OBJ, STL) ve minimum özellik yarıçapını belirtin.</li>
@@ -168,42 +142,45 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Bir rölyef panelin duvara nasıl bağlanacağı üç faktörle belirlenir: panel ağırlığı, alt yapı tipi ve montajın kalıcı mı yoksa gelecekte sökülmek üzere mi tasarlandığı (konaklama sektöründe markalar iç mekan tasarımlarını 7–10 yıllık döngülerle yenilediği için yaygındır).
     </p>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Sabitleme yöntemleri karşılaştırması">
     <table class="method-table">
+      <caption>Sabitleme yöntemleri karşılaştırması</caption>
       <thead>
         <tr>
-          <th>Yöntem</th>
-          <th>En Uygun</th>
-          <th>Panel Ağırlık Sınırı</th>
-          <th>Sökülebilir mi?</th>
+          <th scope="col">Yöntem</th>
+          <th scope="col">En Uygun</th>
+          <th scope="col">Panel Ağırlık Sınırı</th>
+          <th scope="col">Sökülebilir mi?</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Yapıştırıcı bağlantı</strong> (yapı yapıştırıcısı + mekanik destek)</td>
+          <th scope="row"><strong>Yapıştırıcı bağlantı</strong> (yapı yapıştırıcısı + mekanik destek)</th>
           <td>Rijit alt yapılar (beton, kagir) üzerinde düz veya düşük rölyefli paneller</td>
-          <td>~30 kg/m²'ye kadar</td>
+          <td>~30&nbsp;kg/m²’ye kadar</td>
           <td>Hayır — tahribatlı söküm</td>
         </tr>
         <tr>
-          <td><strong>Gizli Z-klips</strong> (panel arkasında + duvarda birbirine geçen metal klipsler)</td>
+          <th scope="row"><strong>Gizli Z-klips</strong> (panel arkasında + duvarda birbirine geçen metal klipsler)</th>
           <td>Orta ağırlıktaki paneller, özellikle gelecekte erişim veya söküm gereken yerlerde</td>
-          <td>~45 kg/m²'ye kadar</td>
+          <td>~45&nbsp;kg/m²’ye kadar</td>
           <td>Evet — tahribatsız</td>
         </tr>
         <tr>
-          <td><strong>Dişli insert + ray</strong> (panele gömülü insertler, alüminyum ray sistemine montajlı)</td>
+          <th scope="row"><strong>Dişli insert + ray</strong> (panele gömülü insertler, alüminyum ray sistemine montajlı)</th>
           <td>Ağır veya derin rölyefli paneller; metal dikme üzeri alçıpan üzerinde büyük formatlı uygulamalar</td>
-          <td>~60 kg/m²'ye kadar</td>
+          <td>~60&nbsp;kg/m²’ye kadar</td>
           <td>Evet — tahribatsız</td>
         </tr>
         <tr>
-          <td><strong>Fransız kenet</strong> (panel + duvarda açılı ahşap/metal kenet)</td>
+          <th scope="row"><strong>Fransız kenet</strong> (panel + duvarda açılı ahşap/metal kenet)</th>
           <td>Özellikli paneller, sanat enstalasyonları, tek panel vurgu parçaları</td>
-          <td>~40 kg/m²'ye kadar</td>
+          <td>~40&nbsp;kg/m²’ye kadar</td>
           <td>Evet — kaldırarak söküm</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <div class="callout">
       <div class="callout-label">Konaklama Notu</div>
@@ -214,7 +191,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <h2>Alt Yapı <em>Değerlendirmeleri</em></h2>
     <p>
-      Rölyef panel montajındaki en yaygın hata, alt yapı gereksinimlerinin hafife alınmasıdır. Standart bir metal dikme + 12,5 mm alçıpan bölme duvar, yaklaşık 20–25 kg/m² yüklere göre tasarlanmıştır. 25 mm ortalama kalınlığa sahip derin rölyefli bir PMAG panel 35–40 kg/m² ağırlığındadır — bu, alt yapının kapasitesini aşar.
+      Rölyef panel montajındaki en yaygın hata, alt yapı gereksinimlerinin hafife alınmasıdır. Standart bir metal dikme + 12,5&nbsp;mm alçıpan bölme duvar, yaklaşık 20–25&nbsp;kg/m² yüklere göre tasarlanmıştır. 25&nbsp;mm ortalama kalınlığa sahip derin rölyefli bir PMAG panel 35–40&nbsp;kg/m² ağırlığındadır — bu, alt yapının kapasitesini aşar.
     </p>
     <p>
       Çözüm daha kalın alçıpan belirtmek değildir (yaygın ama etkisiz bir yaklaşım); sabitleme sisteminin yükü doğrudan metal dikmelere aktarmasını sağlamaktır. Ray tabanlı sabitleme sistemleri dikmeler arasına yayılır ve panel ağırlığını dikme flanşlarına nokta yükler olarak dağıtarak alçıpanı tamamen devre dışı bırakır. Bu yapısal olarak sağlamdır ve zamanla alçıpan delaminasyonu riskini ortadan kaldırır.
@@ -225,20 +202,24 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
     <div class="compare-grid">
       <div class="compare-card">
-        <div class="compare-card-header"><span lang="en">Lumina PMAG™</span></div>
-        <div class="compare-row"><span class="compare-label">Ağırlık @ 25mm</span><span class="compare-value">35–40 kg/m²</span></div>
-        <div class="compare-row"><span class="compare-label">Nem</span><span class="compare-value">&lt; %5 emilim</span></div>
-        <div class="compare-row"><span class="compare-label">En uygun</span><span class="compare-value">İç mekân — oteller, lobiler, sütun giydirme, tezgâh önü, vurgu yüzeyleri</span></div>
+        <h3 class="compare-card-header"><span lang="en"><span translate="no">Lumina PMAG™</span></span></h3>
+        <dl>
+        <div class="compare-row"><dt class="compare-label">Ağırlık @ 25mm</dt><dd class="compare-value">35–40&nbsp;kg/m²</dd></div>
+        <div class="compare-row"><dt class="compare-label">Nem</dt><dd class="compare-value">&lt; %5 emilim</dd></div>
+        <div class="compare-row"><dt class="compare-label">En uygun</dt><dd class="compare-value">İç mekân — oteller, lobiler, sütun giydirme, tezgâh önü, vurgu yüzeyleri</dd></div>
+        </dl>
       </div>
       <div class="compare-card">
-        <div class="compare-card-header"><span lang="en">Lumina PUCOMP™</span> · dış mekân / ıslak alan</div>
-        <div class="compare-row"><span class="compare-label">Ağırlık @ 15mm</span><span class="compare-value">12–18 kg/m²</span></div>
-        <div class="compare-row"><span class="compare-label">En uygun</span><span class="compare-value">Dış mekân ve ıslak alanlar</span></div>
+        <h3 class="compare-card-header"><span lang="en"><span translate="no">Lumina PUCOMP™</span></span> · dış mekân / ıslak alan</h3>
+        <dl>
+        <div class="compare-row"><dt class="compare-label">Ağırlık @ 15mm</dt><dd class="compare-value">12–18&nbsp;kg/m²</dd></div>
+        <div class="compare-row"><dt class="compare-label">En uygun</dt><dd class="compare-value">Dış mekân ve ıslak alanlar</dd></div>
+        </dl>
       </div>
     </div>
 
     <p>
-      PMAG ve PUCOMP arasındaki karar genellikle <strong>uygulama bağlamına</strong> bağlıdır. Otel koridoru, yüksek katlı lobi, sütun giydirme, tezgâh önü ve vurgu yüzeyleri dahil tüm iç mekân uygulamaları PMAG ile belirlenir. PUCOMP, dış mekân ve ıslak alan uygulamaları için kullanılan varyanttır. Her iki malzeme de aynı artizan finish'i kabul eder, bu nedenle görsel yüzey bitirme aynıdır.
+      PMAG ve PUCOMP arasındaki karar genellikle <strong>uygulama bağlamına</strong> bağlıdır. Otel koridoru, yüksek katlı lobi, sütun giydirme, tezgâh önü ve vurgu yüzeyleri dahil tüm iç mekân uygulamaları PMAG ile belirlenir. PUCOMP, dış mekân ve ıslak alan uygulamaları için kullanılan varyanttır. Her iki malzeme de aynı artizan finish’i kabul eder, bu nedenle görsel yüzey bitirme aynıdır.
     </p>
 
   </article>
@@ -248,7 +229,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p>Projeniz için taslak şartname maddesi ve sabitleme detay çizimleri sağlayabiliriz.</p>
     <a href="iletisim.htm" class="btn-primary">
       Şartname Desteği Talep Edin
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -283,5 +264,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="shared.js"></script>
 <script src="components.js"></script>
 
+<script src="consent.js"></script>
 </body>
 </html>

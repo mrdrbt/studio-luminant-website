@@ -1,6 +1,6 @@
 // ─── PATTERN DATA — Single Source of Truth ───
 // Generated from Supabase · 2026-09-23
-// Referenced by: collection.htm, tr/koleksiyon.htm
+// Referenced by: en/collection.htm, koleksiyon.htm
 
 window.SL_PATTERNS = [
   {
@@ -217,8 +217,8 @@ window.SL_PATTERNS = [
       "ceiling"
     ],
     "image": "images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design.jpg",
-    "description_en": "50×50cm modular panel system with heritage-inspired relief. Mix and match orientations for unique compositions.",
-    "description_tr": "Miras ilhamlı rölyefli 50×50cm modüler panel sistemi. Benzersiz kompozisyonlar için yönlendirmeleri karıştırın ve eşleştirin.",
+    "description_en": "50×50 cm modular panel system with heritage-inspired relief. Mix and match orientations for unique compositions.",
+    "description_tr": "Miras ilhamlı rölyefli 50×50 cm modüler panel sistemi. Benzersiz kompozisyonlar için yönlendirmeleri karıştırın ve eşleştirin.",
     "materials": [
       "pmag",
       "pucomp"

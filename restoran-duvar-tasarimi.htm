@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Restoran Duvar Tasarımı ve Rölyef Panel | Studio Luminant</title>
 <meta name="description" content="Restoran duvar tasarımı için özel üretim rölyef panel rehberi: konseptin motife çevrilmesi, bakış mesafesi, loş ışıkta yalama açısı ve malzeme seçimi.">
 <link rel="canonical" href="https://studioluminant.com.tr/restoran-duvar-tasarimi.htm">
@@ -57,6 +58,7 @@
   .related-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
   .related-list a { display: flex; justify-content: space-between; align-items: center; background: var(--surface); padding: 18px 24px; font-size: 14px; color: var(--text-secondary); text-decoration: none; border: none; transition: background 0.3s, color 0.3s; }
   .related-list a:hover { background: var(--surface-2); color: var(--text-primary); }
+  .related-list a:focus-visible { background: var(--surface-2); color: var(--text-primary); }
   .related-list a span.tag { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
   .article-cta { margin: 80px 0; padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
   .article-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin-bottom: 16px; }
@@ -66,38 +68,9 @@
   .article-figure { margin: 8px auto 44px; max-width: 520px; }
   .article-figure picture, .article-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
   .article-figure figcaption { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--text-secondary); text-align: center; margin-top: 14px; }
+  /* a11y pass */
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://studioluminant.com.tr/"},{"@type":"ListItem","position":2,"name":"Makaleler","item":"https://studioluminant.com.tr/makaleler.htm"},{"@type":"ListItem","position":3,"name":"Restoran Duvar Tasarımında Rölyef","item":"https://studioluminant.com.tr/restoran-duvar-tasarimi.htm"}]}
 </script>
@@ -106,9 +79,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="tr" data-lang-url=""></div>
 
@@ -118,7 +88,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
   <div class="back-nav">
     <a href="makaleler.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Makalelere Dön
     </a>
   </div>
@@ -131,7 +101,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p class="article-subtitle">
       Restoran duvarı, lobi duvarından farklı okunur; misafir onu bir iki metre öteden, loş ve sıcak bir ışıkta ve yemek boyunca görür. Özel üretim döküm rölyef panelin bir restoran projesinde nasıl tanımlandığına ve şartnameye nasıl yazıldığına dair bir rehber.
     </p>
-    <div class="article-meta"><span lang="en">Studio Luminant</span> · Spesifikasyon Rehberi · 4 dk okuma</div>
+    <div class="article-meta"><span lang="en"><span translate="no">Studio Luminant</span></span> · Spesifikasyon Rehberi · 4 dk okuma</div>
   </header>
 
   <article class="article-body">
@@ -169,7 +139,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     </p>
 
     <p>
-      Aynı ana model restoranın başka yüzeylerine de taşınabilir: banket arkasındaki duvar, bar önü ve tavan paneli aynı motifi paylaşır; hepsi Lumina PMAG™ ile dökülür; motif terasa ya da ıslak alana taşındığında Lumina PUCOMP™ ile de geometri değişmez.
+      Aynı ana model restoranın başka yüzeylerine de taşınabilir: banket arkasındaki duvar, bar önü ve tavan paneli aynı motifi paylaşır; hepsi <span translate="no">Lumina PMAG™</span> ile dökülür; motif terasa ya da ıslak alana taşındığında <span translate="no">Lumina PUCOMP™</span> ile de geometri değişmez.
     </p>
 
     <h2>Lobiden Farkı: <em>Bakış Mesafesi</em></h2>
@@ -199,11 +169,11 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     </p>
 
     <p>
-      <strong>Lumina PMAG™</strong>, neme dayanıklı ve pürüzsüz yüzeyli bir mineral paneldir; banket arkası, oturma alanı duvarları, bar önü, kolon kaplaması, vurgu yüzeyleri ve tavan panelleri için kullanılır. Panel ölçüsü ve derz yerleşimi, duvarın ölçüsüne ve oturma düzenine göre her projede ayrıca çözülür.
+      <strong><span translate="no">Lumina PMAG™</span></strong>, neme dayanıklı ve pürüzsüz yüzeyli bir mineral paneldir; banket arkası, oturma alanı duvarları, bar önü, kolon kaplaması, vurgu yüzeyleri ve tavan panelleri için kullanılır. Panel ölçüsü ve derz yerleşimi, duvarın ölçüsüne ve oturma düzenine göre her projede ayrıca çözülür.
     </p>
 
     <p>
-      <strong>Lumina PUCOMP™</strong> dış mekân ve ıslak alan varyantıdır; ince profillerde (8–25 mm) ve kavisli yüzeylerde çalışılır; teras ve mutfağa yakın ıslak duvarlar için tercih edilir.
+      <strong><span translate="no">Lumina PUCOMP™</span></strong> dış mekân ve ıslak alan varyantıdır; ince profillerde (8–25&nbsp;mm) ve kavisli yüzeylerde çalışılır; teras ve mutfağa yakın ıslak duvarlar için tercih edilir.
     </p>
 
     <p>
@@ -232,8 +202,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Bu bilgilerle dijital çalışma başlar; onaylı tasarımın ardından teknik veri sayfası ve montaj çizimi hazırlanır. Termin için <a href="kaynaklar-teslimat-sureci.htm">teslimat süreci</a> sayfasına bakabilirsiniz. Montaj gerektiğinde proje bazında ayrıca fiyatlandırılır; teslim varsayılanı EXW Sapanca.
     </p>
 
-    <div class="related">
-      <div class="related-label">İlgili Makaleler</div>
+    <div class="related" role="navigation" aria-labelledby="related-label">
+      <div class="related-label" id="related-label">İlgili Makaleler</div>
       <ul class="related-list">
         <li><a href="otel-lobisi-karsilama-duvari.htm">Otel Lobisi için Heykelsi Karşılama Duvarı <span class="tag">Rehber</span></a></li>
         <li><a href="ozel-uretim-duvar-paneli-mimar-rehberi.htm">Özel Üretim Duvar Paneli: Mimar Rehberi <span class="tag">Rehber</span></a></li>
@@ -278,5 +248,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 </div>
 <script src="shared.js"></script>
 <script src="components.js"></script>
+<script src="consent.js"></script>
 </body>
 </html>

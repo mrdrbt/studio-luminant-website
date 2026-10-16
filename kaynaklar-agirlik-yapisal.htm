@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Duvar Paneli Ağırlığı ve Taşıyıcı Yük — Mimarlar İçin | Studio Luminant</title>
 <meta name="description" content="Metrekare başına panel ağırlığı, alt yapı yük kapasiteleri ve mimari rölyef paneller için yapısal arayüz detayları. Mimarlar için teknik veriler.">
 <link rel="canonical" href="https://studioluminant.com.tr/kaynaklar-agirlik-yapisal.htm">
@@ -52,7 +53,7 @@
   .bar-row { display: grid; grid-template-columns: 140px 1fr 80px; align-items: center; gap: 16px; margin-bottom: 12px; }
   .bar-label { font-size: 12px; color: var(--text-secondary); text-align: right; font-weight: 300; }
   .bar-track { height: 28px; background: var(--surface); border-radius: 2px; overflow: hidden; position: relative; }
-  .bar-fill { height: 100%; border-radius: 2px; transition: width 0.8s ease; }
+  .bar-fill { height: 100%; border-radius: 2px; }
   .bar-fill-pmag { background: var(--gold); }
   .bar-fill-pucomp { background: var(--blue); }
   .bar-fill-stone { background: var(--text-muted); }
@@ -87,38 +88,13 @@
   .article-footer a { color: var(--gold-dim); text-decoration: none; }
   .article-footer a:hover { color: var(--gold); }
   @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .stats-row { grid-template-columns: 1fr; } .substrate-grid { grid-template-columns: 1fr; } .bar-row { grid-template-columns: 100px 1fr 60px; gap: 10px; } .bar-label { font-size: 11px; } }
+  /* a11y pass */
+  .weight-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .weight-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .weight-table tbody td, .weight-table tbody th { font-variant-numeric: tabular-nums; }
+  .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Ağırlık ve Yapısal Kılavuz", "item": "https://studioluminant.com.tr/kaynaklar-agirlik-yapisal.htm"}]}
 </script>
@@ -130,9 +106,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="tr" data-lang-url="en/resources-weight-structural.htm"></div>
 
@@ -142,7 +115,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 
   <div class="back-nav">
     <a href="kaynaklar.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Kaynaklara Dön
     </a>
   </div>
@@ -164,71 +137,74 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       Bir otel lobisi için rölyef panel seçen mimar genellikle geometri, renk ve dokuyu düşünür. Yapı mühendisi ise tek bir şeyi düşünür: <strong>ne kadar ağır?</strong> Metrekare başına panel ağırlığı sabitleme sistemini, alt yapı spesifikasyonunu ve bazı durumlarda duvarın tasarımı taşıyıp taşıyamayacağını belirler.
     </p>
     <p>
-      Rölyef paneller düz eşdeğerlerinden daha ağırdır — bazen önemli ölçüde. 25 mm düz bir PMAG panel yaklaşık 35–40 kg/m² ağırlığındadır. Ancak tepeleri 40 mm'ye ulaşan derin rölyefli bir PMAG panel çok daha fazla malzeme kütlesine sahiptir. Etkin ağırlık, nominal kalınlığa değil, rölyef profili boyunca ortalama kalınlığa bağlıdır.
+      Rölyef paneller düz eşdeğerlerinden daha ağırdır — bazen önemli ölçüde. 25&nbsp;mm düz bir PMAG panel yaklaşık 35–40&nbsp;kg/m² ağırlığındadır. Ancak tepeleri 40&nbsp;mm’ye ulaşan derin rölyefli bir PMAG panel çok daha fazla malzeme kütlesine sahiptir. Etkin ağırlık, nominal kalınlığa değil, rölyef profili boyunca ortalama kalınlığa bağlıdır.
     </p>
 
     <h2><em>Malzeme ve Kalınlığa</em> Göre Panel Ağırlığı</h2>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Malzeme ağırlık karşılaştırması">
     <table class="weight-table">
+      <caption>Malzeme ağırlık karşılaştırması</caption>
       <thead>
         <tr>
-          <th>Malzeme</th>
-          <th>Nominal Kalınlık</th>
-          <th>Yoğunluk</th>
-          <th>m² Başına Ağırlık</th>
-          <th>Kullanım Alanı</th>
+          <th scope="col">Malzeme</th>
+          <th scope="col">Nominal Kalınlık</th>
+          <th scope="col">Yoğunluk</th>
+          <th scope="col">m² Başına Ağırlık</th>
+          <th scope="col">Kullanım Alanı</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Lumina PMAG™</strong></td>
-          <td>15 mm (low relief)</td>
-          <td>1,400–1,600 kg/m³</td>
-          <td class="highlight-cell">~21–24 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PMAG™</span></strong></th>
+          <td>15&nbsp;mm (low relief)</td>
+          <td>1,400–1,600&nbsp;kg/m³</td>
+          <td class="highlight-cell">~21–24&nbsp;kg/m²</td>
           <td>Sığ doku, tavana uygun</td>
         </tr>
         <tr>
-          <td><strong>Lumina PMAG™</strong></td>
-          <td>25 mm (standart)</td>
-          <td>1,400–1,600 kg/m³</td>
-          <td class="highlight-cell">~35–40 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PMAG™</span></strong></th>
+          <td>25&nbsp;mm (standart)</td>
+          <td>1,400–1,600&nbsp;kg/m³</td>
+          <td class="highlight-cell">~35–40&nbsp;kg/m²</td>
           <td>Standart duvar uygulamaları</td>
         </tr>
         <tr>
-          <td><strong>Lumina PMAG™</strong></td>
-          <td>40 mm (derin rölyef)</td>
-          <td>1,400–1,600 kg/m³</td>
-          <td class="highlight-cell">~56–64 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PMAG™</span></strong></th>
+          <td>40&nbsp;mm (derin rölyef)</td>
+          <td>1,400–1,600&nbsp;kg/m³</td>
+          <td class="highlight-cell">~56–64&nbsp;kg/m²</td>
           <td>Özellikli duvarlar, yapısal alt yapı gerekli</td>
         </tr>
         <tr>
-          <td><strong>Lumina PUCOMP™</strong> (dış mekân / ıslak alan)</td>
-          <td>8 mm (ince kabuk)</td>
-          <td>800–1,200 kg/m³</td>
-          <td class="highlight-cell">~6–10 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PUCOMP™</span></strong> (dış mekân / ıslak alan)</th>
+          <td>8&nbsp;mm (ince kabuk)</td>
+          <td>800–1,200&nbsp;kg/m³</td>
+          <td class="highlight-cell">~6–10&nbsp;kg/m²</td>
           <td>İnce profiller — dış mekân ve ıslak alan</td>
         </tr>
         <tr>
-          <td><strong>Lumina PUCOMP™</strong> (dış mekân / ıslak alan)</td>
-          <td>15 mm (standart)</td>
-          <td>800–1,200 kg/m³</td>
-          <td class="highlight-cell">~12–18 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PUCOMP™</span></strong> (dış mekân / ıslak alan)</th>
+          <td>15&nbsp;mm (standart)</td>
+          <td>800–1,200&nbsp;kg/m³</td>
+          <td class="highlight-cell">~12–18&nbsp;kg/m²</td>
           <td>Dış mekân ve ıslak alan kaplaması, karmaşık kavis</td>
         </tr>
         <tr>
-          <td><strong>Lumina PUCOMP™</strong> (dış mekân / ıslak alan)</td>
-          <td>25 mm (derin rölyef)</td>
-          <td>800–1,200 kg/m³</td>
-          <td class="highlight-cell">~20–30 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PUCOMP™</span></strong> (dış mekân / ıslak alan)</th>
+          <td>25&nbsp;mm (derin rölyef)</td>
+          <td>800–1,200&nbsp;kg/m³</td>
+          <td class="highlight-cell">~20–30&nbsp;kg/m²</td>
           <td>Derin profilli dış mekân ve ıslak alan duvarları</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <div class="callout">
       <div class="callout-label">Etkin Ağırlık Nasıl Hesaplanır</div>
       <p>
-        Rölyef panellerde nominal kalınlık <strong>maksimum derinliktir</strong> — ancak ortalama malzeme kalınlığı, orta düzey rölyef profilleri için genellikle bunun %60–70'i kadardır. Üreticiden maksimum kalınlığı değil, <strong>belirli tasarım geometrisine dayalı ortalama kesit ağırlığını</strong> isteyin. Yapı mühendisinizin ihtiyaç duyduğu sayı budur.
+        Rölyef panellerde nominal kalınlık <strong>maksimum derinliktir</strong> — ancak ortalama malzeme kalınlığı, orta düzey rölyef profilleri için genellikle bunun %60–70’i kadardır. Üreticiden maksimum kalınlığı değil, <strong>belirli tasarım geometrisine dayalı ortalama kesit ağırlığını</strong> isteyin. Yapı mühendisinizin ihtiyaç duyduğu sayı budur.
       </p>
     </div>
 
@@ -240,38 +216,38 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="bar-chart">
       <div class="bar-row">
         <span class="bar-label">Doğal taş (30mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-stone" style="width: 100%;"></div></div>
-        <span class="bar-value">~78 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-stone" style="width: 100%;"></div></div>
+        <span class="bar-value">~78&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">PMAG derin (40mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pmag" style="width: 77%;"></div></div>
-        <span class="bar-value">~60 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-pmag" style="width: 77%;"></div></div>
+        <span class="bar-value">~60&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">GRC panel (15mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-grc" style="width: 50%;"></div></div>
-        <span class="bar-value">~39 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-grc" style="width: 50%;"></div></div>
+        <span class="bar-value">~39&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">PMAG standart (25mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pmag" style="width: 48%;"></div></div>
-        <span class="bar-value">~38 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-pmag" style="width: 48%;"></div></div>
+        <span class="bar-value">~38&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">Ahşap panel (18mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-timber" style="width: 18%;"></div></div>
-        <span class="bar-value">~14 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-timber" style="width: 18%;"></div></div>
+        <span class="bar-value">~14&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">PUCOMP standart (15mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pucomp" style="width: 19%;"></div></div>
-        <span class="bar-value">~15 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-pucomp" style="width: 19%;"></div></div>
+        <span class="bar-value">~15&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">PUCOMP ince (8mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pucomp" style="width: 10%;"></div></div>
-        <span class="bar-value">~8 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-pucomp" style="width: 10%;"></div></div>
+        <span class="bar-value">~8&nbsp;kg/m²</span>
       </div>
     </div>
 
@@ -287,20 +263,20 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="substrate-grid">
       <div class="substrate-card">
         <div class="substrate-card-title">Metal Dikme Üzeri Standart Alçıpan</div>
-        <div class="substrate-card-capacity">20–25 kg/m²</div>
-        <div class="substrate-card-note">Tek kat 12,5 mm levha. Yaygın bölme tipi. Yalnızca bu yük kapasitesi içinde kalan, yapıştırmayla sabitlenen panellerle sınırlıdır.</div>
+        <div class="substrate-card-capacity">20–25&nbsp;kg/m²</div>
+        <div class="substrate-card-note">Tek kat 12,5&nbsp;mm levha. Yaygın bölme tipi. Yalnızca bu yük kapasitesi içinde kalan, yapıştırmayla sabitlenen panellerle sınırlıdır.</div>
         <div class="substrate-card-compat">
-          <span class="compat-caution">&#9888; PMAG — levhayı atlayan ray sistemi gerektirir</span><br>
-          <span class="compat-yes">&#10003; PUCOMP tüm kalınlıklar</span>
+          <span class="compat-caution"><span aria-hidden="true">&#9888;</span> PMAG — levhayı atlayan ray sistemi gerektirir</span><br>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PUCOMP tüm kalınlıklar</span>
         </div>
       </div>
       <div class="substrate-card">
         <div class="substrate-card-title">Metal Dikme Üzeri Çift Kat Alçıpan</div>
-        <div class="substrate-card-capacity">30–35 kg/m²</div>
-        <div class="substrate-card-note">İki kat 12,5 mm levha. Daha iyi çekme direnci. Ray sistemi olmadan ağır PMAG için hâlâ yetersizdir.</div>
+        <div class="substrate-card-capacity">30–35&nbsp;kg/m²</div>
+        <div class="substrate-card-note">İki kat 12,5&nbsp;mm levha. Daha iyi çekme direnci. Ray sistemi olmadan ağır PMAG için hâlâ yetersizdir.</div>
         <div class="substrate-card-compat">
-          <span class="compat-caution">&#9888; Yalnızca PMAG 15mm — daha ağırı ray gerektirir</span><br>
-          <span class="compat-yes">&#10003; PUCOMP tüm kalınlıklar</span>
+          <span class="compat-caution"><span aria-hidden="true">&#9888;</span> Yalnızca PMAG 15mm — daha ağırı ray gerektirir</span><br>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PUCOMP tüm kalınlıklar</span>
         </div>
       </div>
       <div class="substrate-card">
@@ -308,8 +284,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div class="substrate-card-capacity">60+ kg/m²</div>
         <div class="substrate-card-note">Masif alt yapı. Doğrudan mekanik sabitleme (genleşmeli dübel) veya yapıştırma. Tüm panel ağırlıkları için uygundur.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PMAG tüm kalınlıklar</span><br>
-          <span class="compat-yes">&#10003; PUCOMP tüm kalınlıklar</span>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PMAG tüm kalınlıklar</span><br>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PUCOMP tüm kalınlıklar</span>
         </div>
       </div>
       <div class="substrate-card">
@@ -317,8 +293,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         <div class="substrate-card-capacity">100+ kg/m²</div>
         <div class="substrate-card-note">Maksimum yapısal kapasite. Reçine ankraj veya cıvata sabitleme. Panel ağırlığında sınırlama yoktur.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PMAG tüm kalınlıklar</span><br>
-          <span class="compat-yes">&#10003; PUCOMP tüm kalınlıklar</span>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PMAG tüm kalınlıklar</span><br>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PUCOMP tüm kalınlıklar</span>
         </div>
       </div>
     </div>
@@ -361,7 +337,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p>Her spesifikasyon paketi kapsamında projeye özel ağırlık hesaplamaları ve sabitleme detay çizimleri sunuyoruz.</p>
     <a href="iletisim.htm" class="btn-primary">
       Yapısal Veri Talep Edin
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -396,5 +372,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="shared.js"></script>
 <script src="components.js"></script>
 
+<script src="consent.js"></script>
 </body>
 </html>

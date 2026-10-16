@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Contact: Send a Drawing or Request the Sample Box | Studio Luminant</title>
 <meta name="description" content="Send a sketch, a dimensioned drawing or a reference image for your wall. Or ask for the sample box: pieces cast in Lumina PMAG™ with artisan finishes.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/contact.htm">
@@ -25,37 +26,6 @@
 <link rel="stylesheet" href="../shared.css">
 
 <link rel="stylesheet" href="../contact.css">
-<!-- Google Analytics -->
-<!-- SL internal-traffic opt-out: visit ?internal=1 once per browser to stop GA; ?internal=0 to re-enable -->
-<script>(function(){try{var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){window['ga-disable-G-PZ0SGLKLH0']=true;return;}var v=new URLSearchParams(location.search).get('internal');if(v==='1')localStorage.setItem('sl_internal','1');else if(v==='0')localStorage.removeItem('sl_internal');if(localStorage.getItem('sl_internal')==='1')window['ga-disable-G-PZ0SGLKLH0']=true;}catch(e){}})();</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PZ0SGLKLH0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PZ0SGLKLH0');
-</script>
-  <!-- Meta Pixel -->
-  <script>
-  (function(){
-    try{
-      var h=location.hostname;
-      if(h==='localhost'||h==='127.0.0.1'||h==='::1'||h===''){return;}
-      if(localStorage.getItem('sl_internal')==='1'){return;}
-    }catch(e){}
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1437127258139677');
-    fbq('track', 'PageView');
-  })();
-  </script>
-  <!-- End Meta Pixel -->
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://studioluminant.com.tr/en/contact.htm"}]}
 </script>
@@ -64,9 +34,6 @@
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
 
 <div id="site-nav" data-lang="en" data-lang-url="../iletisim.htm" data-base="../"></div>
 
@@ -79,7 +46,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <p class="ct-lede">A hand sketch, a dimensioned drawing or a reference image is enough to start. Tell us about the wall: the space it sits in, its approximate size, how it is lit. We read the drawing first. Then we come back with questions.</p>
     <dl class="ct-facts">
       <div><dt>Email</dt><dd><a href="mailto:info@studioluminant.com.tr">info@studioluminant.com.tr</a></dd></div>
-      <div><dt>Studio and workshop</dt><dd>Rüstempaşa Mah. İstasyon Cad.<br>No: 58, PK 54600<br>Sapanca / Sakarya</dd></div>
+      <div><dt>Studio and workshop</dt><dd>Rüstempaşa Mah. İstasyon Cad.<br>No:&nbsp;58, PK&nbsp;54600<br>Sapanca / Sakarya</dd></div>
       <div><dt>We deliver to</dt><dd>Turkey · Middle East · Caucasus · Eastern Europe</dd></div>
       <div><dt>Follow</dt><dd><a href="https://www.instagram.com/studio_luminant" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.linkedin.com/company/studioluminant" target="_blank" rel="noopener">LinkedIn</a></dd></div>
     </dl>
@@ -90,22 +57,23 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <form class="ct-form" id="contactForm" action="https://formspree.io/f/xpqygpjw" method="POST" aria-labelledby="project-title"
       data-form-type="project" data-link-label="Drawing link"
       data-msg-sending="Sending…" data-msg-sent="Sent"
-      data-msg-ok="Thank you. Your brief has reached us, and we'll write back once we've read it."
+      data-msg-ok="Thank you. Your brief has reached us, and we’ll write back once we’ve read it."
       data-msg-error="Something went wrong. Please email us directly at info@studioluminant.com.tr.">
+      <p class="ct-help ct-legend" aria-hidden="true">* required field</p>
       <div class="ct-row">
         <div class="ct-field">
-          <label for="p-name">Name</label>
-          <input type="text" id="p-name" name="name" placeholder="Your full name" autocomplete="name" required>
+          <label for="p-name">Name <span class="ct-req" aria-hidden="true">*</span></label>
+          <input type="text" id="p-name" name="name" placeholder="Jane Smith…" autocomplete="name" required>
         </div>
         <div class="ct-field">
           <label for="p-company">Practice / company</label>
-          <input type="text" id="p-company" name="company" placeholder="Architecture or interiors practice" autocomplete="organization">
+          <input type="text" id="p-company" name="company" placeholder="Example Architects…" autocomplete="organization">
         </div>
       </div>
       <div class="ct-row">
         <div class="ct-field">
-          <label for="p-email">Email</label>
-          <input type="email" id="p-email" name="email" placeholder="you@practice.com" autocomplete="email" required>
+          <label for="p-email">Email <span class="ct-req" aria-hidden="true">*</span></label>
+          <input type="email" id="p-email" name="email" placeholder="you@practice.com…" autocomplete="email" inputmode="email" spellcheck="false" autocapitalize="off" required>
         </div>
         <div class="ct-field">
           <label for="p-type">Project type</label>
@@ -120,12 +88,12 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         </div>
       </div>
       <div class="ct-field">
-        <label for="p-message">Message</label>
-        <textarea id="p-message" name="message" placeholder="The space, wall dimensions, lighting, your timing" required></textarea>
+        <label for="p-message">Message <span class="ct-req" aria-hidden="true">*</span></label>
+        <textarea id="p-message" name="message" placeholder="The space, wall dimensions, lighting, your timing…" required></textarea>
       </div>
       <div class="ct-field">
         <label for="p-link">Link to your drawing (optional)</label>
-        <input type="url" id="p-link" name="drawing_link" placeholder="WeTransfer, Google Drive or Dropbox link" inputmode="url" spellcheck="false" autocapitalize="off" aria-describedby="p-link-help">
+        <input type="url" id="p-link" name="drawing_link" placeholder="https://…" inputmode="url" spellcheck="false" autocapitalize="off" aria-describedby="p-link-help">
         <p class="ct-help" id="p-link-help">There is no file upload on this form. Paste a share link here, or email the drawing to <a href="mailto:info@studioluminant.com.tr">info@studioluminant.com.tr</a>.</p>
       </div>
 
@@ -138,7 +106,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
         Send the brief
         <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>
       </button>
-      <p class="ct-status" role="status" aria-live="polite" hidden></p>
+      <p class="ct-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
     </form>
   </div>
 </section>
@@ -148,7 +116,7 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
     <div class="ct-sample__copy">
       <div class="eyebrow reveal">Sample box</div>
       <h2 class="ct-sample__h reveal" id="sample-title">Judge the relief<br><em>in your own light.</em></h2>
-      <p class="ct-sample__p reveal">Depth, surface and colour get lost in a photograph. The sample box holds pieces cast in Lumina PMAG™, with artisan finishes, for you to turn over by a window, or under a lamp set low so its light rakes across them.</p>
+      <p class="ct-sample__p reveal">Depth, surface and colour get lost in a photograph. The sample box holds pieces cast in <span translate="no">Lumina PMAG™</span>, with artisan finishes, for you to turn over by a window, or under a lamp set low so its light rakes across them.</p>
       <p class="ct-sample__free reveal">Free, with no commitment.</p>
       <figure class="ct-sample__fig reveal">
         <picture>
@@ -164,31 +132,32 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
       <form class="ct-form" id="sampleForm" action="https://formspree.io/f/xpqygpjw" method="POST" aria-labelledby="sample-form-title"
         data-form-type="sample"
         data-msg-sending="Sending…" data-msg-sent="Sent"
-        data-msg-ok="Thank you. Your sample box request has reached us; we'll email you for the shipping details."
+        data-msg-ok="Thank you. Your sample box request has reached us; we’ll email you for the shipping details."
         data-msg-error="Something went wrong. Please email us directly at info@studioluminant.com.tr.">
+        <p class="ct-help ct-legend" aria-hidden="true">* required field</p>
         <div class="ct-row">
           <div class="ct-field">
-            <label for="s-name">Name</label>
-            <input type="text" id="s-name" name="name" placeholder="Your full name" autocomplete="name" required>
+            <label for="s-name">Name <span class="ct-req" aria-hidden="true">*</span></label>
+            <input type="text" id="s-name" name="name" placeholder="Jane Smith…" autocomplete="name" required>
           </div>
           <div class="ct-field">
             <label for="s-company">Practice / company</label>
-            <input type="text" id="s-company" name="company" placeholder="Architecture or interiors practice" autocomplete="organization">
+            <input type="text" id="s-company" name="company" placeholder="Example Architects…" autocomplete="organization">
           </div>
         </div>
         <div class="ct-row">
           <div class="ct-field">
-            <label for="s-email">Email</label>
-            <input type="email" id="s-email" name="email" placeholder="you@practice.com" autocomplete="email" required>
+            <label for="s-email">Email <span class="ct-req" aria-hidden="true">*</span></label>
+            <input type="email" id="s-email" name="email" placeholder="you@practice.com…" autocomplete="email" inputmode="email" spellcheck="false" autocapitalize="off" required>
           </div>
           <div class="ct-field">
             <label for="s-city">Shipping city</label>
-            <input type="text" id="s-city" name="shipping_city" placeholder="City to ship the box to" autocomplete="address-level2">
+            <input type="text" id="s-city" name="shipping_city" placeholder="Istanbul…" autocomplete="address-level2">
           </div>
         </div>
         <div class="ct-field">
           <label for="s-message">Note (optional)</label>
-          <textarea id="s-message" name="message" placeholder="If you're working on a project, tell us about it in a line or two."></textarea>
+          <textarea id="s-message" name="message" placeholder="If you’re working on a project, tell us about it in a line or two…"></textarea>
         </div>
 
         <input type="hidden" name="project_type" value="Sample Box Request">
@@ -201,8 +170,8 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
           Request the sample box
           <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>
         </button>
-        <p class="ct-note">Once your request is in, we'll email you for the address and shipping details.</p>
-        <p class="ct-status" role="status" aria-live="polite" hidden></p>
+        <p class="ct-note">Once your request is in, we’ll email you for the address and shipping details.</p>
+        <p class="ct-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
       </form>
     </div>
   </div>
@@ -250,5 +219,6 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
 <script src="../components.js"></script>
 <script src="../contact.js" defer></script>
 
+<script src="../consent.js"></script>
 </body>
 </html>
