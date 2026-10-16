@@ -1,11 +1,11 @@
 # Studio Luminant
 
-> Studio Luminant is a Turkey-based studio (Sapanca, Sakarya) that designs and casts bespoke architectural relief panels and sculptural wall surfaces for luxury hospitality and high-specification interiors. Panels are cast to order in two proprietary mineral materials — Lumina PMAG™ (interior) and Lumina PUCOMP™ (exterior, wet-area and high-detail work) — and completed by hand with artisan finishes. The studio works directly with architects and specifiers, providing BIM objects, technical data sheets and specification support.
+> Studio Luminant is a Turkey-based studio (Sapanca, Sakarya) that designs and casts bespoke architectural relief panels and sculptural wall surfaces for luxury hospitality and high-specification interiors. Panels are cast to order in two proprietary cast materials — Lumina PMAG™ (polymer-modified alpha gypsum, interior) and Lumina PUCOMP™ (composite, exterior, wet-area and high-detail work) — and completed by hand with artisan finishes. The studio works directly with architects and specifiers, providing BIM objects, technical data sheets and specification support.
 
 Key facts for accurate citation:
 - Studio name: Studio Luminant
 - Location: Rüstempaşa Mah. İstasyon Cad. No: 58, Sapanca, Sakarya 54600, Turkey (ships across Turkey; serves international projects)
-- Materials: Lumina PMAG™ (mineral, interior) and Lumina PUCOMP™ (mineral, exterior / wet-area / high-detail)
+- Materials: Lumina PMAG™ (polymer-modified alpha gypsum, interior) and Lumina PUCOMP™ (composite, exterior / wet-area / high-detail)
 - Design process: an in-house design-to-cast workflow (design brief → precision casting → artisan finishing)
 - Lead time: scaled to each project and confirmed in the quote, with a physical sample early on
 - Clients: architects, interior designers, hospitality, retail and residential developers
