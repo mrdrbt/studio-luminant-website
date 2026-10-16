@@ -285,8 +285,7 @@
   to = "/en/lookbook.htm"
   status = 301
 
-# ─── BIM lead magnet on hold — redirect to the Specifier Kit ───
-# force = true overrides the still-present .htm files so the pages go offline
+# ─── BIM lead magnet taken down (Burak 2026-10-16) — pages and ZIP removed; old URLs → the Specifier Kit ───
 [[redirects]]
   from = "/compass-star-bim-paketi.htm"
   to = "/tasarim-dosyasi.htm"
@@ -295,6 +294,12 @@
 
 [[redirects]]
   from = "/en/compass-star-bim-pack.htm"
+  to = "/en/specifier-kit.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/downloads/SL_Compass-Star_BIM_Pack.zip"
   to = "/en/specifier-kit.htm"
   status = 301
   force = true
