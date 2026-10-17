@@ -56,3 +56,8 @@
   .case-pair, .case-figures, .case-details { padding-left: var(--pad-x-sm); padding-right: var(--pad-x-sm); grid-template-columns: 1fr; }
   .case-figures figure:last-child { grid-column: auto; }
 }
+
+/* a render set into the copy column */
+.case-scene { margin: var(--s-7) 0 0; }
+.case-scene img { display: block; width: 100%; height: auto; background: var(--bg-alt); }
+.case-scene figcaption { font-size: var(--t-body-sm); color: var(--ink-muted); padding-top: var(--s-2); }
