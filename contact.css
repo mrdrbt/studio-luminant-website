@@ -101,3 +101,6 @@
   .ct-facts div { grid-template-columns: 1fr; gap: var(--s-1); }
   .ct-submit { justify-self: stretch; justify-content: center; }
 }
+
+/* unfilled content: loud on purpose, so it cannot ship unnoticed */
+.ph { outline: 2px dashed var(--accent); outline-offset: 3px; }
