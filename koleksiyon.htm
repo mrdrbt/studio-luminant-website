@@ -451,7 +451,7 @@
       <h1 class="hero-eyebrow">Mimari Rölyef Kütüphanesi</h1>
       <div class="hero-title" id="hero-title"></div>
       <p class="hero-desc" id="hero-desc"></p>
-      <a class="hero-cta" id="hero-cta" href="iletisim.htm">Bu Tasarım Hakkında Bilgi Alın →</a>
+      <a class="hero-cta" id="hero-cta" href="iletisim.htm" style="display:none">Bu Tasarım Hakkında Bilgi Alın →</a>
     </div>
   </div>
 </section>
@@ -497,7 +497,7 @@
     <div style="flex: 1;">
       <div class="eyebrow" style="margin-bottom: 12px;">Bütünleşik Tasarım Sistemi</div>
       <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--text-primary); line-height: 1.2; margin-bottom: 12px;">Tasarımınız, <em style="color: var(--gold);">Her Yüzeyde.</em></h2>
-      <p style="font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300;">Tek bir rölyef tasarımı belirleyin — duvarlar, tavanlar, kolonlar ve özel elemanlarda üretelim. İki malzeme sistemi, tek tutarlı tasarım dili. Aşağıdaki çalışmalar birer örnek; asıl proje sizin tasarımınız. <a href="iletisim.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Tasarımınızı bizimle paylaşın</a>.</p>
+      <p style="font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300;">Tek bir rölyef tasarımı belirleyin — duvarlar, tavanlar, kolonlar ve özel elemanlarda üretelim. Tek malzeme, tutarlı tek bir tasarım dili. Aşağıdaki çalışmalar birer örnek; asıl proje sizin tasarımınız. <a href="iletisim.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Tasarımınızı bizimle paylaşın</a>.</p>
     </div>
     <div style="flex: 0 0 auto; display: flex; gap: 12px;">
       <a href="urunler.htm#pmag" style="display: inline-block; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 20px; border-radius: 4px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.3s, color 0.3s;">PMAG Teknik →</a>
@@ -653,7 +653,9 @@ document.getElementById('hero-img-container').innerHTML = pictureTag(
 );
 document.getElementById('hero-title').textContent = featured.name;
 document.getElementById('hero-desc').textContent = featured.description;
-document.getElementById('hero-cta').href = 'iletisim.htm?pattern=' + encodeURIComponent(featured.name);
+const heroCta = document.getElementById('hero-cta');
+heroCta.href = 'iletisim.htm?pattern=' + encodeURIComponent(featured.name);
+heroCta.style.display = '';
 
 
 // ─── Local scroll-reveal observer (shared.js observer is module-scoped) ───
