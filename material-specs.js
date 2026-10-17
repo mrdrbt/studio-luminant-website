@@ -1,5 +1,5 @@
 // ─── MATERIAL SPECS — Single Source of Truth ───
-// Generated from Supabase · 2026-06-21
+// Generated from Supabase · 2026-10-17
 // Referenced by: products.htm, tr/urunler.htm, material-guide.js, tr/material-guide-tr.js, lookbook.htm
 
 window.SL_SPECS = {
@@ -33,8 +33,8 @@ window.SL_SPECS = {
     "finish": {
       "en": "Any RAL / Custom Colour",
       "tr": "Tüm RAL / Özel Renkler",
-      "note_en": "Cold-cast metal, patina, and textured finishes available",
-      "note_tr": "Soğuk döküm metal, patina ve dokulu yüzeyler mevcuttur"
+      "note_en": "Artisan finishes, smooth or textured.",
+      "note_tr": "Artizan finish; pürüzsüz ya da dokulu yüzey."
     },
     "moisture": {
       "en": "Resistant",
@@ -45,12 +45,12 @@ window.SL_SPECS = {
       "tr": "İç Mekân"
     },
     "application": {
-      "en": "Interior Walls & Ceilings",
-      "tr": "İç Mekân Duvar & Tavan"
+      "en": "Interior Walls, Ceilings, Columns & Counters",
+      "tr": "İç Mekân Duvar, Tavan, Kolon & Banko"
     },
     "deliverables": {
-      "en": "TDS + BIM Files Included",
-      "tr": "TDS + BIM Dosyaları Dahil"
+      "en": "Technical Data Sheet + Installation Drawing",
+      "tr": "Teknik Veri Sayfası + Montaj Çizimi"
     }
   },
   "pucomp": {
@@ -83,28 +83,28 @@ window.SL_SPECS = {
     "finish": {
       "en": "Any RAL / Custom Colour",
       "tr": "Tüm RAL / Özel Renkler",
-      "note_en": "Cold-cast metal and textured finishes available",
-      "note_tr": "Soğuk döküm metal ve dokulu yüzeyler mevcuttur"
+      "note_en": "Artisan finishes, smooth or textured.",
+      "note_tr": "Artizan finish; pürüzsüz ya da dokulu yüzey."
     },
     "moisture": {
-      "en": "High — closed-cell, hydrophobic",
-      "tr": "Yüksek — kapalı hücre, hidrofobik"
+      "en": "High — suited to exterior & wet areas",
+      "tr": "Yüksek — dış mekân ve ıslak hacimlere uygun"
     },
     "domain": {
       "en": "Exterior",
       "tr": "Dış Mekân"
     },
     "application": {
-      "en": "Exterior, Wet Areas & Complex Geometry",
-      "tr": "Dış Cephe, Islak Hacim & Karmaşık Geometri"
+      "en": "Exterior Facades & Wet Areas",
+      "tr": "Dış Cephe & Islak Hacim"
     },
     "deliverables": {
-      "en": "TDS + BIM Files Included",
-      "tr": "TDS + BIM Dosyaları Dahil"
+      "en": "Technical Data Sheet + Installation Drawing",
+      "tr": "Teknik Veri Sayfası + Montaj Çizimi"
     },
     "durability": {
-      "en": "UV-Stable, Impact & Weather Rated",
-      "tr": "UV-Stabil, Darbe & Hava Koşullarına Dayanıklı"
+      "en": "Suited to Exterior & Wet Areas",
+      "tr": "Dış Mekân & Islak Hacme Uygun"
     },
     "repairability": {
       "en": "Spot Repair Without Panel Replacement",
