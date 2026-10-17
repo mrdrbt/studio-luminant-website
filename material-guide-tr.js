@@ -177,26 +177,6 @@ const colorPalettes = {
       { id: "midnight-sage", label: "Midnight Sage", hex: ["#3D503E", "#576B52"] },
       { id: "ivory-r", label: "Ivory", hex: ["#D8D0C4", "#EDE8DF"] }
     ]}
-  ],
-  pucomp: [
-    { group: "Konaklama", colors: [
-      { id: "warm-taupe", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
-      { id: "sand", label: "Kum", hex: ["#B5A48A", "#C9BBA3"] },
-      { id: "bronze", label: "Bronz", hex: ["#5C4A2A", "#8B7355"] },
-      { id: "espresso", label: "Espresso", hex: ["#3C2415", "#5C3A2A"] }
-    ]},
-    { group: "Kurumsal", colors: [
-      { id: "obsidian", label: "Obsidian", hex: ["#1A1A1A", "#2D2D2D"] },
-      { id: "cloud-white", label: "Cloud White", hex: ["#EDEAE4", "#F0EFEB"] },
-      { id: "silhouette", label: "Silhouette", hex: ["#4A433E", "#635C56"] },
-      { id: "gold", label: "Altın", hex: ["#8B6914", "#C9A84C"] }
-    ]},
-    { group: "Konut", colors: [
-      { id: "warm-taupe-r", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
-      { id: "copper", label: "Bakır", hex: ["#7A4A2A", "#B87333"] },
-      { id: "midnight-sage", label: "Midnight Sage", hex: ["#3D503E", "#576B52"] },
-      { id: "sand-r", label: "Kum", hex: ["#B5A48A", "#C9BBA3"] }
-    ]}
   ]
 };
 const radarAxes = [{
@@ -223,7 +203,6 @@ const radarAxes = [{
 }];
 var _S = window.SL_SPECS || {};
 var _pmag = _S.pmag || {};
-var _pucomp = _S.pucomp || {};
 var _F = _S.fmt || {};
 const studioMaterials = [{
   id: "pmag",
@@ -259,41 +238,6 @@ const studioMaterials = [{
     installSpeed: 0.9,
     leadTimeAdv: 0.8,
     impactRes: 0.5
-  }
-}, {
-  id: "pucomp",
-  name: "Lumina PUCOMP™",
-  fullName: "Dış mekân ve ıslak alan varyantı",
-  tagline: "Lumina PMAG™'in dış cephe ve ıslak hacim varyantı; aynı tasarım, aynı artizan finish",
-  domain: "Dış Mekân",
-  domainIcon: "🌐",
-  application: "Façade panels, spas, pools, bathrooms, covered outdoor areas, signage",
-  specs: {
-    density: "600–900",
-    weight: (_pucomp.weight ? _pucomp.weight.min + '–' + _pucomp.weight.max : "12–18"),
-    thickness: (_pucomp.thickness ? _pucomp.thickness.min + '–' + _pucomp.thickness.max : "8–25"),
-    moisture: "High — exterior & wet-area rated",
-    impact: "—",
-    uv: "Stabilised + UV-resistant finish",
-    chemical: "Resistant to mild acids & cleaning agents",
-    temperature: "-30 °C to +80 °C",
-    surface: (_pucomp.finish ? _pucomp.finish.tr : "Tüm RAL / özel renkler — artizan finish, pürüzsüz ya da dokulu"),
-    customDesign: "Parametric design, unlimited patterns",
-    voc: "Low",
-    acoustic: "—",
-    antimicrobial: "—",
-    method: "LuminClip™ or mechanical fixing (stainless steel)",
-    speed: "Application-dependent",
-    leadTime: "Teklifte netleşir"
-  },
-  radar: {
-    weightAdv: 0.85,
-    moistureRes: 0.9,
-    finishQuality: 0.95,
-    designFreedom: 0.95,
-    installSpeed: 0.75,
-    leadTimeAdv: 0.75,
-    impactRes: 0.85
   }
 }];
 const sectorMaterials = [{
@@ -1339,7 +1283,7 @@ function MaterialGuide() {
       color: COLORS.muted,
       margin: "0 0 20px"
     }
-  }, "İç mekânda Lumina PMAG™; dış cephe ve ıslak hacimde Lumina PUCOMP™."), /*#__PURE__*/React.createElement("div", {
+  }, "İç mekân mimari yüzeyleri için Lumina PMAG™."), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 48,
       height: 1,

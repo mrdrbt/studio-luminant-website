@@ -18,8 +18,7 @@ window.SL_PATTERNS = [
     "description_en": "A radiating star motif inspired by classical compass rose geometry. Creates dramatic shadow play under directional lighting.",
     "description_tr": "Klasik pusula gülü geometrisinden ilham alan ışınsal yıldız motifi. Yönlü aydınlatma altında dramatik gölge oyunu yaratır.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": true,
     "tileSvg": {
@@ -41,8 +40,7 @@ window.SL_PATTERNS = [
     "description_en": "Flowing diagonal wave pattern that creates a sense of movement across wall surfaces. Ideal for feature walls in lobbies and corridors.",
     "description_tr": "Duvar yüzeylerinde hareket hissi yaratan akıcı diyagonal dalga deseni. Lobi ve koridorlardaki vurgu yüzeyleri için ideal.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": false,
     "tileSvg": {
@@ -88,8 +86,7 @@ window.SL_PATTERNS = [
     "description_en": "Traditional Ottoman geometric pattern reinterpreted in contemporary relief. Bridges historical craft with modern architectural specification.",
     "description_tr": "Çağdaş rölyefte yeniden yorumlanan geleneksel Osmanlı geometrik deseni. Tarihi zanaat ile modern mimari spesifikasyonu arasında köprü kurar.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": false,
     "tileSvg": {
@@ -135,8 +132,7 @@ window.SL_PATTERNS = [
     "description_en": "Classical fluted surface treatment for column cladding and wall applications. Clean vertical lines with refined shadow detail.",
     "description_tr": "Kolon kaplama ve duvar uygulamaları için klasik yivli yüzey işlemi. İnce gölge detaylarıyla temiz dikey çizgiler.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": false
   },
@@ -155,8 +151,7 @@ window.SL_PATTERNS = [
     "description_en": "Repeating petal forms arranged in a geometric grid. Balances organic softness with structured precision.",
     "description_tr": "Geometrik bir ızgara içinde düzenlenen tekrarlayan taçyaprağı formları. Organik yumuşaklığı yapısal hassasiyetle dengeler.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": false,
     "tileSvg": {
@@ -178,8 +173,7 @@ window.SL_PATTERNS = [
     "description_en": "Bold star relief pattern for statement wall installations. Designed for large-format applications in hospitality interiors.",
     "description_tr": "Önemli duvar kurulumları için cesur yıldız rölyef deseni. Konaklama iç mekanlarında büyük formatlı uygulamalar için tasarlanmıştır.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": false,
     "tileSvg": {
@@ -220,8 +214,7 @@ window.SL_PATTERNS = [
     "description_en": "50×50 cm modular panel system with heritage-inspired relief. Mix and match orientations for unique compositions.",
     "description_tr": "Miras ilhamlı rölyefli 50×50 cm modüler panel sistemi. Benzersiz kompozisyonlar için yönlendirmeleri karıştırın ve eşleştirin.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": false,
     "tileSvg": {
@@ -244,8 +237,7 @@ window.SL_PATTERNS = [
     "description_en": "Deep-set hexagonal cells inspired by natural honeycomb structures. Creates bold depth and shadow play across large-format wall installations.",
     "description_tr": "Doğal bal peteği yapılarından ilham alan derin altıgen hücreler. Büyük formatlı duvar uygulamalarında cesur derinlik ve gölge oyunu yaratır.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": false,
     "tileSvg": {
@@ -289,8 +281,7 @@ window.SL_PATTERNS = [
     "description_en": "Crisp vertical pleats with a folded paper aesthetic. Clean, architectural, and highly effective under raking light.",
     "description_tr": "Katlanmış kağıt estetiğiyle net dikey pileler. Temiz, mimari ve eğik ışık altında son derece etkili.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": false,
     "tileSvg": {
@@ -358,8 +349,7 @@ window.SL_PATTERNS = [
     "description_en": "Vertical reeding with integrated spherical bulges — a sculptural fusion of classical fluting and three-dimensional form. Hero-grade installation piece.",
     "description_tr": "Entegre küresel çıkıntılarla dikey yivleme — klasik yivleme ile üç boyutlu formun heykelsi birleşimi. Vitrin düzeyinde kurulum parçası.",
     "materials": [
-      "pmag",
-      "pucomp"
+      "pmag"
     ],
     "featured": false,
     "tileSvg": {
