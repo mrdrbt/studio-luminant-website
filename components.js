@@ -230,7 +230,7 @@ ${mobileItemsHtml}
     hqTitle: 'Stüdyo &amp; Atölye',
     locationLabel: 'Konum',
     locationNote: "Sapanca'dan Türkiye'ye ve yurt dışına teslimat",
-    ctaTitle: 'Projeye Başlayın',
+    ctaTitle: 'Yeni Proje',
     ctaBtn: 'Proje Başlatın',
     ctaHref: 'iletisim.htm',
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
