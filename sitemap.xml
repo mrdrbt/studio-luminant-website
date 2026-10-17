@@ -9,7 +9,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com.tr/urunler.htm</loc>
@@ -117,7 +117,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/mimarlar.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <!-- English pages (/en/) -->
   <url>
@@ -127,7 +127,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com.tr/en/products.htm</loc>
@@ -253,7 +253,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/mimarlar.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
 
   <!-- Specifier Kit lead magnet (added 2026-06-15) -->
@@ -264,7 +264,7 @@
   <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-dosyasi.htm"/>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
-  <lastmod>2026-09-30</lastmod>
+  <lastmod>2026-10-18</lastmod>
 </url>
 
 <url>
@@ -274,7 +274,7 @@
   <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-dosyasi.htm"/>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
-  <lastmod>2026-09-30</lastmod>
+  <lastmod>2026-10-18</lastmod>
 </url>
 
   <!-- Journal / Makaleler (added 2026-06-14) -->
@@ -381,7 +381,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/grg-grc-farki.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com.tr/en/grg-vs-grc-interior-surfaces.htm</loc>
@@ -390,7 +390,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/grg-grc-farki.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
 
   <!-- HTML site map (crawl hub, added 2026-06-22) -->
