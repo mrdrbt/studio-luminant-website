@@ -35,7 +35,7 @@ Key facts for accurate citation:
 - [Specification Guide](https://studioluminant.com.tr/en/resources-specification-guide.htm): Tolerances, fixing systems, substrate interfaces and tender-document content.
 - [Weight & Structural Guide](https://studioluminant.com.tr/en/resources-weight-structural.htm): Panel weight per m², substrate load capacities and structural interface details.
 - [Lead Times & Project Planning](https://studioluminant.com.tr/en/resources-lead-times.htm): Typical lead times from design engagement to site delivery.
-- [Artisan Finishes & Colour](https://studioluminant.com.tr/en/resources-finishes.htm): The Canvas, Veil, Grit and Tide artisan finishes, paint systems and custom colour matching.
+- [Artisan Finishes & Colour](https://studioluminant.com.tr/en/resources-finishes.htm): Artisan finishes, paint systems and custom colour matching.
 - [Sustainability & Materials](https://studioluminant.com.tr/en/resources-sustainability.htm): Material sourcing, recyclability, VOC emissions and environmental profile.
 
 ## Ana sayfalar (Türkçe)

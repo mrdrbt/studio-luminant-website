@@ -1347,18 +1347,18 @@
           <img src="../images/studio-luminant-finish-sample-box-angled-closed.jpg" alt="" width="1600" height="1073" loading="lazy" decoding="async">
         </picture>
         <div class="sbx-hotspots">
-          <button type="button" class="sbx-dot" data-i="0" style="left:28%;top:43%" aria-label="Sample 1: hammered relief">1</button>
-          <button type="button" class="sbx-dot" data-i="1" style="left:66%;top:40%" aria-label="Sample 2: basketweave relief">2</button>
-          <button type="button" class="sbx-dot" data-i="2" style="left:54%;top:60%" aria-label="Sample 3: pebble relief">3</button>
-          <button type="button" class="sbx-dot" data-i="3" style="left:42%;top:26%" aria-label="Sample 4: reed relief">4</button>
+          <button type="button" class="sbx-dot" data-i="0" style="left:28%;top:43%" aria-label="Sample 1">1</button>
+          <button type="button" class="sbx-dot" data-i="1" style="left:66%;top:40%" aria-label="Sample 2">2</button>
+          <button type="button" class="sbx-dot" data-i="2" style="left:54%;top:60%" aria-label="Sample 3">3</button>
+          <button type="button" class="sbx-dot" data-i="3" style="left:42%;top:26%" aria-label="Sample 4">4</button>
         </div>
         <span class="sbx-cue">Scroll to open</span>
       </div>
       <ul class="sbx-chips" role="list">
-        <li><button type="button" class="sbx-chip" data-i="0"><span class="n">01</span> Hammered</button></li>
-        <li><button type="button" class="sbx-chip" data-i="1"><span class="n">02</span> Basketweave</button></li>
-        <li><button type="button" class="sbx-chip" data-i="2"><span class="n">03</span> Pebble</button></li>
-        <li><button type="button" class="sbx-chip" data-i="3"><span class="n">04</span> Reed</button></li>
+        <li><button type="button" class="sbx-chip" data-i="0"><span class="n">01</span> Sample</button></li>
+        <li><button type="button" class="sbx-chip" data-i="1"><span class="n">02</span> Sample</button></li>
+        <li><button type="button" class="sbx-chip" data-i="2"><span class="n">03</span> Sample</button></li>
+        <li><button type="button" class="sbx-chip" data-i="3"><span class="n">04</span> Sample</button></li>
       </ul>
     </div>
 
@@ -1391,14 +1391,14 @@
     var sec=document.getElementById('sample-box');
     if(!sec)return;
     var FIN=[
-      {idx:'01',name:'Hammered',
+      {idx:'01',name:'Sample 01',
        desc:'Shallow, overlapping dents, as if struck by a hammer. In raking light each dent throws its own small shadow; in flat light the surface goes quiet.'},
-      {idx:'02',name:'Basketweave',
+      {idx:'02',name:'Sample 02',
        desc:'Flat bands passing over and under one another. The relief steps down at every crossing, where one band dives under the next.'},
-      {idx:'03',name:'Pebble',
-       desc:'A fine, irregular pebble grain, close to orange peel. It catches raking light and reads almost flat under even light.'},
-      {idx:'04',name:'Reed',
-       desc:'Slim vertical reeds laid side by side, each a rounded ridge. Light grazing across them draws a run of fine parallel shadows.'}
+      {idx:'03',name:'Sample 03',
+       desc:'A fine, irregular grain, close to orange peel. It catches raking light and reads almost flat under even light.'},
+      {idx:'04',name:'Sample 04',
+       desc:'Slim vertical ridges laid side by side, each one rounded. Light grazing across them draws a run of fine parallel shadows.'}
     ];
     var COUNT_SEP=' / ';
     var stage=sec.querySelector('.sbx-stage'),box=sec.querySelector('.sbx-box');
