@@ -68,6 +68,8 @@ def main():
     ap.add_argument("out", type=Path)
     ap.add_argument("--light-frame", type=int, default=0, choices=(0, 1, 2),
                     help="which of the graze sheet's three frames; pick the one lit from the poster's side")
+    ap.add_argument("--concept", type=Path, default=None,
+                    help="drawing/concept image for the first layer (default: <library>/source_image.png)")
     a = ap.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
 
@@ -96,7 +98,7 @@ def main():
     report["light_frame"] = a.light_frame
 
     # concept: affine onto the heightmap square, edge pixels replicated
-    concept = imread(a.library / "source_image.png")
+    concept = imread(a.concept or a.library / "source_image.png")
     cw = cv2.resize(to_gray(concept), (WORK, WORK), interpolation=cv2.INTER_AREA)
     best_warp, best_score = None, -1
     for s in (0.85, 0.92, 1.0, 1.1):
