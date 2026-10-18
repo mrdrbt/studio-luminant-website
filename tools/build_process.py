@@ -18,8 +18,8 @@ from build_systems import DOMAIN, SITE, tracking_block
 FRAMES = [  # real workshop photographs: file, width, height, object-position
     ("workshop-01-mould-prep.jpg", 1800, 2400, "center 30%"),
     ("workshop-02-casting.jpg", 1152, 928, None),
-    ("workshop-03-demoulding.jpg", 1800, 2400, "center 15%"),
-    ("workshop-04-negative-positive.jpg", 1800, 2400, None),
+    ("workshop-03-demoulding-clean.jpg", 1152, 928, None),
+    ("workshop-04-negative-positive-clean.jpg", 1152, 928, None),
     ("workshop-05-finishing.jpg", 1152, 928, None),
 ]
 LAYERS = ("concept", "depth", "light")
