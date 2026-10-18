@@ -81,3 +81,8 @@
   .rg-lb__main { position: static; }
   .rg-lb__main img { position: static; width: 100%; height: auto; max-height: 60svh; }
 }
+
+/* on-site application image under the Uygulama heading */
+.rg-scene { margin: 0 0 var(--s-8); }
+.rg-scene img { display: block; width: 100%; height: auto; background: var(--bg-alt); }
+.rg-scene figcaption { font-size: var(--t-body-sm); color: var(--ink-muted); padding-top: var(--s-2); }
