@@ -77,16 +77,15 @@ function pictureTag(src, alt, sizes, opts) {
     home: { href: '/', alt: 'Studio Luminant' },
     items: [
       { href: 'koleksiyon.htm', text: 'Kütüphane' },
-      { href: 'seri-20-40.htm', text: '20 / 40 Serisi' },
-      { href: 'urunler.htm', text: 'Malzeme & Teknik' },
-      { href: 'surec.htm', text: 'Nasıl Çalışırız' },
+      { href: 'seri-20-40.htm', text: '20/40' },
+      { href: 'urunler.htm', text: 'Malzeme' },
+      { href: 'surec.htm', text: 'Süreç' },
       { href: 'galeri.htm', text: 'Galeri' },
-      { href: 'makaleler.htm', text: 'Makaleler' },
       { href: 'mimarlar.htm', text: 'Mimarlar' }
       // { href: 'kaynaklar.htm', text: 'Kaynaklar' } // temporarily hidden
     ],
     langLabel: 'EN',
-    ctaText: 'Proje Başlatın',
+    ctaText: 'Çiziminizi gönderin',
     ctaHref: 'iletisim.htm',
     hamburgerOpen: 'Menüyü aç',
     hamburgerClose: 'Menüyü kapat',
@@ -95,16 +94,15 @@ function pictureTag(src, alt, sizes, opts) {
     home: { href: '/en/', alt: 'Studio Luminant' },
     items: [
       { href: 'collection.htm', text: 'Library' },
-      { href: 'range-20-40.htm', text: '20 / 40 Range' },
-      { href: 'products.htm', text: 'Materials & Specs' },
-      { href: 'process.htm', text: 'How We Work' },
+      { href: 'range-20-40.htm', text: '20/40' },
+      { href: 'products.htm', text: 'Materials' },
+      { href: 'process.htm', text: 'Process' },
       { href: 'gallery.htm', text: 'Gallery' },
-      { href: 'journal.htm', text: 'Journal' },
-      { href: 'architects.htm', text: 'For Architects' }
+      { href: 'architects.htm', text: 'Architects' }
       // { href: 'resources.htm', text: 'Resources' } // temporarily hidden
     ],
     langLabel: 'TR',
-    ctaText: 'Initiate Project',
+    ctaText: 'Send your drawing',
     ctaHref: 'contact.htm',
     hamburgerOpen: 'Open menu',
     hamburgerClose: 'Close menu',

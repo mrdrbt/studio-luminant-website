@@ -256,31 +256,31 @@ nav.scrolled {
 .nav-logo:hover .nav-logo-img { opacity: 0.8; }
 nav.scrolled .nav-logo-img { height: 19px; }
 .nav-links {
-  display: flex; align-items: center; gap: 36px; list-style: none;
+  display: flex; align-items: center; gap: 30px; list-style: none;
   margin: 0 auto; padding: 0 24px;
 }
 .nav-links a {
   font-family: var(--font-body);
-  font-size: 12px; font-weight: 400; letter-spacing: 0.18em;
-  text-transform: uppercase; color: rgba(var(--ink-rgb), 0.72);
-  text-decoration: none; transition: color 0.3s; white-space: nowrap;
+  font-size: 14px; font-weight: 400; letter-spacing: 0.01em;
+  color: var(--ink); padding: 4px 0; border-bottom: 1px solid transparent;
+  text-decoration: none; transition: border-color 0.3s; white-space: nowrap;
 }
-.nav-links a:hover { color: var(--ink); }
-.nav-links a.active { color: var(--gold); }
+.nav-links a:hover { border-bottom-color: rgba(var(--ink-rgb), 0.3); }
+.nav-links a.active { border-bottom-color: var(--accent); }
 .nav-right { display: flex; align-items: center; gap: 24px; margin-left: auto; }
 .nav-cta {
   font-family: var(--font-body);
-  font-size: 11px; font-weight: 400; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--obsidian);
-  background: var(--gold); padding: 10px 24px;
+  font-size: 13px; font-weight: 400; letter-spacing: 0.02em;
+  color: var(--obsidian);
+  background: var(--gold); padding: 9px 18px;
   text-decoration: none; transition: background 0.3s;
 }
 .nav-cta:hover { background: var(--gold-light); }
 .nav-lang {
-  color: var(--gold-dim); font-size: 11px; letter-spacing: 0.15em;
-  text-transform: uppercase; text-decoration: none; transition: color 0.3s;
+  color: rgba(var(--ink-rgb), 0.6); font-size: 13px; letter-spacing: 0.04em;
+  text-decoration: none; transition: color 0.3s;
 }
-.nav-lang:hover { color: var(--gold); }
+.nav-lang:hover { color: var(--ink); }
 
 /* ─── SECTION BASE ──────────────────── */
 section { position: relative; z-index: 2; }
@@ -500,8 +500,8 @@ summary:focus-visible,
   nav { padding: 24px 32px; }
   nav.scrolled { padding: 16px 32px; }
   .nav-links { gap: 20px; padding: 0 12px; }
-  .nav-links a { font-size: 11px; letter-spacing: 0.14em; }
-  .nav-cta { font-size: 10px; padding: 9px 16px; letter-spacing: 0.18em; }
+  .nav-links a { font-size: 13px; }
+  .nav-cta { font-size: 12px; padding: 8px 14px; }
 }
 @media (max-width: 900px) {
   nav { padding: 20px 32px; }
