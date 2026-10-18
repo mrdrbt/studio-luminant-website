@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#EFE8D5">
-<!-- GO-LIVE GATE: remove this robots line only when every data-placeholder below is gone (range name, composer URL, thickness/weight, images) -->
+<!-- GO-LIVE GATE: remove this robots line only when every data-placeholder below is gone (range name, composer URL, thickness/weight, images) AND the stand-in hero + design gallery (assets/range/design-01..04: Rotor, Crest, Plates, THROAT) is swapped for the voted launch set, each card linked to its composer code -->
 <meta name="robots" content="noindex, nofollow">
 <title>The 20 / 40 Range: Cast Relief Tiles, 20×20 and 40×40 cm | Studio Luminant</title>
 <meta name="description" content="Hand-cast relief tiles in Lumina PMAG™, 20×20 and 40×40 cm. Compose your wall online and see the price at once: TL 5,500 per m² + KDV, ex-works in 4 weeks.">
@@ -17,7 +17,7 @@
 <meta property="og:title" content="The 20 / 40 Range: Cast Relief Tiles, 20×20 and 40×40 cm | Studio Luminant">
 <meta property="og:description" content="Hand-cast relief tiles in Lumina PMAG™, 20×20 and 40×40 cm. Compose your wall online and see the price at once.">
 <meta property="og:url" content="https://studioluminant.com.tr/en/range-20-40.htm">
-<meta property="og:image" content="https://studioluminant.com.tr/assets/range/hero.jpg">
+<meta property="og:image" content="https://studioluminant.com.tr/assets/range/design-01-1536.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -47,7 +47,8 @@
     </div>
   </div>
   <div class="sys-hero__stage">
-    <img class="relief-light__poster" src="../assets/range/hero.jpg" width="1600" height="1600" fetchpriority="high" data-placeholder alt="A wall of relief tiles from the range in raking light">
+    <img class="relief-light__poster" src="../assets/range/design-01-1536.jpg" srcset="../assets/range/design-01-768.jpg 768w, ../assets/range/design-01-1536.jpg 1536w"
+         sizes="(orientation: portrait) 90vw, 55vw" width="1536" height="1024" fetchpriority="high" alt="Render of a restaurant with a relief tile wall from the range, in evening light">
   </div>
 </section>
 
@@ -57,6 +58,34 @@
   <div><dt>5 m²</dt><dd>Minimum order per design and colour.</dd></div>
   <div><dt>Cut on site</dt><dd>Any module can be cut where it goes.</dd></div>
 </dl>
+
+<section class="rg-designs" id="designs">
+  <div class="arc-head reveal">
+    <div class="eyebrow">Designs</div>
+    <h2 class="arc-title">Pick a design, <em>then compose your wall.</em></h2>
+    <p class="rg-designs__lede">Tap a design to see it large, with a link into the composer. Images are renders.</p>
+  </div>
+  <div class="rg-grid">
+    <button type="button" class="rg-card" data-index="0" aria-haspopup="dialog">
+      <img src="../assets/range/design-01-768.jpg" srcset="../assets/range/design-01-768.jpg 768w, ../assets/range/design-01-1536.jpg 1536w" sizes="(orientation: portrait) 92vw, 45vw" width="768" height="512" loading="lazy" alt="Render of a restaurant with a relief tile wall in a meandering line pattern">
+      <span class="rg-card__meta"><span class="rg-card__name"><span class="ph" data-placeholder>[Range name]</span> 01</span><span class="rg-card__open" aria-hidden="true">Open</span></span>
+    </button>
+    <button type="button" class="rg-card" data-index="1" aria-haspopup="dialog">
+      <img src="../assets/range/design-02-768.jpg" srcset="../assets/range/design-02-768.jpg 768w, ../assets/range/design-02-1536.jpg 1536w" sizes="(orientation: portrait) 92vw, 45vw" width="768" height="512" loading="lazy" alt="Render of a restaurant with a relief tile wall of overlapping arcs">
+      <span class="rg-card__meta"><span class="rg-card__name"><span class="ph" data-placeholder>[Range name]</span> 02</span><span class="rg-card__open" aria-hidden="true">Open</span></span>
+    </button>
+    <button type="button" class="rg-card" data-index="2" aria-haspopup="dialog">
+      <img src="../assets/range/design-03-768.jpg" srcset="../assets/range/design-03-768.jpg 768w, ../assets/range/design-03-1536.jpg 1536w" sizes="(orientation: portrait) 92vw, 45vw" width="768" height="512" loading="lazy" alt="Render of a restaurant with a relief tile wall of plates at different depths">
+      <span class="rg-card__meta"><span class="rg-card__name"><span class="ph" data-placeholder>[Range name]</span> 03</span><span class="rg-card__open" aria-hidden="true">Open</span></span>
+    </button>
+    <button type="button" class="rg-card" data-index="3" aria-haspopup="dialog">
+      <img src="../assets/range/design-04-768.jpg" srcset="../assets/range/design-04-768.jpg 768w, ../assets/range/design-04-1536.jpg 1536w" sizes="(orientation: portrait) 92vw, 45vw" width="768" height="512" loading="lazy" alt="Render of a restaurant with a relief tile wall in a field of points">
+      <span class="rg-card__meta"><span class="rg-card__name"><span class="ph" data-placeholder>[Range name]</span> 04</span><span class="rg-card__open" aria-hidden="true">Open</span></span>
+    </button>
+  </div>
+  <!-- composer: each design's "composer" link is "#" until the composer URL and per-design codes exist -->
+  <script type="application/json" id="rg-designs-data">{"line": "[Range name]", "labels": {"compose": "Compose a wall with this design", "sample": "Request a sample", "sampleHref": "contact.htm#sample", "render": "Render. On-screen colour is approximate.", "prev": "Previous design", "next": "Next design"}, "designs": [{"num": "01", "text": "A meandering line network runs along the wall like a band and breaks up into plain ground at its edges.", "composer": "#", "specs": [["Sizes", "20×20 and 40×40 cm"], ["Material", "Lumina PMAG™, hand-cast"], ["Price", "TL 5,500 per m² + KDV"]], "media": [{"src": "../assets/range/design-01-1536.jpg", "srcset": "../assets/range/design-01-768.jpg 768w, ../assets/range/design-01-1536.jpg 1536w", "thumb": "../assets/range/design-01-768.jpg", "label": "Restaurant · evening", "alt": "Render of a restaurant with a relief tile wall in a meandering line pattern"}, {"src": "../assets/range/design-01-b-1536.jpg", "srcset": "../assets/range/design-01-b-768.jpg 768w, ../assets/range/design-01-b-1536.jpg 1536w", "thumb": "../assets/range/design-01-b-768.jpg", "label": "Restaurant · daytime", "alt": "The same design in another room, in daylight"}, {"src": "../assets/range/design-01-card-1536.jpg", "srcset": "../assets/range/design-01-card-768.jpg 768w, ../assets/range/design-01-card-1536.jpg 1400w", "thumb": "../assets/range/design-01-card-768.jpg", "label": "Surface", "alt": "The design’s surface, close view, render"}, {"src": "../assets/range/design-01-sketch-1536.jpg", "srcset": "../assets/range/design-01-sketch-768.jpg 768w, ../assets/range/design-01-sketch-1536.jpg 1600w", "thumb": "../assets/range/design-01-sketch-768.jpg", "label": "Drawing", "alt": "The modules and the lay plan, drawing"}]}, {"num": "02", "text": "Overlapping arcs cover the wall like scales.", "composer": "#", "specs": [["Sizes", "20×20 and 40×40 cm"], ["Material", "Lumina PMAG™, hand-cast"], ["Price", "TL 5,500 per m² + KDV"]], "media": [{"src": "../assets/range/design-02-1536.jpg", "srcset": "../assets/range/design-02-768.jpg 768w, ../assets/range/design-02-1536.jpg 1536w", "thumb": "../assets/range/design-02-768.jpg", "label": "Restaurant · evening", "alt": "Render of a restaurant with a relief tile wall of overlapping arcs"}, {"src": "../assets/range/design-02-b-1536.jpg", "srcset": "../assets/range/design-02-b-768.jpg 614w, ../assets/range/design-02-b-1536.jpg 959w", "thumb": "../assets/range/design-02-b-768.jpg", "label": "Café · daytime", "alt": "The same design in another room, in daylight"}, {"src": "../assets/range/design-02-card-1536.jpg", "srcset": "../assets/range/design-02-card-768.jpg 768w, ../assets/range/design-02-card-1536.jpg 979w", "thumb": "../assets/range/design-02-card-768.jpg", "label": "Module", "alt": "The design’s surface, close view, render"}, {"src": "../assets/range/design-02-sketch-1536.jpg", "srcset": "../assets/range/design-02-sketch-768.jpg 768w, ../assets/range/design-02-sketch-1536.jpg 1600w", "thumb": "../assets/range/design-02-sketch-768.jpg", "label": "Drawing", "alt": "The modules and the lay plan, drawing"}]}, {"num": "03", "text": "Rectangular plates at different depths turn the wall into a stepped surface, like coursed stone.", "composer": "#", "specs": [["Sizes", "20×20 and 40×40 cm"], ["Material", "Lumina PMAG™, hand-cast"], ["Price", "TL 5,500 per m² + KDV"]], "media": [{"src": "../assets/range/design-03-1536.jpg", "srcset": "../assets/range/design-03-768.jpg 768w, ../assets/range/design-03-1536.jpg 1536w", "thumb": "../assets/range/design-03-768.jpg", "label": "Restaurant · evening", "alt": "Render of a restaurant with a relief tile wall of plates at different depths"}, {"src": "../assets/range/design-03-b-1536.jpg", "srcset": "../assets/range/design-03-b-768.jpg 768w, ../assets/range/design-03-b-1536.jpg 1536w", "thumb": "../assets/range/design-03-b-768.jpg", "label": "Restaurant · daytime", "alt": "The same design in another room, in daylight"}, {"src": "../assets/range/design-03-card-1536.jpg", "srcset": "../assets/range/design-03-card-768.jpg 768w, ../assets/range/design-03-card-1536.jpg 1400w", "thumb": "../assets/range/design-03-card-768.jpg", "label": "Surface", "alt": "The design’s surface, close view, render"}]}, {"num": "04", "text": "A close field of points gathers and thins out along the wall.", "composer": "#", "specs": [["Sizes", "20×20 and 40×40 cm"], ["Material", "Lumina PMAG™, hand-cast"], ["Price", "TL 5,500 per m² + KDV"]], "media": [{"src": "../assets/range/design-04-1536.jpg", "srcset": "../assets/range/design-04-768.jpg 768w, ../assets/range/design-04-1536.jpg 1536w", "thumb": "../assets/range/design-04-768.jpg", "label": "Restaurant · evening", "alt": "Render of a restaurant with a relief tile wall in a field of points"}, {"src": "../assets/range/design-04-b-1536.jpg", "srcset": "../assets/range/design-04-b-768.jpg 614w, ../assets/range/design-04-b-1536.jpg 959w", "thumb": "../assets/range/design-04-b-768.jpg", "label": "Café · daytime", "alt": "The same design in another room, in daylight"}, {"src": "../assets/range/design-04-card-1536.jpg", "srcset": "../assets/range/design-04-card-768.jpg 768w, ../assets/range/design-04-card-1536.jpg 1400w", "thumb": "../assets/range/design-04-card-768.jpg", "label": "Surface", "alt": "The design’s surface, close view, render"}]}]}</script>
+</section>
 
 <section class="arc-band">
   <div class="arc-inner">
@@ -159,6 +188,7 @@
 </div>
 
 <script src="../shared.js"></script>
+<script src="../range.js" defer></script>
 <script src="../components.js"></script>
 
 <script src="../consent.js"></script>
