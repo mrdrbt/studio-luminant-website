@@ -605,7 +605,9 @@
 <script src="../collection-data.js"></script>
 <script>
 // ─── Pattern Data (from Supabase via collection-data.js) ───
-const patterns = window.SL_PATTERNS.map(p => ({
+// Study cards shown in v3: only Fluted Spherical (Burak 2026-10-19); the rest stay in Supabase.
+const SHOWN_STUDIES = ['fluted-spherical'];
+const patterns = window.SL_PATTERNS.filter(p => SHOWN_STUDIES.includes(p.id)).map(p => ({
   id: p.id,
   code: p.code,
   collection: p.collection,
@@ -682,6 +684,7 @@ function renderGrid() {
   const activeTags = Array.from(document.querySelectorAll('.app-tag.active')).map(t => t.dataset.app);
 
   let count = 0;
+  if (patterns.length < 2) document.querySelector('.collection-filters')?.setAttribute('hidden', '');
   patterns.forEach((p, i) => {
     const styleMatch = activeStyle === 'all' || p.style === activeStyle;
     const appMatch = activeTags.length === 0 || activeTags.some(tag => p.applications.includes(tag));
