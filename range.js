@@ -30,7 +30,7 @@
       '</div>' +
       '<div class="rg-lb__details">' +
         '<p class="rg-lb__num">' + esc(d.num) + '</p>' +
-        '<h2 class="rg-lb__name">' + esc(data.line) + ' ' + esc(d.num) + '</h2>' +
+        '<h2 class="rg-lb__name">' + esc(d.name || data.line + ' ' + d.num) + '</h2>' +
         '<p class="rg-lb__text">' + esc(d.text) + '</p>' +
         '<dl class="rg-lb__spec">' + specs + '</dl>' +
         '<p class="rg-lb__note">' + esc(L.render) + '</p>' +
@@ -46,7 +46,7 @@
 
   function open(i, m) {
     m = m || 0;
-    SLModal.open({ mode: 'lightbox', html: html(i, m), title: data.line + ' ' + designs[i].num });
+    SLModal.open({ mode: 'lightbox', html: html(i, m), title: designs[i].name || data.line + ' ' + designs[i].num });
     var body = document.querySelector('.sl-modal-body');
     body.querySelector('.rg-lb__prev').addEventListener('click', function () { open((i + designs.length - 1) % designs.length); });
     body.querySelector('.rg-lb__next').addEventListener('click', function () { open((i + 1) % designs.length); });
