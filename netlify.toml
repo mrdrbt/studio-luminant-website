@@ -344,19 +344,19 @@
 # ─── BIM lead magnet taken down (Burak 2026-10-16) — pages and ZIP removed; old URLs → the Specifier Kit ───
 [[redirects]]
   from = "/compass-star-bim-paketi.htm"
-  to = "/tasarim-dosyasi.htm"
+  to = "/iletisim.htm"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/compass-star-bim-pack.htm"
-  to = "/en/specifier-kit.htm"
+  to = "/en/contact.htm"
   status = 301
   force = true
 
 [[redirects]]
   from = "/downloads/SL_Compass-Star_BIM_Pack.zip"
-  to = "/en/specifier-kit.htm"
+  to = "/en/contact.htm"
   status = 301
   force = true
 
@@ -610,4 +610,29 @@
   from = "/en/case-study-wave-lounge"
   to = "/en/gallery.htm"
   status = 301
+  force = true
+
+# ─── Specifier Kit pulled until it is rebuilt (Burak 2026-10-19): kit pages and PDFs go to contact; temporary (302) ───
+[[redirects]]
+  from = "/tasarim-dosyasi.htm"
+  to = "/iletisim.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/en/specifier-kit.htm"
+  to = "/en/contact.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/downloads/SL_Specifier_Kit_TR.pdf"
+  to = "/iletisim.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/downloads/SL_Specifier_Kit_EN.pdf"
+  to = "/en/contact.htm"
+  status = 302
   force = true
