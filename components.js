@@ -72,38 +72,69 @@ function pictureTag(src, alt, sizes, opts) {
   // NAP + telephone + @id) to avoid duplicate/conflicting Organization nodes. Intentionally
   // NOT injected per-page here — the brand entity only needs to exist once, on the homepage.
 
+  // ─── LABELS (Two Doors Copy v1 §1–3; DEC-02 open: each label is one constant, so a ruling is a one-line change) ───
+  const LABELS = {
+    tr: {
+      doorBespoke: 'Özel Üretim',
+      doorStudio: 'Atölye Tasarımları',
+      gallery: 'Galeri',          // DEC-02 Q1 default (not «Projeler» yet)
+      architects: 'Mimarlar İçin', // DEC-02 Q5 default
+      materials: 'Malzeme',
+      ctaBespoke: 'Çiziminizi gönderin',
+      ctaStudio: 'Sistemleri inceleyin', // DEC-02 Q2 open: holds until ruled
+      tagline: 'Döküm rölyef duvarlar · Sapanca',
+      footerCtaTitle: 'Yeni proje',
+      about: 'Hakkımızda'
+    },
+    en: {
+      doorBespoke: 'Bespoke',
+      doorStudio: 'Studio Designs',
+      gallery: 'Gallery',
+      architects: 'For Architects',
+      materials: 'Materials',
+      ctaBespoke: 'Send your drawing',
+      ctaStudio: 'See the systems', // DEC-02 Q2 open: holds until ruled
+      tagline: 'Cast relief walls · Sapanca',
+      footerCtaTitle: 'Start a project',
+      about: 'About'
+    }
+  };
+  const L = LABELS[lang === 'tr' ? 'tr' : 'en'];
+
+  // The About page (AB-05) is not built yet: the footer link renders only once this is set.
+  const ABOUT_HREF = { tr: '', en: '' };
+
+  // ─── DOOR (one primary CTA per door; Copy v1 §3) ───
+  // Studio Designs pages: the Systems index and every System page. Everything else is the Bespoke door.
+  const pageFile = location.pathname.split('/').pop() || 'index.html';
+  const isStudioDoor = /^(koleksiyon|collection|sistem-|system-)/.test(pageFile);
+  const doorCta = isStudioDoor
+    ? { text: L.ctaStudio, href: lang === 'tr' ? 'koleksiyon.htm' : 'collection.htm' }
+    : { text: L.ctaBespoke, href: lang === 'tr' ? 'iletisim.htm' : 'contact.htm' };
+
   // ─── NAV ───
   const navLinks = lang === 'tr' ? {
     home: { href: '/', alt: 'Studio Luminant' },
+    // Order is the ruling (Özel Üretim first). 20/40 stays out until 15 Dec.
     items: [
-      { href: 'koleksiyon.htm', text: 'Kütüphane' },
-      { href: 'seri-20-40.htm', text: '20/40' },
-      { href: 'urunler.htm', text: 'Malzeme' },
-      { href: 'surec.htm', text: 'Süreç' },
-      { href: 'galeri.htm', text: 'Galeri' },
-      { href: 'mimarlar.htm', text: 'Mimarlar' }
-      // { href: 'kaynaklar.htm', text: 'Kaynaklar' } // temporarily hidden
+      { href: 'surec.htm', text: L.doorBespoke },
+      { href: 'koleksiyon.htm', text: L.doorStudio },
+      { href: 'galeri.htm', text: L.gallery },
+      { href: 'mimarlar.htm', text: L.architects }
     ],
     langLabel: 'EN',
-    ctaText: 'Çiziminizi gönderin',
-    ctaHref: 'iletisim.htm',
     hamburgerOpen: 'Menüyü aç',
     hamburgerClose: 'Menüyü kapat',
     mobileLabel: 'Mobil menü'
   } : {
     home: { href: '/en/', alt: 'Studio Luminant' },
     items: [
-      { href: 'collection.htm', text: 'Library' },
-      { href: 'range-20-40.htm', text: '20/40' },
-      { href: 'products.htm', text: 'Materials' },
-      { href: 'process.htm', text: 'Process' },
-      { href: 'gallery.htm', text: 'Gallery' },
-      { href: 'architects.htm', text: 'Architects' }
-      // { href: 'resources.htm', text: 'Resources' } // temporarily hidden
+      { href: 'process.htm', text: L.doorBespoke },
+      { href: 'collection.htm', text: L.doorStudio },
+      { href: 'gallery.htm', text: L.gallery },
+      { href: 'architects.htm', text: L.architects }
     ],
     langLabel: 'TR',
-    ctaText: 'Send your drawing',
-    ctaHref: 'contact.htm',
     hamburgerOpen: 'Open menu',
     hamburgerClose: 'Close menu',
     mobileLabel: 'Mobile menu'
@@ -132,7 +163,7 @@ function pictureTag(src, alt, sizes, opts) {
     <button class="nav-hamburger" aria-label="${navLinks.hamburgerOpen}" aria-expanded="false" aria-controls="mobileMenu">
       <span></span>
     </button>
-    <a href="${navLinks.ctaHref}" class="nav-cta">${navLinks.ctaText}</a>
+    <a href="${doorCta.href}" class="nav-cta">${doorCta.text}</a>
   </div>
 </nav>
 
@@ -142,10 +173,9 @@ ${mobileItemsHtml}
 </div>`;
 
   // ─── ACTIVE NAV LINK ───
-  const currentPage = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .nav-mobile-menu a').forEach(a => {
     const href = a.getAttribute('href');
-    if (href && currentPage === href) {
+    if (href && pageFile === href) {
       a.classList.add('active');
       a.setAttribute('aria-current', 'page');
     }
@@ -226,13 +256,11 @@ ${mobileItemsHtml}
 
   const footerContent = lang === 'tr' ? {
     homeHref: '/',
-    tagline: 'Özel mimari elemanlar — tasarlanır, dökülür, özenle bitirilir.',
+    tagline: L.tagline,
     hqTitle: 'Stüdyo &amp; Atölye',
     locationLabel: 'Konum',
     locationNote: "Sapanca'dan Türkiye'ye ve yurt dışına teslimat",
-    ctaTitle: 'Yeni Proje',
-    ctaBtn: 'Proje Başlatın',
-    ctaHref: 'iletisim.htm',
+    materialsHref: 'urunler.htm',
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
     journalHref: 'makaleler.htm',
     journalText: 'Makaleler',
@@ -250,13 +278,11 @@ ${mobileItemsHtml}
     cookieSettingsText: 'Çerez tercihleri'
   } : {
     homeHref: '/en/',
-    tagline: 'Bespoke architectural elements — sculpted, cast, and finished to spec.',
+    tagline: L.tagline,
     hqTitle: 'Studio &amp; Workshop',
     locationLabel: 'Location',
     locationNote: 'Delivered from Sapanca, in Turkey and abroad',
-    ctaTitle: 'Start a Project',
-    ctaBtn: 'Initiate Project',
-    ctaHref: 'contact.htm',
+    materialsHref: 'products.htm',
     copyright: '© 2026 Studio Luminant. All Rights Reserved.',
     journalHref: 'journal.htm',
     journalText: 'Journal',
@@ -305,9 +331,9 @@ ${mobileItemsHtml}
         <p class="footer-location-note">${footerContent.locationNote}</p>
       </div>
       <div class="footer-cta-block">
-        <div class="footer-col-title">${footerContent.ctaTitle}</div>
-        <a href="${footerContent.ctaHref}">
-          ${footerContent.ctaBtn}
+        <div class="footer-col-title">${L.footerCtaTitle}</div>
+        <a href="${doorCta.href}">
+          ${doorCta.text}
           <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
           </svg>
@@ -318,7 +344,9 @@ ${mobileItemsHtml}
     <div class="footer-bottom">
       <p class="footer-copy">${footerContent.copyright}</p>
       <ul class="footer-links">
+        <li><a href="${footerContent.materialsHref}">${L.materials}</a></li>
         <li><a href="${footerContent.journalHref}">${footerContent.journalText}</a></li>
+        ${ABOUT_HREF[lang === 'tr' ? 'tr' : 'en'] ? `<li><a href="${ABOUT_HREF[lang === 'tr' ? 'tr' : 'en']}">${L.about}</a></li>` : ''}
         <li><a href="${footerContent.sitemapHref}">${footerContent.sitemapText}</a></li>
         ${footerContent.bimText ? `<li><a href="${footerContent.bimHref}">${footerContent.bimText}</a></li>` : ''}
         <li><a href="${footerContent.privacyHref}">${footerContent.privacyText}</a></li>
