@@ -235,60 +235,6 @@
     </image:image>
   </url>
 
-  <!-- Lookbook (EN) -->
-  <url>
-    <loc>https://studioluminant.com.tr/en/lookbook.htm</loc>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg</image:loc>
-      <image:title>Otel resepsiyonunda traverten bankonun arkasında yükselen</image:title>
-      <image:caption>Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg</image:loc>
-      <image:title>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area</image:title>
-      <image:caption>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg</image:loc>
-      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
-      <image:caption>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-homeware-showroom-concept.jpg</image:loc>
-      <image:title>Raking daylight across a sage relief of stacked wave bands in a homeware showroom</image:title>
-      <image:caption>Raking daylight across a sage relief of stacked wave bands in a homeware showroom; oak plinths, ceramics and folded textiles below</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square.jpg</image:loc>
-      <image:title>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café</image:title>
-      <image:caption>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café; a small marble table and a bentwood chair in front</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg</image:loc>
-      <image:title>Pale grey relief wall of drifting vertical fibres behind a living-room sofa</image:title>
-      <image:caption>Pale grey relief wall of drifting vertical fibres behind a living-room sofa, with daylight raking across it</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait.jpg</image:loc>
-      <image:title>Cellular relief wall behind a travertine reception desk</image:title>
-      <image:caption>Cellular relief wall behind a travertine reception desk, side light from the left deepening each cell; a bouclé lounge chair and low table in front</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.jpg</image:loc>
-      <image:title>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café</image:title>
-      <image:caption>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café; a small marble table and a bentwood chair in front</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.jpg</image:loc>
-      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
-      <image:caption>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait.jpg</image:loc>
-      <image:title>Raking daylight across a sage relief of stacked wave bands in a homeware showroom</image:title>
-      <image:caption>Raking daylight across a sage relief of stacked wave bands in a homeware showroom; oak plinths, ceramics and folded textiles below</image:caption>
-    </image:image>
-  </url>
 
   <!-- Hotel lobby article (TR) -->
   <url>

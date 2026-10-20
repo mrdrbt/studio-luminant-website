@@ -21,10 +21,10 @@
     <lastmod>2026-09-30</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com.tr/koleksiyon.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/koleksiyon.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/collection.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/koleksiyon.htm"/>
+    <loc>https://studioluminant.com.tr/sistemler.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/sistemler.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/systems.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/sistemler.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-10-13</lastmod>
@@ -82,15 +82,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2026-10-15</lastmod>
-  </url>
-  <url>
-    <loc>https://studioluminant.com.tr/kaynaklar.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/kaynaklar.htm"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2026-09-24</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com.tr/kaynaklar-sartname-rehberi.htm</loc>
@@ -175,10 +166,10 @@
     <lastmod>2026-09-30</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com.tr/en/collection.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/koleksiyon.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/collection.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/koleksiyon.htm"/>
+    <loc>https://studioluminant.com.tr/en/systems.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/sistemler.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/systems.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/sistemler.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-10-13</lastmod>
@@ -238,15 +229,6 @@
     <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://studioluminant.com.tr/en/resources.htm</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar.htm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources.htm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/kaynaklar.htm"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-09-23</lastmod>
-  </url>
-  <url>
     <loc>https://studioluminant.com.tr/en/resources-specification-guide.htm</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-sartname-rehberi.htm"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-specification-guide.htm"/>
@@ -290,12 +272,6 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://studioluminant.com.tr/en/lookbook.htm</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2026-10-13</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com.tr/en/contact.htm</loc>

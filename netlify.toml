@@ -193,6 +193,68 @@
   to = "/404.html"
   status = 410
 
+# ─── Two doors (WB-03, page map v2 §3, 2026-10-21): Systems index renamed; the hub replaces the resources index ───
+[[redirects]]
+  from = "/koleksiyon.htm"
+  to = "/sistemler.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/koleksiyon"
+  to = "/sistemler.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/collection.htm"
+  to = "/en/systems.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/collection"
+  to = "/en/systems.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kaynaklar.htm"
+  to = "/mimarlar.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kaynaklar"
+  to = "/mimarlar.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/resources.htm"
+  to = "/en/architects.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/resources"
+  to = "/en/architects.htm"
+  status = 301
+  force = true
+
+# the v1 lookbook (its own palette and nav) folds into the gallery
+[[redirects]]
+  from = "/en/lookbook.htm"
+  to = "/en/gallery.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/lookbook"
+  to = "/en/gallery.htm"
+  status = 301
+  force = true
+
 # ─── Language restructure 301 redirects (old → new) ───
 # Old Turkish pages at /tr/ → root
 [[redirects]]
@@ -212,7 +274,7 @@
 
 [[redirects]]
   from = "/tr/koleksiyon.htm"
-  to = "/koleksiyon.htm"
+  to = "/sistemler.htm"
   status = 301
 
 [[redirects]]
@@ -232,17 +294,17 @@
 
 [[redirects]]
   from = "/tr/kaynaklar.htm"
-  to = "/kaynaklar.htm"
+  to = "/mimarlar.htm"
   status = 301
 
 [[redirects]]
   from = "/tr/kaynaklar-yangin-sinifi.htm"
-  to = "/kaynaklar.htm"
+  to = "/mimarlar.htm"
   status = 301
 
 [[redirects]]
   from = "/kaynaklar-yangin-sinifi.htm"
-  to = "/kaynaklar.htm"
+  to = "/mimarlar.htm"
   status = 301
 
 [[redirects]]
@@ -273,7 +335,7 @@
 # Old English pages at root → /en/
 [[redirects]]
   from = "/collection.htm"
-  to = "/en/collection.htm"
+  to = "/en/systems.htm"
   status = 301
 
 [[redirects]]
@@ -298,17 +360,17 @@
 
 [[redirects]]
   from = "/resources.htm"
-  to = "/en/resources.htm"
+  to = "/en/architects.htm"
   status = 301
 
 [[redirects]]
   from = "/resources-fire-ratings.htm"
-  to = "/en/resources.htm"
+  to = "/en/architects.htm"
   status = 301
 
 [[redirects]]
   from = "/en/resources-fire-ratings.htm"
-  to = "/en/resources.htm"
+  to = "/en/architects.htm"
   status = 301
 
 [[redirects]]
@@ -338,10 +400,10 @@
 
 [[redirects]]
   from = "/lookbook.htm"
-  to = "/en/lookbook.htm"
+  to = "/en/gallery.htm"
   status = 301
 
-# ─── BIM lead magnet taken down (Burak 2026-10-16) — pages and ZIP removed; old URLs → the Specifier Kit ───
+# ─── BIM lead magnet taken down (Burak 2026-10-16) — pages and ZIP removed; old URLs → contact (the kit is pulled) ───
 [[redirects]]
   from = "/compass-star-bim-paketi.htm"
   to = "/iletisim.htm"
@@ -357,12 +419,6 @@
 [[redirects]]
   from = "/downloads/SL_Compass-Star_BIM_Pack.zip"
   to = "/en/contact.htm"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/downloads/SL_Compass-Star_BIM_Pack.zip"
-  to = "/en/specifier-kit.htm"
   status = 301
   force = true
 

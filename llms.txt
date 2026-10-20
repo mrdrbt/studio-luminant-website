@@ -17,9 +17,9 @@ Key facts for accurate citation:
 - [Studio Luminant — Bespoke Architectural Elements](https://studioluminant.com.tr/en/): Homepage — overview of bespoke relief panels and sculptural surfaces.
 - [For Architects & Specifiers](https://studioluminant.com.tr/en/architects.htm): How Studio Luminant works with architects — one design language, one supplier, specification support.
 - [Materials & Specifications — Lumina PMAG™](https://studioluminant.com.tr/en/products.htm): Technical specifications, dimensions and performance data for Lumina PMAG™.
-- [Collection — Standard Relief Patterns](https://studioluminant.com.tr/en/collection.htm): Standard geometric, organic, heritage and surface patterns.
+- [Studio Designs — Systems](https://studioluminant.com.tr/en/systems.htm): Named relief systems drawn by the studio, each on its own page, plus design studies.
 - [Design Gallery](https://studioluminant.com.tr/en/gallery.htm): Bespoke relief panels and sculptural wall surfaces cast to order.
-- [How We Work](https://studioluminant.com.tr/en/process.htm): The three-stage process — digital modelling, precision casting, artisan finishing.
+- [Bespoke](https://studioluminant.com.tr/en/process.htm): The three-stage process — digital modelling, precision casting, artisan finishing.
 - [Contact](https://studioluminant.com.tr/en/contact.htm): Commission project-specific architectural elements.
 
 ## Definitions & guides (English)
@@ -31,7 +31,6 @@ Key facts for accurate citation:
 
 ## Technical resources (English)
 
-- [Resources](https://studioluminant.com.tr/en/resources.htm): Index of technical resources for specifiers.
 - [Specification Guide](https://studioluminant.com.tr/en/resources-specification-guide.htm): Tolerances, fixing systems, substrate interfaces and tender-document content.
 - [Weight & Structural Guide](https://studioluminant.com.tr/en/resources-weight-structural.htm): Panel weight per m², substrate load capacities and structural interface details.
 - [Lead Times & Project Planning](https://studioluminant.com.tr/en/resources-lead-times.htm): Typical lead times from design engagement to site delivery.
@@ -43,9 +42,9 @@ Key facts for accurate citation:
 - [Studio Luminant — Özel Mimari Elemanlar](https://studioluminant.com.tr/): Ana sayfa — özel üretim rölyef paneller ve heykelsi yüzeylere genel bakış.
 - [Mimarlar & Müellifler İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi — tek tasarım dili, tek tedarikçi, şartname desteği.
 - [Malzemeler ve Spesifikasyonlar — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): İki malzeme için teknik spesifikasyonlar, boyutlar ve performans verileri.
-- [Koleksiyon — Standart Desenler](https://studioluminant.com.tr/koleksiyon.htm): Standart geometrik, organik, miras ve yüzey desenleri.
+- [Atölye Tasarımları — Sistemler](https://studioluminant.com.tr/sistemler.htm): Stüdyonun çizdiği adlandırılmış rölyef sistemleri ve tasarım etütleri.
 - [Tasarım Galerisi](https://studioluminant.com.tr/galeri.htm): Siparişe göre dökülen özel rölyef paneller ve heykelsi yüzeyler.
-- [Nasıl Çalışırız](https://studioluminant.com.tr/surec.htm): Üç aşamalı süreç — dijital modelleme, hassas döküm, artizan finish.
+- [Özel Üretim](https://studioluminant.com.tr/surec.htm): Üç aşamalı süreç — dijital modelleme, hassas döküm, artizan finish.
 - [İletişim](https://studioluminant.com.tr/iletisim.htm): Projeye özel mimari elemanlar için talep.
 
 ## Tanımlar & rehberler (Türkçe)
@@ -53,7 +52,6 @@ Key facts for accurate citation:
 - [Mimari Rölyef Panel Nedir?](https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm): Tanım, kullanım alanları, malzemeler ve nasıl sipariş edildiği.
 - [Heykelsi Duvar Paneli Nedir?](https://studioluminant.com.tr/heykelsi-duvar-paneli-nedir.htm): Terimin anlamı ve modüler karodan farkı.
 - [Özel Üretim Duvar Paneli: Sipariş Rehberi](https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm): Tasarımdan döküme uçtan uca sipariş rehberi.
-- [Kaynaklar](https://studioluminant.com.tr/kaynaklar.htm): Mimarlar için teknik kaynaklar dizini.
 - [Makaleler](https://studioluminant.com.tr/makaleler.htm): Mimari rölyef ve özel üretim duvar paneli rehberleri.
 
 ## Notes

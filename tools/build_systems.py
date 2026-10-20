@@ -17,7 +17,7 @@ from PIL import Image
 SITE = Path(__file__).resolve().parents[1]
 DOMAIN = "https://studioluminant.com.tr/"
 UI = {
-    "tr": {"back": "← Kütüphane", "index": "koleksiyon.htm", "eyebrow": "Sistem {code}",
+    "tr": {"back": "← Sistemler", "index": "sistemler.htm", "eyebrow": "Sistem {code}",
            "sample": "Numune kutusu isteyin", "adapt": "Projenize uyarlayalım", "contact": "iletisim.htm",
            "sample_href": "iletisim.htm#numune",
            "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey"},
@@ -25,12 +25,12 @@ UI = {
            "finish": "Artizan finish: Canvas, Veil, Grit, Tide",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
            "door": "Bu sistemi projenize uyarlayabiliriz: ölçüyü, derinliği ve desen yoğunluğunu çiziminize göre yeniden kurarız.",
-           "door_cta": "Çiziminizi gönderin", "title": "{name}: Kütüphane | Studio Luminant", "home": "Ana Sayfa",
-           "lib": "Kütüphane", "idx_file": "koleksiyon.htm", "page": "sistem-{slug}.htm",
-           "idx_title": "Kütüphane sistemleri",
+           "door_cta": "Çiziminizi gönderin", "title": "{name}: Atölye Tasarımları | Studio Luminant", "home": "Ana Sayfa",
+           "lib": "Sistemler", "idx_file": "sistemler.htm", "page": "sistem-{slug}.htm",
+           "idx_title": "Adlandırılmış rölyef sistemleri",
            "idx_lede": "Ölçüsü, derinliği ve dizilişi tanımlanmış rölyef sistemleri. Her birini sayfasında canlı ışıkta inceleyin.",
            "studies": "Tasarım etütleri"},
-    "en": {"back": "← Library", "index": "collection.htm", "eyebrow": "System {code}",
+    "en": {"back": "← Systems", "index": "systems.htm", "eyebrow": "System {code}",
            "sample": "Request the Sample Box", "adapt": "Adapt it to your project", "contact": "contact.htm",
            "sample_href": "contact.htm#sample",
            "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface"},
@@ -38,9 +38,9 @@ UI = {
            "finish": "Artisan finishes: Canvas, Veil, Grit, Tide",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
            "door": "We can adapt this system to your project, rebuilding its size, depth and pattern density from your drawing.",
-           "door_cta": "Send Your Drawing", "title": "{name}: Library | Studio Luminant", "home": "Home",
-           "lib": "Library", "idx_file": "en/collection.htm", "page": "system-{slug}.htm",
-           "idx_title": "Library systems",
+           "door_cta": "Send Your Drawing", "title": "{name}: Studio Designs | Studio Luminant", "home": "Home",
+           "lib": "Systems", "idx_file": "en/systems.htm", "page": "system-{slug}.htm",
+           "idx_title": "Named relief systems",
            "idx_lede": "Relief systems with a defined size, depth and layout. See each one in live light on its own page.",
            "studies": "Design studies"},
 }

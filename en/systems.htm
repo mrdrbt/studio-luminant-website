@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#EFE8D5">
-<title>Kütüphane: Rölyef Sistemleri ve Tasarım Etütleri | Studio Luminant</title>
-<meta name="description" content="Ölçüsü, derinliği ve dizilişi tanımlanmış dökme rölyef sistemleri ve tasarım etütleri. Her sistem, Lumina PMAG™ ile projeye göre uyarlanır.">
-<link rel="canonical" href="https://studioluminant.com.tr/koleksiyon.htm">
-  <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/koleksiyon.htm">
-  <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/collection.htm">
-  <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/koleksiyon.htm">
+<title>Studio Designs: Relief Systems and Design Studies | Studio Luminant</title>
+<meta name="description" content="Cast relief systems with a defined size, depth and layout, alongside our design studies. Each system can be adapted to a project in Lumina PMAG™.">
+<link rel="canonical" href="https://studioluminant.com.tr/en/systems.htm">
+  <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/sistemler.htm">
+  <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/systems.htm">
+  <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/sistemler.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
-<meta property="og:title" content="Kütüphane: Rölyef Sistemleri ve Tasarım Etütleri | Studio Luminant">
-<meta property="og:description" content="Ölçüsü, derinliği ve dizilişi tanımlanmış dökme rölyef sistemleri ve tasarım etütleri. Her sistem, Lumina PMAG™ ile projeye göre uyarlanır.">
-<meta property="og:url" content="https://studioluminant.com.tr/koleksiyon.htm">
+<meta property="og:title" content="Studio Designs: Relief Systems and Design Studies | Studio Luminant">
+<meta property="og:description" content="Cast relief systems with a defined size, depth and layout, alongside our design studies. Each system can be adapted to a project in Lumina PMAG™.">
+<meta property="og:url" content="https://studioluminant.com.tr/en/systems.htm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kütüphane: Rölyef Sistemleri ve Tasarım Etütleri | Studio Luminant">
-<meta name="twitter:description" content="Studio Luminant Kütüphanesi: dökme rölyef sistemleri ve tasarım etütleri.">
+<meta name="twitter:title" content="Studio Designs: Relief Systems and Design Studies | Studio Luminant">
+<meta name="twitter:description" content="Studio Designs: cast relief systems and design studies by Studio Luminant.">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css?v=f5700f47">
-<link rel="stylesheet" href="library.css?v=8a29877d">
+<link rel="stylesheet" href="../shared.css?v=f5700f47">
+<link rel="stylesheet" href="../library.css?v=8a29877d">
 
 <style>
   /* ─── COLLECTION HERO ──────────────── */
@@ -169,12 +169,7 @@
     border-radius: 6px; overflow: hidden;
     cursor: pointer;
     border: 1px solid transparent;
-    transition: border-color 0.3s, transform 0.3s;
-  }
-  @media (pointer: fine) {
-  .pattern-card:hover {
-    border-color: var(--border);
-    transform: translateY(-2px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   }
 
   .card-img-wrap {
@@ -186,12 +181,20 @@
     width: 100%; height: 100%; object-fit: cover;
     display: block;
     transition: transform 0.6s cubic-bezier(.25,.46,.45,.94), filter 0.4s;
-    filter: grayscale(10%);
+    filter: sepia(18%) saturate(85%) brightness(92%) contrast(1.02);
   }
-  .pattern-card:hover .card-img-wrap img {
-    transform: scale(1.04);
-    filter: grayscale(0%);
-  }
+
+  /* Hover effects — only for pointer devices (no sticky hover on touch) */
+  @media (pointer: fine) {
+    .pattern-card:hover {
+      border-color: var(--border);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.12);
+    }
+    .pattern-card:hover .card-img-wrap img {
+      transform: scale(1.04);
+      filter: sepia(8%) saturate(95%) brightness(97%);
+    }
   }
 
   .card-info {
@@ -409,14 +412,11 @@
   }
 
   /* ─── RESPONSIVE ────────────────────── */
-  .uds-intro { padding: 32px 32px 0 !important; }
-  .uds-intro > div { flex-direction: column !important; gap: 20px !important; }
-
   @media (max-width: 1024px) {
-    #collection-hero { padding: 120px 32px 60px; }
-    .collection-hero-inner { flex-direction: column; gap: 32px; }
     .uds-intro { padding: 32px 32px 0 !important; }
     .uds-intro > div { flex-direction: column !important; gap: 20px !important; }
+    #collection-hero { padding: 120px 32px 60px; }
+    .collection-hero-inner { flex-direction: column; gap: 32px; }
     .collection-filters { padding: 32px 32px 0; }
     .collection-grid-section { padding: 24px 32px 60px; }
     .pattern-grid { grid-template-columns: repeat(2, 1fr); }
@@ -432,12 +432,12 @@
   }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Kütüphane", "item": "https://studioluminant.com.tr/koleksiyon.htm"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Systems", "item": "https://studioluminant.com.tr/en/systems.htm"}]}
 </script>
 </head>
 <body>
 
-<div id="site-nav" data-lang="tr" data-lang-url="en/collection.htm"></div>
+<div id="site-nav" data-lang="en" data-lang-url="../sistemler.htm" data-base="../"></div>
 
 <main id="main">
 
@@ -448,46 +448,46 @@
       <div id="hero-img-container"></div>
     </div>
     <div class="hero-text">
-      <h1 class="hero-eyebrow">Mimari Rölyef Kütüphanesi</h1>
+      <h1 class="hero-eyebrow">Studio Designs</h1>
       <div class="hero-title" id="hero-title"></div>
       <p class="hero-desc" id="hero-desc"></p>
-      <a class="hero-cta" id="hero-cta" href="iletisim.htm" style="display:none">Bu Tasarım Hakkında Bilgi Alın →</a>
+      <a class="hero-cta" id="hero-cta" href="contact.htm" style="display:none">Enquire About This Design →</a>
     </div>
   </div>
 </section>
 
 <!-- SYSTEMS:START (tools/build_systems.py) -->
 <section class="sys-index reveal">
-  <div class="eyebrow">Kütüphane</div>
-  <h2 class="sys-index__title">Kütüphane sistemleri</h2>
-  <p class="sys-index__lede">Ölçüsü, derinliği ve dizilişi tanımlanmış rölyef sistemleri. Her birini sayfasında canlı ışıkta inceleyin.</p>
+  <div class="eyebrow">Systems</div>
+  <h2 class="sys-index__title">Named relief systems</h2>
+  <p class="sys-index__lede">Relief systems with a defined size, depth and layout. See each one in live light on its own page.</p>
   <div class="sys-index__grid">
-    <a class="sys-card" href="sistem-cantus.htm">
-      <img src="assets/relief/012-iznik-cypress/object.webp" width="1200" height="1200" loading="lazy" alt="Cantus panelinin yalama ışıkta render&#x27;ı">
-      <span class="sys-card__code">Sistem 012</span>
+    <a class="sys-card" href="system-cantus.htm">
+      <img src="../assets/relief/012-iznik-cypress/object.webp" width="1200" height="1200" loading="lazy" alt="Render of the Cantus panel in raking light">
+      <span class="sys-card__code">System 012</span>
       <span class="sys-card__name">Cantus</span>
-      <span class="sys-card__layout">Tek panel, tekrarsız kompozisyon</span>
+      <span class="sys-card__layout">Single panel, no repeat</span>
     </a>
-    <a class="sys-card" href="sistem-ostinato.htm">
-      <img src="assets/relief/031-gothic/object.webp" width="1200" height="1200" loading="lazy" alt="Ostinato panelinin yalama ışıkta render&#x27;ı">
-      <span class="sys-card__code">Sistem 031</span>
+    <a class="sys-card" href="system-ostinato.htm">
+      <img src="../assets/relief/031-gothic/object.webp" width="1200" height="1200" loading="lazy" alt="Render of the Ostinato panel in raking light">
+      <span class="sys-card__code">System 031</span>
       <span class="sys-card__name">Ostinato</span>
-      <span class="sys-card__layout">Tekrarlı alan, 600 mm’de bir</span>
+      <span class="sys-card__layout">Repeating field, every 600 mm</span>
     </a>
-    <a class="sys-card" href="sistem-glissando.htm">
-      <img src="assets/relief/042-drift-focus/object.webp" width="1200" height="2400" loading="lazy" alt="Glissando panelinin yalama ışıkta render&#x27;ı">
-      <span class="sys-card__code">Sistem 042</span>
+    <a class="sys-card" href="system-glissando.htm">
+      <img src="../assets/relief/042-drift-focus/object.webp" width="1200" height="2400" loading="lazy" alt="Render of the Glissando panel in raking light">
+      <span class="sys-card__code">System 042</span>
       <span class="sys-card__name">Glissando</span>
-      <span class="sys-card__layout">Yarım boy şaşırtmalı diziliş</span>
+      <span class="sys-card__layout">Half-height running bond</span>
     </a>
-    <a class="sys-card" href="sistem-tremolo.htm">
-      <img src="assets/relief/033-field-erode/object.webp" width="1200" height="1200" loading="lazy" alt="Tremolo panelinin yalama ışıkta render&#x27;ı">
-      <span class="sys-card__code">Sistem 033</span>
+    <a class="sys-card" href="system-tremolo.htm">
+      <img src="../assets/relief/033-field-erode/object.webp" width="1200" height="1200" loading="lazy" alt="Render of the Tremolo panel in raking light">
+      <span class="sys-card__code">System 033</span>
       <span class="sys-card__name">Tremolo</span>
-      <span class="sys-card__layout">Tek panel</span>
+      <span class="sys-card__layout">Single panel</span>
     </a>
   </div>
-  <div class="eyebrow sys-index__studies">Tasarım etütleri</div>
+  <div class="eyebrow sys-index__studies">Design studies</div>
 </section>
 <!-- SYSTEMS:END -->
 
@@ -495,42 +495,42 @@
 <section class="uds-intro reveal" style="max-width: 1280px; margin: 0 auto; padding: 48px 60px 0;">
   <div style="display: flex; gap: 40px; align-items: center; padding: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;">
     <div style="flex: 1;">
-      <div class="eyebrow" style="margin-bottom: 12px;">Bütünleşik Tasarım Sistemi</div>
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--text-primary); line-height: 1.2; margin-bottom: 12px;">Tasarımınız, <em style="color: var(--gold);">Her Yüzeyde.</em></h2>
-      <p style="font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300;">Tek bir rölyef tasarımı belirleyin — duvarlar, tavanlar, kolonlar ve özel elemanlarda üretelim. Tek malzeme, tutarlı tek bir tasarım dili. Aşağıdaki çalışmalar birer örnek; asıl proje sizin tasarımınız. <a href="iletisim.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Tasarımınızı bizimle paylaşın</a>.</p>
+      <div class="eyebrow" style="margin-bottom: 12px;">Unified Design System</div>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--text-primary); line-height: 1.2; margin-bottom: 12px;">Your Concept. <em style="color: var(--gold);">Every Surface.</em></h2>
+      <p style="font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300;">Specify one relief design — we produce it across walls, ceilings, columns, and feature elements. One material, one consistent design language. The studies below are examples — the project is your own design. <a href="contact.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Brief us on it</a>.</p>
     </div>
     <div style="flex: 0 0 auto; display: flex; gap: 12px;">
-      <a href="urunler.htm#pmag" style="display: inline-block; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 20px; border-radius: 4px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.3s, color 0.3s;">PMAG Teknik →</a>
+      <a href="products.htm#pmag" style="display: inline-block; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 20px; border-radius: 4px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.3s, color 0.3s;">PMAG Specs →</a>
     </div>
   </div>
 </section>
 
 <section class="page-intro reveal" style="max-width: 1280px; margin: 0 auto; padding: 40px 60px 0;">
   <div>
-      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Buradaki etütler bir katalog değil; her biri, mineral rölyefin hangi tasarım dillerinde karşılık bulabildiğini sınayan birer araştırma. Geometrik örüntüler, organik yüzeyler, Anadolu motif geleneği ve yalın dokular bu etütlerin kapsadığı aralığı gösterir.</p>
-      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Kütüphane, işe kendi sistemlerimizden başlamak isteyen projeler için; çoğu proje ise kendi deseniyle gelir. Mimarın getirdiği çizim, motif ya da referans görsel mineral rölyefe çevrilirken ana model dijital ortamda hazırlanır, silikon kalıp bu modelden çıkarılır ve panel Sapanca atölyesinde dökülür.</p>
-      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Aşağıdaki etütler bu nedenle başlangıç noktası olarak okunmalı: her biri olduğu gibi uygulanabilir, ölçeği ve derinliği projeye göre yeniden kurulabilir, ya da yalnızca yön göstermek için kullanılabilir. Belirleyici olan, projenin kendi tasarım kararıdır.</p>
-      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Aynı tasarım duvarda, tavanda, kolon kaplamasında ve özel elemanlarda tek bir ana modelden üretilebildiği için yüzeyler arasında tasarım dili bütünlüğü korunur.</p>
+      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">The design studies are not a catalogue. Each one tests how far cast mineral relief can be pushed in a particular design register &mdash; geometric repeat, organic surface, Anatolian motif, and quiet texture fields that read as ground rather than pattern.</p>
+      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Studio Designs is for projects that would rather start from one of our systems; most projects arrive with their own design. A drawing, a motif, a reference image, or a sketch on a napkin becomes a digital master model; a silicone mould is produced from that master; the panel is cast and hand-finished in Sapanca.</p>
+      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Read the studies below as reference points rather than products. Any one of them can be cast as it stands, rebuilt at a different scale or relief depth, or used only to establish a direction. The specification decision sits with the project.</p>
+      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Because walls, ceilings, column cladding and feature elements can all be produced from a single master model, one design language holds across every surface in a scheme.</p>
   </div>
 </section>
 
 <!-- FILTERS -->
 <section class="collection-filters reveal">
-  <div class="filter-label" id="style-filters-label">Stil</div>
+  <div class="filter-label" id="style-filters-label">Style</div>
   <div class="filter-row" id="style-filters" role="group" aria-labelledby="style-filters-label">
-    <button class="style-pill active" data-style="all" aria-pressed="true">Tümü</button>
-    <button class="style-pill" data-style="geometric" aria-pressed="false">Geometrik</button>
-    <button class="style-pill" data-style="organic" aria-pressed="false">Organik</button>
-    <button class="style-pill" data-style="heritage" aria-pressed="false">Miras</button>
-    <button class="style-pill" data-style="surface" aria-pressed="false">Yüzey</button>
+    <button class="style-pill active" data-style="all" aria-pressed="true">All</button>
+    <button class="style-pill" data-style="geometric" aria-pressed="false">Geometric</button>
+    <button class="style-pill" data-style="organic" aria-pressed="false">Organic</button>
+    <button class="style-pill" data-style="heritage" aria-pressed="false">Heritage</button>
+    <button class="style-pill" data-style="surface" aria-pressed="false">Surface</button>
     <span class="filter-count" id="filter-count" role="status" aria-live="polite"></span>
   </div>
-  <div class="filter-label" id="app-filters-label">Uygulama</div>
+  <div class="filter-label" id="app-filters-label">Application</div>
   <div class="filter-row" id="app-filters" role="group" aria-labelledby="app-filters-label">
-    <button class="app-tag" data-app="wall-panel" aria-pressed="false">Duvar Paneli</button>
-    <button class="app-tag" data-app="ceiling" aria-pressed="false">Tavan</button>
-    <button class="app-tag" data-app="column" aria-pressed="false">Kolon Kaplama</button>
-    <button class="app-tag" data-app="sculptural" aria-pressed="false">Heykelsi</button>
+    <button class="app-tag" data-app="wall-panel" aria-pressed="false">Wall Panel</button>
+    <button class="app-tag" data-app="ceiling" aria-pressed="false">Ceiling</button>
+    <button class="app-tag" data-app="column" aria-pressed="false">Column Cladding</button>
+    <button class="app-tag" data-app="sculptural" aria-pressed="false">Sculptural</button>
   </div>
 </section>
 
@@ -542,9 +542,9 @@
 <!-- BOTTOM CTA -->
 <section class="collection-bottom-cta reveal">
   <div class="collection-bottom-cta-inner">
-    <h3>Benzersiz bir şey mi arıyorsunuz?</h3>
-    <p>Bu çalışmalar yalnızca başlangıç noktası. Kendi tasarımınızı gönderin; tamamen özel desenler üretiriz. Önce teknik özelliklere mi ihtiyacınız var? <a href="urunler.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Malzeme & Teknik</a> sayfasına bakın.</p>
-    <a href="iletisim.htm" class="bespoke-cta">Özel Bir Tasarım Görüşün →</a>
+    <h3>Looking for something unique?</h3>
+    <p>These concepts are just a starting point. Send us your design and we cast fully custom patterns to your brief. Need technical specs first? See <a href="products.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Materials & Specs</a>.</p>
+    <a href="contact.htm" class="bespoke-cta">Discuss a Custom Design →</a>
   </div>
 </section>
 
@@ -555,16 +555,16 @@
     <div class="product-content" style="padding-top: 90px; align-items: center;">
       <div>
         <picture>
-          <source type="image/webp" srcset="images/studio-luminant-finish-sample-box-closed-800w.webp 800w, images/studio-luminant-finish-sample-box-closed-1600w.webp 1600w" sizes="(max-width: 1024px) 100vw, 50vw">
-          <img src="images/studio-luminant-finish-sample-box-closed.jpg" alt="Kapağında Studio Luminant monogramı olan kapalı siyah portföy tipi numune kutusu" width="1600" height="1195" style="display:block; width:100%; height:auto; border:1px solid var(--border);" loading="lazy" decoding="async">
+          <source type="image/webp" srcset="../images/studio-luminant-finish-sample-box-closed-800w.webp 800w, ../images/studio-luminant-finish-sample-box-closed-1600w.webp 1600w" sizes="(max-width: 1024px) 100vw, 50vw">
+          <img src="../images/studio-luminant-finish-sample-box-closed.jpg" alt="Closed black portfolio-style sample box with the Studio Luminant monogram on its cover" width="1600" height="1195" style="display:block; width:100%; height:auto; border:1px solid var(--border);" loading="lazy" decoding="async">
         </picture>
       </div>
       <div>
-        <div class="eyebrow reveal">Yüzey Numune Kutusu</div>
-        <h2 class="product-name reveal">Görün.<br><em>Hissedin.</em></h2>
-        <p class="product-desc reveal"><span translate="no">Lumina PMAG™</span> ile dökülmüş, artizan finish uygulanmış numuneler — tek bir kutuda. Bir rölyefin duvarda nasıl okunacağını, şartnameye bağlamadan önce elinizde değerlendirin.</p>
-        <a href="mimarlar.htm#numune" class="btn-primary reveal" style="margin-top: 8px;">
-          Numune Kutusunu İsteyin
+        <div class="eyebrow reveal">Finish Sample Box</div>
+        <h2 class="product-name reveal">See It.<br><em>Feel It.</em></h2>
+        <p class="product-desc reveal">Cast samples in <span translate="no">Lumina PMAG™</span> with artisan finishes applied — in a single box. The most reliable way to judge how a relief will read on the wall before you specify a panel.</p>
+        <a href="architects.htm#sampleForm" class="btn-primary reveal" style="margin-top: 8px;">
+          Request the Sample Box
           <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
           </svg>
@@ -577,29 +577,29 @@
 </main>
 
 <div id="site-footer">
-  <nav class="sl-static-footer-links" aria-label="Site haritası">
-    <a href="surec.htm">Özel Üretim</a>
-    <a href="koleksiyon.htm">Atölye Tasarımları</a>
-    <a href="galeri.htm">Galeri</a>
-    <a href="mimarlar.htm">Mimarlar İçin</a>
-    <a href="urunler.htm">Malzeme</a>
-    <a href="makaleler.htm">Makaleler</a>
-    <a href="mimari-rolyef-panel-nedir.htm">Mimari Rölyef Panel Nedir?</a>
-    <a href="ozel-uretim-duvar-paneli-mimar-rehberi.htm">Özel Üretim Duvar Paneli Rehberi</a>
-    <a href="heykelsi-duvar-paneli-nedir.htm">Heykelsi Duvar Paneli Nedir?</a>
-    <a href="kaynaklar-sartname-rehberi.htm">Şartname Rehberi</a>
-    <a href="kaynaklar-yuzey-kaplamalari.htm">Yüzey Kaplamaları</a>
-    <a href="kaynaklar-agirlik-yapisal.htm">Ağırlık ve Yapısal Kılavuz</a>
-    <a href="kaynaklar-teslimat-sureci.htm">Teslimat Süreleri</a>
-    <a href="kaynaklar-surdurulebilirlik.htm">Sürdürülebilirlik</a>
-    <a href="iletisim.htm">İletişim</a>
-    <a href="site-haritasi.htm">Site Haritası</a>
+  <nav class="sl-static-footer-links" aria-label="Site map">
+    <a href="process.htm">Bespoke</a>
+    <a href="systems.htm">Studio Designs</a>
+    <a href="gallery.htm">Gallery</a>
+    <a href="architects.htm">For Architects</a>
+    <a href="products.htm">Materials</a>
+    <a href="journal.htm">Journal</a>
+    <a href="how-to-specify-custom-cast-wall-panels.htm">How to Specify Custom Cast Wall Panels</a>
+    <a href="what-is-an-architectural-relief-panel.htm">What Is an Architectural Relief Panel?</a>
+    <a href="what-are-sculptural-cast-wall-panels.htm">What Are Sculptural Cast Wall Panels?</a>
+    <a href="resources-specification-guide.htm">Specification Guide</a>
+    <a href="resources-finishes.htm">Finishes, Coatings &amp; Colour</a>
+    <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
+    <a href="resources-lead-times.htm">Lead Times</a>
+    <a href="resources-sustainability.htm">Sustainability</a>
+    <a href="contact.htm">Contact</a>
+    <a href="site-map.htm">Site Map</a>
   </nav>
 </div>
 
-<script src="shared.js?v=1e96d011"></script>
-<script src="components.js?v=ea35f3e9"></script>
-<script src="collection-data.js?v=dc2bc136"></script>
+<script src="../shared.js?v=1e96d011"></script>
+<script src="../components.js?v=ea35f3e9"></script>
+<script src="../collection-data.js?v=dc2bc136"></script>
 <script>
 // ─── Pattern Data (from Supabase via collection-data.js) ───
 // Study cards shown in v3: only Fluted Spherical (Burak 2026-10-19); the rest stay in Supabase.
@@ -609,11 +609,11 @@ const patterns = window.SL_PATTERNS.filter(p => SHOWN_STUDIES.includes(p.id)).ma
   code: p.code,
   collection: p.collection,
   nameEn: p.name_en,
-  name: p.name_tr,
+  name: p.name_en,
   style: p.style,
   applications: p.applications,
-  image: p.image,
-  description: p.description_tr,
+  image: '../' + p.image,
+  description: p.description_en,
   materials: p.materials,
   featured: p.featured,
   tileSvg: p.tileSvg
@@ -621,17 +621,10 @@ const patterns = window.SL_PATTERNS.filter(p => SHOWN_STUDIES.includes(p.id)).ma
 
 // ─── Application label mapping ───
 const appLabels = {
-  'wall-panel': 'Duvar Paneli',
-  'ceiling': 'Tavan',
-  'column': 'Kolon Kaplama',
-  'sculptural': 'Heykelsi'
-};
-
-const styleLabels = {
-  'geometric': 'Geometrik',
-  'organic': 'Organik',
-  'heritage': 'Miras',
-  'surface': 'Yüzey'
+  'wall-panel': 'Wall Panel',
+  'ceiling': 'Ceiling',
+  'column': 'Column Cladding',
+  'sculptural': 'Sculptural'
 };
 
 // ─── Alt text (escaped; localized style label) ───
@@ -640,7 +633,7 @@ function escAttr(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&qu
 const IMG_DIMS = {"compass-star":[2048,2048],"diagonal-wave":[2048,2048],"faceted-crystal":[2048,2048],"ottoman-heritage":[832,1248],"organic-cell":[1200,1200],"fluted-column":[2048,2048],"petal-geometric":[2000,1116],"geometric-star":[1344,768],"bas-relief":[1376,768],"neo-heritage-modular":[2000,1493],"honeycomb-hexagonal":[2048,2048],"diamond-faceted-crystal":[2000,2000],"diamond-origami-fold":[2048,2048],"petal-star-concave":[2048,2048],"baroque-acanthus-scroll":[2048,2048],"fluted-spherical":[2000,2000]};
 function imgDims(p) { const d = IMG_DIMS[p.id]; return d ? { width: d[0], height: d[1] } : {}; }
 function patAlt(p) {
-  return escAttr(p.name + ' — ' + (styleLabels[p.style] || p.style));
+  return escAttr(p.name + ' — ' + (p.style.charAt(0).toUpperCase() + p.style.slice(1)) + ' pattern');
 }
 
 // ─── Populate hero from featured pattern ───
@@ -654,7 +647,7 @@ document.getElementById('hero-img-container').innerHTML = pictureTag(
 document.getElementById('hero-title').textContent = featured.name;
 document.getElementById('hero-desc').textContent = featured.description;
 const heroCta = document.getElementById('hero-cta');
-heroCta.href = 'iletisim.htm?pattern=' + encodeURIComponent(featured.name);
+heroCta.href = 'contact.htm?pattern=' + encodeURIComponent(featured.name);
 heroCta.style.display = '';
 
 
@@ -707,13 +700,13 @@ function renderGrid() {
         <div class="card-info">
           <div class="card-name">${p.name}</div>
           <div class="card-meta">
-            <span class="cat">${(styleLabels[p.style] || p.style)}</span>
+            <span class="cat">${p.style.charAt(0).toUpperCase() + p.style.slice(1)}</span>
             · ${p.applications.map(a => appLabels[a] || a).join(', ')}
           </div>
         </div>`;
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
-      card.setAttribute('aria-label', p.name + ' desenini görüntüle');
+      card.setAttribute('aria-label', 'View ' + p.name);
       card.addEventListener('click', () => openLightbox(i));
       card.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(i); }
@@ -724,7 +717,7 @@ function renderGrid() {
 
   // Empty state
   if (count === 0) {
-    grid.innerHTML = '<div class="empty-state">Bu kombinasyona uygun desen bulunamadı.<a href="#" id="reset-filters">Filtreleri Sıfırla</a></div>';
+    grid.innerHTML = '<div class="empty-state">No patterns match this combination.<a href="#" id="reset-filters">Reset Filters</a></div>';
     document.getElementById('reset-filters').addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.style-pill').forEach(b => {
@@ -742,7 +735,7 @@ function renderGrid() {
     });
   }
 
-  document.getElementById('filter-count').textContent = count + ' desen';
+  document.getElementById('filter-count').textContent = count + ' pattern' + (count !== 1 ? 's' : '');
 
   // Observe new cards for scroll-reveal
   grid.querySelectorAll('.reveal:not(.visible)').forEach(el => {
@@ -808,7 +801,6 @@ renderGrid();
 
 // ─── Lightbox (via SLModal) ───────────────────────────────────────────
 let currentIndex = -1;
-
 const matMap = { pmag: 'Lumina PMAG™' };
 
 // ─── Tiling Engine ───
@@ -904,19 +896,19 @@ function buildLightboxHtml(p) {
     : '';
   const tilingHtml = p.tileSvg
     ? '<div class="lb-view-toggle" id="lb-view-toggle">' +
-        '<button class="lb-view-btn active" data-view="photo" aria-pressed="true">Fotoğraf</button>' +
-        '<button class="lb-view-btn" data-view="tiling" aria-pressed="false">Döşeme Önizleme</button>' +
+        '<button class="lb-view-btn active" data-view="photo" aria-pressed="true">Photo</button>' +
+        '<button class="lb-view-btn" data-view="tiling" aria-pressed="false">Tiling Preview</button>' +
       '</div>' +
       '<div class="lb-tiling-wrap" id="lb-tiling-wrap">' +
         '<div class="lb-tiling-controls">' +
-          '<button class="lb-tiling-pill active" data-arr="random" aria-pressed="true">Rastgele</button>' +
-          '<button class="lb-tiling-pill" data-arr="diagonal" aria-pressed="false">Çapraz</button>' +
+          '<button class="lb-tiling-pill active" data-arr="random" aria-pressed="true">Random</button>' +
+          '<button class="lb-tiling-pill" data-arr="diagonal" aria-pressed="false">Diagonal</button>' +
           '<button class="lb-tiling-pill" data-arr="spiral" aria-pressed="false">Spiral</button>' +
-          '<button class="lb-tiling-pill" data-arr="radial" aria-pressed="false">Radyal</button>' +
-          '<label class="lb-grid-label"><input type="range" id="lb-grid-size" class="lb-grid-slider" min="4" max="16" aria-label="Izgara boyutu" value="' + tilingGrid + '"><span id="lb-grid-label">' + tilingGrid + '×' + tilingGrid + '</span></label>' +
+          '<button class="lb-tiling-pill" data-arr="radial" aria-pressed="false">Radial</button>' +
+          '<label class="lb-grid-label"><input type="range" id="lb-grid-size" class="lb-grid-slider" min="4" max="16" aria-label="Grid size" value="' + tilingGrid + '"><span id="lb-grid-label">' + tilingGrid + '×' + tilingGrid + '</span></label>' +
         '</div>' +
-        '<div class="lb-tiling-svg-wrap"><svg id="lb-tiling-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Döşeme Önizleme"></svg></div>' +
-        '<div class="lb-tiling-hint">Her karo 0°/90°/180°/270° döndürülür — yeniden oluşturmak için Rastgele’ye tıklayın</div>' +
+        '<div class="lb-tiling-svg-wrap"><svg id="lb-tiling-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tiling Preview"></svg></div>' +
+        '<div class="lb-tiling-hint">Each tile rotated 0°/90°/180°/270° — click Random to regenerate</div>' +
       '</div>'
     : '';
   return (
@@ -928,16 +920,16 @@ function buildLightboxHtml(p) {
         tilingHtml +
       '</div>' +
       '<div class="lb-details">' +
-        '<div class="lb-cat">' + (styleLabels[p.style] || p.style) + '</div>' +
+        '<div class="lb-cat">' + (p.style.charAt(0).toUpperCase() + p.style.slice(1)) + '</div>' +
         '<h2 class="lb-name">' + p.name + '</h2>' +
         '<div class="lb-apps">' + p.applications.map(a => appLabels[a] || a).join(' · ') + '</div>' +
         '<p class="lb-desc">' + p.description + '</p>' +
-        (mats ? '<div class="lb-materials-label">Mevcut Malzemeler</div><div class="lb-materials">' + mats + '</div>' : '') +
-        '<a class="lb-cta" href="iletisim.htm?pattern=' + encodeURIComponent(p.name) + '">Bu Desen Hakkında Bilgi Alın →</a>' +
+        (mats ? '<div class="lb-materials-label">Available in</div><div class="lb-materials">' + mats + '</div>' : '') +
+        '<a class="lb-cta" href="contact.htm?pattern=' + encodeURIComponent(p.name) + '">Enquire About This Pattern →</a>' +
       '</div>' +
     '</div>' +
-    '<button class="lb-nav lb-prev" aria-label="Önceki desen">‹</button>' +
-    '<button class="lb-nav lb-next" aria-label="Sonraki desen">›</button>'
+    '<button class="lb-nav lb-prev" aria-label="Previous pattern">‹</button>' +
+    '<button class="lb-nav lb-next" aria-label="Next pattern">›</button>'
   );
 }
 
@@ -998,6 +990,6 @@ window.addEventListener('load', () => {
 });
 </script>
 
-<script src="consent.js?v=d80c8f49"></script>
+<script src="../consent.js?v=d80c8f49"></script>
 </body>
 </html>

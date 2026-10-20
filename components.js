@@ -1,5 +1,5 @@
 ﻿// ─── IMAGE HELPER — WebP <picture> element generator ───
-// Used by collection.htm and other JS-rendered galleries
+// Used by systems.htm and other JS-rendered galleries
 function pictureTag(src, alt, sizes, opts) {
   opts = opts || {};
   var dot = src.lastIndexOf('.');
@@ -107,9 +107,9 @@ function pictureTag(src, alt, sizes, opts) {
   // ─── DOOR (one primary CTA per door; Copy v1 §3) ───
   // Studio Designs pages: the Systems index and every System page. Everything else is the Bespoke door.
   const pageFile = location.pathname.split('/').pop() || 'index.html';
-  const isStudioDoor = /^(koleksiyon|collection|sistem-|system-)/.test(pageFile);
+  const isStudioDoor = /^(sistemler|systems|sistem-|system-)/.test(pageFile);
   const doorCta = isStudioDoor
-    ? { text: L.ctaStudio, href: lang === 'tr' ? 'koleksiyon.htm' : 'collection.htm' }
+    ? { text: L.ctaStudio, href: lang === 'tr' ? 'sistemler.htm' : 'systems.htm' }
     : { text: L.ctaBespoke, href: lang === 'tr' ? 'iletisim.htm' : 'contact.htm' };
 
   // ─── NAV ───
@@ -118,7 +118,7 @@ function pictureTag(src, alt, sizes, opts) {
     // Order is the ruling (Özel Üretim first). 20/40 stays out until 15 Dec.
     items: [
       { href: 'surec.htm', text: L.doorBespoke },
-      { href: 'koleksiyon.htm', text: L.doorStudio },
+      { href: 'sistemler.htm', text: L.doorStudio },
       { href: 'galeri.htm', text: L.gallery },
       { href: 'mimarlar.htm', text: L.architects }
     ],
@@ -130,7 +130,7 @@ function pictureTag(src, alt, sizes, opts) {
     home: { href: '/en/', alt: 'Studio Luminant' },
     items: [
       { href: 'process.htm', text: L.doorBespoke },
-      { href: 'collection.htm', text: L.doorStudio },
+      { href: 'systems.htm', text: L.doorStudio },
       { href: 'gallery.htm', text: L.gallery },
       { href: 'architects.htm', text: L.architects }
     ],
