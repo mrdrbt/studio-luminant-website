@@ -2,21 +2,40 @@
 // Wires every <form data-form-type> on the page (the project form and the sample-box form).
 // Each submit posts to Formspree (the form's own action; email backup, never awaited) and to the
 // CRM through window.slLeadPost (defined inline on the page, next to the lead-intake endpoint).
-// A captured lead fires GA4 `generate_lead` with `form_type` (project | sample) and `source` —
-// see docs/ga4-events.md. Each state's copy lives on the form as data-msg-* attributes, so TR and
+// A captured lead fires GA4 `generate_lead` with `form_type` (project | sample), `source` and the
+// attribution set (service_line, landing_path, referrer, utm_*) — see docs/ga4-events.md. Each state's copy lives on the form as data-msg-* attributes, so TR and
 // EN share this file.
 (function () {
-  function trackLead(formType, source) {
-    if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_type: formType, source: source || '' });
+  var ATTR_KEYS = ['service_line', 'landing_path', 'referrer', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+
+  function trackLead(formType, data) {
+    var params = { form_type: formType, source: data.source || '' };
+    ATTR_KEYS.forEach(function (k) { if (data[k]) params[k] = data[k]; });
+    if (typeof gtag === 'function') gtag('event', 'generate_lead', params);
     if (typeof fbq === 'function') fbq('track', 'Lead');
   }
 
-  // lead-intake has no drawing_link column: carry the link inside the message so the CRM task shows it.
+  // Hidden inputs, so Formspree's copy carries the attribution too (shared.js → slAttribution).
+  function addAttribution(form) {
+    var attr = typeof window.slAttribution === 'function' ? window.slAttribution() : {};
+    ATTR_KEYS.forEach(function (k) {
+      if (!attr[k]) return;
+      var input = form.querySelector('input[name="' + k + '"]') ||
+        form.appendChild(Object.assign(document.createElement('input'), { type: 'hidden', name: k }));
+      input.value = attr[k];
+    });
+  }
+
+  // lead-intake has no drawing_link, service_line, landing_path or referrer column: carry them inside
+  // the message so the CRM task shows them (utm_source…utm_content have their own columns).
   function leadPayload(form) {
     var data = Object.fromEntries(new FormData(form).entries());
     if (data.drawing_link) {
       data.message = (data.message ? data.message + '\n\n' : '') + form.dataset.linkLabel + ': ' + data.drawing_link;
     }
+    var meta = ['service_line', 'landing_path', 'referrer'].filter(function (k) { return data[k]; })
+      .map(function (k) { return k + ': ' + data[k]; }).join(' · ');
+    if (meta) data.message = (data.message ? data.message + '\n\n' : '') + '[' + meta + ']';
     return data;
   }
 
@@ -58,13 +77,14 @@
       btn.setAttribute('aria-disabled', 'true');
       setLabel(msg.msgSending);
       status.textContent = '';
+      addAttribution(form);
       var data = leadPayload(form);
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }).catch(function () {});
       try {
         if (typeof window.slLeadPost !== 'function') throw new Error('slLeadPost missing');
         var res = await window.slLeadPost(data);
         if (!res.ok) throw new Error('lead-intake ' + res.status);
-        trackLead(msg.formType, data.source);
+        trackLead(msg.formType, data);
         showStatus(status, msg.msgOk, false);
         form.reset();
         setLabel(msg.msgSent);

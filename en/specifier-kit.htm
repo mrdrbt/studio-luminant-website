@@ -258,7 +258,7 @@
   </nav>
 </div>
 
-<script src="../shared.js?v=1e96d011"></script>
+<script src="../shared.js?v=f21ad344"></script>
 <script src="../components.js?v=131b62c8"></script>
 <script>
   (function(){
@@ -276,14 +276,18 @@
       // Notification backup — Netlify Forms (non-blocking; CRM capture below is the source of truth)
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc(data)}).catch(function(){});
       // Primary: capture into the CRM. Map kit fields -> lead-intake contract (firm -> company).
-      function utm(){var p=new URLSearchParams(location.search),o={};['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(n){var v=p.get(n);if(v){o[n]=v.slice(0,160);}});return o;}
+      // Attribution (WB-08, shared.js): first-touch utm_*, landing_path, referrer; a kit request is service_line «Dosya talebi».
+      // lead-intake has no service_line / landing_path / referrer column, so they ride in the message.
+      function attr(){var a=typeof window.slAttribution==='function'?window.slAttribution():{};a.service_line='Dosya talebi';return a;}
+      function attrNote(a){return '['+['service_line','landing_path','referrer'].filter(function(k){return a[k];}).map(function(k){return k+': '+a[k];}).join(' · ')+']';}
+      var a=attr();
       var localPart=(data.email||'').split('@')[0];
-      var crm=Object.assign({name:localPart||data.email,email:data.email,company:'',project_type:'Specifier Kit',source:'specifier-kit-en',_gotcha:data['bot-field']||''},utm());
+      var crm=Object.assign({name:localPart||data.email,email:data.email,company:'',project_type:'Specifier Kit',source:'specifier-kit-en',_gotcha:data['bot-field']||''},a,{message:attrNote(a)});
       try{
         var res=await fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake',{
           method:'POST',headers:{'Content-Type':'application/json','x-sl-key':'sl_web_lead_k7Qm2P'},body:JSON.stringify(crm)});
         if(!res.ok){throw new Error();}
-        if(typeof gtag==='function'){gtag('event','generate_lead',{lead_magnet:'specifier-kit',firm:data.firm||''});}
+        if(typeof gtag==='function'){gtag('event','generate_lead',Object.assign({lead_magnet:'specifier-kit',firm:data.firm||''},a));}
         reveal();
       }catch(_){
         busy=false;if(btn){btn.removeAttribute('aria-disabled');}

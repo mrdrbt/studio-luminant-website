@@ -44,16 +44,43 @@ Fired from: `koleksiyon.htm`, `en/collection.htm`, `galeri.htm`, `en/gallery.htm
 `en/lookbook.htm`. Note: the gallery `data-filter` keys do not match their EN
 labels (`geometric` is labelled "Lounge & Bar" on `en/gallery.htm`) — report on the key.
 
-## `generate_lead` — unchanged
+## `generate_lead` — a lead reaches lead-intake
 
-Fired on successful lead-intake POSTs (contact, sample box, specifier kit, BIM
-pack); see `apply-lead-event.py`. Not touched by this change.
+Fired on successful lead-intake POSTs (contact, sample box, specifier kit); see
+`contact.js` and the kit pages' inline script. Since WB-08 (2026-10) every lead
+also carries the session's attribution, collected by `shared.js`
+(`slAttribution()`, sessionStorage key `sl_attr`) and sent in the lead payload,
+in the Formspree copy (hidden inputs) and in this event:
+
+| Param | Example | Meaning |
+|---|---|---|
+| `form_type` | `project` / `sample` | contact page forms only |
+| `source` | `contact-tr` | the form's hidden `source` |
+| `lead_magnet` / `firm` | `specifier-kit` | kit pages only (unchanged) |
+| `service_line` | `Özel Üretim` | one of `Özel Üretim` · `Atölye Tasarımları` · `Dosya talebi` · `Diğer` (same value on TR and EN). A `?service_line=ozel-uretim\|atolye\|dosya\|diger` key on any URL wins (QR, DM and PDF links); else the last door page seen (Systems pages → Atölye Tasarımları; surec / process / Tufetto → Özel Üretim); else Diğer. Kit requests are always Dosya talebi. |
+| `landing_path` | `/sistemler.htm` | first page of the session, no query |
+| `referrer` | `https://www.linkedin.com/feed/` | external referrer of that first page, origin + path only; empty for direct / internal |
+| `utm_source` … `utm_term` | `linkedin` | the last campaign URL seen in the session (a new utm set replaces the old one whole) |
+
+lead-intake stores `utm_source`…`utm_content` in their own columns; it has no
+column for `service_line`, `landing_path`, `referrer` or `utm_term`, so the first
+three are appended to the lead's message as one `[service_line: … · landing_path: … · referrer: …]` line.
+
+## `contact_click` — a visitor taps a phone, mail or WhatsApp link
+
+| Param | Example | Meaning |
+|---|---|---|
+| `contact_method` | `tel` / `mail` / `whatsapp` | `tel:`, `mailto:`, `wa.me` / `api.whatsapp.com` link |
+| `link_location` | `footer` / `nav` / `body` | where the link sits |
+
+Fired from every page (delegated listener in `shared.js`).
 
 ## GA4 Admin (one-off, manual)
 
 Custom params do not appear in standard reports until registered. In GA4 Admin →
 Custom definitions → Create custom dimension (scope **Event**), one per param:
 `content_type`, `design_id`, `design_name`, `design_code`, `collection`, `style`,
-`view_method`, `filter_type`, `filter_value`, `filter_state`; and `result_count`
+`view_method`, `filter_type`, `filter_value`, `filter_state`, `service_line`, `landing_path`,
+`referrer`, `contact_method`, `link_location`; and `result_count`
 as a custom **metric** (unit: Standard). Data is collected from deploy onward;
 registration is not retroactive for reports, so register at deploy.

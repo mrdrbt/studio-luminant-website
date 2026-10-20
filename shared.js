@@ -15,6 +15,55 @@ function slTrack(name, params) {
   if (typeof gtag === 'function') gtag('event', name, params);
 }
 
+// ─── LEAD ATTRIBUTION (WB-08) ───
+// The session's first touch (utm_*, landing_path, external referrer) and the service line,
+// kept in sessionStorage so a form on a later page can carry them. Read by slAttribution();
+// sent only when a visitor submits a form. service_line: a ?service_line= key wins
+// (QR / DM links), else the last door page seen, else «Diğer».
+var SL_SERVICE_LINES = { 'ozel-uretim': 'Özel Üretim', 'atolye': 'Atölye Tasarımları', 'dosya': 'Dosya talebi', 'diger': 'Diğer' };
+var SL_UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+(function () {
+  var KEY = 'sl_attr';
+  function slPath(p) { try { return decodeURIComponent(p); } catch (e) { return p; } }
+  var store;
+  try { store = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) { store = null; }
+  var params = new URLSearchParams(location.search);
+  if (!store) {
+    store = { landing_path: slPath(location.pathname) };
+    // only an external referrer says where the visitor came from; origin + path, no query
+    try {
+      var ref = document.referrer ? new URL(document.referrer) : null;
+      if (ref && ref.host !== location.host) store.referrer = ref.origin + slPath(ref.pathname);
+    } catch (e) { /* malformed referrer: leave it out */ }
+  }
+  // a later campaign landing in the same session replaces the whole utm set, never mixes it
+  if (SL_UTM_KEYS.some(function (k) { return params.get(k); })) {
+    SL_UTM_KEYS.forEach(function (k) { var v = params.get(k); if (v) store[k] = v.slice(0, 160); else delete store[k]; });
+  }
+  var file = location.pathname.split('/').pop();
+  var asked = SL_SERVICE_LINES[params.get('service_line')];
+  if (asked) store.service_line = asked;
+  else if (/^(sistemler|systems|sistem-|system-)/.test(file)) store.service_line = SL_SERVICE_LINES.atolye;
+  else if (/^(surec|process|vaka-tufetto|case-study-tufetto)/.test(file)) store.service_line = SL_SERVICE_LINES['ozel-uretim'];
+  try { sessionStorage.setItem(KEY, JSON.stringify(store)); } catch (e) { /* storage blocked: this page still works */ }
+  window.slAttribution = function () {
+    var out = { service_line: store.service_line || SL_SERVICE_LINES.diger, landing_path: store.landing_path || slPath(location.pathname), referrer: store.referrer || '' };
+    SL_UTM_KEYS.forEach(function (k) { if (store[k]) out[k] = store[k]; });
+    return out;
+  };
+})();
+
+// ─── CONTACT CLICKS (WB-08) ───
+// tel: / mailto: / WhatsApp links anywhere on the page (nav, footer, contact rows).
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a) return;
+  var href = a.getAttribute('href');
+  var method = /^tel:/i.test(href) ? 'tel' : /^mailto:/i.test(href) ? 'mail' : /^https:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(href) ? 'whatsapp' : '';
+  if (!method) return;
+  slTrack('contact_click', { contact_method: method, link_location: a.closest('#site-footer') ? 'footer' : a.closest('#site-nav') ? 'nav' : 'body' });
+});
+
 // ─── CURSOR ───
 // Called by components.js after cursor elements are injected
 function initCursor() {
