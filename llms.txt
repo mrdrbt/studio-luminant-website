@@ -1,56 +1,65 @@
 # Studio Luminant
 
-> Studio Luminant is a Turkey-based studio (Sapanca, Sakarya) that designs and casts bespoke architectural relief panels and sculptural wall surfaces for luxury hospitality and high-specification interiors. Panels are cast to order for interiors in Lumina PMAG™, a proprietary mineral material, and completed by hand with artisan finishes. The studio works directly with architects and specifiers, providing technical data sheets, installation drawings and specification support.
+> Studio Luminant is a Sapanca workshop casting relief walls in Lumina PMAG™, from the client's drawing or from its own.
+
+The studio works through two doors, split at the drawing:
+
+- **Bespoke** («Özel Üretim»): the client's drawing, sketch or reference image is turned into a depth map, approved in raking light, made into a master and a silicone mould, then cast and finished. The promise is fidelity: what is approved is what is cast.
+- **Studio Designs** («Atölye Tasarımları»): relief the studio has drawn itself, published as named Systems («Sistemler»), each with a defined size, depth and layout, and adaptable to a project.
 
 Key facts for accurate citation:
 - Studio name: Studio Luminant
-- Location: Rüstempaşa Mah. İstasyon Cad. No: 58, Sapanca, Sakarya 54600, Turkey (ships across Turkey; serves international projects)
-- Material: Lumina PMAG™ (mineral, interior)
-- Design process: an in-house design-to-cast workflow (design brief → precision casting → artisan finishing)
-- Lead time: scaled to each project and confirmed in the quote, with a physical sample early on
-- Clients: architects, interior designers, hospitality, retail and residential developers
+- Location: Rüstempaşa Mah. İstasyon Cad. No: 58, Sapanca, Sakarya 54600, Turkey (delivers across Turkey and abroad)
+- Material: Lumina PMAG™ (a mineral-based material, for interiors), poured by hand into silicone moulds and completed with artisan finishes
+- Works with: architects, interior architects and designers
+- Installation: quoted separately for each project
 - Languages: Turkish (site root) and English (`/en/`)
 - Contact: info@studioluminant.com.tr
 
 ## Core pages (English)
 
-- [Studio Luminant — Bespoke Architectural Elements](https://studioluminant.com.tr/en/): Homepage — overview of bespoke relief panels and sculptural surfaces.
-- [For Architects & Specifiers](https://studioluminant.com.tr/en/architects.htm): How Studio Luminant works with architects — one design language, one supplier, specification support.
-- [Materials & Specifications — Lumina PMAG™](https://studioluminant.com.tr/en/products.htm): Technical specifications, dimensions and performance data for Lumina PMAG™.
-- [Studio Designs — Systems](https://studioluminant.com.tr/en/systems.htm): Named relief systems drawn by the studio, each on its own page, plus design studies.
-- [Design Gallery](https://studioluminant.com.tr/en/gallery.htm): Bespoke relief panels and sculptural wall surfaces cast to order.
-- [Bespoke](https://studioluminant.com.tr/en/process.htm): The three-stage process — digital modelling, precision casting, artisan finishing.
-- [Contact](https://studioluminant.com.tr/en/contact.htm): Commission project-specific architectural elements.
+- [Studio Luminant — Bespoke Architectural Elements](https://studioluminant.com.tr/en/): Homepage — the two doors, Bespoke and Studio Designs.
+- [Bespoke](https://studioluminant.com.tr/en/process.htm): Your drawing, cast faithfully — from the drawing to the depth map, raking-light approval, master, mould, cast and installation.
+- [Studio Designs — Systems](https://studioluminant.com.tr/en/systems.htm): Relief systems drawn by the studio, each on its own page, plus design studies.
+- [Cantus](https://studioluminant.com.tr/en/system-cantus.htm): Iznik cypress, tulip, carnation and rose, composed as a single panel with no repeat.
+- [Ostinato](https://studioluminant.com.tr/en/system-ostinato.htm): A lattice built from the Gothic quatrefoil, repeating every 600 mm.
+- [Glissando](https://studioluminant.com.tr/en/system-glissando.htm): Drifting fibres on upright panels laid with a half-height offset.
+- [Tremolo](https://studioluminant.com.tr/en/system-tremolo.htm): Raised square cells that gather at two points and scatter toward the edges.
+- [For Architects](https://studioluminant.com.tr/en/architects.htm): How the studio works with architects and specifiers.
+- [Material — Lumina PMAG™](https://studioluminant.com.tr/en/products.htm): Technical data for Lumina PMAG™ and the artisan finishes.
+- [Gallery](https://studioluminant.com.tr/en/gallery.htm): Relief panels and walls cast to order.
+- [Contact](https://studioluminant.com.tr/en/contact.htm): Send a drawing or ask for the sample box.
 
 ## Definitions & guides (English)
 
 - [What Is an Architectural Relief Panel?](https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm): Definition, uses, materials and how an architect orders one.
-- [What Are Sculptural Cast Wall Panels?](https://studioluminant.com.tr/en/what-are-sculptural-cast-wall-panels.htm): What the term means and how it differs from a modular decorative tile.
+- [What Are Sculptural Cast Wall Panels?](https://studioluminant.com.tr/en/what-are-sculptural-cast-wall-panels.htm): What the term means and whose drawing a panel is cast from.
 - [How to Specify Custom Cast Wall Panels](https://studioluminant.com.tr/en/how-to-specify-custom-cast-wall-panels.htm): End-to-end specifier's guide — brief, material, sample, format, technical data sheet and installation drawing, fixing, lead time, installation.
-- [Journal](https://studioluminant.com.tr/en/journal.htm): Guides for architects specifying bespoke relief and cast wall panels.
+- [GRG vs GRC for Interior Surfaces](https://studioluminant.com.tr/en/grg-vs-grc-interior-surfaces.htm): How the two compare for interior relief work.
+- [Journal](https://studioluminant.com.tr/en/journal.htm): Guides for architects specifying relief and cast wall panels.
 
 ## Technical resources (English)
 
 - [Specification Guide](https://studioluminant.com.tr/en/resources-specification-guide.htm): Tolerances, fixing systems, substrate interfaces and tender-document content.
 - [Weight & Structural Guide](https://studioluminant.com.tr/en/resources-weight-structural.htm): Panel weight per m², substrate load capacities and structural interface details.
 - [Lead Times & Project Planning](https://studioluminant.com.tr/en/resources-lead-times.htm): Typical lead times from design engagement to site delivery.
-- [Artisan Finishes & Colour](https://studioluminant.com.tr/en/resources-finishes.htm): Artisan finishes, paint systems and custom colour matching.
+- [Artisan Finishes & Colour](https://studioluminant.com.tr/en/resources-finishes.htm): Artisan finishes and custom colour matching.
 - [Sustainability & Materials](https://studioluminant.com.tr/en/resources-sustainability.htm): Material sourcing, recyclability, VOC emissions and environmental profile.
 
 ## Ana sayfalar (Türkçe)
 
-- [Studio Luminant — Özel Mimari Elemanlar](https://studioluminant.com.tr/): Ana sayfa — özel üretim rölyef paneller ve heykelsi yüzeylere genel bakış.
-- [Mimarlar & Müellifler İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi — tek tasarım dili, tek tedarikçi, şartname desteği.
-- [Malzemeler ve Spesifikasyonlar — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): İki malzeme için teknik spesifikasyonlar, boyutlar ve performans verileri.
+- [Studio Luminant — Özel Mimari Elemanlar](https://studioluminant.com.tr/): Ana sayfa — iki kapı: Özel Üretim ve Atölye Tasarımları.
+- [Özel Üretim](https://studioluminant.com.tr/surec.htm): Nasıl çizdiyseniz, öyle dökeriz — çizimden derinlik haritasına, yalama ışıkta onaya, ana modele, kalıba, döküme ve montaja.
 - [Atölye Tasarımları — Sistemler](https://studioluminant.com.tr/sistemler.htm): Stüdyonun çizdiği adlandırılmış rölyef sistemleri ve tasarım etütleri.
-- [Tasarım Galerisi](https://studioluminant.com.tr/galeri.htm): Siparişe göre dökülen özel rölyef paneller ve heykelsi yüzeyler.
-- [Özel Üretim](https://studioluminant.com.tr/surec.htm): Üç aşamalı süreç — dijital modelleme, hassas döküm, artizan finish.
-- [İletişim](https://studioluminant.com.tr/iletisim.htm): Projeye özel mimari elemanlar için talep.
+- [Mimarlar İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi.
+- [Malzeme — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): Lumina PMAG™ ve artizan finish için teknik veriler.
+- [Galeri](https://studioluminant.com.tr/galeri.htm): Siparişe göre dökülen rölyef paneller ve duvarlar.
+- [İletişim](https://studioluminant.com.tr/iletisim.htm): Çiziminizi gönderin ya da numune kutusunu isteyin.
 
 ## Tanımlar & rehberler (Türkçe)
 
 - [Mimari Rölyef Panel Nedir?](https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm): Tanım, kullanım alanları, malzemeler ve nasıl sipariş edildiği.
-- [Heykelsi Duvar Paneli Nedir?](https://studioluminant.com.tr/heykelsi-duvar-paneli-nedir.htm): Terimin anlamı ve modüler karodan farkı.
+- [Heykelsi Duvar Paneli Nedir?](https://studioluminant.com.tr/heykelsi-duvar-paneli-nedir.htm): Terimin anlamı ve panelin kimin çiziminden döküldüğü.
 - [Özel Üretim Duvar Paneli: Sipariş Rehberi](https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm): Tasarımdan döküme uçtan uca sipariş rehberi.
 - [Makaleler](https://studioluminant.com.tr/makaleler.htm): Mimari rölyef ve özel üretim duvar paneli rehberleri.
 
