@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Weight &amp; Structural Guide — Studio Luminant</title>
 <meta name="description" content="Panel weight per m², substrate load capacities &amp; structural interface details for architectural relief panels — the data architects hand to engineers.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/resources-weight-structural.htm">
@@ -12,7 +13,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="Weight &amp; Structural Guide for Relief Panels">
-<meta property="og:description" content="Load per square metre, substrate requirements, and structural fixing data for Lumina PMAG™ and PUCOMP™ architectural relief panels.">
+<meta property="og:description" content="Load per square metre, substrate requirements, and structural fixing data for Lumina PMAG™ architectural relief panels.">
 <meta property="og:url" content="https://studioluminant.com.tr/en/resources-weight-structural.htm">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
@@ -23,9 +24,9 @@
 
 <style>
   :root {
-    --green: #6ABF8A;
-    --blue: #6A9FBF;
-    --orange: #BF8A6A;
+    --green: #3F6B3A;
+    --blue: #3D5E80;
+    --orange: #8E4426;
   }
 
   .article-wrapper {
@@ -104,7 +105,7 @@
   }
   .weight-table tbody td {
     padding: 16px;
-    border-bottom: 1px solid rgba(201,168,76,0.08);
+    border-bottom: 1px solid rgba(var(--accent-rgb),0.08);
     vertical-align: top;
     color: var(--text-secondary);
     font-weight: 300;
@@ -141,10 +142,8 @@
   .bar-fill {
     height: 100%;
     border-radius: 2px;
-    transition: width 0.8s ease;
   }
   .bar-fill-pmag { background: var(--gold); }
-  .bar-fill-pucomp { background: var(--blue); }
   .bar-fill-stone { background: var(--text-muted); }
   .bar-fill-grc { background: var(--orange); }
   .bar-fill-timber { background: var(--green); }
@@ -279,6 +278,12 @@
     .bar-row { grid-template-columns: 100px 1fr 60px; gap: 10px; }
     .bar-label { font-size: 11px; }
   }
+  /* a11y pass */
+  .weight-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .weight-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .weight-table tbody td, .weight-table tbody th { font-variant-numeric: tabular-nums; }
+  .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Weight & Structural Guide", "item": "https://studioluminant.com.tr/en/resources-weight-structural.htm"}]}
@@ -287,7 +292,7 @@
 {"@context": "https://schema.org", "@type": "Article", "headline": "Weight & Structural Guide", "description": "Panel weight per m², substrate load capacities & structural interface details for architectural relief panels — the data architects hand to engineers.", "inLanguage": "en", "image": "https://studioluminant.com.tr/images/studio-luminant-og-image.jpg", "author": {"@type": "Organization", "name": "Studio Luminant", "url": "https://studioluminant.com.tr"}, "publisher": {"@type": "Organization", "name": "Studio Luminant", "logo": {"@type": "ImageObject", "url": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioluminant.com.tr/en/resources-weight-structural.htm"}}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Why does relief panel weight matter for the structure?", "acceptedAnswer": {"@type": "Answer", "text": "An architect selecting relief panels for a hotel lobby is typically thinking about geometry, colour, and texture. The structural engineer is thinking about one thing: how much does it weigh? The panel weight per square metre determines the fixing system, the substrate specification, and in some cases whether the wall can support the design at all."}}, {"@type": "Question", "name": "Is relief panel weight based on nominal or average thickness?", "acceptedAnswer": {"@type": "Answer", "text": "For relief panels, the nominal thickness is the maximum depth — but the average material thickness is typically 60–70% of that for moderate relief profiles. Ask the manufacturer for the average section weight based on the specific design geometry, not the maximum thickness. This is the number your structural engineer needs."}}, {"@type": "Question", "name": "Does the substrate determine which panel material you can specify?", "acceptedAnswer": {"@type": "Answer", "text": "Not all walls are created equal. The substrate's capacity to carry sustained dead load determines which material you can specify — and which fixing system you need."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Why does relief panel weight matter for the structure?", "acceptedAnswer": {"@type": "Answer", "text": "An architect selecting relief panels for a hotel lobby is typically thinking about geometry, colour, and texture. The structural engineer is thinking about one thing: how much does it weigh? The panel weight per square metre determines the fixing system, the substrate specification, and in some cases whether the wall can support the design at all."}}, {"@type": "Question", "name": "Is relief panel weight based on nominal or average thickness?", "acceptedAnswer": {"@type": "Answer", "text": "For relief panels, the nominal thickness is the maximum depth — but the average material thickness is typically 60–70% of that for moderate relief profiles. We supply the average section weight for your design, based on its geometry rather than the maximum thickness. This is the number your structural engineer needs."}}, {"@type": "Question", "name": "Does the substrate determine which panel material you can specify?", "acceptedAnswer": {"@type": "Answer", "text": "Not all walls are created equal. The substrate's capacity to carry sustained dead load determines which material you can specify — and which fixing system you need."}}]}
 </script>
 </head>
 <body>
@@ -300,7 +305,7 @@
 
   <div class="back-nav">
     <a href="resources.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Back to Resources
     </a>
   </div>
@@ -322,143 +327,113 @@
       An architect selecting relief panels for a hotel lobby is typically thinking about geometry, colour, and texture. The structural engineer is thinking about one thing: <strong>how much does it weigh?</strong> The panel weight per square metre determines the fixing system, the substrate specification, and in some cases whether the wall can support the design at all.
     </p>
     <p>
-      Relief panels are heavier than their flat equivalents — sometimes significantly so. A 25 mm flat PMAG panel weighs approximately 35–40 kg/m². But a deep-relief PMAG panel with peaks at 40 mm has substantially more material mass. The effective weight depends on the average thickness across the relief profile, not the nominal thickness.
+      Relief panels are heavier than their flat equivalents — sometimes significantly so. A 25&nbsp;mm flat PMAG panel weighs approximately 35–40&nbsp;kg/m². But a deep-relief PMAG panel with peaks at 40&nbsp;mm has substantially more material mass. The effective weight depends on the average thickness across the relief profile, not the nominal thickness.
     </p>
 
     <h2>Panel Weight by <em>Material and Thickness</em></h2>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Material weight comparison">
     <table class="weight-table">
+      <caption>Material weight comparison</caption>
       <thead>
         <tr>
-          <th>Material</th>
-          <th>Nominal Thickness</th>
-          <th>Density</th>
-          <th>Weight per m²</th>
-          <th>Context</th>
+          <th scope="col">Material</th>
+          <th scope="col">Nominal Thickness</th>
+          <th scope="col">Density</th>
+          <th scope="col">Weight per m²</th>
+          <th scope="col">Context</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Lumina PMAG™</strong></td>
-          <td>15 mm (low relief)</td>
-          <td>1,400–1,600 kg/m³</td>
-          <td class="highlight-cell">~21–24 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PMAG™</span></strong></th>
+          <td>15&nbsp;mm (low relief)</td>
+          <td>1,400–1,600&nbsp;kg/m³</td>
+          <td class="highlight-cell">~21–24&nbsp;kg/m²</td>
           <td>Shallow texture, ceiling-safe</td>
         </tr>
         <tr>
-          <td><strong>Lumina PMAG™</strong></td>
-          <td>25 mm (standard)</td>
-          <td>1,400–1,600 kg/m³</td>
-          <td class="highlight-cell">~35–40 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PMAG™</span></strong></th>
+          <td>25&nbsp;mm (standard)</td>
+          <td>1,400–1,600&nbsp;kg/m³</td>
+          <td class="highlight-cell">~35–40&nbsp;kg/m²</td>
           <td>Standard wall installations</td>
         </tr>
         <tr>
-          <td><strong>Lumina PMAG™</strong></td>
-          <td>40 mm (deep relief)</td>
-          <td>1,400–1,600 kg/m³</td>
-          <td class="highlight-cell">~56–64 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PMAG™</span></strong></th>
+          <td>40&nbsp;mm (deep relief)</td>
+          <td>1,400–1,600&nbsp;kg/m³</td>
+          <td class="highlight-cell">~56–64&nbsp;kg/m²</td>
           <td>Feature walls, structural substrate required</td>
-        </tr>
-        <tr>
-          <td><strong>Lumina PUCOMP™</strong></td>
-          <td>8 mm (thin shell)</td>
-          <td>800–1,200 kg/m³</td>
-          <td class="highlight-cell">~6–10 kg/m²</td>
-          <td>Furniture, fixtures, lightweight features</td>
-        </tr>
-        <tr>
-          <td><strong>Lumina PUCOMP™</strong></td>
-          <td>15 mm (standard)</td>
-          <td>800–1,200 kg/m³</td>
-          <td class="highlight-cell">~12–18 kg/m²</td>
-          <td>General wall cladding, complex geometry</td>
-        </tr>
-        <tr>
-          <td><strong>Lumina PUCOMP™</strong></td>
-          <td>25 mm (deep relief)</td>
-          <td>800–1,200 kg/m³</td>
-          <td class="highlight-cell">~20–30 kg/m²</td>
-          <td>Deep-profile feature walls</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <div class="callout">
       <div class="callout-label">How to Calculate Effective Weight</div>
       <p>
-        For relief panels, the nominal thickness is the <strong>maximum depth</strong> — but the average material thickness is typically 60–70% of that for moderate relief profiles. Ask the manufacturer for the <strong>average section weight</strong> based on the specific design geometry, not the maximum thickness. This is the number your structural engineer needs.
+        For relief panels, the nominal thickness is the <strong>maximum depth</strong> — but the average material thickness is typically 60–70% of that for moderate relief profiles. We supply the <strong>average section weight</strong> for your design, based on its geometry rather than the maximum thickness. This is the number your structural engineer needs.
       </p>
     </div>
 
     <h2>How Relief Panels Compare to <em>Other Cladding</em></h2>
     <p>
-      To put these numbers in context, here's how Lumina panels compare to common alternatives at typical installation thicknesses.
+      To put these numbers in context, here’s how Lumina panels compare to common alternatives at typical installation thicknesses.
     </p>
 
     <div class="bar-chart">
       <div class="bar-row">
         <span class="bar-label">Natural stone (30mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-stone" style="width: 100%;"></div></div>
-        <span class="bar-value">~78 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-stone" style="width: 100%;"></div></div>
+        <span class="bar-value">~78&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">PMAG deep (40mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pmag" style="width: 77%;"></div></div>
-        <span class="bar-value">~60 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-pmag" style="width: 77%;"></div></div>
+        <span class="bar-value">~60&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">GRC panel (15mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-grc" style="width: 50%;"></div></div>
-        <span class="bar-value">~39 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-grc" style="width: 50%;"></div></div>
+        <span class="bar-value">~39&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">PMAG standard (25mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pmag" style="width: 48%;"></div></div>
-        <span class="bar-value">~38 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-pmag" style="width: 48%;"></div></div>
+        <span class="bar-value">~38&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">Timber panel (18mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-timber" style="width: 18%;"></div></div>
-        <span class="bar-value">~14 kg/m²</span>
-      </div>
-      <div class="bar-row">
-        <span class="bar-label">PUCOMP standard (15mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pucomp" style="width: 19%;"></div></div>
-        <span class="bar-value">~15 kg/m²</span>
-      </div>
-      <div class="bar-row">
-        <span class="bar-label">PUCOMP thin (8mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pucomp" style="width: 10%;"></div></div>
-        <span class="bar-value">~8 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-timber" style="width: 18%;"></div></div>
+        <span class="bar-value">~14&nbsp;kg/m²</span>
       </div>
     </div>
 
     <p>
-      The key takeaway: <strong>PUCOMP at standard thickness is lighter than timber</strong>, which makes it viable on virtually any substrate including standard plasterboard partitions. PMAG at standard thickness is comparable to GRC — a material that architects already specify routinely for interior installations.
+      The key takeaway: <strong>PMAG at standard thickness is comparable to GRC</strong> — a material that architects already specify routinely for interior installations.
     </p>
 
     <h2>Substrate <em>Load Capacities</em></h2>
     <p>
-      Not all walls are created equal. The substrate's capacity to carry sustained dead load determines which material you can specify — and which fixing system you need.
+      Not all walls are created equal. The substrate’s capacity to carry sustained dead load determines which material you can specify — and which fixing system you need.
     </p>
 
     <div class="substrate-grid">
       <div class="substrate-card">
         <div class="substrate-card-title">Standard Plasterboard on Metal Stud</div>
-        <div class="substrate-card-capacity">20–25 kg/m²</div>
-        <div class="substrate-card-note">Single-layer 12.5 mm board. Common partition type. Limited to adhesive-fixed lightweight panels only.</div>
+        <div class="substrate-card-capacity">20–25&nbsp;kg/m²</div>
+        <div class="substrate-card-note">Single-layer 12.5&nbsp;mm board. Common partition type. Limited to adhesive-fixed panels within this load capacity.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PUCOMP all thicknesses</span><br>
-          <span class="compat-caution">&#9888; PMAG — requires rail system bypassing board</span>
+          <span class="compat-caution"><span aria-hidden="true">&#9888;</span> PMAG — requires rail system bypassing board</span>
         </div>
       </div>
       <div class="substrate-card">
         <div class="substrate-card-title">Double-Layer Plasterboard on Metal Stud</div>
-        <div class="substrate-card-capacity">30–35 kg/m²</div>
-        <div class="substrate-card-note">Two layers of 12.5 mm board. Better pull-out resistance. Still insufficient for heavy PMAG without rail system.</div>
+        <div class="substrate-card-capacity">30–35&nbsp;kg/m²</div>
+        <div class="substrate-card-note">Two layers of 12.5&nbsp;mm board. Better pull-out resistance. Still insufficient for heavy PMAG without rail system.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PUCOMP all thicknesses</span><br>
-          <span class="compat-caution">&#9888; PMAG 15mm only — heavier needs rail</span>
+          <span class="compat-caution"><span aria-hidden="true">&#9888;</span> PMAG 15mm only — heavier needs rail</span>
         </div>
       </div>
       <div class="substrate-card">
@@ -466,8 +441,7 @@
         <div class="substrate-card-capacity">60+ kg/m²</div>
         <div class="substrate-card-note">Solid substrate. Direct mechanical fixing (expanding anchors) or adhesive. Suitable for all panel weights.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PMAG all thicknesses</span><br>
-          <span class="compat-yes">&#10003; PUCOMP all thicknesses</span>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PMAG all thicknesses</span>
         </div>
       </div>
       <div class="substrate-card">
@@ -475,13 +449,12 @@
         <div class="substrate-card-capacity">100+ kg/m²</div>
         <div class="substrate-card-note">Maximum structural capacity. Resin anchor or throughbolt fixing. No limitations on panel weight.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PMAG all thicknesses</span><br>
-          <span class="compat-yes">&#10003; PUCOMP all thicknesses</span>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PMAG all thicknesses</span>
         </div>
       </div>
     </div>
 
-    <h2>The Engineer's <em>Handoff Checklist</em></h2>
+    <h2>The Engineer’s <em>Handoff Checklist</em></h2>
     <p>
       When passing relief panel information to your structural engineer or M&E consultant, they need the following data points to verify the design is structurally sound. Most manufacturers can provide these on request — and should be able to do so before you commit to a specification.
     </p>
@@ -508,7 +481,7 @@
     <div class="callout">
       <div class="callout-label">Practical Tip</div>
       <p>
-        Request the manufacturer's <strong>fixing detail drawing early</strong> — ideally at RIBA Stage 3 / schematic design, before the partition specification is locked. The partition contractor needs to know about panel loads before they finalise their stud gauge and board specification. Discovering at fit-out stage that the partitions can't carry the panels is the most expensive version of this mistake.
+        Request the manufacturer’s <strong>fixing detail drawing early</strong> — ideally at RIBA Stage 3 / schematic design, before the partition specification is locked. The partition contractor needs to know about panel loads before they finalise their stud gauge and board specification. Discovering at fit-out stage that the partitions can’t carry the panels is the most expensive version of this mistake.
       </p>
     </div>
 
@@ -519,7 +492,7 @@
     <p>We provide project-specific weight calculations and fixing detail drawings as part of every specification package.</p>
     <a href="contact.htm" class="btn-primary">
       Request Structural Data
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -545,10 +518,7 @@
     <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
     <a href="resources-lead-times.htm">Lead Times</a>
     <a href="resources-sustainability.htm">Sustainability</a>
-    <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
-    <a href="case-study-petal-lounge.htm">Petal Lounge</a>
-    <a href="case-study-wave-lounge.htm">Wave Lounge</a>
     <a href="contact.htm">Contact</a>
     <a href="site-map.htm">Site Map</a>
   </nav>

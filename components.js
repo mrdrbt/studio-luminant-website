@@ -7,6 +7,8 @@ function pictureTag(src, alt, sizes, opts) {
   var loading = opts.loading || 'lazy';
   var decode = loading === 'lazy' ? ' decoding="async"' : '';
   var prio = opts.fetchpriority ? ' fetchpriority="' + opts.fetchpriority + '"' : '';
+  var dims = (opts.width && opts.height) ? ' width="' + opts.width + '" height="' + opts.height + '"' : '';
+  alt = String(alt == null ? '' : alt).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
   var cls = opts.cls ? ' class="' + opts.cls + '"' : '';
   var onerror = opts.onerror ? ' onerror="' + opts.onerror + '"' : '';
   var srcset = [
@@ -17,7 +19,7 @@ function pictureTag(src, alt, sizes, opts) {
   return '<picture>' +
     '<source type="image/webp" srcset="' + srcset + '" sizes="' + sizes + '">' +
     '<img src="' + src + '" alt="' + alt + '"' + cls +
-    ' loading="' + loading + '"' + decode + prio + onerror + '>' +
+    dims + ' loading="' + loading + '"' + decode + prio + onerror + '>' +
     '</picture>';
 }
 
@@ -40,10 +42,10 @@ function pictureTag(src, alt, sizes, opts) {
   if (!document.querySelector('meta[name="theme-color"]')) {
     const tc = document.createElement('meta');
     tc.name = 'theme-color';
-    tc.content = '#0C0C0E';
+    tc.content = '#EFE8D5';
     document.head.appendChild(tc);
   }
-  document.documentElement.style.colorScheme = 'dark';
+  document.documentElement.style.colorScheme = 'light';
 
   // ─── FAVICON ───
   if (!document.querySelector('link[rel="icon"]')) {
@@ -74,16 +76,16 @@ function pictureTag(src, alt, sizes, opts) {
   const navLinks = lang === 'tr' ? {
     home: { href: '/', alt: 'Studio Luminant' },
     items: [
-      { href: 'koleksiyon.htm', text: 'Konsept Çalışmaları' },
-      { href: 'urunler.htm', text: 'Malzeme & Teknik' },
-      { href: 'surec.htm', text: 'Nasıl Çalışırız' },
+      { href: 'koleksiyon.htm', text: 'Kütüphane' },
+      { href: 'seri-20-40.htm', text: '20/40' },
+      { href: 'urunler.htm', text: 'Malzeme' },
+      { href: 'surec.htm', text: 'Süreç' },
       { href: 'galeri.htm', text: 'Galeri' },
-      { href: 'makaleler.htm', text: 'Makaleler' },
       { href: 'mimarlar.htm', text: 'Mimarlar' }
       // { href: 'kaynaklar.htm', text: 'Kaynaklar' } // temporarily hidden
     ],
     langLabel: 'EN',
-    ctaText: 'Proje Başlat',
+    ctaText: 'Çiziminizi gönderin',
     ctaHref: 'iletisim.htm',
     hamburgerOpen: 'Menüyü aç',
     hamburgerClose: 'Menüyü kapat',
@@ -91,23 +93,24 @@ function pictureTag(src, alt, sizes, opts) {
   } : {
     home: { href: '/en/', alt: 'Studio Luminant' },
     items: [
-      { href: 'collection.htm', text: 'Concept Work' },
-      { href: 'products.htm', text: 'Materials & Specs' },
-      { href: 'process.htm', text: 'How We Work' },
+      { href: 'collection.htm', text: 'Library' },
+      { href: 'range-20-40.htm', text: '20/40' },
+      { href: 'products.htm', text: 'Materials' },
+      { href: 'process.htm', text: 'Process' },
       { href: 'gallery.htm', text: 'Gallery' },
-      { href: 'journal.htm', text: 'Journal' },
-      { href: 'architects.htm', text: 'For Architects' }
+      { href: 'architects.htm', text: 'Architects' }
       // { href: 'resources.htm', text: 'Resources' } // temporarily hidden
     ],
     langLabel: 'TR',
-    ctaText: 'Initiate Project',
+    ctaText: 'Send your drawing',
     ctaHref: 'contact.htm',
     hamburgerOpen: 'Open menu',
     hamburgerClose: 'Close menu',
     mobileLabel: 'Mobile menu'
   };
 
-  const imgBase = base + 'images/studio-luminant-logo-white.svg';
+  const imgBase = base + 'images/studio-luminant-logo-ink.svg';
+  const imgBaseNight = base + 'images/studio-luminant-logo-white.svg';
 
   const navItemsHtml = navLinks.items.map(i => `<li><a href="${i.href}">${i.text}</a></li>`).join('\n      ');
   const mobileItemsHtml = navLinks.items.map(i => `  <a href="${i.href}">${i.text}</a>`).join('\n');
@@ -125,7 +128,7 @@ function pictureTag(src, alt, sizes, opts) {
       ${navItemsHtml}
   </ul>
   <div class="nav-right">
-    ${hasTwin ? `<a href="${langUrl}" class="nav-lang">${navLinks.langLabel}</a>` : ''}
+    ${hasTwin ? `<a href="${langUrl}" class="nav-lang" hreflang="${lang === 'tr' ? 'en' : 'tr'}" lang="${lang === 'tr' ? 'en' : 'tr'}">${navLinks.langLabel}</a>` : ''}
     <button class="nav-hamburger" aria-label="${navLinks.hamburgerOpen}" aria-expanded="false" aria-controls="mobileMenu">
       <span></span>
     </button>
@@ -135,7 +138,7 @@ function pictureTag(src, alt, sizes, opts) {
 
 <div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="${navLinks.mobileLabel}">
 ${mobileItemsHtml}
-  ${hasTwin ? `<a href="${langUrl}" class="nav-mobile-lang">${navLinks.langLabel}</a>` : ''}
+  ${hasTwin ? `<a href="${langUrl}" class="nav-mobile-lang" hreflang="${lang === 'tr' ? 'en' : 'tr'}" lang="${lang === 'tr' ? 'en' : 'tr'}">${navLinks.langLabel}</a>` : ''}
 </div>`;
 
   // ─── ACTIVE NAV LINK ───
@@ -144,6 +147,7 @@ ${mobileItemsHtml}
     const href = a.getAttribute('href');
     if (href && currentPage === href) {
       a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
     }
   });
 
@@ -203,7 +207,7 @@ ${mobileItemsHtml}
   if (mainNav) {
     window.addEventListener('scroll', () => {
       mainNav.classList.toggle('scrolled', window.scrollY > 60);
-    });
+    }, { passive: true });
   }
 
   // ─── CURSOR HOVER (for injected nav elements) ───
@@ -225,9 +229,9 @@ ${mobileItemsHtml}
     tagline: 'Özel mimari elemanlar — tasarlanır, dökülür, özenle bitirilir.',
     hqTitle: 'Stüdyo &amp; Atölye',
     locationLabel: 'Konum',
-    locationNote: 'Yurt içi ve yurt dışı projelere siparişe özel üretim.',
-    ctaTitle: 'Proje Başlat',
-    ctaBtn: 'Proje Başlat',
+    locationNote: "Sapanca'dan Türkiye'ye ve yurt dışına teslimat",
+    ctaTitle: 'Yeni Proje',
+    ctaBtn: 'Proje Başlatın',
     ctaHref: 'iletisim.htm',
     copyright: '© 2026 Studio Luminant. Tüm Hakları Saklıdır.',
     journalHref: 'makaleler.htm',
@@ -249,7 +253,7 @@ ${mobileItemsHtml}
     tagline: 'Bespoke architectural elements — sculpted, cast, and finished to spec.',
     hqTitle: 'Studio &amp; Workshop',
     locationLabel: 'Location',
-    locationNote: 'Made to order for projects worldwide.',
+    locationNote: 'Delivered from Sapanca, in Turkey and abroad',
     ctaTitle: 'Start a Project',
     ctaBtn: 'Initiate Project',
     ctaHref: 'contact.htm',
@@ -276,7 +280,7 @@ ${mobileItemsHtml}
     <div class="footer-top">
       <div class="footer-brand">
         <a href="${footerContent.homeHref}" class="logo">
-          <img src="${imgBase}" alt="Studio Luminant" class="footer-logo-img" width="64" height="52">
+          <img src="${imgBaseNight}" alt="Studio Luminant" class="footer-logo-img" width="64" height="52">
         </a>
         <p class="footer-tagline">${footerContent.tagline}</p>
         <div class="footer-social">
@@ -319,12 +323,17 @@ ${mobileItemsHtml}
         ${footerContent.bimText ? `<li><a href="${footerContent.bimHref}">${footerContent.bimText}</a></li>` : ''}
         <li><a href="${footerContent.privacyHref}">${footerContent.privacyText}</a></li>
         <li><a href="${footerContent.cookieHref}">${footerContent.cookieText}</a></li>
-        <li><a href="#" data-cookie-settings>${footerContent.cookieSettingsText}</a></li>
+        <li data-cookie-item><button type="button" data-cookie-settings>${footerContent.cookieSettingsText}</button></li>
       </ul>
     </div>
     <p class="footer-legal-entity">${footerContent.legalEntity}</p>
   </div>
 </footer>`;
+
+  // cookie-settings is an action: keep it only where consent.js (loaded after this file) is present
+  window.addEventListener('load', () => {
+    if (!window.slConsent) document.querySelectorAll('[data-cookie-item]').forEach(li => li.remove());
+  });
 
   // ─── INIT CURSOR (after elements are injected) ───
   if (typeof initCursor === 'function') initCursor();

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Relief Panel Specification Guide — Studio Luminant</title>
 <meta name="description" content="How to specify architectural relief panels: tolerances, fixing systems, substrate interfaces &amp; what to include in tender documents. For specifiers.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/resources-specification-guide.htm">
@@ -135,7 +136,7 @@
   .compare-row {
     display: flex; justify-content: space-between;
     padding: 8px 0;
-    border-bottom: 1px solid rgba(201,168,76,0.06);
+    border-bottom: 1px solid rgba(var(--accent-rgb),0.06);
     font-size: 13px;
   }
   .compare-row:last-child { border-bottom: none; }
@@ -179,7 +180,7 @@
   }
   .method-table tbody td {
     padding: 16px;
-    border-bottom: 1px solid rgba(201,168,76,0.08);
+    border-bottom: 1px solid rgba(var(--accent-rgb),0.08);
     vertical-align: top;
     color: var(--text-secondary);
     font-weight: 300;
@@ -222,6 +223,13 @@
     .compare-grid { grid-template-columns: 1fr; }
     .spec-checklist li { grid-template-columns: 36px 1fr; padding: 20px 20px; }
   }
+  /* a11y pass */
+  .method-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .method-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .method-table tbody td, .method-table tbody th { font-variant-numeric: tabular-nums; }
+  h3.compare-card-header { font-family: inherit; font-weight: inherit; line-height: normal; margin-top: 0; }
+  .compare-card dl, .compare-row dt, .compare-row dd { margin: 0; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Relief Panel Specification Guide", "item": "https://studioluminant.com.tr/en/resources-specification-guide.htm"}]}
@@ -230,7 +238,7 @@
 {"@context": "https://schema.org", "@type": "Article", "headline": "Relief Panel Specification Guide", "description": "How to specify architectural relief panels: tolerances, fixing systems, substrate interfaces & what to include in tender documents. For specifiers.", "inLanguage": "en", "image": "https://studioluminant.com.tr/images/studio-luminant-og-image.jpg", "author": {"@type": "Organization", "name": "Studio Luminant", "url": "https://studioluminant.com.tr"}, "publisher": {"@type": "Organization", "name": "Studio Luminant", "logo": {"@type": "ImageObject", "url": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioluminant.com.tr/en/resources-specification-guide.htm"}}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Can you specify relief panels the same way as flat cladding?", "acceptedAnswer": {"@type": "Answer", "text": "Standard interior cladding specifications — written for flat sheet materials like plasterboard, HPL, or stone veneer — don't translate directly to three-dimensional relief panels. Relief panels have variable thickness profiles and weight distributions that change across the panel face. A specification that doesn't account for this will create problems at installation that are expensive to resolve on site."}}, {"@type": "Question", "name": "How does a relief panel fix to the wall?", "acceptedAnswer": {"@type": "Answer", "text": "How a relief panel attaches to the wall is determined by three factors: panel weight, substrate type, and whether the installation is permanent or designed for future removal (common in hospitality where brands rotate interior schemes on a 7–10 year cycle)."}}, {"@type": "Question", "name": "What substrate does a relief panel need?", "acceptedAnswer": {"@type": "Answer", "text": "The most common mistake in relief panel installation is underestimating the substrate requirements. A standard metal stud + 12.5 mm plasterboard partition is designed for loads of approximately 20–25 kg/m². A deep-relief PMAG panel at 25 mm average thickness weighs 35–40 kg/m² — which exceeds the substrate's capacity."}}, {"@type": "Question", "name": "When should you use Lumina PMAG versus PUCOMP?", "acceptedAnswer": {"@type": "Answer", "text": "The decision between PMAG and PUCOMP typically comes down to installation context. For most interior applications — hotel corridors, high-rise lobbies, and feature walls — PMAG is the correct material. If the installation is exterior, in a wet area, or requires a lightweight solution for a challenging substrate, PUCOMP is the better choice. Both materials accept the same surface finishing system, so the visual finish is identical."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Can you specify relief panels the same way as flat cladding?", "acceptedAnswer": {"@type": "Answer", "text": "Standard interior cladding specifications — written for flat sheet materials like plasterboard, HPL, or stone veneer — don't translate directly to three-dimensional relief panels. Relief panels have variable thickness profiles and weight distributions that change across the panel face. A specification that doesn't account for this will create problems at installation that are expensive to resolve on site."}}, {"@type": "Question", "name": "How does a relief panel fix to the wall?", "acceptedAnswer": {"@type": "Answer", "text": "How a relief panel attaches to the wall is determined by three factors: panel weight, substrate type, and whether the installation is permanent or designed for future removal (common in hospitality where brands rotate interior schemes on a 7–10 year cycle)."}}, {"@type": "Question", "name": "What substrate does a relief panel need?", "acceptedAnswer": {"@type": "Answer", "text": "The most common mistake in relief panel installation is underestimating the substrate requirements. A standard metal stud + 12.5 mm plasterboard partition is designed for loads of approximately 20–25 kg/m². A standard PMAG panel at 25 mm weighs 35–40 kg/m², and a deep-relief panel at 40 mm 56–64 kg/m² — both exceed the substrate's capacity."}}, {"@type": "Question", "name": "Where is Lumina PMAG used?", "acceptedAnswer": {"@type": "Answer", "text": "Every interior application — hotel corridors, high-rise lobbies, feature walls, column wraps, counter fronts and accent surfaces — is specified in PMAG. The panels are made for interiors; exterior and continuously wet areas are outside their scope."}}]}
 </script>
 </head>
 <body>
@@ -243,7 +251,7 @@
 
   <div class="back-nav">
     <a href="resources.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Back to Resources
     </a>
   </div>
@@ -262,10 +270,10 @@
 
     <h2>Relief Panels Are Not <em>Flat Cladding</em></h2>
     <p>
-      Standard interior cladding specifications — written for flat sheet materials like plasterboard, HPL, or stone veneer — don't translate directly to three-dimensional relief panels. Relief panels have variable thickness profiles and weight distributions that change across the panel face. A specification that doesn't account for this will create problems at installation that are expensive to resolve on site.
+      Standard interior cladding specifications — written for flat sheet materials like plasterboard, HPL, or stone veneer — don’t translate directly to three-dimensional relief panels. Relief panels have variable thickness profiles and weight distributions that change across the panel face. A specification that doesn’t account for this will create problems at installation that are expensive to resolve on site.
     </p>
     <p>
-      The good news: relief panel specification follows the same logic as any material specification. It just requires attention to a few additional parameters that flat cladding doesn't have.
+      The good news: relief panel specification follows the same logic as any material specification. It just requires attention to a few additional parameters that flat cladding doesn’t have.
     </p>
 
     <h2>The <em>Specification Checklist</em></h2>
@@ -273,94 +281,92 @@
       A complete relief panel specification should address the following parameters. Missing any of these creates ambiguity that the contractor will either price conservatively or resolve incorrectly.
     </p>
 
-    <ol class="spec-checklist">
-      <li><strong>Material.</strong> State the material family (e.g. polymer modified alpha gypsum). Don't assume — write it explicitly.</li>
+    <ol class="spec-checklist" role="list">
+      <li><strong>Material.</strong> State the material family (e.g. polymer modified alpha gypsum). Don’t assume — write it explicitly.</li>
       <li><strong>Panel dimensions and tolerances.</strong> Specify maximum panel size, nominal thickness, and the allowable dimensional tolerance. For relief panels, tolerance should be stated at both the thinnest and thickest points of the relief profile.</li>
-      <li><strong>Relief depth and geometry.</strong> Define the maximum relief depth (distance from the back plane to the highest point) and whether the geometry is from a supplied 3D file or from the manufacturer's catalogue. If from a 3D file, state the file format (STEP, OBJ, STL) and the minimum feature radius.</li>
+      <li><strong>Relief depth and geometry.</strong> Define the maximum relief depth (distance from the back plane to the highest point) and whether the geometry is from a supplied 3D file or from the manufacturer’s catalogue. If from a 3D file, state the file format (STEP, OBJ, STL) and the minimum feature radius.</li>
       <li><strong>Surface finish.</strong> Specify the finish system (e.g. artisan finishes), the colour reference (RAL, NCS, or custom match), the gloss level, and whether metallic or textured finishes are required.</li>
       <li><strong>Fixing method and substrate.</strong> State the substrate type (metal stud + plasterboard, masonry, concrete) and the required fixing method. Include maximum allowable deflection of the substrate under panel load.</li>
       <li><strong>Joint treatment.</strong> Define the joint width between panels, whether joints are expressed (shadow gap) or filled (seamless), and the acceptable joint tolerance.</li>
       <li><strong>Pattern continuity.</strong> For designs that tile across multiple panels, state whether pattern registration is required and the allowable pattern offset at joints.</li>
-      <li><strong>Documentation deliverables.</strong> List what the manufacturer must provide: DoP, structural fixing calculations, installation drawings, and maintenance guidance.</li>
+      <li><strong>Documentation deliverables.</strong> List what the manufacturer must provide. Studio Luminant supplies a technical data sheet and an installation drawing for every project.</li>
     </ol>
 
     <h2>Fixing <em>Methods</em></h2>
     <p>
-      How a relief panel attaches to the wall is determined by three factors: panel weight, substrate type, and whether the installation is permanent or designed for future removal (common in hospitality where brands rotate interior schemes on a 7–10 year cycle).
+      How a relief panel attaches to the wall is determined by three factors: panel weight, substrate type, and whether the installation is permanent or designed for future removal (common in hospitality where brands rotate interior schemes on a 7–10&nbsp;year cycle).
     </p>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Fixing methods compared">
     <table class="method-table">
+      <caption>Fixing methods compared</caption>
       <thead>
         <tr>
-          <th>Method</th>
-          <th>Best For</th>
-          <th>Panel Weight Limit</th>
-          <th>Removable?</th>
+          <th scope="col">Method</th>
+          <th scope="col">Best For</th>
+          <th scope="col">Panel Weight Limit</th>
+          <th scope="col">Removable?</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Adhesive bond</strong> (construction adhesive + mechanical backup)</td>
+          <th scope="row"><strong>Adhesive bond</strong> (construction adhesive + mechanical backup)</th>
           <td>Flat or low-relief panels on rigid substrates (concrete, masonry)</td>
-          <td>Up to ~30 kg/m²</td>
+          <td>Up to ~30&nbsp;kg/m²</td>
           <td>No — destructive removal</td>
         </tr>
         <tr>
-          <td><strong>Concealed Z-clip</strong> (interlocking metal clips on panel back + wall)</td>
+          <th scope="row"><strong>Concealed Z-clip</strong> (interlocking metal clips on panel back + wall)</th>
           <td>Medium-weight panels, especially where future access or removal is needed</td>
-          <td>Up to ~45 kg/m²</td>
+          <td>Up to ~45&nbsp;kg/m²</td>
           <td>Yes — non-destructive</td>
         </tr>
         <tr>
-          <td><strong>Threaded insert + rail</strong> (embedded inserts in panel, mounted to aluminium rail system)</td>
+          <th scope="row"><strong>Threaded insert + rail</strong> (embedded inserts in panel, mounted to aluminium rail system)</th>
           <td>Heavy or deep-relief panels; large-format installations over plasterboard on metal stud</td>
-          <td>Up to ~60 kg/m²</td>
+          <td>Up to ~60&nbsp;kg/m²</td>
           <td>Yes — non-destructive</td>
         </tr>
         <tr>
-          <td><strong>French cleat</strong> (angled timber/metal cleat on panel + wall)</td>
+          <th scope="row"><strong>French cleat</strong> (angled timber/metal cleat on panel + wall)</th>
           <td>Feature panels, art installations, single-panel accent pieces</td>
-          <td>Up to ~40 kg/m²</td>
+          <td>Up to ~40&nbsp;kg/m²</td>
           <td>Yes — lift-off</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <div class="callout">
       <div class="callout-label">Hospitality Note</div>
       <p>
-        Hotel PIP programmes typically operate on a <strong>7–10 year renovation cycle</strong>. If your client is a hotel operator, specify a removable fixing system — it reduces the cost and disruption of the next interior refresh. Z-clip and rail systems allow panel removal without damaging the substrate, which also protects the drywall contractor's warranty.
+        Hotel PIP programmes typically operate on a <strong>7–10&nbsp;year renovation cycle</strong>. If your client is a hotel operator, specify a removable fixing system — it reduces the cost and disruption of the next interior refresh. Z-clip and rail systems allow panel removal without damaging the substrate, which also protects the drywall contractor’s warranty.
       </p>
     </div>
 
     <h2>Substrate <em>Considerations</em></h2>
     <p>
-      The most common mistake in relief panel installation is underestimating the substrate requirements. A standard metal stud + 12.5 mm plasterboard partition is designed for loads of approximately 20–25 kg/m². A deep-relief PMAG panel at 25 mm average thickness weighs 35–40 kg/m² — which exceeds the substrate's capacity.
+      The most common mistake in relief panel installation is underestimating the substrate requirements. A standard metal stud + 12.5&nbsp;mm plasterboard partition is designed for loads of approximately 20–25&nbsp;kg/m². A standard PMAG panel at 25&nbsp;mm weighs 35–40&nbsp;kg/m², and a deep-relief panel at 40&nbsp;mm 56–64&nbsp;kg/m² — both exceed the substrate’s capacity.
     </p>
     <p>
       The solution is not to specify thicker plasterboard (a common but ineffective response), but to ensure the fixing system transfers load directly into the metal studs. Rail-based fixing systems span between studs and distribute the panel weight as point loads on the stud flanges, bypassing the plasterboard entirely. This is structurally sound and eliminates the risk of plasterboard delamination over time.
     </p>
 
     <!-- MATERIAL COMPARISON -->
-    <h2>PMAG vs. PUCOMP — <em>When to Use Which</em></h2>
+    <h2>Where <em>PMAG Is Used</em></h2>
 
     <div class="compare-grid">
       <div class="compare-card">
-        <div class="compare-card-header">Lumina PMAG™</div>
-        <div class="compare-row"><span class="compare-label">Weight @ 25mm</span><span class="compare-value">35–40 kg/m²</span></div>
-        <div class="compare-row"><span class="compare-label">Moisture</span><span class="compare-value">&lt; 5% absorption</span></div>
-        <div class="compare-row"><span class="compare-label">Best for</span><span class="compare-value">Interior — hotels, lobbies, escape routes</span></div>
-      </div>
-      <div class="compare-card">
-        <div class="compare-card-header">Lumina PUCOMP™</div>
-        <div class="compare-row"><span class="compare-label">Weight @ 15mm</span><span class="compare-value">12–18 kg/m²</span></div>
-        <div class="compare-row"><span class="compare-label">Moisture</span><span class="compare-value">&lt; 1% absorption</span></div>
-        <div class="compare-row"><span class="compare-label">Best for</span><span class="compare-value">Exterior, wet areas, high-detail features</span></div>
+        <h3 class="compare-card-header"><span translate="no">Lumina PMAG™</span></h3>
+        <dl>
+        <div class="compare-row"><dt class="compare-label">Weight @ 25mm</dt><dd class="compare-value">35–40&nbsp;kg/m²</dd></div>
+        <div class="compare-row"><dt class="compare-label">Best for</dt><dd class="compare-value">Interior — hotels, lobbies, column wraps, counter fronts, accent surfaces</dd></div>
+        </dl>
       </div>
     </div>
 
     <p>
-      The decision between PMAG and PUCOMP typically comes down to <strong>installation context</strong>. For most interior applications — hotel corridors, high-rise lobbies, and feature walls — PMAG is the correct material. If the installation is exterior, in a wet area, or requires a lightweight solution for a challenging substrate, PUCOMP is the better choice. Both materials accept the same surface finishing system, so the visual finish is identical.
+      Every interior application — hotel corridors, high-rise lobbies, feature walls, column wraps, counter fronts and accent surfaces — is specified in PMAG. The panels are made for interiors; exterior and continuously wet areas are outside their scope.
     </p>
 
   </article>
@@ -370,7 +376,7 @@
     <p>We can provide a draft specification clause and fixing detail drawings for your project.</p>
     <a href="contact.htm" class="btn-primary">
       Request Specification Support
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -396,10 +402,7 @@
     <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
     <a href="resources-lead-times.htm">Lead Times</a>
     <a href="resources-sustainability.htm">Sustainability</a>
-    <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
-    <a href="case-study-petal-lounge.htm">Petal Lounge</a>
-    <a href="case-study-wave-lounge.htm">Wave Lounge</a>
     <a href="contact.htm">Contact</a>
     <a href="site-map.htm">Site Map</a>
   </nav>

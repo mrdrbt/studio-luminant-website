@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Lobi Duvar Kaplama &amp; Otel Karşılama Duvarı | Studio Luminant</title>
 <meta name="description" content="Lobi duvar kaplaması için adım adım spesifikasyon rehberi: otel karşılama duvarında boyut, derinlik, aydınlatma ve artizan finish kararları.">
 <link rel="canonical" href="https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm">
@@ -41,7 +42,7 @@
   .article-body h2 em { font-style: italic; color: var(--gold); }
   .article-body p { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--text-secondary); margin-bottom: 20px; }
   .article-body strong { font-weight: 500; color: var(--text-primary); }
-  .article-body a { color: var(--gold-dim); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.25); transition: color 0.3s, border-color 0.3s; }
+  .article-body a { color: var(--gold-dim); text-decoration: none; border-bottom: 1px solid rgba(var(--accent-rgb),0.25); transition: color 0.3s, border-color 0.3s; }
   .article-body a:hover { color: var(--gold); border-color: var(--gold); }
   .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 36px 0; }
   .spec-card { background: var(--surface); padding: 28px 24px; }
@@ -57,18 +58,24 @@
   .related-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
   .related-list a { display: flex; justify-content: space-between; align-items: center; background: var(--surface); padding: 18px 24px; font-size: 14px; color: var(--text-secondary); text-decoration: none; border: none; transition: background 0.3s, color 0.3s; }
   .related-list a:hover { background: var(--surface-2); color: var(--text-primary); }
+  .related-list a:focus-visible { background: var(--surface-2); color: var(--text-primary); }
   .related-list a span.tag { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
   .article-cta { margin: 80px 0; padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
   .article-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin-bottom: 16px; }
   .article-cta h3 em { font-style: italic; color: var(--gold); }
   .article-cta p { font-size: 14px; color: var(--text-secondary); font-weight: 300; margin-bottom: 32px; }
+  .article-figure { margin: 8px 0 44px; }
+  .article-figure picture, .article-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
+  .article-figure figcaption { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 14px; color: var(--text-secondary); text-align: center; margin-top: 14px; }
   @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .spec-grid { grid-template-columns: 1fr; } }
+  /* a11y pass */
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://studioluminant.com.tr/"},{"@type":"ListItem","position":2,"name":"Makaleler","item":"https://studioluminant.com.tr/makaleler.htm"},{"@type":"ListItem","position":3,"name":"Otel Lobisi için Heykelsi Karşılama Duvarı","item":"https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Otel Lobisi için Heykelsi Karşılama Duvarı: Mimara Spesifikasyon Rehberi","description":"Otel lobisi karşılama duvarı spesifikasyonu: boyut, rölyef derinliği, aydınlatma açısı, artizan finish seçimi ve BIM süreci.","inLanguage":"tr","image":"https://studioluminant.com.tr/images/studio-luminant-og-image.jpg","datePublished":"2026-06-27","dateModified":"2026-06-27","author":{"@type":"Organization","name":"Studio Luminant","url":"https://studioluminant.com.tr"},"publisher":{"@type":"Organization","name":"Studio Luminant","logo":{"@type":"ImageObject","url":"https://studioluminant.com.tr/images/studio-luminant-logo-512.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm"}}
+{"@context":"https://schema.org","@type":"Article","headline":"Otel Lobisi için Heykelsi Karşılama Duvarı: Mimara Spesifikasyon Rehberi","description":"Otel lobisi karşılama duvarı spesifikasyonu: boyut, rölyef derinliği, aydınlatma açısı, artizan finish seçimi ve teknik teslim süreci.","inLanguage":"tr","image":"https://studioluminant.com.tr/images/studio-luminant-og-image.jpg","datePublished":"2026-06-27","dateModified":"2026-06-27","author":{"@type":"Organization","name":"Studio Luminant","url":"https://studioluminant.com.tr"},"publisher":{"@type":"Organization","name":"Studio Luminant","logo":{"@type":"ImageObject","url":"https://studioluminant.com.tr/images/studio-luminant-logo-512.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm"}}
 </script>
 </head>
 <body>
@@ -81,7 +88,7 @@
 
   <div class="back-nav">
     <a href="makaleler.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Makalelere Dön
     </a>
   </div>
@@ -94,7 +101,7 @@
     <p class="article-subtitle">
       Lobi spesifikasyonunda en kritik karar genellikle karşılama duvarıdır. Boyut, rölyef derinliği, aydınlatma açısı ve artizan finish — özel üretim döküm rölyef panel için adım adım rehber.
     </p>
-    <div class="article-meta"><span lang="en">Studio Luminant</span> · Spesifikasyon Rehberi · 6 dk okuma</div>
+    <div class="article-meta"><span lang="en"><span translate="no">Studio Luminant</span></span> · Spesifikasyon Rehberi · 6 dk okuma</div>
   </header>
 
   <article class="article-body">
@@ -104,8 +111,23 @@
     </p>
 
     <p>
-      Bu rehber, bir mimarın otel lobisi karşılama duvarını özel üretim döküm rölyef panel üzerinden nasıl spesifiye ettiğini özetler. Format kararından aydınlatma açısına, artizan finish seçiminden BIM teslim sürecine kadar.
+      Bu rehber, bir mimarın otel lobisi karşılama duvarını özel üretim döküm rölyef panel üzerinden nasıl spesifiye ettiğini özetler. Format kararından aydınlatma açısına, artizan finish seçiminden teknik teslim sürecine kadar.
     </p>
+
+    <figure class="article-figure">
+      <picture>
+            <source type="image/webp"
+                srcset="images/studio-luminant-cellular-relief-wall-hotel-reception-concept-400w.webp 400w,
+                images/studio-luminant-cellular-relief-wall-hotel-reception-concept-800w.webp 800w,
+                images/studio-luminant-cellular-relief-wall-hotel-reception-concept-1200w.webp 1200w,
+                images/studio-luminant-cellular-relief-wall-hotel-reception-concept.webp 1536w"
+                sizes="(max-width: 768px) calc(100vw - 48px), 700px">
+            <img src="images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg"
+                 alt="Otel resepsiyonunda traverten bankonun arkasında yükselen, sıcak yalama ışıkla aydınlanan hücre desenli rölyef duvar" width="1536" height="1024"
+                 loading="lazy" decoding="async">
+          </picture>
+      <figcaption>Konsept: resepsiyon bankosunun arkasında, üstten gelen sıcak ışıkla belirginleşen hücre desenli rölyef duvar.</figcaption>
+    </figure>
 
     <h2>Lobi Duvar Kaplamasında <em>Asıl Karar</em></h2>
 
@@ -140,7 +162,7 @@
     </p>
 
     <p>
-      Bu, koridorun ve resepsiyonun ötesine geçen bir spesifikasyon çerçevesidir. Bir motif, duvardan tavan paneline, sütun giydirmeye ve ankastre elemanlara taşındığında — aynı dijital master, farklı malzeme — tutarlılık inşa edilir. <a href="ozel-uretim-duvar-paneli-mimar-rehberi.htm">Özel üretim döküm panel spesifikasyonu</a> hakkındaki daha geniş rehber bu süreci kapsar.
+      Bu, koridorun ve resepsiyonun ötesine geçen bir spesifikasyon çerçevesidir. Bir motif, duvardan tavan paneline, sütun giydirmeye ve ankastre elemanlara taşındığında — aynı dijital ana model, aynı malzeme — tutarlılık inşa edilir. <a href="ozel-uretim-duvar-paneli-mimar-rehberi.htm">Özel üretim döküm panel spesifikasyonu</a> hakkındaki daha geniş rehber bu süreci kapsar.
     </p>
 
     <h2>Dört Spesifikasyon <em>Kararı</em></h2>
@@ -153,7 +175,7 @@
       <div class="spec-card">
         <div class="spec-card-label">01 — Format ve Boyut</div>
         <div class="spec-card-title">Panel ölçeği ve eklem detayı</div>
-        <p>Lumina PMAG™ panellerinin ölçüsü ve derz yerleşimi, duvarın ölçüsüne göre her projede ayrıca çözülür. Derzin görünür bir ızgara mı olacağını, yoksa rölyefin içinde mi kaybolacağını projenin ışık planı ve uygulama toleransı birlikte belirler.</p>
+        <p><span translate="no">Lumina PMAG™</span> panellerinin ölçüsü ve derz yerleşimi, duvarın ölçüsüne göre her projede ayrıca çözülür. Derzin görünür bir ızgara mı olacağını, yoksa rölyefin içinde mi kaybolacağını projenin ışık planı ve uygulama toleransı birlikte belirler.</p>
       </div>
       <div class="spec-card">
         <div class="spec-card-label">02 — Rölyef Derinliği</div>
@@ -168,31 +190,28 @@
       <div class="spec-card">
         <div class="spec-card-label">04 — Artizan <span lang="en">Finish</span></div>
         <div class="spec-card-title">Yüzey şeması ile kontrol</div>
-        <p>Her proje bir yüzey şemasıyla teslim edilir. Dört temel katman: <strong>Canvas</strong> (derin mat mineral zemin), <strong>Veil</strong> (açık ılık nötr, ışıkta eriyip giden), <strong>Grit</strong> (ham mineral, görünür doku tanesi), <strong>Tide</strong> (ılık orta ton mineral akış). Renge ve parlaklığa mimarın yönlendirdiği kombinasyonlar da mümkündür.</p>
+        <p>Her proje bir yüzey şemasıyla teslim edilir: derin mat mineral zeminden görünür doku tanesine, açık ılık nötrden orta ton minerale uzanan artizan finish seçenekleri. Renge ve parlaklığa mimarın yönlendirdiği kombinasyonlar da mümkündür.</p>
       </div>
     </div>
 
     <div class="callout">
       <div class="callout-label">Aydınlatma Notu</div>
-      <p>Lobi aydınlatma planı hazır olmadan rölyef derinliğini netleştirmeye çalışmak, kör bir spesifikasyondur. Armatür konumu, duvardan uzaklık ve ışık açısı birlikte belirlendiğinde rölyef sahneyi taşır; aksi takdirde yalnızca tekstür olarak okunur. <strong>Studio Luminant her teslimatta yalama açısı spesifikasyonu gönderir</strong> — bu belgeyi doğrudan elektrik mühendisinize iletebilirsiniz.</p>
+      <p>Lobi aydınlatma planı hazır olmadan rölyef derinliğini netleştirmeye çalışmak, kör bir spesifikasyondur. Armatür konumu, duvardan uzaklık ve ışık açısı birlikte belirlendiğinde rölyef sahneyi taşır; aksi takdirde yalnızca tekstür olarak okunur. <strong><span translate="no">Studio Luminant</span> her teslimatta yalama açısı spesifikasyonu gönderir</strong> — bu belgeyi doğrudan elektrik mühendisinize iletebilirsiniz.</p>
     </div>
 
-    <h2>Lobi Ötesinde: Restoran, <em>Spa ve Koridor</em></h2>
+    <h2>Lobi Ötesinde: <em>Restoran ve Koridor</em></h2>
 
     <p>
-      Karşılama duvarında belirlenen motif, aynı otelin diğer mekânlarına taşınabilir. Bunu mümkün kılan, ürettiğimiz dijital masterin malzeme-agnostik olmasıdır: aynı geometri, lobi için Lumina PMAG™ ile, sütun giydirme veya resepsiyon tezgâhı için Lumina PUCOMP™ ile üretilebilir.
+      Karşılama duvarında belirlenen motif, aynı otelin diğer mekânlarına taşınabilir. Bunu mümkün kılan, tek bir dijital ana modelden çalışmamızdır: aynı geometri lobi, sütun giydirme ve resepsiyon tezgâhında <span translate="no">Lumina PMAG™</span> ile dökülür.
     </p>
 
     <p>
       <strong>Restoran.</strong> Yemek mekânlarında bir rölyef duvarı yalnızca görsel bir yüzey sağlamaz — mekâna bir ağırlık ve sıcaklık katar, düz bir yüzeyin tutamayacağı bir hissiyat. Mumlu ışıkta yalama açısıyla okunan, mineral-mat bir rölyef restoranın karakterini taşır. Ayrıntılar <a href="restoran-duvar-tasarimi.htm">restoran duvar tasarımı rehberinde</a>.
     </p>
 
-    <p>
-      <strong>Spa ve ıslak alanlar.</strong> Lumina PUCOMP™ ıslak alan uygulamaları için onaylıdır; ince profillerde (8–25 mm) ve kompleks kavisli yüzeylerde çalışılabilir. Hamam çevresi, duş bölmesi çerçeveleri ve havuz kenarı detayları için uygundur. Bu mekânlarda yüzey şeması ayrıca değerlendirilir.
-    </p>
 
     <p>
-      <strong>Koridor ve asansör holü.</strong> PMAG büyük formatlı koridor duvarları ve tavan panelleri için kullanılır; sütun giydirme PUCOMP ile çözülür. Tek tedarikçi, tek motif, tek artizan finish standardı — koordinasyon boşluğu ortadan kalkar.
+      <strong>Koridor ve asansör holü.</strong> PMAG büyük formatlı koridor duvarları, tavan panelleri ve sütun giydirme için kullanılır. Tek tedarikçi, tek motif, tek artizan finish standardı — koordinasyon boşluğu ortadan kalkar.
     </p>
 
     <h2>Brief Nasıl <em>Hazırlanır</em></h2>
@@ -203,30 +222,30 @@
 
     <p>
       <strong>1. Duvar boyutları.</strong> Brüt alanı ve net kaplama alanını ayrı belirtin. Panel grid tercihini (büyük format / orta format) not edin.<br><br>
-      <strong>2. Motif referansı.</strong> Bir fotoğraf, eskiz veya marka öğesi yeterlidir. "Düz bir kayadan esinlenen organik doku" gibi yönlendirici bir tanımlama da çalışır.<br><br>
+      <strong>2. Motif referansı.</strong> Bir fotoğraf, eskiz veya marka öğesi yeterlidir. “Düz bir kayadan esinlenen organik doku” gibi yönlendirici bir tanımlama da çalışır.<br><br>
       <strong>3. Finish yönü.</strong> Sıcak mı, soğuk mu? Mat mı, hafif saten mi? Varsa referans görseller ekleyin.<br><br>
       <strong>4. Aydınlatma planı.</strong> Armatür türü ve duvardan mesafe, derinlik kararını doğrudan etkiler. Henüz netleşmediyse, bu konuşmayı birlikte yaparız.
     </p>
 
     <p>
-      Bu bilgilerle dijital iterasyon başlar. Fiziksel prototip yapılmadan önce motif oturur, ölçek test edilir, yüzey şeması hazırlanır. Onaylı tasarımın ardından BIM objesi ve teknik föy üretilir; numune kutusu talep edebilirsiniz.
+      Bu bilgilerle dijital iterasyon başlar. Fiziksel prototip yapılmadan önce motif oturur, ölçek test edilir, yüzey şeması hazırlanır. Onaylı tasarımın ardından teknik föy ve montaj çizimi hazırlanır; numune kutusu talep edebilirsiniz.
     </p>
 
-    <h2>BIM, Numune ve <em>Teknik Teslim</em></h2>
+    <h2>Numune ve <em>Teknik Teslim</em></h2>
 
     <p>
       Her özel üretim panel projesi şunlarla teslim edilir:
     </p>
 
     <p>
-      <strong>IFC / BIM ailesi</strong> — Revit uyumlu, embed edilmiş finish ve boyut verisi ile. Projenin model koordinasyonuna doğrudan entegre olur.<br><br>
+      <strong>Montaj çizimi</strong> — panel yerleşimi ve sabitleme bilgisi.<br><br>
       <strong>Teknik föy</strong> — malzeme, yüzey şeması, montaj bilgisi ve yalama açısı aydınlatma spesifikasyonu.<br><br>
-      <strong>Fiziksel numune kutusu</strong> — dört artizan finish katmanının gerçek panelde nasıl göründüğünü elde değerlendirmek için.<br><br>
+      <strong>Fiziksel numune kutusu</strong> — farklı renklerdeki artizan finish’in gerçek panelde nasıl göründüğünü elde değerlendirmek için.<br><br>
       <strong>Termin:</strong> onaylı tasarımdan teslimata kadar geçen süre kapsama ve finishe göre değişir; teklifte kesinleşir. Montaj gerektiğinde proje bazında ayrıca fiyatlandırılır; teslim varsayılanı EXW Sapanca.
     </p>
 
-    <div class="related">
-      <div class="related-label">İlgili Makaleler</div>
+    <div class="related" role="navigation" aria-labelledby="related-label">
+      <div class="related-label" id="related-label">İlgili Makaleler</div>
       <ul class="related-list">
         <li><a href="ozel-uretim-duvar-paneli-mimar-rehberi.htm">Özel Üretim Duvar Paneli: Mimar Rehberi <span class="tag">Rehber</span></a></li>
         <li><a href="mimari-rolyef-panel-nedir.htm">Mimari Rölyef Panel Nedir? <span class="tag">Giriş</span></a></li>
@@ -237,7 +256,7 @@
 
     <div class="article-cta">
       <h3>Lobi Projeniz için <em>Numune Talep Edin</em></h3>
-      <p>Dört artizan finish katmanı, gerçek panelde — elinizde görmek için bize ulaşın.</p>
+      <p>Farklı renklerde artizan finish, gerçek panelde: elinizde görmek için bize ulaşın.</p>
       <a href="iletisim.htm" class="btn-primary">Numune Kutusu İsteyin</a>
     </div>
 
@@ -264,7 +283,6 @@
     <a href="kaynaklar-agirlik-yapisal.htm">Ağırlık ve Yapısal Kılavuz</a>
     <a href="kaynaklar-teslimat-sureci.htm">Teslimat Süreleri</a>
     <a href="kaynaklar-surdurulebilirlik.htm">Sürdürülebilirlik</a>
-    <a href="tasarim-dosyasi.htm">Tasarım Dosyası</a>
     <a href="iletisim.htm">İletişim</a>
     <a href="site-haritasi.htm">Site Haritası</a>
   </nav>

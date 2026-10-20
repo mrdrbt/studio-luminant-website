@@ -1,0 +1,52 @@
+{
+  "source": "heightmap.png",
+  "panelWmm": 600.0,
+  "panelHmm": 600.0,
+  "reliefMm": 7.0,
+  "baseMm": 10.0,
+  "marginMm": 120.0,
+  "layout": "panel",
+  "fieldTiles": [
+    1,
+    1
+  ],
+  "wall": "#DFD8CA",
+  "poster": [
+    1680,
+    1680
+  ],
+  "textures": {
+    "2048": {
+      "normal": "normal-2048.webp",
+      "height": "height-1024.webp"
+    },
+    "1024": {
+      "normal": "normal-1024.webp",
+      "height": "height-512.webp"
+    }
+  },
+  "posters": [
+    "poster-840.jpg",
+    "poster-1680.jpg"
+  ],
+  "heightBits": 8,
+  "shade": {
+    "albedo": [
+      233,
+      226,
+      211
+    ],
+    "albedoVar": 0.035,
+    "ambient": 0.08,
+    "bounce": 0.1,
+    "flatLevel": 1.0,
+    "shoulder": 0.85,
+    "spec": 0.05,
+    "specPow": 6.0,
+    "shadowStrength": 0.7,
+    "penumbraDeg": 4.0,
+    "stepPow": 1.6,
+    "azDefault": 125.0,
+    "elDefault": 16.0
+  }
+}

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Resources — Studio Luminant</title>
 <meta name="description" content="Technical resources for architects specifying architectural relief panels. Specification guidance, weight data, and structural interface details.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/resources.htm">
@@ -12,11 +13,11 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="Technical Resources — Studio Luminant">
-<meta property="og:description" content="Specification guidance, weight data, and structural details for architects specifying Lumina PMAG™ and PUCOMP™ relief panels.">
+<meta property="og:description" content="Specification guidance, weight data, and structural details for architects specifying Lumina PMAG™ relief panels.">
 <meta property="og:url" content="https://studioluminant.com.tr/en/resources.htm">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Technical Resources — Studio Luminant">
-<meta name="twitter:description" content="Specification guidance, weight data, and structural details for architects specifying Lumina PMAG™ and PUCOMP™ relief panels.">
+<meta name="twitter:description" content="Specification guidance, weight data, and structural details for architects specifying Lumina PMAG™ relief panels.">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -59,7 +60,7 @@
     font-weight: 300; line-height: 0.92;
     letter-spacing: -0.02em; color: var(--text-primary);
     margin-bottom: 36px;
-    opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
+    animation: riseIn 0.5s ease both;
   }
   .page-hero-headline em { font-style: italic; color: var(--gold); }
   .page-hero-sub {
@@ -92,6 +93,9 @@
   .resource-card:hover {
     background: var(--surface-2);
   }
+  .resource-card:focus-visible {
+    background: var(--surface-2);
+  }
   .resource-card-number {
     font-family: 'Cormorant Garamond', serif;
     font-size: 14px; font-weight: 300;
@@ -122,12 +126,17 @@
     border-color: var(--gold);
     background: var(--gold);
   }
+  .resource-card:focus-visible .resource-card-arrow {
+    border-color: var(--gold);
+    background: var(--gold);
+  }
   .resource-card-arrow svg {
     width: 16px; height: 16px;
     color: var(--text-muted);
     transition: color 0.3s;
   }
   .resource-card:hover .resource-card-arrow svg { color: var(--obsidian); }
+  .resource-card:focus-visible .resource-card-arrow svg { color: var(--obsidian); }
 
   /* ─── CTA STRIP ──────────────────────── */
   #resources-cta {
@@ -237,6 +246,10 @@
     .bim-cta-group { align-items: flex-start; }
     .bim-meta { flex-wrap: wrap; gap: 12px; }
   }
+  /* a11y pass */
+  @keyframes riseIn { from { transform: translateY(16px); } to { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .page-hero-eyebrow, .page-hero-sub { animation-delay: 0s; } .page-hero-headline { animation: none; } }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Resources", "item": "https://studioluminant.com.tr/en/resources.htm"}]}
@@ -305,7 +318,7 @@
         <div>
           <div class="resource-card-number">04</div>
           <h2 class="resource-card-title">Finishes, Coatings &amp; <em>Colour</em></h2>
-          <p class="resource-card-desc">Standard paint systems, textured coatings, and custom colour matching. How finish choice shapes the perception of three-dimensional relief.</p>
+          <p class="resource-card-desc">Artisan finishes, paint systems and custom colour matching. How finish choice shapes the perception of three-dimensional relief.</p>
         </div>
         <div class="resource-card-arrow">
           <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
@@ -325,30 +338,6 @@
 
     </div>
 
-      <!-- DESIGN FILE -->
-      <div class="resource-card--bim reveal">
-        <div>
-          <div class="resource-card-number">06</div>
-          <div class="bim-badge">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-            Specifier Kit
-          </div>
-          <h2 class="resource-card-title">Lookbook and presentation, <em>one PDF</em></h2>
-          <p class="resource-card-desc">The lookbook and studio presentation in one file, with the finish schedule and specification notes. Leave a work email and the download starts straight away.</p>
-          <div class="bim-meta">
-            <span>Single PDF</span>
-            <span>Lookbook + Presentation</span>
-            <span>Lumina PMAG&trade;</span>
-          </div>
-        </div>
-        <div class="bim-cta-group">
-          <a href="specifier-kit.htm" class="bim-download-btn">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 2v9M4 8l4 4 4-4M2 13h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Get the Kit
-          </a>
-          <p class="bim-full-library">Want the material in hand? <a href="contact.htm">Request a sample</a></p>
-        </div>
-      </div>
 
   </div>
 </section>
@@ -390,10 +379,7 @@
     <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
     <a href="resources-lead-times.htm">Lead Times</a>
     <a href="resources-sustainability.htm">Sustainability</a>
-    <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
-    <a href="case-study-petal-lounge.htm">Petal Lounge</a>
-    <a href="case-study-wave-lounge.htm">Wave Lounge</a>
     <a href="contact.htm">Contact</a>
     <a href="site-map.htm">Site Map</a>
   </nav>

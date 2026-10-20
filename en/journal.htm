@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Journal — Architectural Relief Guides — Studio Luminant</title>
-<meta name="description" content="Guides for architects specifying bespoke relief and cast wall panels: how to specify, material choice, and BIM. The Studio Luminant journal.">
+<meta name="description" content="Guides for architects specifying bespoke relief and cast wall panels: how to specify, material choice, and technical documentation. The Studio Luminant journal.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/journal.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/makaleler.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/journal.htm">
@@ -31,21 +32,24 @@
   .page-hero-eyebrow { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 40px; opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards; }
   .page-hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
   .page-hero-eyebrow span { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
-  .page-hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(60px, 7vw, 104px); font-weight: 300; line-height: 0.92; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 36px; opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards; }
+  .page-hero-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(60px, 7vw, 104px); font-weight: 300; line-height: 0.92; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 36px; animation: riseIn 0.5s ease both; }
   .page-hero-headline em { font-style: italic; color: var(--gold); }
   .page-hero-sub { font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--text-secondary); max-width: 540px; opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards; }
   .articles-section { padding: 100px 0; }
   .article-grid { display: grid; grid-template-columns: 1fr; gap: 2px; }
   .article-card { background: var(--surface); padding: 48px 60px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; transition: background 0.3s ease; text-decoration: none; color: inherit; }
   .article-card:hover { background: var(--surface-2); }
+  .article-card:focus-visible { background: var(--surface-2); }
   .article-card-eyebrow { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 18px; }
   .article-card-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 36px); font-weight: 300; line-height: 1.1; color: var(--text-primary); margin-bottom: 16px; }
   .article-card-title em { font-style: italic; color: var(--gold); }
   .article-card-desc { font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--text-secondary); max-width: 580px; }
   .article-card-arrow { width: 48px; height: 48px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; transition: border-color 0.3s, background 0.3s; flex-shrink: 0; }
   .article-card:hover .article-card-arrow { border-color: var(--gold); background: var(--gold); }
+  .article-card:focus-visible .article-card-arrow { border-color: var(--gold); background: var(--gold); }
   .article-card-arrow svg { width: 16px; height: 16px; color: var(--text-muted); transition: color 0.3s; }
   .article-card:hover .article-card-arrow svg { color: var(--obsidian); }
+  .article-card:focus-visible .article-card-arrow svg { color: var(--obsidian); }
   .article-card.upcoming { background: transparent; border: 1px dashed var(--border); cursor: default; }
   .article-card.upcoming:hover { background: transparent; }
   .article-card.upcoming .article-card-title { color: var(--text-muted); }
@@ -56,6 +60,10 @@
   .cta-sub { font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 520px; margin: 0 auto 48px; }
   @media (max-width: 1024px) { .page-hero-content { padding: 140px 32px 70px; } .article-card { padding: 36px 32px; } }
   @media (max-width: 600px) { .article-card { grid-template-columns: 1fr; gap: 24px; } .article-card-arrow { width: 40px; height: 40px; } }
+  /* a11y pass */
+  @keyframes riseIn { from { transform: translateY(16px); } to { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .page-hero-eyebrow, .page-hero-sub { animation-delay: 0s; } .page-hero-headline { animation: none; } }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioluminant.com.tr/en/journal.htm"}]}
@@ -92,12 +100,12 @@
 
       <a href="how-to-specify-custom-cast-wall-panels.htm" class="article-card reveal">
         <div>
-          <div class="article-card-eyebrow">Architect's Guide</div>
+          <div class="article-card-eyebrow">Architect’s Guide</div>
           <h2 class="article-card-title">How to Specify Custom <em>Cast Wall Panels</em></h2>
-          <p class="article-card-desc">Eight steps from brief to installation: context, material, sample, format and m², BIM documents, fixing, delivery, and installation. The complete path to specifying a bespoke relief panel correctly.</p>
+          <p class="article-card-desc">Eight steps from brief to installation: context, material, sample, format and m², technical data sheet and installation drawing, fixing, delivery, and installation. The complete path to specifying a bespoke relief panel correctly.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -105,10 +113,10 @@
         <div>
           <div class="article-card-eyebrow">Intro Guide</div>
           <h2 class="article-card-title">What Is an Architectural <em>Relief Panel?</em></h2>
-          <p class="article-card-desc">An introductory guide to what a relief panel is, where it's used, what it's made from, and how an architect runs the ordering process.</p>
+          <p class="article-card-desc">An introductory guide to what a relief panel is, where it’s used, what it’s made from, and how an architect runs the ordering process.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -119,18 +127,18 @@
           <p class="article-card-desc">A definitional guide to sculptural, tactile cast surfaces — and how bespoke relief panels differ from modular decorative tiles.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
       <a href="grg-vs-grc-interior-surfaces.htm" class="article-card reveal">
         <div>
-          <div class="article-card-eyebrow">Specifier's Comparison</div>
+          <div class="article-card-eyebrow">Specifier’s Comparison</div>
           <h2 class="article-card-title">GRG vs GRC — and Where <em>Mineral Cast Fits</em></h2>
           <p class="article-card-desc">What glass reinforced gypsum and glass fibre reinforced concrete are, how a specifier chooses between them, and where a bespoke cast relief panel sits that neither was built for.</p>
         </div>
         <div class="article-card-arrow">
-          <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
       </a>
 
@@ -142,14 +150,14 @@
 <section id="journal-cta">
   <div class="section-inner">
     <h2 class="cta-headline reveal">
-      Let's Talk About<br><em>Your Project.</em>
+      Let’s Talk About<br><em>Your Project.</em>
     </h2>
     <p class="cta-sub reveal">
       Share your brief and we will respond with a material recommendation, a draft specification clause, and a physical sample.
     </p>
     <a href="contact.htm" class="btn-primary reveal">
       Initiate Project
-      <svg viewBox="0 0 14 14" fill="none">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none">
         <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
       </svg>
     </a>
@@ -175,10 +183,7 @@
     <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
     <a href="resources-lead-times.htm">Lead Times</a>
     <a href="resources-sustainability.htm">Sustainability</a>
-    <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
-    <a href="case-study-petal-lounge.htm">Petal Lounge</a>
-    <a href="case-study-wave-lounge.htm">Wave Lounge</a>
     <a href="contact.htm">Contact</a>
     <a href="site-map.htm">Site Map</a>
   </nav>

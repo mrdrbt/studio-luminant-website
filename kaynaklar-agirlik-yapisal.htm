@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Duvar Paneli Ağırlığı ve Taşıyıcı Yük — Mimarlar İçin | Studio Luminant</title>
 <meta name="description" content="Metrekare başına panel ağırlığı, alt yapı yük kapasiteleri ve mimari rölyef paneller için yapısal arayüz detayları. Mimarlar için teknik veriler.">
 <link rel="canonical" href="https://studioluminant.com.tr/kaynaklar-agirlik-yapisal.htm">
@@ -12,7 +13,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="Duvar Paneli Ağırlığı ve Taşıyıcı Yük — Mimarlar İçin">
-<meta property="og:description" content="Metrekare başına yük, alt yapı gereksinimleri ve Lumina PMAG™ ile PUCOMP™ mimari rölyef paneller için yapısal sabitleme verileri.">
+<meta property="og:description" content="Metrekare başına yük, alt yapı gereksinimleri ve Lumina PMAG™ mimari rölyef paneller için yapısal sabitleme verileri.">
 <meta property="og:url" content="https://studioluminant.com.tr/kaynaklar-agirlik-yapisal.htm">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
@@ -23,9 +24,9 @@
 
 <style>
   :root {
-    --green: #6ABF8A;
-    --blue: #6A9FBF;
-    --orange: #BF8A6A;
+    --green: #3F6B3A;
+    --blue: #3D5E80;
+    --orange: #8E4426;
   }
   .article-wrapper { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; padding: 0 60px; }
   .back-nav { padding: 40px 0 0; }
@@ -44,7 +45,7 @@
   .article-body strong { font-weight: 500; color: var(--text-primary); }
   .weight-table { width: 100%; border-collapse: collapse; margin: 36px 0 40px; font-size: 14px; }
   .weight-table thead th { text-align: left; font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 400; padding: 14px 16px; border-bottom: 1px solid var(--border); background: var(--surface); }
-  .weight-table tbody td { padding: 16px; border-bottom: 1px solid rgba(201,168,76,0.08); vertical-align: top; color: var(--text-secondary); font-weight: 300; line-height: 1.6; }
+  .weight-table tbody td { padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); vertical-align: top; color: var(--text-secondary); font-weight: 300; line-height: 1.6; }
   .weight-table tbody tr:hover { background: var(--surface); }
   .weight-table strong { color: var(--text-primary); font-weight: 500; }
   .weight-table .highlight-cell { color: var(--gold); font-weight: 400; }
@@ -52,9 +53,8 @@
   .bar-row { display: grid; grid-template-columns: 140px 1fr 80px; align-items: center; gap: 16px; margin-bottom: 12px; }
   .bar-label { font-size: 12px; color: var(--text-secondary); text-align: right; font-weight: 300; }
   .bar-track { height: 28px; background: var(--surface); border-radius: 2px; overflow: hidden; position: relative; }
-  .bar-fill { height: 100%; border-radius: 2px; transition: width 0.8s ease; }
+  .bar-fill { height: 100%; border-radius: 2px; }
   .bar-fill-pmag { background: var(--gold); }
-  .bar-fill-pucomp { background: var(--blue); }
   .bar-fill-stone { background: var(--text-muted); }
   .bar-fill-grc { background: var(--orange); }
   .bar-fill-timber { background: var(--green); }
@@ -87,6 +87,12 @@
   .article-footer a { color: var(--gold-dim); text-decoration: none; }
   .article-footer a:hover { color: var(--gold); }
   @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .stats-row { grid-template-columns: 1fr; } .substrate-grid { grid-template-columns: 1fr; } .bar-row { grid-template-columns: 100px 1fr 60px; gap: 10px; } .bar-label { font-size: 11px; } }
+  /* a11y pass */
+  .weight-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .weight-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .weight-table tbody td, .weight-table tbody th { font-variant-numeric: tabular-nums; }
+  .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Ağırlık ve Yapısal Kılavuz", "item": "https://studioluminant.com.tr/kaynaklar-agirlik-yapisal.htm"}]}
@@ -95,7 +101,7 @@
 {"@context": "https://schema.org", "@type": "Article", "headline": "Ağırlık ve Yapısal Kılavuz", "description": "Metrekare başına panel ağırlığı, alt yapı yük kapasiteleri ve mimari rölyef paneller için yapısal arayüz detayları. Mimarlar için teknik veriler.", "inLanguage": "tr", "image": "https://studioluminant.com.tr/images/studio-luminant-og-image.jpg", "author": {"@type": "Organization", "name": "Studio Luminant", "url": "https://studioluminant.com.tr"}, "publisher": {"@type": "Organization", "name": "Studio Luminant", "logo": {"@type": "ImageObject", "url": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioluminant.com.tr/kaynaklar-agirlik-yapisal.htm"}}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "tr", "mainEntity": [{"@type": "Question", "name": "Rölyef panel ağırlığı yapı için neden önemlidir?", "acceptedAnswer": {"@type": "Answer", "text": "Bir otel lobisi için rölyef panel seçen mimar genellikle geometri, renk ve dokuyu düşünür. Yapı mühendisi ise tek bir şeyi düşünür: ne kadar ağır? Metrekare başına panel ağırlığı sabitleme sistemini, alt yapı spesifikasyonunu ve bazı durumlarda duvarın tasarımı taşıyıp taşıyamayacağını belirler."}}, {"@type": "Question", "name": "Rölyef panel ağırlığı nominal mi ortalama kalınlığa göre mi hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Rölyef panellerde nominal kalınlık maksimum derinliktir — ancak ortalama malzeme kalınlığı, orta düzey rölyef profilleri için genellikle bunun %60–70'i kadardır. Üreticiden maksimum kalınlığı değil, belirli tasarım geometrisine dayalı ortalama kesit ağırlığını isteyin. Yapı mühendisinizin ihtiyaç duyduğu sayı budur."}}, {"@type": "Question", "name": "Alt yapı, hangi malzemeyi belirleyebileceğimi etkiler mi?", "acceptedAnswer": {"@type": "Answer", "text": "Tüm duvarlar eşit yaratılmamıştır. Alt yapının sürekli ölü yük taşıma kapasitesi, hangi malzemeyi belirleyebileceğinizi — ve hangi sabitleme sistemine ihtiyaç duyacağınızı belirler."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "tr", "mainEntity": [{"@type": "Question", "name": "Rölyef panel ağırlığı yapı için neden önemlidir?", "acceptedAnswer": {"@type": "Answer", "text": "Bir otel lobisi için rölyef panel seçen mimar genellikle geometri, renk ve dokuyu düşünür. Yapı mühendisi ise tek bir şeyi düşünür: ne kadar ağır? Metrekare başına panel ağırlığı sabitleme sistemini, alt yapı spesifikasyonunu ve bazı durumlarda duvarın tasarımı taşıyıp taşıyamayacağını belirler."}}, {"@type": "Question", "name": "Rölyef panel ağırlığı nominal mi ortalama kalınlığa göre mi hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Rölyef panellerde nominal kalınlık maksimum derinliktir — ancak ortalama malzeme kalınlığı, orta düzey rölyef profilleri için genellikle bunun %60–70'i kadardır. Tasarımınızın maksimum kalınlığa değil geometrisine dayalı ortalama kesit ağırlığını biz veririz. Yapı mühendisinizin ihtiyaç duyduğu sayı budur."}}, {"@type": "Question", "name": "Alt yapı, hangi malzemeyi belirleyebileceğimi etkiler mi?", "acceptedAnswer": {"@type": "Answer", "text": "Her duvar aynı yükü taşımaz. Alt yapının sürekli ölü yük taşıma kapasitesi, hangi malzemeyi belirleyebileceğinizi — ve hangi sabitleme sistemine ihtiyaç duyacağınızı belirler."}}]}
 </script>
 </head>
 <body>
@@ -108,7 +114,7 @@
 
   <div class="back-nav">
     <a href="kaynaklar.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Kaynaklara Dön
     </a>
   </div>
@@ -130,71 +136,53 @@
       Bir otel lobisi için rölyef panel seçen mimar genellikle geometri, renk ve dokuyu düşünür. Yapı mühendisi ise tek bir şeyi düşünür: <strong>ne kadar ağır?</strong> Metrekare başına panel ağırlığı sabitleme sistemini, alt yapı spesifikasyonunu ve bazı durumlarda duvarın tasarımı taşıyıp taşıyamayacağını belirler.
     </p>
     <p>
-      Rölyef paneller düz eşdeğerlerinden daha ağırdır — bazen önemli ölçüde. 25 mm düz bir PMAG panel yaklaşık 35–40 kg/m² ağırlığındadır. Ancak tepeleri 40 mm'ye ulaşan derin rölyefli bir PMAG panel çok daha fazla malzeme kütlesine sahiptir. Etkin ağırlık, nominal kalınlığa değil, rölyef profili boyunca ortalama kalınlığa bağlıdır.
+      Rölyef paneller düz eşdeğerlerinden daha ağırdır — bazen önemli ölçüde. 25&nbsp;mm düz bir PMAG panel yaklaşık 35–40&nbsp;kg/m² ağırlığındadır. Ancak tepeleri 40&nbsp;mm’ye ulaşan derin rölyefli bir PMAG panel çok daha fazla malzeme kütlesine sahiptir. Etkin ağırlık, nominal kalınlığa değil, rölyef profili boyunca ortalama kalınlığa bağlıdır.
     </p>
 
     <h2><em>Malzeme ve Kalınlığa</em> Göre Panel Ağırlığı</h2>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Malzeme ağırlık karşılaştırması">
     <table class="weight-table">
+      <caption>Malzeme ağırlık karşılaştırması</caption>
       <thead>
         <tr>
-          <th>Malzeme</th>
-          <th>Nominal Kalınlık</th>
-          <th>Yoğunluk</th>
-          <th>m² Başına Ağırlık</th>
-          <th>Kullanım Alanı</th>
+          <th scope="col">Malzeme</th>
+          <th scope="col">Nominal Kalınlık</th>
+          <th scope="col">Yoğunluk</th>
+          <th scope="col">m² Başına Ağırlık</th>
+          <th scope="col">Kullanım Alanı</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Lumina PMAG™</strong></td>
-          <td>15 mm (low relief)</td>
-          <td>1,400–1,600 kg/m³</td>
-          <td class="highlight-cell">~21–24 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PMAG™</span></strong></th>
+          <td>15&nbsp;mm (sığ rölyef)</td>
+          <td>1,400–1,600&nbsp;kg/m³</td>
+          <td class="highlight-cell">~21–24&nbsp;kg/m²</td>
           <td>Sığ doku, tavana uygun</td>
         </tr>
         <tr>
-          <td><strong>Lumina PMAG™</strong></td>
-          <td>25 mm (standart)</td>
-          <td>1,400–1,600 kg/m³</td>
-          <td class="highlight-cell">~35–40 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PMAG™</span></strong></th>
+          <td>25&nbsp;mm (standart)</td>
+          <td>1,400–1,600&nbsp;kg/m³</td>
+          <td class="highlight-cell">~35–40&nbsp;kg/m²</td>
           <td>Standart duvar uygulamaları</td>
         </tr>
         <tr>
-          <td><strong>Lumina PMAG™</strong></td>
-          <td>40 mm (derin rölyef)</td>
-          <td>1,400–1,600 kg/m³</td>
-          <td class="highlight-cell">~56–64 kg/m²</td>
+          <th scope="row"><strong><span translate="no">Lumina PMAG™</span></strong></th>
+          <td>40&nbsp;mm (derin rölyef)</td>
+          <td>1,400–1,600&nbsp;kg/m³</td>
+          <td class="highlight-cell">~56–64&nbsp;kg/m²</td>
           <td>Özellikli duvarlar, yapısal alt yapı gerekli</td>
-        </tr>
-        <tr>
-          <td><strong>Lumina PUCOMP™</strong></td>
-          <td>8 mm (ince kabuk)</td>
-          <td>800–1,200 kg/m³</td>
-          <td class="highlight-cell">~6–10 kg/m²</td>
-          <td>Mobilya, armatürler, hafif özellikler</td>
-        </tr>
-        <tr>
-          <td><strong>Lumina PUCOMP™</strong></td>
-          <td>15 mm (standart)</td>
-          <td>800–1,200 kg/m³</td>
-          <td class="highlight-cell">~12–18 kg/m²</td>
-          <td>Genel duvar kaplaması, karmaşık geometri</td>
-        </tr>
-        <tr>
-          <td><strong>Lumina PUCOMP™</strong></td>
-          <td>25 mm (derin rölyef)</td>
-          <td>800–1,200 kg/m³</td>
-          <td class="highlight-cell">~20–30 kg/m²</td>
-          <td>Derin profil özellikli duvarlar</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <div class="callout">
       <div class="callout-label">Etkin Ağırlık Nasıl Hesaplanır</div>
       <p>
-        Rölyef panellerde nominal kalınlık <strong>maksimum derinliktir</strong> — ancak ortalama malzeme kalınlığı, orta düzey rölyef profilleri için genellikle bunun %60–70'i kadardır. Üreticiden maksimum kalınlığı değil, <strong>belirli tasarım geometrisine dayalı ortalama kesit ağırlığını</strong> isteyin. Yapı mühendisinizin ihtiyaç duyduğu sayı budur.
+        Rölyef panellerde nominal kalınlık <strong>maksimum derinliktir</strong> — ancak ortalama malzeme kalınlığı, orta düzey rölyef profilleri için genellikle bunun %60–70’i kadardır. Tasarımınızın maksimum kalınlığa değil geometrisine dayalı <strong>ortalama kesit ağırlığını</strong> biz veririz. Yapı mühendisinizin ihtiyaç duyduğu sayı budur.
       </p>
     </div>
 
@@ -206,67 +194,55 @@
     <div class="bar-chart">
       <div class="bar-row">
         <span class="bar-label">Doğal taş (30mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-stone" style="width: 100%;"></div></div>
-        <span class="bar-value">~78 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-stone" style="width: 100%;"></div></div>
+        <span class="bar-value">~78&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">PMAG derin (40mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pmag" style="width: 77%;"></div></div>
-        <span class="bar-value">~60 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-pmag" style="width: 77%;"></div></div>
+        <span class="bar-value">~60&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">GRC panel (15mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-grc" style="width: 50%;"></div></div>
-        <span class="bar-value">~39 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-grc" style="width: 50%;"></div></div>
+        <span class="bar-value">~39&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">PMAG standart (25mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pmag" style="width: 48%;"></div></div>
-        <span class="bar-value">~38 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-pmag" style="width: 48%;"></div></div>
+        <span class="bar-value">~38&nbsp;kg/m²</span>
       </div>
       <div class="bar-row">
         <span class="bar-label">Ahşap panel (18mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-timber" style="width: 18%;"></div></div>
-        <span class="bar-value">~14 kg/m²</span>
-      </div>
-      <div class="bar-row">
-        <span class="bar-label">PUCOMP standart (15mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pucomp" style="width: 19%;"></div></div>
-        <span class="bar-value">~15 kg/m²</span>
-      </div>
-      <div class="bar-row">
-        <span class="bar-label">PUCOMP ince (8mm)</span>
-        <div class="bar-track"><div class="bar-fill bar-fill-pucomp" style="width: 10%;"></div></div>
-        <span class="bar-value">~8 kg/m²</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill bar-fill-timber" style="width: 18%;"></div></div>
+        <span class="bar-value">~14&nbsp;kg/m²</span>
       </div>
     </div>
 
     <p>
-      Temel çıkarım: <strong>Standart kalınlıkta PUCOMP, ahşaptan daha hafiftir</strong> — bu da onu standart alçıpan bölmeler dahil neredeyse her alt yapı üzerinde uygulanabilir kılar. Standart kalınlıkta PMAG ise GRC ile karşılaştırılabilir düzeydedir — mimarların iç mekan uygulamalarında zaten rutin olarak belirlediği bir malzeme.
+      Temel çıkarım: <strong>Standart kalınlıkta PMAG, GRC ile karşılaştırılabilir düzeydedir</strong> — mimarların iç mekân uygulamalarında zaten rutin olarak belirlediği bir malzeme.
     </p>
 
     <h2>Alt Yapı <em>Yük Kapasiteleri</em></h2>
     <p>
-      Tüm duvarlar eşit yaratılmamıştır. Alt yapının sürekli ölü yük taşıma kapasitesi, hangi malzemeyi belirleyebileceğinizi — ve hangi sabitleme sistemine ihtiyaç duyacağınızı belirler.
+      Her duvar aynı yükü taşımaz. Alt yapının sürekli ölü yük taşıma kapasitesi, hangi malzemeyi belirleyebileceğinizi — ve hangi sabitleme sistemine ihtiyaç duyacağınızı belirler.
     </p>
 
     <div class="substrate-grid">
       <div class="substrate-card">
         <div class="substrate-card-title">Metal Dikme Üzeri Standart Alçıpan</div>
-        <div class="substrate-card-capacity">20–25 kg/m²</div>
-        <div class="substrate-card-note">Tek kat 12,5 mm levha. Yaygın bölme tipi. Yalnızca yapıştırma ile sabitlenmiş hafif panellerle sınırlıdır.</div>
+        <div class="substrate-card-capacity">20–25&nbsp;kg/m²</div>
+        <div class="substrate-card-note">Tek kat 12,5&nbsp;mm levha. Yaygın bölme tipi. Yalnızca bu yük kapasitesi içinde kalan, yapıştırmayla sabitlenen panellerle sınırlıdır.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PUCOMP tüm kalınlıklar</span><br>
-          <span class="compat-caution">&#9888; PMAG — levhayı atlayan ray sistemi gerektirir</span>
+          <span class="compat-caution"><span aria-hidden="true">&#9888;</span> PMAG — levhayı atlayan ray sistemi gerektirir</span>
         </div>
       </div>
       <div class="substrate-card">
         <div class="substrate-card-title">Metal Dikme Üzeri Çift Kat Alçıpan</div>
-        <div class="substrate-card-capacity">30–35 kg/m²</div>
-        <div class="substrate-card-note">İki kat 12,5 mm levha. Daha iyi çekme direnci. Ray sistemi olmadan ağır PMAG için hâlâ yetersizdir.</div>
+        <div class="substrate-card-capacity">30–35&nbsp;kg/m²</div>
+        <div class="substrate-card-note">İki kat 12,5&nbsp;mm levha. Daha iyi çekme direnci. Ray sistemi olmadan ağır PMAG için hâlâ yetersizdir.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PUCOMP tüm kalınlıklar</span><br>
-          <span class="compat-caution">&#9888; Yalnızca PMAG 15mm — daha ağırı ray gerektirir</span>
+          <span class="compat-caution"><span aria-hidden="true">&#9888;</span> Yalnızca PMAG 15mm — daha ağırı ray gerektirir</span>
         </div>
       </div>
       <div class="substrate-card">
@@ -274,8 +250,7 @@
         <div class="substrate-card-capacity">60+ kg/m²</div>
         <div class="substrate-card-note">Masif alt yapı. Doğrudan mekanik sabitleme (genleşmeli dübel) veya yapıştırma. Tüm panel ağırlıkları için uygundur.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PMAG tüm kalınlıklar</span><br>
-          <span class="compat-yes">&#10003; PUCOMP tüm kalınlıklar</span>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PMAG tüm kalınlıklar</span>
         </div>
       </div>
       <div class="substrate-card">
@@ -283,8 +258,7 @@
         <div class="substrate-card-capacity">100+ kg/m²</div>
         <div class="substrate-card-note">Maksimum yapısal kapasite. Reçine ankraj veya cıvata sabitleme. Panel ağırlığında sınırlama yoktur.</div>
         <div class="substrate-card-compat">
-          <span class="compat-yes">&#10003; PMAG tüm kalınlıklar</span><br>
-          <span class="compat-yes">&#10003; PUCOMP tüm kalınlıklar</span>
+          <span class="compat-yes"><span aria-hidden="true">&#10003;</span> PMAG tüm kalınlıklar</span>
         </div>
       </div>
     </div>
@@ -316,7 +290,7 @@
     <div class="callout">
       <div class="callout-label">Pratik İpucu</div>
       <p>
-        Üreticinin <strong>sabitleme detay çizimini erken talep edin</strong> — ideal olarak RIBA Aşama 3 / şematik tasarım aşamasında, bölme spesifikasyonu kesinleşmeden önce. Bölme yüklenicisinin, dikme kalınlığı ve levha spesifikasyonunu sonuçlandırmadan önce panel yüklerini bilmesi gerekir. Uygulama aşamasında bölmelerin panelleri taşıyamadığını keşfetmek, bu hatanın en pahalı versiyonudur.
+        Üreticinin <strong>sabitleme detay çizimini erken talep edin</strong> — ideal olarak kesin proje aşamasında, uygulama projesi öncesinde ve bölme spesifikasyonu kesinleşmeden önce. Bölme yüklenicisinin, dikme kalınlığı ve levha spesifikasyonunu sonuçlandırmadan önce panel yüklerini bilmesi gerekir. Uygulama aşamasında bölmelerin panelleri taşıyamadığını keşfetmek, bu hatanın en pahalı versiyonudur.
       </p>
     </div>
 
@@ -327,7 +301,7 @@
     <p>Her spesifikasyon paketi kapsamında projeye özel ağırlık hesaplamaları ve sabitleme detay çizimleri sunuyoruz.</p>
     <a href="iletisim.htm" class="btn-primary">
       Yapısal Veri Talep Edin
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -353,7 +327,6 @@
     <a href="kaynaklar-agirlik-yapisal.htm">Ağırlık ve Yapısal Kılavuz</a>
     <a href="kaynaklar-teslimat-sureci.htm">Teslimat Süreleri</a>
     <a href="kaynaklar-surdurulebilirlik.htm">Sürdürülebilirlik</a>
-    <a href="tasarim-dosyasi.htm">Tasarım Dosyası</a>
     <a href="iletisim.htm">İletişim</a>
     <a href="site-haritasi.htm">Site Haritası</a>
   </nav>

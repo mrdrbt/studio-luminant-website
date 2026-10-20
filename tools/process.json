@@ -1,0 +1,67 @@
+{
+  "_note": "Copy for the Process page (surec.htm / en/process.htm), source for tools/build_process.py. Gated via sl-content-writer 2026-10-15 (fire/terminology, slop, archlex, TR calque + metrics, native-TR reader, de-slop reader). Layers from tools/process_bake.py on Library 012 (Cantus); the live relief is assets/relief/012-iznik-cypress/.",
+  "asset": "012-iznik-cypress",
+  "layers": "assets/process/cantus/",
+  "tr": {
+    "file": "surec.htm",
+    "title": "Nasıl Çalışırız: Çizimden Döküme | Studio Luminant",
+    "desc": "Çizimden dökme rölyef panele: derinlik haritası, yalama ışıkta onay, ana model, silikon kalıp, döküm ve artizan finish. Hepsi Sapanca'daki atölyemizde.",
+    "crumb": "Nasıl Çalışırız",
+    "home": "Ana Sayfa",
+    "eyebrow": "Nasıl Çalışırız",
+    "h1": "Çizimden<br><em>döküme.</em>",
+    "lede": "Bir projenin çizimi, Sapanca'daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, Kütüphane sistemlerimizden Cantus'u özel üretim bir çizimin izlediği yoldan geçiriyoruz.",
+    "steps": [
+      {"h": "Çizim ya da görsel", "p": "Her proje bir çizim ya da görselle başlar. Elle çizilmiş bir eskiz, ölçülü bir teknik çizim ya da bir referans görsel olabilir. Burada Cantus’u bir çizim olarak görüyorsunuz: İznik çini geleneğinin servi, lale, karanfil ve gül motifleri tek bir simetrik kompozisyonda. Çizim, derinlik haritası ve aşağıdaki rölyef aynı yüzeydir.", "cap": "Cantus, çizim", "alt": "Servi, lale, karanfil ve gül motifli Cantus panelinin karakalem ve mürekkep çizimi"},
+      {"h": "Derinlik haritası", "p": "Çizimi bir derinlik haritasına çeviririz. Haritadaki her gri tonu bir yüksekliğe karşılık gelir. Siyah, panelin zeminidir; beyaz, en yüksek noktası. Cantus'ta rölyef derinliği, zeminden en yüksek noktaya 16 mm'dir. Değişiklikler dijitalde kaldığı için kalıp ya da malzeme maliyeti doğurmaz.", "cap": "Cantus, derinlik haritası", "alt": "Cantus panelinin siyahtan beyaza derinlik haritası"},
+      {"h": "Yalama ışıkta okuma", "p": "Döküme geçmeden önce yüzeyi alçak açıdan, yandan vuran bir ışıkta dijital olarak okuruz. Rölyefin gölgesi burada belirir; sığ formların nerede düzleştiği, derin olanların nerede gölgeye gömüldüğü bu aşamada görülür. Ortaya çıkan render'ı onayınıza sunarız; onayınız olmadan döküme geçmeyiz.", "cap": "Cantus, yalama ışık testi", "alt": "Cantus panelinin yalama ışıkta dijital testi"},
+      {"h": "Rölyef", "p": "Onaylanan yüzeyden 3D baskıyla ana model üretilir. Bu sayfadaki rölyef ise aynı derinlik haritasından gerçek zamanlı hesaplanır; imleci gezdirdikçe ya da sayfayı kaydırdıkça ışığın yönü ve gölgeler değişir.", "cap": "Cantus, gerçek zamanlı render, yalama ışık", "alt": "Cantus rölyefinin derinlik haritasından hesaplanan gerçek zamanlı render'ı, yalama ışıkta"}
+    ],
+    "shop_eyebrow": "Atölyede",
+    "shop_tagline": "Ana modelden artizan finish'e kadar her adım Sapanca'daki atölyemizde atılır.",
+    "frames": [
+      {"cap": "Her dökümden önce silikon kalıba ayırıcı sürülür.", "alt": "Döküm öncesi beyaz silikon kalıba fırçayla ayırıcı madde sürülüyor"},
+      {"cap": "Lumina PMAG™ kalıba dökülür ve priz alana kadar bekletilir.", "alt": "Kalıba dökülen PMAG yüzeyi atölye masasında elle düzleştiriliyor"},
+      {"cap": "Kalıptan çıkarma: panel ilk kez görünür.", "alt": "Döküm rölyef panel beyaz silikon kalıptan kaldırılıyor, kalıptaki negatif form görünüyor"},
+      {"cap": "Negatif kalıp ve pozitif panel yan yana. Kalıp, ana modelin ters açılarını da panele aktarır.", "alt": "Döküm rölyef paneller silikon kalıbın yanında: pozitif ve negatif form"},
+      {"cap": "Yüzey elde son kez düzeltilir, ardından artizan finish uygulanır.", "alt": "Döküm rölyef panelin yüzeyi tezgâhta elle zımparalanıyor"}
+    ],
+    "door_h": "Çiziminizi gönderin.",
+    "door_p": "Bir eskiz, bir çizim ya da bir referans görsel; elinizde ne varsa başlamak için yeterli.",
+    "door_cta": "Çiziminizi gönderin",
+    "door_link": "Kütüphane sistemlerine bakın",
+    "contact": "iletisim.htm",
+    "library": "koleksiyon.htm"
+  },
+  "en": {
+    "file": "en/process.htm",
+    "title": "How We Work: From Drawing to Cast | Studio Luminant",
+    "desc": "How a drawing becomes a cast relief panel: depth map, approval in raking light, master, silicone mould, cast and artisan finishes, all in our Sapanca workshop.",
+    "crumb": "How We Work",
+    "home": "Home",
+    "eyebrow": "How We Work",
+    "h1": "From drawing<br><em>to cast.</em>",
+    "lede": "A project drawing becomes a cast relief panel in our Sapanca workshop. Below, we follow Cantus, a Library system, through the same route a bespoke drawing takes.",
+    "steps": [
+      {"h": "The drawing", "p": "Every project starts with an image: a hand sketch, a dimensioned elevation or a reference. Here is Cantus as a drawing: the cypress, tulip, carnation and rose of the Iznik tile tradition in one symmetric composition. The drawing, the depth map and the relief below are the same surface.", "cap": "Cantus, drawing", "alt": "Pencil and ink drawing of the Cantus panel: cypress, tulips, carnations and roses"},
+      {"h": "The depth map", "p": "We translate the drawing into a depth map, where every grey value is a height: black is the ground of the panel, white its highest point. Relief depth on Cantus is 16 mm, ground to highest point. Changes are still digital, so they cost no tooling and no material.", "cap": "Cantus, depth map", "alt": "Depth map of the Cantus panel: black is the ground, white the highest point"},
+      {"h": "Read in raking light", "p": "Before anything is cast, we read the surface digitally under raking light, low and from the side. This is where the relief's shadow appears, and where shallow forms flatten out and deep ones fill solid with shadow. You approve this render; nothing is cast until you do.", "cap": "Cantus, raking-light test", "alt": "Digital raking-light test of the Cantus panel"},
+      {"h": "The relief", "p": "The approved surface is 3D-printed as the master. What you see here is not the master: it is computed live from the same depth map. Move the cursor or scroll, and the light and its shadows move with it.", "cap": "Cantus, live render in raking light", "alt": "Live render of the Cantus relief, computed from its depth map, in raking light"}
+    ],
+    "shop_eyebrow": "In the workshop",
+    "shop_tagline": "Mould, pour, demould and finish: every step happens in the same workshop.",
+    "frames": [
+      {"cap": "Release agent goes onto the silicone mould before every pour.", "alt": "Release agent brushed onto a white silicone mould before casting"},
+      {"cap": "Lumina PMAG™ is poured and left in the mould to set.", "alt": "Hands levelling the poured PMAG surface in a silicone mould on the workbench"},
+      {"cap": "Demoulding: the first look at the panel.", "alt": "A cast relief panel lifted from its white silicone mould, the negative form visible below"},
+      {"cap": "Negative and positive: the mould carries the master's undercuts into the panel.", "alt": "Cast relief panels standing beside their silicone mould: positive and negative form"},
+      {"cap": "The surface is dressed by hand, then the artisan finish goes on.", "alt": "Hand sanding the surface of a cast relief panel on the workbench"}
+    ],
+    "door_h": "Send your drawing.",
+    "door_p": "Whatever you have is enough to start: a sketch, an elevation or a reference.",
+    "door_cta": "Send Your Drawing",
+    "door_link": "See the Library systems",
+    "contact": "contact.htm",
+    "library": "collection.htm"
+  }
+}

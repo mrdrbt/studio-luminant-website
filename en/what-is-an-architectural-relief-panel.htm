@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>What Is an Architectural Relief Panel? — Studio Luminant</title>
 <meta name="description" content="What is an architectural relief panel — where it's used, what it's made from, and how an architect orders one. A guide to bespoke 3D cast wall panels.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm">
@@ -42,12 +43,12 @@
   .article-body h2 em { font-style: italic; color: var(--gold); }
   .article-body p { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--text-secondary); margin-bottom: 20px; }
   .article-body strong { font-weight: 500; color: var(--text-primary); }
-  .article-body a { color: var(--gold-dim); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.25); transition: color 0.3s, border-color 0.3s; }
+  .article-body a { color: var(--gold-dim); text-decoration: none; border-bottom: 1px solid rgba(var(--accent-rgb),0.25); transition: color 0.3s, border-color 0.3s; }
   .article-body a:hover { color: var(--gold); border-color: var(--gold); }
   .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 36px 0; }
   .compare-card { background: var(--surface); padding: 28px 24px; }
   .compare-card-header { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-  .compare-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(201,168,76,0.06); font-size: 13px; gap: 16px; }
+  .compare-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(var(--accent-rgb),0.06); font-size: 13px; gap: 16px; }
   .compare-row:last-child { border-bottom: none; }
   .compare-label { color: var(--text-muted); }
   .compare-value { color: var(--text-primary); font-weight: 400; text-align: right; }
@@ -60,12 +61,17 @@
   .related-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
   .related-list a { display: flex; justify-content: space-between; align-items: center; background: var(--surface); padding: 18px 24px; font-size: 14px; color: var(--text-secondary); text-decoration: none; border: none; transition: background 0.3s, color 0.3s; }
   .related-list a:hover { background: var(--surface-2); color: var(--text-primary); }
+  .related-list a:focus-visible { background: var(--surface-2); color: var(--text-primary); }
   .related-list a span.tag { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
   .article-cta { margin: 80px 0; padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
   .article-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin-bottom: 16px; }
   .article-cta h3 em { font-style: italic; color: var(--gold); }
   .article-cta p { font-size: 14px; color: var(--text-secondary); font-weight: 300; margin-bottom: 32px; }
   @media (max-width: 768px) { .article-wrapper { padding: 0 24px; } .compare-grid { grid-template-columns: 1fr; } }
+  /* a11y pass */
+  h3.compare-card-header { font-family: inherit; font-weight: inherit; line-height: normal; margin-top: 0; }
+  .compare-card dl, .compare-row dt, .compare-row dd { margin: 0; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://studioluminant.com.tr/en/journal.htm"}, {"@type": "ListItem", "position": 3, "name": "What Is an Architectural Relief Panel?", "item": "https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm"}]}
@@ -74,10 +80,10 @@
 {"@context": "https://schema.org", "@type": "Article", "headline": "What Is an Architectural Relief Panel and How Is It Ordered?", "description": "The definition, applications, material, and how an architect runs the ordering process for a relief panel.", "inLanguage": "en", "image": "https://studioluminant.com.tr/images/studio-luminant-og-image.jpg", "datePublished": "2026-06-14", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "Studio Luminant", "url": "https://studioluminant.com.tr"}, "publisher": {"@type": "Organization", "name": "Studio Luminant", "logo": {"@type": "ImageObject", "url": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm"}}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What is an architectural relief panel?", "acceptedAnswer": {"@type": "Answer", "text": "An architectural relief panel is a cast wall panel that carries a raised (relief) pattern or texture on its surface. The pattern is not printed onto or glued over the panel; it is cast into the body of the panel itself, so the relief reads by light — producing shadow and highlight from the angle of incidence, a depth a flat print can never give."}}, {"@type": "Question", "name": "Where are architectural relief panels used?", "acceptedAnswer": {"@type": "Answer", "text": "Relief panels are used most in commercial and hospitality spaces where a surface needs to be memorable: hotel lobbies and reception backdrops, restaurant and bar walls, retail feature surfaces, lift lobbies, and meeting or event spaces. In residential projects they are used as a single feature wall. The common thread is that the panel becomes the focus of the design."}}, {"@type": "Question", "name": "What material is a relief panel made from?", "acceptedAnswer": {"@type": "Answer", "text": "Studio Luminant casts its relief panels in two mineral materials: Lumina PMAG™ for interior applications and Lumina PUCOMP™ for exterior, wet-area or high-detail work. Both accept the same artisan finishes, so surface appearance can be chosen independently of the material; the material decision is made on weight and application context."}}, {"@type": "Question", "name": "How do you order a bespoke relief panel?", "acceptedAnswer": {"@type": "Answer", "text": "A bespoke relief panel is decided at the design stage and generally follows these steps: brief and context, motif development, material selection, a physical sample, format and m², surface finish, BIM documents, and fixing. Because the effect of a relief surface does not fully read on a render, requesting a physical sample is the only reliable way to see how the surface catches the light."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What is an architectural relief panel?", "acceptedAnswer": {"@type": "Answer", "text": "An architectural relief panel is a cast wall panel that carries a raised (relief) pattern or texture on its surface. The pattern is not printed onto or glued over the panel; it is cast into the body of the panel itself, so the relief reads by light — producing shadow and highlight from the angle of incidence, a depth a flat print can never give."}}, {"@type": "Question", "name": "Where are architectural relief panels used?", "acceptedAnswer": {"@type": "Answer", "text": "Relief panels are used most in commercial and hospitality spaces where a surface needs to be memorable: hotel lobbies and reception backdrops, restaurant and bar walls, retail feature surfaces, lift lobbies, and meeting or event spaces. In residential projects they are used as a single feature wall. The common thread is that the panel becomes the focus of the design."}}, {"@type": "Question", "name": "What material is a relief panel made from?", "acceptedAnswer": {"@type": "Answer", "text": "Studio Luminant casts its relief panels in Lumina PMAG™, for every interior application including column wraps, counter fronts and accent surfaces. The surface appearance is set by the artisan finish."}}, {"@type": "Question", "name": "How do you order a bespoke relief panel?", "acceptedAnswer": {"@type": "Answer", "text": "A bespoke relief panel is decided at the design stage and generally follows these steps: brief and context, motif development, material selection, a physical sample, format and m², surface finish, technical data sheet and installation drawing, and fixing. Because the effect of a relief surface does not fully read on a render, requesting a physical sample is the only reliable way to see how the surface catches the light."}}]}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "DefinedTerm", "name": "Architectural relief panel", "inLanguage": "en", "description": "A cast wall panel that carries a raised (relief) pattern cast into the body of the panel rather than printed or applied, so the surface reads three-dimensionally by light. Cast by Studio Luminant to order in Lumina PMAG™ and Lumina PUCOMP™ mineral materials.", "url": "https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm#definition", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Studio Luminant — Architectural Surfaces Glossary"}}
+{"@context": "https://schema.org", "@type": "DefinedTerm", "name": "Architectural relief panel", "inLanguage": "en", "description": "A cast wall panel that carries a raised (relief) pattern cast into the body of the panel rather than printed or applied, so the surface reads three-dimensionally by light. Cast by Studio Luminant to order in Lumina PMAG™ mineral material.", "url": "https://studioluminant.com.tr/en/what-is-an-architectural-relief-panel.htm#definition", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Studio Luminant — Architectural Surfaces Glossary"}}
 </script>
 </head>
 <body>
@@ -90,7 +96,7 @@
 
   <div class="back-nav">
     <a href="journal.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Back to Journal
     </a>
   </div>
@@ -101,9 +107,9 @@
       What Is an Architectural<br><em>Relief Panel?</em>
     </h1>
     <p class="article-subtitle">
-      A relief panel is an architectural element that turns a wall from a flat surface into a three-dimensional one. What it is, where it's used, what it's made from, and how it's ordered.
+      A relief panel is an architectural element that turns a wall from a flat surface into a three-dimensional one. What it is, where it’s used, what it’s made from, and how it’s ordered.
     </p>
-    <div class="article-meta">Studio Luminant · Intro Guide · 6 min read</div>
+    <div class="article-meta"><span translate="no">Studio Luminant</span> · Intro Guide · 6 min read</div>
   </header>
 
   <article class="article-body">
@@ -117,7 +123,7 @@
       An architectural relief panel is a cast wall panel that carries a raised (relief) pattern or texture on its surface. The pattern is not printed onto or glued over the panel; it is cast into the body of the panel itself. Because of this, the relief reads through shadow and highlight as the angle of light shifts — a depth effect a flat print can never produce.
     </p>
     <p>
-      Relief panels can be a standard, series-produced product like a tile, or — as Studio Luminant focuses on — <a href="how-to-specify-custom-cast-wall-panels.htm">bespoke, large-format panels made to the project</a>. In the latter, the motif, format, and surface are defined directly around the project.
+      A relief surface can come as series-made modular tiles in standard sizes (ours is the <a href="range-20-40.htm">20 / 40 Range</a>) or as <a href="how-to-specify-custom-cast-wall-panels.htm">bespoke, large-format panels made to the project</a>. With panels, the motif, format and surface are defined around the project.
     </p>
 
     <h2>Where Is It <em>Used?</em></h2>
@@ -127,33 +133,40 @@
 
     <h2>What <em>Material</em> Is It Made From?</h2>
     <p>
-      Studio Luminant casts its relief panels in two mineral materials. <a href="products.htm">Lumina PMAG™</a> for interior applications; <strong>Lumina PUCOMP™</strong> for exterior, wet-area, or high-detail work. Both materials accept the same artisan finishes, so the surface appearance can be set independently of the material. The material decision is made on weight and application context.
+      <span translate="no">Studio Luminant</span> casts its relief panels in <a href="products.htm"><span translate="no">Lumina PMAG™</span></a>, for every interior application including column wraps, counter fronts and accent surfaces. The surface appearance is set by the artisan finish.
     </p>
 
-    <h2>How It Differs from a <em>Modular Tile</em></h2>
+    <h2>Panel or <em>Tile?</em></h2>
     <p>
-      A relief panel and a modular decorative tile are often confused, yet their architectural results differ. The comparison below summarises how a bespoke relief panel separates from a tiled surface.
+      A relief surface can be built two ways: large-format panels cast for the project, or modular relief tiles. The choice comes down to how project-specific the motif needs to be, the budget and the programme.
     </p>
 
     <div class="compare-grid">
       <div class="compare-card">
-        <div class="compare-card-header">Bespoke Relief Panel</div>
-        <div class="compare-row"><span class="compare-label">Design</span><span class="compare-value">Project-specific motif</span></div>
-        <div class="compare-row"><span class="compare-label">Joints</span><span class="compare-value">Seamless, continuous surface</span></div>
-        <div class="compare-row"><span class="compare-label">Relief</span><span class="compare-value">High, light-reading</span></div>
+        <h3 class="compare-card-header">Bespoke Relief Panel</h3>
+        <dl>
+        <div class="compare-row"><dt class="compare-label">Design</dt><dd class="compare-value">Project-specific motif</dd></div>
+        <div class="compare-row"><dt class="compare-label">Format</dt><dd class="compare-value">Large-format, sized to the project</dd></div>
+        <div class="compare-row"><dt class="compare-label">Joints</dt><dd class="compare-value">Seamless, continuous surface</dd></div>
+        <div class="compare-row"><dt class="compare-label">Price</dt><dd class="compare-value">Quoted per project</dd></div>
+        <div class="compare-row"><dt class="compare-label">Time</dt><dd class="compare-value">Typically 6–13 weeks</dd></div>
+        </dl>
       </div>
       <div class="compare-card">
-        <div class="compare-card-header">Modular Decorative Tile</div>
-        <div class="compare-row"><span class="compare-label">Design</span><span class="compare-value">Catalogue pattern</span></div>
-        <div class="compare-row"><span class="compare-label">Format</span><span class="compare-value">Small, repeating tile</span></div>
-        <div class="compare-row"><span class="compare-label">Joints</span><span class="compare-value">Visible, repeating grout</span></div>
-        <div class="compare-row"><span class="compare-label">Relief</span><span class="compare-value">Usually shallow texture</span></div>
+        <h3 class="compare-card-header">Relief Tile · <a href="range-20-40.htm">20 / 40 Range</a></h3>
+        <dl>
+        <div class="compare-row"><dt class="compare-label">Design</dt><dd class="compare-value">Range designs, colour card</dd></div>
+        <div class="compare-row"><dt class="compare-label">Format</dt><dd class="compare-value">20×20 and 40×40 cm modules</dd></div>
+        <div class="compare-row"><dt class="compare-label">Joints</dt><dd class="compare-value">The pattern runs across modules</dd></div>
+        <div class="compare-row"><dt class="compare-label">Price</dt><dd class="compare-value">Per design set, by quote</dd></div>
+        <div class="compare-row"><dt class="compare-label">Time</dt><dd class="compare-value">4 weeks, ex-works</dd></div>
+        </dl>
       </div>
     </div>
 
     <h2>How Do You <em>Order One?</em></h2>
     <p>
-      A bespoke relief panel is a decision made at the design stage, and generally follows these steps: brief and context, motif development, material selection, a physical sample, format and m², surface finish, BIM documents, and fixing. You can find the full process, set out in eight detailed steps, in our <a href="how-to-specify-custom-cast-wall-panels.htm">How to Specify Custom Cast Wall Panels</a> guide.
+      A bespoke relief panel is a decision made at the design stage, and generally follows these steps: brief and context, motif development, material selection, a physical sample, format and m², surface finish, technical data sheet and installation drawing, and fixing. You can find the full process, set out in eight detailed steps, in our <a href="how-to-specify-custom-cast-wall-panels.htm">How to Specify Custom Cast Wall Panels</a> guide.
     </p>
 
     <div class="callout">
@@ -163,12 +176,12 @@
       </p>
     </div>
 
-    <div class="related">
-      <div class="related-label">Related Articles</div>
+    <div class="related" role="navigation" aria-labelledby="related-label">
+      <div class="related-label" id="related-label">Related Articles</div>
       <ul class="related-list">
         <li><a href="how-to-specify-custom-cast-wall-panels.htm"><span>How to Specify Custom Cast Wall Panels</span><span class="tag">Guide</span></a></li>
         <li><a href="what-are-sculptural-cast-wall-panels.htm"><span>What Are Sculptural Cast Wall Panels?</span><span class="tag">Definition</span></a></li>
-        <li><a href="products.htm"><span>Materials &amp; Specs — PMAG &amp; PUCOMP</span><span class="tag">Product</span></a></li>
+        <li><a href="products.htm"><span>Materials &amp; Specs — <span translate="no">Lumina PMAG™</span></span><span class="tag">Product</span></a></li>
         <li><a href="collection.htm"><span>Concept Work</span><span class="tag">Concept</span></a></li>
       </ul>
     </div>
@@ -177,10 +190,10 @@
 
   <div class="article-cta">
     <h3>Start Your Project With a <em>Sample</em></h3>
-    <p>Share your brief and we'll respond with a material recommendation, a draft specification clause, and a physical sample.</p>
+    <p>Share your brief and we’ll respond with a material recommendation, a draft specification clause, and a physical sample.</p>
     <a href="contact.htm" class="btn-primary">
       Request a Sample
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -205,10 +218,7 @@
     <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
     <a href="resources-lead-times.htm">Lead Times</a>
     <a href="resources-sustainability.htm">Sustainability</a>
-    <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
-    <a href="case-study-petal-lounge.htm">Petal Lounge</a>
-    <a href="case-study-wave-lounge.htm">Wave Lounge</a>
     <a href="contact.htm">Contact</a>
     <a href="site-map.htm">Site Map</a>
   </nav>

@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Mimari Duvar Paneli Malzemeleri — Lumina PMAG™ | Studio Luminant</title>
-<meta name="description" content="Lumina PMAG™ ve Lumina PUCOMP™ teknik spesifikasyonları, boyutlar ve performans verileri. Test edilmiş veri sayfaları ve BIM-hazır çıktılar.">
+<meta name="description" content="Lumina PMAG™: teknik özellikler, boyutlar ve iç mekân kullanım alanları. Her proje için teknik veri sayfası ve montaj çizimi.">
 <link rel="canonical" href="https://studioluminant.com.tr/urunler.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/urunler.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/products.htm">
@@ -12,27 +13,29 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="Malzeme & Teknik — Studio Luminant">
-<meta property="og:description" content="Lumina PMAG™ ve Lumina PUCOMP™ teknik spesifikasyonları, boyutlar ve performans verileri. Test edilmiş veri sayfaları ve BIM-hazır çıktılar.">
+<meta property="og:description" content="Lumina PMAG™: teknik özellikler, boyutlar ve iç mekân kullanım alanları. Her proje için teknik veri sayfası ve montaj çizimi.">
 <meta property="og:url" content="https://studioluminant.com.tr/urunler.htm">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Malzeme & Teknik — Studio Luminant">
-<meta name="twitter:description" content="Lumina PMAG™ ve Lumina PUCOMP™ teknik spesifikasyonları, boyutlar ve performans verileri. Test edilmiş veri sayfaları ve BIM-hazır çıktılar.">
+<meta name="twitter:description" content="Lumina PMAG™: teknik özellikler, boyutlar ve iç mekân kullanım alanları. Her proje için teknik veri sayfası ve montaj çizimi.">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
-<link rel="preload" as="image" type="image/webp" href="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-1920w.webp">
+<link rel="preload" as="image" type="image/webp" href="images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.webp">
 
 <style>
   /* ─── PAGE HERO ─────────────────────── */
   #page-hero {
     min-height: 100vh;
-    background-image: url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg');
+    min-height: 100svh;
+    background-image: url('images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg');
     background-image: image-set(
-      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-1920w.webp') type('image/webp'),
-      url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg') type('image/jpeg')
+      url('images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.webp') type('image/webp'),
+      url('images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg') type('image/jpeg')
     );
     background-size: cover;
     background-position: center;
@@ -41,20 +44,15 @@
     align-items: flex-end;
   }
 
-  @media (min-width: 1921px) {
-    #page-hero {
-      background-image: image-set(url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.webp') type('image/webp'), url('images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd-2560w.jpg') type('image/jpeg'));
-    }
-  }
 
   #page-hero::before {
     content: '';
     position: absolute; inset: 0;
     background: linear-gradient(
       160deg,
-      rgba(12,12,14,0.88) 0%,
-      rgba(12,12,14,0.60) 50%,
-      rgba(12,12,14,0.30) 100%
+      rgba(var(--bg-rgb),0.88) 0%,
+      rgba(var(--bg-rgb),0.60) 50%,
+      rgba(var(--bg-rgb),0.30) 100%
     );
     z-index: 1; pointer-events: none;
   }
@@ -134,6 +132,7 @@
     margin-bottom: 8px; font-weight: 400;
   }
   .spec-value {
+    font-variant-numeric: tabular-nums;
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px; font-weight: 300;
     color: var(--text-primary);
@@ -200,10 +199,10 @@
       <span>Malzeme & Teknik Özellikler</span>
     </div>
     <h1 class="page-hero-headline">
-      İki Malzeme.<br><em>Tek Standart.</em>
+      Duvardan Tavana,<br><em>Tek Malzeme.</em>
     </h1>
     <p class="page-hero-sub">
-      İç mekânlarda yüksek spesifikasyonlu Lumina PMAG™. Dış cephe, ıslak hacim ve karmaşık geometrilerde Lumina PUCOMP™. Gerçek rakamlar, test edilmiş veri sayfaları ve BIM-hazır çıktılarla şartname desteği.
+      <span translate="no">Studio Luminant</span>’ın ana malzemesi <span translate="no">Lumina PMAG™</span>: iç mekânda duvar, tavan, kolon, banko ve vurgu yüzeyleri onunla dökülür. Her proje için teknik veri sayfası ve montaj çizimi hazırlanır.
     </p>
   </div>
 </section>
@@ -212,40 +211,39 @@
 <section id="pmag" class="product-section" style="background: var(--deep); border-top: 1px solid var(--border);">
   <picture>
               <source type="image/webp"
-                  srcset="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-400w.webp 400w,
-                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-800w.webp 800w,
-                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-1600w.webp 1600w,
-                  images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.webp 4096w"
+                  srcset="images/studio-luminant-flowing-fibre-relief-panel-raking-light-400w.webp 400w,
+                  images/studio-luminant-flowing-fibre-relief-panel-raking-light-800w.webp 800w,
+                  images/studio-luminant-flowing-fibre-relief-panel-raking-light.webp 1280w"
                   sizes="100vw">
-              <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg"
-                   alt="İnce dikey yivler ve dört küre formu taşıyan krem panel, yumuşak stüdyo ışığı" class="product-full-img" width="4096" height="4096"
+              <img src="images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg"
+                   alt="Dikey akan liflerden oluşan rölyef panel, yalama ışıkta yakından" class="product-full-img" width="1280" height="512"
                    loading="lazy" decoding="async">
             </picture>
   <div class="section-inner">
     <div class="product-content">
       <!-- Left: name + description -->
       <div>
-        <div class="eyebrow reveal"><span lang="en">Lumina PMAG™</span></div>
+        <div class="eyebrow reveal"><span lang="en"><span translate="no">Lumina PMAG™</span></span></div>
         <h2 class="product-name reveal">
           Polimer Modifiye<br><em>Alfa Alçı</em>
         </h2>
         <p class="product-desc reveal">
-          Lumina PMAG™, Studio Luminant'ın birincil iç mekan kaplama malzemesidir — yüksek spesifikasyonlu mimari uygulamalar için formüle edilmiş polimer modifiye alfa alçı. Alfa alçı, beta sınıfı alternatiflerin önemli ölçüde üzerinde basınç dayanımı sunarak daha yoğun, daha sert ve seramik benzeri yüzey kalitesine sahip paneller üretir.
+          <span translate="no">Lumina PMAG™</span>, <span translate="no">Studio Luminant</span>’ın ana malzemesidir — yüksek spesifikasyonlu mimari uygulamalar için formüle edilmiş polimer modifiye alfa alçı. Alfa alçı, beta sınıfı alternatiflerin önemli ölçüde üzerinde basınç dayanımı sunarak daha yoğun, daha sert ve seramik benzeri yüzey kalitesine sahip paneller üretir.
         </p>
         <p class="product-desc reveal">
-          Neme dayanıklı ve herhangi bir RAL veya özel renkte mevcuttur. Yüzey kalitesi ve boyutsal hassasiyetin vazgeçilmez olduğu büyük ölçekli iç duvar ve tavan uygulamaları için idealdir.
+          Neme dayanıklı ve herhangi bir RAL veya özel renkte mevcuttur. Yüzey kalitesi ve boyutsal hassasiyetin vazgeçilmez olduğu büyük ölçekli iç mekân uygulamaları için idealdir: duvar, tavan, kolon kaplaması, banko ve vurgu yüzeyleri.
         </p>
       </div>
       <!-- Right: specs grid -->
       <div class="specs-grid reveal" id="pmag-specs">
         <div class="spec-cell" data-spec="pmag.thickness">
           <div class="spec-label">Kalınlık</div>
-          <div class="spec-value">15 – 40 mm</div>
+          <div class="spec-value">15 – 40 mm</div>
         </div>
         <div class="spec-cell" data-spec="pmag.weight">
           <div class="spec-label">Ağırlık</div>
-          <div class="spec-value">35 – 40 kg/m²</div>
-          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">@ 25 mm kalınlıkta</p>
+          <div class="spec-value">35 – 40 kg/m²</div>
+          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">@ 25 mm kalınlıkta</p>
         </div>
         <div class="spec-cell" data-spec="pmag.surface">
           <div class="spec-label">Yüzey</div>
@@ -254,7 +252,7 @@
         <div class="spec-cell" data-spec="pmag.finish">
           <div class="spec-label">Bitirme</div>
           <div class="spec-value">Tüm RAL / Özel Renkler</div>
-          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Dokulu yüzeyler mevcuttur</p>
+          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Artizan finish; pürüzsüz ya da dokulu yüzey.</p>
         </div>
         <div class="spec-cell" data-spec="pmag.moisture">
           <div class="spec-label">Neme Dayanıklılık</div>
@@ -262,7 +260,7 @@
         </div>
         <div class="spec-cell" data-spec="pmag.deliverables">
           <div class="spec-label">Teslim Edilen Belgeler</div>
-          <div class="spec-value">TDS + BIM Dosyaları Dahil</div>
+          <div class="spec-value">Teknik Veri Sayfası + Montaj Çizimi</div>
         </div>
       </div>
     </div>
@@ -271,110 +269,39 @@
       <div class="eyebrow reveal">Uygulamalar</div>
       <div class="specs-grid reveal">
         <div class="spec-cell">
-          <div class="spec-label">Duvar Panelleri</div>
+          <div class="spec-label">Duvarlar</div>
           <div class="spec-value">Büyük Format Kaplama</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Lobi duvarları, koridorlar, kamusal alanlar.</p>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Lobi duvarları, koridorlar ve ortak alanlar için 3000 × 1500 mm’ye varan paneller.</p>
         </div>
         <div class="spec-cell">
-          <div class="spec-label">Tavan Panelleri</div>
-          <div class="spec-value">Asma &amp; Direkt Montaj</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Tavan taşıyıcı sistemler için PMAG Lite varyantı — %30–40 daha hafif.</p>
+          <div class="spec-label">Tavanlar</div>
+          <div class="spec-value">Tavan Paneli, Kiriş Altı &amp; Asma Tavan Kutusu</div>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Duvarlarla aynı desende dökülür.</p>
         </div>
-        <div class="spec-cell">
-          <div class="spec-label">Saçaklar &amp; Sofitler</div>
-          <div class="spec-value">Koridor &amp; Sofit Elemanları</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Kaçış yolları ve yoğun geçiş alanları için dayanıklı yüzey elemanları.</p>
-        </div>
-        <div class="spec-cell">
-          <div class="spec-label">Sektörler</div>
-          <div class="spec-value">Konaklama &amp; Kültürel</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Lüks oteller, üst düzey konutlar, müzeler, kurumsal merkezler.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LUMINA PUCOMP -->
-<section id="pucomp" class="product-section" style="background: var(--obsidian); border-top: 1px solid var(--border);">
-  <picture>
-              <source type="image/webp"
-                  srcset="images/studio-luminant-biophilic-coral-relief-tree-medallion-lobby-400w.webp 400w,
-                  images/studio-luminant-biophilic-coral-relief-tree-medallion-lobby-800w.webp 800w,
-                  images/studio-luminant-biophilic-coral-relief-tree-medallion-lobby.webp 1376w"
-                  sizes="100vw">
-              <img src="images/studio-luminant-biophilic-coral-relief-tree-medallion-lobby.jpg"
-                   alt="Ortasında ağaç madalyonu olan, ince mercan dokulu rölyef iç mekân duvarı, altında ahşap bank" class="product-full-img" width="1376" height="768"
-                   loading="lazy" decoding="async">
-            </picture>
-  <div class="section-inner">
-    <div class="product-content">
-      <!-- Left: name + description -->
-      <div>
-        <div class="eyebrow reveal"><span lang="en">Lumina PUCOMP™</span></div>
-        <h2 class="product-name reveal">
-          İleri<br><em>Kompozit</em>
-        </h2>
-        <p class="product-desc reveal">
-          Lumina PUCOMP™, alçının uygun olmadığı uygulamalar için tasarlanmış yüksek performanslı bir kompozittir — dış cephe kaplamaları, ıslak alanlar, yüksek darbe yüzeyleri ve karmaşık üç boyutlu geometriler. Formülasyon, mineral bazlı malzemelerde aşırı ağır olacak karmaşık panel formlarını mümkün kılan olağanüstü güç-ağırlık oranı sunar.
-        </p>
-        <p class="product-desc reveal">
-          UV kararlı, hava koşullarına dayanıklı ve darbe testli PUCOMP panelleri — uygulama bağlamından bağımsız olarak her iki malzeme ailesi arasında tutarlı bir estetik sağlar.
-        </p>
-      </div>
-      <!-- Right: specs grid -->
-      <div class="specs-grid reveal" id="pucomp-specs">
-        <div class="spec-cell" data-spec="pucomp.thickness">
-          <div class="spec-label">Kalınlık</div>
-          <div class="spec-value">8 – 25 mm</div>
-        </div>
-        <div class="spec-cell" data-spec="pucomp.weight">
-          <div class="spec-label">Ağırlık</div>
-          <div class="spec-value">12 – 18 kg/m²</div>
-          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">@ 15 mm kalınlıkta</p>
-        </div>
-        <div class="spec-cell" data-spec="pucomp.application">
-          <div class="spec-label">Uygulama</div>
-          <div class="spec-value">Dış Cephe, Islak Hacim &amp; Karmaşık Geometri</div>
-        </div>
-        <div class="spec-cell" data-spec="pucomp.finish">
-          <div class="spec-label">Bitirme</div>
-          <div class="spec-value">Tüm RAL / Özel Renkler</div>
-          <p class="spec-note" style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Dokulu yüzeyler mevcuttur</p>
-        </div>
-        <div class="spec-cell" data-spec="pucomp.durability">
-          <div class="spec-label">Dayanıklılık</div>
-          <div class="spec-value">UV-Stabil, Darbe &amp; Hava Koşullarına Dayanıklı</div>
-        </div>
-        <div class="spec-cell" data-spec="pucomp.repairability">
-          <div class="spec-label">Onarılabilirlik</div>
-          <div class="spec-value">Panel Değişimi Olmadan Nokta Onarım</div>
-        </div>
-      </div>
-    </div>
-    <!-- Uygulamalar -->
-    <div style="margin-top: 60px; padding-top: 60px; border-top: 1px solid var(--border);">
-      <div class="eyebrow reveal">Uygulamalar</div>
-      <div class="specs-grid reveal">
         <div class="spec-cell">
           <div class="spec-label">Kolon Kaplamaları</div>
-          <div class="spec-value">Karmaşık Eğrilikler</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">İnce profiller (8–25 mm), ağırlık sorunu olmadan kolon ve eğri yüzeyleri sarar.</p>
+          <div class="spec-value">Kolon Sarımı</div>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Kolonlar, çevresindeki duvarla aynı desenle sarılır; her kolonun yarıçapına göre özel üretim kalıpla dökülür.</p>
+        </div>
+        <div class="spec-cell">
+          <div class="spec-label">Banko &amp; Tezgâh Önleri</div>
+          <div class="spec-value">Resepsiyon, Bar &amp; Tezgâh</div>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Resepsiyon bankosu, bar ve servis tezgâhı ön yüzleri, arkasındaki duvarla aynı rölyefi taşıyabilir.</p>
         </div>
         <div class="spec-cell">
           <div class="spec-label">Vurgu Yüzeyleri</div>
-          <div class="spec-value">Submilimetre Detay</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Maksimum doku çözünürlüğü.</p>
+          <div class="spec-value">Niş &amp; Odak Paneli</div>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Nişler, odak noktası panelleri ve yakından görülen detaylar.</p>
         </div>
         <div class="spec-cell">
-          <div class="spec-label">Resepsiyon &amp; Mobilya</div>
-          <div class="spec-value">Detay Sadakati</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Masalar, banko elemanları ve rölyef sürekliliği olan özel mobilya parçaları.</p>
+          <div class="spec-label">Marka Rölyefi</div>
+          <div class="spec-value">Logo &amp; Marka Motifi</div>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Markaya ait logo ya da motif, şubeler ve konsept mağazalar için aslına sadık bir rölyef duvar olarak özel üretilir.</p>
         </div>
-        <div class="spec-cell">
-          <div class="spec-label">Dış Cephe &amp; Islak Alanlar</div>
-          <div class="spec-value">Hava Koşulları &amp; Darbe Dayanımlı</div>
-          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Cepheler, havuz çevreleri, HVAC kapakları. Uzun hizmet ömrü için UV kararlı.</p>
+        <div class="spec-cell" style="grid-column: 1 / -1;">
+          <div class="spec-label">Sektörler</div>
+          <div class="spec-value">Konaklama, Yeme-İçme &amp; Klinik</div>
+          <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">Oteller, restoranlar, kafeler ve barlar, klinikler, konutlar ve mağazalar.</p>
         </div>
       </div>
     </div>
@@ -400,7 +327,7 @@
         <div class="eyebrow reveal">Yüzey Numune Kutusu</div>
         <h2 class="product-name reveal">Görün.<br><em>Hissedin.</em></h2>
         <p class="product-desc reveal">
-          Farklı renklerde artizan finish uygulanmış Lumina PMAG™ numuneleri — tek bir kutuda. Bir paneli şartnameye bağlamadan önce, bir rölyefin duvarda nasıl okunacağını değerlendirmenin en güvenilir yolu.
+          Kutuda, birkaç rölyef kalıbından <span translate="no">Lumina PMAG™</span> ile dökülmüş, artizan finish uygulanmış numuneler yer alır; kutuyu her projeye özel hazırlıyoruz. Rölyefi, yüzeyi ve rengi kendi mekânınızın ışığında, paneli şartnameye yazmadan önce değerlendirin.
         </p>
         <a href="mimarlar.htm#numune" class="btn-primary reveal" style="margin-top: 8px;">
           Numune Kutusunu İsteyin
@@ -432,10 +359,10 @@
 <section id="products-cta">
   <div class="section-inner">
     <h2 class="cta-headline reveal">
-      Projenizi Belirlemeye<br><em>Hazır Mısınız?</em>
+      Projenizi<br><em>Konuşalım.</em>
     </h2>
     <p class="cta-sub reveal">
-      Spesifikasyonunuz için malzeme veri sayfası ve BIM dosya paketi talep edin.
+      Çizim ya da eskizinizi gönderin, teknik veri sayfasını ve montaj çizimini projenize özel hazırlayalım.
     </p>
     <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px;">
       <a href="koleksiyon.htm" class="btn-primary reveal">
@@ -445,7 +372,7 @@
         </svg>
       </a>
       <a href="iletisim.htm" class="btn-primary reveal">
-        Proje Başlat
+        Proje Başlatın
         <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
         </svg>
@@ -476,7 +403,6 @@
     <a href="kaynaklar-agirlik-yapisal.htm">Ağırlık ve Yapısal Kılavuz</a>
     <a href="kaynaklar-teslimat-sureci.htm">Teslimat Süreleri</a>
     <a href="kaynaklar-surdurulebilirlik.htm">Sürdürülebilirlik</a>
-    <a href="tasarim-dosyasi.htm">Tasarım Dosyası</a>
     <a href="iletisim.htm">İletişim</a>
     <a href="site-haritasi.htm">Site Haritası</a>
   </nav>
@@ -499,9 +425,9 @@
     var sv = cell.querySelector('.spec-value');
     var sn = cell.querySelector('.spec-note');
     if (key === 'thickness') {
-      sv.textContent = F.thickness(mat);
+      sv.textContent = F.thickness(mat).replace(/ /g, '\u00a0');
     } else if (key === 'weight') {
-      sv.textContent = F.weight(mat);
+      sv.textContent = F.weight(mat).replace(/\s*@.*$/, '').replace(/ /g, '\u00a0');
     } else if (typeof val === 'object' && val[lang]) {
       sv.textContent = val[lang];
       if (sn && val['note_' + lang]) sn.textContent = val['note_' + lang];

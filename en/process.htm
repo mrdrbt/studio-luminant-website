@@ -3,261 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How We Work — Studio Luminant</title>
-<meta name="description" content="From design brief to installed surface — Studio Luminant's three-stage process: digital modelling, precision casting &amp; artisan finishing.">
+<meta name="theme-color" content="#EFE8D5">
+<title>How We Work: From Drawing to Cast | Studio Luminant</title>
+<meta name="description" content="How a drawing becomes a cast relief panel: depth map, approval in raking light, master, silicone mould, cast and artisan finishes, all in our Sapanca workshop.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/process.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/surec.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/process.htm">
   <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/surec.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
-<meta property="og:title" content="How We Work — Studio Luminant">
-<meta property="og:description" content="From design brief to installed surface — Studio Luminant's three-stage process for bespoke architectural elements. digital modelling, precision casting, and artisan finishing.">
+<meta property="og:title" content="How We Work: From Drawing to Cast | Studio Luminant">
+<meta property="og:description" content="How a drawing becomes a cast relief panel: depth map, approval in raking light, master, silicone mould, cast and artisan finishes, all in our Sapanca workshop.">
 <meta property="og:url" content="https://studioluminant.com.tr/en/process.htm">
+<meta property="og:image" content="https://studioluminant.com.tr/assets/relief/012-iznik-cypress/poster-1680.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="How We Work — Studio Luminant">
-<meta name="twitter:description" content="From design brief to installed surface — Studio Luminant's three-stage process for bespoke architectural elements. digital modelling, precision casting, and artisan finishing.">
-<meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
-<meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
+<link rel="preload" as="image" href="../assets/process/cantus/concept-1200.webp" imagesrcset="../assets/process/cantus/concept-600.webp 600w, ../assets/process/cantus/concept-1200.webp 1200w" imagesizes="(orientation: portrait) 46svh, 50vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
-<link rel="preload" as="image" type="image/webp" href="../images/studio-luminant-3d-model-to-cast-relief-panel.webp">
-
-<style>
-  /* ─── PAGE HERO ─────────────────────── */
-  #page-hero {
-    min-height: 100vh;
-    background-image: url('../images/studio-luminant-3d-model-to-cast-relief-panel.webp');
-    background-image: image-set(
-      url('../images/studio-luminant-3d-model-to-cast-relief-panel.webp') type('image/webp'),
-      url('../images/studio-luminant-3d-model-to-cast-relief-panel.webp') type('image/png')
-    );
-    background-size: cover;
-    background-position: center top;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  #page-hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(
-      160deg,
-      rgba(12,12,14,0.88) 0%,
-      rgba(12,12,14,0.60) 50%,
-      rgba(12,12,14,0.30) 100%
-    );
-    z-index: 1;
-    pointer-events: none;
-  }
-
-  .page-hero-content {
-    position: relative; z-index: 2;
-    padding: 160px 60px 100px;
-    max-width: 800px;
-  }
-
-  .page-hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 16px;
-    margin-bottom: 40px;
-    opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
-  }
-  .page-hero-eyebrow::before {
-    content: ''; display: block; width: 32px; height: 1px; background: var(--gold);
-  }
-  .page-hero-eyebrow span {
-    font-size: 10px; letter-spacing: 0.3em;
-    text-transform: uppercase; color: var(--gold); font-weight: 400;
-  }
-
-  .page-hero-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(68px, 7vw, 110px);
-    font-weight: 300; line-height: 0.92;
-    letter-spacing: -0.02em; color: var(--text-primary);
-    margin-bottom: 36px;
-    opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
-  }
-  .page-hero-headline em { font-style: italic; color: var(--gold); }
-
-  .page-hero-sub {
-    font-size: 14px; font-weight: 300;
-    line-height: 1.75; color: var(--text-secondary);
-    max-width: 480px;
-    opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards;
-  }
-
-  /* ─── PROCESS DETAIL ────────────────── */
-  #process-detail {
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-    padding: 0;
-  }
-
-  .process-detail-step {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    min-height: 520px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .process-detail-step:last-child { border-bottom: none; }
-
-  /* Even steps: reverse order */
-  .process-detail-step.reverse { direction: rtl; }
-  .process-detail-step.reverse > * { direction: ltr; }
-
-  .process-step-img {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    min-height: 400px;
-    filter: grayscale(10%);
-    transition: filter 0.5s;
-  }
-  .process-detail-step:hover .process-step-img { filter: grayscale(0%); }
-
-  .process-step-content {
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .step-ghost-num {
-    position: absolute;
-    top: 40px; right: 40px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 120px; font-weight: 300;
-    color: rgba(201,168,76,0.06);
-    line-height: 1;
-    letter-spacing: -0.04em;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  .process-step-label {
-    font-size: 9px; letter-spacing: 0.32em;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 400; margin-bottom: 16px;
-  }
-
-  .process-step-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 3vw, 48px);
-    font-weight: 300; line-height: 1.05;
-    color: var(--text-primary); margin-bottom: 24px;
-  }
-
-  .process-step-desc {
-    font-size: 14px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    max-width: 400px;
-  }
-
-  .process-step-sustain {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-size: 10px; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--gold-dim);
-    font-weight: 400; margin-top: 20px;
-    max-width: 400px;
-  }
-  .process-step-sustain::before {
-    content: ''; display: block;
-    width: 6px; height: 6px;
-    border: 1px solid var(--gold-dim);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  /* ─── WORKSHOP ──────────────────────── */
-  #workshop {
-    background: var(--obsidian);
-    border-top: 1px solid var(--border);
-  }
-
-  .workshop-grid {
-    display: grid;
-    grid-template-columns: 1fr 480px 1fr;
-    min-height: 560px;
-    gap: 0;
-  }
-
-  .workshop-photo {
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    filter: grayscale(20%);
-    transition: filter 0.5s;
-  }
-  .workshop-photo:hover { filter: grayscale(0%); }
-
-  .workshop-center {
-    padding: 80px 60px;
-    background: var(--surface);
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .workshop-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px; font-weight: 300;
-    line-height: 1.05; color: var(--text-primary);
-    margin-bottom: 28px;
-  }
-  .workshop-headline em { font-style: italic; color: var(--gold); }
-
-  .workshop-body {
-    font-size: 14px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    margin-bottom: 20px;
-  }
-
-  .workshop-location {
-    font-size: 10px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--text-muted);
-    margin-top: 8px;
-  }
-
-  /* ─── CTA STRIP ─────────────────────── */
-  #process-cta {
-    padding: 120px 0;
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-    text-align: center;
-  }
-
-  .cta-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(44px, 4vw, 72px);
-    font-weight: 300; line-height: 1.0;
-    color: var(--text-primary); margin-bottom: 28px;
-  }
-  .cta-headline em { font-style: italic; color: var(--gold); }
-
-  .cta-sub {
-    font-size: 14px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    max-width: 520px; margin: 0 auto 48px;
-  }
-
-  /* ─── RESPONSIVE ────────────────────── */
-  @media (max-width: 1024px) {
-    .page-hero-content { padding: 140px 32px 80px; }
-    .process-detail-step { grid-template-columns: 1fr; direction: ltr !important; }
-    .process-detail-step .process-step-img { min-height: 280px; }
-    .process-step-content { padding: 56px 32px; }
-    .workshop-grid { grid-template-columns: 1fr; }
-    .workshop-center { padding: 60px 32px; }
-  }
-</style>
+<link rel="stylesheet" href="../process.css">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "How We Work", "item": "https://studioluminant.com.tr/en/process.htm"}]}
 </script>
@@ -267,201 +32,93 @@
 <div id="site-nav" data-lang="en" data-lang-url="../surec.htm" data-base="../"></div>
 
 <main id="main">
-
-<!-- PAGE HERO -->
-<section id="page-hero">
-  <div class="page-hero-content">
-    <div class="page-hero-eyebrow">
-      <span>How We Work</span>
+<section class="pseq" id="pseq" data-pseq>
+  <div class="pseq__stage">
+    <div class="pseq__frame">
+      <figure class="pseq__layer" data-layer="0"><img src="../assets/process/cantus/concept-1200.webp" srcset="../assets/process/cantus/concept-600.webp 600w, ../assets/process/cantus/concept-1200.webp 1200w" sizes="(orientation: portrait) 46svh, 50vw" width="1200" height="1200" decoding="async" fetchpriority="high" alt="Pencil and ink drawing of the Cantus panel: cypress, tulips, carnations and roses"></figure>
+      <figure class="pseq__layer" data-layer="1"><img src="../assets/process/cantus/depth-1200.webp" srcset="../assets/process/cantus/depth-600.webp 600w, ../assets/process/cantus/depth-1200.webp 1200w" sizes="(orientation: portrait) 46svh, 50vw" width="1200" height="1200" decoding="async" loading="lazy" alt="Depth map of the Cantus panel: black is the ground, white the highest point"></figure>
+      <figure class="pseq__layer" data-layer="2"><img src="../assets/process/cantus/light-1200.webp" srcset="../assets/process/cantus/light-600.webp 600w, ../assets/process/cantus/light-1200.webp 1200w" sizes="(orientation: portrait) 46svh, 50vw" width="1200" height="1200" decoding="async" loading="lazy" alt="Digital raking-light test of the Cantus panel"></figure>
+      <figure class="pseq__layer pseq__layer--live" data-layer="3">
+        <div class="pseq__relief relief-light" data-relief-light="../assets/relief/012-iznik-cypress/" data-input="auto" data-scroll-for="#pseq">
+          <img class="relief-light__poster" src="../assets/relief/012-iznik-cypress/poster-1680.jpg" srcset="../assets/relief/012-iznik-cypress/poster-840.jpg 840w, ../assets/relief/012-iznik-cypress/poster-1680.jpg 1680w" sizes="(orientation: portrait) 64svh, 70vw" width="1680" height="1680" loading="lazy" decoding="async" alt="Live render of the Cantus relief, computed from its depth map, in raking light">
+        </div>
+      </figure>
     </div>
-    <h1 class="page-hero-headline">
-      Brief to<br><em>Installation</em>
-    </h1>
-    <p class="page-hero-sub">
-      Three stages, one facility, total control. Every panel is designed, cast, and finished in-house at our Sakarya workshop — from your first sketch to a specification-ready, installed surface.
-    </p>
+    <div class="pseq__caps" aria-hidden="true">
+      <span class="pseq__cap" data-layer="0">Cantus, drawing</span>
+      <span class="pseq__cap" data-layer="1">Cantus, depth map</span>
+      <span class="pseq__cap" data-layer="2">Cantus, raking-light test</span>
+      <span class="pseq__cap" data-layer="3">Cantus, live render in raking light</span>
+    </div>
+  </div>
+  <div class="pseq__text">
+    <header class="pseq__intro">
+      <div class="eyebrow">How We Work</div>
+      <h1 class="pseq__title">From drawing<br><em>to cast.</em></h1>
+      <p class="pseq__lede">A project drawing becomes a cast relief panel in our Sapanca workshop. Below, we follow Cantus, a Library system, through the same route a bespoke drawing takes.</p>
+    </header>
+    <ol class="pseq__steps">
+    <li class="pseq__step" data-layer="0">
+      <span class="pseq__num">01</span>
+      <h2 class="pseq__h">The drawing</h2>
+      <p class="pseq__p">Every project starts with an image: a hand sketch, a dimensioned elevation or a reference. Here is Cantus as a drawing: the cypress, tulip, carnation and rose of the Iznik tile tradition in one symmetric composition. The drawing, the depth map and the relief below are the same surface.</p>
+    </li>
+    <li class="pseq__step" data-layer="1">
+      <span class="pseq__num">02</span>
+      <h2 class="pseq__h">The depth map</h2>
+      <p class="pseq__p">We translate the drawing into a depth map, where every grey value is a height: black is the ground of the panel, white its highest point. Relief depth on Cantus is 16&nbsp;mm, ground to highest point. Changes are still digital, so they cost no tooling and no material.</p>
+    </li>
+    <li class="pseq__step" data-layer="2">
+      <span class="pseq__num">03</span>
+      <h2 class="pseq__h">Read in raking light</h2>
+      <p class="pseq__p">Before anything is cast, we read the surface digitally under raking light, low and from the side. This is where the relief’s shadow appears, and where shallow forms flatten out and deep ones fill solid with shadow. You approve this render; nothing is cast until you do.</p>
+    </li>
+    <li class="pseq__step" data-layer="3">
+      <span class="pseq__num">04</span>
+      <h2 class="pseq__h">The relief</h2>
+      <p class="pseq__p">The master is made from the approved surface, 3D-printed or CNC-machined depending on the geometry. What you see here is not the master: it is computed live from the same depth map. Move the cursor or scroll, and the light and its shadows move with it.</p>
+    </li>
+    </ol>
   </div>
 </section>
 
-<!-- 3-STEP PROCESS DETAIL -->
-<section id="process-detail">
-
-  <!-- Step 01: Design & Modelling — image left, text right -->
-  <div class="process-detail-step">
-    <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-3d-model-to-cast-relief-panel-400w.webp 400w,
-                  ../images/studio-luminant-3d-model-to-cast-relief-panel-800w.webp 800w,
-                  ../images/studio-luminant-3d-model-to-cast-relief-panel-1600w.webp 1600w,
-                  ../images/studio-luminant-3d-model-to-cast-relief-panel.webp 2000w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="../images/studio-luminant-3d-model-to-cast-relief-panel.webp"
-                   alt="3D model of a scroll ornament on a grid, beside the cream relief panel of the same motif" class="process-step-img" width="2400" height="1662"
-                   loading="lazy" decoding="async">
-            </picture>
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">01</span>
-      <div class="process-step-label">Step 01 — Design & Modelling</div>
-      <h2 class="process-step-headline">From Brief to<br>Digital Model</h2>
-      <p class="process-step-desc">We translate your spatial intent — pattern language, depth, geometry — into parametric constraints using our digital modelling pipeline. The design brief becomes a high-fidelity 3D surface model. Iteration is fast and non-destructive — changes at this stage cost nothing. BIM-ready outputs included as standard.</p>
-      <p class="process-step-sustain">Non-destructive digital iteration — zero physical prototyping waste</p>
-    </div>
+<section id="workshop-filmstrip">
+  <div class="filmstrip-intro reveal">
+    <p class="filmstrip-eyebrow" role="heading" aria-level="2">In the workshop</p>
+    <p class="filmstrip-tagline">Mould, pour, demould and finish: every step happens in the same workshop.</p>
   </div>
-
-  <!-- Step 02: Moulding & Casting — text left, image right (reversed) -->
-  <div class="process-detail-step reverse">
-    <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-400w.webp 400w,
-                  ../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-800w.webp 800w,
-                  ../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01-1600w.webp 1600w,
-                  ../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.webp 4096w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg"
-                   alt="Cream panel with fine vertical fluting and four sphere forms, soft studio light" class="process-step-img" width="4096" height="4096"
-                   loading="lazy" decoding="async">
-            </picture>
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">02</span>
-      <div class="process-step-label">Step 02 — Moulding & Casting</div>
-      <h2 class="process-step-headline">3D-Printed Moulds.<br>Precision Casting.</h2>
-      <p class="process-step-desc">Master moulds are 3D-printed directly from the digital model, then replicated in silicone or elastomer for unlimited production runs. Lumina PMAG™ and PUCOMP™ panels are cast vertically under controlled conditions — each batch tested for compressive strength and surface integrity before release.</p>
-      <p class="process-step-sustain">Reusable production moulds — one master serves the full production run</p>
-    </div>
+  <div class="filmstrip-frame reveal">
+    <img src="../img/workshop/workshop-01-mould-prep.jpg" width="1800" height="2400" style="object-position:center 30%" alt="Release agent brushed onto a white silicone mould before casting" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">01</span><span class="filmstrip-caption-text">Release agent goes onto the silicone mould before every pour.</span></div>
   </div>
-
-  <!-- Step 03: Finishing & Delivery — image left, text right -->
-  <div class="process-detail-step">
-    <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-400w.webp 400w,
-                  ../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-800w.webp 800w,
-                  ../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-1600w.webp 1600w,
-                  ../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.webp 4096w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.jpg"
-                   alt="Cream relief panel of four petal-shaped forms meeting at the centre, soft studio light" class="process-step-img" width="4096" height="4096"
-                   loading="lazy" decoding="async">
-            </picture>
-    <div class="process-step-content reveal">
-      <span class="step-ghost-num">03</span>
-      <div class="process-step-label">Step 03 — Finishing & Delivery</div>
-      <h2 class="process-step-headline">Artisan Finish.<br>Ready for Installation.</h2>
-      <p class="process-step-desc">Every panel receives a precision surface finish — any RAL or custom colour, with textured options available. The result is a micro-smooth surface resistant to humidity, UV, and impact. Each panel ships with a material data sheet, installation drawing, and BIM file.</p>
-      <p class="process-step-sustain">Spot-repairable without full panel replacement — extended service life</p>
-    </div>
+  <div class="filmstrip-frame reveal">
+    <img src="../img/workshop/workshop-02-casting.jpg" width="1152" height="928" alt="Hands levelling the poured PMAG surface in a silicone mould on the workbench" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">02</span><span class="filmstrip-caption-text"><span translate="no">Lumina PMAG™</span> is poured and left in the mould to set.</span></div>
   </div>
-
-</section>
-
-<!-- WORKSHOP -->
-<section id="workshop">
-  <div class="workshop-grid">
-    <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-production-workshop-photo-01-400w.webp 400w,
-                  ../images/studio-luminant-production-workshop-photo-01-800w.webp 800w,
-                  ../images/studio-luminant-production-workshop-photo-01-1600w.webp 1600w,
-                  ../images/studio-luminant-production-workshop-photo-01.webp 2048w"
-                  sizes="(max-width: 1024px) 100vw, calc((100vw - 480px) / 2)">
-              <img src="../images/studio-luminant-production-workshop-photo-01.jpeg"
-                   alt="Tall charcoal textured wall panel in a lounge, lit by ceiling spotlights" class="workshop-photo" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-    <div class="workshop-center">
-      <div class="eyebrow reveal">Manufacturing HQ</div>
-      <h2 class="workshop-headline reveal">
-        Made in<br><em>Sakarya</em>
-      </h2>
-      <p class="workshop-body reveal">
-        Our facility in Sakarya houses the full production pipeline under one roof — from additive mould-making through casting to finishing and QA. Vertical integration eliminates sub-contractor delays and gives us total quality control from brief to crate.
-      </p>
-      <p class="workshop-body reveal">
-        Every panel ships with a material data sheet and installation drawing. Logistics and on-site installation support available to the Middle East, Caucasus, and Eastern Europe.
-      </p>
-      <span class="workshop-location reveal">Sakarya · Türkiye</span>
-    </div>
-    <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-production-workshop-photo-02-400w.webp 400w,
-                  ../images/studio-luminant-production-workshop-photo-02-800w.webp 800w,
-                  ../images/studio-luminant-production-workshop-photo-02.webp 1390w"
-                  sizes="(max-width: 1024px) 100vw, calc((100vw - 480px) / 2)">
-              <img src="../images/studio-luminant-production-workshop-photo-02.jpeg"
-                   alt="Lounge wall of cream cubic relief modules, curved sofas and warm cove light" class="workshop-photo" width="1390" height="801"
-                   loading="lazy" decoding="async">
-            </picture>
+  <div class="filmstrip-frame reveal">
+    <img src="../img/workshop/workshop-03-demoulding-clean.jpg" width="1152" height="928" alt="A cast relief panel lifted from its white silicone mould, the negative form visible below" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">03</span><span class="filmstrip-caption-text">Demoulding: the first look at the panel.</span></div>
+  </div>
+  <div class="filmstrip-frame reveal">
+    <img src="../img/workshop/workshop-04-negative-positive-clean.jpg" width="1152" height="928" alt="Cast relief panels standing beside their silicone mould: positive and negative form" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">04</span><span class="filmstrip-caption-text">Negative and positive: the mould carries the master’s undercuts into the panel.</span></div>
+  </div>
+  <div class="filmstrip-frame reveal">
+    <img src="../img/workshop/workshop-05-finishing.jpg" width="1152" height="928" alt="Hand sanding the surface of a cast relief panel on the workbench" loading="lazy">
+    <div class="filmstrip-caption"><span class="filmstrip-num">05</span><span class="filmstrip-caption-text">The surface is dressed by hand, then the artisan finish goes on.</span></div>
   </div>
 </section>
 
-      <section id="workshop-filmstrip">
-        <div class="filmstrip-intro reveal">
-          <p class="filmstrip-eyebrow">In the Workshop</p>
-          <p class="filmstrip-tagline">Every panel passes through the same sequence of hands.</p>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="../img/workshop/workshop-01-mould-prep.jpg" width="1800" height="2400" style="object-position:center 30%" alt="Release agent brushed onto a white silicone mould before casting" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">01</span>
-            <span class="filmstrip-caption-text">The mould is prepared before every cast.</span>
-          </div>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="../img/workshop/workshop-02-casting.jpg" width="1152" height="928" alt="Hands levelling the poured PMAG surface in a silicone mould on the workbench" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">02</span>
-            <span class="filmstrip-caption-text">The cast is poured and left to cure.</span>
-          </div>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="../img/workshop/workshop-03-demoulding.jpg" width="1800" height="2400" style="object-position:center 15%" alt="A cast relief panel lifted from its white silicone mould, the negative form visible beneath" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">03</span>
-            <span class="filmstrip-caption-text">The mould opens. The panel appears.</span>
-          </div>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="../img/workshop/workshop-04-negative-positive.jpg" width="1800" height="2400" alt="Cast relief panels standing beside their silicone mould: positive and negative form" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">04</span>
-            <span class="filmstrip-caption-text">Negative and positive — two faces of every design.</span>
-          </div>
-        </div>
-
-        <div class="filmstrip-frame reveal">
-          <img src="../img/workshop/workshop-05-finishing.jpg" width="1152" height="928" alt="Hand sanding the surface of a cast relief panel on the workbench" loading="lazy">
-          <div class="filmstrip-caption">
-            <span class="filmstrip-num">05</span>
-            <span class="filmstrip-caption-text">Final refinement before the panel leaves the studio.</span>
-          </div>
-        </div>
-      </section>
-
-<!-- CTA STRIP -->
-<section id="process-cta">
-  <div class="section-inner">
-    <h2 class="cta-headline reveal">
-      Ready to Specify<br><em>Your Project?</em>
-    </h2>
-    <p class="cta-sub reveal">
-      Share your brief with our team. We'll return a material recommendation, panel sketch, and indicative timeline within 5 working days.
-    </p>
-    <p class="cta-sub reveal" style="margin-bottom: 48px;">
-      Or look through the <a href="collection.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s;">Concept Work</a>, or review <a href="products.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s;">Materials & Specs</a>.
-    </p>
-    <a href="contact.htm" class="btn-primary reveal">
-      Initiate Project
-      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-      </svg>
-    </a>
+<section class="p-door night">
+  <div class="p-door__inner">
+    <h2 class="p-door__h reveal">Send your drawing.</h2>
+    <p class="p-door__p reveal">Whatever you have is enough to start: a sketch, an elevation or a reference.</p>
+    <div class="p-door__ctas reveal">
+      <a href="contact.htm" class="btn-primary">Send Your Drawing</a>
+      <a href="collection.htm" class="p-door__link">See the Library systems</a>
+    </div>
   </div>
 </section>
-
 </main>
 
 <div id="site-footer">
@@ -481,15 +138,14 @@
     <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
     <a href="resources-lead-times.htm">Lead Times</a>
     <a href="resources-sustainability.htm">Sustainability</a>
-    <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
-    <a href="case-study-petal-lounge.htm">Petal Lounge</a>
-    <a href="case-study-wave-lounge.htm">Wave Lounge</a>
     <a href="contact.htm">Contact</a>
     <a href="site-map.htm">Site Map</a>
   </nav>
 </div>
 
+<script src="../relief-light.js" defer></script>
+<script src="../process-seq.js" defer></script>
 <script src="../shared.js"></script>
 <script src="../components.js"></script>
 

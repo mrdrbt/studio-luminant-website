@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Tasarım Dosyası — lookbook &amp; yüzey föyü | Studio Luminant</title>
 <meta name="description" content="Studio Luminant tasarım dosyasını indirin: lookbook, şartname &amp; yüzey rehberi ve stüdyo sunumu — tek dosyada, ücretsiz.">
 <link rel="canonical" href="https://studioluminant.com.tr/tasarim-dosyasi.htm">
@@ -84,7 +85,7 @@
   .lm-formbox input,.lm-formbox select{width:100%;background:var(--obsidian);border:1px solid var(--border);
     color:var(--text-primary);font-family:var(--font-body);font-size:var(--t-body);padding:12px 13px;
     transition:border-color var(--dur-1) var(--ease),box-shadow var(--dur-1) var(--ease)}
-  .lm-formbox input:focus,.lm-formbox select:focus{outline:none;border-color:var(--gold);box-shadow:var(--focus-ring)}
+  .lm-formbox input:focus,.lm-formbox select:focus{outline:2px solid transparent;border-color:var(--gold);box-shadow:var(--focus-ring)}
   .lm-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-3)}
   @media(max-width:520px){.lm-row{grid-template-columns:1fr}}
   .lm-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;
@@ -99,6 +100,7 @@
     margin-top:var(--s-4);line-height:1.6}
   .lm-hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
 
+  .lm-error{margin:var(--s-3) 0 0;color:#e8907f;font-size:var(--t-body-sm);line-height:1.5}.lm-error:empty{margin:0}.lm-btn[aria-disabled="true"]{opacity:.7;cursor:progress}#success:focus{outline:none}
   .lm-success{display:none;border:1px solid var(--gold);padding:var(--s-6);background:var(--surface)}
   .lm-success.show{display:block}
   .lm-check{width:46px;height:46px;border:1px solid var(--gold);display:grid;place-items:center;
@@ -134,8 +136,8 @@
         </ul>
       </div>
       <figure class="lm-figure">
-        <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg" alt="Açılı görülen krem hücresel rölyef panel, sırtlarında yumuşak yalayan ışık">
-        <figcaption>Lumina PMAG™ döküm alçı · ışıkla okunan matte yüzey · Sapanca'da döküm</figcaption>
+        <img src="images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg" width="2000" height="1116" fetchpriority="high" alt="Açılı görülen krem hücresel rölyef panel, sırtlarında yumuşak yalayan ışık">
+        <figcaption><span translate="no">Lumina PMAG™</span> döküm alçı · ışıkla okunan mat yüzey · Sapanca’da döküm</figcaption>
       </figure>
     </div>
 
@@ -159,13 +161,13 @@
         <div class="lm-card">
           <div class="tag">Lookbook</div>
           <h3>Konsept çalışmaları ve rölyef desenleri</h3>
-          <p>Konsept çalışmaları ve rölyef desenleri ışıkla okunan mat döküm yüzeylerde çekildiği için, her kare desenin mekân ölçeğinde gerçekte nasıl durduğunu gösterir.</p>
+          <p>Tasarım önerilerinin ve rölyef desenlerinin render görüntüleri; her kare, desenin mekân ölçeğinde nasıl okunduğunu gösterecek biçimde ışıklandırıldı.</p>
           <div class="lm-chips"><span class="lm-chip">Konsept</span><span class="lm-chip">Rölyef desenleri</span></div>
         </div>
         <div class="lm-card">
           <div class="tag">Sunum</div>
           <h3>Stüdyo sunumu</h3>
-          <p>Tasarımdan döküme kadar bütün sürecin yürüdüğü Sapanca'daki kendi atölyemizi bu bölümde gezerek kiminle ve nasıl çalıştığınızı görürsünüz.</p>
+          <p>Tasarımdan döküme kadar bütün sürecin yürüdüğü Sapanca’daki kendi atölyemizi bu bölümde gezerek kiminle ve nasıl çalıştığınızı görürsünüz.</p>
           <div class="lm-chips"><span class="lm-chip">Dijital modelleme</span><span class="lm-chip">Elde döküm</span></div>
         </div>
       </div>
@@ -178,7 +180,7 @@
       <div>
         <p class="lm-eyebrow">Ücretsiz indirme</p>
         <h2>Tasarım dosyasını alın.</h2>
-        <p class="lm-sub">Kime atfedeceğimizi söyleyin, dosya sizin. Yalnızca üzerinde çalıştığınız bir proje için gerçekten faydalı bir şey olursa size ulaşırız.</p>
+        <p class="lm-sub">İş e-postanızı yazın, dosya sizin. Yalnızca üzerinde çalıştığınız bir proje için gerçekten faydalı bir şey olursa size ulaşırız.</p>
         <ul class="lm-list">
           <li>Anında indirme — e-posta beklemeden</li>
           <li>Özel ölçü ve desenler siparişe göre üretilir</li>
@@ -188,29 +190,31 @@
 
       <div>
         <form class="lm-formbox" id="lead-form" name="specifier-kit" method="POST"
-              data-netlify="true" netlify-honeypot="bot-field">
+              data-netlify="true" netlify-honeypot="bot-field" novalidate>
           <input type="hidden" name="form-name" value="specifier-kit">
           <input type="hidden" name="download" value="Specifier Kit">
           <input type="hidden" name="lang" value="tr">
           <p class="lm-hp"><label>Bunu doldurmayın: <input name="bot-field" type="text" tabindex="-1" autocomplete="off" aria-hidden="true"></label></p>
 
+          <p class="lm-fine" aria-hidden="true" style="margin:0 0 var(--s-3)">* zorunlu alan</p>
           <div class="lm-field">
-            <label for="email">İş e-postası <span class="req">*</span></label>
-            <input id="email" name="email" type="email" required autocomplete="email" placeholder="ad@ofis.com" autofocus>
+            <label for="email">İş e-postası <span class="req" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="ad@ofis.com…" inputmode="email" spellcheck="false" autocapitalize="off" aria-describedby="form-error">
           </div>
 
-          <button class="lm-btn" type="submit">Dosyayı indir →</button>
-          <p class="lm-fine">İndirerek Studio Luminant'ın sizinle iletişim kurabileceğini kabul edersiniz. Liste yok, spam yok; istediğiniz zaman çıkabilirsiniz.</p>
+          <button class="lm-btn" type="submit">Dosyayı indir <span aria-hidden="true">→</span></button>
+          <p class="lm-error" id="form-error" role="alert"></p>
+          <p class="lm-fine">İndirerek <span translate="no">Studio Luminant</span>’ın sizinle iletişim kurabileceğini kabul edersiniz. Liste yok, spam yok; istediğiniz zaman çıkabilirsiniz.</p>
         </form>
 
-        <div class="lm-success" id="success" aria-live="polite">
-          <div class="lm-check">✓</div>
+        <div class="lm-success" id="success" tabindex="-1">
+          <div class="lm-check" aria-hidden="true">✓</div>
           <h3>Dosyanız hazır.</h3>
-          <p class="lm-sub" style="margin-top:var(--s-2)">Teşekkürler — Studio Luminant tasarım dosyanız aşağıda hazır. İndirme otomatik başlar.</p>
+          <p class="lm-sub" style="margin-top:var(--s-2)">Teşekkürler — <span translate="no">Studio Luminant</span> tasarım dosyanız aşağıda hazır. İndirme otomatik başlar.</p>
           <ul class="lm-dl">
             <li><span><span class="f">Tasarım Dosyası</span> — lookbook + stüdyo sunumu</span><span>PDF</span></li>
           </ul>
-          <a class="lm-btn" id="dl-link" href="downloads/SL_Specifier_Kit_TR.pdf" download>Dosyayı indir →</a>
+          <a class="lm-btn" id="dl-link" href="downloads/SL_Specifier_Kit_TR.pdf" download>Dosyayı indir <span aria-hidden="true">→</span></a>
           <a class="lm-btn ghost" href="mailto:info@studioluminant.com.tr?subject=Tasar%C4%B1m%20Dosyas%C4%B1%20%E2%80%94%20fiziksel%20numune%20talebi&body=Merhaba%20Studio%20Luminant%2C%20fiziksel%20numune%20talep%20etmek%20istiyorum." style="margin-top:var(--s-3)">Fiziksel numune talep et</a>
         </div>
       </div>
@@ -234,7 +238,7 @@
 </main>
 
 <div id="site-footer">
-  <nav class="sl-static-footer-links" aria-label="Site map">
+  <nav class="sl-static-footer-links" aria-label="Site haritası">
     <a href="koleksiyon.htm">Konsept Çalışmaları</a>
     <a href="urunler.htm">Malzeme &amp; Teknik</a>
     <a href="surec.htm">Nasıl Çalışırız</a>
@@ -260,12 +264,17 @@
 <script src="components.js"></script>
 <script>
   (function(){
-    var form=document.getElementById('lead-form'),success=document.getElementById('success');
+    var form=document.getElementById('lead-form'),success=document.getElementById('success'),errBox=document.getElementById('form-error'),btn=form.querySelector('button[type=submit]'),busy=false;
+    var email=document.getElementById('email');
+    email.addEventListener('input',function(){email.removeAttribute('aria-invalid');errBox.textContent='';});
     function enc(d){return Object.keys(d).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(d[k]);}).join('&');}
     form.addEventListener('submit',async function(e){
       e.preventDefault();
+      if(busy){return;}
+      errBox.textContent='';
+      if(!form.checkValidity()){var bad=form.querySelector(':invalid');bad.setAttribute('aria-invalid','true');errBox.textContent=bad.validationMessage;bad.focus();return;}
       var fd=new FormData(form),data={};fd.forEach(function(v,k){data[k]=v;});
-      var btn=form.querySelector('button[type=submit]'); if(btn){btn.disabled=true;}
+      busy=true;if(btn){btn.setAttribute('aria-disabled','true');}
       // Notification backup — Netlify Forms (non-blocking; CRM capture below is the source of truth)
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:enc(data)}).catch(function(){});
       // Primary: capture into the CRM. Map kit fields -> lead-intake contract (firm -> company).
@@ -279,12 +288,14 @@
         if(typeof gtag==='function'){gtag('event','generate_lead',{lead_magnet:'specifier-kit',firm:data.firm||''});}
         reveal();
       }catch(_){
-        if(btn){btn.disabled=false;}
-        alert('Bir sorun oluştu. Lütfen tekrar deneyin veya info@studioluminant.com.tr adresine yazın.');
+        busy=false;if(btn){btn.removeAttribute('aria-disabled');}
+        errBox.textContent='Bir sorun oluştu. Lütfen tekrar deneyin veya info@studioluminant.com.tr adresine yazın.';
       }
     });
     function reveal(){form.style.display='none';success.classList.add('show');
-      success.scrollIntoView({behavior:'smooth',block:'center'});
+      success.focus({preventScroll:true});
+      var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      success.scrollIntoView({behavior:calm?'auto':'smooth',block:'center'});
       setTimeout(function(){var d=document.getElementById('dl-link');if(d){d.click();}},400);}
   })();
 </script>

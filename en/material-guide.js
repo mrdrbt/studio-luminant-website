@@ -12,14 +12,19 @@ const {
 // DATA
 // ─────────────────────────────────────────────
 
+const TXT = {
+  better: "better", worse: "worse",
+  tableLabel: "Specification Table",
+  sampleHref: "contact.htm#sampleForm"
+};
 const COLORS = {
-  bg: "#0C0C0E",
-  surface: "#18181D",
-  borderGold: "rgba(201,168,76,0.18)",
-  gold: "#C9A84C",
-  goldLight: "#E8C96A",
-  ivory: "#F0EAD6",
-  muted: "#9A9088",
+  bg: "var(--bg)",
+  surface: "var(--surface)",
+  borderGold: "rgba(var(--accent-rgb),0.18)",
+  gold: "var(--accent)",
+  goldLight: "var(--accent-hover)",
+  ivory: "var(--ink)",
+  muted: "var(--ink-muted)",
   sage: "#6B8F71",
   amber: "#C4956A",
   crimson: "#A65D5D"
@@ -172,31 +177,11 @@ const colorPalettes = {
       { id: "midnight-sage", label: "Midnight Sage", hex: ["#3D503E", "#576B52"] },
       { id: "ivory-r", label: "Ivory", hex: ["#D8D0C4", "#EDE8DF"] }
     ]}
-  ],
-  pucomp: [
-    { group: "Hospitality", colors: [
-      { id: "warm-taupe", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
-      { id: "sand", label: "Sand", hex: ["#B5A48A", "#C9BBA3"] },
-      { id: "bronze", label: "Bronze", hex: ["#5C4A2A", "#8B7355"] },
-      { id: "espresso", label: "Espresso", hex: ["#3C2415", "#5C3A2A"] }
-    ]},
-    { group: "Corporate", colors: [
-      { id: "obsidian", label: "Obsidian", hex: ["#1A1A1A", "#2D2D2D"] },
-      { id: "cloud-white", label: "Cloud White", hex: ["#EDEAE4", "#F0EFEB"] },
-      { id: "silhouette", label: "Silhouette", hex: ["#4A433E", "#635C56"] },
-      { id: "gold", label: "Gold", hex: ["#8B6914", "#C9A84C"] }
-    ]},
-    { group: "Residential", colors: [
-      { id: "warm-taupe-r", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
-      { id: "copper", label: "Copper", hex: ["#7A4A2A", "#B87333"] },
-      { id: "midnight-sage", label: "Midnight Sage", hex: ["#3D503E", "#576B52"] },
-      { id: "sand-r", label: "Sand", hex: ["#B5A48A", "#C9BBA3"] }
-    ]}
   ]
 };
 const radarAxes = [{
   key: "weightAdv",
-  label: "Lightweight"
+  label: "Weight"
 }, {
   key: "moistureRes",
   label: "Moisture"
@@ -218,7 +203,6 @@ const radarAxes = [{
 }];
 var _S = window.SL_SPECS || {};
 var _pmag = _S.pmag || {};
-var _pucomp = _S.pucomp || {};
 var _F = _S.fmt || {};
 const studioMaterials = [{
   id: "pmag",
@@ -227,7 +211,7 @@ const studioMaterials = [{
   tagline: "Interior architectural relief panels for high-specification interiors",
   domain: "Interior",
   domainIcon: "🏛",
-  application: "Feature walls, ceiling elements, reception areas, corridor accent walls",
+  application: "Feature walls, ceiling elements, column wraps, counter and desk fronts, accent surfaces, reception areas, corridor accent walls",
   specs: {
     density: "1,400–1,600",
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
@@ -237,7 +221,7 @@ const studioMaterials = [{
     uv: "—",
     chemical: "—",
     temperature: "—",
-    surface: (_pmag.finish ? _pmag.finish.en : "Any RAL / custom colour — textured finishes"),
+    surface: (_pmag.finish ? _pmag.finish.en : "Any RAL / custom colour — artisan finishes, smooth or textured"),
     customDesign: "Parametric design, unlimited patterns",
     voc: "Low — indoor air quality safe",
     acoustic: "Optional backed acoustic fleece",
@@ -254,41 +238,6 @@ const studioMaterials = [{
     installSpeed: 0.9,
     leadTimeAdv: 0.8,
     impactRes: 0.5
-  }
-}, {
-  id: "pucomp",
-  name: "Lumina PUCOMP™",
-  fullName: "Advanced Composite",
-  tagline: "Exterior & wet-area panels with superior durability",
-  domain: "Exterior",
-  domainIcon: "🌐",
-  application: "Façade panels, spas, pools, bathrooms, covered outdoor areas, signage",
-  specs: {
-    density: "600–900",
-    weight: (_pucomp.weight ? _pucomp.weight.min + '–' + _pucomp.weight.max : "12–18"),
-    thickness: (_pucomp.thickness ? _pucomp.thickness.min + '–' + _pucomp.thickness.max : "8–25"),
-    moisture: "High — closed-cell, hydrophobic",
-    impact: "High — flexible polymer matrix",
-    uv: "Stabilised + UV-resistant finish",
-    chemical: "Resistant to mild acids & cleaning agents",
-    temperature: "-30 °C to +80 °C",
-    surface: (_pucomp.finish ? _pucomp.finish.en : "Any RAL / custom colour — textured finishes available"),
-    customDesign: "Parametric design, unlimited patterns",
-    voc: "Low",
-    acoustic: "—",
-    antimicrobial: "—",
-    method: "LuminClip™ or mechanical fixing (stainless steel)",
-    speed: "Application-dependent",
-    leadTime: "Confirmed in the quote"
-  },
-  radar: {
-    weightAdv: 0.85,
-    moistureRes: 0.9,
-    finishQuality: 0.95,
-    designFreedom: 0.95,
-    installSpeed: 0.75,
-    leadTimeAdv: 0.75,
-    impactRes: 0.85
   }
 }];
 const sectorMaterials = [{
@@ -483,6 +432,7 @@ function RadarChart({
     return () => o.disconnect();
   }, []);
   const [hover, setHover] = useState(null);
+  const radarSummary = primary.name + ": " + radarAxes.map(a => a.label + " " + Math.round((primary.radar[a.key] || 0) * 100) + "%").join(", ");
   return /*#__PURE__*/React.createElement("div", {
     ref: ref,
     style: {
@@ -493,10 +443,12 @@ function RadarChart({
     width: size,
     height: size,
     viewBox: `0 0 ${size} ${size}`,
+    role: "img",
+    "aria-label": radarSummary,
     style: {
       overflow: "visible"
     }
-  }, Array.from({
+  }, /*#__PURE__*/React.createElement("title", null, radarSummary), Array.from({
     length: levels
   }, (_, l) => {
     const lv = (l + 1) / levels;
@@ -555,7 +507,7 @@ function RadarChart({
       fill: COLORS.gold,
       opacity: animated ? 1 : 0,
       style: {
-        transition: "all 0.3s ease",
+        transition: "opacity 0.3s ease, r 0.3s ease",
         cursor: "pointer"
       },
       onMouseEnter: () => setHover(i),
@@ -639,6 +591,8 @@ function FinishColorSelector({
     const isAct = activeFinish === f.id;
     return /*#__PURE__*/React.createElement("button", {
       key: f.id,
+      type: "button",
+      "aria-pressed": isAct,
       onClick: () => setActiveFinish(f.id),
       style: {
         display: "flex",
@@ -649,7 +603,7 @@ function FinishColorSelector({
         border: isAct ? `1px solid ${COLORS.gold}` : "1px solid rgba(138,130,117,0.2)",
         background: isAct ? `${COLORS.gold}10` : "transparent",
         cursor: "pointer",
-        transition: "all 0.3s ease",
+        transition: "background-color 0.3s ease, border-color 0.3s ease",
         fontFamily: "'Jost',sans-serif"
       }
     }, /*#__PURE__*/React.createElement("div", {
@@ -693,7 +647,7 @@ function FinishColorSelector({
       }
     }, f.label), /*#__PURE__*/React.createElement("span", {
       style: {
-        fontSize: 9,
+        fontSize: 10,
         fontWeight: 300,
         color: COLORS.muted,
         display: "block",
@@ -714,11 +668,13 @@ function FinishColorSelector({
     }
   }, "Colour"), colorGroups.map(group => /*#__PURE__*/React.createElement("div", {
     key: group.group,
+    role: "group",
+    "aria-label": group.group,
     style: { marginBottom: 16 }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: "'Jost',sans-serif",
-      fontSize: 9,
+      fontSize: 10,
       fontWeight: 400,
       color: COLORS.gold,
       letterSpacing: "0.12em",
@@ -736,8 +692,12 @@ function FinishColorSelector({
     }
   }, group.colors.map(color => {
     const isAct = activeColor === color.id;
-    return /*#__PURE__*/React.createElement("div", {
+    return /*#__PURE__*/React.createElement("button", {
       key: color.id,
+      type: "button",
+      className: "mg-swatch",
+      "aria-pressed": isAct,
+      "aria-label": color.label,
       style: {
         display: "flex",
         flexDirection: "column",
@@ -747,6 +707,8 @@ function FinishColorSelector({
       },
       onClick: () => setActiveColor(isAct ? null : color.id)
     }, /*#__PURE__*/React.createElement("div", {
+      className: "mg-chip",
+      "aria-hidden": "true",
       style: {
         width: 44,
         height: 44,
@@ -755,15 +717,9 @@ function FinishColorSelector({
         background: getSwatchStyle(selectedFinish, color),
         position: "relative",
         overflow: "hidden",
-        transition: "all 0.2s ease",
+        transition: "transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
         transform: isAct ? "scale(1.1)" : "scale(1)",
         boxShadow: isAct ? `0 2px 12px ${color.hex[0]}55` : "none"
-      },
-      onMouseEnter: e => {
-        if (!isAct) e.currentTarget.style.transform = "scale(1.06)";
-      },
-      onMouseLeave: e => {
-        if (!isAct) e.currentTarget.style.transform = "scale(1)";
       }
     }, (selectedFinish.id === "mica" || selectedFinish.id === "metal") && /*#__PURE__*/React.createElement("div", {
       style: {
@@ -785,16 +741,19 @@ function FinishColorSelector({
     })), /*#__PURE__*/React.createElement("span", {
       style: {
         fontFamily: "'Jost',sans-serif",
-        fontSize: 8,
+        fontSize: 10,
         color: isAct ? COLORS.gold : COLORS.muted,
         textAlign: "center",
         lineHeight: 1.2,
         fontWeight: isAct ? 500 : 300,
-        maxWidth: 48,
+        maxWidth: 56,
         transition: "color 0.2s ease"
       }
     }, color.label));
-  })))), activeColor && /*#__PURE__*/React.createElement("div", {
+  })))), /*#__PURE__*/React.createElement("div", {
+    role: "status",
+    "aria-live": "polite"
+  }, activeColor && /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 12,
       padding: "8px 12px",
@@ -810,11 +769,11 @@ function FinishColorSelector({
       color: COLORS.ivory,
       fontWeight: 400
     }
-  }, selectedFinish.label, " \xB7 ", allColors.find(c => c.id === activeColor)?.label)), /*#__PURE__*/React.createElement("div", {
+  }, selectedFinish.label, " \xB7 ", allColors.find(c => c.id === activeColor)?.label))), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 20,
       padding: "12px 16px",
-      background: "linear-gradient(135deg, rgba(201,168,76,0.06) 0%, rgba(201,168,76,0.02) 100%)",
+      background: "linear-gradient(135deg, rgba(var(--accent-rgb),0.06) 0%, rgba(var(--accent-rgb),0.02) 100%)",
       border: `1px solid ${COLORS.borderGold}`,
       borderRadius: 2,
       display: "flex",
@@ -839,27 +798,19 @@ function FinishColorSelector({
 function AdvantageArrow({
   advantage
 }) {
-  if (advantage === "better") return /*#__PURE__*/React.createElement("span", {
+  const glyph = (color, ch) => /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
     style: {
-      color: COLORS.sage,
+      color,
       fontSize: "11px",
       marginLeft: 4
     }
-  }, "\u25B2");
-  if (advantage === "worse") return /*#__PURE__*/React.createElement("span", {
-    style: {
-      color: COLORS.crimson,
-      fontSize: "11px",
-      marginLeft: 4
-    }
-  }, "\u25BC");
-  return /*#__PURE__*/React.createElement("span", {
-    style: {
-      color: COLORS.muted,
-      fontSize: "11px",
-      marginLeft: 4
-    }
-  }, "\u2014");
+  }, ch), advantage !== "neutral" && TXT[advantage] ? /*#__PURE__*/React.createElement("span", {
+    className: "mg-sr"
+  }, " (" + TXT[advantage] + ")") : null);
+  if (advantage === "better") return glyph(COLORS.sage, "\u25B2");
+  if (advantage === "worse") return glyph(COLORS.crimson, "\u25BC");
+  return glyph(COLORS.muted, "\u2014");
 }
 
 // ─── MATERIAL CARD ───
@@ -875,19 +826,14 @@ function MaterialCard({
       background: COLORS.surface,
       border: `1px solid ${COLORS.borderGold}`,
       borderRadius: 2,
-      transition: "all 0.3s cubic-bezier(0.25,0.1,0.25,1)",
+      transition: "box-shadow 0.3s cubic-bezier(0.25,0.1,0.25,1)",
       boxShadow: "none",
       flex: isExpanded ? "1 1 100%" : "1 1 calc(50% - 12px)",
       minWidth: 300,
       maxWidth: isExpanded ? "100%" : 560,
       overflow: "hidden"
     },
-    onMouseEnter: e => {
-      e.currentTarget.style.boxShadow = "0 0 20px rgba(183,142,72,0.08)";
-    },
-    onMouseLeave: e => {
-      e.currentTarget.style.boxShadow = "none";
-    }
+    className: "mg-card"
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       width: "100%",
@@ -903,8 +849,12 @@ function MaterialCard({
       overflow: "hidden"
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: material.id === "pmag" ? "../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp" : "../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg",
-    alt: material.id === "pmag" ? "Upright cream panel with a cellular, pebble-like relief pattern in soft light" : "Pale pinwheel relief wall lit from above, curved sofa in a quiet lounge",
+    width: material.id === "pmag" ? 1120 : 1536,
+    height: material.id === "pmag" ? 1400 : 1024,
+    loading: "lazy",
+    decoding: "async",
+    src: material.id === "pmag" ? "../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg" : "../images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg",
+    alt: material.id === "pmag" ? "Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front" : "Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs",
     style: {
       position: "absolute",
       inset: 0,
@@ -924,6 +874,7 @@ function MaterialCard({
       marginBottom: 6
     }
   }, /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
     style: {
       fontSize: 20
     }
@@ -937,6 +888,7 @@ function MaterialCard({
       textTransform: "uppercase"
     }
   }, material.domain)), /*#__PURE__*/React.createElement("h3", {
+    translate: "no",
     style: {
       fontFamily: "'Cormorant Garamond',serif",
       fontSize: 26,
@@ -963,6 +915,10 @@ function MaterialCard({
       fontWeight: 300
     }
   }, material.tagline), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "mg-explore",
+    "aria-expanded": isExpanded,
+    "aria-controls": "mg-panel-" + material.id,
     onClick: onToggle,
     style: {
       fontFamily: "'Jost',sans-serif",
@@ -976,17 +932,10 @@ function MaterialCard({
       cursor: "pointer",
       letterSpacing: "0.08em",
       textTransform: "uppercase",
-      transition: "all 0.3s cubic-bezier(0.25,0.1,0.25,1)"
-    },
-    onMouseEnter: e => {
-      e.target.style.background = COLORS.gold;
-      e.target.style.color = COLORS.bg;
-    },
-    onMouseLeave: e => {
-      e.target.style.background = "transparent";
-      e.target.style.color = COLORS.gold;
+      transition: "background-color 0.3s cubic-bezier(0.25,0.1,0.25,1), color 0.3s cubic-bezier(0.25,0.1,0.25,1)"
     }
   }, isExpanded ? "Collapse" : "Explore")), isExpanded && /*#__PURE__*/React.createElement("div", {
+    id: "mg-panel-" + material.id,
     style: {
       borderTop: `1px solid ${COLORS.borderGold}`,
       padding: "24px 28px"
@@ -1013,6 +962,9 @@ function MaterialCard({
         marginBottom: 2
       }
     }, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      "aria-expanded": isOpen,
+      "aria-controls": "mg-cat-" + material.id + "-" + cat.key,
       onClick: () => toggleCat(cat.key),
       style: {
         width: "100%",
@@ -1030,12 +982,14 @@ function MaterialCard({
         letterSpacing: "0.06em"
       }
     }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
       style: {
         color: COLORS.gold,
         marginRight: 10,
         fontSize: 12
       }
     }, cat.icon), cat.label), /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
       style: {
         color: COLORS.muted,
         fontSize: 10,
@@ -1044,10 +998,15 @@ function MaterialCard({
         display: "inline-block"
       }
     }, "\u25BC")), /*#__PURE__*/React.createElement("div", {
+      id: "mg-cat-" + material.id + "-" + cat.key,
+      role: "region",
+      "aria-hidden": !isOpen,
+      inert: isOpen ? undefined : "",
       style: {
         maxHeight: isOpen ? 600 : 0,
         overflow: "hidden",
-        transition: "max-height 0.3s cubic-bezier(0.25,0.1,0.25,1)"
+        visibility: isOpen ? "visible" : "hidden",
+        transition: `max-height 0.3s cubic-bezier(0.25,0.1,0.25,1), visibility 0s linear ${isOpen ? 0 : 0.3}s`
       }
     }, /*#__PURE__*/React.createElement("div", {
       style: {
@@ -1079,9 +1038,10 @@ function MaterialCard({
           fontSize: 13,
           color: COLORS.ivory,
           textAlign: "right",
-          fontWeight: 400
+          fontWeight: 400,
+          fontVariantNumeric: "tabular-nums"
         }
-      }, val, specMeta[sk]?.unit && val !== "—" ? ` ${specMeta[sk].unit}` : ""));
+      }, val, specMeta[sk]?.unit && val !== "—" ? `\u00A0${specMeta[sk].unit}` : ""));
     }))));
   }), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1089,7 +1049,8 @@ function MaterialCard({
       textAlign: "center"
     }
   }, /*#__PURE__*/React.createElement("a", {
-    href: "#contact",
+    href: TXT.sampleHref,
+    className: "mg-cta",
     style: {
       fontFamily: "'Jost',sans-serif",
       fontSize: 12,
@@ -1102,13 +1063,7 @@ function MaterialCard({
       letterSpacing: "0.08em",
       textTransform: "uppercase",
       display: "inline-block",
-      transition: "all 0.3s cubic-bezier(0.25,0.1,0.25,1)"
-    },
-    onMouseEnter: e => {
-      e.target.style.background = `${COLORS.gold}15`;
-    },
-    onMouseLeave: e => {
-      e.target.style.background = "transparent";
+      transition: "background-color 0.3s cubic-bezier(0.25,0.1,0.25,1)"
     }
   }, "Request Sample"))));
 }
@@ -1146,6 +1101,10 @@ function ComparisonTable({
   };
   const cols = sectorMaterials.filter(m => activeSector.includes(m.id));
   return /*#__PURE__*/React.createElement("div", {
+    className: "mg-scroll",
+    tabIndex: 0,
+    role: "region",
+    "aria-label": TXT.tableLabel,
     style: {
       overflowX: "auto",
       WebkitOverflowScrolling: "touch",
@@ -1157,9 +1116,13 @@ function ComparisonTable({
       minWidth: 600,
       borderCollapse: "collapse",
       fontFamily: "'Jost',sans-serif",
-      fontSize: 13
+      fontSize: 13,
+      fontVariantNumeric: "tabular-nums"
     }
-  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+  }, /*#__PURE__*/React.createElement("caption", {
+    className: "mg-sr"
+  }, TXT.tableLabel + ": " + slMaterial.name), /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+    scope: "col",
     style: {
       textAlign: "left",
       padding: "12px 14px",
@@ -1176,6 +1139,7 @@ function ComparisonTable({
       minWidth: 120
     }
   }, "Specification"), /*#__PURE__*/React.createElement("th", {
+    scope: "col",
     style: {
       textAlign: "left",
       padding: "12px 14px",
@@ -1189,6 +1153,7 @@ function ComparisonTable({
     }
   }, slMaterial.name), cols.map(m => /*#__PURE__*/React.createElement("th", {
     key: m.id,
+    scope: "col",
     style: {
       textAlign: "left",
       padding: "12px 14px",
@@ -1205,8 +1170,10 @@ function ComparisonTable({
       style: {
         borderBottom: "1px solid rgba(183,142,72,0.06)"
       }
-    }, /*#__PURE__*/React.createElement("td", {
+    }, /*#__PURE__*/React.createElement("th", {
+      scope: "row",
       style: {
+        textAlign: "left",
         padding: "10px 14px",
         color: COLORS.muted,
         fontSize: 12,
@@ -1223,7 +1190,7 @@ function ComparisonTable({
         fontWeight: 400,
         background: `${COLORS.gold}05`
       }
-    }, slVal, spec.unit && slVal !== "—" ? ` ${spec.unit}` : ""), cols.map(m => {
+    }, slVal, spec.unit && slVal !== "—" ? `\u00A0${spec.unit}` : ""), cols.map(m => {
       const cv = m.specs[spec.key] || "—";
       const adv = getAdvantage(spec.key, slVal, cv);
       return /*#__PURE__*/React.createElement("td", {
@@ -1234,7 +1201,7 @@ function ComparisonTable({
           fontWeight: 300,
           opacity: 0.85
         }
-      }, cv, spec.unit && cv !== "—" ? ` ${spec.unit}` : "", /*#__PURE__*/React.createElement(AdvantageArrow, {
+      }, cv, spec.unit && cv !== "—" ? `\u00A0${spec.unit}` : "", /*#__PURE__*/React.createElement(AdvantageArrow, {
         advantage: adv
       }));
     }));
@@ -1243,7 +1210,17 @@ function ComparisonTable({
 
 // ─── MAIN ───
 function MaterialGuide() {
-  const [expandedMaterial, setExpandedMaterial] = useState(null);
+  const [expandedMaterial, setExpandedMaterial] = useState(() => {
+    const q = new URLSearchParams(location.search).get("material");
+    if (q === "none") return null;
+    return studioMaterials.some(m => m.id === q) ? q : "pmag";
+  });
+  useEffect(() => {
+    const p = new URLSearchParams(location.search);
+    if (expandedMaterial === "pmag") p.delete("material"); else p.set("material", expandedMaterial || "none");
+    const s = p.toString();
+    history.replaceState(null, "", location.pathname + (s ? "?" + s : "") + location.hash);
+  }, [expandedMaterial]);
   const [compareMode, setCompareMode] = useState(false);
   const [compareMaterial, setCompareMaterial] = useState("pmag");
   const [activeSector, setActiveSector] = useState(["grg", "grc", "stone"]);
@@ -1261,8 +1238,16 @@ function MaterialGuide() {
   const comparedSL = studioMaterials.find(m => m.id === compareMaterial);
   const comparedSector = sectorMaterials.filter(m => activeSector.includes(m.id));
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("style", null, `
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600&display=swap');
         .mg-root{box-sizing:border-box;}.mg-root *,.mg-root *::before,.mg-root *::after{box-sizing:inherit;}
+        .mg-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+        .mg-root button{font:inherit;}
+        .mg-swatch{background:none;border:0;padding:0;color:inherit;font:inherit;}
+        .mg-swatch:hover .mg-chip{transform:scale(1.06);}
+        .mg-root button:focus-visible,.mg-root a:focus-visible{outline:2px solid ${COLORS.gold};outline-offset:3px;}
+        .mg-card:hover{box-shadow:0 0 20px rgba(183,142,72,0.08) !important;}
+        .mg-explore:hover,.mg-explore:focus-visible{background-color:${COLORS.gold} !important;color:${COLORS.bg} !important;}
+        .mg-cta:hover,.mg-cta:focus-visible{background-color:${COLORS.gold}15 !important;}
+        .mg-scroll:focus-visible{outline:2px solid ${COLORS.gold};outline-offset:-2px;}
         .mg-root ::-webkit-scrollbar{height:6px;width:6px;}.mg-root ::-webkit-scrollbar-track{background:${COLORS.bg};}.mg-root ::-webkit-scrollbar-thumb{background:${COLORS.borderGold};border-radius:2px;}
       `), /*#__PURE__*/React.createElement("section", {
     className: "mg-root",
@@ -1271,7 +1256,7 @@ function MaterialGuide() {
       color: COLORS.ivory,
       padding: isMobile ? "48px 16px" : "80px 40px",
       fontFamily: "'Jost',sans-serif",
-      minHeight: "100vh",
+      minHeight: "100svh",
       maxWidth: 1200,
       margin: "0 auto"
     }
@@ -1298,7 +1283,7 @@ function MaterialGuide() {
       color: COLORS.muted,
       margin: "0 0 20px"
     }
-  }, "Two proprietary composites. Engineered for architectural expression."), /*#__PURE__*/React.createElement("div", {
+  }, "Lumina PMAG™ for interior architectural surfaces."), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 48,
       height: 1,
@@ -1324,6 +1309,9 @@ function MaterialGuide() {
       marginBottom: 32
     }
   }, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    "aria-expanded": compareMode,
+    "aria-controls": "mg-compare",
     onClick: () => setCompareMode(!compareMode),
     style: {
       fontFamily: "'Jost',sans-serif",
@@ -1337,15 +1325,16 @@ function MaterialGuide() {
       cursor: "pointer",
       letterSpacing: "0.08em",
       textTransform: "uppercase",
-      transition: "all 0.3s cubic-bezier(0.25,0.1,0.25,1)"
+      transition: "background-color 0.3s cubic-bezier(0.25,0.1,0.25,1), color 0.3s cubic-bezier(0.25,0.1,0.25,1)"
     }
   }, compareMode ? "Close Comparison" : "Compare with Industry Standards")), compareMode && /*#__PURE__*/React.createElement("div", {
+    id: "mg-compare",
     style: {
       background: COLORS.surface,
       border: `1px solid ${COLORS.borderGold}`,
       borderRadius: 2,
       padding: isMobile ? "24px 16px" : "32px 28px",
-      transition: "all 0.3s ease"
+      transition: "border-color 0.3s ease"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1365,6 +1354,8 @@ function MaterialGuide() {
     }
   }, "Comparing:"), studioMaterials.map(m => /*#__PURE__*/React.createElement("button", {
     key: m.id,
+    type: "button",
+    "aria-pressed": compareMaterial === m.id,
     onClick: () => setCompareMaterial(m.id),
     style: {
       fontFamily: "'Jost',sans-serif",
@@ -1377,7 +1368,7 @@ function MaterialGuide() {
       border: compareMaterial === m.id ? `1px solid ${COLORS.gold}` : `1px solid ${COLORS.borderGold}`,
       color: compareMaterial === m.id ? COLORS.gold : COLORS.muted,
       background: compareMaterial === m.id ? `${COLORS.gold}12` : "transparent",
-      transition: "all 0.3s ease"
+      transition: "background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease"
     }
   }, m.name))), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1400,6 +1391,8 @@ function MaterialGuide() {
     const isOn = activeSector.includes(m.id);
     return /*#__PURE__*/React.createElement("button", {
       key: m.id,
+      type: "button",
+      "aria-pressed": isOn,
       onClick: () => toggleSector(m.id),
       style: {
         fontFamily: "'Jost',sans-serif",
@@ -1411,10 +1404,21 @@ function MaterialGuide() {
         border: isOn ? `1px solid ${COLORS.gold}` : "1px solid rgba(138,130,117,0.3)",
         color: isOn ? COLORS.gold : COLORS.muted,
         background: isOn ? `${COLORS.gold}0A` : "transparent",
-        transition: "all 0.3s ease"
+        transition: "background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease"
       }
     }, m.name);
   })), !isMobile && /*#__PURE__*/React.createElement("div", {
+    role: "tablist",
+    onKeyDown: e => {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft" && e.key !== "Home" && e.key !== "End") return;
+      e.preventDefault();
+      const keys = ["table", "radar"];
+      const i = keys.indexOf(compareView);
+      const next = e.key === "Home" ? 0 : e.key === "End" ? keys.length - 1 : (i + (e.key === "ArrowRight" ? 1 : -1) + keys.length) % keys.length;
+      setCompareView(keys[next]);
+      const el = document.getElementById("mg-tab-" + keys[next]);
+      if (el) el.focus();
+    },
     style: {
       display: "flex",
       gap: 0,
@@ -1429,6 +1433,12 @@ function MaterialGuide() {
     label: "Performance Profile"
   }].map(tab => /*#__PURE__*/React.createElement("button", {
     key: tab.key,
+    type: "button",
+    role: "tab",
+    id: "mg-tab-" + tab.key,
+    "aria-selected": compareView === tab.key,
+    "aria-controls": "mg-tabpanel",
+    tabIndex: compareView === tab.key ? 0 : -1,
     onClick: () => setCompareView(tab.key),
     style: {
       fontFamily: "'Jost',sans-serif",
@@ -1441,9 +1451,13 @@ function MaterialGuide() {
       borderBottom: compareView === tab.key ? `2px solid ${COLORS.gold}` : "2px solid transparent",
       color: compareView === tab.key ? COLORS.gold : COLORS.muted,
       letterSpacing: "0.06em",
-      transition: "all 0.3s ease"
+      transition: "color 0.3s ease, border-color 0.3s ease"
     }
-  }, tab.label))), (compareView === "table" || isMobile) && /*#__PURE__*/React.createElement(ComparisonTable, {
+  }, tab.label))), /*#__PURE__*/React.createElement("div", {
+    id: "mg-tabpanel",
+    role: isMobile ? undefined : "tabpanel",
+    "aria-labelledby": isMobile ? undefined : "mg-tab-" + compareView
+  }, (compareView === "table" || isMobile) && /*#__PURE__*/React.createElement(ComparisonTable, {
     slMaterial: comparedSL,
     activeSector: activeSector
   }), compareView === "radar" && !isMobile && /*#__PURE__*/React.createElement("div", {
@@ -1503,7 +1517,7 @@ function MaterialGuide() {
       color: COLORS.muted,
       fontWeight: 300
     }
-  }, m.name))))), /*#__PURE__*/React.createElement("p", {
+  }, m.name)))))), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: 12,
       color: COLORS.muted,

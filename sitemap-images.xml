@@ -2,173 +2,336 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Homepage (EN) -->
+  <!-- Homepage (TR) -->
   <url>
-    <loc>https://studioluminant.com.tr/en/</loc>
+    <loc>https://studioluminant.com.tr/</loc>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hero-hd.jpg</image:loc>
-      <image:title>Lumina PMAG gypsum relief panel — hero detail</image:title>
-      <image:caption>Studio Luminant Lumina PMAG cast gypsum relief panel — sculptural architectural surface, hero close-up detail.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg</image:loc>
+      <image:title>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area</image:title>
+      <image:caption>Güzellik merkezinin bekleme salonunda dikey akan kıvrımlarla antrasit rölyef duvar, önünde pudra pembesi bir bank</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.jpg</image:loc>
-      <image:title>Ottoman geometric gypsum relief panel — gold accent</image:title>
-      <image:caption>Studio Luminant Lumina PMAG custom Ottoman geometric gypsum relief panel — intricate gold-accent detail, bespoke architectural surface manufacturing.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.webp</image:loc>
-      <image:title>Cream cellular relief feature wall with a timber counter</image:title>
-      <image:caption>Cream cellular relief feature wall with a timber counter, armchair and potted plant.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-production-process-infographic-tr.webp</image:loc>
+      <image:title>Beş adımlı üretim süreci şeması: tasarım</image:title>
+      <image:caption>Beş adımlı üretim süreci şeması: tasarım, modelleme, kalıplama, döküm, finish</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://studioluminant.com.tr/images/studio-luminant-3d-model-to-cast-relief-panel.webp</image:loc>
       <image:title>3D model of a scroll ornament on a grid</image:title>
-      <image:caption>3D model of a scroll ornament on a grid, beside the cream relief panel of the same motif.</image:caption>
+      <image:caption>Kıvrım süsleme motifinin ızgara üzerindeki 3D modeli ve yanında aynı motifin krem rölyef paneli</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-production-process-infographic.webp</image:loc>
-      <image:title>Production process infographic — design to finishing</image:title>
-      <image:caption>Studio Luminant high-level production process infographic — design, digital modelling, mold making, casting, finishing.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.jpg</image:loc>
+      <image:title>Two tan cast relief panels beside their white moulds on a workshop bench</image:title>
+      <image:caption>İki bej döküm rölyef panel ve beyaz kalıpları, üstte su terazisiyle atölye tezgâhında</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp</image:loc>
-      <image:title>Lumina PMAG organic cell relief wall panel</image:title>
-      <image:caption>Studio Luminant Lumina PMAG finished organic cell architectural gypsum relief wall panel — precision vacuum-cast, sub-millimetre surface resolution.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
+      <image:title>Finish sample box — leather portfolio</image:title>
+      <image:caption>Kapağında Studio Luminant monogramı olan kapalı siyah portföy tipi numune kutusu</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.jpg</image:loc>
-      <image:title>Petal-geometric relief wall in a warm lounge</image:title>
-      <image:caption>Petal-geometric relief wall in a warm lounge, lit bottle shelving beyond.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept-square.jpg</image:loc>
+      <image:title>Warm light grazes down a cellular relief wall from ceiling-line fixtures</image:title>
+      <image:caption>Otel resepsiyonunda traverten bankonun arkasında yükselen, sıcak yalama ışıkla aydınlanan hücre desenli rölyef duvar</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-wave-relief-wall-panels-lounge-concept.jpg</image:loc>
-      <image:title>Pale wave-relief wall under cove lighting</image:title>
-      <image:caption>Pale wave-relief wall under cove lighting, sculptural seating and a reception desk.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-square.jpg</image:loc>
+      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
+      <image:caption>Otel odasında yatak başı duvarında ince dalgalı çizgilerden oluşan adaçayı yeşili rölyef; tavan hattındaki gizli aydınlatma yüzeyi yalıyor</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg</image:loc>
-      <image:title>Ottoman heritage gypsum relief tile — Islamic geometric</image:title>
-      <image:caption>Studio Luminant Ottoman heritage gypsum relief tile — Islamic geometric pattern, architectural wall art panel.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.jpg</image:loc>
-      <image:title>Corridor wall of fluted spherical relief modules in warm amber</image:title>
-      <image:caption>Corridor wall of fluted spherical relief modules in warm amber, terrazzo floor.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-petal-geometric-relief-corridor-concept.webp</image:loc>
-      <image:title>Petal-geometric relief wall along a warm brown corridor</image:title>
-      <image:caption>Petal-geometric relief wall along a warm brown corridor, tall windows at the far end.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg</image:loc>
-      <image:title>Pale pinwheel relief wall lit from above</image:title>
-      <image:caption>Pale pinwheel relief wall lit from above, curved sofa in a quiet lounge.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-angled-open.jpg</image:loc>
-      <image:title>Finish sample box — open</image:title>
-      <image:caption>Studio Luminant finish sample box — open, showing four surface finish samples.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-angled-closed.jpg</image:loc>
-      <image:title>Finish sample box — closed leather portfolio</image:title>
-      <image:caption>Studio Luminant finish sample box — closed leather portfolio.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-unified-design-system-relief-pattern.webp</image:loc>
-      <image:title>Unified Design System — one relief pattern across surfaces</image:title>
-      <image:caption>Studio Luminant Unified Design System — same ornamental relief pattern applied to square wall panel and vertical decorative element, demonstrating one pattern across every surface.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Gallery / Portfolio (EN) -->
-  <url>
-    <loc>https://studioluminant.com.tr/en/gallery.htm</loc>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.jpg</image:loc>
-      <image:title>Petal-geometric relief wall in a warm lounge</image:title>
-      <image:caption>Petal-geometric relief wall in a warm lounge, lit bottle shelving beyond.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-wave-relief-wall-panels-lounge-concept.jpg</image:loc>
-      <image:title>Wave relief wall panels — luxury lounge</image:title>
-      <image:caption>Wave relief wall panels — luxury lounge.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square.jpg</image:loc>
+      <image:title>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café</image:title>
+      <image:caption>Kafede deri banketin arkasında, dikey dalgalı şeritlerden oluşan kum rengi rölyef duvar; önde mermer tablalı küçük bir masa ve ahşap sandalye</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://studioluminant.com.tr/images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.jpg</image:loc>
       <image:title>Fluted spherical relief panels — hospitality corridor</image:title>
-      <image:caption>Fluted spherical relief panels — hospitality corridor.</image:caption>
+      <image:caption>Sıcak amber tonlu yivli küre modüllerle kaplı koridor duvarı, terrazzo zemin</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg</image:loc>
-      <image:title>Geometric pinwheel relief wall cladding — lounge</image:title>
-      <image:caption>Geometric pinwheel relief wall cladding — lounge.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-homeware-showroom-concept-square.jpg</image:loc>
+      <image:title>Raking daylight across a sage relief of stacked wave bands in a homeware showroom</image:title>
+      <image:caption>Dekorasyon mağazasında yatay dalga sıralarından oluşan adaçayı yeşili rölyef duvar; önünde ahşap kaideler, seramikler ve dokuma tekstiller</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-variant.jpg</image:loc>
-      <image:title>Geometric pinwheel relief wall cladding — variant</image:title>
-      <image:caption>Geometric pinwheel relief wall cladding — variant.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg</image:loc>
+      <image:title>Relief panel of drifting vertical fibres</image:title>
+      <image:caption>Dikey akan liflerden oluşan rölyef panel, yalama ışıkta yakından</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg</image:loc>
-      <image:title>Geometric star relief wall panels — luxury hospitality</image:title>
-      <image:caption>Geometric star relief wall panels — luxury hospitality.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg</image:loc>
+      <image:title>Pale grey relief wall of drifting vertical fibres behind a living-room sofa</image:title>
+      <image:caption>Oturma odasında kanepenin arkasında, dikey akan liflerden oluşan açık gri rölyef duvar; yüzeyi yandan vuran gün ışığı</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-petal-geometric-relief-corridor-concept.webp</image:loc>
-      <image:title>Petal geometric relief panels — hospitality corridor</image:title>
-      <image:caption>Petal geometric relief panels — hospitality corridor.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-angled-open.jpg</image:loc>
+      <image:title>Finish sample box — open</image:title>
+      <image:caption>Açılı duran siyah numune kutusu, yan yana dört yüzey örneği</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception.webp</image:loc>
-      <image:title>Organic cell relief panels — hotel lobby reception</image:title>
-      <image:caption>Lumina PMAG organic cell relief panels — hotel lobby reception.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-angled-closed.jpg</image:loc>
+      <image:title>Finish sample box — closed leather portfolio</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-organic-cell-relief-hotel-reception-architectural-render.jpg</image:loc>
-      <image:title>Organic cell relief wall — restaurant interior</image:title>
-      <image:caption>Organic cell relief wall — restaurant interior.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-unified-design-system-relief-pattern.webp</image:loc>
+      <image:title>Unified Design System — one relief pattern across surfaces</image:title>
+      <image:caption>Aynı süsleme kıvrımını paylaşan iki beyaz çerçeveli rölyef panel, biri kare biri uzun</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Homepage (EN) -->
+  <url>
+    <loc>https://studioluminant.com.tr/en/</loc>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg</image:loc>
+      <image:title>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area</image:title>
+      <image:caption>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design.webp</image:loc>
-      <image:title>Organic cell relief wall — sage restaurant interior</image:title>
-      <image:caption>Organic cell relief wall — sage restaurant interior.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-3d-model-to-cast-relief-panel.webp</image:loc>
+      <image:title>3D model of a scroll ornament on a grid</image:title>
+      <image:caption>3D model of a scroll ornament on a grid, beside the cream relief panel of the same motif</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.webp</image:loc>
-      <image:title>Luxury hotel lobby organic relief wall cladding</image:title>
-      <image:caption>Luxury hotel lobby organic relief wall cladding.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.jpg</image:loc>
+      <image:title>Two tan cast relief panels beside their white moulds on a workshop bench</image:title>
+      <image:caption>Two tan cast relief panels beside their white moulds on a workshop bench, spirit level above</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior.webp</image:loc>
-      <image:title>Fluted spherical relief panels — gold dining room</image:title>
-      <image:caption>Fluted spherical relief panels — gold dining room.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
+      <image:title>Finish sample box — leather portfolio</image:title>
+      <image:caption>Closed black portfolio-style sample box with the Studio Luminant monogram on its cover</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd.jpg</image:loc>
-      <image:title>Architectural relief wall panels — hospitality interior</image:title>
-      <image:caption>Architectural relief wall panels — hospitality interior HD.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept-square.jpg</image:loc>
+      <image:title>Warm light grazes down a cellular relief wall from ceiling-line fixtures</image:title>
+      <image:caption>Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-architectural-relief-wall-texture-hospitality-concept.jpg</image:loc>
-      <image:title>Rippled cream relief wall under cove light</image:title>
-      <image:caption>Rippled cream relief wall under cove light, bouclé sofa and potted olive tree.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-square.jpg</image:loc>
+      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
+      <image:caption>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-architectural-relief-hotel-reception-cladding-presentation.jpg</image:loc>
-      <image:title>Organic cell relief wall — warm restaurant interior</image:title>
-      <image:caption>Organic cell relief wall — warm restaurant interior.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square.jpg</image:loc>
+      <image:title>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café</image:title>
+      <image:caption>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café; a small marble table and a bentwood chair in front</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render.webp</image:loc>
-      <image:title>Organic cell relief wall — residential interior</image:title>
-      <image:caption>Organic cell relief wall — residential interior.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.jpg</image:loc>
+      <image:title>Fluted spherical relief panels — hospitality corridor</image:title>
+      <image:caption>Corridor wall of fluted spherical relief modules in warm amber, terrazzo floor</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.jpg</image:loc>
-      <image:title>Lumina PMAG gypsum relief panel — HD detail</image:title>
-      <image:caption>Lumina PMAG gypsum relief panel — HD detail.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-homeware-showroom-concept-square.jpg</image:loc>
+      <image:title>Raking daylight across a sage relief of stacked wave bands in a homeware showroom</image:title>
+      <image:caption>Raking daylight across a sage relief of stacked wave bands in a homeware showroom; oak plinths, ceramics and folded textiles below</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg</image:loc>
+      <image:title>Relief panel of drifting vertical fibres</image:title>
+      <image:caption>Relief panel of drifting vertical fibres, close up in raking light</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg</image:loc>
+      <image:title>Pale grey relief wall of drifting vertical fibres behind a living-room sofa</image:title>
+      <image:caption>Pale grey relief wall of drifting vertical fibres behind a living-room sofa, with daylight raking across it</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-angled-open.jpg</image:loc>
+      <image:title>Finish sample box — open</image:title>
+      <image:caption>Open black sample box at an angle, four finish samples side by side</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-angled-closed.jpg</image:loc>
+      <image:title>Finish sample box — closed leather portfolio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-unified-design-system-relief-pattern.webp</image:loc>
+      <image:title>Unified Design System — one relief pattern across surfaces</image:title>
+      <image:caption>Two white framed relief panels, one square and one tall, sharing the same ornamental scroll pattern</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Gallery (TR) -->
+  <url>
+    <loc>https://studioluminant.com.tr/galeri.htm</loc>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg</image:loc>
+      <image:title>Otel resepsiyonunda traverten bankonun arkasında yükselen</image:title>
+      <image:caption>Otel resepsiyonunda traverten bankonun arkasında yükselen, sıcak yalama ışıkla aydınlanan hücre desenli rölyef duvar</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg</image:loc>
+      <image:title>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area</image:title>
+      <image:caption>Güzellik merkezinin bekleme salonunda dikey akan kıvrımlarla antrasit rölyef duvar, önünde pudra pembesi bir bank</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg</image:loc>
+      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
+      <image:caption>Otel odasında yatak başı duvarında ince dalgalı çizgilerden oluşan adaçayı yeşili rölyef; tavan hattındaki gizli aydınlatma yüzeyi yalıyor</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-homeware-showroom-concept.jpg</image:loc>
+      <image:title>Raking daylight across a sage relief of stacked wave bands in a homeware showroom</image:title>
+      <image:caption>Dekorasyon mağazasında yatay dalga sıralarından oluşan adaçayı yeşili rölyef duvar; önünde ahşap kaideler, seramikler ve dokuma tekstiller</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.jpg</image:loc>
+      <image:title>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café</image:title>
+      <image:caption>Kafede deri banketin arkasında, dikey dalgalı şeritlerden oluşan kum rengi rölyef duvar; önde mermer tablalı küçük bir masa ve ahşap sandalye</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg</image:loc>
+      <image:title>Pale grey relief wall of drifting vertical fibres behind a living-room sofa</image:title>
+      <image:caption>Oturma odasında kanepenin arkasında, dikey akan liflerden oluşan açık gri rölyef duvar; yüzeyi yandan vuran gün ışığı</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
+      <image:title>Finish sample box — leather portfolio</image:title>
+      <image:caption>Kapağında Studio Luminant monogramı olan kapalı siyah portföy tipi numune kutusu</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Gallery (EN) -->
+  <url>
+    <loc>https://studioluminant.com.tr/en/gallery.htm</loc>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg</image:loc>
+      <image:title>Otel resepsiyonunda traverten bankonun arkasında yükselen</image:title>
+      <image:caption>Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg</image:loc>
+      <image:title>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area</image:title>
+      <image:caption>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg</image:loc>
+      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
+      <image:caption>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-homeware-showroom-concept.jpg</image:loc>
+      <image:title>Raking daylight across a sage relief of stacked wave bands in a homeware showroom</image:title>
+      <image:caption>Raking daylight across a sage relief of stacked wave bands in a homeware showroom; oak plinths, ceramics and folded textiles below</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.jpg</image:loc>
+      <image:title>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café</image:title>
+      <image:caption>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café; a small marble table and a bentwood chair in front</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg</image:loc>
+      <image:title>Pale grey relief wall of drifting vertical fibres behind a living-room sofa</image:title>
+      <image:caption>Pale grey relief wall of drifting vertical fibres behind a living-room sofa, with daylight raking across it</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
+      <image:title>Finish sample box — leather portfolio</image:title>
+      <image:caption>Closed black portfolio-style sample box with the Studio Luminant monogram on its cover</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Lookbook (EN) -->
+  <url>
+    <loc>https://studioluminant.com.tr/en/lookbook.htm</loc>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg</image:loc>
+      <image:title>Otel resepsiyonunda traverten bankonun arkasında yükselen</image:title>
+      <image:caption>Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg</image:loc>
+      <image:title>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area</image:title>
+      <image:caption>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg</image:loc>
+      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
+      <image:caption>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-homeware-showroom-concept.jpg</image:loc>
+      <image:title>Raking daylight across a sage relief of stacked wave bands in a homeware showroom</image:title>
+      <image:caption>Raking daylight across a sage relief of stacked wave bands in a homeware showroom; oak plinths, ceramics and folded textiles below</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square.jpg</image:loc>
+      <image:title>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café</image:title>
+      <image:caption>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café; a small marble table and a bentwood chair in front</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg</image:loc>
+      <image:title>Pale grey relief wall of drifting vertical fibres behind a living-room sofa</image:title>
+      <image:caption>Pale grey relief wall of drifting vertical fibres behind a living-room sofa, with daylight raking across it</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait.jpg</image:loc>
+      <image:title>Cellular relief wall behind a travertine reception desk</image:title>
+      <image:caption>Cellular relief wall behind a travertine reception desk, side light from the left deepening each cell; a bouclé lounge chair and low table in front</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.jpg</image:loc>
+      <image:title>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café</image:title>
+      <image:caption>Sand-coloured relief of vertical wave bands above a tan leather banquette in a café; a small marble table and a bentwood chair in front</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.jpg</image:loc>
+      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
+      <image:caption>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait.jpg</image:loc>
+      <image:title>Raking daylight across a sage relief of stacked wave bands in a homeware showroom</image:title>
+      <image:caption>Raking daylight across a sage relief of stacked wave bands in a homeware showroom; oak plinths, ceramics and folded textiles below</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Hotel lobby article (TR) -->
+  <url>
+    <loc>https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm</loc>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg</image:loc>
+      <image:title>Otel resepsiyonunda traverten bankonun arkasında yükselen</image:title>
+      <image:caption>Otel resepsiyonunda traverten bankonun arkasında yükselen, sıcak yalama ışıkla aydınlanan hücre desenli rölyef duvar</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Products (TR) -->
+  <url>
+    <loc>https://studioluminant.com.tr/urunler.htm</loc>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg</image:loc>
+      <image:title>Relief panel of drifting vertical fibres</image:title>
+      <image:caption>Dikey akan liflerden oluşan rölyef panel, yalama ışıkta yakından</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg</image:loc>
+      <image:title>Pale grey relief wall of drifting vertical fibres behind a living-room sofa</image:title>
+      <image:caption>Oturma odasında kanepenin arkasında, dikey akan liflerden oluşan açık gri rölyef duvar; yüzeyi yandan vuran gün ışığı</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
+      <image:title>Finish sample box — leather portfolio</image:title>
+      <image:caption>Kapağında Studio Luminant monogramı olan kapalı siyah portföy tipi numune kutusu</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg</image:loc>
+      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
+      <image:caption>Otel odasında yatak başı duvarında ince dalgalı çizgilerden oluşan adaçayı yeşili rölyef; tavan hattındaki gizli aydınlatma yüzeyi yalıyor</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg</image:loc>
+      <image:title>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area</image:title>
+      <image:caption>Güzellik merkezinin bekleme salonunda dikey akan kıvrımlarla antrasit rölyef duvar, önünde pudra pembesi bir bank</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg</image:loc>
+      <image:title>Otel resepsiyonunda traverten bankonun arkasında yükselen</image:title>
+      <image:caption>Otel resepsiyonunda traverten bankonun arkasında yükselen, sıcak yalama ışıkla aydınlanan hücre desenli rölyef duvar</image:caption>
     </image:image>
   </url>
 
@@ -176,19 +339,34 @@
   <url>
     <loc>https://studioluminant.com.tr/en/products.htm</loc>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-01.jpg</image:loc>
-      <image:title>Lumina PMAG gypsum relief panel — ceramic-like finish</image:title>
-      <image:caption>Lumina PMAG polymer modified alpha gypsum relief panel — ceramic-like surface finish.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg</image:loc>
+      <image:title>Relief panel of drifting vertical fibres</image:title>
+      <image:caption>Relief panel of drifting vertical fibres, close up in raking light</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg</image:loc>
-      <image:title>Lumina PUCOMP composite relief panel — complex geometry</image:title>
-      <image:caption>Lumina PUCOMP composite relief panel — complex geometry, exterior rated.</image:caption>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg</image:loc>
+      <image:title>Pale grey relief wall of drifting vertical fibres behind a living-room sofa</image:title>
+      <image:caption>Pale grey relief wall of drifting vertical fibres behind a living-room sofa, with daylight raking across it</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
       <image:title>Finish sample box — leather portfolio</image:title>
-      <image:caption>Studio Luminant finish sample box — leather portfolio.</image:caption>
+      <image:caption>Closed black portfolio-style sample box with the Studio Luminant monogram on its cover</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg</image:loc>
+      <image:title>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom</image:title>
+      <image:caption>Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg</image:loc>
+      <image:title>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area</image:title>
+      <image:caption>Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg</image:loc>
+      <image:title>Otel resepsiyonunda traverten bankonun arkasında yükselen</image:title>
+      <image:caption>Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs</image:caption>
     </image:image>
   </url>
 

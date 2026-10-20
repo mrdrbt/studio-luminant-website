@@ -7,18 +7,21 @@
 <link rel="canonical" href="https://studioluminant.com.tr/en/lookbook.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/lookbook.htm">
   <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/en/lookbook.htm">
-<meta name="description" content="Studio Luminant Design Lookbook — Bespoke architectural relief panels for hospitality and commercial interiors. Lumina PMAG™ and Lumina PUCOMP™.">
+<meta name="description" content="Studio Luminant Design Lookbook — Bespoke architectural relief panels for hospitality and commercial interiors. Lumina PMAG™.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="Studio Luminant — Design Lookbook">
-<meta property="og:description" content="Studio Luminant Design Lookbook — Bespoke architectural relief panels for hospitality and commercial interiors. Lumina PMAG™ and Lumina PUCOMP™.">
+<meta property="og:description" content="Studio Luminant Design Lookbook — Bespoke architectural relief panels for hospitality and commercial interiors. Lumina PMAG™.">
 <meta property="og:url" content="https://studioluminant.com.tr/en/lookbook.htm">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Studio Luminant — Design Lookbook">
-<meta name="twitter:description" content="Studio Luminant Design Lookbook — Bespoke architectural relief panels for hospitality and commercial interiors. Lumina PMAG™ and Lumina PUCOMP™.">
+<meta name="twitter:description" content="Studio Luminant Design Lookbook — Bespoke architectural relief panels for hospitality and commercial interiors. Lumina PMAG™.">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="../images/studio-luminant-cellular-relief-wall-hotel-reception-concept.webp" type="image/webp" fetchpriority="high">
+<meta name="theme-color" content="#0C0C0E">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -32,11 +35,13 @@
   --text-secondary: #9A9088;
   --text-muted: #8A8078;
   --border: rgba(201,168,76,0.18);
+  color-scheme: dark;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 body {
   font-family: 'Jost', sans-serif;
@@ -87,17 +92,17 @@ body {
 
 /* ===================== HERO ===================== */
 .hero {
-  position: relative; height: 100vh; min-height: 700px;
+  position: relative; height: 100vh; height: 100svh; min-height: 700px;
   display: flex; flex-direction: column; justify-content: flex-end;
   padding: 0 60px 100px;
   overflow: hidden;
 }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
-  background-image: url('../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.webp');
+  background-image: url('../images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg');
   background-image: image-set(
-    url('../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.webp') type('image/webp'),
-    url('../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.webp') type('image/png')
+    url('../images/studio-luminant-cellular-relief-wall-hotel-reception-concept.webp') type('image/webp'),
+    url('../images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg') type('image/jpeg')
   );
   background-size: cover; background-position: center;
   filter: brightness(0.45) saturate(0.8);
@@ -174,6 +179,8 @@ section { padding: 120px 60px; }
   columns: 3; column-gap: 3px;
 }
 .grid-item {
+  display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit;
+  font: inherit; text-align: left;
   break-inside: avoid; margin-bottom: 3px; position: relative;
   overflow: hidden; cursor: pointer;
   opacity: 0; transform: translateY(20px);
@@ -182,25 +189,27 @@ section { padding: 120px 60px; }
 .grid-item.visible { opacity: 1; transform: translateY(0); }
 .grid-item.hidden { display: none; }
 .grid-item img {
-  width: 100%; display: block;
+  width: 100%; height: auto; display: block;
   filter: grayscale(8%);
   transition: transform 0.6s cubic-bezier(.25,.46,.45,.94), filter 0.4s;
 }
-.grid-item:hover img { transform: scale(1.04); filter: grayscale(0%); }
+.grid-item:hover img, .grid-item:focus-visible img { transform: scale(1.04); filter: grayscale(0%); }
+.grid-item:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
 .grid-caption {
-  position: absolute; bottom: 0; left: 0; right: 0;
+  display: block; position: absolute; bottom: 0; left: 0; right: 0;
   padding: 40px 20px 16px;
   background: linear-gradient(to top, rgba(12,12,14,0.85) 0%, transparent 100%);
   opacity: 0; transform: translateY(8px);
   transition: opacity 0.4s, transform 0.4s;
 }
-.grid-item:hover .grid-caption { opacity: 1; transform: translateY(0); }
+.grid-item:hover .grid-caption, .grid-item:focus-visible .grid-caption { opacity: 1; transform: translateY(0); }
+@media (hover: none) { .grid-caption { opacity: 1; transform: none; } }
 .caption-name {
-  font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 18px;
+  display: block; font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 18px;
   color: var(--text-primary); margin-bottom: 4px;
 }
 .caption-meta {
-  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  display: block; font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gold-dim);
 }
 
@@ -210,7 +219,7 @@ section { padding: 120px 60px; }
   background: rgba(12,12,14,0.96);
   backdrop-filter: blur(20px);
   display: none; align-items: center; justify-content: center;
-  cursor: zoom-out;
+  cursor: zoom-out; overscroll-behavior: contain;
 }
 .lightbox.open { display: flex; }
 .lightbox img {
@@ -220,22 +229,25 @@ section { padding: 120px 60px; }
 @keyframes lbIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 .lightbox-close {
   position: absolute; top: 24px; right: 32px;
+  background: none; border: 0; padding: 8px;
   font-size: 13px; color: var(--text-secondary); cursor: pointer;
   font-family: 'Jost', sans-serif; letter-spacing: 0.15em; text-transform: uppercase;
   transition: color 0.3s;
 }
-.lightbox-close:hover { color: var(--gold); }
+.lightbox-close:hover, .lightbox-close:focus-visible { color: var(--gold); }
+.lightbox-close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .lightbox-caption {
   position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
   text-align: center;
 }
 .lightbox-caption .caption-name { font-size: 24px; }
+.spec-value { font-variant-numeric: tabular-nums; }
 .lightbox-caption .caption-meta { font-size: 10px; margin-top: 6px; }
 
 /* ===================== MATERIAL SPECS ===================== */
 .materials-section { background: var(--deep); }
 .materials-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  display: grid; grid-template-columns: 2fr 1fr; gap: 48px;
   margin-top: 60px;
 }
 .material-card {
@@ -382,7 +394,9 @@ section { padding: 120px 60px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .scroll-cue { animation: none; opacity: 1; }
   .reveal { opacity: 1; transform: none; }
   .grid-item { opacity: 1; transform: none; }
 }
@@ -394,7 +408,7 @@ section { padding: 120px 60px; }
 <body>
 
 <!-- NAV -->
-<nav class="lookbook-nav" id="nav">
+<nav class="lookbook-nav" id="nav" aria-label="Main">
   <a href="/en/" class="nav-logo-link" aria-label="Studio Luminant — Home">
     <img src="../images/studio-luminant-wordmark-white-transparent.png" alt="Studio Luminant" class="nav-logo">
   </a>
@@ -408,6 +422,7 @@ section { padding: 120px 60px; }
   <span class="nav-label">Design Lookbook</span>
 </nav>
 
+<main id="main">
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -428,499 +443,97 @@ section { padding: 120px 60px; }
   <div class="section-inner">
     <div class="section-eyebrow reveal">Design Studies</div>
     <h2 class="section-title reveal">The <em>Studies</em></h2>
-    <p class="section-desc reveal">Each pattern begins as a parametric model, refined through iterative prototyping, and cast in our proprietary materials. Filter by design language to explore.</p>
+    <p class="section-desc reveal">Each pattern begins as a parametric model, refined through iterative prototyping, and cast in our proprietary material, <span translate="no">Lumina PMAG™</span>.</p>
 
-    <div class="filter-bar reveal">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="geometric">Geometric</button>
-      <button class="filter-btn" data-filter="organic">Organic</button>
-      <button class="filter-btn" data-filter="heritage">Heritage</button>
-      <button class="filter-btn" data-filter="context">In Context</button>
+    <div class="filter-bar reveal" role="group" aria-label="Filter designs">
+      <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-filter="context" aria-pressed="false">In Context</button>
     </div>
+    <p class="sr-only" id="result-count" aria-live="polite">6 designs shown</p>
 
     <div class="masonry" id="gallery">
 
-      <!-- GEOMETRIC -->
-      <div class="grid-item" data-cat="geometric">
+      <!-- IN CONTEXT (6) — recent concept renders -->
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality-400w.webp 400w,
-                  ../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality-800w.webp 800w,
-                  ../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality-1600w.webp 1600w,
-                  ../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.webp 2000w"
+                  srcset="../images/studio-luminant-cellular-relief-wall-hotel-reception-concept-400w.webp 400w,
+                  ../images/studio-luminant-cellular-relief-wall-hotel-reception-concept-800w.webp 800w,
+                  ../images/studio-luminant-cellular-relief-wall-hotel-reception-concept-1200w.webp 1200w,
+                  ../images/studio-luminant-cellular-relief-wall-hotel-reception-concept.webp 1536w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-petal-geometric-relief-panels-luminant-lounge-hospitality.jpg"
-                   alt="Petal-geometric relief wall in a warm lounge, lit bottle shelving beyond" width="5504" height="3072"
+              <img src="../images/studio-luminant-cellular-relief-wall-hotel-reception-concept.jpg"
+                   alt="Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs" width="1536" height="1024"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Petal Lounge</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
+        <span class="grid-caption"><span class="caption-name">Hotel Reception</span><span class="caption-meta">Hospitality &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-wave-relief-wall-panels-lounge-concept-400w.webp 400w,
-                  ../images/studio-luminant-wave-relief-wall-panels-lounge-concept-800w.webp 800w,
-                  ../images/studio-luminant-wave-relief-wall-panels-lounge-concept-1600w.webp 1600w,
-                  ../images/studio-luminant-wave-relief-wall-panels-lounge-concept.webp 2000w"
+                  srcset="../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept-400w.webp 400w,
+                  ../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept-800w.webp 800w,
+                  ../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.webp 1120w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-wave-relief-wall-panels-lounge-concept.jpg"
-                   alt="Pale wave-relief wall under cove lighting, sculptural seating and a reception desk" width="5504" height="3072"
+              <img src="../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg"
+                   alt="Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front" width="1120" height="1400"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Wave Lounge</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
+        <span class="grid-caption"><span class="caption-name">Beauty Salon</span><span class="caption-meta">Wellness &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior-400w.webp 400w,
-                  ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior-800w.webp 800w,
-                  ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior-1600w.webp 1600w,
-                  ../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.webp 2752w"
+                  srcset="../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-400w.webp 400w,
+                  ../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-800w.webp 800w,
+                  ../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-1200w.webp 1200w,
+                  ../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.webp 1536w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-circular-geometric-relief-panels-hospitality-interior.jpg"
-                   alt="Corridor wall of fluted spherical relief modules in warm amber, terrazzo floor" width="5504" height="3072"
+              <img src="../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg"
+                   alt="Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line" width="1536" height="1024"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Fluted Sphere</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
+        <span class="grid-caption"><span class="caption-name">Hotel Guestroom</span><span class="caption-meta">Hospitality &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-400w.webp 400w,
-                  ../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge-800w.webp 800w,
-                  ../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.webp 1376w"
+                  srcset="../images/studio-luminant-sage-relief-wall-homeware-showroom-concept-400w.webp 400w,
+                  ../images/studio-luminant-sage-relief-wall-homeware-showroom-concept-800w.webp 800w,
+                  ../images/studio-luminant-sage-relief-wall-homeware-showroom-concept.webp 1122w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-geometric-pinwheel-relief-wall-cladding-lounge.jpg"
-                   alt="Pale pinwheel relief wall lit from above, curved sofa in a quiet lounge" width="1376" height="768"
+              <img src="../images/studio-luminant-sage-relief-wall-homeware-showroom-concept.jpg"
+                   alt="Raking daylight across a sage relief of stacked wave bands in a homeware showroom; oak plinths, ceramics and folded textiles below" width="1122" height="1402"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Pinwheel</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
+        <span class="grid-caption"><span class="caption-name">Homeware Showroom</span><span class="caption-meta">Retail &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1.webp 2048w"
+                  srcset="../images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square-400w.webp 400w,
+                  ../images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square-800w.webp 800w,
+                  ../images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square.webp 1080w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-1.jpg"
-                   alt="Cream panel of nested arches and parallel vertical lines, art deco in feel" width="2048" height="2048"
+              <img src="../images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-square.jpg"
+                   alt="Sand-coloured relief of vertical wave bands above a tan leather banquette in a café; a small marble table and a bentwood chair in front" width="1080" height="1080"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Facet Series I</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
+        <span class="grid-caption"><span class="caption-name">Café</span><span class="caption-meta">F&amp;B &middot; Concept</span></span>
+      </button>
+      <button type="button" class="grid-item" data-cat="context">
         <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2.webp 2048w"
+                  srcset="../images/studio-luminant-flowing-fibre-relief-wall-living-room-concept-400w.webp 400w,
+                  ../images/studio-luminant-flowing-fibre-relief-wall-living-room-concept-800w.webp 800w,
+                  ../images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.webp 1122w"
                   sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-geometric-pattern-wall-panel-variant-2.jpg"
-                   alt="Cream panel of flowing, braided lines that recall water currents" width="2048" height="2048"
+              <img src="../images/studio-luminant-flowing-fibre-relief-wall-living-room-concept.jpg"
+                   alt="Pale grey relief wall of drifting vertical fibres behind a living-room sofa, with daylight raking across it" width="1122" height="449"
                    loading="lazy" decoding="async">
             </picture>
-        <div class="grid-caption"><div class="caption-name">Facet Series II</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-diagonal-wave-wall-panel-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-diagonal-wave-wall-panel-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-diagonal-wave-wall-panel-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-diagonal-wave-wall-panel.webp 2048w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-diagonal-wave-wall-panel.jpg"
-                   alt="Tall cream panel of slanted, rippling ridges that recall eroded strata" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Diagonal Wave</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-faceted-crystal-diagonal-wall-panel-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-faceted-crystal-diagonal-wall-panel-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-faceted-crystal-diagonal-wall-panel-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-faceted-crystal-diagonal-wall-panel.webp 2048w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-faceted-crystal-diagonal-wall-panel.jpg"
-                   alt="Cream square panel of diagonal layered folds, like wind-cut dunes" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Crystal Facet</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2-400w.webp 400w,
-                  ../images/studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2-800w.webp 800w,
-                  ../images/studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-50x50cm-modular-gypsum-wall-panel-architectural-photo-v2.jpg"
-                   alt="Cream panel densely covered with carved fern and leaf fronds" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Modular 50×50</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior-400w.webp 400w,
-                  ../images/studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior-800w.webp 800w,
-                  ../images/studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.webp 1344w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-geometric-star-relief-wall-panels-luxury-hospitality-interior.jpg"
-                   alt="Pale star-lattice relief wall behind low curved sofas" width="1344" height="768"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Star Field</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-2-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-2-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-2-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-2.webp 2048w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-2.jpg"
-                   alt="Cream panel of tall angular folds in a vertical zigzag" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Terrain II</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-7-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-7-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-7-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-7.webp 2048w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-7.jpg"
-                   alt="Cream panel of irregular triangular facets, like cut crystal" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Terrain VII</div><div class="caption-meta">Geometric &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-3d-tile-design-variants-architectural-relief-panel-400w.webp 400w,
-                  ../images/studio-luminant-3d-tile-design-variants-architectural-relief-panel-800w.webp 800w,
-                  ../images/studio-luminant-3d-tile-design-variants-architectural-relief-panel.webp 832w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-3d-tile-design-variants-architectural-relief-panel.jpg"
-                   alt="Terracotta hexagonal tiles, each with its own motif: a cup, botanical sprigs, a sunburst" width="832" height="1248"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Tile Variants</div><div class="caption-meta">Geometric &middot; Design Study</div></div>
-      </div>
-      <div class="grid-item" data-cat="geometric">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup-400w.webp 400w,
-                  ../images/studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup-800w.webp 800w,
-                  ../images/studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-framed-30x30cm-3d-architectural-relief-panel-closeup.jpg"
-                   alt="Cream baroque relief panel with symmetrical acanthus scrollwork against a grey wall" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Ornamental Relief</div><div class="caption-meta">Ornamental &middot; Lumina PMAG™</div></div>
-      </div>
-
-      <!-- ORGANIC -->
-      <div class="grid-item" data-cat="organic">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel-400w.webp 400w,
-                  ../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel-800w.webp 800w,
-                  ../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp 1200w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-wall-panel.webp"
-                   alt="Upright cream panel with a cellular, pebble-like relief pattern in soft light" width="1200" height="1200"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Cell Structure</div><div class="caption-meta">Organic &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="organic">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup-400w.webp 400w,
-                  ../images/studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup-800w.webp 800w,
-                  ../images/studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup.webp 1376w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-bas-relief-wall-panel-tile-square-detail-closeup.jpg"
-                   alt="Cream square tile seen at an angle, floral scrollwork in low relief" width="1376" height="768"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Bas Relief</div><div class="caption-meta">Organic &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="organic">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-6-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-6-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-6-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-6.webp 2048w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-6.jpg"
-                   alt="Cream panel of large hexagonal cells" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Erosion</div><div class="caption-meta">Organic &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="organic">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-8-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-8-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-8-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-8.webp 2048w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-8.jpg"
-                   alt="Cream panel of overlapping horizontal curved bands" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Strata</div><div class="caption-meta">Organic &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="organic">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-9-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-9-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-9-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-surface-wall-panel-variant-9.webp 2048w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-surface-wall-panel-variant-9.jpg"
-                   alt="Cream panel of angular stepped blocks casting sharp shadows" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Ripple</div><div class="caption-meta">Organic &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="organic">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-wall-panel-product-shot-variant-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-wall-panel-product-shot-variant-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-wall-panel-product-shot-variant-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-wall-panel-product-shot-variant.webp 1696w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-wall-panel-product-shot-variant.jpg"
-                   alt="Tall narrow freestanding cream panel with a tightly folded, accordion-like profile" width="1696" height="2528"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Undulation</div><div class="caption-meta">Organic &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="organic">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-400w.webp 400w,
-                  ../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-800w.webp 800w,
-                  ../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02-1600w.webp 1600w,
-                  ../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.webp 4096w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-lumina-pmag-gypsum-relief-panel-hd-02.jpg"
-                   alt="Cream relief panel of four petal-shaped forms meeting at the centre, soft studio light" width="4096" height="4096"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Flow</div><div class="caption-meta">Organic &middot; Lumina PMAG™</div></div>
-      </div>
-
-      <!-- HERITAGE -->
-      <div class="grid-item" data-cat="heritage">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern-400w.webp 400w,
-                  ../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern-800w.webp 800w,
-                  ../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.webp 832w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-ottoman-heritage-gypsum-relief-tile-islamic-geometric-pattern.jpg"
-                   alt="Dark bronze-toned panel with a dense Ottoman geometric medallion and arabesque relief" width="832" height="1248"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Ottoman Geometry</div><div class="caption-meta">Heritage &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="heritage">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-compass-star-wall-panel-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-compass-star-wall-panel-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-compass-star-wall-panel-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-compass-star-wall-panel.webp 2048w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-compass-star-wall-panel.jpg"
-                   alt="Cream square panel with a sharp four-pointed star at the centre and soft curved corners" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Compass Star</div><div class="caption-meta">Heritage &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="heritage">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-fluted-column-wall-panel-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-fluted-column-wall-panel-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-fluted-column-wall-panel-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-fluted-column-wall-panel.webp 2048w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-fluted-column-wall-panel.jpg"
-                   alt="Tall cream panel of broad, rounded vertical folds, like a fluted screen" width="2048" height="2048"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Fluted Column</div><div class="caption-meta">Heritage &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="heritage">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design-400w.webp 400w,
-                  ../images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design-800w.webp 800w,
-                  ../images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design-1600w.webp 1600w,
-                  ../images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design.webp 2400w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-50x50cm-neo-heritage-modular-wall-panel-design.jpg"
-                   alt="Cream tile at an angle, an eight-fold star built from interlaced bands" width="2400" height="1792"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Neo Heritage</div><div class="caption-meta">Heritage &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="heritage">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent-400w.webp 400w,
-                  ../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent-800w.webp 800w,
-                  ../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-lumina-pmag-ottoman-geometric-gypsum-relief-panel-gold-accent.jpg"
-                   alt="Cream relief panel with an eight-pointed star and floral arabesque, hung on a dark wall" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Ottoman Gold</div><div class="caption-meta">Heritage &middot; Lumina PMAG™</div></div>
-      </div>
-
-      <!-- IN CONTEXT -->
-      <div class="grid-item" data-cat="context">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-petal-geometric-relief-corridor-concept-400w.webp 400w,
-                  ../images/studio-luminant-petal-geometric-relief-corridor-concept-800w.webp 800w,
-                  ../images/studio-luminant-petal-geometric-relief-corridor-concept-1600w.webp 1600w,
-                  ../images/studio-luminant-petal-geometric-relief-corridor-concept.webp 2000w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-petal-geometric-relief-corridor-concept.webp"
-                   alt="Petal-geometric relief wall along a warm brown corridor, tall windows at the far end" width="2816" height="1536"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Petal Corridor</div><div class="caption-meta">Hospitality &middot; Design Study</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception-400w.webp 400w,
-                  ../images/studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception-800w.webp 800w,
-                  ../images/studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception.webp 1200w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-lumina-pmag-organic-cell-relief-panels-hotel-lobby-reception.webp"
-                   alt="Pale cellular relief wall behind a curved timber reception counter" width="1200" height="1200"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Hotel Reception</div><div class="caption-meta">Hospitality &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-organic-cell-relief-hotel-reception-architectural-render-400w.webp 400w,
-                  ../images/studio-luminant-organic-cell-relief-hotel-reception-architectural-render-800w.webp 800w,
-                  ../images/studio-luminant-organic-cell-relief-hotel-reception-architectural-render.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-organic-cell-relief-hotel-reception-architectural-render.jpg"
-                   alt="White cellular relief wall in a restaurant, green banquettes and lit bar shelves" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Organic Cell Restaurant</div><div class="caption-meta">Hospitality &middot; Architectural Render</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design-400w.webp 400w,
-                  ../images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design-800w.webp 800w,
-                  ../images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design.webp"
-                   alt="Sage-green cellular relief wall in a restaurant, rattan chairs, terracotta floor" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Organic Cell Bistro</div><div class="caption-meta">Hospitality &middot; Design Study</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior-400w.webp 400w,
-                  ../images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior-800w.webp 800w,
-                  ../images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior.webp"
-                   alt="Dining-room wall of round sphere-form relief modules in cream, set table below brass pendants" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Fluted Dining</div><div class="caption-meta">Hospitality &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd-1600w.webp 1600w,
-                  ../images/studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd.webp 2752w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-wall-panels-hospitality-interior-hd.jpg"
-                   alt="Pale wall of arched and linear relief modules, low stool and sculptural side table" width="2752" height="1536"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Lounge Cladding</div><div class="caption-meta">Hospitality &middot; Lumina PMAG™</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-hotel-reception-cladding-presentation-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-hotel-reception-cladding-presentation-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-hotel-reception-cladding-presentation.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-hotel-reception-cladding-presentation.jpg"
-                   alt="Terracotta cellular relief wall above a blush banquette, brass pendant fixture" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Organic Cell — Warm</div><div class="caption-meta">Hospitality &middot; Presentation Render</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render-400w.webp 400w,
-                  ../images/studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render-800w.webp 800w,
-                  ../images/studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render.webp 1200w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-3d-relief-wall-panels-hotel-lobby-reception-render.webp"
-                   alt="Cellular relief wall in raking light, living room with sofa and low table" width="1200" height="1200"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Organic Cell Residence</div><div class="caption-meta">Hospitality &middot; Architectural Render</div></div>
-      </div>
-      <div class="grid-item" data-cat="context">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-architectural-relief-wall-texture-hospitality-concept-400w.webp 400w,
-                  ../images/studio-luminant-architectural-relief-wall-texture-hospitality-concept-800w.webp 800w,
-                  ../images/studio-luminant-architectural-relief-wall-texture-hospitality-concept.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-architectural-relief-wall-texture-hospitality-concept.jpg"
-                   alt="Rippled cream relief wall under cove light, bouclé sofa and potted olive tree" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="grid-caption"><div class="caption-name">Textured Feature</div><div class="caption-meta">Hospitality &middot; Lumina PMAG™</div></div>
-      </div>
+        <span class="grid-caption"><span class="caption-name">Living Room</span><span class="caption-meta">Residential &middot; Concept</span></span>
+      </button>
     </div>
   </div>
 </section>
@@ -929,32 +542,19 @@ section { padding: 120px 60px; }
 <section class="materials-section" id="materials">
   <div class="section-inner">
     <div class="section-eyebrow reveal">Materials</div>
-    <h2 class="section-title reveal">Two Materials,<br><em>Infinite Surfaces</em></h2>
-    <p class="section-desc reveal">Purpose-engineered for architectural relief. Choose by performance requirement — we handle the rest.</p>
+    <h2 class="section-title reveal">One Material,<br><em>Infinite Surfaces</em></h2>
+    <p class="section-desc reveal"><span translate="no">Lumina PMAG™</span> is engineered for architectural relief.</p>
 
     <div class="materials-grid">
       <div class="material-card reveal">
-        <div class="material-name">Lumina PMAG&trade;</div>
+        <div class="material-name"><span translate="no">Lumina PMAG&trade;</span></div>
         <div class="material-full">Polymer Modified Alpha Gypsum</div>
-        <div class="material-desc">Mineral-based casting compound engineered for interior architectural surfaces. Over 95% mineral by mass. Ideal for hospitality interiors.</div>
+        <div class="material-desc">Mineral-based casting compound engineered for interior architectural surfaces. Over 95% mineral by mass. Interior walls and ceilings, column wraps, counter and desk fronts, accent surfaces.</div>
         <div class="specs-grid">
           <div class="spec-cell"><div class="spec-label">Application</div><div class="spec-value">Interior</div></div>
           <div class="spec-cell"><div class="spec-label">Surface Finish</div><div class="spec-value">Any RAL / Custom</div></div>
-          <div class="spec-cell"><div class="spec-label">Thickness</div><div class="spec-value">15 &ndash; 40 mm</div></div>
-          <div class="spec-cell"><div class="spec-label">Weight</div><div class="spec-value">35–40 kg/m&sup2;</div></div>
-        </div>
-      </div>
-
-      <div class="material-card reveal">
-        <div class="material-name">Lumina PUCOMP&trade;</div>
-        <div class="material-full">Advanced Composite</div>
-        <div class="material-desc">High-performance composite for complex geometries and demanding environments. A rigid composite matrix with mineral fillers delivers exceptional detail reproduction and dimensional stability.</div>
-        <div class="specs-grid">
-          <div class="spec-cell"><div class="spec-label">Application</div><div class="spec-value">Interior / Exterior</div></div>
-          <div class="spec-cell"><div class="spec-label">Surface Finish</div><div class="spec-value">Any RAL / Custom</div></div>
-          <div class="spec-cell"><div class="spec-label">Detail Resolution</div><div class="spec-value">Sub-millimetre</div></div>
-          <div class="spec-cell"><div class="spec-label">Thickness</div><div class="spec-value">8 &ndash; 25 mm</div></div>
-          <div class="spec-cell"><div class="spec-label">Weight</div><div class="spec-value">12 &ndash; 18 kg/m&sup2;</div></div>
+          <div class="spec-cell"><div class="spec-label">Thickness</div><div class="spec-value">15&nbsp;&ndash;&nbsp;40&nbsp;mm</div></div>
+          <div class="spec-cell"><div class="spec-label">Weight</div><div class="spec-value">35&nbsp;–&nbsp;40&nbsp;kg/m&sup2; @&nbsp;25&nbsp;mm</div></div>
         </div>
       </div>
     </div>
@@ -971,56 +571,54 @@ section { padding: 120px 60px; }
     <div class="apps-grid reveal">
       <div class="app-card">
         <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding-400w.webp 400w,
-                  ../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding-800w.webp 800w,
-                  ../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.webp 1200w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-luxury-hotel-lobby-organic-relief-wall-cladding.webp"
-                   alt="Lobby reception wall in cream cellular relief" width="1200" height="1200"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="app-label"><span class="app-type">Hospitality</span><span class="app-name">Hotel Lobbies</span></div>
+          <source type="image/webp"
+              srcset="../images/studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait-400w.webp 400w,
+              ../images/studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait-800w.webp 800w,
+              ../images/studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait.webp 1050w"
+              sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+          <img src="../images/studio-luminant-cellular-relief-wall-hotel-lobby-desk-concept-portrait.jpg"
+               alt="Cellular relief wall behind a travertine reception desk, side light from the left deepening each cell; a bouclé lounge chair and low table in front" width="1050" height="1400"
+               loading="lazy" decoding="async">
+        </picture>
+        <div class="app-label"><span class="app-type">Hotel</span><span class="app-name">Lobbies &amp; Reception</span></div>
       </div>
       <div class="app-card">
         <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior-400w.webp 400w,
-                  ../images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior-800w.webp 800w,
-                  ../images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-geometric-relief-wall-panels-restaurant-hospitality-interior.webp"
-                   alt="Restaurant wall of round relief modules above a set table" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
+          <source type="image/webp"
+              srcset="../images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait-400w.webp 400w,
+              ../images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait-800w.webp 800w,
+              ../images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.webp 1080w"
+              sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+          <img src="../images/studio-luminant-sand-wave-relief-wall-cafe-banquette-concept-portrait.jpg"
+               alt="Sand-coloured relief of vertical wave bands above a tan leather banquette in a café; a small marble table and a bentwood chair in front" width="1080" height="1440"
+               loading="lazy" decoding="async">
+        </picture>
         <div class="app-label"><span class="app-type">F&B</span><span class="app-name">Restaurants &amp; Bars</span></div>
       </div>
       <div class="app-card">
         <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design-400w.webp 400w,
-                  ../images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design-800w.webp 800w,
-                  ../images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design.webp 1024w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-bespoke-architectural-relief-hospitality-lobby-design.webp"
-                   alt="Sage-green cellular relief wall beside restaurant tables" width="1024" height="1024"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="app-label"><span class="app-type">Commercial</span><span class="app-name">Corporate Reception</span></div>
+          <source type="image/webp"
+              srcset="../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait-400w.webp 400w,
+              ../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.webp 768w"
+              sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+          <img src="../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.jpg"
+               alt="Sage relief of fine undulating lines as the bed-head wall of a hotel guestroom, grazed by a concealed linear light at the ceiling line" width="768" height="1024"
+               loading="lazy" decoding="async">
+        </picture>
+        <div class="app-label"><span class="app-type">Hotel</span><span class="app-name">Guestrooms</span></div>
       </div>
       <div class="app-card">
         <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-petal-geometric-relief-corridor-concept-400w.webp 400w,
-                  ../images/studio-luminant-petal-geometric-relief-corridor-concept-800w.webp 800w,
-                  ../images/studio-luminant-petal-geometric-relief-corridor-concept-1600w.webp 1600w,
-                  ../images/studio-luminant-petal-geometric-relief-corridor-concept.webp 2000w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
-              <img src="../images/studio-luminant-petal-geometric-relief-corridor-concept.webp"
-                   alt="Petal-geometric relief corridor with tall end window" width="2816" height="1536"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="app-label"><span class="app-type">Residential</span><span class="app-name">Feature Walls</span></div>
+          <source type="image/webp"
+              srcset="../images/studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait-400w.webp 400w,
+              ../images/studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait-800w.webp 800w,
+              ../images/studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait.webp 1050w"
+              sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+          <img src="../images/studio-luminant-sage-relief-wall-homeware-showroom-concept-portrait.jpg"
+               alt="Raking daylight across a sage relief of stacked wave bands in a homeware showroom; oak plinths, ceramics and folded textiles below" width="1050" height="1400"
+               loading="lazy" decoding="async">
+        </picture>
+        <div class="app-label"><span class="app-type">Retail</span><span class="app-name">Showrooms</span></div>
       </div>
     </div>
   </div>
@@ -1042,7 +640,7 @@ section { padding: 120px 60px; }
       <div class="process-step">
         <div class="step-num">02</div>
         <div class="step-title">Digital Modelling</div>
-        <div class="step-desc">Our digital pipeline generates pattern variations and outputs production-ready 3D models and BIM objects.</div>
+        <div class="step-desc">Our digital pipeline generates pattern variations and outputs 3D models and technical drawings.</div>
       </div>
       <div class="process-step">
         <div class="step-num">03</div>
@@ -1070,15 +668,17 @@ section { padding: 120px 60px; }
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer class="lookbook-footer">
-  <div class="footer-left">&copy; 2026 Studio Luminant. All rights reserved.</div>
+  <div class="footer-left">&copy; 2026 <span translate="no">Studio Luminant</span>. All rights reserved.</div>
   <div class="footer-right">Sakarya, Turkey &middot; studioluminant.com.tr</div>
 </footer>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <div class="lightbox-close">Close &times;</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged design image" aria-hidden="true">
+  <button type="button" class="lightbox-close" aria-label="Close enlarged image">Close <span aria-hidden="true">&times;</span></button>
   <img alt="">
   <div class="lightbox-caption">
     <div class="caption-name"></div>
@@ -1114,20 +714,39 @@ items.forEach(el => itemObs.observe(el));
 
 // FILTER
 const filterBtns = document.querySelectorAll('.filter-btn');
+const resultCount = document.getElementById('result-count');
+function applyFilter(cat) {
+  let count = 0;
+  filterBtns.forEach(b => {
+    const on = b.dataset.filter === cat;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+  items.forEach(item => {
+    const show = cat === 'all' || item.dataset.cat === cat;
+    item.classList.toggle('hidden', !show);
+    if (show) {
+      item.classList.add('visible');
+      count++;
+    }
+  });
+  resultCount.textContent = count + '\u00a0' + (count === 1 ? 'design' : 'designs') + ' shown';
+  return count;
+}
+// URL STATE: ?cat=<category>
+function syncUrl() {
+  const p = new URLSearchParams(location.search);
+  const active = document.querySelector('.filter-btn.active');
+  const cat = active ? active.dataset.filter : 'all';
+  if (cat === 'all') p.delete('cat'); else p.set('cat', cat);
+  const q = p.toString();
+  history.replaceState(null, '', location.pathname + (q ? '?' + q : '') + location.hash);
+}
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
     const cat = btn.dataset.filter;
-    let count = 0;
-    items.forEach(item => {
-      const show = cat === 'all' || item.dataset.cat === cat;
-      item.classList.toggle('hidden', !show);
-      if (show) {
-        item.classList.add('visible');
-        count++;
-      }
-    });
+    const count = applyFilter(cat);
+    syncUrl();
     if (typeof gtag === 'function') gtag('event', 'filter_select', { filter_type: 'category', filter_value: cat, filter_state: 'on', result_count: count });
   });
 });
@@ -1138,17 +757,29 @@ const lbImg = lightbox.querySelector('img');
 const lbName = lightbox.querySelector('.caption-name');
 const lbMeta = lightbox.querySelector('.caption-meta');
 
+let lbOpener = null;
+const lbClose = lightbox.querySelector('.lightbox-close');
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (lbOpener && document.contains(lbOpener)) lbOpener.focus();
+  lbOpener = null;
+}
 items.forEach(item => {
   item.addEventListener('click', () => {
+    lbOpener = item;
     const img = item.querySelector('img');
     const name = item.querySelector('.caption-name');
     const meta = item.querySelector('.caption-meta');
-    lbImg.src = img.src;
+    lbImg.src = img.currentSrc || img.src;
     lbImg.alt = img.alt;
     lbName.textContent = name ? name.textContent : '';
     lbMeta.textContent = meta ? meta.textContent : '';
     lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    lbClose.focus();
     // Scene images carry no pattern id — the image file stem is the stable key.
     const stem = img.getAttribute('src').split('/').pop().replace(/\.[a-z]+$/i, '').replace(/^studio-luminant-/, '');
     if (typeof gtag === 'function') gtag('event', 'view_design', {
@@ -1159,17 +790,20 @@ items.forEach(item => {
 });
 
 lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
+  if (e.target === lightbox || e.target.closest('.lightbox-close')) closeLightbox();
 });
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox.classList.contains('open')) {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') { closeLightbox(); return; }
+  // Focus trap: the close button is the only focusable control in the dialog.
+  if (e.key === 'Tab') { e.preventDefault(); lbClose.focus(); }
 });
+
+// RESTORE URL STATE
+(function () {
+  const cat = new URLSearchParams(location.search).get('cat');
+  if (cat && Array.from(filterBtns).some(b => b.dataset.filter === cat)) applyFilter(cat);
+})();
 </script>
 
 <script src="../consent.js"></script>

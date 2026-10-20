@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Studio Luminant</title>
-<meta name="description" content="Commission project-specific architectural elements from Studio Luminant. Hospitality, retail, residential &amp; interior design enquiries welcome.">
+<meta name="theme-color" content="#EFE8D5">
+<title>Contact: Send a Drawing or Request the Sample Box | Studio Luminant</title>
+<meta name="description" content="Send a sketch, a dimensioned drawing or a reference image for your wall. Or ask for the sample box: pieces cast in Lumina PMAG™ with artisan finishes.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/contact.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/iletisim.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/contact.htm">
   <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/iletisim.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
-<meta property="og:title" content="Contact — Studio Luminant">
-<meta property="og:description" content="Commission project-specific architectural elements from Studio Luminant. Enquiries from hospitality, retail, residential, and interior design specifiers welcome.">
+<meta property="og:title" content="Contact: Send a Drawing or Request the Sample Box | Studio Luminant">
+<meta property="og:description" content="Send a sketch, a dimensioned drawing or a reference image for your wall. Or ask for the sample box: pieces cast in Lumina PMAG™ with artisan finishes.">
 <meta property="og:url" content="https://studioluminant.com.tr/en/contact.htm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact — Studio Luminant">
-<meta name="twitter:description" content="Commission project-specific architectural elements from Studio Luminant. Enquiries from hospitality, retail, residential, and interior design specifiers welcome.">
+<meta name="twitter:title" content="Contact: Send a Drawing or Request the Sample Box | Studio Luminant">
+<meta name="twitter:description" content="Send a sketch, a dimensioned drawing or a reference image for your wall. Or ask for the sample box: pieces cast in Lumina PMAG™ with artisan finishes.">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -24,191 +25,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 
-<style>
-  /* ─── CONTACT MAIN ──────────────────── */
-  #contact-main {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* Left panel */
-  .contact-left {
-    background: var(--deep);
-    padding: 160px 80px 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    border-right: 1px solid var(--border);
-  }
-
-  .contact-left::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px),
-      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px);
-    pointer-events: none;
-  }
-
-  .contact-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(52px, 5vw, 80px);
-    font-weight: 300;
-    line-height: 1.0;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-    margin-bottom: 36px;
-    position: relative;
-  }
-  .contact-headline em { font-style: italic; color: var(--gold); }
-
-  .contact-intro {
-    font-size: 14px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    max-width: 400px;
-    margin-bottom: 64px;
-    position: relative;
-  }
-
-  .contact-details {
-    display: flex; flex-direction: column; gap: 32px;
-    position: relative;
-  }
-
-  .contact-detail-item {
-    display: flex; flex-direction: column; gap: 6px;
-  }
-  .contact-detail-label {
-    font-size: 9px; letter-spacing: 0.32em;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 400;
-  }
-  .contact-detail-value {
-    font-size: 14px; color: var(--text-primary);
-    font-weight: 300;
-  }
-  .contact-detail-value a {
-    color: var(--text-primary); text-decoration: none;
-    border-bottom: 1px solid var(--border);
-    transition: color 0.3s, border-color 0.3s;
-  }
-  .contact-detail-value a:hover { color: var(--gold); border-color: var(--gold); }
-
-  /* Right panel — form */
-  .contact-right {
-    background: var(--surface);
-    padding: 160px 80px 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .form-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px; font-weight: 300;
-    color: var(--text-primary);
-    margin-bottom: 48px;
-  }
-
-  .contact-form {
-    display: flex; flex-direction: column; gap: 0;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    margin-bottom: 2px;
-  }
-
-  .form-field {
-    display: flex; flex-direction: column;
-    margin-bottom: 2px;
-  }
-
-  .form-field label {
-    font-size: 9px; letter-spacing: 0.28em;
-    text-transform: uppercase; color: var(--text-muted);
-    margin-bottom: 8px;
-    font-weight: 400;
-  }
-
-  .form-field input,
-  .form-field select,
-  .form-field textarea {
-    background: var(--deep);
-    border: 1px solid var(--border);
-    color: var(--text-primary);
-    font-family: 'Jost', sans-serif;
-    font-size: 13px; font-weight: 300;
-    padding: 14px 16px;
-    transition: border-color 0.3s;
-    -webkit-appearance: none;
-    appearance: none;
-  }
-  .form-field input:focus,
-  .form-field select:focus,
-  .form-field textarea:focus {
-    border-color: var(--gold);
-  }
-  .form-field input::placeholder,
-  .form-field textarea::placeholder {
-    color: var(--text-muted);
-  }
-  .form-field select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A5450' stroke-width='1.2' fill='none'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-    padding-right: 40px;
-    cursor: pointer;
-  }
-  .form-field select option {
-    background: var(--deep);
-    color: var(--text-primary);
-  }
-  .form-field textarea {
-    resize: vertical;
-    min-height: 140px;
-    line-height: 1.7;
-  }
-
-  .form-submit {
-    display: flex; align-items: center; justify-content: center; gap: 12px;
-    font-family: 'Jost', sans-serif;
-    font-size: 11px; font-weight: 400;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--obsidian); background: var(--gold);
-    padding: 16px 32px;
-    border: none; cursor: pointer;
-    width: 100%;
-    margin-top: 2px;
-    transition: background 0.3s, gap 0.3s;
-  }
-  .form-submit:hover { background: var(--gold-light); gap: 20px; }
-  .form-submit svg { width: 14px; height: 14px; }
-
-  .form-note {
-    font-size: 10px; color: var(--text-muted);
-    margin-top: 14px; font-weight: 300;
-    line-height: 1.6;
-  }
-
-  /* ─── RESPONSIVE ────────────────────── */
-  @media (max-width: 1024px) {
-    #contact-main { grid-template-columns: 1fr; }
-    .contact-left { padding: 140px 32px 80px; }
-    .contact-right { padding: 60px 32px 80px; }
-    .form-row { grid-template-columns: 1fr; }
-  }
-</style>
+<link rel="stylesheet" href="../contact.css">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://studioluminant.com.tr/en/contact.htm"}]}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://studioluminant.com.tr/#organization", "name": "Studio Luminant", "url": "https://studioluminant.com.tr/", "image": "https://studioluminant.com.tr/images/studio-luminant-og-image.jpg", "logo": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png", "description": "Studio Luminant crafts bespoke architectural elements in Lumina PMAG™ and PUCOMP™ — sculptural relief surfaces, wall art, and decorative features for luxury hospitality and high-spec interiors.", "email": "info@studioluminant.com.tr", "address": {"@type": "PostalAddress", "streetAddress": "Rüstempaşa Mah. İstasyon Cad. No: 58", "addressLocality": "Sapanca", "addressRegion": "Sakarya", "postalCode": "54600", "addressCountry": "TR"}, "areaServed": ["TR", "Middle East", "Caucasus", "Eastern Europe"], "sameAs": ["https://www.instagram.com/studio_luminant", "https://www.linkedin.com/company/studioluminant"]}
+{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://studioluminant.com.tr/#organization", "name": "Studio Luminant", "url": "https://studioluminant.com.tr/", "image": "https://studioluminant.com.tr/images/studio-luminant-og-image.jpg", "logo": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png", "description": "Studio Luminant crafts bespoke architectural elements in Lumina PMAG™ — sculptural relief surfaces, wall art, and decorative features for hospitality and high-spec interiors.", "email": "info@studioluminant.com.tr", "address": {"@type": "PostalAddress", "streetAddress": "Rüstempaşa Mah. İstasyon Cad. No: 58", "addressLocality": "Sapanca", "addressRegion": "Sakarya", "postalCode": "54600", "addressCountry": "TR"}, "areaServed": ["TR", "Middle East", "Caucasus", "Eastern Europe"], "sameAs": ["https://www.instagram.com/studio_luminant", "https://www.linkedin.com/company/studioluminant"]}
 </script>
 </head>
 <body>
@@ -217,79 +39,63 @@
 
 <main id="main">
 
-<!-- CONTACT MAIN -->
-<section id="contact-main">
+<section class="ct-hero" aria-labelledby="ct-title">
+  <header class="ct-intro">
+    <div class="eyebrow">Contact</div>
+    <h1 class="ct-title" id="ct-title">Send your<br><em>drawing.</em></h1>
+    <p class="ct-lede">A hand sketch, a dimensioned drawing or a reference image is enough to start. Tell us about the wall: the space it sits in, its approximate size, how it is lit. We read the drawing first. Then we come back with questions.</p>
+    <dl class="ct-facts">
+      <div><dt>Email</dt><dd><a href="mailto:info@studioluminant.com.tr">info@studioluminant.com.tr</a></dd></div>
+      <div><dt>Phone / WhatsApp</dt><dd><span class="ph" data-placeholder>[+90 … · contact name]</span></dd></div>
+      <div><dt>Studio and workshop</dt><dd>Rüstempaşa Mah. İstasyon Cad.<br>No:&nbsp;58, PK&nbsp;54600<br>Sapanca / Sakarya</dd></div>
+      <div><dt>We deliver to</dt><dd>Turkey · Middle East · Caucasus · Eastern Europe</dd></div>
+      <div><dt>Follow</dt><dd><a href="https://www.instagram.com/studio_luminant" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.linkedin.com/company/studioluminant" target="_blank" rel="noopener">LinkedIn</a></dd></div>
+    </dl>
+  </header>
 
-  <!-- Left: info panel -->
-  <div class="contact-left">
-    <div class="eyebrow reveal">Project Enquiries</div>
-    <h1 class="contact-headline reveal">
-      Let's Build<br><em>Something.</em>
-    </h1>
-    <p class="contact-intro reveal">
-      Every project begins with a conversation. Tell us about your project — scale, geometry, timeline, and finish ambitions. We respond within 5 working days with a material recommendation and preliminary sketch.
-    </p>
-    <div class="contact-details reveal">
-      <div class="contact-detail-item">
-        <span class="contact-detail-label">Email</span>
-        <div class="contact-detail-value">
-          <a href="mailto:info@studioluminant.com.tr">info@studioluminant.com.tr</a>
+  <div class="ct-card">
+    <h2 class="ct-card__title" id="project-title">Tell us about the wall</h2>
+    <form class="ct-form" id="contactForm" action="https://formspree.io/f/xpqygpjw" method="POST" aria-labelledby="project-title"
+      data-form-type="project" data-link-label="Drawing link"
+      data-msg-sending="Sending…" data-msg-sent="Sent"
+      data-msg-ok="Thank you. Your brief has reached us, and we’ll write back once we’ve read it."
+      data-msg-error="Something went wrong. Please email us directly at info@studioluminant.com.tr.">
+      <p class="ct-help ct-legend" aria-hidden="true">* required field</p>
+      <div class="ct-row">
+        <div class="ct-field">
+          <label for="p-name">Name <span class="ct-req" aria-hidden="true">*</span></label>
+          <input type="text" id="p-name" name="name" placeholder="Jane Smith…" autocomplete="name" required>
+        </div>
+        <div class="ct-field">
+          <label for="p-company">Practice / company</label>
+          <input type="text" id="p-company" name="company" placeholder="Example Architects…" autocomplete="organization">
         </div>
       </div>
-      <div class="contact-detail-item">
-        <span class="contact-detail-label">Studio &amp; Workshop</span>
-        <div class="contact-detail-value">Rüstempaşa Mah. İstasyon Cad.<br>No: 58, PK 54600<br>Sapanca / Sakarya</div>
-      </div>
-      <div class="contact-detail-item">
-        <span class="contact-detail-label">Distribution</span>
-        <div class="contact-detail-value">Global — Middle East · Caucasus · Eastern Europe</div>
-      </div>
-      <div class="contact-detail-item">
-        <span class="contact-detail-label">Follow</span>
-        <div class="contact-detail-value">
-          <a href="https://www.instagram.com/studio_luminant" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.linkedin.com/company/studioluminant" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="ct-row">
+        <div class="ct-field">
+          <label for="p-email">Email <span class="ct-req" aria-hidden="true">*</span></label>
+          <input type="email" id="p-email" name="email" placeholder="you@practice.com…" autocomplete="email" inputmode="email" spellcheck="false" autocapitalize="off" required>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Right: form -->
-  <div class="contact-right">
-    <div class="form-title reveal">Send an Enquiry</div>
-    <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xpqygpjw" method="POST">
-
-      <div class="form-row">
-        <div class="form-field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your full name…" autocomplete="name" required>
-        </div>
-        <div class="form-field">
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" placeholder="Firm or practice…" autocomplete="organization">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
-        </div>
-        <div class="form-field">
-          <label for="project-type">Project Type</label>
-          <select id="project-type" name="project_type" autocomplete="off">
-            <option value="">Select Project Type</option>
-            <option value="Hotel / Hospitality">Hotel / Hospitality</option>
-            <option value="High-End Residential">High-End Residential</option>
-            <option value="Retail &amp; F&amp;B">Retail &amp; F&amp;B</option>
-            <option value="Cultural Institution">Cultural Institution</option>
+        <div class="ct-field">
+          <label for="p-type">Project type</label>
+          <select id="p-type" name="project_type" autocomplete="off">
+            <option value="">Select</option>
+            <option value="Hotel / Hospitality">Hotel and hospitality</option>
+            <option value="High-End Residential">Residential</option>
+            <option value="Retail &amp; F&amp;B">Retail and F&amp;B</option>
+            <option value="Cultural Institution">Cultural building</option>
             <option value="Other">Other</option>
           </select>
         </div>
       </div>
-
-      <div class="form-field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Describe your project — scale, geometry, timeline, finish requirements…" required></textarea>
+      <div class="ct-field">
+        <label for="p-message">Message <span class="ct-req" aria-hidden="true">*</span></label>
+        <textarea id="p-message" name="message" placeholder="The space, wall dimensions, lighting, your timing…" required></textarea>
+      </div>
+      <div class="ct-field">
+        <label for="p-link">Link to your drawing (optional)</label>
+        <input type="url" id="p-link" name="drawing_link" placeholder="https://…" inputmode="url" spellcheck="false" autocapitalize="off" aria-describedby="p-link-help">
+        <p class="ct-help" id="p-link-help">There is no file upload on this form. Paste a share link here, or email the drawing to <a href="mailto:info@studioluminant.com.tr">info@studioluminant.com.tr</a>. For large drawing sets, email us a download link from your usual file-transfer service.</p>
       </div>
 
       <input type="hidden" name="_subject" value="New Project Enquiry — Studio Luminant">
@@ -297,63 +103,92 @@
       <!-- honeypot: hidden from people; bots that fill it are silently dropped by lead-intake + Formspree -->
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 
-      <button type="submit" class="form-submit" id="submitBtn">
-        Submit Enquiry
-        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
-        </svg>
+      <button type="submit" class="btn-primary ct-submit">
+        Send the brief
+        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>
       </button>
-
-      <p class="form-note">We respond within 5 working days with a material recommendation and preliminary sketch.</p>
-
-      <div id="formStatus" role="alert" aria-live="assertive" style="display:none; margin-top:16px; padding:16px; font-size:13px; line-height:1.6; font-weight:300;"></div>
+      <p class="ct-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
     </form>
+  </div>
+</section>
 
-    <script>
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
-      const btn = document.getElementById('submitBtn');
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        btn.disabled = true;
-        btn.innerHTML = 'Sending…';
-        const data = Object.fromEntries(new FormData(form).entries());
-        // Notification backup — Formspree email (non-blocking; CRM capture below is the source of truth)
-        if (form.action) {
-          fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }).catch(() => {});
-        }
-        try {
-          // Primary: capture into the CRM
+<section class="ct-sample night" id="sample" aria-labelledby="sample-title">
+  <div class="ct-sample__inner">
+    <div class="ct-sample__copy">
+      <div class="eyebrow reveal">Sample box</div>
+      <h2 class="ct-sample__h reveal" id="sample-title">Judge the relief<br><em>in your own light.</em></h2>
+      <p class="ct-sample__p reveal">Depth, surface and colour get lost in a photograph. The sample box holds pieces cast in <span translate="no">Lumina PMAG™</span>, with artisan finishes, for you to turn over by a window, or under a lamp set low so its light rakes across them.</p>
+      <p class="ct-sample__free reveal">Free, with no commitment.</p>
+      <figure class="ct-sample__fig reveal">
+        <picture>
+          <source type="image/webp" srcset="../images/studio-luminant-sample-box-four-material-systems-800w.webp 800w, ../images/studio-luminant-sample-box-four-material-systems.webp 1600w" sizes="(orientation: portrait) 100vw, (max-width: 820px) 100vw, 600px">
+          <img src="../images/studio-luminant-sample-box-four-material-systems.jpg" width="1600" height="1073" loading="lazy" decoding="async" alt="The open sample box with cast relief samples inside">
+        </picture>
+      </figure>
+    </div>
+
+    <div class="ct-card">
+      <h3 class="ct-card__title" id="sample-form-title">Request the sample box</h3>
+      <!-- Sample-box requests reuse the shared Formspree endpoint (xpqygpjw); tagged via _subject/source so they stay filterable. Primary capture is the Supabase CRM. -->
+      <form class="ct-form" id="sampleForm" action="https://formspree.io/f/xpqygpjw" method="POST" aria-labelledby="sample-form-title"
+        data-form-type="sample"
+        data-msg-sending="Sending…" data-msg-sent="Sent"
+        data-msg-ok="Thank you. Your sample box request has reached us; we’ll email you for the shipping details."
+        data-msg-error="Something went wrong. Please email us directly at info@studioluminant.com.tr.">
+        <p class="ct-help ct-legend" aria-hidden="true">* required field</p>
+        <div class="ct-row">
+          <div class="ct-field">
+            <label for="s-name">Name <span class="ct-req" aria-hidden="true">*</span></label>
+            <input type="text" id="s-name" name="name" placeholder="Jane Smith…" autocomplete="name" required>
+          </div>
+          <div class="ct-field">
+            <label for="s-company">Practice / company</label>
+            <input type="text" id="s-company" name="company" placeholder="Example Architects…" autocomplete="organization">
+          </div>
+        </div>
+        <div class="ct-row">
+          <div class="ct-field">
+            <label for="s-email">Email <span class="ct-req" aria-hidden="true">*</span></label>
+            <input type="email" id="s-email" name="email" placeholder="you@practice.com…" autocomplete="email" inputmode="email" spellcheck="false" autocapitalize="off" required>
+          </div>
+          <div class="ct-field">
+            <label for="s-city">Shipping city</label>
+            <input type="text" id="s-city" name="shipping_city" placeholder="Istanbul…" autocomplete="address-level2">
+          </div>
+        </div>
+        <div class="ct-field">
+          <label for="s-message">Note (optional)</label>
+          <textarea id="s-message" name="message" placeholder="If you’re working on a project, tell us about it in a line or two…"></textarea>
+        </div>
+
+        <input type="hidden" name="project_type" value="Sample Box Request">
+        <input type="hidden" name="source" value="contact-sample-en">
+        <input type="hidden" name="_subject" value="Sample Box Request — Contact Page (EN)">
+        <!-- honeypot: hidden from people; bots that fill it are silently dropped by lead-intake + Formspree -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
+        <button type="submit" class="btn-primary ct-submit">
+          Request the sample box
+          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>
+        </button>
+        <p class="ct-note">Once your request is in, we’ll email you for the address and shipping details.</p>
+        <p class="ct-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  // CRM capture (lead-intake, the source of truth); contact.js calls this for both forms.
+  window.slLeadPost = async function (data) {
           const res = await fetch('https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'x-sl-key': 'sl_web_lead_k7Qm2P' },
             body: JSON.stringify(data)
           });
-          if (res.ok) {
-            if (typeof gtag === 'function') { gtag('event', 'generate_lead', { source: data.source || '' }); }
-            if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-            status.style.display = 'block';
-            status.style.color = 'var(--gold)';
-            status.style.border = '1px solid var(--gold-dim)';
-            status.textContent = "Thank you \u2014 your enquiry has been received. We\u2019ll be in touch within 5 working days.";
-            form.reset();
-            btn.innerHTML = 'Sent ✓';
-          } else {
-            throw new Error();
-          }
-        } catch {
-          status.style.display = 'block';
-          status.style.color = '#e74c3c';
-          status.style.border = '1px solid #e74c3c';
-          status.textContent = 'Something went wrong. Please email us directly at info@studioluminant.com.tr';
-          btn.disabled = false;
-          btn.innerHTML = 'Submit Enquiry <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>';
-        }
-      });
-    </script>
-  </div>
-
-</section>
+    return res;
+  };
+</script>
 
 </main>
 
@@ -374,10 +209,7 @@
     <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
     <a href="resources-lead-times.htm">Lead Times</a>
     <a href="resources-sustainability.htm">Sustainability</a>
-    <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
-    <a href="case-study-petal-lounge.htm">Petal Lounge</a>
-    <a href="case-study-wave-lounge.htm">Wave Lounge</a>
     <a href="contact.htm">Contact</a>
     <a href="site-map.htm">Site Map</a>
   </nav>
@@ -385,6 +217,7 @@
 
 <script src="../shared.js"></script>
 <script src="../components.js"></script>
+<script src="../contact.js" defer></script>
 
 <script src="../consent.js"></script>
 </body>

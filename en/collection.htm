@@ -3,26 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Concept Work — Bespoke Architectural Relief | Studio Luminant</title>
-<meta name="description" content="Studio Luminant's concept relief work — geometric, organic, heritage &amp; surface designs we cast in Lumina PMAG™ &amp; PUCOMP™.">
+<meta name="theme-color" content="#EFE8D5">
+<title>Library: Relief Systems and Design Studies | Studio Luminant</title>
+<meta name="description" content="Cast relief systems with a defined size, depth and layout, alongside our design studies. Each system can be adapted to a project in Lumina PMAG™.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/collection.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/koleksiyon.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/collection.htm">
   <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/koleksiyon.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
-<meta property="og:title" content="Concept Work — Bespoke Architectural Relief | Studio Luminant">
-<meta property="og:description" content="Browse Studio Luminant's concept relief work — geometric, organic, heritage, and surface designs we cast in Lumina PMAG™ and Lumina PUCOMP™.">
+<meta property="og:title" content="Library: Relief Systems and Design Studies | Studio Luminant">
+<meta property="og:description" content="Cast relief systems with a defined size, depth and layout, alongside our design studies. Each system can be adapted to a project in Lumina PMAG™.">
 <meta property="og:url" content="https://studioluminant.com.tr/en/collection.htm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Concept Work — Bespoke Architectural Relief | Studio Luminant">
-<meta name="twitter:description" content="Browse Studio Luminant's concept relief work.">
+<meta name="twitter:title" content="Library: Relief Systems and Design Studies | Studio Luminant">
+<meta name="twitter:description" content="The Studio Luminant Library: cast relief systems and design studies.">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<link rel="stylesheet" href="../library.css">
 
 <style>
   /* ─── COLLECTION HERO ──────────────── */
@@ -49,9 +51,13 @@
     pointer-events: none;
   }
   .hero-image-wrap img {
-    width: 100%; display: block;
-    opacity: 0; animation: fadeUp 0.9s ease 0.3s forwards;
+    width: 100%; height: auto; display: block;
+    animation: heroRise 0.9s ease 0.1s both;
   }
+  @keyframes heroRise { from { transform: translateY(16px); } to { transform: none; } }
+  .sl-modal { overscroll-behavior: contain; }
+  .lb-details, .lb-image { overscroll-behavior: contain; }
+  .filter-count { font-variant-numeric: tabular-nums; }
 
   .hero-text { flex: 1; }
 
@@ -132,7 +138,7 @@
     text-transform: uppercase; font-weight: 400;
     color: var(--text-muted);
     background: transparent;
-    border: 1px solid rgba(201,168,76,0.15);
+    border: 1px solid rgba(var(--accent-rgb),0.15);
     padding: 5px 14px; border-radius: 4px;
     cursor: pointer;
     transition: border-color 0.3s, color 0.3s;
@@ -183,7 +189,7 @@
     .pattern-card:hover {
       border-color: var(--border);
       transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 4px 20px rgba(201, 168, 76, 0.12);
+      box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.12);
     }
     .pattern-card:hover .card-img-wrap img {
       transform: scale(1.04);
@@ -426,7 +432,7 @@
   }
 </style>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Concept Work", "item": "https://studioluminant.com.tr/en/collection.htm"}]}
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Library", "item": "https://studioluminant.com.tr/en/collection.htm"}]}
 </script>
 </head>
 <body>
@@ -442,33 +448,67 @@
       <div id="hero-img-container"></div>
     </div>
     <div class="hero-text">
-      <h1 class="hero-eyebrow">Concept Work in Architectural Relief</h1>
+      <h1 class="hero-eyebrow">The Architectural Relief Library</h1>
       <div class="hero-title" id="hero-title"></div>
       <p class="hero-desc" id="hero-desc"></p>
-      <a class="hero-cta" id="hero-cta" href="contact.htm">Enquire About This Design →</a>
+      <a class="hero-cta" id="hero-cta" href="contact.htm" style="display:none">Enquire About This Design →</a>
     </div>
   </div>
 </section>
+
+<!-- SYSTEMS:START (tools/build_systems.py) -->
+<section class="sys-index reveal">
+  <div class="eyebrow">Library</div>
+  <h2 class="sys-index__title">Library systems</h2>
+  <p class="sys-index__lede">Relief systems with a defined size, depth and layout. See each one in live light on its own page.</p>
+  <div class="sys-index__grid">
+    <a class="sys-card" href="system-cantus.htm">
+      <img src="../assets/relief/012-iznik-cypress/object.webp" width="1200" height="1200" loading="lazy" alt="Render of the Cantus panel in raking light">
+      <span class="sys-card__code">System 012</span>
+      <span class="sys-card__name">Cantus</span>
+      <span class="sys-card__layout">Single panel, no repeat</span>
+    </a>
+    <a class="sys-card" href="system-ostinato.htm">
+      <img src="../assets/relief/031-gothic/object.webp" width="1200" height="1200" loading="lazy" alt="Render of the Ostinato panel in raking light">
+      <span class="sys-card__code">System 031</span>
+      <span class="sys-card__name">Ostinato</span>
+      <span class="sys-card__layout">Repeating field, every 600 mm</span>
+    </a>
+    <a class="sys-card" href="system-glissando.htm">
+      <img src="../assets/relief/042-drift-focus/object.webp" width="1200" height="2400" loading="lazy" alt="Render of the Glissando panel in raking light">
+      <span class="sys-card__code">System 042</span>
+      <span class="sys-card__name">Glissando</span>
+      <span class="sys-card__layout">Half-height running bond</span>
+    </a>
+    <a class="sys-card" href="system-tremolo.htm">
+      <img src="../assets/relief/033-field-erode/object.webp" width="1200" height="1200" loading="lazy" alt="Render of the Tremolo panel in raking light">
+      <span class="sys-card__code">System 033</span>
+      <span class="sys-card__name">Tremolo</span>
+      <span class="sys-card__layout">Single panel</span>
+    </a>
+  </div>
+  <div class="eyebrow sys-index__studies">Design studies</div>
+</section>
+<!-- SYSTEMS:END -->
 
 <!-- UDS INTRO -->
 <section class="uds-intro reveal" style="max-width: 1280px; margin: 0 auto; padding: 48px 60px 0;">
   <div style="display: flex; gap: 40px; align-items: center; padding: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;">
     <div style="flex: 1;">
       <div class="eyebrow" style="margin-bottom: 12px;">Unified Design System</div>
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--text-primary); line-height: 1.2; margin-bottom: 12px;">One Pattern. <em style="color: var(--gold);">Every Surface.</em></h2>
-      <p style="font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300;">Specify one relief design — we produce it across walls, ceilings, columns, and feature elements. Two material systems, one consistent design language. The studies below are examples — the project is your own design. <a href="contact.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Brief us on it</a>.</p>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; font-style: italic; color: var(--text-primary); line-height: 1.2; margin-bottom: 12px;">Your Concept. <em style="color: var(--gold);">Every Surface.</em></h2>
+      <p style="font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300;">Specify one relief design — we produce it across walls, ceilings, columns, and feature elements. One material, one consistent design language. The studies below are examples — the project is your own design. <a href="contact.htm" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">Brief us on it</a>.</p>
     </div>
     <div style="flex: 0 0 auto; display: flex; gap: 12px;">
       <a href="products.htm#pmag" style="display: inline-block; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 20px; border-radius: 4px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.3s, color 0.3s;">PMAG Specs →</a>
-      <a href="products.htm#pucomp" style="display: inline-block; border: 1px solid var(--border); color: var(--text-secondary); padding: 8px 20px; border-radius: 4px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: border-color 0.3s, color 0.3s;">PUCOMP Specs →</a>
     </div>
   </div>
 </section>
 
 <section class="page-intro reveal" style="max-width: 1280px; margin: 0 auto; padding: 40px 60px 0;">
   <div>
-      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">These are studies, not a catalogue. Each one tests how far cast mineral relief can be pushed in a particular design register &mdash; geometric repeat, organic surface, Anatolian motif, and quiet texture fields that read as ground rather than pattern.</p>
-      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Studio Luminant does not sell its own motif. The design that gets cast is the one the project brings. A drawing, a motif, a reference image, or a sketch on a napkin becomes a digital master model; a silicone mould is produced from that master; the panel is cast and hand-finished in Sapanca.</p>
+      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">The design studies are not a catalogue. Each one tests how far cast mineral relief can be pushed in a particular design register &mdash; geometric repeat, organic surface, Anatolian motif, and quiet texture fields that read as ground rather than pattern.</p>
+      <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">The Library is for projects that would rather start from one of our systems; most projects arrive with their own design. A drawing, a motif, a reference image, or a sketch on a napkin becomes a digital master model; a silicone mould is produced from that master; the panel is cast and hand-finished in Sapanca.</p>
       <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Read the studies below as reference points rather than products. Any one of them can be cast as it stands, rebuilt at a different scale or relief depth, or used only to establish a direction. The specification decision sits with the project.</p>
       <p style="font-size: 14px; line-height: 1.85; color: var(--text-secondary); font-weight: 300; max-width: 820px; margin-bottom: 16px;">Because walls, ceilings, column cladding and feature elements can all be produced from a single master model, one design language holds across every surface in a scheme.</p>
   </div>
@@ -476,17 +516,17 @@
 
 <!-- FILTERS -->
 <section class="collection-filters reveal">
-  <div class="filter-label">Style</div>
-  <div class="filter-row" id="style-filters">
+  <div class="filter-label" id="style-filters-label">Style</div>
+  <div class="filter-row" id="style-filters" role="group" aria-labelledby="style-filters-label">
     <button class="style-pill active" data-style="all" aria-pressed="true">All</button>
     <button class="style-pill" data-style="geometric" aria-pressed="false">Geometric</button>
     <button class="style-pill" data-style="organic" aria-pressed="false">Organic</button>
     <button class="style-pill" data-style="heritage" aria-pressed="false">Heritage</button>
     <button class="style-pill" data-style="surface" aria-pressed="false">Surface</button>
-    <span class="filter-count" id="filter-count"></span>
+    <span class="filter-count" id="filter-count" role="status" aria-live="polite"></span>
   </div>
-  <div class="filter-label">Application</div>
-  <div class="filter-row" id="app-filters">
+  <div class="filter-label" id="app-filters-label">Application</div>
+  <div class="filter-row" id="app-filters" role="group" aria-labelledby="app-filters-label">
     <button class="app-tag" data-app="wall-panel" aria-pressed="false">Wall Panel</button>
     <button class="app-tag" data-app="ceiling" aria-pressed="false">Ceiling</button>
     <button class="app-tag" data-app="column" aria-pressed="false">Column Cladding</button>
@@ -522,7 +562,7 @@
       <div>
         <div class="eyebrow reveal">Finish Sample Box</div>
         <h2 class="product-name reveal">See It.<br><em>Feel It.</em></h2>
-        <p class="product-desc reveal">Four finishes across both materials — in a single box. The most reliable way to judge how a relief will read on the wall before you specify a panel.</p>
+        <p class="product-desc reveal">Cast samples in <span translate="no">Lumina PMAG™</span> with artisan finishes applied — in a single box. The most reliable way to judge how a relief will read on the wall before you specify a panel.</p>
         <a href="architects.htm#sampleForm" class="btn-primary reveal" style="margin-top: 8px;">
           Request the Sample Box
           <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -553,10 +593,7 @@
     <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
     <a href="resources-lead-times.htm">Lead Times</a>
     <a href="resources-sustainability.htm">Sustainability</a>
-    <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
-    <a href="case-study-petal-lounge.htm">Petal Lounge</a>
-    <a href="case-study-wave-lounge.htm">Wave Lounge</a>
     <a href="contact.htm">Contact</a>
     <a href="site-map.htm">Site Map</a>
   </nav>
@@ -567,7 +604,9 @@
 <script src="../collection-data.js"></script>
 <script>
 // ─── Pattern Data (from Supabase via collection-data.js) ───
-const patterns = window.SL_PATTERNS.map(p => ({
+// Study cards shown in v3: only Fluted Spherical (Burak 2026-10-19); the rest stay in Supabase.
+const SHOWN_STUDIES = ['fluted-spherical'];
+const patterns = window.SL_PATTERNS.filter(p => SHOWN_STUDIES.includes(p.id)).map(p => ({
   id: p.id,
   code: p.code,
   collection: p.collection,
@@ -582,18 +621,6 @@ const patterns = window.SL_PATTERNS.map(p => ({
   tileSvg: p.tileSvg
 }));
 
-// ─── Populate hero from featured pattern ───
-const featured = patterns.find(p => p.featured) || patterns[0];
-document.getElementById('hero-img-container').innerHTML = pictureTag(
-  featured.image,
-  featured.name + ' — ' + featured.style + ' pattern',
-  '(max-width: 1024px) 100vw, 60vw',
-  {loading: 'eager', fetchpriority: 'high', cls: 'hero-img'}
-);
-document.getElementById('hero-title').textContent = featured.name;
-document.getElementById('hero-desc').textContent = featured.description;
-document.getElementById('hero-cta').href = 'contact.htm?pattern=' + encodeURIComponent(featured.name);
-
 // ─── Application label mapping ───
 const appLabels = {
   'wall-panel': 'Wall Panel',
@@ -601,6 +628,30 @@ const appLabels = {
   'column': 'Column Cladding',
   'sculptural': 'Sculptural'
 };
+
+// ─── Alt text (escaped; localized style label) ───
+function escAttr(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); }
+// Intrinsic image sizes (read from the files) so every <img> reserves its space.
+const IMG_DIMS = {"compass-star":[2048,2048],"diagonal-wave":[2048,2048],"faceted-crystal":[2048,2048],"ottoman-heritage":[832,1248],"organic-cell":[1200,1200],"fluted-column":[2048,2048],"petal-geometric":[2000,1116],"geometric-star":[1344,768],"bas-relief":[1376,768],"neo-heritage-modular":[2000,1493],"honeycomb-hexagonal":[2048,2048],"diamond-faceted-crystal":[2000,2000],"diamond-origami-fold":[2048,2048],"petal-star-concave":[2048,2048],"baroque-acanthus-scroll":[2048,2048],"fluted-spherical":[2000,2000]};
+function imgDims(p) { const d = IMG_DIMS[p.id]; return d ? { width: d[0], height: d[1] } : {}; }
+function patAlt(p) {
+  return escAttr(p.name + ' — ' + (p.style.charAt(0).toUpperCase() + p.style.slice(1)) + ' pattern');
+}
+
+// ─── Populate hero from featured pattern ───
+const featured = patterns.find(p => p.featured) || patterns[0];
+document.getElementById('hero-img-container').innerHTML = pictureTag(
+  featured.image,
+  patAlt(featured),
+  '(max-width: 1024px) 100vw, 60vw',
+  Object.assign({loading: 'eager', fetchpriority: 'high', cls: 'hero-img'}, imgDims(featured))
+);
+document.getElementById('hero-title').textContent = featured.name;
+document.getElementById('hero-desc').textContent = featured.description;
+const heroCta = document.getElementById('hero-cta');
+heroCta.href = 'contact.htm?pattern=' + encodeURIComponent(featured.name);
+heroCta.style.display = '';
+
 
 // ─── Local scroll-reveal observer (shared.js observer is module-scoped) ───
 const collectionObserver = new IntersectionObserver((entries) => {
@@ -632,6 +683,7 @@ function renderGrid() {
   const activeTags = Array.from(document.querySelectorAll('.app-tag.active')).map(t => t.dataset.app);
 
   let count = 0;
+  if (patterns.length < 2) document.querySelector('.collection-filters')?.setAttribute('hidden', '');
   patterns.forEach((p, i) => {
     const styleMatch = activeStyle === 'all' || p.style === activeStyle;
     const appMatch = activeTags.length === 0 || activeTags.some(tag => p.applications.includes(tag));
@@ -643,9 +695,9 @@ function renderGrid() {
       card.dataset.index = i;
       card.innerHTML = `
         <div class="card-img-wrap">
-          ${pictureTag(p.image, p.name + ' — ' + p.style + ' pattern',
+          ${pictureTag(p.image, patAlt(p),
             '(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw',
-            {onerror: "this.style.display='none'"})}
+            Object.assign({onerror: "this.style.display='none'"}, imgDims(p)))}
         </div>
         <div class="card-info">
           <div class="card-name">${p.name}</div>
@@ -681,10 +733,11 @@ function renderGrid() {
         b.setAttribute('aria-pressed', 'false');
       });
       renderGrid();
+      syncUrl();
     });
   }
 
-  document.getElementById('filter-count').textContent = count + ' pattern' + (count !== 1 ? 's' : '');
+  document.getElementById('filter-count').textContent = count + ' pattern' + (count !== 1 ? 's' : '');
 
   // Observe new cards for scroll-reveal
   grid.querySelectorAll('.reveal:not(.visible)').forEach(el => {
@@ -703,6 +756,7 @@ document.querySelectorAll('.style-pill').forEach(btn => {
     btn.classList.add('active');
     btn.setAttribute('aria-pressed', 'true');
     const count = renderGrid();
+    syncUrl();
     slTrack('filter_select', { filter_type: 'style', filter_value: btn.dataset.style, filter_state: 'on', result_count: count });
   });
 });
@@ -712,15 +766,44 @@ document.querySelectorAll('.app-tag').forEach(btn => {
     btn.classList.toggle('active');
     btn.setAttribute('aria-pressed', btn.classList.contains('active'));
     const count = renderGrid();
+    syncUrl();
     slTrack('filter_select', { filter_type: 'application', filter_value: btn.dataset.app, filter_state: btn.classList.contains('active') ? 'on' : 'off', result_count: count });
   });
 });
+
+// ─── URL state: ?style=&app=a,b&p=<pattern id> ───
+function syncUrl() {
+  const p = new URLSearchParams(location.search);
+  const style = document.querySelector('.style-pill.active').dataset.style;
+  const apps = Array.from(document.querySelectorAll('.app-tag.active')).map(t => t.dataset.app);
+  if (style === 'all') p.delete('style'); else p.set('style', style);
+  if (apps.length) p.set('app', apps.join(',')); else p.delete('app');
+  const dlg = document.querySelector('.sl-modal');
+  if (dlg && dlg.open && currentIndex > -1) p.set('p', patterns[currentIndex].id); else p.delete('p');
+  const q = p.toString();
+  history.replaceState(null, '', location.pathname + (q ? '?' + q : '') + location.hash);
+}
+
+(function restoreFilters() {
+  const p = new URLSearchParams(location.search);
+  const style = p.get('style');
+  const sp = style && document.querySelector('.style-pill[data-style="' + style + '"]');
+  if (sp) {
+    document.querySelectorAll('.style-pill').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+    sp.classList.add('active');
+    sp.setAttribute('aria-pressed', 'true');
+  }
+  (p.get('app') || '').split(',').forEach(a => {
+    const t = a && document.querySelector('.app-tag[data-app="' + a + '"]');
+    if (t) { t.classList.add('active'); t.setAttribute('aria-pressed', 'true'); }
+  });
+})();
 
 renderGrid();
 
 // ─── Lightbox (via SLModal) ───────────────────────────────────────────
 let currentIndex = -1;
-const matMap = { pmag: 'Lumina PMAG™', pucomp: 'Lumina PUCOMP™' };
+const matMap = { pmag: 'Lumina PMAG™' };
 
 // ─── Tiling Engine ───
 const TILE_SIZE = 50;
@@ -780,22 +863,24 @@ function wireTilingEvents(mb) {
     const btn = e.target.closest('.lb-view-btn');
     if (!btn) return;
     const view = btn.dataset.view;
-    viewToggle.querySelectorAll('.lb-view-btn').forEach(b => b.classList.remove('active'));
+    viewToggle.querySelectorAll('.lb-view-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     if (view === 'tiling') {
-      if (photoWrap) photoWrap.style.display = 'none';
+      if (photoWrap) { photoWrap.style.display = 'none'; photoWrap.setAttribute('aria-hidden', 'true'); }
       tilingWrap.classList.add('visible');
       renderTiling();
     } else {
-      if (photoWrap) photoWrap.style.display = '';
+      if (photoWrap) { photoWrap.style.display = ''; photoWrap.removeAttribute('aria-hidden'); }
       tilingWrap.classList.remove('visible');
     }
   });
   mb.querySelector('.lb-tiling-controls').addEventListener('click', e => {
     const pill = e.target.closest('.lb-tiling-pill');
     if (!pill) return;
-    mb.querySelectorAll('.lb-tiling-pill').forEach(p => p.classList.remove('active'));
+    mb.querySelectorAll('.lb-tiling-pill').forEach(p => { p.classList.remove('active'); p.setAttribute('aria-pressed', 'false'); });
     pill.classList.add('active');
+    pill.setAttribute('aria-pressed', 'true');
     tilingArrangement = pill.dataset.arr;
     renderTiling();
   });
@@ -809,22 +894,22 @@ function wireTilingEvents(mb) {
 
 function buildLightboxHtml(p) {
   const mats = p.materials.length
-    ? p.materials.map(m => '<span class="lb-mat-badge">' + (matMap[m] || m) + '</span>').join('')
+    ? p.materials.map(m => '<span class="lb-mat-badge" translate="no">' + (matMap[m] || m) + '</span>').join('')
     : '';
   const tilingHtml = p.tileSvg
     ? '<div class="lb-view-toggle" id="lb-view-toggle">' +
-        '<button class="lb-view-btn active" data-view="photo">Photo</button>' +
-        '<button class="lb-view-btn" data-view="tiling">Tiling Preview</button>' +
+        '<button class="lb-view-btn active" data-view="photo" aria-pressed="true">Photo</button>' +
+        '<button class="lb-view-btn" data-view="tiling" aria-pressed="false">Tiling Preview</button>' +
       '</div>' +
       '<div class="lb-tiling-wrap" id="lb-tiling-wrap">' +
         '<div class="lb-tiling-controls">' +
-          '<button class="lb-tiling-pill active" data-arr="random">Random</button>' +
-          '<button class="lb-tiling-pill" data-arr="diagonal">Diagonal</button>' +
-          '<button class="lb-tiling-pill" data-arr="spiral">Spiral</button>' +
-          '<button class="lb-tiling-pill" data-arr="radial">Radial</button>' +
-          '<label class="lb-grid-label"><input type="range" id="lb-grid-size" class="lb-grid-slider" min="4" max="16" value="' + tilingGrid + '"><span id="lb-grid-label">' + tilingGrid + '×' + tilingGrid + '</span></label>' +
+          '<button class="lb-tiling-pill active" data-arr="random" aria-pressed="true">Random</button>' +
+          '<button class="lb-tiling-pill" data-arr="diagonal" aria-pressed="false">Diagonal</button>' +
+          '<button class="lb-tiling-pill" data-arr="spiral" aria-pressed="false">Spiral</button>' +
+          '<button class="lb-tiling-pill" data-arr="radial" aria-pressed="false">Radial</button>' +
+          '<label class="lb-grid-label"><input type="range" id="lb-grid-size" class="lb-grid-slider" min="4" max="16" aria-label="Grid size" value="' + tilingGrid + '"><span id="lb-grid-label">' + tilingGrid + '×' + tilingGrid + '</span></label>' +
         '</div>' +
-        '<div class="lb-tiling-svg-wrap"><svg id="lb-tiling-svg" xmlns="http://www.w3.org/2000/svg"></svg></div>' +
+        '<div class="lb-tiling-svg-wrap"><svg id="lb-tiling-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tiling Preview"></svg></div>' +
         '<div class="lb-tiling-hint">Each tile rotated 0°/90°/180°/270° — click Random to regenerate</div>' +
       '</div>'
     : '';
@@ -832,7 +917,7 @@ function buildLightboxHtml(p) {
     '<div class="lb-layout">' +
       '<div class="lb-image">' +
         '<div class="lb-photo-wrap">' +
-          pictureTag(p.image, p.name + ' — ' + p.style + ' pattern', '60vw', { cls: 'lb-img-el' }) +
+          pictureTag(p.image, patAlt(p), '60vw', Object.assign({ cls: 'lb-img-el' }, imgDims(p))) +
         '</div>' +
         tilingHtml +
       '</div>' +
@@ -854,13 +939,14 @@ function getVisibleIndices() {
   return Array.from(document.querySelectorAll('.pattern-card')).map(c => parseInt(c.dataset.index));
 }
 
-function openLightbox(patternIndex, viewMethod = 'card') {
+function openLightbox(patternIndex, viewMethod = 'card', focusSel = null) {
   currentIndex = patternIndex;
   const p = patterns[patternIndex];
   currentTileSvg = p.tileSvg || null;
   tilingArrangement = 'random';
   tilingGrid = 8;
   SLModal.open({ mode: 'lightbox', html: buildLightboxHtml(p), title: p.name });
+  bindLbClose();
   slTrack('view_design', {
     content_type: 'pattern', design_id: p.id, design_name: p.nameEn, design_code: p.code,
     collection: p.collection, style: p.style, view_method: viewMethod
@@ -870,6 +956,8 @@ function openLightbox(patternIndex, viewMethod = 'card') {
   mb.querySelector('.lb-prev').addEventListener('click', () => navigateLightbox(-1));
   mb.querySelector('.lb-next').addEventListener('click', () => navigateLightbox(1));
   wireTilingEvents(mb);
+  syncUrl();
+  if (focusSel) { const el = mb.querySelector(focusSel); if (el) el.focus(); }
 }
 
 function navigateLightbox(dir) {
@@ -878,13 +966,29 @@ function navigateLightbox(dir) {
   const pos = visible.indexOf(currentIndex);
   if (pos === -1) return;
   const next = (pos + dir + visible.length) % visible.length;
-  openLightbox(visible[next], 'lightbox_nav');
+  openLightbox(visible[next], 'lightbox_nav', dir < 0 ? '.lb-prev' : '.lb-next');
 }
 
 document.addEventListener('keydown', e => {
   if (!document.querySelector('.sl-modal')?.open) return;
+  // Arrow keys belong to sliders / inputs / the tiling controls, not to pattern navigation.
+  if (e.target.closest && e.target.closest('input, select, textarea, .lb-tiling-controls')) return;
   if (e.key === 'ArrowLeft')  navigateLightbox(-1);
   if (e.key === 'ArrowRight') navigateLightbox(1);
+});
+
+// Keep ?p= in step with the dialog, and reopen a deep-linked pattern on load.
+let lbCloseBound = false;
+function bindLbClose() {
+  const dlg = document.querySelector('.sl-modal');
+  if (!dlg || lbCloseBound) return;
+  lbCloseBound = true;
+  dlg.addEventListener('close', () => { currentIndex = -1; syncUrl(); });
+}
+window.addEventListener('load', () => {
+  const id = new URLSearchParams(location.search).get('p');
+  const idx = id ? patterns.findIndex(x => x.id === id) : -1;
+  if (idx > -1) openLightbox(idx, 'url');
 });
 </script>
 

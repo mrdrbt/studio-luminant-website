@@ -19,6 +19,8 @@ function slTrack(name, params) {
 // Called by components.js after cursor elements are injected
 function initCursor() {
   if (!window.matchMedia('(pointer: fine)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
   if (!dot || !ring) return;
@@ -27,18 +29,19 @@ function initCursor() {
 
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px';
-    dot.style.top = my + 'px';
-  });
+    dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0) translate(-50%,-50%)';
+    if (!running) { running = true; requestAnimationFrame(animateRing); }
+  }, { passive: true });
 
+  // transform-only; the loop sleeps once the ring has caught up with the pointer
+  let running = false;
   function animateRing() {
     rx += (mx - rx) * 0.12;
     ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
-    requestAnimationFrame(animateRing);
+    ring.style.transform = 'translate3d(' + rx + 'px,' + ry + 'px,0) translate(-50%,-50%)';
+    if (Math.abs(mx - rx) > 0.1 || Math.abs(my - ry) > 0.1) requestAnimationFrame(animateRing);
+    else running = false;
   }
-  animateRing();
 
   // Hover effect on all interactive elements
   document.querySelectorAll('a, button').forEach(el => {
@@ -63,12 +66,13 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // Inject <dialog> and <aside> shells once into <body>.
 // Pages never include this markup — SLModal / SLDrawer manage it.
 document.addEventListener('DOMContentLoaded', () => {
+  const closeLabel = document.documentElement.lang === 'en' ? 'Close' : 'Kapat';
   if (!document.querySelector('.sl-modal')) {
     const dlg = document.createElement('dialog');
     dlg.className = 'sl-modal';
     dlg.setAttribute('aria-label', '');
     dlg.innerHTML =
-      '<button class="sl-overlay-close" aria-label="Kapat">✕</button>' +
+      '<button class="sl-overlay-close" aria-label="' + closeLabel + '">✕</button>' +
       '<div class="sl-modal-body"></div>';
     document.body.appendChild(dlg);
   }
@@ -82,8 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
     aside.className = 'sl-drawer';
     aside.setAttribute('aria-label', '');
     aside.setAttribute('aria-hidden', 'true');
+    aside.setAttribute('role', 'dialog');
+    aside.setAttribute('aria-modal', 'true');
     aside.innerHTML =
-      '<button class="sl-overlay-close" aria-label="Kapat">✕</button>' +
+      '<button class="sl-overlay-close" aria-label="' + closeLabel + '">✕</button>' +
       '<div class="sl-drawer-body"></div>';
 
     document.body.appendChild(bd);

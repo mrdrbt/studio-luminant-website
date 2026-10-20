@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>Sustainability &amp; Materials — Studio Luminant</title>
-<meta name="description" content="Material sourcing, recyclability, VOC emissions &amp; environmental profile of Lumina PMAG™ &amp; PUCOMP™ relief panels — data for green building specs.">
+<meta name="description" content="Material sourcing, recyclability, VOC emissions &amp; environmental profile of Lumina PMAG™ relief panels — data for green building specs.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/resources-sustainability.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/kaynaklar-surdurulebilirlik.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/resources-sustainability.htm">
@@ -26,9 +27,9 @@
 
 <style>
   :root {
-    --green: #6ABF8A;
-    --blue: #6A9FBF;
-    --orange: #BF8A6A;
+    --green: #3F6B3A;
+    --blue: #3D5E80;
+    --orange: #8E4426;
     --leaf: #7AB87A;
   }
 
@@ -113,7 +114,7 @@
   }
   .env-table tbody td {
     padding: 16px;
-    border-bottom: 1px solid rgba(201,168,76,0.08);
+    border-bottom: 1px solid rgba(var(--accent-rgb),0.08);
     vertical-align: top;
     color: var(--text-secondary);
     font-weight: 300;
@@ -234,15 +235,21 @@
   @media (max-width: 480px) {
     .lifecycle-grid { grid-template-columns: 1fr; }
   }
+  /* a11y pass */
+  .env-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .env-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
+  .env-table tbody td, .env-table tbody th { font-variant-numeric: tabular-nums; }
+  .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
+  .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Sustainability & Materials", "item": "https://studioluminant.com.tr/en/resources-sustainability.htm"}]}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "Sustainability & Materials", "description": "Material sourcing, recyclability, VOC emissions & environmental profile of Lumina PMAG™ & PUCOMP™ relief panels — data for green building specs.", "inLanguage": "en", "image": "https://studioluminant.com.tr/images/studio-luminant-og-image.jpg", "author": {"@type": "Organization", "name": "Studio Luminant", "url": "https://studioluminant.com.tr"}, "publisher": {"@type": "Organization", "name": "Studio Luminant", "logo": {"@type": "ImageObject", "url": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioluminant.com.tr/en/resources-sustainability.htm"}}
+{"@context": "https://schema.org", "@type": "Article", "headline": "Sustainability & Materials", "description": "Material sourcing, recyclability, VOC emissions & environmental profile of Lumina PMAG™ relief panels — data for green building specs.", "inLanguage": "en", "image": "https://studioluminant.com.tr/images/studio-luminant-og-image.jpg", "author": {"@type": "Organization", "name": "Studio Luminant", "url": "https://studioluminant.com.tr"}, "publisher": {"@type": "Organization", "name": "Studio Luminant", "logo": {"@type": "ImageObject", "url": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioluminant.com.tr/en/resources-sustainability.htm"}}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Why is material choice an environmental decision?", "acceptedAnswer": {"@type": "Answer", "text": "Every square metre of interior cladding carries an environmental footprint — from raw material extraction through manufacturing, transport, installation, service life, and eventual disposal. For architects working within BREEAM, LEED, or WELL frameworks, the material specification is one of the most direct levers available for improving the building's environmental performance. The choice is not simply between \"sustainable\" and \"unsustainable\" materials — it is about understanding the full lifecycle and making an informed trade-off."}}, {"@type": "Question", "name": "Is Lumina PMAG recyclable?", "acceptedAnswer": {"@type": "Answer", "text": "Lumina PMAG™ is based on alpha gypsum (calcium sulphate dihydrate), a naturally occurring mineral that is also produced as a by-product of industrial processes such as flue-gas desulphurisation at power stations. Gypsum is one of the few construction materials that can be recycled indefinitely without loss of performance — the hydration process that forms the set material is fully reversible. Crushed gypsum can be re-calcined and re-cast into new products with no degradation in material properties."}}, {"@type": "Question", "name": "Do Lumina panels emit VOCs?", "acceptedAnswer": {"@type": "Answer", "text": "Both Lumina materials contribute to healthy indoor environments. PMAG is an inorganic mineral material — once cured, it emits no volatile organic compounds. The polymer modifier used in the formulation is fully cross-linked during manufacture and does not off-gas in service. When finished with low-VOC or zero-VOC paint systems, a PMAG installation meets the most stringent indoor air quality requirements, including those set by WELL Building Standard and LEED v4 IEQ credits."}}, {"@type": "Question", "name": "What should you include in a green specification for relief panels?", "acceptedAnswer": {"@type": "Answer", "text": "For projects targeting BREEAM, LEED, or WELL certification, include the following in your specification clause: a requirement for low-VOC paint systems (compliant with EU Directive 2004/42/CE or equivalent), a request for the manufacturer's Environmental Product Declaration (EPD) or equivalent lifecycle data, confirmation of recyclability pathway at end of life, and documentation of manufacturing waste management practices."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Why is material choice an environmental decision?", "acceptedAnswer": {"@type": "Answer", "text": "Every square metre of interior cladding carries an environmental footprint — from raw material extraction through manufacturing, transport, installation, service life, and eventual disposal. For architects working within BREEAM, LEED, or WELL frameworks, the material specification is one of the most direct levers available for improving the building's environmental performance. The choice is not simply between \"sustainable\" and \"unsustainable\" materials — it is about understanding the full lifecycle and making an informed trade-off."}}, {"@type": "Question", "name": "Is Lumina PMAG recyclable?", "acceptedAnswer": {"@type": "Answer", "text": "Lumina PMAG™ is based on alpha gypsum, a naturally occurring mineral that is also produced as a by-product of industrial processes such as flue-gas desulphurisation at power stations. Gypsum itself can be recycled repeatedly: set gypsum can be crushed, re-calcined and cast again. For Lumina PMAG™ the claim covers the gypsum fraction — our own casting offcuts go back into new batches in the workshop."}}, {"@type": "Question", "name": "Do Lumina panels emit VOCs?", "acceptedAnswer": {"@type": "Answer", "text": "Lumina PMAG™ contributes to healthy indoor environments. PMAG is an inorganic mineral material — once cured, it emits no volatile organic compounds. The polymer modifier used in the formulation is fully cross-linked during manufacture and does not off-gas in service. When finished with low-VOC or zero-VOC paint systems, a PMAG installation meets the most stringent indoor air quality requirements, including those set by WELL Building Standard and LEED v4 IEQ credits."}}, {"@type": "Question", "name": "What should you include in a green specification for relief panels?", "acceptedAnswer": {"@type": "Answer", "text": "For projects targeting BREEAM, LEED, or WELL certification, include the following in your specification clause: a requirement for low-VOC paint systems (compliant with EU Directive 2004/42/CE or equivalent), a request for the manufacturer's Environmental Product Declaration (EPD) or equivalent lifecycle data, confirmation of recyclability pathway at end of life, and documentation of manufacturing waste management practices."}}]}
 </script>
 </head>
 <body>
@@ -256,7 +263,7 @@
   <!-- BACK NAV -->
   <div class="back-nav">
     <a href="resources.htm">
-      <svg viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
       Back to Resources
     </a>
   </div>
@@ -277,15 +284,15 @@
 
     <h2>Why Material Choice Is an <em>Environmental Decision</em></h2>
     <p>
-      Every square metre of interior cladding carries an environmental footprint — from raw material extraction through manufacturing, transport, installation, service life, and eventual disposal. For architects working within BREEAM, LEED, or WELL frameworks, the material specification is one of the most direct levers available for improving the building's environmental performance. The choice is not simply between "sustainable" and "unsustainable" materials — it is about understanding the full lifecycle and making an informed trade-off.
+      Every square metre of interior cladding carries an environmental footprint — from raw material extraction through manufacturing, transport, installation, service life, and eventual disposal. For architects working within BREEAM, LEED, or WELL frameworks, the material specification is one of the most direct levers available for improving the building’s environmental performance. The choice is not simply between “sustainable” and “unsustainable” materials — it is about understanding the full lifecycle and making an informed trade-off.
     </p>
     <p>
-      Architectural relief panels occupy a distinctive position in this conversation. They are decorative, which sometimes leads to the assumption that they are environmentally discretionary. But the material families used — mineral gypsum and advanced composites — have measurable environmental profiles that compare favourably to many conventional alternatives when the full picture is considered.
+      Architectural relief panels occupy a distinctive position in this conversation. They are decorative, which sometimes leads to the assumption that they are environmentally discretionary. But the material used here, mineral gypsum, has a measurable environmental profile that compares favourably to many conventional alternatives when the full picture is considered.
     </p>
 
-    <h2>Lumina PMAG™ — <em>Gypsum as a Material</em></h2>
+    <h2><span translate="no">Lumina PMAG™</span> — <em>Gypsum as a Material</em></h2>
     <p>
-      Lumina PMAG™ is based on <strong>alpha gypsum</strong> (calcium sulphate dihydrate), a naturally occurring mineral that is also produced as a by-product of industrial processes such as flue-gas desulphurisation at power stations. Gypsum is one of the few construction materials that can be <strong>recycled indefinitely</strong> without loss of performance — the hydration process that forms the set material is fully reversible. Crushed gypsum can be re-calcined and re-cast into new products with no degradation in material properties.
+      <span translate="no">Lumina PMAG™</span> is based on <strong>alpha gypsum</strong>, a naturally occurring mineral that is also produced as a by-product of industrial processes such as flue-gas desulphurisation at power stations. Gypsum itself can be recycled repeatedly: set gypsum can be crushed, re-calcined and cast again. For Lumina PMAG™ the claim covers the gypsum fraction — our own casting offcuts go back into new batches in the workshop.
     </p>
     <p>
       The manufacturing process for PMAG panels is low-energy compared to alternatives. Gypsum casting occurs at ambient temperature — there are no kilns, no high-temperature curing ovens, and no sintering processes. The primary energy input is the calcination of raw gypsum (typically at 120–180°C), which is significantly lower than the temperatures required for ceramics (1000–1200°C), glass (1500°C+), or metal casting.
@@ -294,8 +301,8 @@
     <!-- STATS -->
     <div class="stats-row">
       <div class="stat-card">
-        <div class="stat-value">100%</div>
-        <div class="stat-label">Gypsum Recyclability</div>
+        <div class="stat-value">Offcuts</div>
+        <div class="stat-label">Go Back Into New Batches</div>
       </div>
       <div class="stat-card">
         <div class="stat-value">Low VOC</div>
@@ -307,71 +314,60 @@
       </div>
     </div>
 
-    <h2>Lumina PUCOMP™ — <em>Composite Performance</em></h2>
-    <p>
-      Lumina PUCOMP™ is an advanced composite reinforced with mineral fillers. The formulation used in PUCOMP is optimised for durability, UV stability, and long service life — which, from a sustainability perspective, is the most significant factor. A panel that lasts 30+ years without replacement avoids the embedded carbon of manufacturing, transporting, and installing multiple generations of shorter-lived alternatives.
-    </p>
-    <p>
-      PUCOMP panels are produced using closed-mould casting, which minimises material waste — virtually all mixed material ends up in the finished product. Offcuts and production rejects are ground and reused as filler material in subsequent production cycles, approaching a <strong>zero-waste manufacturing</strong> process for solid material.
-    </p>
 
     <div class="callout">
       <div class="callout-label">Lifecycle Perspective</div>
       <p>
-        A common mistake in sustainability assessments is focusing on <strong>embodied carbon at manufacture</strong> while ignoring service life. A material with moderate embodied carbon that lasts 30 years will have a lower annualised carbon footprint than a "greener" material that requires replacement every 10 years — particularly when replacement involves demolition waste, new manufacturing, and additional transport.
+        A common mistake in sustainability assessments is focusing on <strong>embodied carbon at manufacture</strong> while ignoring service life. A material with moderate embodied carbon that lasts 30&nbsp;years will have a lower annualised carbon footprint than a “greener” material that requires replacement every 10&nbsp;years — particularly when replacement involves demolition waste, new manufacturing, and additional transport.
       </p>
     </div>
 
     <h2>Environmental <em>Comparison</em></h2>
 
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Lumina PMAG™ vs natural stone: environmental comparison">
     <table class="env-table">
+      <caption><span translate="no">Lumina PMAG™</span> vs natural stone: environmental comparison</caption>
       <thead>
         <tr>
-          <th>Factor</th>
-          <th>Lumina PMAG™</th>
-          <th>Lumina PUCOMP™</th>
-          <th>Natural Stone</th>
+          <th scope="col">Factor</th>
+          <th scope="col"><span translate="no">Lumina PMAG™</span></th>
+          <th scope="col">Natural Stone</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Raw material source</strong></td>
+          <th scope="row"><strong>Raw material source</strong></th>
           <td>Natural/FGD gypsum</td>
-          <td>Petrochemical + mineral filler</td>
           <td>Quarried stone</td>
         </tr>
         <tr>
-          <td><strong>Manufacturing energy</strong></td>
+          <th scope="row"><strong>Manufacturing energy</strong></th>
           <td><span class="rating-badge rating-high">Low</span></td>
-          <td><span class="rating-badge rating-mid">Moderate</span></td>
           <td><span class="rating-badge rating-low">High</span> (cutting, polishing)</td>
         </tr>
         <tr>
-          <td><strong>End-of-life recyclability</strong></td>
+          <th scope="row"><strong>End-of-life recyclability</strong></th>
           <td><span class="rating-badge rating-high">Full</span> — re-calcinable</td>
-          <td><span class="rating-badge rating-mid">Partial</span> — ground as filler</td>
           <td><span class="rating-badge rating-high">Full</span> — re-cuttable</td>
         </tr>
         <tr>
-          <td><strong>VOC emissions (installed)</strong></td>
+          <th scope="row"><strong>VOC emissions (installed)</strong></th>
           <td><span class="rating-badge rating-high">Very Low</span></td>
-          <td><span class="rating-badge rating-high">Low</span> (cured thermoset)</td>
           <td><span class="rating-badge rating-high">None</span></td>
         </tr>
         <tr>
-          <td><strong>Weight (transport impact)</strong></td>
-          <td>35–40 kg/m² @ 25 mm</td>
-          <td>12–18 kg/m² @ 15 mm</td>
-          <td>65–80 kg/m² @ 25 mm</td>
+          <th scope="row"><strong>Weight (transport impact)</strong></th>
+          <td>35–40&nbsp;kg/m² @ 25&nbsp;mm</td>
+          <td>65–80&nbsp;kg/m² @ 25&nbsp;mm</td>
         </tr>
         <tr>
-          <td><strong>Typical service life</strong></td>
+          <th scope="row"><strong>Typical service life</strong></th>
           <td>30+ years (interior)</td>
-          <td>30+ years (ext. &amp; int.)</td>
           <td>50+ years</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h2>The Material <em>Lifecycle</em></h2>
 
@@ -379,12 +375,12 @@
       <div class="lifecycle-card">
         <div class="lifecycle-icon">01</div>
         <div class="lifecycle-title">Source</div>
-        <div class="lifecycle-desc">Natural gypsum or FGD by-product. Composite from petrochemical feedstock with mineral fillers.</div>
+        <div class="lifecycle-desc">Natural gypsum or FGD by-product.</div>
       </div>
       <div class="lifecycle-card">
         <div class="lifecycle-icon">02</div>
         <div class="lifecycle-title">Manufacture</div>
-        <div class="lifecycle-desc">Ambient-temperature casting (PMAG). Closed-mould production (PUCOMP). Near-zero solid waste.</div>
+        <div class="lifecycle-desc">Ambient-temperature casting. Gypsum offcuts go back into new batches.</div>
       </div>
       <div class="lifecycle-card">
         <div class="lifecycle-icon">03</div>
@@ -394,24 +390,21 @@
       <div class="lifecycle-card">
         <div class="lifecycle-icon">04</div>
         <div class="lifecycle-title">End of Life</div>
-        <div class="lifecycle-desc">PMAG: crush and re-calcine into new gypsum. PUCOMP: grind as aggregate or filler. Landfill as last resort.</div>
+        <div class="lifecycle-desc">Crush and re-calcine into new gypsum. Landfill as last resort.</div>
       </div>
     </div>
 
     <h2>Indoor Air Quality — <em>VOC &amp; Emissions</em></h2>
     <p>
-      Both Lumina materials contribute to healthy indoor environments. <strong>PMAG</strong> is an inorganic mineral material — once cured, it emits no volatile organic compounds. The polymer modifier used in the formulation is fully cross-linked during manufacture and does not off-gas in service. When finished with low-VOC or zero-VOC paint systems, a PMAG installation meets the most stringent indoor air quality requirements, including those set by WELL Building Standard and LEED v4 IEQ credits.
-    </p>
-    <p>
-      <strong>PUCOMP</strong> is a fully cured thermoset polymer. Unlike thermoplastic materials (which soften when heated and can release VOCs), thermosets undergo an irreversible chemical reaction during curing. Once set, PUCOMP panels are chemically stable and emit negligible VOCs at room temperature. For projects pursuing LEED or BREEAM credits related to indoor air quality, we provide emissions test data on request.
+      <strong>PMAG</strong> is an inorganic mineral material — once cured, it emits no volatile organic compounds. The polymer modifier used in the formulation is fully cross-linked during manufacture and does not off-gas in service. When finished with low-VOC or zero-VOC paint systems, a PMAG installation meets the most stringent indoor air quality requirements, including those set by WELL Building Standard and LEED v4 IEQ credits.
     </p>
 
     <h2>What to Include in <em>Green Specifications</em></h2>
     <p>
-      For projects targeting BREEAM, LEED, or WELL certification, include the following in your specification clause: a requirement for <strong>low-VOC paint systems</strong> (compliant with EU Directive 2004/42/CE or equivalent), a request for the manufacturer's <strong>Environmental Product Declaration (EPD)</strong> or equivalent lifecycle data, confirmation of <strong>recyclability pathway</strong> at end of life, and documentation of <strong>manufacturing waste management</strong> practices.
+      For projects targeting BREEAM, LEED, or WELL certification, include the following in your specification clause: a requirement for <strong>low-VOC paint systems</strong> (compliant with EU Directive 2004/42/CE or equivalent), a request for the manufacturer’s <strong>Environmental Product Declaration (EPD)</strong> or equivalent lifecycle data, confirmation of <strong>recyclability pathway</strong> at end of life, and documentation of <strong>manufacturing waste management</strong> practices.
     </p>
     <p>
-      We are committed to providing transparent environmental data. Where formal EPDs are not yet available for a specific product configuration, we supply material composition declarations, VOC test data, and recyclability statements that can be submitted as part of the project's sustainability documentation.
+      We are committed to providing transparent environmental data. Where formal EPDs are not yet available for a specific product configuration, we supply material composition declarations, VOC test data, and recyclability statements that can be submitted as part of the project’s sustainability documentation.
     </p>
 
   </article>
@@ -422,7 +415,7 @@
     <p>Request material composition data, VOC test reports, or recyclability documentation for your sustainability assessment.</p>
     <a href="contact.htm" class="btn-primary">
       Request Data
-      <svg viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
     </a>
   </div>
 
@@ -447,10 +440,7 @@
     <a href="resources-weight-structural.htm">Weight &amp; Structural Guide</a>
     <a href="resources-lead-times.htm">Lead Times</a>
     <a href="resources-sustainability.htm">Sustainability</a>
-    <a href="specifier-kit.htm">Specifier Kit</a>
     <a href="lookbook.htm">Design Lookbook</a>
-    <a href="case-study-petal-lounge.htm">Petal Lounge</a>
-    <a href="case-study-wave-lounge.htm">Wave Lounge</a>
     <a href="contact.htm">Contact</a>
     <a href="site-map.htm">Site Map</a>
   </nav>
