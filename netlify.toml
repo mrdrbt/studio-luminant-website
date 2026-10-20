@@ -366,6 +366,27 @@
   status = 301
   force = true
 
+# ─── Renamed image files (WB-00 follow-up, 2026-10-20) — drop the retired vacuum-cast claim from the URL ───
+[[redirects]]
+  from = "/images/studio-luminant-pmag-vacuum-cast-relief-panels-macchiato-400w.webp"
+  to = "/images/studio-luminant-pmag-relief-panels-beside-moulds-macchiato-400w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-pmag-vacuum-cast-relief-panels-macchiato-800w.webp"
+  to = "/images/studio-luminant-pmag-relief-panels-beside-moulds-macchiato-800w.webp"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.jpg"
+  to = "/images/studio-luminant-pmag-relief-panels-beside-moulds-macchiato.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/images/studio-luminant-pmag-vacuum-cast-relief-panels-macchiato.webp"
+  to = "/images/studio-luminant-pmag-relief-panels-beside-moulds-macchiato.webp"
+  status = 301
+
 # ─── Renamed image files (Wave 0, 2026-09-30) — old indexed image URLs → new names ───
 [[redirects]]
   from = "/images/studio-luminant-aiapm-3d-cad-modelling-to-gypsum-cast-relief-panel-1600w.webp"

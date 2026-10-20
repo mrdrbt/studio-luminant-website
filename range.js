@@ -34,7 +34,7 @@
         '<p class="rg-lb__text">' + esc(d.text) + '</p>' +
         '<dl class="rg-lb__spec">' + specs + '</dl>' +
         '<p class="rg-lb__note">' + esc(L.render) + '</p>' +
-        '<a class="btn-primary" href="' + esc(d.composer) + '">' + esc(L.compose) + '</a>' +
+        (d.composer ? '<a class="btn-primary" href="' + esc(d.composer) + '">' + esc(L.compose) + '</a>' : '') +
         '<a class="sys-link" href="' + esc(L.sampleHref) + '">' + esc(L.sample) + '</a>' +
         '<div class="rg-lb__nav">' +
           '<button type="button" class="rg-lb__prev" aria-label="' + esc(L.prev) + '">←</button>' +
