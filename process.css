@@ -54,6 +54,18 @@ html:not(.js) .pseq__frame { display: grid; grid-template-columns: 1fr 1fr; gap:
 html:not(.js) .pseq__layer { position: relative; opacity: 1; aspect-ratio: 1; overflow: hidden; }
 html:not(.js) .pseq__caps { display: none; }
 
+/* the Özel Üretim path: drawing to installation, one numbered row per step */
+.p-path { padding: var(--s-10) var(--pad-x); }
+.p-path__inner { max-width: 880px; margin: 0 auto; }
+.p-path__title { font-family: var(--font-display); font-weight: 300; font-size: clamp(32px, 3vw, 48px); line-height: 1.05;
+  color: var(--ink); margin: var(--s-3) 0 var(--s-7); }
+.p-path__steps { list-style: none; margin: 0 0 var(--s-7); padding: 0; border-top: 1px solid var(--border); }
+.p-path__step { display: grid; grid-template-columns: 56px minmax(0, 220px) minmax(0, 1fr); gap: var(--s-2) var(--s-5);
+  align-items: baseline; padding: var(--s-5) 0; border-bottom: 1px solid var(--border); }
+.p-path__num { font-size: var(--t-label); letter-spacing: var(--tr-wider); color: var(--accent); }
+.p-path__h { font-family: var(--font-display); font-weight: 400; font-size: 22px; line-height: 1.2; color: var(--ink); margin: 0; }
+.p-path__p { font-size: var(--t-body); line-height: 1.75; color: var(--ink-2); margin: 0; }
+
 /* CTA: a night band */
 .p-door { padding: var(--s-10) var(--pad-x); text-align: center; }
 .p-door__inner { max-width: 720px; margin: 0 auto; }
@@ -75,4 +87,7 @@ html:not(.js) .pseq__caps { display: none; }
   .pseq__steps { padding-bottom: 20svh; }
   html:not(.js) .pseq__stage { position: static; }
   .p-door { padding: var(--s-9) var(--pad-x-sm); }
+  .p-path { padding: var(--s-9) var(--pad-x-sm); }
+  .p-path__step { grid-template-columns: 40px minmax(0, 1fr); }
+  .p-path__p { grid-column: 2; }
 }

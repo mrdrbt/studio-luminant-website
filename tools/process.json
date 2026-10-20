@@ -4,13 +4,13 @@
   "layers": "assets/process/cantus/",
   "tr": {
     "file": "surec.htm",
-    "title": "Nasıl Çalışırız: Çizimden Döküme | Studio Luminant",
+    "title": "Özel Üretim: Çizimden Döküme | Studio Luminant",
     "desc": "Çizimden dökme rölyef panele: derinlik haritası, yalama ışıkta onay, ana model, silikon kalıp, döküm ve artizan finish. Hepsi Sapanca'daki atölyemizde.",
-    "crumb": "Nasıl Çalışırız",
+    "crumb": "Özel Üretim",
     "home": "Ana Sayfa",
-    "eyebrow": "Nasıl Çalışırız",
-    "h1": "Çizimden<br><em>döküme.</em>",
-    "lede": "Bir projenin çizimi, Sapanca'daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, Kütüphane sistemlerimizden Cantus'u özel üretim bir çizimin izlediği yoldan geçiriyoruz.",
+    "eyebrow": "Özel Üretim",
+    "h1": "Nasıl çizdiyseniz,<br><em>öyle dökeriz.</em>",
+    "lede": "Bir projenin çizimi, Sapanca'daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, sistemlerimizden Cantus'u özel üretim bir çizimin izlediği yoldan geçiriyoruz.",
     "steps": [
       {"h": "Çizim ya da görsel", "p": "Her proje bir çizim ya da görselle başlar. Elle çizilmiş bir eskiz, ölçülü bir teknik çizim ya da bir referans görsel olabilir. Burada Cantus’u bir çizim olarak görüyorsunuz: İznik çini geleneğinin servi, lale, karanfil ve gül motifleri tek bir simetrik kompozisyonda. Çizim, derinlik haritası ve aşağıdaki rölyef aynı yüzeydir.", "cap": "Cantus, çizim", "alt": "Servi, lale, karanfil ve gül motifli Cantus panelinin karakalem ve mürekkep çizimi"},
       {"h": "Derinlik haritası", "p": "Çizimi bir derinlik haritasına çeviririz. Haritadaki her gri tonu bir yüksekliğe karşılık gelir. Siyah, panelin zeminidir; beyaz, en yüksek noktası. Cantus'ta rölyef derinliği, zeminden en yüksek noktaya 16 mm'dir. Değişiklikler dijitalde kaldığı için kalıp ya da malzeme maliyeti doğurmaz.", "cap": "Cantus, derinlik haritası", "alt": "Cantus panelinin siyahtan beyaza derinlik haritası"},
@@ -29,19 +29,19 @@
     "door_h": "Çiziminizi gönderin.",
     "door_p": "Bir eskiz, bir çizim ya da bir referans görsel; elinizde ne varsa başlamak için yeterli.",
     "door_cta": "Çiziminizi gönderin",
-    "door_link": "Kütüphane sistemlerine bakın",
+    "door_link": "Sistemleri inceleyin",
     "contact": "iletisim.htm",
-    "library": "koleksiyon.htm"
+    "library": "sistemler.htm"
   },
   "en": {
     "file": "en/process.htm",
-    "title": "How We Work: From Drawing to Cast | Studio Luminant",
+    "title": "Bespoke: From Drawing to Cast | Studio Luminant",
     "desc": "How a drawing becomes a cast relief panel: depth map, approval in raking light, master, silicone mould, cast and artisan finishes, all in our Sapanca workshop.",
-    "crumb": "How We Work",
+    "crumb": "Bespoke",
     "home": "Home",
-    "eyebrow": "How We Work",
-    "h1": "From drawing<br><em>to cast.</em>",
-    "lede": "A project drawing becomes a cast relief panel in our Sapanca workshop. Below, we follow Cantus, a Library system, through the same route a bespoke drawing takes.",
+    "eyebrow": "Bespoke",
+    "h1": "Your drawing,<br><em>cast faithfully.</em>",
+    "lede": "A project drawing becomes a cast relief panel in our Sapanca workshop. Below, we follow Cantus, one of our systems, through the same route a bespoke drawing takes.",
     "steps": [
       {"h": "The drawing", "p": "Every project starts with an image: a hand sketch, a dimensioned elevation or a reference. Here is Cantus as a drawing: the cypress, tulip, carnation and rose of the Iznik tile tradition in one symmetric composition. The drawing, the depth map and the relief below are the same surface.", "cap": "Cantus, drawing", "alt": "Pencil and ink drawing of the Cantus panel: cypress, tulips, carnations and roses"},
       {"h": "The depth map", "p": "We translate the drawing into a depth map, where every grey value is a height: black is the ground of the panel, white its highest point. Relief depth on Cantus is 16 mm, ground to highest point. Changes are still digital, so they cost no tooling and no material.", "cap": "Cantus, depth map", "alt": "Depth map of the Cantus panel: black is the ground, white the highest point"},
@@ -60,8 +60,8 @@
     "door_h": "Send your drawing.",
     "door_p": "Whatever you have is enough to start: a sketch, an elevation or a reference.",
     "door_cta": "Send Your Drawing",
-    "door_link": "See the Library systems",
+    "door_link": "See the systems",
     "contact": "contact.htm",
-    "library": "collection.htm"
+    "library": "systems.htm"
   }
 }
