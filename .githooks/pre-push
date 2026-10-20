@@ -41,6 +41,23 @@ fi
 
 echo "[SL fire-hold] clean — no fire-cert leaks; push allowed." >&2
 
+# ─── Asset cache-busting ───
+# shared.css / components.js etc. are cached for a week (netlify.toml), so every local
+# .css/.js include carries ?v=<content hash>. --apply restamps the pages; exit 1 means it
+# rewrote some, so the push is blocked until they are committed. Fail-OPEN on tool error.
+"$py" "$repo_root/tools/asset_versions.py" --apply
+status=$?
+if [ "$status" -eq 1 ]; then
+  echo "" >&2
+  echo "[SL assets] PUSH BLOCKED — asset ?v= stamps were stale; the pages listed above have been updated." >&2
+  echo "            Commit those pages (chore: refresh asset version stamps) and push again." >&2
+  exit 1
+elif [ "$status" -ne 0 ]; then
+  echo "[SL assets] version stamping failed to run — skipping; push allowed." >&2
+else
+  echo "[SL assets] asset versions current." >&2
+fi
+
 # ─── Sitemap freshness ───
 # A hook cannot add a commit to the push in flight, so a stale <lastmod> is fixed in
 # the working tree and the push is blocked until that sitemap.xml is committed.
