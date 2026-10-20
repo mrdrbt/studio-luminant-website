@@ -62,6 +62,15 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# Public launch PDF, «Çizimden Duvara» / From Drawing to Wall (DEC-05, WB-15): served with noindex.
+# Files: /pdf/SL_Cizimden-Duvara_2026-10_TR.pdf and /pdf/SL_From-Drawing-to-Wall_2026-10_EN.pdf (P-07).
+# /pdf/ must stay out of robots.txt (a blocked URL never shows the header) and out of both sitemaps.
+# Public edition only: the private edition is never hosted.
+[[headers]]
+  for = "/pdf/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
 # ─── Homepage rewrites (serve actual content at clean URLs) ───
 # Fixes /en/ soft-404 in Google Search Console
 # force = true overrides the existing index.html meta-refresh files
