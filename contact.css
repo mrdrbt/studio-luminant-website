@@ -16,6 +16,7 @@
 /* studio facts: the System-page spec rows */
 .ct-facts { margin: 0; max-width: 460px; border-top: 1px solid var(--ink); }
 .ct-facts div { display: grid; grid-template-columns: 9rem 1fr; gap: var(--s-4); padding: var(--s-4) 0; border-bottom: 1px solid var(--border); }
+.ct-facts div[hidden] { display: none; }
 .ct-facts dt { font-size: var(--t-label); letter-spacing: var(--tr-wide); text-transform: uppercase; color: var(--ink-muted); padding-top: 3px; }
 .ct-facts dd { margin: 0; font-size: var(--t-body); line-height: 1.6; color: var(--ink); }
 .ct-facts a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--border-strong); }

@@ -104,6 +104,18 @@ function pictureTag(src, alt, sizes, opts) {
   // The About page (AB-05) is not built yet: the footer link renders only once this is set.
   const ABOUT_HREF = { tr: '', en: '' };
 
+  // DEC-12: the WhatsApp Business number goes here (international format). Empty = email only:
+  // the contact pages' [data-contact-phone] row stays hidden. Also add it to the schema and llms.txt.
+  const CONTACT_PHONE = '';
+  if (CONTACT_PHONE) {
+    const waDigits = CONTACT_PHONE.replace(/\D/g, '');
+    document.querySelectorAll('[data-contact-phone]').forEach(row => {
+      const dd = row.querySelector('dd');
+      if (dd) dd.innerHTML = `<a href="https://wa.me/${waDigits}" target="_blank" rel="noopener">${CONTACT_PHONE}</a>`;
+      row.hidden = false;
+    });
+  }
+
   // ─── DOOR (one primary CTA per door; Copy v1 §3) ───
   // Studio Designs pages: the Systems index and every System page. Everything else is the Bespoke door.
   const pageFile = location.pathname.split('/').pop() || 'index.html';
