@@ -3,7 +3,7 @@
 The page opens on a sticky stage: four registered layers of one Library design (concept image, depth map,
 raking-light test from tools/process_bake.py, then the live relief from relief-light.js) crossfaded by
 process-seq.js as the steps scroll past. The real workshop photos follow, then the night CTA band.
-The analytics block comes from kaynaklar.htm (build_systems.tracking_block); each page keeps its own
+Analytics is loaded by consent.js (build_systems.tracking_block is empty); each page keeps its own
 static footer links. Static output; re-run after editing the JSON.
 
 Usage:  python tools/build_process.py

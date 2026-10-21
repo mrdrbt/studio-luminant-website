@@ -52,9 +52,8 @@ def esc(s):
 
 
 def tracking_block():
-    t = (SITE / "kaynaklar.htm").read_text(encoding="utf-8")
-    a, b = t.index("<!-- Google Analytics -->"), t.index("<!-- End Meta Pixel -->")
-    return t[a:b + len("<!-- End Meta Pixel -->")]
+    # GA4 + Meta Pixel are loaded by consent.js now (consent commit); pages carry no inline tracking markup.
+    return ""
 
 
 def webp(src, dst, width):
