@@ -1,7 +1,7 @@
 /* ─── RELIEF LIGHT — a real relief heightmap lit by a moving raking light (WebGL2) ───
  *
  * Markup (the poster <img> is the LCP element and the fallback; the canvas only fades in over it):
- *   <figure class="relief-light" data-relief-light="assets/relief/080-iznik-cypress/" data-input="auto">
+ *   <figure class="relief-light" data-relief-light="assets/relief/080-hero/" data-input="auto">
  *     <img class="relief-light__poster" src=".../poster-1680.jpg" srcset="... 840w, ... 1680w" sizes="..." alt="...">
  *   </figure>
  * The folder holds manifest.json + textures written by tools/relief_bake.py; the shading constants come

@@ -1,6 +1,6 @@
 {
-  "_note": "Copy for the Process page (surec.htm / en/process.htm), source for tools/build_process.py. Gated via sl-content-writer 2026-10-15 (fire/terminology, slop, archlex, TR calque + metrics, native-TR reader, de-slop reader). Layers from tools/process_bake.py on Library 012 (Cantus); the live relief is assets/relief/012-iznik-cypress/.",
-  "asset": "012-iznik-cypress",
+  "_note": "Copy for the Process page (surec.htm / en/process.htm), source for tools/build_process.py. Gated via sl-content-writer 2026-10-15 (fire/terminology, slop, archlex, TR calque + metrics, native-TR reader, de-slop reader). Layers from tools/process_bake.py on Library 012 (Cantus); the live relief is assets/relief/012-cantus/.",
+  "asset": "012-cantus",
   "layers": "assets/process/cantus/",
   "tr": {
     "file": "surec.htm",

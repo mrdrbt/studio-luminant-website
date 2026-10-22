@@ -4,7 +4,7 @@
     {
       "code": "012",
       "library": "012_iznik-cypress",
-      "asset": "012-iznik-cypress",
+      "asset": "012-cantus",
       "layout": "panel",
       "tr": {
         "name": "Cantus",
@@ -31,7 +31,7 @@
     {
       "code": "031",
       "library": "031_gothic",
-      "asset": "031-gothic",
+      "asset": "031-ostinato",
       "layout": "field",
       "tr": {
         "name": "Ostinato",
@@ -58,7 +58,7 @@
     {
       "code": "042",
       "library": "042_drift-focus",
-      "asset": "042-drift-focus",
+      "asset": "042-glissando",
       "layout": "panel",
       "tr": {
         "name": "Glissando",
@@ -85,7 +85,7 @@
     {
       "code": "033",
       "library": "033_field-erode",
-      "asset": "033-field-erode",
+      "asset": "033-tremolo",
       "layout": "panel",
       "tr": {
         "name": "Tremolo",

@@ -98,11 +98,13 @@
   from = "/Studio Luminant — Özel Mimari Elemanlar.htm"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/en/Studio Luminant — Bespoke Architectural Elements.htm"
   to = "/en/"
   status = 301
+  force = true
 
 # ─── Duplicate-content consolidation ───
 # anadolu-motifleri-duvar-paneli.htm was a near-identical clone (99.3% same body)
