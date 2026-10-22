@@ -640,7 +640,7 @@ const styleLabels = {
 // ─── Alt text (escaped; localized style label) ───
 function escAttr(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); }
 // Intrinsic image sizes (read from the files) so every <img> reserves its space.
-const IMG_DIMS = {"compass-star":[2048,2048],"diagonal-wave":[2048,2048],"faceted-crystal":[2048,2048],"ottoman-heritage":[832,1248],"organic-cell":[1200,1200],"fluted-column":[2048,2048],"petal-geometric":[2000,1116],"geometric-star":[1344,768],"bas-relief":[1376,768],"neo-heritage-modular":[2000,1493],"honeycomb-hexagonal":[2048,2048],"diamond-faceted-crystal":[2000,2000],"diamond-origami-fold":[2048,2048],"petal-star-concave":[2048,2048],"baroque-acanthus-scroll":[2048,2048],"fluted-spherical":[2000,2000]};
+const IMG_DIMS = {"compass-star":[2048,2048],"diagonal-wave":[2048,2048],"faceted-crystal":[2048,2048],"ottoman-heritage":[832,1248],"organic-cell":[1200,1200],"fluted-column":[2048,2048],"petal-geometric":[2000,1116],"geometric-star":[1344,768],"bas-relief":[1376,768],"neo-heritage-modular":[2000,1493],"honeycomb-hexagonal":[2048,2048],"diamond-faceted-crystal":[2000,2000],"diamond-origami-fold":[2048,2048],"petal-star-concave":[2048,2048],"baroque-acanthus-scroll":[2048,2048],"fluted-spherical":[1600,1600]};
 function imgDims(p) { const d = IMG_DIMS[p.id]; return d ? { width: d[0], height: d[1] } : {}; }
 function patAlt(p) {
   return escAttr(p.name + ' — ' + (styleLabels[p.style] || p.style));
