@@ -19,19 +19,19 @@ SITE = Path(__file__).resolve().parents[1]
 DOMAIN = "https://studioluminant.com.tr/"
 UI = {
     "tr": {"back": "← Sistemler", "index": "sistemler.htm", "eyebrow": "Atölye Tasarımları",
-           "cta": "Sistemleri inceleyin", "cta_href": "sistemler.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
+           "cta": "Duvar yerleşimi isteyin", "cta_href": "iletisim.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
            "contact": "iletisim.htm",
            "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme"},
            "material": "Lumina PMAG™",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
            "door": "Bu sistemin duvarınızda nasıl yerleşeceğini görmek için duvar ölçülerinizi iletin.",
-           "layout_link": "Yerleşim isteği için yazın", "own": "Kendi çiziminizle başlıyorsanız:", "home": "Ana Sayfa",
+           "layout_link": "Duvar yerleşimi isteyin", "own": "Kendi çiziminizle başlıyorsanız:", "home": "Ana Sayfa",
            "lib": "Sistemler", "idx_file": "sistemler.htm", "page": "sistem-{slug}.htm",
            "idx_title": "Adlandırılmış rölyef sistemleri",
            "idx_lede": "Ölçüsü, derinliği ve dizilişi tanımlanmış rölyef sistemleri. Her birini sayfasında canlı ışıkta inceleyin.",
            "studies": "Tasarım etütleri"},
     "en": {"back": "← Systems", "index": "systems.htm", "eyebrow": "Studio Designs",
-           "cta": "See the systems", "cta_href": "systems.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
+           "cta": "Request a wall layout", "cta_href": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
            "contact": "contact.htm",
            "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material"},
            "material": "Lumina PMAG™",
@@ -167,7 +167,6 @@ def page(sysd, lang, track, figs):
     <p class="sys-lede">{nb(txt(c['lede']))}</p>
     <div class="sys-ctas">
       <a href="{u['cta_href']}" class="btn-primary">{u['cta']}</a>
-      <a href="{u['contact']}" class="sys-link">{u['layout_link']}</a>
     </div>
   </div>
   <div class="sys-hero__stage">

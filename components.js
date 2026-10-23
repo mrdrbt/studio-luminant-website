@@ -81,7 +81,7 @@ function pictureTag(src, alt, sizes, opts) {
       architects: 'Mimarlar İçin', // DEC-02 Q5 default
       materials: 'Malzeme',
       ctaBespoke: 'Çiziminizi gönderin',
-      ctaStudio: 'Sistemleri inceleyin', // DEC-02 Q2 open: holds until ruled
+      ctaStudio: 'Duvar yerleşimi isteyin', // DEC-02 Q2 ruled 2026-10-23
       tagline: 'Döküm rölyef duvarlar · Sapanca',
       footerCtaTitle: 'Yeni proje',
       about: 'Hakkımızda'
@@ -93,7 +93,7 @@ function pictureTag(src, alt, sizes, opts) {
       architects: 'For Architects',
       materials: 'Materials',
       ctaBespoke: 'Send your drawing',
-      ctaStudio: 'See the systems', // DEC-02 Q2 open: holds until ruled
+      ctaStudio: 'Request a wall layout', // DEC-02 Q2 ruled 2026-10-23
       tagline: 'Cast relief walls · Sapanca',
       footerCtaTitle: 'Start a project',
       about: 'About'
@@ -121,7 +121,7 @@ function pictureTag(src, alt, sizes, opts) {
   const pageFile = location.pathname.split('/').pop() || 'index.html';
   const isStudioDoor = /^(sistemler|systems|sistem-|system-)/.test(pageFile);
   const doorCta = isStudioDoor
-    ? { text: L.ctaStudio, href: lang === 'tr' ? 'sistemler.htm' : 'systems.htm' }
+    ? { text: L.ctaStudio, href: lang === 'tr' ? 'iletisim.htm' : 'contact.htm' }
     : { text: L.ctaBespoke, href: lang === 'tr' ? 'iletisim.htm' : 'contact.htm' };
 
   // ─── NAV ───
