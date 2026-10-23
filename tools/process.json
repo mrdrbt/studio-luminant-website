@@ -4,7 +4,7 @@
   "layers": "assets/process/cantus/",
   "tr": {
     "file": "surec.htm",
-    "title": "Özel Üretim: Çizimden Döküme | Studio Luminant",
+    "title": "Özel Üretim Rölyef Panel: Çizimden Döküme | Studio Luminant",
     "desc": "Çizimden dökme rölyef panele: derinlik haritası, yalama ışıkta onay, ana model, silikon kalıp, döküm ve artizan finish. Hepsi Sapanca'daki atölyemizde.",
     "crumb": "Özel Üretim",
     "home": "Ana Sayfa",
@@ -35,7 +35,7 @@
   },
   "en": {
     "file": "en/process.htm",
-    "title": "Bespoke: From Drawing to Cast | Studio Luminant",
+    "title": "Bespoke Relief Panels: Drawing to Cast | Studio Luminant",
     "desc": "How a drawing becomes a cast relief panel: depth map, approval in raking light, master, silicone mould, cast and artisan finishes, all in our Sapanca workshop.",
     "crumb": "Bespoke",
     "home": "Home",
