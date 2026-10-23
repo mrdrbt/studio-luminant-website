@@ -1,5 +1,5 @@
 {
-  "_note": "Library System profiles, source for tools/build_systems.py. Public names Cantus / Ostinato / Glissando / Tremolo chosen by Burak 2026-10-15 (Set A, music family with Refrain + Fugue, #83); web competitor check done 2026-10-15, TÜRKPATENT 19/27 clearance with the avukat still open (#95). Facts from VAULT/Library/Relief/<code>/manifest.json. No prices (#73).",
+  "_note": "Library System profiles, source for tools/build_systems.py. Public names Cantus / Glissando chosen by Burak 2026-10-15; 031 (was Ostinato) is now Ricercar and 033 (was Tremolo) is now Mordent on 2026-10-23 after the same-sector check found both in use (wallpaper; wallcovering + acoustic panel) (Set A, music family with Refrain + Fugue, #83); web competitor check done 2026-10-15, TÜRKPATENT 19/27 clearance with the avukat still open (#95). Facts from VAULT/Library/Relief/<code>/manifest.json. No prices (#73).",
   "systems": [
     {
       "code": "012",
@@ -31,29 +31,29 @@
     {
       "code": "031",
       "library": "031_gothic",
-      "asset": "031-ostinato",
+      "asset": "031-ricercar",
       "layout": "field",
       "tr": {
-        "name": "Ostinato",
+        "name": "Ricercar",
         "lede": "Gotik dört yapraklı yonca motifinden kurulmuş bir kafes. Desen 600 mm'de bir tekrarlanır; paneller yan yana geldiğinde yüzey tek bir alan olarak okunur.",
         "size": "600 × 600 mm",
         "depth": "6 mm",
         "layout": "Tekrarlı alan, 600 mm'de bir",
         "alt": "Gotik dört yapraklı yonca kafes desenli dökme rölyef yüzey, yalama ışık altında",
-        "object_alt": "Ostinato panelinin yalama ışıkta render'ı",
-        "strip_alt": "Ostinato panellerinden oluşan bir duvar şeridinin render'ı"
+        "object_alt": "Ricercar panelinin yalama ışıkta render'ı",
+        "strip_alt": "Ricercar panellerinden oluşan bir duvar şeridinin render'ı"
       },
       "en": {
-        "name": "Ostinato",
+        "name": "Ricercar",
         "lede": "A lattice built from the Gothic quatrefoil. The pattern repeats every 600 mm, so panels laid side by side read as one continuous field.",
         "size": "600 × 600 mm",
         "depth": "6 mm",
         "layout": "Repeating field, every 600 mm",
         "alt": "Cast relief surface with a Gothic quatrefoil lattice, in low raking light",
-        "object_alt": "Render of the Ostinato panel in raking light",
-        "strip_alt": "Render of a wall strip laid in Ostinato panels"
+        "object_alt": "Render of the Ricercar panel in raking light",
+        "strip_alt": "Render of a wall strip laid in Ricercar panels"
       },
-      "slug": "ostinato"
+      "slug": "ricercar"
     },
     {
       "code": "042",
@@ -85,29 +85,29 @@
     {
       "code": "033",
       "library": "033_field-erode",
-      "asset": "033-tremolo",
+      "asset": "033-mordent",
       "layout": "panel",
       "tr": {
-        "name": "Tremolo",
+        "name": "Mordent",
         "lede": "Kabaran kare hücrelerden bir alan: hücreler iki noktada yoğunlaşıp ince bir desene dönüşüyor, kenarlara doğru seyreliyor. Panel tek parça olarak kurgulanmıştır.",
         "size": "600 × 600 mm",
         "depth": "7 mm",
         "layout": "Tek panel",
         "alt": "Kabaran kare hücreleri iki noktada desene dönüşen dökme rölyef panel, yalama ışık altında",
-        "object_alt": "Tremolo panelinin yalama ışıkta render'ı",
+        "object_alt": "Mordent panelinin yalama ışıkta render'ı",
         "strip_alt": null
       },
       "en": {
-        "name": "Tremolo",
+        "name": "Mordent",
         "lede": "A field of raised square cells that gathers into fine pattern at two points and scatters toward the edges. Composed as a single panel.",
         "size": "600 × 600 mm",
         "depth": "7 mm",
         "layout": "Single panel",
         "alt": "Cast relief panel of raised square cells gathering into pattern at two points, in low raking light",
-        "object_alt": "Render of the Tremolo panel in raking light",
+        "object_alt": "Render of the Mordent panel in raking light",
         "strip_alt": null
       },
-      "slug": "tremolo"
+      "slug": "mordent"
     }
   ]
 }

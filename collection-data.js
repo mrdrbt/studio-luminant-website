@@ -339,8 +339,8 @@ window.SL_PATTERNS = [
     "id": "fluted-spherical",
     "code": "SIG-FLS",
     "collection": "SIG",
-    "name_en": "Fluted Spherical",
-    "name_tr": "Yivli Küresel",
+    "name_en": "Sostenuto",
+    "name_tr": "Sostenuto",
     "style": "surface",
     "applications": [
       "wall-panel"

@@ -647,22 +647,22 @@
 
 [[redirects]]
   from = "/sistem-031.htm"
-  to = "/sistem-ostinato.htm"
+  to = "/sistem-ricercar.htm"
   status = 301
 
 [[redirects]]
   from = "/sistem-031"
-  to = "/sistem-ostinato.htm"
+  to = "/sistem-ricercar.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-031.htm"
-  to = "/en/system-ostinato.htm"
+  to = "/en/system-ricercar.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-031"
-  to = "/en/system-ostinato.htm"
+  to = "/en/system-ricercar.htm"
   status = 301
 
 [[redirects]]
@@ -687,22 +687,22 @@
 
 [[redirects]]
   from = "/sistem-033.htm"
-  to = "/sistem-tremolo.htm"
+  to = "/sistem-mordent.htm"
   status = 301
 
 [[redirects]]
   from = "/sistem-033"
-  to = "/sistem-tremolo.htm"
+  to = "/sistem-mordent.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-033.htm"
-  to = "/en/system-tremolo.htm"
+  to = "/en/system-mordent.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-033"
-  to = "/en/system-tremolo.htm"
+  to = "/en/system-mordent.htm"
   status = 301
 
 # ─── Retired design studies (gridded renders, #80-5) → gallery ───
