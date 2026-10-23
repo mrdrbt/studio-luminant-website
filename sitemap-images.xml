@@ -290,25 +290,4 @@
       <image:caption>Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs</image:caption>
     </image:image>
   </url>
-
-
-  <!-- Tufetto making-of -->
-  <url>
-    <loc>https://studioluminant.com.tr/vaka-tufetto.htm</loc>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/assets/case/tufetto/model.jpg</image:loc>
-      <image:title>Tasarım aşaması: Tufetto duvarının ilk modelinin render görüntüsü, mimarın revizyonundan önce</image:title>
-      <image:caption>Tasarım aşaması: Tufetto duvarının ilk modelinin render görüntüsü, mimarın revizyonundan önce</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Tufetto making-of -->
-  <url>
-    <loc>https://studioluminant.com.tr/en/case-study-tufetto.htm</loc>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/assets/case/tufetto/model.jpg</image:loc>
-      <image:title>Design stage: render of the first model of the Tufetto wall, before the architect's revision</image:title>
-      <image:caption>Design stage: render of the first model of the Tufetto wall, before the architect's revision</image:caption>
-    </image:image>
-  </url>
 </urlset>
