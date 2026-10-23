@@ -942,3 +942,10 @@ summary:focus-visible,
   .filmstrip-frame { height: 55vh; }
   .filmstrip-caption { left: var(--pad-x-sm); bottom: var(--s-6); }
 }
+
+/* Sample-box band (galeri, sistemler, EN twins): the legacy .product-* rules lived only in urunler.htm's inline <style>, so the band rendered unstyled elsewhere. Scoped here so urunler keeps its own. */
+#sample-box-band .product-content { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
+#sample-box-band .product-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 3vw, 42px); font-weight: 300; line-height: 1.05; color: var(--ink); margin-bottom: 32px; }
+#sample-box-band .product-name em { font-style: italic; color: var(--accent); }
+#sample-box-band .product-desc { font-size: 14px; line-height: 1.85; color: var(--ink-2); font-weight: 300; margin-bottom: 20px; }
+@media (max-width: 1024px) { #sample-box-band .product-content { grid-template-columns: 1fr; gap: 48px; } }
