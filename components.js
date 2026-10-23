@@ -102,7 +102,7 @@ function pictureTag(src, alt, sizes, opts) {
   const L = LABELS[lang === 'tr' ? 'tr' : 'en'];
 
   // The About page (AB-05) is not built yet: the footer link renders only once this is set.
-  const ABOUT_HREF = { tr: '', en: '' };
+  const ABOUT_HREF = { tr: 'hakkimizda.htm', en: 'about.htm' };
 
   // DEC-12: the WhatsApp Business number goes here (international format). Empty = email only:
   // the contact pages' [data-contact-phone] row stays hidden. Also add it to the schema and llms.txt.

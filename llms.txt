@@ -28,6 +28,8 @@ Key facts for accurate citation:
 - [For Architects](https://studioluminant.com.tr/en/architects.htm): How the studio works with architects and specifiers.
 - [Material — Lumina PMAG™](https://studioluminant.com.tr/en/products.htm): Technical data for Lumina PMAG™ and the artisan finishes.
 - [Gallery](https://studioluminant.com.tr/en/gallery.htm): Relief panels and sculptural wall surfaces.
+- [About](https://studioluminant.com.tr/en/about.htm): The story of Studio Luminant: the founder, the Sapanca studio, and technical know-how from drawing to mould.
+- [Making of the Tufetto wall](https://studioluminant.com.tr/en/case-study-tufetto.htm): From a reference image to a hand-cast relief wall, a residence in Istanbul.
 - [Contact](https://studioluminant.com.tr/en/contact.htm): Send a drawing or ask for the sample box.
 
 ## Definitions & guides (English)
@@ -54,6 +56,8 @@ Key facts for accurate citation:
 - [Mimarlar İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi.
 - [Malzeme — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): Lumina PMAG™ ve artizan finish için teknik veriler.
 - [Galeri](https://studioluminant.com.tr/galeri.htm): Rölyef paneller ve heykelsi duvar yüzeyleri.
+- [Hakkımızda](https://studioluminant.com.tr/hakkimizda.htm): Studio Luminant'ın hikâyesi: kurucu, Sapanca'daki atölye, çizimden kalıba teknik bilgi.
+- [Tufetto duvarının yapım süreci](https://studioluminant.com.tr/vaka-tufetto.htm): Referans görselinden elde dökülen rölyef duvara, İstanbul'da bir konut.
 - [İletişim](https://studioluminant.com.tr/iletisim.htm): Çiziminizi gönderin ya da numune kutusunu isteyin.
 
 ## Tanımlar & rehberler (Türkçe)
