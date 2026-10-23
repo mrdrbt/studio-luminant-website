@@ -1,27 +1,27 @@
 {
-  "_note": "Library System profiles, source for tools/build_systems.py. Public names Cantus / Glissando chosen by Burak 2026-10-15; 031 (was Ostinato) is now Ricercar and 033 (was Tremolo) is now Mordent on 2026-10-23 after the same-sector check found both in use (wallpaper; wallcovering + acoustic panel) (Set A, music family with Refrain + Fugue, #83); web competitor check done 2026-10-15, TÜRKPATENT 19/27 clearance with the avukat still open (#95). Facts from VAULT/Library/Relief/<code>/manifest.json. No prices (#73). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default).",
+  "_note": "Library System profiles, source for tools/build_systems.py. Public names Cantilena / Glissando (012 was Cantilena until the #112 name-clash rename, 2026-10-23) chosen by Burak 2026-10-15; 031 (was Ostinato) is now Ricercar and 033 (was Tremolo) is now Mordent on 2026-10-23 after the same-sector check found both in use (wallpaper; wallcovering + acoustic panel) (Set A, music family with Refrain + Fugue, #83); web competitor check done 2026-10-15, TÜRKPATENT 19/27 clearance with the avukat still open (#95). Facts from VAULT/Library/Relief/<code>/manifest.json. No prices (#73). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default).",
   "systems": [
     {
       "code": "012",
       "library": "012_iznik-cypress",
-      "asset": "012-cantus",
+      "asset": "012-cantilena",
       "layout": "panel",
       "tr": {
-        "name": "Cantus",
+        "name": "Cantilena",
         "lede": "İznik çini geleneğinin servi, lale, karanfil ve gül motifleri, tekrarsız kurgulanmış tek bir panelde buluşuyor. Panel duvarda tek başına ya da düz yüzeyler arasında bir vurgu olarak durur.",
         "size": "600 × 600 mm",
         "depth": "16 mm",
         "layout": "Tek panel, tekrarsız kompozisyon",
         "alt": "Servi, lale, karanfil ve gül motifli rölyef panel, yalama ışık altında",
-        "object_alt": "Cantus panelinin yalama ışıkta render'ı",
+        "object_alt": "Cantilena panelinin yalama ışıkta render'ı",
         "strip_alt": null,
-        "title": "Cantus: İznik Motifli Rölyef Duvar Paneli | Studio Luminant",
+        "title": "Cantilena: İznik Motifli Rölyef Paneli | Studio Luminant",
         "meta": "İznik çini geleneğinin servi, lale, karanfil ve gül motifleri, tekrarsız tek bir panelde. Duvarda tek başına ya da düz yüzeylerde tek vurgu olarak durur.",
         "sections": [
           {
             "h": "Desen",
             "p": [
-              "Cantus, İznik çini geleneğinin dört bitkisini, servi, lale, karanfil ve gülü, tek bir panelin içinde toplar. Motifler bir tekrar düzenine dizilmez; kompozisyon panelin kendi sınırları içinde kurulur, başlar ve biter. Bu yüzden yüzey bir desen şeridi gibi değil, duvardaki tek bir resim gibi okunur.",
+              "Cantilena, İznik çini geleneğinin dört bitkisini, servi, lale, karanfil ve gülü, tek bir panelin içinde toplar. Motifler bir tekrar düzenine dizilmez; kompozisyon panelin kendi sınırları içinde kurulur, başlar ve biter. Bu yüzden yüzey bir desen şeridi gibi değil, duvardaki tek bir resim gibi okunur.",
               "Rölyef 16 mm derinliğe ulaşır. Bu derinlik motiflerin kenarlarında net gölgeler, yapraklar arasında okunur ayrımlar verir. Panel uzaktan bir siluet, yakından ise ayrıntı sunar."
             ]
           },
@@ -34,30 +34,30 @@
           {
             "h": "Duvarda",
             "p": [
-              "Cantus 600 × 600 mm ölçüsünde tek bir panel olarak tasarlanmıştır. Tek başına bir duvarın odağı olabilir ya da düz yüzeylerin arasında tek vurgu olarak yer alabilir. Yan yana dizmek için kurulmuş bir tekrar düzeni yoktur; bu panelin gücü, kendi başına bir bütün olmasındadır."
+              "Cantilena 600 × 600 mm ölçüsünde tek bir panel olarak tasarlanmıştır. Tek başına bir duvarın odağı olabilir ya da düz yüzeylerin arasında tek vurgu olarak yer alabilir. Yan yana dizmek için kurulmuş bir tekrar düzeni yoktur; bu panelin gücü, kendi başına bir bütün olmasındadır."
             ]
           }
         ],
         "drawing_cap": "Çizim: derinlik haritası",
         "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
-        "drawing_alt": "Cantus panelinin derinlik haritası: servi, lale, karanfil ve gül motiflerinin gri tonlarla çizimi"
+        "drawing_alt": "Cantilena panelinin derinlik haritası: servi, lale, karanfil ve gül motiflerinin gri tonlarla çizimi"
       },
       "en": {
-        "name": "Cantus",
+        "name": "Cantilena",
         "lede": "The cypress, tulip, carnation and rose of the Iznik tile tradition, composed as a single panel with no repeat. It stands alone on a wall, or as the one accent among plain surfaces.",
         "size": "600 × 600 mm",
         "depth": "16 mm",
         "layout": "Single panel, no repeat",
         "alt": "Relief panel with a cypress, tulips, carnations and roses, in low raking light",
-        "object_alt": "Render of the Cantus panel in raking light",
+        "object_alt": "Render of the Cantilena panel in raking light",
         "strip_alt": null,
-        "title": "Cantus: Iznik-Motif Relief Wall Panel | Studio Luminant",
+        "title": "Cantilena: Iznik-Motif Relief Wall Panel | Studio Luminant",
         "meta": "The cypress, tulip, carnation and rose of the Iznik tile tradition, set as one panel with no repeat. It stands alone or as an accent on plain walls.",
         "sections": [
           {
             "h": "The pattern",
             "p": [
-              "Cantus gathers the four plants of the Iznik tile tradition, the cypress, tulip, carnation and rose, into a single panel. The motifs are not set in a repeat: the composition is built inside the panel's own edges, and it begins and ends there. The surface reads as one picture on the wall rather than a strip of pattern.",
+              "Cantilena gathers the four plants of the Iznik tile tradition, the cypress, tulip, carnation and rose, into a single panel. The motifs are not set in a repeat: the composition is built inside the panel's own edges, and it begins and ends there. The surface reads as one picture on the wall rather than a strip of pattern.",
               "The relief reaches 16 mm. That depth gives the edges of the motifs clear shadows and the leaves readable separations. From across a room the panel is a silhouette; close up it offers detail."
             ]
           },
@@ -70,15 +70,15 @@
           {
             "h": "On the wall",
             "p": [
-              "Cantus is designed as a single 600 × 600 mm panel. It can hold a wall on its own, or serve as the one accent among plain surfaces. It carries no repeat meant for laying side by side; its strength is that it is complete in itself."
+              "Cantilena is designed as a single 600 × 600 mm panel. It can hold a wall on its own, or serve as the one accent among plain surfaces. It carries no repeat meant for laying side by side; its strength is that it is complete in itself."
             ]
           }
         ],
         "drawing_cap": "Drawing: depth map",
         "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
-        "drawing_alt": "Depth map of the Cantus panel: the cypress, tulip, carnation and rose motifs drawn in grey tones"
+        "drawing_alt": "Depth map of the Cantilena panel: the cypress, tulip, carnation and rose motifs drawn in grey tones"
       },
-      "slug": "cantus"
+      "slug": "cantilena"
     },
     {
       "code": "031",

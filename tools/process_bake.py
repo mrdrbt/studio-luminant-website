@@ -5,7 +5,7 @@ scroll crossfade reads as one surface changing rather than a slideshow. The four
 live relief (assets/relief/<asset>/, from relief_bake.py), inset in CSS so its panel fills the
 same square.
 
-  python tools/process_bake.py "<VAULT/Library/Relief/012_iznik-cypress>" assets/process/cantus --light-frame 0
+  python tools/process_bake.py "<VAULT/Library/Relief/012_iznik-cypress>" assets/process/cantilena --light-frame 0
 
 Concept: the source image is warped onto the heightmap with an ECC affine fit on gradient maps.
 Light: the graze sheet holds three raking-light frames; --light-frame picks the one lit from the poster's side.

@@ -627,22 +627,33 @@
 # Library System profiles: code-based working URLs (rebuild-v3 preview only) → public names (Burak 2026-10-15)
 [[redirects]]
   from = "/sistem-012.htm"
-  to = "/sistem-cantus.htm"
+  to = "/sistem-cantilena.htm"
   status = 301
 
 [[redirects]]
   from = "/sistem-012"
-  to = "/sistem-cantus.htm"
+  to = "/sistem-cantilena.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-012.htm"
-  to = "/en/system-cantus.htm"
+  to = "/en/system-cantilena.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-012"
-  to = "/en/system-cantus.htm"
+  to = "/en/system-cantilena.htm"
+  status = 301
+
+# System 012 renamed Cantus -> Cantilena (#112, 2026-10-23); old URLs point straight at the new ones
+[[redirects]]
+  from = "/sistem-cantus.htm"
+  to = "/sistem-cantilena.htm"
+  status = 301
+
+[[redirects]]
+  from = "/en/system-cantus.htm"
+  to = "/en/system-cantilena.htm"
   status = 301
 
 [[redirects]]

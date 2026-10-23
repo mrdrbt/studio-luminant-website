@@ -1,7 +1,7 @@
 {
-  "_note": "Copy for the Process page (surec.htm / en/process.htm), source for tools/build_process.py. Gated via sl-content-writer 2026-10-15 (fire/terminology, slop, archlex, TR calque + metrics, native-TR reader, de-slop reader). Layers from tools/process_bake.py on Library 012 (Cantus); the live relief is assets/relief/012-cantus/.",
-  "asset": "012-cantus",
-  "layers": "assets/process/cantus/",
+  "_note": "Copy for the Process page (surec.htm / en/process.htm), source for tools/build_process.py. Gated via sl-content-writer 2026-10-15 (fire/terminology, slop, archlex, TR calque + metrics, native-TR reader, de-slop reader). Layers from tools/process_bake.py on Library 012 (Cantilena); the live relief is assets/relief/012-cantilena/.",
+  "asset": "012-cantilena",
+  "layers": "assets/process/cantilena/",
   "tr": {
     "file": "surec.htm",
     "title": "Özel Üretim Rölyef Panel: Çizimden Döküme | Studio Luminant",
@@ -10,12 +10,12 @@
     "home": "Ana Sayfa",
     "eyebrow": "Özel Üretim",
     "h1": "Nasıl çizdiyseniz,<br><em>öyle dökeriz.</em>",
-    "lede": "Bir projenin çizimi, Sapanca'daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, sistemlerimizden Cantus'u özel üretim bir çizimin izlediği yoldan geçiriyoruz.",
+    "lede": "Bir projenin çizimi, Sapanca'daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, sistemlerimizden Cantilena'yı özel üretim bir çizimin izlediği yoldan geçiriyoruz.",
     "steps": [
-      {"h": "Çizim ya da görsel", "p": "Her proje bir çizim ya da görselle başlar. Elle çizilmiş bir eskiz, ölçülü bir teknik çizim ya da bir referans görsel olabilir. Burada Cantus’u bir çizim olarak görüyorsunuz: İznik çini geleneğinin servi, lale, karanfil ve gül motifleri tek bir simetrik kompozisyonda. Çizim, derinlik haritası ve aşağıdaki rölyef aynı yüzeydir.", "cap": "Cantus, çizim", "alt": "Servi, lale, karanfil ve gül motifli Cantus panelinin karakalem ve mürekkep çizimi"},
-      {"h": "Derinlik haritası", "p": "Çizimi bir derinlik haritasına çeviririz. Haritadaki her gri tonu bir yüksekliğe karşılık gelir. Siyah, panelin zeminidir; beyaz, en yüksek noktası. Cantus'ta rölyef derinliği, zeminden en yüksek noktaya 16 mm'dir. Değişiklikler dijitalde kaldığı için kalıp ya da malzeme maliyeti doğurmaz.", "cap": "Cantus, derinlik haritası", "alt": "Cantus panelinin siyahtan beyaza derinlik haritası"},
-      {"h": "Yalama ışıkta okuma", "p": "Döküme geçmeden önce yüzeyi alçak açıdan, yandan vuran bir ışıkta dijital olarak okuruz. Rölyefin gölgesi burada belirir; sığ formların nerede düzleştiği, derin olanların nerede gölgeye gömüldüğü bu aşamada görülür. Ortaya çıkan render'ı onayınıza sunarız; onayınız olmadan döküme geçmeyiz.", "cap": "Cantus, yalama ışık testi", "alt": "Cantus panelinin yalama ışıkta dijital testi"},
-      {"h": "Rölyef", "p": "Onaylanan yüzeyden 3D baskıyla ana model üretilir. Bu sayfadaki rölyef ise aynı derinlik haritasından gerçek zamanlı hesaplanır; imleci gezdirdikçe ya da sayfayı kaydırdıkça ışığın yönü ve gölgeler değişir.", "cap": "Cantus, gerçek zamanlı render, yalama ışık", "alt": "Cantus rölyefinin derinlik haritasından hesaplanan gerçek zamanlı render'ı, yalama ışıkta"}
+      {"h": "Çizim ya da görsel", "p": "Her proje bir çizim ya da görselle başlar. Elle çizilmiş bir eskiz, ölçülü bir teknik çizim ya da bir referans görsel olabilir. Burada Cantilena’yı bir çizim olarak görüyorsunuz: İznik çini geleneğinin servi, lale, karanfil ve gül motifleri tek bir simetrik kompozisyonda. Çizim, derinlik haritası ve aşağıdaki rölyef aynı yüzeydir.", "cap": "Cantilena, çizim", "alt": "Servi, lale, karanfil ve gül motifli Cantilena panelinin karakalem ve mürekkep çizimi"},
+      {"h": "Derinlik haritası", "p": "Çizimi bir derinlik haritasına çeviririz. Haritadaki her gri tonu bir yüksekliğe karşılık gelir. Siyah, panelin zeminidir; beyaz, en yüksek noktası. Cantilena'da rölyef derinliği, zeminden en yüksek noktaya 16 mm'dir. Değişiklikler dijitalde kaldığı için kalıp ya da malzeme maliyeti doğurmaz.", "cap": "Cantilena, derinlik haritası", "alt": "Cantilena panelinin siyahtan beyaza derinlik haritası"},
+      {"h": "Yalama ışıkta okuma", "p": "Döküme geçmeden önce yüzeyi alçak açıdan, yandan vuran bir ışıkta dijital olarak okuruz. Rölyefin gölgesi burada belirir; sığ formların nerede düzleştiği, derin olanların nerede gölgeye gömüldüğü bu aşamada görülür. Ortaya çıkan render'ı onayınıza sunarız; onayınız olmadan döküme geçmeyiz.", "cap": "Cantilena, yalama ışık testi", "alt": "Cantilena panelinin yalama ışıkta dijital testi"},
+      {"h": "Rölyef", "p": "Onaylanan yüzeyden 3D baskıyla ana model üretilir. Bu sayfadaki rölyef ise aynı derinlik haritasından gerçek zamanlı hesaplanır; imleci gezdirdikçe ya da sayfayı kaydırdıkça ışığın yönü ve gölgeler değişir.", "cap": "Cantilena, gerçek zamanlı render, yalama ışık", "alt": "Cantilena rölyefinin derinlik haritasından hesaplanan gerçek zamanlı render'ı, yalama ışıkta"}
     ],
     "shop_eyebrow": "Atölyede",
     "shop_tagline": "Ana modelden artizan finish'e kadar her adım Sapanca'daki atölyemizde atılır.",
@@ -41,12 +41,12 @@
     "home": "Home",
     "eyebrow": "Bespoke",
     "h1": "Your drawing,<br><em>cast faithfully.</em>",
-    "lede": "A project drawing becomes a cast relief panel in our Sapanca workshop. Below, we follow Cantus, one of our systems, through the same route a bespoke drawing takes.",
+    "lede": "A project drawing becomes a cast relief panel in our Sapanca workshop. Below, we follow Cantilena, one of our systems, through the same route a bespoke drawing takes.",
     "steps": [
-      {"h": "The drawing", "p": "Every project starts with an image: a hand sketch, a dimensioned elevation or a reference. Here is Cantus as a drawing: the cypress, tulip, carnation and rose of the Iznik tile tradition in one symmetric composition. The drawing, the depth map and the relief below are the same surface.", "cap": "Cantus, drawing", "alt": "Pencil and ink drawing of the Cantus panel: cypress, tulips, carnations and roses"},
-      {"h": "The depth map", "p": "We translate the drawing into a depth map, where every grey value is a height: black is the ground of the panel, white its highest point. Relief depth on Cantus is 16 mm, ground to highest point. Changes are still digital, so they cost no tooling and no material.", "cap": "Cantus, depth map", "alt": "Depth map of the Cantus panel: black is the ground, white the highest point"},
-      {"h": "Read in raking light", "p": "Before anything is cast, we read the surface digitally under raking light, low and from the side. This is where the relief's shadow appears, and where shallow forms flatten out and deep ones fill solid with shadow. You approve this render; nothing is cast until you do.", "cap": "Cantus, raking-light test", "alt": "Digital raking-light test of the Cantus panel"},
-      {"h": "The relief", "p": "The approved surface is 3D-printed as the master. What you see here is not the master: it is computed live from the same depth map. Move the cursor or scroll, and the light and its shadows move with it.", "cap": "Cantus, live render in raking light", "alt": "Live render of the Cantus relief, computed from its depth map, in raking light"}
+      {"h": "The drawing", "p": "Every project starts with an image: a hand sketch, a dimensioned elevation or a reference. Here is Cantilena as a drawing: the cypress, tulip, carnation and rose of the Iznik tile tradition in one symmetric composition. The drawing, the depth map and the relief below are the same surface.", "cap": "Cantilena, drawing", "alt": "Pencil and ink drawing of the Cantilena panel: cypress, tulips, carnations and roses"},
+      {"h": "The depth map", "p": "We translate the drawing into a depth map, where every grey value is a height: black is the ground of the panel, white its highest point. Relief depth on Cantilena is 16 mm, ground to highest point. Changes are still digital, so they cost no tooling and no material.", "cap": "Cantilena, depth map", "alt": "Depth map of the Cantilena panel: black is the ground, white the highest point"},
+      {"h": "Read in raking light", "p": "Before anything is cast, we read the surface digitally under raking light, low and from the side. This is where the relief's shadow appears, and where shallow forms flatten out and deep ones fill solid with shadow. You approve this render; nothing is cast until you do.", "cap": "Cantilena, raking-light test", "alt": "Digital raking-light test of the Cantilena panel"},
+      {"h": "The relief", "p": "The approved surface is 3D-printed as the master. What you see here is not the master: it is computed live from the same depth map. Move the cursor or scroll, and the light and its shadows move with it.", "cap": "Cantilena, live render in raking light", "alt": "Live render of the Cantilena relief, computed from its depth map, in raking light"}
     ],
     "shop_eyebrow": "In the workshop",
     "shop_tagline": "Mould, pour, demould and finish: every step happens in the same workshop.",

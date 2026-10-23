@@ -5,7 +5,7 @@
 The studio works through two doors, split at the drawing:
 
 - **Bespoke** («Özel Üretim»): the client's drawing, sketch or reference image is turned into a depth map, approved in raking light, made into a master and a silicone mould, then cast and finished.
-- **Studio Designs** («Atölye Tasarımları»): relief the studio has drawn itself, published as named Systems («Sistemler»: Cantus, Ricercar, Glissando, Mordent), each with a defined size, depth and layout.
+- **Studio Designs** («Atölye Tasarımları»): relief the studio has drawn itself, published as named Systems («Sistemler»: Cantilena, Ricercar, Glissando, Mordent), each with a defined size, depth and layout.
 
 Key facts for accurate citation:
 - Studio name: Studio Luminant
@@ -20,8 +20,8 @@ Key facts for accurate citation:
 
 - [Studio Luminant — Bespoke Architectural Elements](https://studioluminant.com.tr/en/): Homepage — the two doors, Bespoke and Studio Designs.
 - [Bespoke](https://studioluminant.com.tr/en/process.htm): The Bespoke process, from the drawing to the depth map, raking-light approval, master, mould, cast and installation.
-- [Studio Designs — Systems](https://studioluminant.com.tr/en/systems.htm): Relief systems drawn by the studio (Cantus, Ricercar, Glissando, Mordent), each on its own page, plus named designs.
-- [Cantus](https://studioluminant.com.tr/en/system-cantus.htm): Iznik cypress, tulip, carnation and rose, composed as a single panel with no repeat.
+- [Studio Designs — Systems](https://studioluminant.com.tr/en/systems.htm): Relief systems drawn by the studio (Cantilena, Ricercar, Glissando, Mordent), each on its own page, plus named designs.
+- [Cantilena](https://studioluminant.com.tr/en/system-cantilena.htm): Iznik cypress, tulip, carnation and rose, composed as a single panel with no repeat.
 - [Ricercar](https://studioluminant.com.tr/en/system-ricercar.htm): A lattice built from the Gothic quatrefoil, repeating every 600 mm.
 - [Glissando](https://studioluminant.com.tr/en/system-glissando.htm): Drifting fibres on upright panels laid with a half-height offset.
 - [Mordent](https://studioluminant.com.tr/en/system-mordent.htm): Square cells that gather at two points and scatter toward the edges.
@@ -52,7 +52,7 @@ Key facts for accurate citation:
 
 - [Studio Luminant — Özel Mimari Elemanlar](https://studioluminant.com.tr/): Ana sayfa — iki kapı: Özel Üretim ve Atölye Tasarımları.
 - [Özel Üretim](https://studioluminant.com.tr/surec.htm): Çizimden derinlik haritasına, yalama ışıkta onaya, ana modele, kalıba, döküme ve montaja: özel üretim süreci.
-- [Atölye Tasarımları — Sistemler](https://studioluminant.com.tr/sistemler.htm): Stüdyonun çizdiği adlandırılmış rölyef sistemleri (Cantus, Ricercar, Glissando, Mordent) ve adlandırılmış tasarımlar.
+- [Atölye Tasarımları — Sistemler](https://studioluminant.com.tr/sistemler.htm): Stüdyonun çizdiği adlandırılmış rölyef sistemleri (Cantilena, Ricercar, Glissando, Mordent) ve adlandırılmış tasarımlar.
 - [Mimarlar İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi.
 - [Malzeme — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): Lumina PMAG™ ve artizan finish için teknik veriler.
 - [Galeri](https://studioluminant.com.tr/galeri.htm): Rölyef paneller ve heykelsi duvar yüzeyleri.
