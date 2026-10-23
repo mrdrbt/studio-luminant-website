@@ -1,7 +1,8 @@
 """Build the Library System profile pages (TR sistem-<slug>.htm, EN en/system-<slug>.htm) from tools/systems.json.
 
 Each page: a live relief hero (relief-light.js over the baked poster in assets/relief/<asset>/), a spec block, the
-Library render and wall strip as WebP (made here from VAULT/Library/Relief/<library>/), and the bespoke door.
+Library render and wall strip as WebP (made here from VAULT/Library/Relief/<library>/), the drawing (depth map), a reading of the surface and a cross-link to the Bespoke (Özel Üretim) page.
+No price, stock, lead-time or castability claim on any page (DEC-04 default).
 The analytics block is copied from kaynaklar.htm so it never drifts. Static output; re-run after editing the JSON.
 
 Usage:  python tools/build_systems.py [--library <VAULT/Library/Relief>]
@@ -17,28 +18,28 @@ from PIL import Image
 SITE = Path(__file__).resolve().parents[1]
 DOMAIN = "https://studioluminant.com.tr/"
 UI = {
-    "tr": {"back": "← Sistemler", "index": "sistemler.htm", "eyebrow": "Sistem {code}",
-           "sample": "Numune kutusu isteyin", "adapt": "Projenize uyarlayalım", "contact": "iletisim.htm",
-           "sample_href": "iletisim.htm#numune",
+    "tr": {"back": "← Sistemler", "index": "sistemler.htm", "eyebrow": "Atölye Tasarımları",
+           "cta": "Sistemleri inceleyin", "cta_href": "sistemler.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
+           "contact": "iletisim.htm",
            "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey"},
            "material": "Lumina PMAG™",
-           "finish": "Artizan finish: Canvas, Veil, Grit, Tide",
+           "finish": "Artizan finish",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
-           "door": "Bu sistemi projenize uyarlayabiliriz: ölçüyü, derinliği ve desen yoğunluğunu çiziminize göre yeniden kurarız.",
-           "door_cta": "Çiziminizi gönderin", "title": "{name}: Atölye Tasarımları | Studio Luminant", "home": "Ana Sayfa",
+           "door": "Bu sistemin duvarınızda nasıl yerleşeceğini görmek için duvar ölçülerinizi iletin.",
+           "layout_link": "Yerleşim isteği için yazın", "own": "Kendi çiziminizle başlıyorsanız:", "home": "Ana Sayfa",
            "lib": "Sistemler", "idx_file": "sistemler.htm", "page": "sistem-{slug}.htm",
            "idx_title": "Adlandırılmış rölyef sistemleri",
            "idx_lede": "Ölçüsü, derinliği ve dizilişi tanımlanmış rölyef sistemleri. Her birini sayfasında canlı ışıkta inceleyin.",
            "studies": "Tasarım etütleri"},
-    "en": {"back": "← Systems", "index": "systems.htm", "eyebrow": "System {code}",
-           "sample": "Request the Sample Box", "adapt": "Adapt it to your project", "contact": "contact.htm",
-           "sample_href": "contact.htm#sample",
+    "en": {"back": "← Systems", "index": "systems.htm", "eyebrow": "Studio Designs",
+           "cta": "See the systems", "cta_href": "systems.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
+           "contact": "contact.htm",
            "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface"},
            "material": "Lumina PMAG™",
-           "finish": "Artisan finishes: Canvas, Veil, Grit, Tide",
+           "finish": "Artisan finishes",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
-           "door": "We can adapt this system to your project, rebuilding its size, depth and pattern density from your drawing.",
-           "door_cta": "Send Your Drawing", "title": "{name}: Studio Designs | Studio Luminant", "home": "Home",
+           "door": "To see how this system would sit on your wall, send the wall dimensions.",
+           "layout_link": "Request a wall layout", "own": "Starting from your own drawing:", "home": "Home",
            "lib": "Systems", "idx_file": "en/systems.htm", "page": "system-{slug}.htm",
            "idx_title": "Named relief systems",
            "idx_lede": "Relief systems with a defined size, depth and layout. See each one in live light on its own page.",
@@ -49,6 +50,34 @@ SIZES = {"panel": "(orientation: portrait) 90vw, 55vw", "field": "(orientation: 
 
 def esc(s):
     return html.escape(s, quote=True)
+
+
+def txt(s):
+    """Escaped text for a text node: typographic apostrophe, as the committed pages carry."""
+    return esc(s).replace("&#x27;", "\u2019")
+
+
+def nb(s):
+    """Non-breaking spaces inside a measure ("600 x 600 mm")."""
+    return re.sub(r"(?<=\d) (?=mm)", "&nbsp;", s).replace(" \u00d7 ", "&nbsp;\u00d7&nbsp;")
+
+
+def carry_over(new, old):
+    """Keep what later passes put on the committed page and this builder does not make: theme-colour, the
+    static footer link block and the consent.js include. Cache stamps are re-applied by tools/asset_versions.py."""
+    if not old:
+        return new
+    theme = re.search(r'<meta name="theme-color"[^>]*>\n', old)
+    if theme and "theme-color" not in new:
+        new = new.replace('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n',
+                          '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' + theme.group(0), 1)
+    foot = re.search(r'<div id="site-footer">\n.*?</nav>\n</div>', old, flags=re.S)
+    if foot:
+        new = new.replace('<div id="site-footer"></div>', foot.group(0), 1)
+    cons = re.search(r'<script src="[./]*consent\.js[^"]*"></script>\n', old)
+    if cons and "consent.js" not in new:
+        new = new.replace("</body>", cons.group(0) + "\n</body>", 1)
+    return new
 
 
 def tracking_block():
@@ -75,7 +104,8 @@ def page(sysd, lang, track, figs):
     twin = f"{pre}{en_url}" if lang == "tr" else f"../{tr_url}"
     man = json.loads((SITE / "assets" / "relief" / sysd["asset"] / "manifest.json").read_text(encoding="utf-8"))
     pw, ph = man["poster"]
-    title = u["title"].format(name=c["name"])
+    title = c["title"]
+    meta = c.get("meta", c["lede"])
     field = sysd["layout"] == "field"
     crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": u["home"], "item": DOMAIN + ("" if lang == "tr" else "en/")},
@@ -83,21 +113,29 @@ def page(sysd, lang, track, figs):
         {"@type": "ListItem", "position": 3, "name": c["name"], "item": DOMAIN + url}]}
     spec_rows = [("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
                  ("material", u["material"]), ("finish", u["finish"])]
-    spec = "\n".join(f'      <div><dt>{u["spec"][k]}</dt><dd>{esc(v)}</dd></div>' for k, v in spec_rows)
+    spec = "\n".join(
+        f'      <div><dt>{u["spec"][k]}</dt><dd>' + (f'<span translate="no">{esc(v)}</span>' if k == "material" else nb(txt(v))) + '</dd></div>'
+        for k, v in spec_rows)
     fig_html = []
     for key, cap, alt in (("object", u["obj_cap"], c["object_alt"]), ("strip", u["strip_cap"], c["strip_alt"])):
         if key in figs and alt:
             w, h = figs[key]
             fig_html.append(f'      <figure><img src="{rel}{key}.webp" width="{w}" height="{h}" loading="lazy" '
                             f'alt="{esc(alt)}"><figcaption>{cap}</figcaption></figure>')
+    draw_w, draw_h = Image.open(SITE / "assets" / "relief" / sysd["asset"] / "height-1024.webp").size
+    fig_html.append(f'      <figure><img src="{rel}height-1024.webp" width="{draw_w}" height="{draw_h}" loading="lazy" '
+                    f'alt="{esc(c["drawing_alt"])}"><figcaption>{c["drawing_cap"]}. {txt(c["drawing_note"])}</figcaption></figure>')
     figures = "\n".join(fig_html)
+    sections = "\n".join(
+        f'    <div class="sys-read__block"><h2>{txt(sec["h"])}</h2>\n' + "\n".join(f'      <p>{txt(p)}</p>' for p in sec["p"]) + '\n    </div>'
+        for sec in c["sections"])
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title>
-<meta name="description" content="{esc(c['lede'])}">
+<meta name="description" content="{esc(meta)}">
 <link rel="canonical" href="{DOMAIN}{url}">
   <link rel="alternate" hreflang="tr" href="{DOMAIN}{tr_url}">
   <link rel="alternate" hreflang="en" href="{DOMAIN}{en_url}">
@@ -105,7 +143,7 @@ def page(sysd, lang, track, figs):
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
 <meta property="og:title" content="{esc(title)}">
-<meta property="og:description" content="{esc(c['lede'])}">
+<meta property="og:description" content="{esc(meta)}">
 <meta property="og:url" content="{DOMAIN}{url}">
 <meta property="og:image" content="{DOMAIN}assets/relief/{sysd['asset']}/poster-1680.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -115,28 +153,23 @@ def page(sysd, lang, track, figs):
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{pre}shared.css">
 <link rel="stylesheet" href="{pre}library.css">
-{track}
 <script type="application/ld+json">
 {json.dumps(crumbs, ensure_ascii=False)}
 </script>
 </head>
 <body>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
-/></noscript>
-
 <div id="site-nav" data-lang="{lang}" data-lang-url="{twin}"{' data-base="../"' if lang == 'en' else ''}></div>
 
 <main id="main">
 <section class="sys-hero{' sys-hero--field' if field else ''} relief-light" data-relief-light="{rel}" data-input="auto">
   <div class="sys-hero__copy">
-    <a class="sys-back" href="{u['index']}">{u['back']}</a>
-    <div class="eyebrow">{u['eyebrow'].format(code=sysd['code'])}</div>
+    <a class="sys-back" href="{u['index']}"><span aria-hidden="true">←</span> {u['back'].replace('← ', '')}</a>
+    <div class="eyebrow">{u['eyebrow']}</div>
     <h1 class="sys-name">{esc(c['name'])}</h1>
-    <p class="sys-lede">{esc(c['lede'])}</p>
+    <p class="sys-lede">{nb(txt(c['lede']))}</p>
     <div class="sys-ctas">
-      <a href="{u['sample_href']}" class="btn-primary">{u['sample']}</a>
-      <a href="#sys-door" class="sys-link">{u['adapt']}</a>
+      <a href="{u['cta_href']}" class="btn-primary">{u['cta']}</a>
+      <a href="{u['contact']}" class="sys-link">{u['layout_link']}</a>
     </div>
   </div>
   <div class="sys-hero__stage">
@@ -154,10 +187,19 @@ src="https://www.facebook.com/tr?id=1437127258139677&ev=PageView&noscript=1"
   </div>
 </section>
 
+<section class="sys-read reveal">
+  <div class="sys-read__inner">
+{sections}
+  </div>
+</section>
+
 <section class="sys-door night" id="sys-door">
   <div class="sys-door__inner">
     <p>{u['door']}</p>
-    <a href="{u['contact']}" class="btn-primary">{u['door_cta']}</a>
+    <div class="sys-door__links">
+      <a href="{u['contact']}" class="sys-link">{u['layout_link']}</a>
+      <span class="sys-door__own">{u['own']} <a href="{u['bespoke_href']}" class="sys-link">{u['bespoke']}</a></span>
+    </div>
   </div>
 </section>
 </main>
@@ -186,9 +228,8 @@ def systems_block(data, lang):
         pre = "" if lang == "tr" else "../"
         cards.append(f'''    <a class="sys-card" href="{u['page'].format(slug=s['slug'])}">
       <img src="{pre}assets/relief/{s['asset']}/object.webp" width="{w}" height="{h}" loading="lazy" alt="{esc(c['object_alt'])}">
-      <span class="sys-card__code">{u['eyebrow'].format(code=s['code'])}</span>
       <span class="sys-card__name">{esc(c['name'])}</span>
-      <span class="sys-card__layout">{esc(c['layout'])}</span>
+      <span class="sys-card__layout">{nb(txt(c['layout']))}</span>
     </a>''')
     cards_html = "\n".join(cards)
     return (f'''{START}
@@ -236,7 +277,8 @@ def main():
         if (lib / "wall_strip.png").exists() and s["tr"]["strip_alt"]:
             figs["strip"] = webp(lib / "wall_strip.png", out / "strip.webp", 1600)
         for lang, path in (("tr", SITE / f"sistem-{s['slug']}.htm"), ("en", SITE / "en" / f"system-{s['slug']}.htm")):
-            path.write_text(page(s, lang, track, figs), encoding="utf-8")
+            old = path.read_text(encoding="utf-8") if path.exists() else ""
+            path.write_text(carry_over(page(s, lang, track, figs), old), encoding="utf-8")
             print("wrote", path.relative_to(SITE))
     for lang in ("tr", "en"):
         patch_index(data, lang)
