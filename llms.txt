@@ -20,7 +20,7 @@ Key facts for accurate citation:
 
 - [Studio Luminant — Bespoke Architectural Elements](https://studioluminant.com.tr/en/): Homepage — the two doors, Bespoke and Studio Designs.
 - [Bespoke](https://studioluminant.com.tr/en/process.htm): The Bespoke process, from the drawing to the depth map, raking-light approval, master, mould, cast and installation.
-- [Studio Designs — Systems](https://studioluminant.com.tr/en/systems.htm): Relief systems drawn by the studio (Cantus, Ricercar, Glissando, Mordent), each on its own page, plus design studies.
+- [Studio Designs — Systems](https://studioluminant.com.tr/en/systems.htm): Relief systems drawn by the studio (Cantus, Ricercar, Glissando, Mordent), each on its own page, plus named designs.
 - [Cantus](https://studioluminant.com.tr/en/system-cantus.htm): Iznik cypress, tulip, carnation and rose, composed as a single panel with no repeat.
 - [Ricercar](https://studioluminant.com.tr/en/system-ricercar.htm): A lattice built from the Gothic quatrefoil, repeating every 600 mm.
 - [Glissando](https://studioluminant.com.tr/en/system-glissando.htm): Drifting fibres on upright panels laid with a half-height offset.
@@ -52,7 +52,7 @@ Key facts for accurate citation:
 
 - [Studio Luminant — Özel Mimari Elemanlar](https://studioluminant.com.tr/): Ana sayfa — iki kapı: Özel Üretim ve Atölye Tasarımları.
 - [Özel Üretim](https://studioluminant.com.tr/surec.htm): Çizimden derinlik haritasına, yalama ışıkta onaya, ana modele, kalıba, döküme ve montaja: özel üretim süreci.
-- [Atölye Tasarımları — Sistemler](https://studioluminant.com.tr/sistemler.htm): Stüdyonun çizdiği adlandırılmış rölyef sistemleri (Cantus, Ricercar, Glissando, Mordent) ve tasarım etütleri.
+- [Atölye Tasarımları — Sistemler](https://studioluminant.com.tr/sistemler.htm): Stüdyonun çizdiği adlandırılmış rölyef sistemleri (Cantus, Ricercar, Glissando, Mordent) ve adlandırılmış tasarımlar.
 - [Mimarlar İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi.
 - [Malzeme — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): Lumina PMAG™ ve artizan finish için teknik veriler.
 - [Galeri](https://studioluminant.com.tr/galeri.htm): Rölyef paneller ve heykelsi duvar yüzeyleri.
