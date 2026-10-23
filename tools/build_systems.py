@@ -21,9 +21,8 @@ UI = {
     "tr": {"back": "← Sistemler", "index": "sistemler.htm", "eyebrow": "Atölye Tasarımları",
            "cta": "Sistemleri inceleyin", "cta_href": "sistemler.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
            "contact": "iletisim.htm",
-           "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey"},
+           "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme"},
            "material": "Lumina PMAG™",
-           "finish": "Artizan finish",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
            "door": "Bu sistemin duvarınızda nasıl yerleşeceğini görmek için duvar ölçülerinizi iletin.",
            "layout_link": "Yerleşim isteği için yazın", "own": "Kendi çiziminizle başlıyorsanız:", "home": "Ana Sayfa",
@@ -34,9 +33,8 @@ UI = {
     "en": {"back": "← Systems", "index": "systems.htm", "eyebrow": "Studio Designs",
            "cta": "See the systems", "cta_href": "systems.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
            "contact": "contact.htm",
-           "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface"},
+           "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material"},
            "material": "Lumina PMAG™",
-           "finish": "Artisan finishes",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
            "door": "To see how this system would sit on your wall, send the wall dimensions.",
            "layout_link": "Request a wall layout", "own": "Starting from your own drawing:", "home": "Home",
@@ -112,7 +110,7 @@ def page(sysd, lang, track, figs):
         {"@type": "ListItem", "position": 2, "name": u["lib"], "item": DOMAIN + ("" if lang == "tr" else "en/") + u["index"]},
         {"@type": "ListItem", "position": 3, "name": c["name"], "item": DOMAIN + url}]}
     spec_rows = [("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
-                 ("material", u["material"]), ("finish", u["finish"])]
+                 ("material", u["material"])]
     spec = "\n".join(
         f'      <div><dt>{u["spec"][k]}</dt><dd>' + (f'<span translate="no">{esc(v)}</span>' if k == "material" else nb(txt(v))) + '</dd></div>'
         for k, v in spec_rows)
