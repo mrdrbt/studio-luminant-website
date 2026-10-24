@@ -1024,5 +1024,26 @@
       "size": 8110
     },
     "variants": {}
+  },
+  "studio-luminant-glissando-relief-panel-raking-light-portrait.jpg": {
+    "original": {
+      "file": "studio-luminant-glissando-relief-panel-raking-light-portrait.jpg",
+      "w": 880,
+      "h": 1100,
+      "size": 181376
+    },
+    "webp": "studio-luminant-glissando-relief-panel-raking-light-portrait.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-glissando-relief-panel-raking-light-portrait-400w.webp",
+        "w": 400,
+        "h": 500
+      },
+      "800": {
+        "file": "studio-luminant-glissando-relief-panel-raking-light-portrait-800w.webp",
+        "w": 800,
+        "h": 1000
+      }
+    }
   }
 }
