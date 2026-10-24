@@ -29,7 +29,7 @@ UI = {
            "lib": "Sistemler", "idx_file": "sistemler.htm", "page": "sistem-{slug}.htm",
            "idx_title": "Adlandırılmış rölyef sistemleri",
            "idx_lede": "Ölçüsü, derinliği ve dizilişi tanımlanmış rölyef sistemleri. Her birini sayfasında canlı ışıkta inceleyin.",
-           "studies": "Tasarım etütleri"},
+           "studies": "Tasarım etütleri", "designs": "Tasarımlar"},
     "en": {"back": "← Systems", "index": "systems.htm", "eyebrow": "Studio Designs",
            "cta": "Request a wall layout", "cta_href": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
            "contact": "contact.htm",
@@ -41,7 +41,7 @@ UI = {
            "lib": "Systems", "idx_file": "en/systems.htm", "page": "system-{slug}.htm",
            "idx_title": "Named relief systems",
            "idx_lede": "Relief systems with a defined size, depth and layout. See each one in live light on its own page.",
-           "studies": "Design studies"},
+           "studies": "Design studies", "designs": "Designs"},
 }
 SIZES = {"panel": "(orientation: portrait) 90vw, 55vw", "field": "(orientation: portrait) 100vw, 100vw"}
 
@@ -229,6 +229,22 @@ def systems_block(data, lang):
       <span class="sys-card__layout">{nb(txt(c['layout']))}</span>
     </a>''')
     cards_html = "\n".join(cards)
+    designs = []
+    for s in data.get("designs", []):
+        c = s[lang]
+        w, h = Image.open(SITE / "assets" / "designs" / s["asset"] / "wall.webp").size
+        pre = "" if lang == "tr" else "../"
+        designs.append(f'''    <a class="sys-card" href="{u['contact']}">
+      <img src="{pre}assets/designs/{s['asset']}/wall.webp" width="{w}" height="{h}" loading="lazy" alt="{esc(c['alt'])}">
+      <span class="sys-card__name">{esc(c['name'])}</span>
+      <span class="sys-card__layout">{txt(c['story'])}</span>
+    </a>''')
+    designs_html = ""
+    if designs:
+        designs_html = (f'''
+  <div class="eyebrow sys-index__studies">{u['designs']}</div>
+  <div class="sys-index__grid">
+''' + "\n".join(designs) + "\n  </div>")
     return (f'''{START}
 <section class="sys-index reveal">
   <div class="eyebrow">{u['lib']}</div>
@@ -236,7 +252,7 @@ def systems_block(data, lang):
   <p class="sys-index__lede">{u['idx_lede']}</p>
   <div class="sys-index__grid">
 {cards_html}
-  </div>
+  </div>{designs_html}
   <div class="eyebrow sys-index__studies">{u['studies']}</div>
 </section>
 {END}''')

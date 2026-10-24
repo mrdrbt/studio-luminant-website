@@ -320,5 +320,78 @@
       "slug": "mordent"
     }
   ],
-  "_parked_note": "Mordent (033) parked off the site by Burak 2026-10-24 ('remove mordent from portfolio for now'). build_systems.py reads only 'systems'; move it back to restore."
+  "_parked_note": "Mordent (033) parked off the site by Burak 2026-10-24 ('remove mordent from portfolio for now'). build_systems.py reads only 'systems'; move it back to restore.",
+  "designs": [
+    {
+      "slug": "accelerando",
+      "asset": "accelerando",
+      "tr": {
+        "name": "Accelerando",
+        "story": "Boyutu duvar boyunca kademeli olarak değişen hücrelerden bir alan çizdik.",
+        "alt": "Render: Accelerando, wall study with a 1.5 mm joint (cells whose size grades across the wall)"
+      },
+      "en": {
+        "name": "Accelerando",
+        "story": "We drew a field of cells whose size grades across the wall.",
+        "alt": "Render: Accelerando, wall study with a 1.5 mm joint (cells whose size grades across the wall)"
+      }
+    },
+    {
+      "slug": "arpeggio",
+      "asset": "arpeggio",
+      "tr": {
+        "name": "Arpeggio",
+        "story": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor.",
+        "alt": "Render: Arpeggio, wall study with a 1.5 mm joint (a fan-shaped form laid in S-curves)"
+      },
+      "en": {
+        "name": "Arpeggio",
+        "story": "One fan-shaped form, designed by us and laid in long S-curves.",
+        "alt": "Render: Arpeggio, wall study with a 1.5 mm joint (a fan-shaped form laid in S-curves)"
+      }
+    },
+    {
+      "slug": "hemiola",
+      "asset": "hemiola",
+      "tr": {
+        "name": "Hemiola",
+        "story": "Her biri eğik bir açıklık taşıyan bloklardan, elle dizilmiş gibi okunan bir duvar çizdik.",
+        "alt": "Render: Hemiola, wall study with a 1.5 mm joint (blocks each with a tilted opening)"
+      },
+      "en": {
+        "name": "Hemiola",
+        "story": "A wall of blocks, each with an opening turned off square, drawn to read as hand-set.",
+        "alt": "Render: Hemiola, wall study with a 1.5 mm joint (blocks each with a tilted opening)"
+      }
+    },
+    {
+      "slug": "melisma",
+      "asset": "melisma",
+      "tr": {
+        "name": "Melisma",
+        "story": "İnce çizgilerden bir labirent kurduk ve onu duvar boyunca tek bir akıntı gibi akıttık.",
+        "alt": "Render: Melisma, wall study with a 1.5 mm joint (a maze of fine lines running as one current)"
+      },
+      "en": {
+        "name": "Melisma",
+        "story": "A maze of fine lines that we let run the length of the wall as one current.",
+        "alt": "Render: Melisma, wall study with a 1.5 mm joint (a maze of fine lines running as one current)"
+      }
+    },
+    {
+      "slug": "rondeau",
+      "asset": "rondeau",
+      "tr": {
+        "name": "Rondeau",
+        "story": "Yuvarlak tek bir form çizdik; duvarda bir alan olarak döşeniyor.",
+        "alt": "Render: Rondeau, wall study with a 1.5 mm joint (one round form laid as a field)"
+      },
+      "en": {
+        "name": "Rondeau",
+        "story": "One round form, drawn once and laid as a field.",
+        "alt": "Render: Rondeau, wall study with a 1.5 mm joint (one round form laid as a field)"
+      }
+    }
+  ],
+  "_note_designs": "2026-10-24 (#114, #115): the five small-format Studio Designs, public since DEC-28, names cleared by a same-sector web check (TÜRKPATENT still with the avukat). Story lines are the portfolio's D1–D5 lines; images are the portfolio wall studies (1.5 mm joint), centre-cropped square in assets/designs/<slug>/wall.webp. No size, availability, lead-time or price claim (DEC-04 default); the card links to the contact page."
 }
