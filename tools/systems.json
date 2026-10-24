@@ -237,7 +237,9 @@
         "drawing_alt": "Depth map of the Glissando panel: the drifting fibres drawn in grey tones"
       },
       "slug": "glissando"
-    },
+    }
+  ],
+  "parked_systems": [
     {
       "code": "033",
       "library": "033_field-erode",
@@ -317,5 +319,6 @@
       },
       "slug": "mordent"
     }
-  ]
+  ],
+  "_parked_note": "Mordent (033) parked off the site by Burak 2026-10-24 ('remove mordent from portfolio for now'). build_systems.py reads only 'systems'; move it back to restore."
 }

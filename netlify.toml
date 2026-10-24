@@ -698,23 +698,48 @@
 
 [[redirects]]
   from = "/sistem-033.htm"
-  to = "/sistem-mordent.htm"
-  status = 301
+  to = "/sistemler.htm"
+  status = 302
 
 [[redirects]]
   from = "/sistem-033"
-  to = "/sistem-mordent.htm"
-  status = 301
+  to = "/sistemler.htm"
+  status = 302
 
 [[redirects]]
   from = "/en/system-033.htm"
-  to = "/en/system-mordent.htm"
-  status = 301
+  to = "/en/systems.htm"
+  status = 302
 
 [[redirects]]
   from = "/en/system-033"
-  to = "/en/system-mordent.htm"
-  status = 301
+  to = "/en/systems.htm"
+  status = 302
+
+# ─── Mordent (033) parked off the site, Burak 2026-10-24: temporary redirect to the Systems index ───
+[[redirects]]
+  from = "/sistem-mordent.htm"
+  to = "/sistemler.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/sistem-mordent"
+  to = "/sistemler.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/en/system-mordent.htm"
+  to = "/en/systems.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/en/system-mordent"
+  to = "/en/systems.htm"
+  status = 302
+  force = true
 
 # ─── Retired design studies (gridded renders, #80-5) → gallery ───
 [[redirects]]
