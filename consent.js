@@ -7,7 +7,8 @@
    - Anything with [data-cookie-settings] re-opens the panel.
 
    Categories: necessary (always on) · analytics · marketing
-   Nothing is pre-ticked. Reject is as prominent as accept.
+   Nothing is pre-ticked. Reject is the same size as accept and one click,
+   on the first layer; the categories open under Settings.
    No cookie wall — dismissing without choosing loads nothing.
    ───────────────────────────────────────────────────────────── */
 (function () {
@@ -22,32 +23,32 @@
   var isEN = document.documentElement.lang === 'en';
 
   var t = isEN ? {
-    title: 'Cookies on this site',
-    body: 'We use strictly necessary cookies to make the site work. With your consent we also measure how the site is used and how our promotion performs. You can change your mind at any time.',
+    body: 'With your consent, we use cookies to measure how the site is used and how our promotion performs.',
     necessary: 'Strictly necessary',
     necessaryNote: 'Always active — required for the site to function.',
     analytics: 'Analytics',
     analyticsNote: 'Visitor numbers, pages viewed, time on site (Google Analytics).',
     marketing: 'Marketing',
     marketingNote: 'Measuring the effect of our promotion (Meta).',
-    acceptAll: 'Accept all',
-    rejectAll: 'Reject all',
-    save: 'Save my choice',
+    acceptAll: 'Accept',
+    rejectAll: 'Reject',
+    settings: 'Settings',
+    save: 'Save',
     policy: 'Cookie Policy',
     policyHref: '/en/cookie-policy.htm',
     aria: 'Cookie consent'
   } : {
-    title: 'Bu sitede çerezler',
-    body: 'Sitenin çalışması için zorunlu çerezleri kullanıyoruz. Onay vermeniz halinde ayrıca sitenin nasıl kullanıldığını ve tanıtım faaliyetlerimizin etkisini ölçüyoruz. Tercihinizi dilediğiniz zaman değiştirebilirsiniz.',
+    body: 'Onayınızla, sitenin nasıl kullanıldığını ve tanıtımlarımızın etkisini ölçen çerezler kullanıyoruz.',
     necessary: 'Zorunlu',
     necessaryNote: 'Her zaman aktif — sitenin çalışması için gereklidir.',
     analytics: 'Analitik',
     analyticsNote: 'Ziyaretçi sayısı, görüntülenen sayfalar, sitede geçirilen süre (Google Analytics).',
     marketing: 'Pazarlama',
     marketingNote: 'Tanıtım faaliyetlerimizin etkisinin ölçülmesi (Meta).',
-    acceptAll: 'Tümünü kabul et',
-    rejectAll: 'Tümünü reddet',
-    save: 'Tercihimi kaydet',
+    acceptAll: 'Kabul et',
+    rejectAll: 'Reddet',
+    settings: 'Ayarlar',
+    save: 'Kaydet',
     policy: 'Çerez Politikası',
     policyHref: '/cerez-politikasi.htm',
     aria: 'Çerez onayı'
@@ -153,31 +154,38 @@
   // ─── UI ────────────────────────────────────────────────────
   var STYLE = [
     '#sl-consent{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#12100E;',
-    'border-top:1px solid rgba(212,146,111,0.25);padding:26px 32px;',
+    'border-top:1px solid rgba(212,146,111,0.25);padding:14px 32px;',
     "font-family:'Jost',system-ui,sans-serif;color:#B9B4AC;",
-    'box-shadow:0 -20px 60px rgba(0,0,0,0.5)}',
-    '#sl-consent .sl-c-inner{max-width:1080px;margin:0 auto;display:grid;',
-    'grid-template-columns:1fr auto;gap:32px;align-items:start}',
-    "#sl-consent h2{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;",
-    'color:#EDE9E3;margin:0 0 10px}',
-    '#sl-consent p{font-size:13px;line-height:1.7;font-weight:300;margin:0 0 4px}',
+    'box-shadow:0 -12px 40px rgba(0,0,0,0.4)}',
+    '#sl-consent .sl-c-inner{max-width:1080px;margin:0 auto}',
+    '#sl-consent .sl-c-bar{display:flex;align-items:center;gap:24px}',
+    '#sl-consent p{flex:1;font-size:13px;line-height:1.6;font-weight:300;margin:0}',
     '#sl-consent a{color:#D4926F;text-decoration:none;border-bottom:1px solid rgba(212,146,111,0.3)}',
-    '#sl-consent .sl-c-cats{margin:18px 0 0;display:grid;gap:10px}',
-    '#sl-consent .sl-c-cat{display:flex;gap:12px;align-items:flex-start;font-size:12.5px;line-height:1.6}',
-    '#sl-consent .sl-c-cat input{margin-top:3px;accent-color:#D4926F;width:15px;height:15px}',
-    '#sl-consent .sl-c-cat b{color:#EDE9E3;font-weight:500;display:block}',
-    '#sl-consent .sl-c-cat span{opacity:0.75}',
-    '#sl-consent .sl-c-actions{display:flex;flex-direction:column;gap:10px;min-width:210px}',
+    '#sl-consent .sl-c-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}',
     '#sl-consent button{font-family:inherit;font-size:10px;letter-spacing:0.22em;',
-    'text-transform:uppercase;padding:14px 22px;cursor:pointer;transition:border-color .3s,color .3s,background-color .3s;',
+    'text-transform:uppercase;padding:11px 0;width:132px;cursor:pointer;transition:border-color .3s,color .3s,background-color .3s;',
     'border:1px solid rgba(212,146,111,0.4);background:transparent;color:#B9B4AC}',
     '#sl-consent button:hover{border-color:#D4926F;color:#D4926F}',
     '#sl-consent button.sl-c-primary{background:#D4926F;border-color:#D4926F;color:#12100E;font-weight:500}',
     '#sl-consent button.sl-c-primary:hover{background:#E3AA8A;color:#12100E}',
+    '#sl-consent button.sl-c-link{width:auto;border:0;padding:11px 6px;color:#B9B4AC;',
+    'text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(212,146,111,0.4)}',
+    '#sl-consent button.sl-c-link:hover{color:#D4926F}',
+    '#sl-consent .sl-c-panel{display:flex;align-items:flex-end;gap:24px;margin-top:14px;padding-top:14px;',
+    'border-top:1px solid rgba(212,146,111,0.15)}',
+    '#sl-consent .sl-c-panel[hidden]{display:none}',
+    '#sl-consent .sl-c-cats{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}',
+    '#sl-consent .sl-c-cat{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.55}',
+    '#sl-consent .sl-c-cat input{margin-top:2px;accent-color:#D4926F;width:15px;height:15px;flex-shrink:0}',
+    '#sl-consent .sl-c-cat b{color:#EDE9E3;font-weight:500;display:block}',
+    '#sl-consent .sl-c-cat span{opacity:0.75}',
     '#sl-consent :focus-visible{outline:2px solid #EDE9E3;outline-offset:3px}',
-    '@media(max-width:820px){#sl-consent{padding:22px 20px}',
-    '#sl-consent .sl-c-inner{grid-template-columns:1fr;gap:20px}',
-    '#sl-consent .sl-c-actions{min-width:0}}'
+    '@media(max-width:820px){#sl-consent{padding:16px 20px}',
+    '#sl-consent .sl-c-bar{flex-direction:column;align-items:stretch;gap:12px}',
+    '#sl-consent .sl-c-actions{display:grid;grid-template-columns:auto 1fr 1fr}',
+    '#sl-consent button{width:auto;padding:12px 10px}',
+    '#sl-consent .sl-c-panel{flex-direction:column;align-items:stretch;gap:14px}',
+    '#sl-consent .sl-c-cats{grid-template-columns:1fr;gap:10px}}'
   ].join('');
 
   var el = null;
@@ -190,7 +198,7 @@
     returnFocus = null;
   }
 
-  function open(current) {
+  function open(current, expanded) {
     if (el) return;
     returnFocus = document.activeElement !== document.body ? document.activeElement : null;
     if (!document.getElementById('sl-consent-style')) {
@@ -208,9 +216,16 @@
     el.setAttribute('aria-label', t.aria);
     el.innerHTML =
       '<div class="sl-c-inner">' +
-        '<div>' +
-          '<h2>' + t.title + '</h2>' +
+        '<div class="sl-c-bar">' +
           '<p>' + t.body + ' <a href="' + t.policyHref + '">' + t.policy + '</a></p>' +
+          '<div class="sl-c-actions">' +
+            '<button type="button" class="sl-c-link" id="sl-c-settings" aria-controls="sl-c-panel"' +
+              ' aria-expanded="' + !!expanded + '">' + t.settings + '</button>' +
+            '<button type="button" id="sl-c-reject">' + t.rejectAll + '</button>' +
+            '<button type="button" class="sl-c-primary" id="sl-c-accept">' + t.acceptAll + '</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="sl-c-panel" id="sl-c-panel"' + (expanded ? '' : ' hidden') + '>' +
           '<div class="sl-c-cats">' +
             '<label class="sl-c-cat"><input type="checkbox" checked disabled>' +
               '<span><b>' + t.necessary + '</b><span>' + t.necessaryNote + '</span></span></label>' +
@@ -219,19 +234,22 @@
             '<label class="sl-c-cat"><input type="checkbox" id="sl-c-marketing"' + m + '>' +
               '<span><b>' + t.marketing + '</b><span>' + t.marketingNote + '</span></span></label>' +
           '</div>' +
-        '</div>' +
-        '<div class="sl-c-actions">' +
-          '<button type="button" class="sl-c-primary" id="sl-c-accept">' + t.acceptAll + '</button>' +
-          '<button type="button" id="sl-c-reject">' + t.rejectAll + '</button>' +
           '<button type="button" id="sl-c-save">' + t.save + '</button>' +
         '</div>' +
       '</div>';
     document.body.appendChild(el);
     // Re-opened from a footer link: move focus in. First visit: leave focus on the page.
-    if (returnFocus) el.querySelector('#sl-c-accept').focus();
+    if (returnFocus) el.querySelector(expanded ? '#sl-c-analytics' : '#sl-c-accept').focus();
 
     function commit(prefs) { write(prefs); apply(prefs); close(); }
 
+    var toggle = el.querySelector('#sl-c-settings');
+    var panel = el.querySelector('#sl-c-panel');
+    toggle.addEventListener('click', function () {
+      var show = panel.hidden;
+      panel.hidden = !show;
+      toggle.setAttribute('aria-expanded', String(show));
+    });
     el.querySelector('#sl-c-accept').addEventListener('click', function () {
       commit({ analytics: true, marketing: true });
     });
@@ -255,7 +273,7 @@
       var trigger = e.target.closest && e.target.closest('[data-cookie-settings]');
       if (!trigger) return;
       e.preventDefault();
-      open(read());
+      open(read(), true);
     });
   }
 
@@ -266,5 +284,5 @@
   }
 
   // Let page code check consent before firing conversion events.
-  window.slConsent = { get: read, open: function () { open(read()); } };
+  window.slConsent = { get: read, open: function () { open(read(), true); } };
 })();
