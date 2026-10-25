@@ -54,40 +54,6 @@
    ]
   },
   {
-   "slug": "arpeggio",
-   "kind": "study",
-   "asset": "arpeggio",
-   "src": {
-    "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_wall.png",
-    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_card.png",
-    "sketch": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_sketch.png"
-   },
-   "tr": {
-    "name": "Arpeggio",
-    "story": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor.",
-    "title": "Arpeggio: Rölyef Duvar Tasarımı | Studio Luminant",
-    "meta": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
-    "wall_alt": "Render: Arpeggio, duvar çalışması, 1,5 mm derz",
-    "wall_cap": "Render: Arpeggio, duvar çalışması, 1,5 mm derz.",
-    "card_alt": "Render: Arpeggio, karoların 1,5 mm derzle yan yana dizildiği yakın plan",
-    "card_cap": "Render: Arpeggio, yakın plan, 1,5 mm derz.",
-    "sketch_alt": "Çizim: Arpeggio kalıpları ve duvardaki dizilişleri",
-    "sketch_cap": "Çizim: Arpeggio, kalıplar ve diziliş."
-   },
-   "en": {
-    "name": "Arpeggio",
-    "story": "One fan-shaped form, designed by us and laid in long S-curves.",
-    "title": "Arpeggio: Relief Wall Design | Studio Luminant",
-    "meta": "One fan-shaped form, designed by us and laid in long S-curves. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
-    "wall_alt": "Render: Arpeggio, wall study, 1.5 mm joint",
-    "wall_cap": "Render: Arpeggio, wall study, 1.5 mm joint.",
-    "card_alt": "Render: Arpeggio, close view of the tiles laid together with a 1.5 mm joint",
-    "card_cap": "Render: Arpeggio, close view, 1.5 mm joint.",
-    "sketch_alt": "Drawing: the Arpeggio moulds and how they are laid on the wall",
-    "sketch_cap": "Drawing: Arpeggio, moulds and lay."
-   }
-  },
-  {
    "slug": "cantilena",
    "kind": "relief",
    "code": "012",
@@ -245,6 +211,40 @@
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
     "drawing_alt": "Depth map of the Glissando panel: the drifting fibres drawn in grey tones"
+   }
+  },
+  {
+   "slug": "gruppetto",
+   "kind": "study",
+   "asset": "gruppetto",
+   "src": {
+    "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_wall.png",
+    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_card.png",
+    "sketch": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_sketch.png"
+   },
+   "tr": {
+    "name": "Gruppetto",
+    "story": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor.",
+    "title": "Gruppetto: Rölyef Duvar Tasarımı | Studio Luminant",
+    "meta": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
+    "wall_alt": "Render: Gruppetto, duvar çalışması, 1,5 mm derz",
+    "wall_cap": "Render: Gruppetto, duvar çalışması, 1,5 mm derz.",
+    "card_alt": "Render: Gruppetto, karoların 1,5 mm derzle yan yana dizildiği yakın plan",
+    "card_cap": "Render: Gruppetto, yakın plan, 1,5 mm derz.",
+    "sketch_alt": "Çizim: Gruppetto kalıpları ve duvardaki dizilişleri",
+    "sketch_cap": "Çizim: Gruppetto, kalıplar ve diziliş."
+   },
+   "en": {
+    "name": "Gruppetto",
+    "story": "One fan-shaped form, designed by us and laid in long S-curves.",
+    "title": "Gruppetto: Relief Wall Design | Studio Luminant",
+    "meta": "One fan-shaped form, designed by us and laid in long S-curves. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
+    "wall_alt": "Render: Gruppetto, wall study, 1.5 mm joint",
+    "wall_cap": "Render: Gruppetto, wall study, 1.5 mm joint.",
+    "card_alt": "Render: Gruppetto, close view of the tiles laid together with a 1.5 mm joint",
+    "card_cap": "Render: Gruppetto, close view, 1.5 mm joint.",
+    "sketch_alt": "Drawing: the Gruppetto moulds and how they are laid on the wall",
+    "sketch_cap": "Drawing: Gruppetto, moulds and lay."
    }
   },
   {

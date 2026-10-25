@@ -645,6 +645,27 @@
   to = "/en/design-cantilena.htm"
   status = 301
 
+# Design 02 renamed Arpeggio → Gruppetto (#117, 2026-10-25: Arpeggio is a live Élitis wallcovering design)
+[[redirects]]
+  from = "/tasarim-arpeggio.htm"
+  to = "/tasarim-gruppetto.htm"
+  status = 301
+
+[[redirects]]
+  from = "/tasarim-arpeggio"
+  to = "/tasarim-gruppetto.htm"
+  status = 301
+
+[[redirects]]
+  from = "/en/design-arpeggio.htm"
+  to = "/en/design-gruppetto.htm"
+  status = 301
+
+[[redirects]]
+  from = "/en/design-arpeggio"
+  to = "/en/design-gruppetto.htm"
+  status = 301
+
 # System 012 renamed Cantus -> Cantilena (#112, 2026-10-23); old URLs point straight at the new ones
 [[redirects]]
   from = "/sistem-cantus.htm"
