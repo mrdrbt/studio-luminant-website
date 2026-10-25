@@ -231,25 +231,25 @@
 # ─── Two doors (WB-03, page map v2 §3, 2026-10-21): Systems index renamed; the hub replaces the resources index ───
 [[redirects]]
   from = "/koleksiyon.htm"
-  to = "/sistemler.htm"
+  to = "/tasarimlar.htm"
   status = 301
   force = true
 
 [[redirects]]
   from = "/koleksiyon"
-  to = "/sistemler.htm"
+  to = "/tasarimlar.htm"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/collection.htm"
-  to = "/en/systems.htm"
+  to = "/en/designs.htm"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/collection"
-  to = "/en/systems.htm"
+  to = "/en/designs.htm"
   status = 301
   force = true
 
@@ -309,7 +309,7 @@
 
 [[redirects]]
   from = "/tr/koleksiyon.htm"
-  to = "/sistemler.htm"
+  to = "/tasarimlar.htm"
   status = 301
 
 [[redirects]]
@@ -370,7 +370,7 @@
 # Old English pages at root → /en/
 [[redirects]]
   from = "/collection.htm"
-  to = "/en/systems.htm"
+  to = "/en/designs.htm"
   status = 301
 
 [[redirects]]
@@ -627,117 +627,117 @@
 # Library System profiles: code-based working URLs (rebuild-v3 preview only) → public names (Burak 2026-10-15)
 [[redirects]]
   from = "/sistem-012.htm"
-  to = "/sistem-cantilena.htm"
+  to = "/tasarim-cantilena.htm"
   status = 301
 
 [[redirects]]
   from = "/sistem-012"
-  to = "/sistem-cantilena.htm"
+  to = "/tasarim-cantilena.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-012.htm"
-  to = "/en/system-cantilena.htm"
+  to = "/en/design-cantilena.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-012"
-  to = "/en/system-cantilena.htm"
+  to = "/en/design-cantilena.htm"
   status = 301
 
 # System 012 renamed Cantus -> Cantilena (#112, 2026-10-23); old URLs point straight at the new ones
 [[redirects]]
   from = "/sistem-cantus.htm"
-  to = "/sistem-cantilena.htm"
+  to = "/tasarim-cantilena.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-cantus.htm"
-  to = "/en/system-cantilena.htm"
+  to = "/en/design-cantilena.htm"
   status = 301
 
 [[redirects]]
   from = "/sistem-031.htm"
-  to = "/sistem-ricercar.htm"
+  to = "/tasarim-ricercar.htm"
   status = 301
 
 [[redirects]]
   from = "/sistem-031"
-  to = "/sistem-ricercar.htm"
+  to = "/tasarim-ricercar.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-031.htm"
-  to = "/en/system-ricercar.htm"
+  to = "/en/design-ricercar.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-031"
-  to = "/en/system-ricercar.htm"
+  to = "/en/design-ricercar.htm"
   status = 301
 
 [[redirects]]
   from = "/sistem-042.htm"
-  to = "/sistem-glissando.htm"
+  to = "/tasarim-glissando.htm"
   status = 301
 
 [[redirects]]
   from = "/sistem-042"
-  to = "/sistem-glissando.htm"
+  to = "/tasarim-glissando.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-042.htm"
-  to = "/en/system-glissando.htm"
+  to = "/en/design-glissando.htm"
   status = 301
 
 [[redirects]]
   from = "/en/system-042"
-  to = "/en/system-glissando.htm"
+  to = "/en/design-glissando.htm"
   status = 301
 
 [[redirects]]
   from = "/sistem-033.htm"
-  to = "/sistemler.htm"
+  to = "/tasarimlar.htm"
   status = 302
 
 [[redirects]]
   from = "/sistem-033"
-  to = "/sistemler.htm"
+  to = "/tasarimlar.htm"
   status = 302
 
 [[redirects]]
   from = "/en/system-033.htm"
-  to = "/en/systems.htm"
+  to = "/en/designs.htm"
   status = 302
 
 [[redirects]]
   from = "/en/system-033"
-  to = "/en/systems.htm"
+  to = "/en/designs.htm"
   status = 302
 
 # ─── Mordent (033) parked off the site, Burak 2026-10-24: temporary redirect to the Systems index ───
 [[redirects]]
   from = "/sistem-mordent.htm"
-  to = "/sistemler.htm"
+  to = "/tasarimlar.htm"
   status = 302
   force = true
 
 [[redirects]]
   from = "/sistem-mordent"
-  to = "/sistemler.htm"
+  to = "/tasarimlar.htm"
   status = 302
   force = true
 
 [[redirects]]
   from = "/en/system-mordent.htm"
-  to = "/en/systems.htm"
+  to = "/en/designs.htm"
   status = 302
   force = true
 
 [[redirects]]
   from = "/en/system-mordent"
-  to = "/en/systems.htm"
+  to = "/en/designs.htm"
   status = 302
   force = true
 
@@ -790,3 +790,101 @@
   to = "/en/contact.htm"
   status = 302
   force = true
+
+# ─── Systems retired, one Studio Designs range (Burak 2026-10-25): old index + System pages → Studio Designs ───
+[[redirects]]
+  from = "/sistemler.htm"
+  to = "/tasarimlar.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sistemler"
+  to = "/tasarimlar.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/systems.htm"
+  to = "/en/designs.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/systems"
+  to = "/en/designs.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sistem-cantilena.htm"
+  to = "/tasarim-cantilena.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sistem-cantilena"
+  to = "/tasarim-cantilena.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/system-cantilena.htm"
+  to = "/en/design-cantilena.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/system-cantilena"
+  to = "/en/design-cantilena.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sistem-ricercar.htm"
+  to = "/tasarim-ricercar.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sistem-ricercar"
+  to = "/tasarim-ricercar.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/system-ricercar.htm"
+  to = "/en/design-ricercar.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/system-ricercar"
+  to = "/en/design-ricercar.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sistem-glissando.htm"
+  to = "/tasarim-glissando.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sistem-glissando"
+  to = "/tasarim-glissando.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/system-glissando.htm"
+  to = "/en/design-glissando.htm"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/system-glissando"
+  to = "/en/design-glissando.htm"
+  status = 301
+  force = true
+

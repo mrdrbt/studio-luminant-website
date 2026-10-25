@@ -10,7 +10,7 @@
     "home": "Ana Sayfa",
     "eyebrow": "Özel Üretim",
     "h1": "Nasıl çizdiyseniz,<br><em>öyle dökeriz.</em>",
-    "lede": "Bir projenin çizimi, Sapanca'daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, sistemlerimizden Cantilena'yı özel üretim bir çizimin izlediği yoldan geçiriyoruz.",
+    "lede": "Bir projenin çizimi, Sapanca'daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, tasarımlarımızdan Cantilena'yı özel üretim bir çizimin izlediği yoldan geçiriyoruz.",
     "steps": [
       {"h": "Çizim ya da görsel", "p": "Her proje bir çizim ya da görselle başlar. Elle çizilmiş bir eskiz, ölçülü bir teknik çizim ya da bir referans görsel olabilir. Burada Cantilena’yı bir çizim olarak görüyorsunuz: İznik çini geleneğinin servi, lale, karanfil ve gül motifleri tek bir simetrik kompozisyonda. Çizim, derinlik haritası ve aşağıdaki rölyef aynı yüzeydir.", "cap": "Cantilena, çizim", "alt": "Servi, lale, karanfil ve gül motifli Cantilena panelinin karakalem ve mürekkep çizimi"},
       {"h": "Derinlik haritası", "p": "Çizimi bir derinlik haritasına çeviririz. Haritadaki her gri tonu bir yüksekliğe karşılık gelir. Siyah, panelin zeminidir; beyaz, en yüksek noktası. Cantilena'da rölyef derinliği, zeminden en yüksek noktaya 16 mm'dir. Değişiklikler dijitalde kaldığı için kalıp ya da malzeme maliyeti doğurmaz.", "cap": "Cantilena, derinlik haritası", "alt": "Cantilena panelinin siyahtan beyaza derinlik haritası"},
@@ -31,7 +31,7 @@
     "door_cta": "Çiziminizi gönderin",
     "door_link": "Tasarımları inceleyin",
     "contact": "iletisim.htm",
-    "library": "sistemler.htm"
+    "library": "tasarimlar.htm"
   },
   "en": {
     "file": "en/process.htm",
@@ -41,7 +41,7 @@
     "home": "Home",
     "eyebrow": "Bespoke",
     "h1": "Your drawing,<br><em>cast faithfully.</em>",
-    "lede": "A project drawing becomes a cast relief panel in our Sapanca workshop. Below, we follow Cantilena, one of our systems, through the same route a bespoke drawing takes.",
+    "lede": "A project drawing becomes a cast relief panel in our Sapanca workshop. Below, we follow Cantilena, one of our designs, through the same route a bespoke drawing takes.",
     "steps": [
       {"h": "The drawing", "p": "Every project starts with an image: a hand sketch, a dimensioned elevation or a reference. Here is Cantilena as a drawing: the cypress, tulip, carnation and rose of the Iznik tile tradition in one symmetric composition. The drawing, the depth map and the relief below are the same surface.", "cap": "Cantilena, drawing", "alt": "Pencil and ink drawing of the Cantilena panel: cypress, tulips, carnations and roses"},
       {"h": "The depth map", "p": "We translate the drawing into a depth map, where every grey value is a height: black is the ground of the panel, white its highest point. Relief depth on Cantilena is 16 mm, ground to highest point. Changes are still digital, so they cost no tooling and no material.", "cap": "Cantilena, depth map", "alt": "Depth map of the Cantilena panel: black is the ground, white the highest point"},
@@ -62,6 +62,6 @@
     "door_cta": "Send Your Drawing",
     "door_link": "See the designs",
     "contact": "contact.htm",
-    "library": "systems.htm"
+    "library": "designs.htm"
   }
 }
