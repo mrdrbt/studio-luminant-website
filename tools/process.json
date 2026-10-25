@@ -29,7 +29,7 @@
     "door_h": "Çiziminizi gönderin.",
     "door_p": "Bir eskiz, bir çizim ya da bir referans görsel; elinizde ne varsa başlamak için yeterli.",
     "door_cta": "Çiziminizi gönderin",
-    "door_link": "Sistemleri inceleyin",
+    "door_link": "Tasarımları inceleyin",
     "contact": "iletisim.htm",
     "library": "sistemler.htm"
   },
@@ -60,7 +60,7 @@
     "door_h": "Send your drawing.",
     "door_p": "Whatever you have is enough to start: a sketch, an elevation or a reference.",
     "door_cta": "Send Your Drawing",
-    "door_link": "See the systems",
+    "door_link": "See the designs",
     "contact": "contact.htm",
     "library": "systems.htm"
   }
