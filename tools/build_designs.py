@@ -36,7 +36,7 @@ UI = {
                     "joint": "Derz"},
            "material": "Lumina PMAG™ (polimer modifiye kompozit alçı)", "finish": "Boyaya hazır ya da artizan finish ile", "joint": "1,5 mm",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
-           "close_h": "Yakından", "drawing_h": "Çizim", "room_h": "Bir mekânda", "moulds_h": "Kalıplar",
+           "close_h": "Yakından", "drawing_h": "Çizim", "room_h": "Bir mekânda", "more": "İncele →", "moulds_h": "Kalıplar",
            "moulds_p": "Duvar, bu kalıplardan dökülen parçalarla kurulur; harfler çizimdeki dizilişle eşleşir, düz parça rölyefsizdir.",
            "mould_alt": "Render: {name}, kalıp {letter}", "plain": "Düz", "plain_alt": "Render: {name}, düz parça",
            "close_p": "Aynı duvar, yakından: parçaların kenarları ve rölyefin derinliği.",
@@ -55,7 +55,7 @@ UI = {
                     "joint": "Joint"},
            "material": "Lumina PMAG™ (polymer-modified composite gypsum)", "finish": "Paint-ready, or with an artisan finish", "joint": "1.5 mm",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
-           "close_h": "Close up", "drawing_h": "The drawing", "room_h": "In a room", "moulds_h": "The moulds",
+           "close_h": "Close up", "drawing_h": "The drawing", "room_h": "In a room", "more": "View →", "moulds_h": "The moulds",
            "moulds_p": "The wall is laid from pieces cast in these moulds; the letters match the lay in the drawing, and the plain piece carries no relief.",
            "mould_alt": "Render: {name}, mould {letter}", "plain": "Plain", "plain_alt": "Render: {name}, plain piece",
            "close_p": "The same wall, close up: the edges of the pieces and the depth of the relief.",
@@ -210,7 +210,7 @@ def room_html(d, lang, pre):
     return f"""
 <section class="dsg-room reveal">
   <h2 class="dsg-h">{u['room_h']}</h2>
-  <div class="dsg-room__grid">
+  <div class="dsg-room__grid" data-n="{len(figs)}">
 {chr(10).join(figs)}
   </div>
 </section>
@@ -234,7 +234,7 @@ def pager_html(data, d, lang):
 def door_html(lang):
     u = UI[lang]
     return f"""
-<section class="sys-door night" id="sys-door">
+<section class="sys-door" id="sys-door">
   <div class="sys-door__inner">
     <p>{u['door']}</p>
     <div class="sys-door__links">
@@ -262,6 +262,11 @@ def tail(lang, scripts=""):
 def nav(lang, twin):
     base = ' data-base="../"' if lang == "en" else ""
     return f'<div id="site-nav" data-lang="{lang}" data-lang-url="{twin}"{base}></div>\n\n<main id="main">\n'
+
+
+# phones keep the baked poster: dropping the attribute before relief-light.js mounts leaves the static image (no canvas moire)
+PHONE_POSTER = ('<script>if (window.matchMedia("(max-width: 820px), (orientation: portrait)").matches) '
+                'document.querySelectorAll("[data-relief-light]").forEach(function (e) { e.removeAttribute("data-relief-light"); });</script>' + chr(10))
 
 
 def relief_page(data, d, lang, figs):
@@ -323,7 +328,7 @@ def relief_page(data, d, lang, figs):
   </div>
 </section>
 {room_html(d, lang, pre)}{pager_html(data, d, lang)}{door_html(lang)}
-""" + tail(lang, f'<script src="{pre}relief-light.js" defer></script>\n'))
+""" + tail(lang, (PHONE_POSTER if d.get("poster_on_phone") else "") + f'<script src="{pre}relief-light.js" defer></script>\n'))
 
 
 def mould_file(m):
@@ -430,7 +435,9 @@ def card_image(d, lang):
         f = f"assets/designs/{d['asset']}/wall.webp"
         alt = d[lang]["wall_alt"]
     w, h = Image.open(SITE / f).size
-    return f'<img src="{pre}{f}" width="{w}" height="{h}" loading="lazy" alt="{esc(alt)}">'
+    z = d.get("card_zoom")  # optional per-card crop-in that trims dark corners of a rotated source photo
+    style = f' style="--z:{z[0]};transform-origin:{z[1]}"' if z else ""
+    return f'<img src="{pre}{f}" width="{w}" height="{h}" loading="lazy"{style} alt="{esc(alt)}">'
 
 
 def index_page(data, lang):
@@ -447,6 +454,7 @@ def index_page(data, lang):
       <span class="dsg-card__img">{card_image(d, lang)}</span>
       <span class="dsg-card__name">{esc(c['name'])}</span>
       <span class="dsg-card__line">{nb(txt(line))}</span>
+      <span class="dsg-card__more">{u['more']}</span>
     </a>''')
     first = data["designs"][0]
     og = (f"assets/designs/{first['asset']}/wall.webp" if first["kind"] == "study"
@@ -462,7 +470,7 @@ def index_page(data, lang):
 {chr(10).join(cards)}
 </section>
 
-<section class="sys-door night" id="sys-door">
+<section class="sys-door" id="sys-door">
   <div class="sys-door__inner">
     <p>{u['idx_door']}</p>
     <div class="sys-door__links">

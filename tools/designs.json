@@ -85,6 +85,7 @@
    ]
   },
   {
+   "card_zoom": [1.3, "50% 50%"],
    "slug": "cantilena",
    "kind": "relief",
    "code": "012",
@@ -165,6 +166,7 @@
    }
   },
   {
+   "poster_on_phone": true,
    "slug": "glissando",
    "kind": "relief",
    "code": "042",
@@ -420,12 +422,12 @@
      "file": "assets/designs/hemiola/room-lobby.webp",
      "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-20_skew_insitu/2026-10-20_x-skew-insitu-r183058_r6_lobby_oblique_gpt_2.png",
      "tr": {
-      "alt": "Render: Hemiola, otel lobisi",
-      "cap": "Render: otel lobisi"
+      "alt": "Render: Hemiola, lobi oturma alanı",
+      "cap": "Render: lobi oturma alanı"
      },
      "en": {
-      "alt": "Render: Hemiola, hotel lobby",
-      "cap": "Render: hotel lobby"
+      "alt": "Render: Hemiola, lobby lounge",
+      "cap": "Render: lobby lounge"
      }
     }
    ]
@@ -486,6 +488,7 @@
    }
   },
   {
+   "card_zoom": [1.3, "70% 30%"],
    "slug": "ricercar",
    "kind": "relief",
    "code": "031",
