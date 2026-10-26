@@ -662,35 +662,9 @@
   }
 
   /* ─── PROOF STRIP ───────────────────── */
-  #proof {
-    background: var(--obsidian);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-  .proof-strip {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    list-style: none; margin: 0; padding: 0;
-  }
-  .proof-strip li {
-    padding: 32px 28px;
-    font-size: 10px; letter-spacing: 0.16em;
-    text-transform: uppercase; font-weight: 400;
-    color: var(--text-secondary); text-align: center;
-    line-height: 1.7;
-    display: flex; align-items: center; justify-content: center;
-    border-left: 1px solid var(--border);
-  }
-  .proof-strip li:first-child { border-left: none; }
-  .proof-strip .proof-mark { color: var(--gold); margin-right: 6px; }
   @media (max-width: 760px) {
-    .proof-strip { grid-template-columns: 1fr 1fr; }
-    .proof-strip li:nth-child(odd) { border-left: none; }
-    .proof-strip li:nth-child(n+3) { border-top: 1px solid var(--border); }
   }
   @media (max-width: 440px) {
-    .proof-strip { grid-template-columns: 1fr; }
-    .proof-strip li { border-left: none; border-top: 1px solid var(--border); }
-    .proof-strip li:first-child { border-top: none; }
   }
 
   /* ─── WHO IT'S FOR ──────────────────── */
@@ -828,8 +802,6 @@
 .uds-content .uds-desc{margin-bottom:16px;}
 .uds-content .uds-desc + .uds-desc{margin-bottom:0;}
 /* trust strip: keep the place name on one line */
-.proof-strip li{display:block;}
-.proof-strip .nw{white-space:nowrap;}
 /* gallery link: breathing room above the next section's rule */
 #portfolio{padding-bottom:var(--s-8);}
 #portfolio > .section-inner{margin-top:40px!important;}
@@ -965,17 +937,6 @@
     </div>
   </div>
 
-</section>
-
-<!-- PROOF STRIP -->
-<section id="proof">
-  <div class="section-inner">
-    <ul class="proof-strip">
-      <li>Tasarım ve Döküm Tek Çatı Altında — <span class="nw">Sakarya, Türkiye</span></li>
-      <li>Render Onayı · Silikon Kalıp · Artizan Finish</li>
-      <li>Her Proje İçin Teknik Veri Sayfası ve Montaj Çizimi</li>
-    </ul>
-  </div>
 </section>
 
 <!-- STRATEGY -->
