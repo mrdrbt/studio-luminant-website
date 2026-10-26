@@ -737,6 +737,31 @@
   to = "/en/designs.htm"
   status = 302
 
+# ─── Tufetto making-of on hold until the finished-wall photos arrive, Burak 2026-10-27: temporary redirect to the Process page ───
+[[redirects]]
+  from = "/vaka-tufetto.htm"
+  to = "/surec.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/vaka-tufetto"
+  to = "/surec.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/en/case-study-tufetto.htm"
+  to = "/en/process.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/en/case-study-tufetto"
+  to = "/en/process.htm"
+  status = 302
+  force = true
+
 # ─── Mordent (033) parked off the site, Burak 2026-10-24: temporary redirect to the Systems index ───
 [[redirects]]
   from = "/sistem-mordent.htm"
