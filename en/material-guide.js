@@ -141,17 +141,6 @@ const finishTypes = [{
       angle: "90deg"
     }
   }
-}, {
-  id: "metal",
-  label: "Real Metal Leaf",
-  desc: "Genuine metal leaf application",
-  preview: {
-    gradient: "linear-gradient(135deg, #6B5B1E 0%, #C9A84C 35%, #8B7330 50%, #C9A84C 70%, #6B5B1E 100%)",
-    overlay: {
-      type: "grain",
-      angle: "0deg"
-    }
-  }
 }];
 const colorPalettes = {
   pmag: [

@@ -852,6 +852,48 @@
     }
   }
 </style>
+<style>
+/* home design fixes 2026-10-27 */
+/* capability grid: 4+4+3 on desktop, 2-col with a full-width last tile below */
+.expertise-skills{grid-template-columns:repeat(12,1fr);}
+.skill-tag{grid-column:span 3;}
+.skill-tag:nth-child(n+9){grid-column:span 4;}
+@media (max-width:1024px){
+  .expertise-skills{grid-template-columns:repeat(2,1fr);}
+  .skill-tag,.skill-tag:nth-child(n+9){grid-column:auto;}
+  .skill-tag:last-child{grid-column:1/-1;}
+}
+/* usage list: plain, not button-like */
+.uds-applications{display:flex;flex-wrap:wrap;gap:10px 28px;margin:24px 0 36px;}
+.uds-app-tag{padding:0;border:0;display:inline-flex;align-items:center;gap:10px;}
+.uds-app-tag::before{content:'';width:14px;height:1px;background:var(--gold-dim);flex-shrink:0;}
+.uds-app-tag:hover{color:var(--text-secondary);}
+.uds-content .uds-desc{margin-bottom:16px;}
+.uds-content .uds-desc + .uds-desc{margin-bottom:0;}
+/* trust strip: keep the place name on one line */
+.proof-strip li{display:block;}
+.proof-strip .nw{white-space:nowrap;}
+/* gallery link: breathing room above the next section's rule */
+#portfolio{padding-bottom:var(--s-8);}
+#portfolio > .section-inner{margin-top:40px!important;}
+/* atelier: copy + photo */
+@media (min-width:1025px){
+  #studio > .section-inner{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:72px;align-items:center;}
+}
+#studio .studio-photo{margin:0;}
+#studio .studio-photo img{display:block;width:100%;height:auto;aspect-ratio:5/4;object-fit:cover;}
+@media (max-width:1024px){#studio .studio-photo{margin-top:40px;}}
+/* audience cards: image on top */
+#audiences .audience-img{display:block;margin:-52px -44px 28px;}
+#audiences .audience-img img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;}
+/* phones: compact capability tiles + audience cards */
+@media (max-width:640px){
+  .skill-tag{padding:12px 12px;font-size:9.5px;letter-spacing:.08em;line-height:1.4;}
+  .expertise-skills{gap:1px;}
+  #audiences .audience-card{padding:32px 24px;}
+  #audiences .audience-img{margin:-32px -24px 24px;}
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -970,7 +1012,7 @@
 <section id="proof">
   <div class="section-inner">
     <ul class="proof-strip">
-      <li>Designed &amp; Cast In-House — Sakarya, Türkiye</li>
+      <li>Designed &amp; Cast In-House — <span class="nw">Sakarya, Türkiye</span></li>
       <li>Render Approval · Silicone Moulds · Artisan Finishes</li>
       <li>A Technical Data Sheet &amp; Installation Drawing for Every Project</li>
     </ul>
@@ -1004,7 +1046,7 @@
             <span class="feature-num">02</span>
             <div>
               <div class="feature-title">Moulded and Cast In-House</div>
-              <div class="feature-desc">Design, mould-making, casting and quality control all happen in our Sapanca studio. Experienced casting teams under contract work there from our moulds, so capacity grows with the job while the design stays with us.</div>
+              <div class="feature-desc">Experienced casting teams under contract work there from our moulds, so capacity grows with the job while the design stays with us.</div>
             </div>
           </div>
         </div>
@@ -1037,11 +1079,6 @@
         <h2 class="section-headline reveal">
           Brief to Crated Panel,<br><em>One Process.</em>
         </h2>
-      </div>
-      <div class="process-header-right reveal">
-        <p class="process-header-desc">
-          Design, mould-making, casting and quality control in our Sapanca studio, with contracted casting teams working there from our moulds. Built so the design never changes hands between drawing and cast.
-        </p>
       </div>
     </div>
 
@@ -1084,11 +1121,11 @@
       <div class="process-step">
         <picture>
               <source type="image/webp"
-                  srcset="../images/studio-luminant-finish-sample-box-closed-800w.webp 800w,
-                  ../images/studio-luminant-finish-sample-box-closed-1600w.webp 1600w"
+                  srcset="../images/studio-luminant-finish-sample-box-angled-open-800w.webp 800w,
+                  ../images/studio-luminant-finish-sample-box-angled-open-1600w.webp 1600w"
                   sizes="(max-width: 1024px) 100vw, 33vw">
-              <img src="../images/studio-luminant-finish-sample-box-closed.jpg"
-                   alt="Closed black portfolio-style sample box with the Studio Luminant monogram on its cover" class="step-image" width="1600" height="1195"
+              <img src="../images/studio-luminant-finish-sample-box-angled-open.jpg"
+                   alt="Open black sample box at an angle, relief samples side by side" class="step-image" width="1600" height="1073"
                    loading="lazy" decoding="async">
             </picture>
         <span class="step-number">03</span>
@@ -1117,6 +1154,7 @@
       </p>
       <p class="body-text reveal"><a href="about.htm" class="faq-link">About the studio →</a></p>
     </div>
+    <figure class="studio-photo reveal"><img src="../img/workshop/workshop-05-finishing.jpg" alt="Hand sanding the surface of a cast relief panel on the workbench" width="1152" height="928" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -1196,50 +1234,6 @@
     </div>
   </div>
   <div class="section-inner" style="margin-top:56px;"><a href="gallery.htm" class="faq-link">Design Gallery →</a></div>
-</section>
-
-<!-- MATERIALS -->
-<section id="materials">
-  <div class="section-inner">
-    <div class="materials-header">
-      <div class="eyebrow reveal">Materials</div>
-      <h2 class="section-headline reveal">
-        One Material,<br><em>One Standard.</em>
-      </h2>
-      <p class="body-text reveal">
-        From the lobby wall to the reception desk front, from ceiling to column wrap, the interior is carried by one material, <span translate="no">Lumina PMAG™</span>. Each project goes into the specification with its technical data sheet.
-      </p>
-    </div>
-
-    <div class="materials-grid reveal">
-      <div class="material-card material-card--lead">
-        <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-glissando-relief-panel-raking-light-portrait-400w.webp 400w,
-                  ../images/studio-luminant-glissando-relief-panel-raking-light-portrait-800w.webp 800w,
-                  ../images/studio-luminant-glissando-relief-panel-raking-light-portrait.webp 880w"
-                  sizes="(max-width: 768px) 100vw, 460px">
-              <img src="../images/studio-luminant-glissando-relief-panel-raking-light-portrait.jpg"
-                   alt="Glissando: relief panel of drifting vertical fibres, in raking light" class="material-img" width="880" height="1100"
-                   loading="lazy" decoding="async">
-            </picture>
-        <div class="material-body">
-        <svg class="material-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="1" width="38" height="38" style="stroke:var(--accent)" stroke-width="0.8"></rect>
-          <rect x="8" y="8" width="24" height="24" style="stroke:var(--accent)" stroke-width="0.5" transform="rotate(45 20 20)"></rect>
-          <circle cx="20" cy="20" r="6" style="stroke:var(--accent)" stroke-width="0.8"></circle>
-        </svg>
-        <h3 class="material-title"><span translate="no">Lumina PMAG™</span></h3>
-        <div class="material-subtitle">Interior Panels &amp; Elements</div>
-        <p class="material-desc">Interior walls and ceilings, column wraps, counter and desk fronts, accent surfaces.</p>
-        <ul class="material-bullets">
-          <li>Ceramic-smooth</li>
-          <li>Any RAL or custom colour</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- INTERACTIVE SAMPLE BOX -->
@@ -1475,12 +1469,14 @@
     <div class="uds-layout">
       <div class="uds-content reveal">
         <div class="eyebrow">Design Architecture</div>
-        <div class="uds-tagline">One Pattern. Every Surface.</div>
         <h2 class="section-headline">
           Unified<br><em>Design System</em>
         </h2>
         <p class="uds-desc">
           The same master carries across wall panels, ceilings, columns and feature walls: the design stays the same on every surface, while the panel build and fixing are worked out for each one.
+        </p>
+        <p class="uds-desc">
+          From the lobby wall to the reception desk front, from ceiling to column wrap, the interior is carried by one material, <span translate="no">Lumina PMAG™</span>. Each project goes into the specification with its technical data sheet.
         </p>
         <div class="uds-applications">
           <span class="uds-app-tag">Wall Panels</span>
@@ -1518,21 +1514,23 @@
 <section id="audiences">
   <div class="section-inner">
     <div class="audiences-header">
-      <div class="eyebrow reveal">Where We Work</div>
-      <h2 class="audiences-headline reveal">Who We<br><em>Work With.</em></h2>
+      <h2 class="audiences-headline reveal">Where We<br><em>Work</em></h2>
     </div>
     <div class="audiences-grid reveal">
       <div class="audience-card">
+        <a class="audience-img" href="design-rondeau.htm"><img src="../assets/designs/rondeau/room-lobby.webp" alt="Render: Rondeau, hotel lobby" width="1536" height="1024" loading="lazy" decoding="async"></a>
         <div class="audience-num">01</div>
         <h3 class="audience-title">Hospitality</h3>
         <p class="audience-desc">Hotel lobbies, resort public areas, restaurant and bar concepts. Feature walls that carry the brand identity.</p>
       </div>
       <div class="audience-card">
+        <a class="audience-img" href="design-glissando.htm"><img src="../assets/designs/glissando/room-living.webp" alt="Render: Glissando, living room" width="1121" height="1403" loading="lazy" decoding="async"></a>
         <div class="audience-num">02</div>
         <h3 class="audience-title">High-End Residential</h3>
         <p class="audience-desc">Private villas, penthouses, designer interiors. Single-piece sculptural surfaces designed for one space.</p>
       </div>
       <div class="audience-card">
+        <a class="audience-img" href="design-glissando.htm"><img src="../assets/designs/glissando/room-clinic.webp" alt="Render: Glissando, clinic" width="1121" height="1403" loading="lazy" decoding="async"></a>
         <div class="audience-num">03</div>
         <h3 class="audience-title">Commercial &amp; Cultural</h3>
         <p class="audience-desc">Corporate lobbies, retail concepts, cultural buildings. Large-format cladding — with specification assurance built in.</p>
