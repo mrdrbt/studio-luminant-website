@@ -80,7 +80,7 @@
   /* ─── GALLERY SECTION ───────────────── */
   #gallery-section {
     background: var(--obsidian);
-    padding: 80px 0 160px;
+    padding: 80px 0 96px;
   }
 
   /* Filter bar */
@@ -108,40 +108,31 @@
     border-color: var(--gold);
   }
 
-  /* Masonry grid */
+  /* Balanced grid: uniform-height rows, captions below the image */
   .gallery-grid {
-    columns: 3;
-    column-gap: 2px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 2px;
+    align-items: start;
   }
 
-  .gallery-item {
-    break-inside: avoid;
-    margin-bottom: 2px;
-    overflow: hidden;
-    position: relative;
-    display: block;
-    background: var(--surface);
-  }
+  .gallery-item { display: block; margin: 0; }
+  .gallery-item picture { display: block; overflow: hidden; background: var(--surface); aspect-ratio: 4 / 5; }
+  .gallery-item.w2 { grid-column: span 2; }
+  .gallery-item.w2 picture { aspect-ratio: 8 / 5; }
 
   .gallery-item img {
-    width: 100%; height: auto; display: block;
+    width: 100%; height: 100%; object-fit: cover; display: block;
     transition: transform 0.6s cubic-bezier(.25,.46,.45,.94), filter 0.4s;
     filter: grayscale(10%);
   }
   .gallery-item:hover img { transform: scale(1.04); filter: grayscale(0%); }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-  .gallery-caption {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    padding: 40px 20px 16px;
-    background: linear-gradient(to top, rgba(var(--bg-rgb),0.85), transparent);
-    opacity: 0; transition: opacity 0.4s;
-  }
-  .gallery-item:hover .gallery-caption { opacity: 1; }
-  @media (hover: none) { .gallery-caption { opacity: 1; } }
+  .gallery-caption { padding: 12px 4px 0; }
   .gallery-caption span {
-    font-size: 10px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--text-secondary);
+    font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink);
   }
 
   /* ─── RESPONSIVE ────────────────────── */
@@ -149,27 +140,16 @@
     #gallery-hero { padding: 120px 32px 60px; }
     .gallery-hero-inner { flex-direction: column; align-items: flex-start; gap: 40px; }
     .gallery-hero-right { text-align: left; }
-    .gallery-grid { columns: 2; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item.w2d { grid-column: auto; }
+    .gallery-item.w2d picture { aspect-ratio: 4 / 5; }
   }
   @media (max-width: 600px) {
-    .gallery-grid { columns: 1; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item.w2 { grid-column: auto; }
+    .gallery-item.w2 picture { aspect-ratio: 3 / 2; }
     #gallery-section { padding: 60px 0 100px; }
   }
-
-  /* ─── GALLERY BOTTOM CTA ─────────────── */
-  #gallery-cta {
-    padding: 100px 0;
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-    text-align: center;
-  }
-  .gallery-cta-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(44px, 4vw, 72px);
-    font-weight: 300; line-height: 1.0;
-    color: var(--text-primary); margin-bottom: 48px;
-  }
-  .gallery-cta-headline em { font-style: italic; color: var(--gold); }
 </style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioluminant.com.tr/en/"}, {"@type": "ListItem", "position": 2, "name": "Design Gallery", "item": "https://studioluminant.com.tr/en/gallery.htm"}]}
@@ -216,7 +196,7 @@
     <div class="gallery-grid">
 
       <!-- IN CONTEXT (6) — concept renders, native aspect -->
-      <div class="gallery-item" data-category="context">
+      <div class="gallery-item w2" data-category="context">
         <picture>
               <source type="image/webp"
                   srcset="../images/studio-luminant-cellular-relief-wall-hotel-reception-concept-400w.webp 400w,
@@ -243,7 +223,7 @@
             </picture>
         <div class="gallery-caption"><span>Beauty Salon</span></div>
       </div>
-      <div class="gallery-item" data-category="context">
+      <div class="gallery-item w2 w2d" data-category="context">
         <picture>
               <source type="image/webp"
                   srcset="../images/studio-luminant-sage-relief-wall-hotel-guestroom-concept-400w.webp 400w,
@@ -283,7 +263,7 @@
             </picture>
         <div class="gallery-caption"><span>Café</span></div>
       </div>
-      <div class="gallery-item" data-category="context">
+      <div class="gallery-item w2" data-category="context">
         <picture>
               <source type="image/webp"
                   srcset="../images/studio-luminant-flowing-fibre-relief-wall-living-room-concept-400w.webp 400w,
@@ -337,8 +317,8 @@
     <div class="product-content" style="padding-top: 90px; align-items: center;">
       <div>
         <picture>
-          <source type="image/webp" srcset="../images/studio-luminant-finish-sample-box-closed-800w.webp 800w, ../images/studio-luminant-finish-sample-box-closed-1600w.webp 1600w" sizes="(max-width: 1024px) 100vw, 50vw">
-          <img src="../images/studio-luminant-finish-sample-box-closed.jpg" alt="Closed black portfolio-style sample box with the Studio Luminant monogram on its cover" width="1600" height="1195" style="display:block; width:100%; height:auto; border:1px solid var(--border);" loading="lazy" decoding="async">
+          <source type="image/webp" srcset="../images/studio-luminant-finish-sample-box-angled-open-800w.webp 800w, ../images/studio-luminant-finish-sample-box-angled-open-1600w.webp 1600w" sizes="(max-width: 1024px) 100vw, 50vw">
+          <img src="../images/studio-luminant-finish-sample-box-angled-open.jpg" alt="The open sample box" width="1600" height="1073" style="display:block; width:100%; height:auto; border:1px solid var(--border);" loading="lazy" decoding="async">
         </picture>
       </div>
       <div>

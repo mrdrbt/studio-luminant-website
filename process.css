@@ -91,3 +91,11 @@ html:not(.js) .pseq__caps { display: none; }
   .p-path__step { grid-template-columns: 40px minmax(0, 1fr); }
   .p-path__p { grid-column: 2; }
 }
+
+/* workshop filmstrip: legible step numbers, tighter intro band, founder shot cropped to hands + mould */
+#workshop-filmstrip .filmstrip-intro { padding: var(--s-7) var(--pad-x); }
+#workshop-filmstrip .filmstrip-num { display: inline-block; background: #1D1A16; color: #EFE8D5; padding: 4px 10px; margin-bottom: var(--s-3); }
+#workshop-filmstrip .filmstrip-frame img[src*="mould-prep"] { object-position: center 62% !important; }
+@media (max-width: 720px) { #workshop-filmstrip .filmstrip-intro { padding: var(--s-6) var(--pad-x-sm); } }
+/* touch devices have no cursor: drop the cursor clause */
+@media (hover: none) { .pseq__hover { display: none; } }

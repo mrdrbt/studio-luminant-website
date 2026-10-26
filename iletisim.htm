@@ -26,6 +26,16 @@
 <link rel="stylesheet" href="shared.css?v=1f427dcb">
 
 <link rel="stylesheet" href="contact.css?v=b61f0469">
+<style>
+/* phones: the form comes before the address/facts block */
+@media (max-width: 640px) {
+  .ct-hero { display: flex; flex-direction: column; gap: 0; }
+  .ct-intro { display: contents; }
+  .ct-lede { margin-bottom: var(--s-6); }
+  .ct-hero .ct-card { order: 1; }
+  .ct-hero .ct-facts { order: 2; margin-top: var(--s-8); max-width: none; }
+}
+</style>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "İletişim", "item": "https://studioluminant.com.tr/iletisim.htm"}]}
 </script>
