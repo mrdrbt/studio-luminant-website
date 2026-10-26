@@ -7,8 +7,7 @@
    "asset": "accelerando",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design01_wall.png",
-    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design01_card.png",
-    "sketch": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design01_sketch.png"
+    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design01_card.png"
    },
    "tr": {
     "name": "Accelerando",
@@ -36,22 +35,40 @@
    },
    "moulds": [
     {
-     "letter": "B",
+     "letter": "A",
+     "source": "S1",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/accelerando/B.png"
     },
     {
-     "letter": "C",
+     "letter": "B",
+     "source": "S2",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/accelerando/C.png"
     },
     {
-     "letter": "D",
+     "letter": "C",
+     "source": "S3",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/accelerando/D.png"
     },
     {
-     "letter": "E",
+     "letter": "D",
+     "source": "S4",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/accelerando/E.png"
+    },
+    {
+     "plain": true,
+     "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/accelerando/plain.png"
     }
-   ]
+   ],
+   "drawing": {
+    "tr": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design01_drawing_tr.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design01_drawing_tr_m.png"
+    },
+    "en": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design01_drawing_en.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design01_drawing_en_m.png"
+    }
+   }
   },
   {
    "slug": "cantilena",
@@ -219,8 +236,7 @@
    "asset": "gruppetto",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_wall.png",
-    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_card.png",
-    "sketch": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_sketch.png"
+    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design02_card.png"
    },
    "tr": {
     "name": "Gruppetto",
@@ -245,6 +261,16 @@
     "card_cap": "Render: Gruppetto, close view, 1.5 mm joint.",
     "sketch_alt": "Drawing: the Gruppetto moulds and how they are laid on the wall",
     "sketch_cap": "Drawing: Gruppetto, moulds and lay."
+   },
+   "drawing": {
+    "tr": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design02_drawing_tr.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design02_drawing_tr_m.png"
+    },
+    "en": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design02_drawing_en.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design02_drawing_en_m.png"
+    }
    }
   },
   {
@@ -253,8 +279,7 @@
    "asset": "hemiola",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design03_wall.png",
-    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design03_card.png",
-    "sketch": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design03_sketch.png"
+    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design03_card.png"
    },
    "tr": {
     "name": "Hemiola",
@@ -283,21 +308,35 @@
    "moulds": [
     {
      "letter": "A",
+     "source": "A1",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/hemiola/A.png"
     },
     {
      "letter": "B",
+     "source": "A2",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/hemiola/B.png"
     },
     {
      "letter": "C",
+     "source": "A3",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/hemiola/C.png"
     },
     {
      "letter": "D",
+     "source": "A4",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/hemiola/D.png"
     }
-   ]
+   ],
+   "drawing": {
+    "tr": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design03_drawing_tr.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design03_drawing_tr_m.png"
+    },
+    "en": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design03_drawing_en.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design03_drawing_en_m.png"
+    }
+   }
   },
   {
    "slug": "melisma",
@@ -305,8 +344,7 @@
    "asset": "melisma",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design04_wall.png",
-    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design04_card.png",
-    "sketch": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design04_sketch.png"
+    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design04_card.png"
    },
    "tr": {
     "name": "Melisma",
@@ -335,13 +373,25 @@
    "moulds": [
     {
      "letter": "A",
+     "source": "R",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/melisma/A.png"
     },
     {
      "letter": "B",
+     "source": "L",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/melisma/B.png"
     }
-   ]
+   ],
+   "drawing": {
+    "tr": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design04_drawing_tr.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design04_drawing_tr_m.png"
+    },
+    "en": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design04_drawing_en.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design04_drawing_en_m.png"
+    }
+   }
   },
   {
    "slug": "ricercar",
@@ -414,7 +464,7 @@
      {
       "h": "On the wall",
       "p": [
-       "Ricercar is designed around a 600 × 600 mm repeat unit, and its layout is a field layout. It suits a broad wall, a column face or a partition panel carried in the same pattern. On a small surface, a few repeats are read together. Because the lattice repeats, where the pattern is cut at the edges and corners of a wall is a detail decided together on the layout drawing."
+       "Ricercar is designed around a 600 × 600 mm repeat unit, and its layout is a field layout. It suits a broad wall, a column face or a partition panel carried in the same pattern. On a small wall only a few repeats show, and they read as one group. Because the lattice repeats, where the pattern is cut at the edges and corners of a wall is a detail decided together on the layout drawing."
       ]
      }
     ],
@@ -429,8 +479,7 @@
    "asset": "rondeau",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design05_wall.png",
-    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design05_card.png",
-    "sketch": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design05_sketch.png"
+    "card": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design05_card.png"
    },
    "tr": {
     "name": "Rondeau",
@@ -459,17 +508,34 @@
    "moulds": [
     {
      "letter": "A",
+     "source": "A",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/rondeau/A.png"
     },
     {
-     "letter": "C",
+     "letter": "B",
+     "source": "C",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/rondeau/C.png"
     },
     {
-     "letter": "D",
+     "letter": "C",
+     "source": "D",
      "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/rondeau/D.png"
+    },
+    {
+     "plain": true,
+     "src": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_design_moulds/rondeau/plain.png"
     }
-   ]
+   ],
+   "drawing": {
+    "tr": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design05_drawing_tr.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design05_drawing_tr_m.png"
+    },
+    "en": {
+     "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design05_drawing_en.png",
+     "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design05_drawing_en_m.png"
+    }
+   }
   }
  ],
  "parked": [

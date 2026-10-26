@@ -34,45 +34,50 @@ UI = {
            "cta": "Duvar yerleşimi isteyin", "contact": "iletisim.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
            "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey",
                     "joint": "Derz"},
-           "material": "Lumina PMAG™", "finish": "Boyaya hazır ya da artizan finish ile", "joint": "1,5 mm",
+           "material": "Lumina PMAG™ (polimer modifiye kompozit alçı)", "finish": "Boyaya hazır ya da artizan finish ile", "joint": "1,5 mm",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
            "close_h": "Yakından", "drawing_h": "Çizim", "room_h": "Bir mekânda", "moulds_h": "Kalıplar",
-           "moulds_p": "Duvar, bu kalıplardan dökülen parçalarla kurulur; harfler çizimdeki dizilişle eşleşir.",
-           "mould_alt": "Render: {name}, kalıp {letter}",
-           "close_p": "Rölyef, yandan gelen ışıkta okunur: aynı yüzey, günün saatine göre başka bir gölge verir.",
+           "moulds_p": "Duvar, bu kalıplardan dökülen parçalarla kurulur; harfler çizimdeki dizilişle eşleşir, düz parça rölyefsizdir.",
+           "mould_alt": "Render: {name}, kalıp {letter}", "plain": "Düz", "plain_alt": "Render: {name}, düz parça",
+           "close_p": "Aynı duvar, yakından: parçaların kenarları ve rölyefin derinliği.",
            "drawing_p": "Tasarımın kalıpları ve duvardaki dizilişi. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
            "door": "Bu tasarımın duvarınızda nasıl yerleşeceğini görmek için duvar ölçülerinizi iletin.",
            "own": "Kendi çiziminizle başlıyorsanız:", "prev": "Önceki tasarım", "next": "Sonraki tasarım",
            "idx_title": "Atölye Tasarımları: Rölyef Duvar Tasarımları | Studio Luminant",
-           "idx_meta": "Studio Luminant'ın çizdiği rölyef duvar tasarımları. Her tasarımı kendi sayfasında duvarda, yakından ve çizimiyle inceleyin; Lumina PMAG™ ile Sapanca'da dökülür.",
+           "idx_meta": "Studio Luminant'ın çizdiği rölyef duvar tasarımları. Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin; Lumina PMAG™ ile Sapanca'da dökülür.",
            "idx_h1": "Bizim çizdiğimiz <em>rölyefler.</em>",
-           "idx_lede": "Her tasarımı kendi sayfasında duvarda, yakından ve çizimiyle inceleyin. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
+           "idx_lede": "Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
            "idx_door": "Duvar sizin çiziminizle başlıyorsa bu Özel Üretim’dir: nasıl çizdiyseniz, öyle dökeriz.",
            "idx_door_link": "Çiziminizi gönderin", "idx_samples": "Numune kutusunu isteyin"},
     "en": {"lib": "Studio Designs", "index": "designs.htm", "page": "design-{slug}.htm", "home": "Home",
            "cta": "Request a wall layout", "contact": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
            "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface",
                     "joint": "Joint"},
-           "material": "Lumina PMAG™", "finish": "Paint-ready, or with an artisan finish", "joint": "1.5 mm",
+           "material": "Lumina PMAG™ (polymer-modified composite gypsum)", "finish": "Paint-ready, or with an artisan finish", "joint": "1.5 mm",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
            "close_h": "Close up", "drawing_h": "The drawing", "room_h": "In a room", "moulds_h": "The moulds",
-           "moulds_p": "The wall is laid from pieces cast in these moulds; the letters match the lay in the drawing.",
-           "mould_alt": "Render: {name}, mould {letter}",
-           "close_p": "Relief reads in light from the side: the same surface gives a different shadow at each hour of the day.",
+           "moulds_p": "The wall is laid from pieces cast in these moulds; the letters match the lay in the drawing, and the plain piece carries no relief.",
+           "mould_alt": "Render: {name}, mould {letter}", "plain": "Plain", "plain_alt": "Render: {name}, plain piece",
+           "close_p": "The same wall, close up: the edges of the pieces and the depth of the relief.",
            "drawing_p": "The design’s moulds and how they are laid on the wall. The mould is made for your order, and you approve the master before anything is cast.",
            "door": "To see how this design would sit on your wall, send the wall dimensions.",
            "own": "Starting from your own drawing:", "prev": "Previous design", "next": "Next design",
            "idx_title": "Studio Designs: Relief Wall Designs | Studio Luminant",
-           "idx_meta": "Relief wall designs drawn by Studio Luminant. See each one on its own page, on the wall, close up and in its drawing; cast in Lumina PMAG™ in Sapanca.",
+           "idx_meta": "Relief wall designs drawn by Studio Luminant. See each one on its own page, on the wall and in its drawing; cast in Lumina PMAG™ in Sapanca, Turkey.",
            "idx_h1": "Relief we have <em>drawn.</em>",
-           "idx_lede": "See each design on its own page: on the wall, close up and in its drawing. The mould is made for your order, and you approve the master before anything is cast.",
+           "idx_lede": "See each design on its own page: on the wall and in its drawing. The mould is made for your order, and you approve the master before anything is cast.",
            "idx_door": "If the wall starts from your drawing, that is Bespoke: we cast it the way you drew it.",
            "idx_door_link": "Send your drawing", "idx_samples": "Request the sample box"},
 }
 SIZES = {"panel": "(orientation: portrait) 90vw, 55vw", "field": "(orientation: portrait) 100vw, 100vw"}
-STUDY_WIDTH = {"wall": 1800, "card": 1400, "sketch": 1600}
-STUDY_FILE = {"wall": "wall.webp", "card": "detail.webp", "sketch": "drawing.webp"}
-MOULD_WIDTH = 900  # one square tile per mould (moulds[]: {letter, src}); a design with one mould shows none
+STUDY_WIDTH = {"wall": 1800, "card": 1400}
+STUDY_FILE = {"wall": "wall.webp", "card": "detail.webp"}
+# the lay drawing, one per language: drawing[lang] = {"d": 1600-wide desktop, "m": 900-wide portrait for phones}
+DRAWING_WIDTH = {"d": 1600, "m": 900}
+PHONE = "(max-width: 640px)"
+# one square tile per mould (moulds[]: {letter, source, src} or {plain, src}), lettered as the drawing; a design with one
+# mould shows none
+MOULD_WIDTH = 900
 
 
 def esc(s):
@@ -314,8 +319,12 @@ def relief_page(data, d, lang, figs):
 """ + tail(lang, f'<script src="{pre}relief-light.js" defer></script>\n'))
 
 
-def mould_file(letter):
-    return f"mould-{letter.lower()}.webp"
+def mould_file(m):
+    return "mould-plain.webp" if m.get("plain") else f"mould-{m['letter'].lower()}.webp"
+
+
+def drawing_file(lang, v):
+    return f"drawing-{lang}{'-m' if v == 'm' else ''}.webp"
 
 
 def moulds_html(d, lang, base):
@@ -326,10 +335,11 @@ def moulds_html(d, lang, base):
     u, name = UI[lang], d[lang]["name"]
     figs = []
     for m in ms:
-        w, h = Image.open(SITE / "assets" / "designs" / d["asset"] / mould_file(m["letter"])).size
-        alt = u["mould_alt"].format(name=name, letter=m["letter"])
-        figs.append(f'      <figure><img src="{base}{mould_file(m["letter"])}" width="{w}" height="{h}" loading="lazy" '
-                    f'alt="{esc(alt)}"><figcaption>{esc(m["letter"])}</figcaption></figure>')
+        w, h = Image.open(SITE / "assets" / "designs" / d["asset"] / mould_file(m)).size
+        alt = u["plain_alt"].format(name=name) if m.get("plain") else u["mould_alt"].format(name=name, letter=m["letter"])
+        cap = u["plain"] if m.get("plain") else m["letter"]
+        figs.append(f'      <figure><img src="{base}{mould_file(m)}" width="{w}" height="{h}" loading="lazy" '
+                    f'alt="{esc(alt)}"><figcaption>{esc(cap)}</figcaption></figure>')
     return f"""
 <section class="dsg-moulds reveal">
   <div class="dsg-moulds__head">
@@ -350,7 +360,8 @@ def study_page(data, d, lang, sizes):
     tr_url, en_url = urls(d["slug"])
     url = tr_url if lang == "tr" else en_url
     twin = f"{pre}{en_url}" if lang == "tr" else f"../{tr_url}"
-    (ww, wh), (cw, ch), (sw, sh) = sizes["wall"], sizes["card"], sizes["sketch"]
+    (ww, wh), (cw, ch) = sizes["wall"], sizes["card"]
+    (sw, sh), (mw, mh) = sizes["drawing"][lang]["d"], sizes["drawing"][lang]["m"]
     extra = f'<link rel="preload" as="image" href="{base}wall.webp" fetchpriority="high">\n'
     spec = spec_html([("material", u["material"]), ("finish", u["finish"]), ("joint", u["joint"])], u)
     return (head(lang, c["title"], c["meta"], url, tr_url, en_url, f"assets/designs/{d['asset']}/wall.webp", extra,
@@ -391,7 +402,10 @@ def study_page(data, d, lang, sizes):
       <p>{u['drawing_p']}</p>
     </div>
     <figure>
-      <img src="{base}drawing.webp" width="{sw}" height="{sh}" loading="lazy" alt="{esc(c['sketch_alt'])}">
+      <picture>
+        <source media="{PHONE}" srcset="{base}{drawing_file(lang, 'm')}" width="{mw}" height="{mh}">
+        <img src="{base}{drawing_file(lang, 'd')}" width="{sw}" height="{sh}" loading="lazy" alt="{esc(c['sketch_alt'])}">
+      </picture>
       <figcaption>{txt(c['sketch_cap'])}</figcaption>
     </figure>
   </div>
@@ -532,9 +546,14 @@ def design_missing(d, library=None):
         for k, name in STUDY_FILE.items():
             if not (out / name).exists() and not (src.get(k) and (ROOT / src[k]).exists()):
                 missing.append(f"image assets/designs/{d['asset']}/{name}")
+        drw = d.get("drawing") if isinstance(d.get("drawing"), dict) else {}
+        for lang in ("tr", "en"):
+            for v in DRAWING_WIDTH:
+                if not (out / drawing_file(lang, v)).exists() and not ((drw.get(lang) or {}).get(v) and (ROOT / drw[lang][v]).exists()):
+                    missing.append(f"image assets/designs/{d['asset']}/{drawing_file(lang, v)}")
     for m in (d.get("moulds") or []) if kind == "study" and d.get("asset") else []:
-        if not (SITE / "assets" / "designs" / d["asset"] / mould_file(m["letter"])).exists() and not (ROOT / m["src"]).exists():
-            missing.append(f"image assets/designs/{d['asset']}/{mould_file(m['letter'])}")
+        if not (SITE / "assets" / "designs" / d["asset"] / mould_file(m)).exists() and not (ROOT / m["src"]).exists():
+            missing.append(f"image assets/designs/{d['asset']}/{mould_file(m)}")
     room = d.get("room")
     if room and not (SITE / room["file"]).exists():
         missing.append(f"image {room['file']}")
@@ -710,8 +729,10 @@ def build(library, rebuild_images=False):
         else:
             out = SITE / "assets" / "designs" / d["asset"]
             sizes = {k: webp(ROOT / d["src"][k], out / STUDY_FILE[k], STUDY_WIDTH[k], rebuild_images) for k in STUDY_FILE}
+            sizes["drawing"] = {lang: {v: webp(ROOT / d["drawing"][lang][v], out / drawing_file(lang, v), w, rebuild_images)
+                                       for v, w in DRAWING_WIDTH.items()} for lang in ("tr", "en")}
             for m in d.get("moulds") or []:
-                webp(ROOT / m["src"], out / mould_file(m["letter"]), MOULD_WIDTH, rebuild_images)
+                webp(ROOT / m["src"], out / mould_file(m), MOULD_WIDTH, rebuild_images)
             write(tr_path, study_page(data, d, "tr", sizes), SITE / "sistemler.htm")
             write(en_path, study_page(data, d, "en", sizes), SITE / "en" / "systems.htm")
     write(SITE / "tasarimlar.htm", index_page(data, "tr"), SITE / "sistemler.htm")

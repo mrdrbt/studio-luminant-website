@@ -207,7 +207,7 @@ var _F = _S.fmt || {};
 const studioMaterials = [{
   id: "pmag",
   name: "Lumina PMAG™",
-  fullName: "Polymer Modified Alpha Gypsum",
+  fullName: "Polymer Modified Composite Gypsum",
   tagline: "Yüksek spesifikasyonlu iç mekânlar için mimari rölyef panelleri",
   domain: "İç Mekân",
   domainIcon: "🏛",
