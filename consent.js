@@ -7,8 +7,8 @@
    - Anything with [data-cookie-settings] re-opens the panel.
 
    Categories: necessary (always on) · analytics · marketing
-   Nothing is pre-ticked. Reject is the same size as accept and one click,
-   on the first layer; the categories open under Settings.
+   Nothing is pre-ticked. The first layer shows Settings and Accept only
+   (Burak 2026-10-27); refusing is Settings, then Save with nothing ticked.
    No cookie wall — dismissing without choosing loads nothing.
    ───────────────────────────────────────────────────────────── */
 (function () {
@@ -31,7 +31,6 @@
     marketing: 'Marketing',
     marketingNote: 'Measuring the effect of our promotion (Meta).',
     acceptAll: 'Accept',
-    rejectAll: 'Reject',
     settings: 'Settings',
     save: 'Save',
     policy: 'Cookie Policy',
@@ -46,7 +45,6 @@
     marketing: 'Pazarlama',
     marketingNote: 'Tanıtım faaliyetlerimizin etkisinin ölçülmesi (Meta).',
     acceptAll: 'Kabul et',
-    rejectAll: 'Reddet',
     settings: 'Ayarlar',
     save: 'Kaydet',
     policy: 'Çerez Politikası',
@@ -224,7 +222,6 @@
           '<div class="sl-c-actions">' +
             '<button type="button" class="sl-c-link" id="sl-c-settings" aria-controls="sl-c-panel"' +
               ' aria-expanded="' + !!expanded + '">' + t.settings + '</button>' +
-            '<button type="button" id="sl-c-reject">' + t.rejectAll + '</button>' +
             '<button type="button" class="sl-c-primary" id="sl-c-accept">' + t.acceptAll + '</button>' +
           '</div>' +
         '</div>' +
@@ -255,9 +252,6 @@
     });
     el.querySelector('#sl-c-accept').addEventListener('click', function () {
       commit({ analytics: true, marketing: true });
-    });
-    el.querySelector('#sl-c-reject').addEventListener('click', function () {
-      commit({ analytics: false, marketing: false });
     });
     el.querySelector('#sl-c-save').addEventListener('click', function () {
       commit({
