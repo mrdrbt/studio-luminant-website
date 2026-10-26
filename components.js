@@ -254,7 +254,7 @@ ${mobileItemsHtml}
   }
 
   // ─── CURSOR HOVER (for injected nav elements) ───
-  if (window.matchMedia('(pointer: fine)').matches) {
+  if (window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(hover: none)').matches) {
     const ring = document.getElementById('cursorRing');
     if (ring) {
       document.querySelectorAll('#mainNav a, #mainNav button, .nav-mobile-menu a').forEach(el => {
@@ -355,7 +355,6 @@ ${mobileItemsHtml}
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">${footerContent.copyright}</p>
       <ul class="footer-links">
         <li><a href="${footerContent.materialsHref}">${L.materials}</a></li>
         <li><a href="${footerContent.journalHref}">${footerContent.journalText}</a></li>
@@ -368,6 +367,7 @@ ${mobileItemsHtml}
       </ul>
     </div>
     <p class="footer-legal-entity">${footerContent.legalEntity}</p>
+    <p class="footer-copy">${footerContent.copyright}</p>
   </div>
 </footer>`;
 

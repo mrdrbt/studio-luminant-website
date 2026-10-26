@@ -68,6 +68,7 @@ document.addEventListener('click', function (e) {
 // Called by components.js after cursor elements are injected
 function initCursor() {
   if (!window.matchMedia('(pointer: fine)').matches) return;
+  if (window.matchMedia('(hover: none)').matches) return;
   if (window.matchMedia('(pointer: coarse)').matches) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const dot = document.getElementById('cursorDot');
@@ -78,6 +79,7 @@ function initCursor() {
 
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
+    if (!document.documentElement.classList.contains('cursor-live')) document.documentElement.classList.add('cursor-live');
     dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0) translate(-50%,-50%)';
     if (!running) { running = true; requestAnimationFrame(animateRing); }
   }, { passive: true });

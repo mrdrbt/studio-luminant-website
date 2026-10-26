@@ -32,22 +32,18 @@ const COLORS = {
 const specCategories = [{
   key: "physical",
   label: "Physical",
-  icon: "⬡",
   specs: ["density", "weight", "thickness"]
 }, {
   key: "performance",
   label: "Performance",
-  icon: "◈",
   specs: ["moisture", "impact", "uv", "chemical", "temperature"]
 }, {
   key: "finish",
   label: "Finish & Design",
-  icon: "◇",
   specs: ["surface", "customDesign", "voc", "acoustic", "antimicrobial"]
 }, {
   key: "installation",
   label: "Installation",
-  icon: "▽",
   specs: ["method", "speed", "leadTime"]
 }];
 const specMeta = {
@@ -210,7 +206,6 @@ const studioMaterials = [{
   fullName: "Polymer Modified Composite Gypsum",
   tagline: "Interior architectural relief panels for high-specification interiors",
   domain: "Interior",
-  domainIcon: "🏛",
   application: "Feature walls, ceiling elements, column wraps, counter and desk fronts, accent surfaces, reception areas, corridor accent walls",
   specs: {
     density: "1,400–1,600",
@@ -546,7 +541,7 @@ function RadarChart({
     style: {
       fontSize: "12px",
       fontFamily: "'Jost',sans-serif",
-      fontWeight: 500
+      fontWeight: 400
     }
   }, Math.round((primary.radar[radarAxes[hover].key] || 0) * 100), "%"))));
 }
@@ -572,13 +567,13 @@ function FinishColorSelector({
   }, /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: "'Jost',sans-serif",
-      fontSize: 11,
-      fontWeight: 500,
-      color: COLORS.muted,
-      letterSpacing: "0.08em",
+      fontSize: 10,
+      fontWeight: 400,
+      color: COLORS.gold,
+      letterSpacing: "0.3em",
       textTransform: "uppercase",
       display: "block",
-      marginBottom: 10
+      marginBottom: 14
     }
   }, "Surface Finish"), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -658,13 +653,13 @@ function FinishColorSelector({
   })), /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: "'Jost',sans-serif",
-      fontSize: 11,
-      fontWeight: 500,
-      color: COLORS.muted,
-      letterSpacing: "0.08em",
+      fontSize: 10,
+      fontWeight: 400,
+      color: COLORS.gold,
+      letterSpacing: "0.3em",
       textTransform: "uppercase",
       display: "block",
-      marginBottom: 10
+      marginBottom: 14
     }
   }, "Colour"), colorGroups.map(group => /*#__PURE__*/React.createElement("div", {
     key: group.group,
@@ -676,12 +671,11 @@ function FinishColorSelector({
       fontFamily: "'Jost',sans-serif",
       fontSize: 10,
       fontWeight: 400,
-      color: COLORS.gold,
-      letterSpacing: "0.12em",
+      color: COLORS.muted,
+      letterSpacing: "0.24em",
       textTransform: "uppercase",
       display: "block",
-      marginBottom: 8,
-      opacity: 0.7
+      marginBottom: 8
     }
   }, group.group), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -745,7 +739,7 @@ function FinishColorSelector({
         color: isAct ? COLORS.gold : COLORS.muted,
         textAlign: "center",
         lineHeight: 1.2,
-        fontWeight: isAct ? 500 : 300,
+        fontWeight: isAct ? 400 : 300,
         maxWidth: 56,
         transition: "color 0.2s ease"
       }
@@ -874,28 +868,16 @@ function MaterialCard({
       marginBottom: 6
     }
   }, /*#__PURE__*/React.createElement("span", {
-    "aria-hidden": "true",
-    style: {
-      fontSize: 20
-    }
-  }, material.domainIcon), /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: "'Jost',sans-serif",
-      fontSize: 11,
-      fontWeight: 500,
-      color: COLORS.gold,
-      letterSpacing: "0.12em",
-      textTransform: "uppercase"
-    }
+    className: "mg-eyebrow"
   }, material.domain)), /*#__PURE__*/React.createElement("h3", {
     translate: "no",
     style: {
       fontFamily: "'Cormorant Garamond',serif",
-      fontSize: 26,
-      fontWeight: 600,
+      fontSize: 34,
+      fontWeight: 300,
       color: COLORS.ivory,
       margin: "8px 0 4px",
-      lineHeight: 1.2
+      lineHeight: 1.1
     }
   }, material.name), /*#__PURE__*/React.createElement("p", {
     style: {
@@ -919,22 +901,8 @@ function MaterialCard({
     className: "mg-explore",
     "aria-expanded": isExpanded,
     "aria-controls": "mg-panel-" + material.id,
-    onClick: onToggle,
-    style: {
-      fontFamily: "'Jost',sans-serif",
-      fontSize: 12,
-      fontWeight: 500,
-      color: COLORS.gold,
-      background: "transparent",
-      border: `1px solid ${COLORS.gold}`,
-      borderRadius: 2,
-      padding: "8px 20px",
-      cursor: "pointer",
-      letterSpacing: "0.08em",
-      textTransform: "uppercase",
-      transition: "background-color 0.3s cubic-bezier(0.25,0.1,0.25,1), color 0.3s cubic-bezier(0.25,0.1,0.25,1)"
-    }
-  }, isExpanded ? "Collapse" : "Explore")), isExpanded && /*#__PURE__*/React.createElement("div", {
+    onClick: onToggle
+  }, isExpanded ? "Collapse" : "Explore", /*#__PURE__*/React.createElement("svg", { width: 12, height: 12, viewBox: "0 0 12 12", fill: "none", stroke: "currentColor", strokeWidth: 1.2, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", style: { flexShrink: 0, transition: "transform 0.3s ease", transform: isExpanded ? "rotate(180deg)" : "rotate(0)" } }, /*#__PURE__*/React.createElement("path", { d: "M2 4.5l4 4 4-4" })))), isExpanded && /*#__PURE__*/React.createElement("div", {
     id: "mg-panel-" + material.id,
     style: {
       borderTop: `1px solid ${COLORS.borderGold}`,
@@ -976,28 +944,13 @@ function MaterialCard({
         border: "none",
         cursor: "pointer",
         fontFamily: "'Jost',sans-serif",
-        fontSize: 13,
-        fontWeight: 500,
+        fontSize: 11,
+        fontWeight: 400,
         color: COLORS.ivory,
-        letterSpacing: "0.06em"
+        letterSpacing: "0.22em",
+        textTransform: "uppercase"
       }
-    }, /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("span", {
-      "aria-hidden": "true",
-      style: {
-        color: COLORS.gold,
-        marginRight: 10,
-        fontSize: 12
-      }
-    }, cat.icon), cat.label), /*#__PURE__*/React.createElement("span", {
-      "aria-hidden": "true",
-      style: {
-        color: COLORS.muted,
-        fontSize: 10,
-        transform: isOpen ? "rotate(180deg)" : "rotate(0)",
-        transition: "transform 0.3s ease",
-        display: "inline-block"
-      }
-    }, "\u25BC")), /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("span", null, cat.label), /*#__PURE__*/React.createElement("svg", { width: 12, height: 12, viewBox: "0 0 12 12", fill: "none", stroke: "currentColor", strokeWidth: 1.2, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", style: { color: COLORS.muted, flexShrink: 0, transition: "transform 0.3s ease", transform: isOpen ? "rotate(180deg)" : "rotate(0)" } }, /*#__PURE__*/React.createElement("path", { d: "M2 4.5l4 4 4-4" }))), /*#__PURE__*/React.createElement("div", {
       id: "mg-cat-" + material.id + "-" + cat.key,
       role: "region",
       "aria-hidden": !isOpen,
@@ -1045,26 +998,11 @@ function MaterialCard({
     }))));
   }), /*#__PURE__*/React.createElement("div", {
     style: {
-      marginTop: 24,
-      textAlign: "center"
+      marginTop: 32
     }
   }, /*#__PURE__*/React.createElement("a", {
     href: TXT.sampleHref,
-    className: "mg-cta",
-    style: {
-      fontFamily: "'Jost',sans-serif",
-      fontSize: 12,
-      fontWeight: 500,
-      color: COLORS.gold,
-      border: `1px solid ${COLORS.gold}`,
-      borderRadius: 2,
-      padding: "10px 24px",
-      textDecoration: "none",
-      letterSpacing: "0.08em",
-      textTransform: "uppercase",
-      display: "inline-block",
-      transition: "background-color 0.3s cubic-bezier(0.25,0.1,0.25,1)"
-    }
+    className: "mg-cta"
   }, "Request Sample"))));
 }
 
@@ -1144,7 +1082,7 @@ function ComparisonTable({
       textAlign: "left",
       padding: "12px 14px",
       color: COLORS.gold,
-      fontWeight: 500,
+      fontWeight: 400,
       fontSize: 12,
       letterSpacing: "0.04em",
       borderBottom: `1px solid ${COLORS.borderGold}`,
@@ -1244,9 +1182,12 @@ function MaterialGuide() {
         .mg-swatch{background:none;border:0;padding:0;color:inherit;font:inherit;}
         .mg-swatch:hover .mg-chip{transform:scale(1.06);}
         .mg-root button:focus-visible,.mg-root a:focus-visible{outline:2px solid ${COLORS.gold};outline-offset:3px;}
-        .mg-card:hover{box-shadow:0 0 20px rgba(183,142,72,0.08) !important;}
-        .mg-explore:hover,.mg-explore:focus-visible{background-color:${COLORS.gold} !important;color:${COLORS.bg} !important;}
-        .mg-cta:hover,.mg-cta:focus-visible{background-color:${COLORS.gold}15 !important;}
+        .mg-eyebrow{display:inline-flex;align-items:center;gap:14px;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;color:${COLORS.gold};}
+        .mg-eyebrow::before{content:'';width:24px;height:1px;background:${COLORS.gold};}
+        .mg-root .mg-explore,.mg-root .mg-link{display:inline-flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:${COLORS.gold};background:none;border:0;border-bottom:1px solid rgba(var(--accent-rgb),0.45);border-radius:0;padding:0 0 4px;cursor:pointer;transition:border-color 0.3s ease,color 0.3s ease;}
+        .mg-root .mg-explore:hover,.mg-root .mg-link:hover{border-bottom-color:${COLORS.gold};color:${COLORS.goldLight};}
+        .mg-root .mg-cta{display:inline-flex;align-items:center;font-family:'Jost',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--on-accent);background:${COLORS.gold};padding:14px 32px;text-decoration:none;transition:background-color 0.3s ease;}
+        .mg-root .mg-cta:hover,.mg-root .mg-cta:focus-visible{background-color:${COLORS.goldLight};}
         .mg-scroll:focus-visible{outline:2px solid ${COLORS.gold};outline-offset:-2px;}
         .mg-root ::-webkit-scrollbar{height:6px;width:6px;}.mg-root ::-webkit-scrollbar-track{background:${COLORS.bg};}.mg-root ::-webkit-scrollbar-thumb{background:${COLORS.borderGold};border-radius:2px;}
       `), /*#__PURE__*/React.createElement("section", {
@@ -1254,49 +1195,44 @@ function MaterialGuide() {
     style: {
       background: COLORS.bg,
       color: COLORS.ivory,
-      padding: isMobile ? "48px 16px" : "80px 40px",
+      padding: isMobile ? "64px 24px" : "96px 60px",
       fontFamily: "'Jost',sans-serif",
-      minHeight: "100svh",
-      maxWidth: 1200,
+      maxWidth: 1280,
       margin: "0 auto"
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      textAlign: "center",
-      marginBottom: isMobile ? 40 : 64
+      marginBottom: isMobile ? 36 : 56
     }
-  }, /*#__PURE__*/React.createElement("h2", {
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "mg-eyebrow",
+    style: { marginBottom: 28 }
+  }, "Lumina PMAG\u2122"), /*#__PURE__*/React.createElement("h2", {
     style: {
       fontFamily: "'Cormorant Garamond',serif",
-      fontSize: isMobile ? 32 : 42,
-      fontWeight: 600,
+      fontSize: isMobile ? 36 : 52,
+      fontWeight: 300,
+      lineHeight: 1.05,
       color: COLORS.ivory,
-      margin: "0 0 12px",
-      letterSpacing: "0.02em"
-    }
-  }, "Material Intelligence"), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontFamily: "'Cormorant Garamond',serif",
-      fontSize: isMobile ? 16 : 19,
-      fontWeight: 400,
-      fontStyle: "italic",
-      color: COLORS.muted,
       margin: "0 0 20px"
     }
-  }, "Lumina PMAG™ for interior architectural surfaces."), /*#__PURE__*/React.createElement("div", {
+  }, "Material Intelligence" ), /*#__PURE__*/React.createElement("p", {
     style: {
-      width: 48,
-      height: 1,
-      background: COLORS.gold,
-      margin: "0 auto"
+      fontFamily: "'Jost',sans-serif",
+      fontSize: 14,
+      lineHeight: 1.85,
+      fontWeight: 300,
+      color: COLORS.muted,
+      margin: 0,
+      maxWidth: 520
     }
-  })), /*#__PURE__*/React.createElement("div", {
+  }, "Lumina PMAG™ for interior architectural surfaces.")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       flexWrap: "wrap",
       gap: 24,
-      justifyContent: "center",
-      marginBottom: 48
+      justifyContent: "flex-start",
+      marginBottom: 32
     }
   }, studioMaterials.map(mat => /*#__PURE__*/React.createElement(MaterialCard, {
     key: mat.id,
@@ -1305,7 +1241,6 @@ function MaterialGuide() {
     onToggle: () => setExpandedMaterial(expandedMaterial === mat.id ? null : mat.id)
   }))), /*#__PURE__*/React.createElement("div", {
     style: {
-      textAlign: "center",
       marginBottom: 32
     }
   }, /*#__PURE__*/React.createElement("button", {
@@ -1313,21 +1248,8 @@ function MaterialGuide() {
     "aria-expanded": compareMode,
     "aria-controls": "mg-compare",
     onClick: () => setCompareMode(!compareMode),
-    style: {
-      fontFamily: "'Jost',sans-serif",
-      fontSize: 12,
-      fontWeight: 500,
-      color: compareMode ? COLORS.bg : COLORS.gold,
-      background: compareMode ? COLORS.gold : "transparent",
-      border: `1px solid ${COLORS.gold}`,
-      borderRadius: 2,
-      padding: "10px 28px",
-      cursor: "pointer",
-      letterSpacing: "0.08em",
-      textTransform: "uppercase",
-      transition: "background-color 0.3s cubic-bezier(0.25,0.1,0.25,1), color 0.3s cubic-bezier(0.25,0.1,0.25,1)"
-    }
-  }, compareMode ? "Close Comparison" : "Compare with Industry Standards")), compareMode && /*#__PURE__*/React.createElement("div", {
+    className: "mg-link"
+  }, compareMode ? "Close Comparison" : "Compare with Industry Standards", /*#__PURE__*/React.createElement("svg", { width: 12, height: 12, viewBox: "0 0 12 12", fill: "none", stroke: "currentColor", strokeWidth: 1.2, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": "true", style: { flexShrink: 0, transition: "transform 0.3s ease", transform: compareMode ? "rotate(180deg)" : "rotate(0)" } }, /*#__PURE__*/React.createElement("path", { d: "M2 4.5l4 4 4-4" })))), compareMode && /*#__PURE__*/React.createElement("div", {
     id: "mg-compare",
     style: {
       background: COLORS.surface,
@@ -1350,7 +1272,7 @@ function MaterialGuide() {
       color: COLORS.muted,
       letterSpacing: "0.08em",
       textTransform: "uppercase",
-      fontWeight: 500
+      fontWeight: 400
     }
   }, "Comparing:"), studioMaterials.map(m => /*#__PURE__*/React.createElement("button", {
     key: m.id,
@@ -1360,7 +1282,7 @@ function MaterialGuide() {
     style: {
       fontFamily: "'Jost',sans-serif",
       fontSize: 12,
-      fontWeight: 500,
+      fontWeight: 400,
       padding: "6px 16px",
       borderRadius: 2,
       cursor: "pointer",
@@ -1384,7 +1306,7 @@ function MaterialGuide() {
       color: COLORS.muted,
       letterSpacing: "0.08em",
       textTransform: "uppercase",
-      fontWeight: 500,
+      fontWeight: 400,
       marginRight: 4
     }
   }, "Against:"), sectorMaterials.map(m => {
@@ -1443,7 +1365,7 @@ function MaterialGuide() {
     style: {
       fontFamily: "'Jost',sans-serif",
       fontSize: 12,
-      fontWeight: 500,
+      fontWeight: 400,
       padding: "10px 20px",
       cursor: "pointer",
       background: "none",
@@ -1495,7 +1417,7 @@ function MaterialGuide() {
     style: {
       fontSize: 12,
       color: COLORS.gold,
-      fontWeight: 500
+      fontWeight: 400
     }
   }, comparedSL.name)), comparedSector.map(m => /*#__PURE__*/React.createElement("div", {
     key: m.id,

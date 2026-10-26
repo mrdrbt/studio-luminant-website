@@ -23,6 +23,10 @@
   --accent-hover: #6E3018;
   --on-accent:    #F6F1E6;   /* text on an accent fill */
   --night:        #1D1A16;   /* ground of night bands */
+  /* filled CTA buttons: one clay fill on both grounds (the night scope flips --accent to salmon) */
+  --cta-bg:       #8E4426;
+  --cta-bg-hover: #6E3018;
+  --cta-fg:       #F6F1E6;
 
   /* ── STATE ACCENTS (darkened for the light ground; all ≥4.5:1 on --bg) ── */
   --accent-error:    #A3402F;
@@ -219,8 +223,13 @@ body {
 }
 .cursor-ring.hover { width: 56px; height: 56px; opacity: 0.6; }
 
-@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+@media (pointer: fine) and (hover: hover) and (prefers-reduced-motion: no-preference) {
   .cursor-dot, .cursor-ring { display: block; }
+  /* parked at 0,0 until the first mousemove: no half-cut ring in the corner */
+  html:not(.cursor-live) .cursor-dot, html:not(.cursor-live) .cursor-ring { visibility: hidden; }
+}
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot, .cursor-ring { display: none !important; }
 }
 
 /* Restore system interactive cursors — never hide the OS pointer */
@@ -271,11 +280,11 @@ nav.scrolled .nav-logo-img { height: 19px; }
 .nav-cta {
   font-family: var(--font-body);
   font-size: 13px; font-weight: 400; letter-spacing: 0.02em;
-  color: var(--obsidian);
-  background: var(--gold); padding: 9px 18px;
+  color: var(--cta-fg);
+  background: var(--cta-bg); padding: 9px 18px;
   text-decoration: none; transition: background 0.3s;
 }
-.nav-cta:hover { background: var(--gold-light); }
+.nav-cta:hover { background: var(--cta-bg-hover); }
 .nav-lang {
   color: rgba(var(--ink-rgb), 0.6); font-size: 13px; letter-spacing: 0.04em;
   text-decoration: none; transition: color 0.3s;
@@ -337,16 +346,16 @@ footer {
   display: inline-flex; align-items: center; gap: 12px;
   font-family: var(--font-body); font-size: 11px; font-weight: 400;
   letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--obsidian); background: var(--gold);
+  color: var(--cta-fg); background: var(--cta-bg);
   padding: 14px 28px; text-decoration: none; transition: background 0.3s;
 }
-.footer-cta-block a:hover { background: var(--gold-light); }
+.footer-cta-block a:hover { background: var(--cta-bg-hover); }
 .footer-cta-block p { font-size: 11px; color: var(--text-muted); margin-top: 14px; font-weight: 300; }
 .footer-bottom {
   display: flex; align-items: center; justify-content: space-between;
   padding-top: 32px; border-top: 1px solid var(--border);
 }
-.footer-copy { font-size: 11px; color: var(--text-muted); font-weight: 300; }
+.footer-copy { font-size: 11px; color: var(--text-muted); font-weight: 300; margin-top: 18px; }
 .footer-legal-entity {
   font-size: 10px; line-height: 1.7; font-weight: 300;
   color: var(--text-muted);
@@ -949,3 +958,23 @@ summary:focus-visible,
 #sample-box-band .product-name em { font-style: italic; color: var(--accent); }
 #sample-box-band .product-desc { font-size: 14px; line-height: 1.85; color: var(--ink-2); font-weight: 300; margin-bottom: 20px; }
 @media (max-width: 1024px) { #sample-box-band .product-content { grid-template-columns: 1fr; gap: 48px; } }
+
+/* ─── TEXT-LINK TAP TARGETS ─────────────
+   Small-caps arrow links (.sys-link .arc-link .p-door__link .faq-link .uds-link).
+   The hit area grows through ::after, so the underline and the page layout stay where they were. */
+a.sys-link, a.arc-link, a.p-door__link, a.faq-link, a.uds-link { position: relative; }
+a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, a.uds-link::after {
+  content: ''; position: absolute; inset: -9px -4px;
+}
+@media (max-width: 900px) {
+  a.sys-link, a.arc-link, a.p-door__link, a.faq-link, a.uds-link { display: inline-block; font-size: 13px; }
+  a.uds-link { display: inline-flex; }
+  a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, a.uds-link::after { inset: -12px -6px; }
+}
+
+/* ─── PHONE BODY COPY ───────────────────
+   300-weight grey on cream is thin on a small screen: heavier weight, darker secondary inks. */
+@media (max-width: 720px) {
+  :root { --ink-2: #2B261F; --ink-muted: #4A4339; --w-body: 400; }
+  html body :is(p, li, dd, dt, figcaption, blockquote) { font-weight: 400 !important; }
+}

@@ -45,21 +45,14 @@
   }
 
 
-  #page-hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(
-      160deg,
-      rgba(var(--bg-rgb),0.88) 0%,
-      rgba(var(--bg-rgb),0.60) 50%,
-      rgba(var(--bg-rgb),0.30) 100%
-    );
-    z-index: 1; pointer-events: none;
-  }
+  /* Solid bone panel carries the text (ink on bg, >=14:1); the photo reads untouched on the right */
+  #page-hero { align-items: stretch; }
   .page-hero-content {
     position: relative; z-index: 2;
+    background: var(--bg);
+    display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start;
+    width: min(780px, 56%);
     padding: 160px 60px 100px;
-    max-width: 800px;
   }
   .page-hero-eyebrow {
     display: inline-flex; align-items: center; gap: 16px;
@@ -91,7 +84,16 @@
 
   /* ─── PRODUCT SECTIONS ──────────────── */
   .product-section { padding: 0 0 100px; }
-  .product-full-img { width: 100%; max-height: 560px; object-fit: cover; display: block; }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--font-body); font-size: 11px; font-weight: 400;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink); background: transparent;
+    padding: 13px 31px; border: 1px solid var(--ink); text-decoration: none;
+    transition: background 0.3s, color 0.3s, gap 0.3s;
+  }
+  .btn-secondary:hover { background: var(--ink); color: var(--bg); gap: 20px; }
+  .btn-secondary svg { width: 14px; height: 14px; }
 
   .product-content {
     display: grid;
@@ -173,11 +175,14 @@
 
   /* ─── RESPONSIVE ────────────────────── */
   @media (max-width: 1024px) {
-    .page-hero-content { padding: 140px 32px 80px; }
+    #page-hero { flex-direction: column; justify-content: flex-end; }
+    .page-hero-content { width: 100%; padding: 56px 32px 64px; margin-top: 38svh; }
     .product-content { grid-template-columns: 1fr; gap: 60px; }
     .product-full-img { max-height: 320px; }
   }
   @media (max-width: 600px) {
+    .page-hero-content { padding: 44px 24px 56px; }
+    .page-hero-headline { font-size: clamp(48px, 14vw, 68px); }
     .specs-grid { grid-template-columns: 1fr; }
     .spec-cell { padding: 20px 24px; }
   }
@@ -209,16 +214,6 @@
 
 <!-- LUMINA PMAG -->
 <section id="pmag" class="product-section" style="background: var(--deep); border-top: 1px solid var(--border);">
-  <picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-flowing-fibre-relief-panel-raking-light-400w.webp 400w,
-                  ../images/studio-luminant-flowing-fibre-relief-panel-raking-light-800w.webp 800w,
-                  ../images/studio-luminant-flowing-fibre-relief-panel-raking-light.webp 1280w"
-                  sizes="100vw">
-              <img src="../images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg"
-                   alt="Relief panel of drifting vertical fibres, close up in raking light" class="product-full-img" width="1280" height="512"
-                   loading="lazy" decoding="async">
-            </picture>
   <div class="section-inner">
     <div class="product-content">
       <!-- Left: name + description -->
@@ -318,8 +313,8 @@
     <div class="product-content" style="padding-top: 90px; align-items: center;">
       <div>
         <picture>
-          <source type="image/webp" srcset="../images/studio-luminant-finish-sample-box-closed-800w.webp 800w, ../images/studio-luminant-finish-sample-box-closed-1600w.webp 1600w" sizes="(max-width: 1024px) 100vw, 50vw">
-          <img src="../images/studio-luminant-finish-sample-box-closed.jpg" alt="Closed black portfolio-style sample box with the Studio Luminant monogram on its cover" width="1600" height="1195" style="display:block; width:100%; height:auto; border:1px solid var(--border);" loading="lazy" decoding="async">
+          <source type="image/webp" srcset="../images/studio-luminant-finish-sample-box-angled-open-800w.webp 800w, ../images/studio-luminant-finish-sample-box-angled-open-1600w.webp 1600w" sizes="(max-width: 1024px) 100vw, 50vw">
+          <img src="../images/studio-luminant-finish-sample-box-angled-open.jpg" alt="The open sample box" width="1600" height="1073" style="display:block; width:100%; height:auto; border:1px solid var(--border);" loading="lazy" decoding="async">
         </picture>
       </div>
       <div>
