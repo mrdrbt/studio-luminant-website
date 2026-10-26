@@ -68,7 +68,21 @@
      "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design01_drawing_en.png",
      "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design01_drawing_en_m.png"
     }
-   }
+   },
+   "rooms": [
+    {
+     "file": "assets/designs/accelerando/room-lobby.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_rooms_v4/accelerando/draws/2026-10-25_x-accelerando-optic-v3e-bench_hero_gpt_1.png",
+     "tr": {
+      "alt": "Render: Accelerando, otel lobisi",
+      "cap": "Render: otel lobisi"
+     },
+     "en": {
+      "alt": "Render: Accelerando, hotel lobby",
+      "cap": "Render: hotel lobby"
+     }
+    }
+   ]
   },
   {
    "slug": "cantilena",
@@ -228,7 +242,45 @@
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
     "drawing_alt": "Depth map of the Glissando panel: the drifting fibres drawn in grey tones"
-   }
+   },
+   "rooms": [
+    {
+     "file": "assets/designs/glissando/room-guestroom.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/glissando_guestroom/r2/draws/2026-10-26_x-glissando-guestroom-w2r2_front40_50mm_gpt_2.png",
+     "tr": {
+      "alt": "Render: Glissando, otel odası",
+      "cap": "Render: otel odası"
+     },
+     "en": {
+      "alt": "Render: Glissando, hotel guest room",
+      "cap": "Render: hotel guest room"
+     }
+    },
+    {
+     "file": "assets/designs/glissando/room-living.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-03_residential_drift_fill/2026-10-03_x-drift-focus-042-bench_hero_fill_gpt_1.png",
+     "tr": {
+      "alt": "Render: Glissando, oturma odası",
+      "cap": "Render: oturma odası"
+     },
+     "en": {
+      "alt": "Render: Glissando, living room",
+      "cap": "Render: living room"
+     }
+    },
+    {
+     "file": "assets/designs/glissando/room-clinic.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-12_aesthetic_clinic_consult/2026-10-12_x-drift-focus-042-bench-r170725_hero_gpt_1.png",
+     "tr": {
+      "alt": "Render: Glissando, klinik",
+      "cap": "Render: klinik"
+     },
+     "en": {
+      "alt": "Render: Glissando, clinic",
+      "cap": "Render: clinic"
+     }
+    }
+   ]
   },
   {
    "slug": "gruppetto",
@@ -271,7 +323,33 @@
      "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design02_drawing_en.png",
      "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design02_drawing_en_m.png"
     }
-   }
+   },
+   "rooms": [
+    {
+     "file": "assets/designs/gruppetto/room-bar.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/gruppetto_bar/draws/2026-10-26_x-gruppetto-bar-w2_s35_gpt_1.png",
+     "tr": {
+      "alt": "Render: Gruppetto, bar",
+      "cap": "Render: bar"
+     },
+     "en": {
+      "alt": "Render: Gruppetto, bar",
+      "cap": "Render: bar"
+     }
+    },
+    {
+     "file": "assets/designs/gruppetto/room-cafe.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-17_bench_insitu_modkits/Crest/cafe_v1/2026-10-17_x-crest-modkit-bench-rmk_hero_gpt_1.png",
+     "tr": {
+      "alt": "Render: Gruppetto, kafe",
+      "cap": "Render: kafe"
+     },
+     "en": {
+      "alt": "Render: Gruppetto, café",
+      "cap": "Render: café"
+     }
+    }
+   ]
   },
   {
    "slug": "hemiola",
@@ -336,7 +414,21 @@
      "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design03_drawing_en.png",
      "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design03_drawing_en_m.png"
     }
-   }
+   },
+   "rooms": [
+    {
+     "file": "assets/designs/hemiola/room-lobby.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-20_skew_insitu/2026-10-20_x-skew-insitu-r183058_r6_lobby_oblique_gpt_2.png",
+     "tr": {
+      "alt": "Render: Hemiola, otel lobisi",
+      "cap": "Render: otel lobisi"
+     },
+     "en": {
+      "alt": "Render: Hemiola, hotel lobby",
+      "cap": "Render: hotel lobby"
+     }
+    }
+   ]
   },
   {
    "slug": "melisma",
@@ -471,7 +563,21 @@
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
     "drawing_alt": "Depth map of the Ricercar panel: the Gothic quatrefoil lattice drawn in grey tones"
-   }
+   },
+   "rooms": [
+    {
+     "file": "assets/designs/ricercar/room-bar.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_rooms_v4/ricercar/2026-10-25_x-ricercar-rooms-v4_ricercar_frontal_gpt_1.png",
+     "tr": {
+      "alt": "Render: Ricercar, bar",
+      "cap": "Render: bar"
+     },
+     "en": {
+      "alt": "Render: Ricercar, bar",
+      "cap": "Render: bar"
+     }
+    }
+   ]
   },
   {
    "slug": "rondeau",
@@ -535,7 +641,33 @@
      "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design05_drawing_en.png",
      "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design05_drawing_en_m.png"
     }
-   }
+   },
+   "rooms": [
+    {
+     "file": "assets/designs/rondeau/room-lobby.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/rondeau_lobby/nothrow/draws/2026-10-26_x-rondeau-lobby-w2_w20_nothrow_gpt_2.png",
+     "tr": {
+      "alt": "Render: Rondeau, otel lobisi",
+      "cap": "Render: otel lobisi"
+     },
+     "en": {
+      "alt": "Render: Rondeau, hotel lobby",
+      "cap": "Render: hotel lobby"
+     }
+    },
+    {
+     "file": "assets/designs/rondeau/room-restaurant.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-20_dish_insitu/D_restaurant/2026-10-20_x-dish-r5-composed-bistro-bench-r014336_hero_gpt_1.png",
+     "tr": {
+      "alt": "Render: Rondeau, restoran",
+      "cap": "Render: restoran"
+     },
+     "en": {
+      "alt": "Render: Rondeau, restaurant",
+      "cap": "Render: restaurant"
+     }
+    }
+   ]
   }
  ],
  "parked": [

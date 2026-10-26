@@ -112,6 +112,7 @@
 .dsg-drawing img { display: block; width: 100%; height: auto; }
 
 .dsg-room { max-width: var(--maxw); margin: 0 auto; box-sizing: border-box; padding: var(--s-10) var(--pad-x) 0; }
+.dsg-room__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: var(--s-6); align-items: start; }
 .dsg-room figure { margin: 0; }
 .dsg-room img { display: block; width: 100%; height: auto; }
 

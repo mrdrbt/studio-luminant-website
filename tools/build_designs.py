@@ -197,15 +197,22 @@ def spec_html(rows, u):
 
 
 def room_html(d, lang, pre):
-    room = d.get("room")
-    if not room:
+    """The design in rooms: rooms[] = {file, source, tr: {alt, cap}, en: {alt, cap}}, the images Burak up-voted."""
+    rooms = d.get("rooms") or ([d["room"]] if d.get("room") else [])
+    if not rooms:
         return ""
-    u, r = UI[lang], d["room"][lang]
-    w, h = Image.open(SITE / room["file"]).size
+    u, figs = UI[lang], []
+    for room in rooms:
+        r = room[lang]
+        w, h = Image.open(SITE / room["file"]).size
+        figs.append(f'    <figure><img src="{pre}{room["file"]}" width="{w}" height="{h}" loading="lazy" alt="{esc(r["alt"])}">'
+                    f'<figcaption>{txt(r["cap"])}</figcaption></figure>')
     return f"""
 <section class="dsg-room reveal">
   <h2 class="dsg-h">{u['room_h']}</h2>
-  <figure><img src="{pre}{room['file']}" width="{w}" height="{h}" loading="lazy" alt="{esc(r['alt'])}"><figcaption>{txt(r['cap'])}</figcaption></figure>
+  <div class="dsg-room__grid">
+{chr(10).join(figs)}
+  </div>
 </section>
 """
 
