@@ -40,7 +40,7 @@ const specCategories = [{
 }, {
   key: "finish",
   label: "İşlem & Tasarım",
-  specs: ["surface", "customDesign", "voc", "acoustic", "antimicrobial"]
+  specs: ["surface", "customDesign", "voc"]
 }, {
   key: "installation",
   label: "Montaj",
@@ -200,18 +200,18 @@ const studioMaterials = [{
     density: "1,400–1,600",
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
     thickness: (_pmag.thickness ? _pmag.thickness.min + '–' + _pmag.thickness.max : "15–40"),
-    moisture: "Moderate — interior dry zones",
-    impact: "Moderate (glass fiber reinforced)",
+    moisture: "Standart alçıya göre neme dayanıklı",
+    impact: "Orta (cam elyaf takviyeli)",
     uv: "—",
     chemical: "—",
     temperature: "—",
     surface: (_pmag.finish ? _pmag.finish.tr : "Tüm RAL / özel renkler — artizan finish, pürüzsüz ya da dokulu"),
-    customDesign: "Parametric design, unlimited patterns",
-    voc: "Low — indoor air quality safe",
-    acoustic: "Optional backed acoustic fleece",
-    antimicrobial: "Optional antimicrobial additive",
-    method: "LuminClip™ concealed rail system",
-    speed: "20–30 sec per panel",
+    customDesign: "Parametrik tasarım, sınırsız desen",
+    voc: "Düşük",
+    acoustic: "—",
+    antimicrobial: "—",
+    method: "LuminClip™ gizli ray sistemi",
+    speed: "Panel başına 20–30 sn",
     leadTime: "Teklifte netleşir"
   },
   radar: {
@@ -226,25 +226,25 @@ const studioMaterials = [{
 }];
 const sectorMaterials = [{
   id: "grg",
-  name: "Standard GRG",
-  fullName: "Glass-fibre Reinforced Gypsum",
+  name: "Standart GRG",
+  fullName: "Cam Elyaf Takviyeli Alçı",
   specs: {
     density: "1,000–1,300",
     weight: "15–25",
     thickness: "10–20",
-    moisture: "Low — interior dry only",
-    impact: "Low–Moderate",
+    moisture: "Düşük — yalnızca kuru iç mekân",
+    impact: "Düşük–Orta",
     uv: "—",
     chemical: "—",
     temperature: "—",
-    surface: "Painted (on-site finishing required)",
-    customDesign: "Limited mold availability, no AI customisation",
+    surface: "Boyalı (şantiyede boya gerekir)",
+    customDesign: "Kalıp seçeneği sınırlı",
     voc: "—",
     acoustic: "—",
     antimicrobial: "—",
-    method: "Adhesive + mechanical fixing",
-    speed: "Skilled labour required",
-    leadTime: "6–10 weeks"
+    method: "Yapıştırıcı + mekanik sabitleme",
+    speed: "Usta işçilik gerekir",
+    leadTime: "6–10 hafta"
   },
   radar: {
     weightAdv: 0.55,
@@ -258,24 +258,24 @@ const sectorMaterials = [{
 }, {
   id: "grc",
   name: "GRC / GFRC",
-  fullName: "Glass-fibre Reinforced Concrete",
+  fullName: "Cam Elyaf Takviyeli Beton",
   specs: {
     density: "1,800–2,200",
     weight: "25–45",
     thickness: "10–25",
-    moisture: "High",
-    impact: "High",
-    uv: "Good",
-    chemical: "Moderate",
-    temperature: "Wide range",
-    surface: "As-cast or painted (limited)",
-    customDesign: "Possible but expensive tooling",
+    moisture: "Yüksek",
+    impact: "Yüksek",
+    uv: "İyi",
+    chemical: "Orta",
+    temperature: "Geniş aralık",
+    surface: "Döküm hâliyle ya da boyalı (sınırlı)",
+    customDesign: "Mümkün, ancak kalıp maliyeti yüksek",
     voc: "—",
     acoustic: "—",
     antimicrobial: "—",
-    method: "Heavy mechanical fixing",
-    speed: "Structural support may be needed",
-    leadTime: "8–14 weeks"
+    method: "Ağır mekanik sabitleme",
+    speed: "Taşıyıcı destek gerekebilir",
+    leadTime: "8–14 hafta"
   },
   radar: {
     weightAdv: 0.2,
@@ -288,25 +288,25 @@ const sectorMaterials = [{
   }
 }, {
   id: "stone",
-  name: "Natural Stone",
-  fullName: "Marble / Limestone Cladding",
+  name: "Doğal Taş",
+  fullName: "Mermer / Kireçtaşı Kaplama",
   specs: {
     density: "2,300–2,800",
     weight: "50–75",
     thickness: "20+",
-    moisture: "Variable (porous unless sealed)",
-    impact: "Brittle — chips and cracks",
-    uv: "Excellent (natural)",
-    chemical: "Sensitive to acids",
-    temperature: "Wide range",
-    surface: "Polished, honed, textured (natural)",
-    customDesign: "Carved only — extreme cost",
-    voc: "None",
+    moisture: "Değişken (yüzey korunmazsa gözenekli)",
+    impact: "Kırılgan — kenar kırığı ve çatlak",
+    uv: "Çok iyi (doğal)",
+    chemical: "Asitlere hassas",
+    temperature: "Geniş aralık",
+    surface: "Cilalı, honlu, dokulu (doğal)",
+    customDesign: "Yalnızca oyma — çok yüksek maliyet",
+    voc: "Yok",
     acoustic: "—",
     antimicrobial: "—",
-    method: "Structural support, skilled stonemason",
-    speed: "Slow, specialist labour",
-    leadTime: "10–20 weeks"
+    method: "Taşıyıcı destek, usta taş işçiliği",
+    speed: "Yavaş, uzman işçilik",
+    leadTime: "10–20 hafta"
   },
   radar: {
     weightAdv: 0.05,
@@ -320,24 +320,24 @@ const sectorMaterials = [{
 }, {
   id: "frp",
   name: "FRP",
-  fullName: "Fibre Reinforced Polymer",
+  fullName: "Elyaf Takviyeli Polimer",
   specs: {
     density: "1,500–2,000",
     weight: "5–15",
     thickness: "3–12",
-    moisture: "Excellent",
-    impact: "High",
-    uv: "Moderate (gel coat dependent)",
-    chemical: "Good",
-    temperature: "Moderate range",
-    surface: "Gel coat or paint (can look plasticky)",
-    customDesign: "Mold-dependent",
+    moisture: "Çok iyi",
+    impact: "Yüksek",
+    uv: "Orta (jelkota bağlı)",
+    chemical: "İyi",
+    temperature: "Orta aralık",
+    surface: "Jelkot ya da boya (plastik görünebilir)",
+    customDesign: "Kalıba bağlı",
     voc: "—",
     acoustic: "—",
     antimicrobial: "—",
-    method: "Adhesive or mechanical",
-    speed: "Moderate",
-    leadTime: "4–8 weeks"
+    method: "Yapıştırıcı ya da mekanik",
+    speed: "Orta",
+    leadTime: "4–8 hafta"
   },
   radar: {
     weightAdv: 0.8,
@@ -350,25 +350,25 @@ const sectorMaterials = [{
   }
 }, {
   id: "mdf",
-  name: "MDF / Timber",
-  fullName: "MDF & Timber Panels",
+  name: "MDF / Ahşap",
+  fullName: "MDF ve Ahşap Paneller",
   specs: {
     density: "600–800",
     weight: "10–18",
     thickness: "6–25",
-    moisture: "Poor — swells, warps",
-    impact: "Moderate",
-    uv: "Poor",
-    chemical: "Poor",
-    temperature: "Interior only",
-    surface: "Veneered, painted, or CNC-carved",
-    customDesign: "CNC possible but depth-limited",
-    voc: "Moderate (formaldehyde risk)",
-    acoustic: "Moderate natural absorption",
+    moisture: "Zayıf — şişer, eğilir",
+    impact: "Orta",
+    uv: "Zayıf",
+    chemical: "Zayıf",
+    temperature: "Yalnızca iç mekân",
+    surface: "Kaplamalı, boyalı ya da CNC ile oyulmuş",
+    customDesign: "CNC ile mümkün, derinlik sınırlı",
+    voc: "Orta (formaldehit riski)",
+    acoustic: "Orta düzeyde doğal ses yutumu",
     antimicrobial: "—",
-    method: "Standard carpentry",
-    speed: "Fast — standard fixings",
-    leadTime: "3–6 weeks"
+    method: "Standart doğrama işçiliği",
+    speed: "Hızlı — standart bağlantılar",
+    leadTime: "3–6 hafta"
   },
   radar: {
     weightAdv: 0.7,
@@ -1065,7 +1065,7 @@ function ComparisonTable({
       zIndex: 2,
       minWidth: 120
     }
-  }, "Specification"), /*#__PURE__*/React.createElement("th", {
+  }, "Özellik"), /*#__PURE__*/React.createElement("th", {
     scope: "col",
     style: {
       textAlign: "left",

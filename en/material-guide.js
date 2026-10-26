@@ -40,7 +40,7 @@ const specCategories = [{
 }, {
   key: "finish",
   label: "Finish & Design",
-  specs: ["surface", "customDesign", "voc", "acoustic", "antimicrobial"]
+  specs: ["surface", "customDesign", "voc"]
 }, {
   key: "installation",
   label: "Installation",
@@ -200,7 +200,7 @@ const studioMaterials = [{
     density: "1,400–1,600",
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
     thickness: (_pmag.thickness ? _pmag.thickness.min + '–' + _pmag.thickness.max : "15–40"),
-    moisture: "Moderate — interior dry zones",
+    moisture: "More moisture resistant than standard gypsum",
     impact: "Moderate (glass fiber reinforced)",
     uv: "—",
     chemical: "—",
@@ -208,8 +208,8 @@ const studioMaterials = [{
     surface: (_pmag.finish ? _pmag.finish.en : "Any RAL / custom colour — artisan finishes, smooth or textured"),
     customDesign: "Parametric design, unlimited patterns",
     voc: "Low — indoor air quality safe",
-    acoustic: "Optional backed acoustic fleece",
-    antimicrobial: "Optional antimicrobial additive",
+    acoustic: "—",
+    antimicrobial: "—",
     method: "LuminClip™ concealed rail system",
     speed: "20–30 sec per panel",
     leadTime: "Confirmed in the quote"
