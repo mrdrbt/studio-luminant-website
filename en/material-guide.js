@@ -44,7 +44,7 @@ const specCategories = [{
 }, {
   key: "installation",
   label: "Installation",
-  specs: ["method", "speed", "leadTime"]
+  specs: ["method", "speed"]
 }];
 const specMeta = {
   density: {
@@ -105,10 +105,6 @@ const specMeta = {
   },
   speed: {
     label: "Installation speed",
-    unit: ""
-  },
-  leadTime: {
-    label: "Lead time",
     unit: ""
   }
 };
@@ -180,9 +176,6 @@ const radarAxes = [{
   key: "installSpeed",
   label: "Install Speed"
 }, {
-  key: "leadTimeAdv",
-  label: "Lead Time"
-}, {
   key: "impactRes",
   label: "Impact"
 }];
@@ -212,7 +205,6 @@ const studioMaterials = [{
     antimicrobial: "—",
     method: "LuminClip™ concealed rail system",
     speed: "20–30 sec per panel",
-    leadTime: "Confirmed in the quote"
   },
   radar: {
     weightAdv: 0.6,
@@ -220,7 +212,6 @@ const studioMaterials = [{
     finishQuality: 0.95,
     designFreedom: 0.95,
     installSpeed: 0.9,
-    leadTimeAdv: 0.8,
     impactRes: 0.5
   }
 }];
@@ -244,7 +235,6 @@ const sectorMaterials = [{
     antimicrobial: "—",
     method: "Adhesive + mechanical fixing",
     speed: "Skilled labour required",
-    leadTime: "6–10 weeks"
   },
   radar: {
     weightAdv: 0.55,
@@ -252,7 +242,6 @@ const sectorMaterials = [{
     finishQuality: 0.35,
     designFreedom: 0.3,
     installSpeed: 0.4,
-    leadTimeAdv: 0.45,
     impactRes: 0.35
   }
 }, {
@@ -275,7 +264,6 @@ const sectorMaterials = [{
     antimicrobial: "—",
     method: "Heavy mechanical fixing",
     speed: "Structural support may be needed",
-    leadTime: "8–14 weeks"
   },
   radar: {
     weightAdv: 0.2,
@@ -283,7 +271,6 @@ const sectorMaterials = [{
     finishQuality: 0.3,
     designFreedom: 0.25,
     installSpeed: 0.2,
-    leadTimeAdv: 0.25,
     impactRes: 0.75
   }
 }, {
@@ -306,7 +293,6 @@ const sectorMaterials = [{
     antimicrobial: "—",
     method: "Structural support, skilled stonemason",
     speed: "Slow, specialist labour",
-    leadTime: "10–20 weeks"
   },
   radar: {
     weightAdv: 0.05,
@@ -314,7 +300,6 @@ const sectorMaterials = [{
     finishQuality: 0.7,
     designFreedom: 0.1,
     installSpeed: 0.1,
-    leadTimeAdv: 0.1,
     impactRes: 0.2
   }
 }, {
@@ -337,7 +322,6 @@ const sectorMaterials = [{
     antimicrobial: "—",
     method: "Adhesive or mechanical",
     speed: "Moderate",
-    leadTime: "4–8 weeks"
   },
   radar: {
     weightAdv: 0.8,
@@ -345,7 +329,6 @@ const sectorMaterials = [{
     finishQuality: 0.25,
     designFreedom: 0.3,
     installSpeed: 0.6,
-    leadTimeAdv: 0.7,
     impactRes: 0.8
   }
 }, {
@@ -368,7 +351,6 @@ const sectorMaterials = [{
     antimicrobial: "—",
     method: "Standard carpentry",
     speed: "Fast — standard fixings",
-    leadTime: "3–6 weeks"
   },
   radar: {
     weightAdv: 0.7,
@@ -376,7 +358,6 @@ const sectorMaterials = [{
     finishQuality: 0.4,
     designFreedom: 0.35,
     installSpeed: 0.8,
-    leadTimeAdv: 0.85,
     impactRes: 0.45
   }
 }];
