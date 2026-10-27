@@ -27,7 +27,9 @@ from PIL import Image
 import asset_versions
 
 SITE = Path(__file__).resolve().parents[1]
-ROOT = SITE.parents[3]  # the SL COWORK umbrella; study sources are given relative to it
+# the SL COWORK umbrella; study sources are given relative to it. Found by its VAULT folder, not a fixed depth: this repo and
+# the site-v3 worktree sit at different depths under it
+ROOT = next((p for p in SITE.parents if (p / "VAULT").is_dir()), SITE.parents[2])
 DOMAIN = "https://studioluminant.com.tr/"
 UI = {
     "tr": {"lib": "Atölye Tasarımları", "index": "tasarimlar.htm", "page": "tasarim-{slug}.htm", "home": "Ana Sayfa",
