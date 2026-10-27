@@ -48,7 +48,12 @@ UI = {
            "idx_h1": "Bizim çizdiğimiz <em>rölyefler.</em>",
            "idx_lede": "Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
            "idx_door": "Duvar sizin çiziminizle başlıyorsa bu Özel Üretim’dir: nasıl çizdiyseniz, öyle dökeriz.",
-           "idx_door_link": "Çiziminizi gönderin", "idx_samples": "Numune kutusunu isteyin"},
+           "idx_door_link": "Çiziminizi gönderin", "idx_samples": "Numune kutusunu isteyin",
+           "share": "Paylaş", "share_page": "tasarim-{slug}-paylas.htm", "share_h": "Bu tasarımı paylaşın",
+           "share_p": "Bağlantı, bu tasarımın sade bir sunum sayfasını açar. İsterseniz proje adını ve hazırlayanı ekleyin.",
+           "share_proj": "Proje adı (isteğe bağlı)", "share_by": "Hazırlayan (isteğe bağlı)", "share_copy": "Bağlantıyı kopyala",
+           "share_copied": "Bağlantı kopyalandı", "share_pdf": "PDF olarak kaydet", "share_close": "Kapat",
+           "shr_proj": "Proje", "shr_by": "Hazırlayan", "shr_credit": "Tasarım ve döküm: Studio Luminant, Sapanca"},
     "en": {"lib": "Studio Designs", "index": "designs.htm", "page": "design-{slug}.htm", "home": "Home",
            "cta": "Request a wall layout", "contact": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
            "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface",
@@ -67,7 +72,12 @@ UI = {
            "idx_h1": "Relief we have <em>drawn.</em>",
            "idx_lede": "See each design on its own page: on the wall and in its drawing. The mould is made for your order, and you approve the master before anything is cast.",
            "idx_door": "If the wall starts from your drawing, that is Bespoke: we cast it the way you drew it.",
-           "idx_door_link": "Send your drawing", "idx_samples": "Request the sample box"},
+           "idx_door_link": "Send your drawing", "idx_samples": "Request the sample box",
+           "share": "Share", "share_page": "design-{slug}-share.htm", "share_h": "Share this design",
+           "share_p": "The link opens a plain presentation page for this design. Add a project name and who prepared it, if you wish.",
+           "share_proj": "Project name (optional)", "share_by": "Prepared by (optional)", "share_copy": "Copy link",
+           "share_copied": "Link copied", "share_pdf": "Save as PDF", "share_close": "Close",
+           "shr_proj": "Project", "shr_by": "Prepared by", "shr_credit": "Design and casting: Studio Luminant, Sapanca, Turkey"},
 }
 SIZES = {"panel": "(orientation: portrait) 90vw, 55vw", "field": "(orientation: portrait) 100vw, 100vw"}
 STUDY_WIDTH = {"wall": 1800, "card": 1400}
@@ -78,6 +88,10 @@ PHONE = "(max-width: 640px)"
 # one square tile per mould (moulds[]: {letter, source, src} or {plain, src}), lettered as the drawing; a design with one
 # mould shows none
 MOULD_WIDTH = 900
+# Share (Paylaş): a design page's panel links to a plain share view of the design (no nav, CTA or price; noindex) that prints to
+# PDF. Piloted on Hemiola, then rolled out to every study design (Burak 2026-10-27); name slugs here to limit it again.
+SHARE_PILOT = set()
+OG_SIZE = (1200, 630)
 
 
 def esc(s):
@@ -145,6 +159,23 @@ def drawing_webp(folder):
 
 def urls(slug):
     return f"tasarim-{slug}.htm", f"en/design-{slug}.htm"
+
+
+def shared(d):
+    return d["kind"] == "study" and (not SHARE_PILOT or d["slug"] in SHARE_PILOT)
+
+
+def og_jpg(folder):
+    """The link preview (1200 x 630 JPG) from the wall study, centre-cropped, never stretched."""
+    dst = folder / "og.jpg"
+    if not dst.exists():
+        im = Image.open(folder / "wall.webp").convert("RGB")
+        w, h = OG_SIZE
+        scale = max(w / im.width, h / im.height)
+        im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
+        left, top = (im.width - w) // 2, (im.height - h) // 2
+        im.crop((left, top, left + w, top + h)).save(dst, quality=85, optimize=True, progressive=True)
+    return dst
 
 
 def head(lang, title, meta, url, tr_url, en_url, og_image, extra, crumbs):
@@ -376,15 +407,18 @@ def study_page(data, d, lang, sizes):
     (sw, sh), (mw, mh) = sizes["drawing"][lang]["d"], sizes["drawing"][lang]["m"]
     extra = f'<link rel="preload" as="image" href="{base}wall.webp" fetchpriority="high">\n'
     spec = spec_html([("material", u["material"]), ("finish", u["finish"]), ("joint", u["joint"])], u)
-    return (head(lang, c["title"], c["meta"], url, tr_url, en_url, f"assets/designs/{d['asset']}/wall.webp", extra,
-                 crumbs_for(lang, c["name"], url))
+    share = shared(d)
+    og = f"assets/designs/{d['asset']}/{'og.jpg' if share else 'wall.webp'}"
+    share_btn = (f'\n      <button type="button" class="sys-link" data-shr-href="{u["share_page"].format(slug=d["slug"])}">'
+                 f'{u["share"]}</button>') if share else ""
+    return (head(lang, c["title"], c["meta"], url, tr_url, en_url, og, extra, crumbs_for(lang, c["name"], url))
             + nav(lang, twin) + f"""<section class="dsg-hero">
   <div class="dsg-hero__copy">
     <a class="sys-back" href="{u['index']}"><span aria-hidden="true">←</span> {u['lib']}</a>
     <h1 class="sys-name">{esc(c['name'])}</h1>
     <p class="sys-lede">{txt(c['story'])}</p>
     <div class="sys-ctas">
-      <a href="{u['contact']}" class="btn-primary">{u['cta']}</a>
+      <a href="{u['contact']}" class="btn-primary">{u['cta']}</a>{share_btn}
     </div>
   </div>
   <figure class="dsg-hero__img">
@@ -423,7 +457,114 @@ def study_page(data, d, lang, sizes):
   </div>
 </section>
 {room_html(d, lang, pre)}{pager_html(data, d, lang)}{door_html(lang)}
-""" + tail(lang))
+{share_dialog_html(lang) if share else ""}""" + tail(lang, f'<script src="{pre}share.js"></script>\n' if share else ""))
+
+
+def share_dialog_html(lang):
+    """The Paylaş panel: optional project name and preparer, then share (where the phone offers it), copy the link or save a PDF."""
+    u = UI[lang]
+    return f"""
+<dialog class="shr-dialog" id="shr-dialog" aria-labelledby="shr-dialog-h">
+  <form method="dialog" class="shr-dialog__form">
+    <h2 class="shr-dialog__h" id="shr-dialog-h">{u['share_h']}</h2>
+    <p>{u['share_p']}</p>
+    <label>{u['share_proj']}<input name="p" maxlength="80" autocomplete="off"></label>
+    <label>{u['share_by']}<input name="by" maxlength="80" autocomplete="organization"></label>
+    <div class="shr-dialog__actions">
+      <button type="button" class="btn-primary" data-shr-send hidden>{u['share']}</button>
+      <button type="button" class="sys-link" data-shr-copy>{u['share_copy']}</button>
+      <button type="button" class="sys-link" data-shr-pdf>{u['share_pdf']}</button>
+    </div>
+    <p class="shr-dialog__status" role="status" aria-live="polite" data-copied="{u['share_copied']}"></p>
+    <button class="shr-dialog__close" value="close" aria-label="{u['share_close']}">×</button>
+  </form>
+</dialog>
+"""
+
+
+def share_page(d, lang, sizes):
+    """The plain share view: the design on the wall, in a room, close up and in its drawing, with an SL credit and nothing
+    else to click. Project name and preparer come from the URL hash (share.js), so they never reach a server log."""
+    c, u = d[lang], UI[lang]
+    pre = "" if lang == "tr" else "../"
+    base = f"{pre}assets/designs/{d['asset']}/"
+    page = u["share_page"].format(slug=d["slug"])
+    url = page if lang == "tr" else f"en/{page}"
+    (ww, wh), (cw, ch) = sizes["wall"], sizes["card"]
+    (sw, sh), (mw, mh) = sizes["drawing"][lang]["d"], sizes["drawing"][lang]["m"]
+    spec = spec_html([("material", u["material"]), ("finish", u["finish"]), ("joint", u["joint"])], u)
+    rooms = "\n".join(
+        f'  <figure class="shr-fig"><img src="{pre}{r["file"]}" width="{w}" height="{h}" alt="{esc(r[lang]["alt"])}">'
+        f'<figcaption>{txt(r[lang]["cap"])}</figcaption></figure>'
+        for r in (d.get("rooms") or []) for w, h in [Image.open(SITE / r["file"]).size])
+    title = f"{c['name']} — {u['lib']} | Studio Luminant"
+    return f"""<!DOCTYPE html>
+<html lang="{lang}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
+<title>{esc(title)}</title>
+<meta name="description" content="{esc(c['meta'])}">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Studio Luminant">
+<meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{esc(c['meta'])}">
+<meta property="og:url" content="{DOMAIN}{url}">
+<meta property="og:image" content="{DOMAIN}assets/designs/{d['asset']}/og.jpg">
+<meta property="og:image:width" content="{OG_SIZE[0]}">
+<meta property="og:image:height" content="{OG_SIZE[1]}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{pre}shared.css">
+<link rel="stylesheet" href="{pre}library.css">
+</head>
+<body class="shr">
+<header class="shr-bar">
+  <a class="shr-logo" href="./"><img src="{pre}images/studio-luminant-logo-ink.svg" alt="Studio Luminant"></a>
+  <button type="button" class="sys-link shr-pdf" data-shr-print>{u['share_pdf']}</button>
+</header>
+<main class="shr-main">
+<section class="shr-head">
+  <dl class="shr-meta" hidden>
+    <div data-shr="p" hidden><dt>{u['shr_proj']}</dt><dd></dd></div>
+    <div data-shr="by" hidden><dt>{u['shr_by']}</dt><dd></dd></div>
+  </dl>
+  <div class="eyebrow">{u['lib']}</div>
+  <h1 class="sys-name">{esc(c['name'])}</h1>
+  <p class="sys-lede">{txt(c['story'])}</p>
+</section>
+<figure class="shr-fig"><img src="{base}wall.webp" width="{ww}" height="{wh}" alt="{esc(c['wall_alt'])}"><figcaption>{txt(c['wall_cap'])}</figcaption></figure>
+{rooms}
+<section class="shr-pair">
+  <figure class="shr-fig"><img src="{base}detail.webp" width="{cw}" height="{ch}" alt="{esc(c['card_alt'])}"><figcaption>{txt(c['card_cap'])}</figcaption></figure>
+  <div>
+    <h2 class="dsg-h">{u['close_h']}</h2>
+    <dl class="sys-spec">
+{spec}
+    </dl>
+  </div>
+</section>
+<section class="shr-drawing">
+  <h2 class="dsg-h">{u['drawing_h']}</h2>
+  <p>{u['drawing_p']}</p>
+  <figure class="shr-fig">
+    <picture>
+      <source media="{PHONE}" srcset="{base}{drawing_file(lang, 'm')}" width="{mw}" height="{mh}">
+      <img src="{base}{drawing_file(lang, 'd')}" width="{sw}" height="{sh}" alt="{esc(c['sketch_alt'])}">
+    </picture>
+    <figcaption>{txt(c['sketch_cap'])}</figcaption>
+  </figure>
+</section>
+<footer class="shr-foot"><span>{u['shr_credit']}</span><a href="{DOMAIN}{urls(d['slug'])[0 if lang == 'tr' else 1]}">studioluminant.com.tr</a></footer>
+</main>
+<script src="{pre}share.js"></script>
+</body>
+</html>
+"""
 
 
 EAGER_CARDS = 3  # the index's first row at desktop width: not lazy, the first one is the LCP image
@@ -754,6 +895,10 @@ def build(library, rebuild_images=False):
                 webp(ROOT / m["src"], out / mould_file(m), MOULD_WIDTH, rebuild_images)
             write(tr_path, study_page(data, d, "tr", sizes), SITE / "sistemler.htm")
             write(en_path, study_page(data, d, "en", sizes), SITE / "en" / "systems.htm")
+            if shared(d):
+                og_jpg(out)
+                write(SITE / UI["tr"]["share_page"].format(slug=d["slug"]), share_page(d, "tr", sizes))
+                write(SITE / "en" / UI["en"]["share_page"].format(slug=d["slug"]), share_page(d, "en", sizes))
     write(SITE / "tasarimlar.htm", index_page(data, "tr"), SITE / "sistemler.htm")
     write(SITE / "en" / "designs.htm", index_page(data, "en"), SITE / "en" / "systems.htm")
     return sync_site(data)
