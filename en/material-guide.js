@@ -238,7 +238,7 @@ const sectorMaterials = [{
     chemical: "—",
     temperature: "—",
     surface: "Painted (on-site finishing required)",
-    customDesign: "Limited mold availability, no AI customisation",
+    customDesign: "Limited mould availability",
     voc: "—",
     acoustic: "—",
     antimicrobial: "—",

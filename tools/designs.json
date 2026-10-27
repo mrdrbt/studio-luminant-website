@@ -16,7 +16,7 @@
     "meta": "Boyutu duvar boyunca kademeli olarak değişen hücrelerden bir alan çizdik. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
     "wall_alt": "Render: Accelerando, duvar çalışması, 1,5 mm derz",
     "wall_cap": "Render: Accelerando, duvar çalışması, 1,5 mm derz.",
-    "card_alt": "Render: Accelerando, karoların 1,5 mm derzle yan yana dizildiği yakın plan",
+    "card_alt": "Render: Accelerando, parçaların 1,5 mm derzle yan yana dizildiği yakın plan",
     "card_cap": "Render: Accelerando, yakın plan, 1,5 mm derz.",
     "sketch_alt": "Çizim: Accelerando kalıpları ve duvardaki dizilişleri",
     "sketch_cap": "Çizim: Accelerando, kalıplar ve diziliş."
@@ -28,7 +28,7 @@
     "meta": "We drew a field of cells whose size grades across the wall. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
     "wall_alt": "Render: Accelerando, wall study, 1.5 mm joint",
     "wall_cap": "Render: Accelerando, wall study, 1.5 mm joint.",
-    "card_alt": "Render: Accelerando, close view of the tiles laid together with a 1.5 mm joint",
+    "card_alt": "Render: Accelerando, close view of the pieces laid together with a 1.5 mm joint",
     "card_cap": "Render: Accelerando, close view, 1.5 mm joint.",
     "sketch_alt": "Drawing: the Accelerando moulds and how they are laid on the wall",
     "sketch_cap": "Drawing: Accelerando, moulds and lay."
@@ -299,7 +299,7 @@
     "meta": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
     "wall_alt": "Render: Gruppetto, duvar çalışması, 1,5 mm derz",
     "wall_cap": "Render: Gruppetto, duvar çalışması, 1,5 mm derz.",
-    "card_alt": "Render: Gruppetto, karoların 1,5 mm derzle yan yana dizildiği yakın plan",
+    "card_alt": "Render: Gruppetto, parçaların 1,5 mm derzle yan yana dizildiği yakın plan",
     "card_cap": "Render: Gruppetto, yakın plan, 1,5 mm derz.",
     "sketch_alt": "Çizim: Gruppetto kalıpları ve duvardaki dizilişleri",
     "sketch_cap": "Çizim: Gruppetto, kalıplar ve diziliş."
@@ -311,7 +311,7 @@
     "meta": "One fan-shaped form, designed by us and laid in long S-curves. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
     "wall_alt": "Render: Gruppetto, wall study, 1.5 mm joint",
     "wall_cap": "Render: Gruppetto, wall study, 1.5 mm joint.",
-    "card_alt": "Render: Gruppetto, close view of the tiles laid together with a 1.5 mm joint",
+    "card_alt": "Render: Gruppetto, close view of the pieces laid together with a 1.5 mm joint",
     "card_cap": "Render: Gruppetto, close view, 1.5 mm joint.",
     "sketch_alt": "Drawing: the Gruppetto moulds and how they are laid on the wall",
     "sketch_cap": "Drawing: Gruppetto, moulds and lay."
@@ -447,7 +447,7 @@
     "meta": "İnce çizgilerden bir labirent kurduk ve onu duvar boyunca tek bir akıntı gibi akıttık. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
     "wall_alt": "Render: Melisma, duvar çalışması, 1,5 mm derz",
     "wall_cap": "Render: Melisma, duvar çalışması, 1,5 mm derz.",
-    "card_alt": "Render: Melisma, karoların 1,5 mm derzle yan yana dizildiği yakın plan",
+    "card_alt": "Render: Melisma, parçaların 1,5 mm derzle yan yana dizildiği yakın plan",
     "card_cap": "Render: Melisma, yakın plan, 1,5 mm derz.",
     "sketch_alt": "Çizim: Melisma kalıpları ve duvardaki dizilişleri",
     "sketch_cap": "Çizim: Melisma, kalıplar ve diziliş."
@@ -459,7 +459,7 @@
     "meta": "A maze of fine lines that we let run the length of the wall as one current. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
     "wall_alt": "Render: Melisma, wall study, 1.5 mm joint",
     "wall_cap": "Render: Melisma, wall study, 1.5 mm joint.",
-    "card_alt": "Render: Melisma, close view of the tiles laid together with a 1.5 mm joint",
+    "card_alt": "Render: Melisma, close view of the pieces laid together with a 1.5 mm joint",
     "card_cap": "Render: Melisma, close view, 1.5 mm joint.",
     "sketch_alt": "Drawing: the Melisma moulds and how they are laid on the wall",
     "sketch_cap": "Drawing: Melisma, moulds and lay."
@@ -597,7 +597,7 @@
     "meta": "Yuvarlak tek bir form çizdik; duvarda bir alan olarak döşeniyor. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
     "wall_alt": "Render: Rondeau, duvar çalışması, 1,5 mm derz",
     "wall_cap": "Render: Rondeau, duvar çalışması, 1,5 mm derz.",
-    "card_alt": "Render: Rondeau, karoların 1,5 mm derzle yan yana dizildiği yakın plan",
+    "card_alt": "Render: Rondeau, parçaların 1,5 mm derzle yan yana dizildiği yakın plan",
     "card_cap": "Render: Rondeau, yakın plan, 1,5 mm derz.",
     "sketch_alt": "Çizim: Rondeau kalıpları ve duvardaki dizilişleri",
     "sketch_cap": "Çizim: Rondeau, kalıplar ve diziliş."
@@ -609,7 +609,7 @@
     "meta": "One round form, drawn once and laid as a field. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
     "wall_alt": "Render: Rondeau, wall study, 1.5 mm joint",
     "wall_cap": "Render: Rondeau, wall study, 1.5 mm joint.",
-    "card_alt": "Render: Rondeau, close view of the tiles laid together with a 1.5 mm joint",
+    "card_alt": "Render: Rondeau, close view of the pieces laid together with a 1.5 mm joint",
     "card_cap": "Render: Rondeau, close view, 1.5 mm joint.",
     "sketch_alt": "Drawing: the Rondeau moulds and how they are laid on the wall",
     "sketch_cap": "Drawing: Rondeau, moulds and lay."

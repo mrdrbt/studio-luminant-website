@@ -128,7 +128,7 @@ function pictureTag(src, alt, sizes, opts) {
   // ─── NAV ───
   const navLinks = lang === 'tr' ? {
     home: { href: '/', alt: 'Studio Luminant' },
-    // Order is the ruling (Özel Üretim first). 20/40 stays out until 15 Dec.
+    // Order is the ruling (Özel Üretim first).
     items: [
       { href: 'surec.htm', text: L.doorBespoke },
       { href: 'tasarimlar.htm', text: L.doorStudio },

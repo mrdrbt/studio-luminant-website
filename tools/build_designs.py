@@ -426,7 +426,10 @@ def study_page(data, d, lang, sizes):
 """ + tail(lang))
 
 
-def card_image(d, lang):
+EAGER_CARDS = 3  # the index's first row at desktop width: not lazy, the first one is the LCP image
+
+
+def card_image(d, lang, pos):
     pre = "" if lang == "tr" else "../"
     if d["kind"] == "relief":
         f = f"assets/relief/{d['asset']}/object.webp"
@@ -437,7 +440,8 @@ def card_image(d, lang):
     w, h = Image.open(SITE / f).size
     z = d.get("card_zoom")  # optional per-card crop-in that trims dark corners of a rotated source photo
     style = f' style="--z:{z[0]};transform-origin:{z[1]}"' if z else ""
-    return f'<img src="{pre}{f}" width="{w}" height="{h}" loading="lazy"{style} alt="{esc(alt)}">'
+    load = 'loading="lazy"' if pos >= EAGER_CARDS else ('fetchpriority="high"' if pos == 0 else 'loading="eager"')
+    return f'<img src="{pre}{f}" width="{w}" height="{h}" {load}{style} alt="{esc(alt)}">'
 
 
 def index_page(data, lang):
@@ -447,11 +451,11 @@ def index_page(data, lang):
     url = tr_url if lang == "tr" else en_url
     twin = f"{pre}{en_url}" if lang == "tr" else f"../{tr_url}"
     cards = []
-    for d in data["designs"]:
+    for pos, d in enumerate(data["designs"]):
         c = d[lang]
         line = c["story"] if d["kind"] == "study" else first_sentence(c["lede"])
         cards.append(f'''    <a class="dsg-card reveal" href="{u['page'].format(slug=d['slug'])}">
-      <span class="dsg-card__img">{card_image(d, lang)}</span>
+      <span class="dsg-card__img">{card_image(d, lang, pos)}</span>
       <span class="dsg-card__name">{esc(c['name'])}</span>
       <span class="dsg-card__line">{nb(txt(line))}</span>
       <span class="dsg-card__more">{u['more']}</span>

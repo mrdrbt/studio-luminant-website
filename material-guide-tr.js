@@ -192,7 +192,7 @@ var _F = _S.fmt || {};
 const studioMaterials = [{
   id: "pmag",
   name: "Lumina PMAG™",
-  fullName: "Polymer Modified Composite Gypsum",
+  fullName: "Polimer Modifiye Kompozit Alçı",
   tagline: "Yüksek spesifikasyonlu iç mekânlar için mimari rölyef panelleri",
   domain: "İç Mekân",
   application: "Öne çıkan duvarlar, tavan elemanları, kolon kaplamaları, banko ve tezgâh önleri, vurgu yüzeyleri, resepsiyon alanları, koridor vurgu duvarları",

@@ -990,27 +990,27 @@
       }
     }
   },
-  "studio-luminant-bordone-relief-wall-column-counter-cornice.jpg": {
+  "studio-luminant-relief-wall-column-counter-cornice.jpg": {
     "original": {
-      "file": "studio-luminant-bordone-relief-wall-column-counter-cornice.jpg",
+      "file": "studio-luminant-relief-wall-column-counter-cornice.jpg",
       "w": 2272,
       "h": 1888,
       "size": 107471
     },
-    "webp": "studio-luminant-bordone-relief-wall-column-counter-cornice.webp",
+    "webp": "studio-luminant-relief-wall-column-counter-cornice.webp",
     "variants": {
       "400": {
-        "file": "studio-luminant-bordone-relief-wall-column-counter-cornice-400w.webp",
+        "file": "studio-luminant-relief-wall-column-counter-cornice-400w.webp",
         "w": 400,
         "h": 332
       },
       "800": {
-        "file": "studio-luminant-bordone-relief-wall-column-counter-cornice-800w.webp",
+        "file": "studio-luminant-relief-wall-column-counter-cornice-800w.webp",
         "w": 800,
         "h": 665
       },
       "1600": {
-        "file": "studio-luminant-bordone-relief-wall-column-counter-cornice-1600w.webp",
+        "file": "studio-luminant-relief-wall-column-counter-cornice-1600w.webp",
         "w": 1600,
         "h": 1330
       }
