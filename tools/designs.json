@@ -81,6 +81,30 @@
       "alt": "Render: Accelerando, hotel lobby",
       "cap": "Render: hotel lobby"
      }
+    },
+    {
+     "file": "assets/designs/accelerando/room-bar.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/accelerando_bar/draws/2026-10-26_x-accelerando-bar-w2_frontal_gpt_2.png",
+     "tr": {
+      "alt": "Render: Accelerando, bar",
+      "cap": "Render: bar"
+     },
+     "en": {
+      "alt": "Render: Accelerando, bar",
+      "cap": "Render: bar"
+     }
+    },
+    {
+     "file": "assets/designs/accelerando/room-restaurant.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave1/accelerando_restaurant/draws/2026-10-26_x-optic-restaurant-w1_wall34_gpt_1.png",
+     "tr": {
+      "alt": "Render: Accelerando, restoran",
+      "cap": "Render: restoran"
+     },
+     "en": {
+      "alt": "Render: Accelerando, restaurant",
+      "cap": "Render: restaurant"
+     }
     }
    ]
   },
@@ -281,6 +305,18 @@
       "alt": "Render: Glissando, clinic",
       "cap": "Render: clinic"
      }
+    },
+    {
+     "file": "assets/designs/glissando/room-spa.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/glissando_spa/r2/draws/2026-10-26_x-glissando-spa-w2r2_w24_50mm_gpt_2.png",
+     "tr": {
+      "alt": "Render: Glissando, spa",
+      "cap": "Render: spa"
+     },
+     "en": {
+      "alt": "Render: Glissando, spa",
+      "cap": "Render: spa"
+     }
     }
    ]
   },
@@ -429,6 +465,18 @@
       "alt": "Render: Hemiola, lobby lounge",
       "cap": "Render: lobby lounge"
      }
+    },
+    {
+     "file": "assets/designs/hemiola/room-diningbar.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/hemiola_diningbar/r2/draws/2026-10-26_x-hemiola-diningbar-w2r2_r4_gpt_2.png",
+     "tr": {
+      "alt": "Render: Hemiola, yemek alanı ve bar",
+      "cap": "Render: yemek alanı ve bar"
+     },
+     "en": {
+      "alt": "Render: Hemiola, dining and bar",
+      "cap": "Render: dining and bar"
+     }
     }
    ]
   },
@@ -485,7 +533,57 @@
      "d": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design04_drawing_en.png",
      "m": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-25_design04_drawing_en_m.png"
     }
-   }
+   },
+   "rooms": [
+    {
+     "file": "assets/designs/melisma/room-lobby.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave1/melisma_lobby/r2/draws/2026-10-26_x-rotor-lobby-w1_hero_r2_gpt_2.png",
+     "tr": {
+      "alt": "Render: Melisma, otel lobisi",
+      "cap": "Render: otel lobisi"
+     },
+     "en": {
+      "alt": "Render: Melisma, hotel lobby",
+      "cap": "Render: hotel lobby"
+     }
+    },
+    {
+     "file": "assets/designs/melisma/room-living.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/melisma_living/draws/2026-10-26_x-melisma-living-w2_wall25_gpt_1.png",
+     "tr": {
+      "alt": "Render: Melisma, oturma odası",
+      "cap": "Render: oturma odası"
+     },
+     "en": {
+      "alt": "Render: Melisma, living room",
+      "cap": "Render: living room"
+     }
+    },
+    {
+     "file": "assets/designs/melisma/room-restaurant.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave1/melisma_restaurant/draws/2026-10-26_x-rotor-restaurant-w1_wall34_gpt_2.png",
+     "tr": {
+      "alt": "Render: Melisma, restoran",
+      "cap": "Render: restoran"
+     },
+     "en": {
+      "alt": "Render: Melisma, restaurant",
+      "cap": "Render: restaurant"
+     }
+    },
+    {
+     "file": "assets/designs/melisma/room-spa.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/melisma_spa/draws/2026-10-26_x-melisma-spa-w2_hero_gpt_1.png",
+     "tr": {
+      "alt": "Render: Melisma, spa",
+      "cap": "Render: spa"
+     },
+     "en": {
+      "alt": "Render: Melisma, spa",
+      "cap": "Render: spa"
+     }
+    }
+   ]
   },
   {
    "card_zoom": [1.3, "70% 30%"],
@@ -579,6 +677,30 @@
       "alt": "Render: Ricercar, bar",
       "cap": "Render: bar"
      }
+    },
+    {
+     "file": "assets/designs/ricercar/room-lobby.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/ricercar_lobby/draws/2026-10-26_x-ricercar-lobby-w2_front35_gpt_1.png",
+     "tr": {
+      "alt": "Render: Ricercar, otel lobisi",
+      "cap": "Render: otel lobisi"
+     },
+     "en": {
+      "alt": "Render: Ricercar, hotel lobby",
+      "cap": "Render: hotel lobby"
+     }
+    },
+    {
+     "file": "assets/designs/ricercar/room-restaurant.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/ricercar_restaurant/draws/2026-10-26_x-ricercar-restaurant-w2_frontal_gpt_2.png",
+     "tr": {
+      "alt": "Render: Ricercar, restoran",
+      "cap": "Render: restoran"
+     },
+     "en": {
+      "alt": "Render: Ricercar, restaurant",
+      "cap": "Render: restaurant"
+     }
     }
    ]
   },
@@ -668,6 +790,18 @@
      "en": {
       "alt": "Render: Rondeau, restaurant",
       "cap": "Render: restaurant"
+     }
+    },
+    {
+     "file": "assets/designs/rondeau/room-cafe.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/rondeau_cafe/draws/2026-10-26_x-rondeau-cafe-w2_k1_gpt_2.png",
+     "tr": {
+      "alt": "Render: Rondeau, kahvehane",
+      "cap": "Render: kahvehane"
+     },
+     "en": {
+      "alt": "Render: Rondeau, coffee house",
+      "cap": "Render: coffee house"
      }
     }
    ]
