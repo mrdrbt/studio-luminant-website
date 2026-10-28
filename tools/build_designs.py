@@ -91,9 +91,16 @@ PHONE = "(max-width: 640px)"
 # mould shows none
 MOULD_WIDTH = 900
 # Share (Paylaş): a design page's panel links to a plain share view of the design (no nav, CTA or price; noindex) that prints to
-# PDF. Piloted on Hemiola, then rolled out to every study design (Burak 2026-10-27); name slugs here to limit it again.
+# PDF. Piloted on Hemiola, then rolled out to every study design (Burak 2026-10-27) and the relief designs (2026-10-29);
+# name slugs here to limit it again.
 SHARE_PILOT = set()
 OG_SIZE = (1200, 630)
+# self-hosted fonts (fonts/, @font-face in shared.css): preload the two latin faces, never the Google Fonts stylesheet
+FONT_FILES = ("cormorant-garamond-normal-latin.woff2", "jost-normal-latin.woff2")
+
+
+def fonts(pre):
+    return "".join(f'<link rel="preload" href="{pre}fonts/{f}" as="font" type="font/woff2" crossorigin>\n' for f in FONT_FILES)
 
 
 def esc(s):
@@ -164,14 +171,14 @@ def urls(slug):
 
 
 def shared(d):
-    return d["kind"] == "study" and (not SHARE_PILOT or d["slug"] in SHARE_PILOT)
+    return not SHARE_PILOT or d["slug"] in SHARE_PILOT
 
 
-def og_jpg(folder):
-    """The link preview (1200 x 630 JPG) from the wall study, centre-cropped, never stretched."""
+def og_jpg(folder, src="wall.webp"):
+    """The link preview (1200 x 630 JPG) from the wall study (a relief: its poster), centre-cropped, never stretched."""
     dst = folder / "og.jpg"
     if not dst.exists():
-        im = Image.open(folder / "wall.webp").convert("RGB")
+        im = Image.open(folder / src).convert("RGB")
         w, h = OG_SIZE
         scale = max(w / im.width, h / im.height)
         im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
@@ -200,10 +207,7 @@ def head(lang, title, meta, url, tr_url, en_url, og_image, extra, crumbs):
 <meta property="og:url" content="{DOMAIN}{url}">
 <meta property="og:image" content="{DOMAIN}{og_image}">
 <meta name="twitter:card" content="summary_large_image">
-{extra}<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{pre}shared.css">
+{extra}{fonts(pre)}<link rel="stylesheet" href="{pre}shared.css">
 <link rel="stylesheet" href="{pre}library.css">
 <script type="application/ld+json">
 {json.dumps(crumbs, ensure_ascii=False)}
@@ -329,15 +333,20 @@ def relief_page(data, d, lang, figs):
     sections = "\n".join(
         f'    <div class="sys-read__block"><h2>{txt(sec["h"])}</h2>\n' + "\n".join(f'      <p>{txt(p)}</p>' for p in sec["p"]) + '\n    </div>'
         for sec in c["sections"])
-    return (head(lang, c["title"], c.get("meta", c["lede"]), url, tr_url, en_url,
-                 f"assets/relief/{d['asset']}/poster-1680.jpg", extra, crumbs_for(lang, c["name"], url))
+    share = shared(d)
+    og = f"assets/relief/{d['asset']}/{'og.jpg' if share else 'poster-1680.jpg'}"
+    share_btn = (f'\n      <button type="button" class="sys-link" data-shr-href="{u["share_page"].format(slug=d["slug"])}">'
+                 f'{u["share"]}</button>') if share else ""
+    scripts = ((PHONE_POSTER if d.get("poster_on_phone") else "") + f'<script src="{pre}relief-light.js" defer></script>\n'
+               + (f'<script src="{pre}share.js"></script>\n' if share else ""))
+    return (head(lang, c["title"], c.get("meta", c["lede"]), url, tr_url, en_url, og, extra, crumbs_for(lang, c["name"], url))
             + nav(lang, twin) + f"""<section class="sys-hero{' sys-hero--field' if field else ''} relief-light" data-relief-light="{rel}" data-input="auto">
   <div class="sys-hero__copy">
     <a class="sys-back" href="{u['index']}"><span aria-hidden="true">←</span> {u['lib']}</a>
     <h1 class="sys-name">{esc(c['name'])}</h1>
     <p class="sys-lede">{nb(txt(c['lede']))}</p>
     <div class="sys-ctas">
-      <a href="{u['contact']}" class="btn-primary">{u['cta']}</a>
+      <a href="{u['contact']}" class="btn-primary">{u['cta']}</a>{share_btn}
     </div>
   </div>
   <div class="sys-hero__stage">
@@ -361,7 +370,7 @@ def relief_page(data, d, lang, figs):
   </div>
 </section>
 {room_html(d, lang, pre)}{pager_html(data, d, lang)}{door_html(lang)}
-""" + tail(lang, (PHONE_POSTER if d.get("poster_on_phone") else "") + f'<script src="{pre}relief-light.js" defer></script>\n'))
+{share_dialog_html(lang) if share else ""}""" + tail(lang, scripts))
 
 
 def mould_file(m):
@@ -484,22 +493,15 @@ def share_dialog_html(lang):
 """
 
 
-def share_page(d, lang, sizes):
-    """The plain share view: the design on the wall, in a room, close up and in its drawing, with an SL credit and nothing
-    else to click. Project name and preparer come from the URL hash (share.js), so they never reach a server log."""
+def share_shell(d, lang, og_image, body, scripts=""):
+    """The plain share view's frame: noindex head, logo + PDF button, the optional project / preparer line, the SL credit.
+    Project name and preparer come from the URL hash (share.js), so they never reach a server log."""
     c, u = d[lang], UI[lang]
     pre = "" if lang == "tr" else "../"
-    base = f"{pre}assets/designs/{d['asset']}/"
     page = u["share_page"].format(slug=d["slug"])
     url = page if lang == "tr" else f"en/{page}"
-    (ww, wh), (cw, ch) = sizes["wall"], sizes["card"]
-    (sw, sh), (mw, mh) = sizes["drawing"][lang]["d"], sizes["drawing"][lang]["m"]
-    spec = spec_html([("material", u["material"]), ("finish", u["finish"]), ("joint", u["joint"])], u)
-    rooms = "\n".join(
-        f'  <figure class="shr-fig"><img src="{pre}{r["file"]}" width="{w}" height="{h}" alt="{esc(r[lang]["alt"])}">'
-        f'<figcaption>{txt(r[lang]["cap"])}</figcaption></figure>'
-        for r in (d.get("rooms") or []) for w, h in [Image.open(SITE / r["file"]).size])
     title = f"{c['name']} — {u['lib']} | Studio Luminant"
+    lede = c["story"] if d["kind"] == "study" else c["lede"]
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -514,14 +516,11 @@ def share_page(d, lang, sizes):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(c['meta'])}">
 <meta property="og:url" content="{DOMAIN}{url}">
-<meta property="og:image" content="{DOMAIN}assets/designs/{d['asset']}/og.jpg">
+<meta property="og:image" content="{DOMAIN}{og_image}">
 <meta property="og:image:width" content="{OG_SIZE[0]}">
 <meta property="og:image:height" content="{OG_SIZE[1]}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{pre}shared.css">
+{fonts(pre)}<link rel="stylesheet" href="{pre}shared.css">
 <link rel="stylesheet" href="{pre}library.css">
 </head>
 <body class="shr">
@@ -537,11 +536,33 @@ def share_page(d, lang, sizes):
   </dl>
   <div class="eyebrow">{u['lib']}</div>
   <h1 class="sys-name">{esc(c['name'])}</h1>
-  <p class="sys-lede">{txt(c['story'])}</p>
+  <p class="sys-lede">{txt(lede)}</p>
 </section>
-<figure class="shr-fig"><img src="{base}wall.webp" width="{ww}" height="{wh}" alt="{esc(c['wall_alt'])}"><figcaption>{txt(c['wall_cap'])}</figcaption></figure>
-{rooms}
-<section class="shr-pair">
+{body}<footer class="shr-foot"><span>{u['shr_credit']}</span><a href="{DOMAIN}{urls(d['slug'])[0 if lang == 'tr' else 1]}">studioluminant.com.tr</a></footer>
+</main>
+{scripts}<script src="{pre}share.js"></script>
+</body>
+</html>
+"""
+
+
+def share_rooms(d, lang, pre):
+    return "".join(
+        f'  <figure class="shr-fig"><img src="{pre}{r["file"]}" width="{w}" height="{h}" alt="{esc(r[lang]["alt"])}">'
+        f'<figcaption>{txt(r[lang]["cap"])}</figcaption></figure>\n'
+        for r in (d.get("rooms") or []) for w, h in [Image.open(SITE / r["file"]).size])
+
+
+def share_page(d, lang, sizes):
+    """A study design's share view: the design on the wall, in a room, close up and in its drawing."""
+    c, u = d[lang], UI[lang]
+    pre = "" if lang == "tr" else "../"
+    base = f"{pre}assets/designs/{d['asset']}/"
+    (ww, wh), (cw, ch) = sizes["wall"], sizes["card"]
+    (sw, sh), (mw, mh) = sizes["drawing"][lang]["d"], sizes["drawing"][lang]["m"]
+    spec = spec_html([("material", u["material"]), ("finish", u["finish"]), ("joint", u["joint"])], u)
+    body = f"""<figure class="shr-fig"><img src="{base}wall.webp" width="{ww}" height="{wh}" alt="{esc(c['wall_alt'])}"><figcaption>{txt(c['wall_cap'])}</figcaption></figure>
+{share_rooms(d, lang, pre)}<section class="shr-pair">
   <figure class="shr-fig"><img src="{base}detail.webp" width="{cw}" height="{ch}" alt="{esc(c['card_alt'])}"><figcaption>{txt(c['card_cap'])}</figcaption></figure>
   <div>
     <h2 class="dsg-h">{u['close_h']}</h2>
@@ -561,12 +582,46 @@ def share_page(d, lang, sizes):
     <figcaption>{txt(c['sketch_cap'])}</figcaption>
   </figure>
 </section>
-<footer class="shr-foot"><span>{u['shr_credit']}</span><a href="{DOMAIN}{urls(d['slug'])[0 if lang == 'tr' else 1]}">studioluminant.com.tr</a></footer>
-</main>
-<script src="{pre}share.js"></script>
-</body>
-</html>
 """
+    return share_shell(d, lang, f"assets/designs/{d['asset']}/og.jpg", body)
+
+
+def relief_share_page(d, lang, figs):
+    """A relief design's share view: the relief under its live raking light (relief-light.js; the poster prints), in a
+    room, the Library render with the spec, the wall strip and the drawing (depth map)."""
+    c, u = d[lang], UI[lang]
+    pre = "" if lang == "tr" else "../"
+    rel = f"{pre}assets/relief/{d['asset']}/"
+    man = json.loads((SITE / "assets" / "relief" / d["asset"] / "manifest.json").read_text(encoding="utf-8"))
+    pw, ph = man["poster"]
+    field = " shr-relief--field" if d["layout"] == "field" else ""
+    spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
+                      ("material", u["material"]), ("finish", u["finish"])], u)
+    ow, oh = figs["object"]
+    strip = ""
+    if "strip" in figs and c["strip_alt"]:
+        tw, th = figs["strip"]
+        strip = (f'<figure class="shr-fig"><img src="{rel}strip.webp" width="{tw}" height="{th}" alt="{esc(c["strip_alt"])}">'
+                 f'<figcaption>{u["strip_cap"]}</figcaption></figure>\n')
+    dw, dh = drawing_webp(SITE / "assets" / "relief" / d["asset"])
+    body = f"""<figure class="shr-fig shr-relief{field}"><div class="relief-light" data-relief-light="{rel}" data-input="auto">
+  <img class="relief-light__poster" src="{rel}poster-1680.jpg" srcset="{rel}poster-840.jpg {pw // 2}w, {rel}poster-1680.jpg {pw}w" sizes="{SIZES[d['layout']]}" width="{pw}" height="{ph}" alt="{esc(c['alt'])}">
+</div></figure>
+{share_rooms(d, lang, pre)}<section class="shr-pair shr-pair--relief">
+  <figure class="shr-fig"><img src="{rel}object.webp" width="{ow}" height="{oh}" alt="{esc(c['object_alt'])}"><figcaption>{u['obj_cap']}</figcaption></figure>
+  <div>
+    <dl class="sys-spec">
+{spec}
+    </dl>
+  </div>
+</section>
+{strip}<section class="shr-drawing">
+  <h2 class="dsg-h">{u['drawing_h']}</h2>
+  <figure class="shr-fig shr-depth"><img src="{rel}drawing.webp" width="{dw}" height="{dh}" alt="{esc(c['drawing_alt'])}"><figcaption>{c['drawing_cap']}. {txt(c['drawing_note'])}</figcaption></figure>
+</section>
+"""
+    scripts = (PHONE_POSTER if d.get("poster_on_phone") else "") + f'<script src="{pre}relief-light.js" defer></script>\n'
+    return share_shell(d, lang, f"assets/relief/{d['asset']}/og.jpg", body, scripts)
 
 
 EAGER_CARDS = 3  # the index's first row at desktop width: not lazy, the first one is the LCP image
@@ -888,6 +943,10 @@ def build(library, rebuild_images=False):
                 figs["strip"] = webp(lib / "wall_strip.png", out / "strip.webp", 1600)
             for lang, path, old in (("tr", tr_path, tr_old), ("en", en_path, en_old)):
                 write(path, relief_page(data, d, lang, figs), old)
+            if shared(d):
+                og_jpg(out, "poster-1680.jpg")
+                write(SITE / UI["tr"]["share_page"].format(slug=d["slug"]), relief_share_page(d, "tr", figs))
+                write(SITE / "en" / UI["en"]["share_page"].format(slug=d["slug"]), relief_share_page(d, "en", figs))
         else:
             out = SITE / "assets" / "designs" / d["asset"]
             sizes = {k: webp(ROOT / d["src"][k], out / STUDY_FILE[k], STUDY_WIDTH[k], rebuild_images) for k in STUDY_FILE}
