@@ -19,6 +19,10 @@
  * Never runs under prefers-reduced-motion or without WebGL2 (the poster stays). Sleeps when settled,
  * off-screen or in a hidden tab. Exposes window.ReliefLight.mount(el) and el.reliefLight (state, for QA);
  * el.reliefLight.hold(true) also sleeps it while a page hides it some other way (a crossfaded layer).
+ * Deferred start (2026-10-28, mobile PageSpeed): init() mounts nothing at load. On touch screens the light
+ * only moves on scroll and the first frame is the poster's own light, so it starts on the first scroll or
+ * touch; on a fine pointer it starts on the first pointer move, or once the page has loaded and gone idle.
+ * The shader compiles off the main thread where KHR_parallel_shader_compile exists. mount(el) is immediate.
  */
 (function () {
   'use strict';
@@ -122,25 +126,41 @@
     return tex;
   }
 
+  // Resolves {p, U}. Reading LINK_STATUS blocks the main thread until the driver has compiled, so with
+  // KHR_parallel_shader_compile it polls COMPLETION_STATUS_KHR on a short timer (not rAF, which stops in a
+  // background page) and reads the status only then.
   function program(gl) {
+    var ext = gl.getExtension('KHR_parallel_shader_compile');
     function sh(type, src) {
       var s = gl.createShader(type);
       gl.shaderSource(s, src);
       gl.compileShader(s);
-      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
       return s;
     }
+    var vs = sh(gl.VERTEX_SHADER, VS), fs = sh(gl.FRAGMENT_SHADER, FS);
     var p = gl.createProgram();
-    gl.attachShader(p, sh(gl.VERTEX_SHADER, VS));
-    gl.attachShader(p, sh(gl.FRAGMENT_SHADER, FS));
+    gl.attachShader(p, vs);
+    gl.attachShader(p, fs);
     gl.linkProgram(p);
-    if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p));
-    var U = {}, n = gl.getProgramParameter(p, gl.ACTIVE_UNIFORMS);
-    for (var i = 0; i < n; i++) {
-      var name = gl.getActiveUniform(p, i).name;
-      U[name] = gl.getUniformLocation(p, name);
+    function finish() {
+      if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
+        throw new Error(gl.getShaderInfoLog(vs) || gl.getShaderInfoLog(fs) || gl.getProgramInfoLog(p));
+      }
+      var U = {}, n = gl.getProgramParameter(p, gl.ACTIVE_UNIFORMS);
+      for (var i = 0; i < n; i++) {
+        var name = gl.getActiveUniform(p, i).name;
+        U[name] = gl.getUniformLocation(p, name);
+      }
+      return { p: p, U: U };
     }
-    return { p: p, U: U };
+    if (!ext) return Promise.resolve().then(finish);
+    return new Promise(function (resolve, reject) {
+      (function poll() {
+        if (gl.isContextLost()) { reject(new Error('relief-light: context lost while compiling')); return; }
+        if (!gl.getProgramParameter(p, ext.COMPLETION_STATUS_KHR)) { setTimeout(poll, 16); return; }
+        try { resolve(finish()); } catch (err) { reject(err); }
+      })();
+    });
   }
 
   function mount(el) {
@@ -325,6 +345,7 @@
       canvas.classList.remove('is-on');   // fall back to the poster
     });
 
+    var compiled = program(gl);                   // compiles while the manifest and textures download
     fetch(base + 'manifest.json')
       .then(function (r) { if (!r.ok) throw new Error('relief-light: manifest ' + r.status); return r.json(); })
       .then(function (m) {
@@ -345,7 +366,9 @@
         return Promise.all([loadImage(base + m.textures[pick].normal), loadImage(base + m.textures[pick].height)]);
       })
       .then(function (imgs) {
-        prog = program(gl);
+        return compiled.then(function (p) { prog = p; return imgs; });
+      })
+      .then(function (imgs) {
         gl.bindVertexArray(gl.createVertexArray());
         texture(gl, imgs[0], 0, true, M.layout === 'field');
         texture(gl, imgs[1], 1, false, M.layout === 'field');
@@ -377,7 +400,21 @@
 
   function init() {
     var els = document.querySelectorAll('[data-relief-light]');
-    for (var i = 0; i < els.length; i++) mount(els[i]);
+    if (!els.length || REDUCED) return;
+    var started = false;
+    var events = FINE ? ['pointermove', 'pointerdown', 'scroll', 'keydown'] : ['scroll', 'touchstart', 'pointerdown', 'keydown'];
+    function start() {
+      if (started) return;
+      started = true;
+      events.forEach(function (ev) { window.removeEventListener(ev, start, { passive: true }); });
+      for (var i = 0; i < els.length; i++) mount(els[i]);
+    }
+    events.forEach(function (ev) { window.addEventListener(ev, start, { passive: true }); });
+    if (FINE) {
+      var idle = function () { (window.requestIdleCallback || function (f) { setTimeout(f, 200); })(start, { timeout: 2000 }); };
+      if (document.readyState === 'complete') idle();
+      else window.addEventListener('load', idle);
+    }
   }
 
   window.ReliefLight = { mount: mount, init: init };
