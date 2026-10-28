@@ -72,7 +72,7 @@
    "rooms": [
     {
      "file": "assets/designs/accelerando/room-lobby.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_rooms_v4/accelerando/draws/2026-10-25_x-accelerando-optic-v3e-bench_hero_gpt_1.png",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_rooms_v4/accelerando/draws/2026-10-25_x-accelerando-optic-v3e-bench_hero_r2_gpt_2.png",
      "tr": {
       "alt": "Render: Accelerando, otel lobisi",
       "cap": "Render: otel lobisi"
@@ -700,6 +700,18 @@
      "en": {
       "alt": "Render: Ricercar, restaurant",
       "cap": "Render: restaurant"
+     }
+    },
+    {
+     "file": "assets/designs/ricercar/room-cafe.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-23_insitu_vignettes/2026-10-23_ricercar-031_banquette_limestone_PICK_d1.png",
+     "tr": {
+      "alt": "Render: Ricercar, kafe",
+      "cap": "Render: kafe"
+     },
+     "en": {
+      "alt": "Render: Ricercar, café",
+      "cap": "Render: café"
      }
     }
    ]
