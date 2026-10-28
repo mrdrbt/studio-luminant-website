@@ -43,7 +43,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.facebook.com; connect-src 'self' https://mjmeqgljpyenuqorarte.supabase.co https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net; frame-src 'none'; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'"
+    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.facebook.com; connect-src 'self' https://mjmeqgljpyenuqorarte.supabase.co https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net; frame-src 'none'; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'"
 
 # Long cache for images (1 year, immutable content-hashed filenames)
 [[headers]]
@@ -51,16 +51,23 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache CSS/JS for 1 week (content changes with deploys)
+# Cache CSS/JS for 1 year: every local include carries ?v=<content hash> (tools/asset_versions.py,
+# enforced by the pre-push hook), so a changed file is a new URL
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Self-hosted fonts (fonts/*.woff2, 2026-10-28): rename the file if a font ever changes
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 # Public launch PDF, «Çizimden Duvara» / From Drawing to Wall (DEC-05, WB-15): served with noindex.
 # Files: /pdf/SL_Cizimden-Duvara_2026-10_TR.pdf and /pdf/SL_From-Drawing-to-Wall_2026-10_EN.pdf (P-07).
