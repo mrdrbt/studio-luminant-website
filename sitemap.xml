@@ -517,4 +517,58 @@
     <priority>0.7</priority>
     <lastmod>2026-10-29</lastmod>
   </url>
+  <url>
+    <loc>https://studioluminant.com.tr/tasarim-antiphon.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-antiphon.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-antiphon.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-antiphon.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/design-antiphon.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-antiphon.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-antiphon.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-antiphon.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/tasarim-fioritura.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-fioritura.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-fioritura.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-fioritura.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/design-fioritura.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-fioritura.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-fioritura.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-fioritura.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/tasarim-fugato.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-fugato.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-fugato.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-fugato.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/design-fugato.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-fugato.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-fugato.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-fugato.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-30</lastmod>
+  </url>
 </urlset>
