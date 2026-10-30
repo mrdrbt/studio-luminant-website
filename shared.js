@@ -43,7 +43,8 @@ var SL_UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'u
   var file = location.pathname.split('/').pop();
   var asked = SL_SERVICE_LINES[params.get('service_line')];
   if (asked) store.service_line = asked;
-  else if (/^(sistemler|systems|sistem-|system-)/.test(file)) store.service_line = SL_SERVICE_LINES.atolye;
+  // tasarim-dosyasi is the Specifier Kit, not a design page
+  else if (/^(sistemler|systems|sistem-|system-|tasarimlar|designs|tasarim-(?!dosyasi)|design-)/.test(file)) store.service_line = SL_SERVICE_LINES.atolye;
   else if (/^(surec|process|vaka-tufetto|case-study-tufetto)/.test(file)) store.service_line = SL_SERVICE_LINES['ozel-uretim'];
   try { sessionStorage.setItem(KEY, JSON.stringify(store)); } catch (e) { /* storage blocked: this page still works */ }
   window.slAttribution = function () {
