@@ -166,6 +166,13 @@ def drawing_webp(folder):
     return Image.open(dst).size
 
 
+def study_spec(d, u):
+    """Material and surface; the joint row only for a design that declares one ("joint": true, Hemiola's gapped blocks) --
+    walls render seamless by default (Burak 2026-10-30)."""
+    rows = [("material", u["material"]), ("finish", u["finish"])]
+    return rows + [("joint", u["joint"])] if d.get("joint") else rows
+
+
 def urls(slug):
     return f"tasarim-{slug}.htm", f"en/design-{slug}.htm"
 
@@ -417,7 +424,7 @@ def study_page(data, d, lang, sizes):
     (ww, wh), (cw, ch) = sizes["wall"], sizes["card"]
     (sw, sh), (mw, mh) = sizes["drawing"][lang]["d"], sizes["drawing"][lang]["m"]
     extra = f'<link rel="preload" as="image" href="{base}wall.webp" fetchpriority="high">\n'
-    spec = spec_html([("material", u["material"]), ("finish", u["finish"]), ("joint", u["joint"])], u)
+    spec = spec_html(study_spec(d, u), u)
     share = shared(d)
     og = f"assets/designs/{d['asset']}/{'og.jpg' if share else 'wall.webp'}"
     share_btn = (f'\n      <button type="button" class="sys-link" data-shr-href="{u["share_page"].format(slug=d["slug"])}">'
@@ -560,7 +567,7 @@ def share_page(d, lang, sizes):
     base = f"{pre}assets/designs/{d['asset']}/"
     (ww, wh), (cw, ch) = sizes["wall"], sizes["card"]
     (sw, sh), (mw, mh) = sizes["drawing"][lang]["d"], sizes["drawing"][lang]["m"]
-    spec = spec_html([("material", u["material"]), ("finish", u["finish"]), ("joint", u["joint"])], u)
+    spec = spec_html(study_spec(d, u), u)
     body = f"""<figure class="shr-fig"><img src="{base}wall.webp" width="{ww}" height="{wh}" alt="{esc(c['wall_alt'])}"><figcaption>{txt(c['wall_cap'])}</figcaption></figure>
 {share_rooms(d, lang, pre)}<section class="shr-pair">
   <figure class="shr-fig"><img src="{base}detail.webp" width="{cw}" height="{ch}" alt="{esc(c['card_alt'])}"><figcaption>{txt(c['card_cap'])}</figcaption></figure>

@@ -5,12 +5,12 @@
   "reliefMm": 15.0,
   "baseMm": 10.0,
   "marginMm": 120.0,
-  "layout": "panel",
+  "layout": "field",
   "fieldTiles": [
-    1,
-    1
+    2,
+    2
   ],
-  "wall": "#DFD8CA",
+  "wall": null,
   "poster": [
     1680,
     1680

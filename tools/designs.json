@@ -114,13 +114,13 @@
    "code": "065",
    "library": "065_lens",
    "asset": "065-antiphon",
-   "layout": "panel",
+   "layout": "field",
    "tr": {
     "name": "Antiphon",
     "lede": "Kenarları dalgalanan dikey şeritler çizdik; iki kenar birbirinin tersine kıvrıldığı için her şerit daralıp genişleyerek art arda badem biçimleri oluşturur. Bir şeridin daraldığı yerde komşusu genişler.",
     "size": "600 × 600 mm",
     "depth": "15 mm",
-    "layout": "Yan yana diziliş, derzler görünür",
+    "layout": "Kesintisiz alan",
     "alt": "Kenarları dalgalanan dikey şeritlerden badem biçimli rölyef panel, yalama ışık altında",
     "object_alt": "Antiphon panelinin yalama ışıkta render'ı",
     "strip_alt": "Antiphon panellerinden oluşan bir duvar şeridinin render'ı",
@@ -143,7 +143,7 @@
      {
       "h": "Duvarda",
       "p": [
-       "Antiphon 600 × 600 mm ölçüsünde bir panel olarak tasarlanmıştır; şeritler dikey durur. Paneller yan yana ve üst üste dizildiğinde şeritler duvar boyunca sürer, panel kenarları ise ince bir derz çizgisi olarak okunur. Bu çizgiler, yerleşim çiziminde duvarın ölçüsüyle birlikte yerleştirilir."
+       "Antiphon 600 × 600 mm ölçüsünde bir panel olarak tasarlanmıştır; şeritler dikey durur. Paneller yan yana ve üst üste dizildiğinde şeritler panel kenarlarında kesilmez, bir panelden ötekine geçer ve duvar tek bir yüzey olarak okunur. Duvarın kenarlarında desenin nerede kesileceği, yerleşim çiziminde belirlenir."
       ]
      }
     ],
@@ -156,7 +156,7 @@
     "lede": "We drew vertical bands whose two edges wave against each other, so each band narrows and widens into a chain of almond shapes; where one band narrows, its neighbour widens.",
     "size": "600 × 600 mm",
     "depth": "15 mm",
-    "layout": "Laid side by side, joints visible",
+    "layout": "Continuous field",
     "alt": "Relief panel of vertical bands with waving edges forming almond shapes, in low raking light",
     "object_alt": "Render of the Antiphon panel in raking light",
     "strip_alt": "Render of a wall strip laid in Antiphon panels",
@@ -179,7 +179,7 @@
      {
       "h": "On the wall",
       "p": [
-       "Antiphon is designed as a 600 × 600 mm panel with its bands upright. Laid side by side and stacked, the bands carry on up and across the wall, and the panel edges read as fine joint lines. Those lines are set out on the layout drawing together with the dimensions of the wall."
+       "Antiphon is designed as a 600 × 600 mm panel with its bands upright. Laid side by side and stacked, the bands run across the panel edges unbroken, passing from one panel into the next, and the wall reads as a single surface. Where the pattern is cut at the edges of the wall is set out on the layout drawing."
       ]
      }
     ],
@@ -721,7 +721,8 @@
       "cap": "Render: dining and bar"
      }
     }
-   ]
+   ],
+   "joint": true
   },
   {
    "slug": "melisma",
