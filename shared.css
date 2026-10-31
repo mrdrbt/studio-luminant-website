@@ -307,7 +307,7 @@ section { position: relative; z-index: 2; }
 .section-inner { max-width: 1280px; margin: 0 auto; padding: 0 60px; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 14px;
-  font-size: 10px; letter-spacing: 0.3em;
+  font-size: 11px; letter-spacing: 0.3em;
   text-transform: uppercase; color: var(--gold);
   font-weight: 400; margin-bottom: 32px;
 }
@@ -349,8 +349,8 @@ footer {
 .footer-social a { display: inline-flex; align-items: center; justify-content: center; color: var(--text-muted); transition: color 0.3s; }
 .footer-social a:hover { color: var(--gold); }
 .footer-social svg { width: 20px; height: 20px; display: block; }
-.footer-col-title { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
-.footer-location-eyebrow { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
+.footer-col-title { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+.footer-location-eyebrow { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
 .footer-location-name { font-family: var(--font-display); font-size: 20px; font-weight: 300; color: var(--text-primary); margin-bottom: 8px; }
 .footer-location-note { font-size: 11px; color: var(--text-muted); font-weight: 300; }
 .footer-cta-block a {
@@ -368,14 +368,14 @@ footer {
 }
 .footer-copy { font-size: 11px; color: var(--text-muted); font-weight: 300; margin-top: 18px; }
 .footer-legal-entity {
-  font-size: 10px; line-height: 1.7; font-weight: 300;
+  font-size: 11px; line-height: 1.7; font-weight: 300;
   color: var(--text-muted);
   margin-top: 18px; padding-top: 16px;
   border-top: 1px solid var(--rule-1);
 }
 .footer-links { display: flex; gap: 32px; list-style: none; }
 .footer-links button { background: none; border: 0; padding: 0; font-family: inherit; cursor: pointer; }
-.footer-links a, .footer-links button { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+.footer-links a, .footer-links button { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
 .footer-links a:hover, .footer-links button:hover { color: var(--gold); }
 .footer-logo-img { height: 52px; width: auto; display: block; margin-bottom: 16px; opacity: 0.9; }
 
@@ -558,7 +558,7 @@ summary:focus-visible,
 .sl-field label {
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.30em;
   text-transform: uppercase;
   color: var(--fg-2);
