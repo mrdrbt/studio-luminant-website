@@ -571,4 +571,58 @@
     <priority>0.7</priority>
     <lastmod>2026-10-30</lastmod>
   </url>
+  <url>
+    <loc>https://studioluminant.com.tr/tasarim-andante.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-andante.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-andante.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-andante.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/design-andante.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-andante.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-andante.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-andante.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/tasarim-mezzavoce.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-mezzavoce.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-mezzavoce.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-mezzavoce.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/design-mezzavoce.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-mezzavoce.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-mezzavoce.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-mezzavoce.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/tasarim-hocket.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-hocket.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-hocket.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-hocket.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-01</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/design-hocket.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-hocket.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-hocket.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-hocket.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-01</lastmod>
+  </url>
 </urlset>

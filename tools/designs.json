@@ -109,6 +109,85 @@
    ]
   },
   {
+   "slug": "andante",
+   "kind": "relief",
+   "library": null,
+   "asset": "andante",
+   "layout": "field",
+   "tr": {
+    "name": "Andante",
+    "lede": "Yatay nervürlerden bir alan çizdik ve onu, ebruda tarak çekilir gibi, dört dikey çizgi boyunca yukarı ya da aşağı çektik. Nervürler bu çizgilerde sivri bir kıvrımla döner; çizgiler duvar boyunca düzensiz bir adımla ilerler.",
+    "size": "1200 × 600 mm",
+    "depth": "7 mm",
+    "layout": "Kesintisiz alan",
+    "alt": "Dikey çizgiler boyunca kıvrılan yatay nervürlerden oluşan rölyef duvar, yalama ışık altında",
+    "object_alt": "Andante panelinin yalama ışıkta render'ı",
+    "strip_alt": "Andante panellerinden oluşan bir duvarın render'ı",
+    "title": "Andante: Taranmış Nervürlü Rölyef Duvar Paneli | Studio Luminant",
+    "meta": "Yatay nervürler, ebru tarağı gibi dört dikey çizgi boyunca çekilir ve sivri kıvrımlarla döner. Lumina PMAG™ ile Sapanca'da dökülür.",
+    "sections": [
+     {
+      "h": "Desen",
+      "p": [
+       "Andante, yürür gibi bir hızla çalınacak müziği tarif eder. Duvar da bu adımla ilerler: dikey çizgiler eşit aralıklı değildir, 280 ile 330 mm arasında değişen aralıklarla dizilir ve bu düzensiz adım her 1200 mm'de bir yinelenir.",
+       "Her nervür, 30 mm aralıkla, alçak bir dipten yuvarlak bir dudağa yumuşakça yükselir, sonra dik bir basamakla dibe iner. Her çizgide nervürler aynı yöne, yukarı ya da aşağı çekilir ve çizginin üzerinde sivri bir kıvrımla döner."
+      ]
+     },
+     {
+      "h": "Işıkta okunuşu",
+      "p": [
+       "Sayfanın başındaki görüntü canlı ışık altındadır. Rölyef yalnızca 7 mm'dir, ama her nervürün dudağı alttaki nervürün dibine ince bir gölge çizgisi düşürür. Işık yukarıdan ve yandan geldiğinde duvar sık, kıvrılan çizgilerden bir doku gibi okunur; ışık dikleştikçe çizgiler incelir, yüzey sakinleşir."
+      ]
+     },
+     {
+      "h": "Duvarda",
+      "p": [
+       "Andante 1200 × 600 mm ölçüsünde bir panel olarak tasarlanmıştır ve her panel aynı yönde, döndürülmeden dizilir; nervürlerin yönü desenin parçasıdır. Nervürler ve kıvrımlar panel kenarlarında kesilmez, bir panelden ötekine geçer ve duvar tek bir yüzey olarak okunur. Duvarın kenarlarında desenin nerede kesileceği yerleşim çiziminde belirlenir."
+      ]
+     }
+    ],
+    "drawing_cap": "Çizim: derinlik haritası",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_alt": "Andante panelinin derinlik haritası: nervürlerin ve kıvrımların gri tonlarla çizimi"
+   },
+   "en": {
+    "name": "Andante",
+    "lede": "We drew a field of horizontal ribs and pulled it up or down along four vertical lines, the way a comb is drawn through marbling. Along each line the ribs turn in a sharp cusp, and the lines move across the wall at an uneven step.",
+    "size": "1200 × 600 mm",
+    "depth": "7 mm",
+    "layout": "Continuous field",
+    "alt": "Relief wall of horizontal ribs turning in cusps along vertical lines, in low raking light",
+    "object_alt": "Render of the Andante panel in raking light",
+    "strip_alt": "Render of a wall laid in Andante panels",
+    "title": "Andante: Combed-Rib Relief Wall Panel | Studio Luminant",
+    "meta": "Horizontal ribs pulled along four vertical lines, like a comb through marbling, turning in sharp cusps. Cast in Lumina PMAG™ in Sapanca, Turkey.",
+    "sections": [
+     {
+      "h": "The pattern",
+      "p": [
+       "Andante marks music to be played at a walking pace. The wall moves the same way: the vertical lines are not evenly spaced but sit 280 to 330 mm apart, and that uneven step repeats every 1200 mm.",
+       "Each rib, on a 30 mm pitch, rises softly from a low foot to a rounded lip, then drops back in a sheer step. Along each line the ribs are pulled the same way, up or down, and turn in a sharp cusp on the line itself."
+      ]
+     },
+     {
+      "h": "How it reads in light",
+      "p": [
+       "The image at the top of the page is in live light. The relief is only 7 mm, but the lip of every rib throws a fine shadow line onto the foot of the rib below. With the light high and to the side, the wall reads as a dense texture of curving lines; as it turns head-on the lines thin and the surface quietens."
+      ]
+     },
+     {
+      "h": "On the wall",
+      "p": [
+       "Andante is designed as a 1200 × 600 mm panel, and every panel is laid the same way up, never turned: the direction of the ribs is part of the pattern. Ribs and cusps run across the panel edges unbroken, passing from one panel into the next, and the wall reads as a single surface. Where the pattern is cut at the edges of the wall is set out on the layout drawing."
+      ]
+     }
+    ],
+    "drawing_cap": "Drawing: depth map",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_alt": "Depth map of the Andante panel: the ribs and cusps drawn in grey tones"
+   }
+  },
+  {
    "slug": "antiphon",
    "kind": "relief",
    "code": "065",
@@ -725,6 +804,85 @@
    "joint": true
   },
   {
+   "slug": "hocket",
+   "kind": "relief",
+   "library": null,
+   "asset": "hocket",
+   "layout": "field",
+   "tr": {
+    "name": "Hocket",
+    "lede": "Dalgalanan yatay bantları düz, dikey bantlarla birbirine ördük. Her dalgalı bant birkaç dikey bandın üstünden geçer, sonra bir süre altlarına iner; yüzey sık dokunmuş bir kumaş gibi okunur.",
+    "size": "600 × 600 mm",
+    "depth": "16 mm",
+    "layout": "Kesintisiz alan",
+    "alt": "Dikey bantların üstünden ve altından geçen dalgalı yatay bantlardan oluşan rölyef duvar, yalama ışık altında",
+    "object_alt": "Hocket panelinin yalama ışıkta render'ı",
+    "strip_alt": "Hocket panellerinden oluşan bir duvar şeridinin render'ı",
+    "title": "Hocket: Dokuma Desenli Rölyef Duvar Paneli | Studio Luminant",
+    "meta": "Dalgalı yatay bantlar, dikey bantların üstünden ve altından geçerek örülür. 600 × 600 mm panel, Lumina PMAG™ ile Sapanca'da dökülür.",
+    "sections": [
+     {
+      "h": "Desen",
+      "p": [
+       "Hocket, ortaçağ müziğinde bir ezginin iki ses arasında bölündüğü tekniğin adıdır; biri susarken öteki girer. Hocket'in bantları da sırayla görünür ve kaybolur: dalgalı bir bant beş ile yedi dikey bandın üstünden geçer, sonra bir ile üç bandın altına iner ve yeniden yüzeye çıkar.",
+       "Her bant ince oluklarla birkaç şeride ayrılır; dalgalı bantlar 100 mm, dikey bantlar 75 mm genişliğindedir. Dalgalı bantlar yol boyunca daralıp genişler, bu yüzden hiçbir bant uzun süre aynı kalınlıkta kalmaz. Rölyef 16 mm derinliğe ulaşır."
+      ]
+     },
+     {
+      "h": "Işıkta okunuşu",
+      "p": [
+       "Sayfanın başındaki görüntü canlı ışık altındadır. Işık yandan geldiğinde üstte kalan bandın kenarı alttaki banda gölge düşürür ve örgü derinlik kazanır; bantlardaki ince oluklar ışığı sık çizgiler halinde yakalar. Işık dikleştikçe gölgeler kısalır, örgü yumuşak bir dokuya döner."
+      ]
+     },
+     {
+      "h": "Duvarda",
+      "p": [
+       "Hocket 600 × 600 mm ölçüsünde bir panel olarak tasarlanmıştır. Örgü panel kenarlarında kesilmez: paneller yan yana ve üst üste dizildiğinde bantlar bir panelden ötekine geçer ve duvar tek bir yüzey olarak okunur. Duvarın kenarlarında desenin nerede kesileceği yerleşim çiziminde belirlenir."
+      ]
+     }
+    ],
+    "drawing_cap": "Çizim: derinlik haritası",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_alt": "Hocket panelinin derinlik haritası: örgünün gri tonlarla çizimi"
+   },
+   "en": {
+    "name": "Hocket",
+    "lede": "We wove waving horizontal bands through straight upright ones. Each waving band rides over several upright bands, then dips under for a short stretch, and the surface reads like a closely woven cloth.",
+    "size": "600 × 600 mm",
+    "depth": "16 mm",
+    "layout": "Continuous field",
+    "alt": "Relief wall of waving horizontal bands woven over and under upright bands, in low raking light",
+    "object_alt": "Render of the Hocket panel in raking light",
+    "strip_alt": "Render of a wall strip laid in Hocket panels",
+    "title": "Hocket: Woven Relief Wall Panel | Studio Luminant",
+    "meta": "Waving horizontal bands woven over and under straight upright ones. A 600 × 600 mm panel, cast in Lumina PMAG™ in Sapanca, Turkey.",
+    "sections": [
+     {
+      "h": "The pattern",
+      "p": [
+       "A hocket is a medieval way of splitting a melody between two voices, one falling silent as the other comes in. The bands of Hocket take turns in the same way: a waving band runs over five to seven upright bands, dips under one to three, and comes back to the surface.",
+       "Fine grooves split every band into strips; the waving bands are 100 mm wide, the upright ones 75 mm. The waving bands narrow and widen along their run, so no band keeps the same width for long. The relief reaches 16 mm."
+      ]
+     },
+     {
+      "h": "How it reads in light",
+      "p": [
+       "The image at the top of the page is in live light. With the light at the side, the edge of each band on top throws a shadow onto the band beneath and the weave gains depth, while the fine grooves pick up the light as close-set lines. As the light turns head-on the shadows shorten and the weave softens into texture."
+      ]
+     },
+     {
+      "h": "On the wall",
+      "p": [
+       "Hocket is designed as a 600 × 600 mm panel. The weave is not cut at the panel edges: laid side by side and stacked, the bands pass from one panel into the next and the wall reads as a single surface. Where the pattern is cut at the edges of the wall is set out on the layout drawing."
+      ]
+     }
+    ],
+    "drawing_cap": "Drawing: depth map",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_alt": "Depth map of the Hocket panel: the weave drawn in grey tones"
+   }
+  },
+  {
    "slug": "melisma",
    "kind": "study",
    "asset": "melisma",
@@ -828,6 +986,85 @@
      }
     }
    ]
+  },
+  {
+   "slug": "mezzavoce",
+   "kind": "relief",
+   "library": null,
+   "asset": "mezzavoce",
+   "layout": "field",
+   "tr": {
+    "name": "Mezzavoce",
+    "lede": "Farklı büyüklükte hücrelerden düzensiz bir ağ çizdik. Her hücre birleşme çizgisinden yükselip geniş, yuvarlak bir tepeye kabarır; yüzey yan yana dizilmiş yastıklar gibi okunur.",
+    "size": "1200 × 600 mm",
+    "depth": "18 mm",
+    "layout": "Kesintisiz alan",
+    "alt": "Farklı büyüklükte, yuvarlak tepeli hücrelerden oluşan rölyef duvar, yalama ışık altında",
+    "object_alt": "Mezzavoce panelinin yalama ışıkta render'ı",
+    "strip_alt": "Mezzavoce panellerinden oluşan bir duvar şeridinin render'ı",
+    "title": "Mezzavoce: Yastık Hücreli Rölyef Duvar Paneli | Studio Luminant",
+    "meta": "Farklı büyüklükte hücrelerden düzensiz bir ağ; her hücre yuvarlak bir tepeye kabarır. Lumina PMAG™ ile Sapanca'da dökülür.",
+    "sections": [
+     {
+      "h": "Desen",
+      "p": [
+       "Mezza voce, şarkıyı yarım sesle, sesi zorlamadan söylemek demektir. Mezzavoce'nin yüzeyi de sesini yükseltmez: hiçbir yerde keskin bir kenar yoktur, her hücre kenarından ortasına doğru yumuşakça kabarır.",
+       "Hücreler aynı büyüklükte değildir; büyükler küçüklerin arasına dağılır ve ağ hiçbir yönde düz bir sıra kurmaz. Rölyef 18 mm derinliğe ulaşır: hücrelerin tepesi yüzeyin en yüksek, birleşme çizgileri en derin yeridir."
+      ]
+     },
+     {
+      "h": "Işıkta okunuşu",
+      "p": [
+       "Sayfanın başındaki görüntü canlı ışık altındadır. Işık yandan geldiğinde her hücrenin bir yanı aydınlanır, öbür yanı gölgede kalır ve birleşme çizgileri ince, kırık bir ağ gibi belirir. Işık dikleştikçe gölgeler kısalır, yüzey açık tonlu, yumuşak bir dokuya döner."
+      ]
+     },
+     {
+      "h": "Duvarda",
+      "p": [
+       "Mezzavoce 1200 × 600 mm ölçüsünde bir panel olarak tasarlanmıştır. Ağ panel kenarlarında kesilmez: paneller yan yana ve üst üste dizildiğinde hücreler bir panelden ötekine geçer ve duvar tek bir yüzey olarak okunur. Duvarın kenarlarında ağın nerede kesileceği yerleşim çiziminde belirlenir."
+      ]
+     }
+    ],
+    "drawing_cap": "Çizim: derinlik haritası",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_alt": "Mezzavoce panelinin derinlik haritası: hücre ağının gri tonlarla çizimi"
+   },
+   "en": {
+    "name": "Mezzavoce",
+    "lede": "We drew an irregular net of cells in many sizes. Each cell rises from its joint line into a broad, rounded crown, so the surface reads as cushions set side by side.",
+    "size": "1200 × 600 mm",
+    "depth": "18 mm",
+    "layout": "Continuous field",
+    "alt": "Relief wall of rounded cells in many sizes, in low raking light",
+    "object_alt": "Render of the Mezzavoce panel in raking light",
+    "strip_alt": "Render of a wall strip laid in Mezzavoce panels",
+    "title": "Mezzavoce: Cushioned-Cell Relief Wall Panel | Studio Luminant",
+    "meta": "An irregular net of cells in many sizes, each swelling into a rounded crown. Cast in Lumina PMAG™ in Sapanca, Turkey.",
+    "sections": [
+     {
+      "h": "The pattern",
+      "p": [
+       "Mezza voce means singing at half voice, without pushing the sound. The surface keeps the same restraint: there is no hard edge anywhere, and every cell swells gently from its rim to its middle.",
+       "The cells are not one size. Large ones are scattered among small ones, and the net never settles into a straight row in any direction. The relief reaches 18 mm: the crowns are the highest points of the surface, the joint lines the deepest."
+      ]
+     },
+     {
+      "h": "How it reads in light",
+      "p": [
+       "The image at the top of the page is in live light. With the light at the side, one flank of each cell catches it, the other falls into shadow, and the joint lines show as a fine, broken net. As the light turns head-on the shadows shorten and the surface settles into a pale, soft texture."
+      ]
+     },
+     {
+      "h": "On the wall",
+      "p": [
+       "Mezzavoce is designed as a 1200 × 600 mm panel. The net is not cut at the panel edges: laid side by side and stacked, the cells pass from one panel into the next and the wall reads as a single surface. Where the net is cut at the edges of the wall is set out on the layout drawing."
+      ]
+     }
+    ],
+    "drawing_cap": "Drawing: depth map",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_alt": "Depth map of the Mezzavoce panel: the net of cells drawn in grey tones"
+   }
   },
   {
    "card_zoom": [

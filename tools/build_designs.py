@@ -944,7 +944,7 @@ def build(library, rebuild_images=False):
         tr_old, en_old = SITE / f"sistem-{d['slug']}.htm", SITE / "en" / f"system-{d['slug']}.htm"
         if d["kind"] == "relief":
             out = SITE / "assets" / "relief" / d["asset"]
-            lib = library / d["library"]
+            lib = library / str(d.get("library") or "-")
             figs = {"object": webp(lib / "render.png", out / "object.webp", 1200)}
             if (out / "strip.webp").exists() or ((lib / "wall_strip.png").exists() and d["tr"]["strip_alt"]):
                 figs["strip"] = webp(lib / "wall_strip.png", out / "strip.webp", 1600)
