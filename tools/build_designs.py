@@ -35,9 +35,10 @@ UI = {
     "tr": {"lib": "Atölye Tasarımları", "index": "tasarimlar.htm", "page": "tasarim-{slug}.htm", "home": "Ana Sayfa",
            "cta": "Duvar yerleşimi isteyin", "contact": "iletisim.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
            "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey",
-                    "lead": "Teslim", "joint": "Derz"},
+                    "fixing": "Montaj", "lead": "Teslim", "joint": "Derz"},
            "material": "Lumina PMAG™ (polimer modifiye kompozit alçı)", "finish": "Boyaya hazır ya da artizan finish ile", "joint": "1,5 mm",
            "finish_term": "artizan finish", "finish_href": "kaynaklar-yuzey-kaplamalari.htm",
+           "fixing": "Polimer yapıştırıcıyla",
            "lead": "Sözleşme ve peşinattan sonra 4 hafta, Sapanca'da fabrika teslimi (EXW)",
            "corners": "Kolon yüzleri ve dış köşeler yerleşim çiziminde çözülür. Bir kolonu saran, köşeyi dönen ya da kavisli bir duvarı izleyen parçalar, aynı motifle Özel Üretim olarak dökülür.",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
@@ -62,9 +63,10 @@ UI = {
     "en": {"lib": "Studio Designs", "index": "designs.htm", "page": "design-{slug}.htm", "home": "Home",
            "cta": "Request a wall layout", "contact": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
            "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface",
-                    "lead": "Lead time", "joint": "Joint"},
+                    "fixing": "Fixing", "lead": "Lead time", "joint": "Joint"},
            "material": "Lumina PMAG™ (polymer-modified composite gypsum)", "finish": "Paint-ready, or with an artisan finish", "joint": "1.5 mm",
            "finish_term": "artisan finish", "finish_href": "resources-finishes.htm",
+           "fixing": "Polymer adhesive",
            "lead": "4 weeks after contract and advance, ex-works Sapanca (EXW)",
            "corners": "Column faces and outside corners are worked out on the layout drawing. Pieces that wrap a column, turn a corner or follow a curved wall are cast as Bespoke, in the same motif.",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
@@ -173,9 +175,9 @@ def drawing_webp(folder):
 
 
 def study_spec(d, u):
-    """Material, surface and lead time; the joint row only for a design that declares one ("joint": true, Hemiola's gapped blocks) --
+    """Material, surface, fixing and lead time; the joint row only for a design that declares one ("joint": true, Hemiola's gapped blocks) --
     walls render seamless by default (Burak 2026-10-30)."""
-    rows = [("material", u["material"]), ("finish", u["finish"]), ("lead", u["lead"])]
+    rows = [("material", u["material"]), ("finish", u["finish"]), ("fixing", u["fixing"]), ("lead", u["lead"])]
     return rows + [("joint", u["joint"])] if d.get("joint") else rows
 
 
@@ -341,7 +343,7 @@ def relief_page(data, d, lang, figs):
     extra = (f'<link rel="preload" as="image" href="{rel}poster-1680.jpg" imagesrcset="{rel}poster-840.jpg {pw // 2}w, '
              f'{rel}poster-1680.jpg {pw}w" imagesizes="{SIZES[d["layout"]]}" fetchpriority="high">\n')
     spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
-                      ("material", u["material"]), ("finish", u["finish"]), ("lead", u["lead"])], u)
+                      ("material", u["material"]), ("finish", u["finish"]), ("fixing", u["fixing"]), ("lead", u["lead"])], u)
     fig_html = []
     for key, cap, alt in (("object", u["obj_cap"], c["object_alt"]), ("strip", u["strip_cap"], c["strip_alt"])):
         if key in figs and alt:
@@ -618,7 +620,7 @@ def relief_share_page(d, lang, figs):
     pw, ph = man["poster"]
     field = " shr-relief--field" if d["layout"] == "field" else ""
     spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
-                      ("material", u["material"]), ("finish", u["finish"]), ("lead", u["lead"])], u)
+                      ("material", u["material"]), ("finish", u["finish"]), ("fixing", u["fixing"]), ("lead", u["lead"])], u)
     ow, oh = figs["object"]
     strip = ""
     if "strip" in figs and c["strip_alt"]:
