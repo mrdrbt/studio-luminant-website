@@ -35,8 +35,11 @@ UI = {
     "tr": {"lib": "Atölye Tasarımları", "index": "tasarimlar.htm", "page": "tasarim-{slug}.htm", "home": "Ana Sayfa",
            "cta": "Duvar yerleşimi isteyin", "contact": "iletisim.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
            "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey",
-                    "joint": "Derz"},
+                    "lead": "Teslim", "joint": "Derz"},
            "material": "Lumina PMAG™ (polimer modifiye kompozit alçı)", "finish": "Boyaya hazır ya da artizan finish ile", "joint": "1,5 mm",
+           "finish_term": "artizan finish", "finish_href": "kaynaklar-yuzey-kaplamalari.htm",
+           "lead": "Sözleşme ve peşinattan sonra 4 hafta, Sapanca'da fabrika teslimi (EXW)",
+           "corners": "Kolon yüzleri ve dış köşeler yerleşim çiziminde çözülür. Bir kolonu saran, köşeyi dönen ya da kavisli bir duvarı izleyen parçalar, aynı motifle Özel Üretim olarak dökülür.",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
            "close_h": "Yakından", "drawing_h": "Çizim", "room_h": "Bir mekânda", "more": "İncele →", "moulds_h": "Kalıplar",
            "moulds_p": "Duvar, bu kalıplardan dökülen parçalarla kurulur; harfler çizimdeki dizilişle eşleşir, düz parça rölyefsizdir.",
@@ -59,8 +62,11 @@ UI = {
     "en": {"lib": "Studio Designs", "index": "designs.htm", "page": "design-{slug}.htm", "home": "Home",
            "cta": "Request a wall layout", "contact": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
            "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface",
-                    "joint": "Joint"},
+                    "lead": "Lead time", "joint": "Joint"},
            "material": "Lumina PMAG™ (polymer-modified composite gypsum)", "finish": "Paint-ready, or with an artisan finish", "joint": "1.5 mm",
+           "finish_term": "artisan finish", "finish_href": "resources-finishes.htm",
+           "lead": "4 weeks after contract and advance, ex-works Sapanca (EXW)",
+           "corners": "Column faces and outside corners are worked out on the layout drawing. Pieces that wrap a column, turn a corner or follow a curved wall are cast as Bespoke, in the same motif.",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
            "close_h": "Close up", "drawing_h": "The drawing", "room_h": "In a room", "more": "View →", "moulds_h": "The moulds",
            "moulds_p": "The wall is laid from pieces cast in these moulds; the letters match the lay in the drawing, and the plain piece carries no relief.",
@@ -167,9 +173,9 @@ def drawing_webp(folder):
 
 
 def study_spec(d, u):
-    """Material and surface; the joint row only for a design that declares one ("joint": true, Hemiola's gapped blocks) --
+    """Material, surface and lead time; the joint row only for a design that declares one ("joint": true, Hemiola's gapped blocks) --
     walls render seamless by default (Burak 2026-10-30)."""
-    rows = [("material", u["material"]), ("finish", u["finish"])]
+    rows = [("material", u["material"]), ("finish", u["finish"]), ("lead", u["lead"])]
     return rows + [("joint", u["joint"])] if d.get("joint") else rows
 
 
@@ -234,10 +240,18 @@ def crumbs_for(lang, name, url):
     return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
 
 
+def spec_dd(k, v, u):
+    """A spec value as HTML: the material stays untranslated, the finish links its term to the finishes page."""
+    if k == "material":
+        return f'<span translate="no">{esc(v)}</span>'
+    html_v = nb(txt(v))
+    if k == "finish" and u["finish_term"] in html_v:
+        return html_v.replace(u["finish_term"], f'<a href="{u["finish_href"]}">{u["finish_term"]}</a>', 1)
+    return html_v
+
+
 def spec_html(rows, u):
-    return "\n".join(
-        f'      <div><dt>{u["spec"][k]}</dt><dd>' + (f'<span translate="no">{esc(v)}</span>' if k == "material" else nb(txt(v))) + '</dd></div>'
-        for k, v in rows)
+    return "\n".join(f'      <div><dt>{u["spec"][k]}</dt><dd>{spec_dd(k, v, u)}</dd></div>' for k, v in rows)
 
 
 def room_html(d, lang, pre):
@@ -281,6 +295,7 @@ def door_html(lang):
 <section class="sys-door" id="sys-door">
   <div class="sys-door__inner">
     <p>{u['door']}</p>
+    <p>{u['corners']}</p>
     <div class="sys-door__links">
       <a href="{u['contact']}" class="sys-link">{u['cta']}</a>
       <span class="sys-door__own">{u['own']} <a href="{u['bespoke_href']}" class="sys-link">{u['bespoke']}</a></span>
@@ -326,7 +341,7 @@ def relief_page(data, d, lang, figs):
     extra = (f'<link rel="preload" as="image" href="{rel}poster-1680.jpg" imagesrcset="{rel}poster-840.jpg {pw // 2}w, '
              f'{rel}poster-1680.jpg {pw}w" imagesizes="{SIZES[d["layout"]]}" fetchpriority="high">\n')
     spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
-                      ("material", u["material"]), ("finish", u["finish"])], u)
+                      ("material", u["material"]), ("finish", u["finish"]), ("lead", u["lead"])], u)
     fig_html = []
     for key, cap, alt in (("object", u["obj_cap"], c["object_alt"]), ("strip", u["strip_cap"], c["strip_alt"])):
         if key in figs and alt:
@@ -603,7 +618,7 @@ def relief_share_page(d, lang, figs):
     pw, ph = man["poster"]
     field = " shr-relief--field" if d["layout"] == "field" else ""
     spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
-                      ("material", u["material"]), ("finish", u["finish"])], u)
+                      ("material", u["material"]), ("finish", u["finish"]), ("lead", u["lead"])], u)
     ow, oh = figs["object"]
     strip = ""
     if "strip" in figs and c["strip_alt"]:

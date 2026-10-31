@@ -136,7 +136,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Rölyef yalnızca 7 mm'dir, ama her nervürün dudağı alttaki nervürün dibine ince bir gölge çizgisi düşürür. Işık yukarıdan ve yandan geldiğinde duvar sık, kıvrılan çizgilerden bir doku gibi okunur; ışık dikleştikçe çizgiler incelir, yüzey sakinleşir."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Rölyef yalnızca 7 mm'dir, ama her nervürün dudağı alttaki nervürün dibine ince bir gölge çizgisi düşürür. Işık yukarıdan ve yandan geldiğinde duvar sık, kıvrılan çizgilerden bir doku gibi okunur; ışık dikleştikçe çizgiler incelir, yüzey sakinleşir."
       ]
      },
      {
@@ -147,7 +147,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Andante panelinin derinlik haritası: nervürlerin ve kıvrımların gri tonlarla çizimi"
    },
    "en": {
@@ -172,7 +172,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. The relief is only 7 mm, but the lip of every rib throws a fine shadow line onto the foot of the rib below. With the light high and to the side, the wall reads as a dense texture of curving lines; as it turns head-on the lines thin and the surface quietens."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. The relief is only 7 mm, but the lip of every rib throws a fine shadow line onto the foot of the rib below. With the light high and to the side, the wall reads as a dense texture of curving lines; as it turns head-on the lines thin and the surface quietens."
       ]
      },
      {
@@ -183,7 +183,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Andante panel: the ribs and cusps drawn in grey tones"
    }
   },
@@ -216,7 +216,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Işık yandan geldiğinde her bademin bir yanı aydınlanır, öbür yanı gölgede kalır; duvar dikey bir nabız gibi okunur. Işık dikleştikçe gölgeler kısalır ve yüzey açık tonlu, yumuşak bir dalgaya döner."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Işık yandan geldiğinde her bademin bir yanı aydınlanır, öbür yanı gölgede kalır; duvar dikey bir nabız gibi okunur. Işık dikleştikçe gölgeler kısalır ve yüzey açık tonlu, yumuşak bir dalgaya döner."
       ]
      },
      {
@@ -227,7 +227,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Antiphon panelinin derinlik haritası: dalgalı şeritlerin ve badem biçimlerinin gri tonlarla çizimi"
    },
    "en": {
@@ -252,7 +252,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. With the light at the side, one flank of each almond catches it and the other falls into shadow, and the wall reads as a vertical pulse. As the light turns head-on the shadows shorten and the surface settles into a pale, gentle wave."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. With the light at the side, one flank of each almond catches it and the other falls into shadow, and the wall reads as a vertical pulse. As the light turns head-on the shadows shorten and the surface settles into a pale, gentle wave."
       ]
      },
      {
@@ -263,7 +263,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Antiphon panel: the waving bands and almond shapes drawn in grey tones"
    }
   },
@@ -300,7 +300,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Işığın açısı değiştikçe servinin gövdesi, lale taçları ve gül yaprakları sırayla öne çıkar. Aynı panel yalama ışıkta derin ve hareketli, dik ışıkta ise sakin ve neredeyse düz görünür; hangisini alacağı duvarın yerine bağlıdır."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Işığın açısı değiştikçe servinin gövdesi, lale taçları ve gül yaprakları sırayla öne çıkar. Aynı panel yalama ışıkta derin ve hareketli, dik ışıkta ise sakin ve neredeyse düz görünür; hangisini alacağı duvarın yerine bağlıdır."
       ]
      },
      {
@@ -311,7 +311,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Cantilena panelinin derinlik haritası: servi, lale, karanfil ve gül motiflerinin gri tonlarla çizimi"
    },
    "en": {
@@ -336,7 +336,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. As the angle of the light changes, the trunk of the cypress, the tulip crowns and the rose petals come forward in turn. The same panel looks deep and animated in raking light and calm, almost flat, in head-on light; which of the two a wall gets depends on where it stands."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. As the angle of the light changes, the trunk of the cypress, the tulip crowns and the rose petals come forward in turn. The same panel looks deep and animated in raking light and calm, almost flat, in head-on light; which of the two a wall gets depends on where it stands."
       ]
      },
      {
@@ -347,7 +347,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Cantilena panel: the cypress, tulip, carnation and rose motifs drawn in grey tones"
    }
   },
@@ -380,7 +380,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Işık yandan geldiğinde rozetler birer nokta gibi parlar, dallar ise aralarındaki gölgeyle çizilir. Dik ışıkta gölgeler kısalır ve yüzey açık tonlu, ince bir dokuya döner; çiçekler ancak yaklaşınca ayrışır."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Işık yandan geldiğinde rozetler birer nokta gibi parlar, dallar ise aralarındaki gölgeyle çizilir. Dik ışıkta gölgeler kısalır ve yüzey açık tonlu, ince bir dokuya döner; çiçekler ancak yaklaşınca ayrışır."
       ]
      },
      {
@@ -391,7 +391,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Fioritura panelinin derinlik haritası: lale, rozet ve yaprak motiflerinin gri tonlarla çizimi"
    },
    "en": {
@@ -416,7 +416,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. With the light at the side, the rosettes catch it like points and the stems are drawn by the shadow between them. In head-on light the shadows shorten and the surface becomes a pale, fine texture; the flowers only separate as you come close."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. With the light at the side, the rosettes catch it like points and the stems are drawn by the shadow between them. In head-on light the shadows shorten and the surface becomes a pale, fine texture; the flowers only separate as you come close."
       ]
      },
      {
@@ -427,7 +427,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Fioritura panel: the tulip, rosette and leaf motifs drawn in grey tones"
    }
   },
@@ -460,7 +460,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Oluklar 40 mm derinliğe iner; ışık yandan geldiğinde her oluğun bir kenarı uzun, net bir gölge düşürür ve duvar dikey çizgilerden bir partisyon gibi okunur. Işık dikleştikçe gölgeler kısalır, oluklar yumuşak bir kıvrıma döner."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Oluklar 40 mm derinliğe iner; ışık yandan geldiğinde her oluğun bir kenarı uzun, net bir gölge düşürür ve duvar dikey çizgilerden bir partisyon gibi okunur. Işık dikleştikçe gölgeler kısalır, oluklar yumuşak bir kıvrıma döner."
       ]
      },
      {
@@ -471,7 +471,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, duvarın her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı duvarı gösterir.",
+    "drawing_note": "Derinlik haritası, duvarın her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Fugato duvarının derinlik haritası: oluklu plakaların kaydırmalı sıralarının gri tonlarla çizimi"
    },
    "en": {
@@ -496,7 +496,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. The coves drop to 40 mm; with the light at the side, one edge of each cove throws a long, clean shadow and the wall reads like a score of vertical lines. As the light turns head-on the shadows shorten and the coves soften into a gentle curve."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. The coves drop to 40 mm; with the light at the side, one edge of each cove throws a long, clean shadow and the wall reads like a score of vertical lines. As the light turns head-on the shadows shorten and the coves soften into a gentle curve."
       ]
      },
      {
@@ -507,7 +507,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the wall in grey tones. The live-light image at the top of the page shows the same wall.",
+    "drawing_note": "The depth map describes the depth at every point of the wall in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Fugato wall: the staggered courses of coved plates drawn in grey tones"
    }
   },
@@ -541,7 +541,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Işık yandan, lifleri yalayacak bir açıyla geldiğinde çizgiler keskinleşir ve yüzey hareket ediyormuş gibi görünür. Işık dikleştikçe lifler yumuşar ve panel tek tonlu bir yüzeye yaklaşır."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Işık yandan, lifleri yalayacak bir açıyla geldiğinde çizgiler keskinleşir ve yüzey hareket ediyormuş gibi görünür. Işık dikleştikçe lifler yumuşar ve panel tek tonlu bir yüzeye yaklaşır."
       ]
      },
      {
@@ -552,7 +552,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Glissando panelinin derinlik haritası: akan liflerin gri tonlarla çizimi"
    },
    "en": {
@@ -577,7 +577,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. When the light comes from the side, at an angle that grazes the fibres, the lines sharpen and the surface seems to move. As the light turns head-on the fibres soften and the panel approaches a single tone."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. When the light comes from the side, at an angle that grazes the fibres, the lines sharpen and the surface seems to move. As the light turns head-on the fibres soften and the panel approaches a single tone."
       ]
      },
      {
@@ -588,7 +588,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Glissando panel: the drifting fibres drawn in grey tones"
    },
    "rooms": [
@@ -831,7 +831,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Işık yandan geldiğinde üstte kalan bandın kenarı alttaki banda gölge düşürür ve örgü derinlik kazanır; bantlardaki ince oluklar ışığı sık çizgiler halinde yakalar. Işık dikleştikçe gölgeler kısalır, örgü yumuşak bir dokuya döner."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Işık yandan geldiğinde üstte kalan bandın kenarı alttaki banda gölge düşürür ve örgü derinlik kazanır; bantlardaki ince oluklar ışığı sık çizgiler halinde yakalar. Işık dikleştikçe gölgeler kısalır, örgü yumuşak bir dokuya döner."
       ]
      },
      {
@@ -842,7 +842,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Hocket panelinin derinlik haritası: örgünün gri tonlarla çizimi"
    },
    "en": {
@@ -867,7 +867,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. With the light at the side, the edge of each band on top throws a shadow onto the band beneath and the weave gains depth, while the fine grooves pick up the light as close-set lines. As the light turns head-on the shadows shorten and the weave softens into texture."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. With the light at the side, the edge of each band on top throws a shadow onto the band beneath and the weave gains depth, while the fine grooves pick up the light as close-set lines. As the light turns head-on the shadows shorten and the weave softens into texture."
       ]
      },
      {
@@ -878,7 +878,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Hocket panel: the weave drawn in grey tones"
    }
   },
@@ -1015,7 +1015,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Işık yandan geldiğinde her hücrenin bir yanı aydınlanır, öbür yanı gölgede kalır ve birleşme çizgileri ince, kırık bir ağ gibi belirir. Işık dikleştikçe gölgeler kısalır, yüzey açık tonlu, yumuşak bir dokuya döner."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Işık yandan geldiğinde her hücrenin bir yanı aydınlanır, öbür yanı gölgede kalır ve birleşme çizgileri ince, kırık bir ağ gibi belirir. Işık dikleştikçe gölgeler kısalır, yüzey açık tonlu, yumuşak bir dokuya döner."
       ]
      },
      {
@@ -1026,7 +1026,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Mezzavoce panelinin derinlik haritası: hücre ağının gri tonlarla çizimi"
    },
    "en": {
@@ -1051,7 +1051,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. With the light at the side, one flank of each cell catches it, the other falls into shadow, and the joint lines show as a fine, broken net. As the light turns head-on the shadows shorten and the surface settles into a pale, soft texture."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. With the light at the side, one flank of each cell catches it, the other falls into shadow, and the joint lines show as a fine, broken net. As the light turns head-on the shadows shorten and the surface settles into a pale, soft texture."
       ]
      },
      {
@@ -1062,7 +1062,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Mezzavoce panel: the net of cells drawn in grey tones"
    }
   },
@@ -1099,7 +1099,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Işık yandan geldiğinde yoncaların kenarları ve kafesin çizgileri belirginleşir; dik ışıkta kafes geri çekilir ve yüzey sakinleşir. Tekrar eden bir desende ışığın yönü, duvarın bütün karakterini değiştirir."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Işık yandan geldiğinde yoncaların kenarları ve kafesin çizgileri belirginleşir; dik ışıkta kafes geri çekilir ve yüzey sakinleşir. Tekrar eden bir desende ışığın yönü, duvarın bütün karakterini değiştirir."
       ]
      },
      {
@@ -1110,7 +1110,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Ricercar panelinin derinlik haritası: Gotik dört yapraklı yonca kafesinin gri tonlarla çizimi"
    },
    "en": {
@@ -1135,7 +1135,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. When the light comes from the side, the edges of the quatrefoils and the lines of the lattice sharpen; in head-on light the lattice recedes and the surface calms. In a repeating pattern, the direction of the light changes the whole character of a wall."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. When the light comes from the side, the edges of the quatrefoils and the lines of the lattice sharpen; in head-on light the lattice recedes and the surface calms. In a repeating pattern, the direction of the light changes the whole character of a wall."
       ]
      },
      {
@@ -1146,7 +1146,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Ricercar panel: the Gothic quatrefoil lattice drawn in grey tones"
    },
    "rooms": [
@@ -1331,7 +1331,7 @@
      {
       "h": "Işıkta okunuşu",
       "p": [
-       "Sayfanın başındaki görüntü canlı ışık altındadır. Işığın açısı değiştikçe iki yoğun bölge farklı vurgulanır; bazı açılarda yalnızca odaklar, bazı açılarda hücrelerin bütün dağılımı görünür. Panel aynı kalır, okunan yüzey ışıkla birlikte değişir."
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Işığın açısı değiştikçe iki yoğun bölge farklı vurgulanır; bazı açılarda yalnızca odaklar, bazı açılarda hücrelerin bütün dağılımı görünür. Panel aynı kalır, okunan yüzey ışıkla birlikte değişir."
       ]
      },
      {
@@ -1342,7 +1342,7 @@
      }
     ],
     "drawing_cap": "Çizim: derinlik haritası",
-    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki canlı ışık görüntüsü aynı yüzeyi gösterir.",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Mordent panelinin derinlik haritası: kare hücrelerin iki odakta yoğunlaşan dağılımı"
    },
    "en": {
@@ -1367,7 +1367,7 @@
      {
       "h": "How it reads in light",
       "p": [
-       "The image at the top of the page is in live light. As the angle of the light changes, the two dense areas are stressed differently; at some angles only the foci show, at others the whole spread of cells. The panel stays the same while the surface you read changes with the light."
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. As the angle of the light changes, the two dense areas are stressed differently; at some angles only the foci show, at others the whole spread of cells. The panel stays the same while the surface you read changes with the light."
       ]
      },
      {
@@ -1378,7 +1378,7 @@
      }
     ],
     "drawing_cap": "Drawing: depth map",
-    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The live-light image at the top of the page shows the same surface.",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Mordent panel: square cells gathering at two foci"
    },
    "slug": "mordent"
