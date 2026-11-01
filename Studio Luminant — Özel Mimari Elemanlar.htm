@@ -1171,6 +1171,12 @@
   /* an open drawer (and its scrim) must sit above the sticky nav, or the close button hides under it */
   #sample-box:has(.sbx-drawer.show){z-index:calc(var(--z-nav) + 1);}
   #sample-box .sbx-head{max-width:720px;margin:0 auto var(--s-7);text-align:center;}
+  #sample-box .sbx-light{margin:var(--s-6) auto 0;max-width:360px;}
+  #sample-box .sbx-light video{display:block;width:100%;height:auto;aspect-ratio:4/5;background:var(--deep);}
+  @media (min-width:900px){
+    #sample-box .sbx-head{max-width:920px;display:grid;grid-template-columns:1fr minmax(260px,340px);gap:var(--s-8);align-items:center;text-align:left;}
+    #sample-box .sbx-light{margin:0;max-width:none;}
+  }
   #sample-box .sbx-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.02;color:var(--text-primary);margin:.3em 0 .5em;}
   #sample-box .sbx-title em{font-style:italic;color:var(--gold);}
   #sample-box .sbx-intro{color:var(--text-secondary);font-size:clamp(1rem,1.6vw,1.12rem);line-height:1.7;}
@@ -1257,9 +1263,24 @@
 
   <div class="section-inner">
     <div class="sbx-head">
-      <div class="eyebrow reveal">Yüzey Numune Kutusu</div>
-      <h2 id="sbx-title" class="sbx-title reveal">Görün.<br><em>Hissedin.</em></h2>
-      <p class="sbx-intro reveal">Kutuda, birkaç rölyef kalıbından dökülmüş, farklı renklerde artizan finish uygulanmış <span translate="no">Lumina PMAG™</span> numuneleri yer alır. Rölyefi, yüzeyi ve rengi kendi mekânınızın ışığında, paneli şartnameye yazmadan önce değerlendirin.</p>
+      <div class="sbx-copy">
+        <div class="eyebrow reveal">Yüzey Numune Kutusu</div>
+        <h2 id="sbx-title" class="sbx-title reveal">Görün.<br><em>Hissedin.</em></h2>
+        <p class="sbx-intro reveal">Kutuda, birkaç rölyef kalıbından dökülmüş, farklı renklerde artizan finish uygulanmış <span translate="no">Lumina PMAG™</span> numuneleri yer alır. Rölyefi, yüzeyi ve rengi kendi mekânınızın ışığında, paneli şartnameye yazmadan önce değerlendirin.</p>
+      </div>
+      <figure class="sbx-light reveal">
+        <video class="sbx-light-video" muted loop playsinline preload="none" width="720" height="900" poster="images/studio-luminant-glissando-light-study-poster.jpg" aria-label="Glissando rölyefi üzerinde gezinen yalama ışık">
+          <source src="video/studio-luminant-glissando-light-study.mp4" type="video/mp4">
+        </video>
+      </figure>
+      <script>
+      (function(){var v=document.querySelector('#sample-box .sbx-light-video');if(!v)return;
+        if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+        var go=function(){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});};
+        if(!('IntersectionObserver' in window)){go();return;}
+        new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)go();else v.pause();});},{rootMargin:'200px 0px'}).observe(v);
+      })();
+      </script>
     </div>
 
     <div class="sbx-stage reveal" data-state="closed">
