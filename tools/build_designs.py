@@ -7,6 +7,8 @@ One range, no tiers (Burak 2026-10-25): every design is listed as an equal, alph
 - kind "study": the wall study as the hero, a close view, the lay drawing (moulds and how they are laid), made as WebP
   in assets/designs/<slug>/ from the portfolio prestage PNGs named in the JSON. No module, depth, price or availability.
 - an optional "room" entry adds an in-situ figure (only renders Burak voted UP).
+- every design carries its Library code (`library`: the VAULT/Library/Relief/<code>_<design> folder); the build WARNS on a
+  listed design with none, or with no manifest there (Portfolio Line Phase 0: the site reads the Library, never bypasses it).
 No price, stock, lead-time or castability claim on any page (DEC-04 default). Static output; re-run after editing the JSON.
 
 Which designs are listed is decided on the Verdict board's Portfolio tab (push_selection below; designs taken off the site go to
@@ -30,6 +32,7 @@ SITE = Path(__file__).resolve().parents[1]
 # the SL COWORK umbrella; study sources are given relative to it. Found by its VAULT folder, not a fixed depth: this repo and
 # the site-v3 worktree sit at different depths under it
 ROOT = next((p for p in SITE.parents if (p / "VAULT").is_dir()), SITE.parents[2])
+LIBRARY = ROOT / "VAULT" / "Library" / "Relief"   # the tile registry (tile_lookup.py); every design names its folder
 DOMAIN = "https://studioluminant.com.tr/"
 UI = {
     "tr": {"lib": "Atölye Tasarımları", "index": "tasarimlar.htm", "page": "tasarim-{slug}.htm", "home": "Ana Sayfa",
@@ -778,7 +781,7 @@ def design_missing(d, library=None):
                     if not (rel / n).exists()]
         if not ((rel / "height-1024.webp").exists() or (rel / "drawing.webp").exists()):
             missing.append(f"image assets/relief/{d['asset']}/height-1024.webp")
-        lib = (library or SITE.parents[2] / "Library" / "Relief") / str(d.get("library") or "-")
+        lib = (library or LIBRARY) / str(d.get("library") or "-")
         if not (rel / "object.webp").exists() and not (lib / "render.png").exists():
             missing.append(f"image Library render for {d.get('library')}")
     elif kind == "study" and d.get("asset"):
@@ -954,8 +957,22 @@ def sync_site(data, today=None):
     return {"files": sorted(changed), "pages_removed": gone}
 
 
+def library_warnings(data, library):
+    """One line per listed design with no Library entry: no `library` code, or no manifest at VAULT/Library/Relief/<code>/."""
+    out = []
+    for d in data["designs"]:
+        code = d.get("library")
+        if not code:
+            out.append(f"WARN {d['slug']}: no Library code (register it: tile_lookup.py promote)")
+        elif not (library / code / "manifest.json").exists():
+            out.append(f"WARN {d['slug']}: Library entry {code} has no manifest.json under {library}")
+    return out
+
+
 def build(library, rebuild_images=False):
     data = json.loads(designs_path().read_text(encoding="utf-8"))
+    for line in library_warnings(data, library):
+        print(line)
     for d in data["designs"]:
         tr_path, en_path = SITE / urls(d["slug"])[0], SITE / urls(d["slug"])[1]
         tr_old, en_old = SITE / f"sistem-{d['slug']}.htm", SITE / "en" / f"system-{d['slug']}.htm"
@@ -993,7 +1010,7 @@ def push_selection(selected, dry_run=True, library=None, today=None):
     """Make `selected` (slugs) the designs on the site. dry_run (the default) only reports. A blocked plan, or one with nothing
     to change, writes nothing. Never touches git or a deploy.
     -> {added, removed, restored, blocked, pages_added, pages_removed, files (lists that would change), changed, applied}"""
-    library = library or SITE.parents[2] / "Library" / "Relief"
+    library = library or LIBRARY
     data = json.loads(designs_path().read_text(encoding="utf-8"))
     plan = plan_push(data, selected, library)
     new = plan.pop("data")
@@ -1012,7 +1029,7 @@ def push_selection(selected, dry_run=True, library=None, today=None):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--library", type=Path, default=SITE.parents[2] / "Library" / "Relief")
+    ap.add_argument("--library", type=Path, default=LIBRARY)
     ap.add_argument("--rebuild-images", action="store_true", help="re-make the study WebPs from their prestage PNGs")
     a = ap.parse_args()
     build(a.library, a.rebuild_images)

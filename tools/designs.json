@@ -4,6 +4,7 @@
   {
    "slug": "accelerando",
    "kind": "study",
+   "library": "097_optic",
    "asset": "accelerando",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-30_seamless_2040/2026-10-30_design01_wall_seamless.png",
@@ -111,7 +112,8 @@
   {
    "slug": "andante",
    "kind": "relief",
-   "library": null,
+   "code": "096",
+   "library": "096_tirage",
    "asset": "andante",
    "layout": "field",
    "tr": {
@@ -645,6 +647,7 @@
   {
    "slug": "gruppetto",
    "kind": "study",
+   "library": "098_crest",
    "asset": "gruppetto",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-30_seamless_2040/2026-10-30_design02_wall_seamless.png",
@@ -714,6 +717,7 @@
   {
    "slug": "hemiola",
    "kind": "study",
+   "library": "099_skew",
    "asset": "hemiola",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-21_portfolio_prestage/2040/2026-10-21_design03_wall.png",
@@ -806,7 +810,8 @@
   {
    "slug": "hocket",
    "kind": "relief",
-   "library": null,
+   "code": "095",
+   "library": "095_weave-twill-600",
    "asset": "hocket",
    "layout": "field",
    "tr": {
@@ -885,6 +890,7 @@
   {
    "slug": "melisma",
    "kind": "study",
+   "library": "100_rotor",
    "asset": "melisma",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-30_seamless_2040/2026-10-30_design04_wall_seamless.png",
@@ -990,7 +996,8 @@
   {
    "slug": "mezzavoce",
    "kind": "relief",
-   "library": null,
+   "code": "094",
+   "library": "094_pillow-r4c",
    "asset": "mezzavoce",
    "layout": "field",
    "tr": {
@@ -1203,6 +1210,7 @@
   {
    "slug": "rondeau",
    "kind": "study",
+   "library": "101_dish",
    "asset": "rondeau",
    "src": {
     "wall": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-30_seamless_2040/2026-10-30_design05_wall_seamless.png",
