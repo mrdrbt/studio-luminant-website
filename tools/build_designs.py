@@ -9,7 +9,8 @@ One range, no tiers (Burak 2026-10-25): every design is listed as an equal, alph
 - an optional "room" entry adds an in-situ figure (only renders Burak voted UP).
 - a design with "use" + "faq" (per language) closes with a "where it works" paragraph and three questions: its two
   (size/format, depth) and the template's lead time + fixing, which states the spec table's facts. The page carries them
-  as FAQPage JSON-LD beside a VisualArtwork entry (never an offer or a price).
+  as FAQPage JSON-LD beside a VisualArtwork entry (never an offer or a price). That text may carry in-text links written
+  [[key|anchor]] (LINKS).
 - every design carries its Library code (`library`: the VAULT/Library/Relief/<code>_<design> folder); the build WARNS on a
   listed design with none, or with no manifest there (Portfolio Line Phase 0: the site reads the Library, never bypasses it).
 No price, stock or castability claim on any page (DEC-04 default); the only lead time is the spec table's (Burak 2026-11-01).
@@ -104,6 +105,12 @@ UI = {
            "share_copied": "Link copied", "share_pdf": "Save as PDF", "share_close": "Close",
            "shr_proj": "Project", "shr_by": "Prepared by", "shr_credit": "Design and casting: Studio Luminant, Sapanca, Turkey"},
 }
+# an in-text link inside a design's "use" or FAQ text is written [[key|anchor words]] (SEO B3); the key names the page.
+# The page shows it as a link, the JSON-LD as its plain words; an unknown key fails the build
+LINKS = {"tr": {"home": "/", "lobby": "otel-lobisi-karsilama-duvari.htm", "guestroom": "otel-odasi-duvar-tasarimi.htm",
+                "villa": "villa-duvar-tasarimi.htm", "restaurant": "restoran-duvar-tasarimi.htm"},
+         "en": {"home": "/en/", "lobby": "hotel-lobby-feature-wall.htm"}}
+LINK = re.compile(r"\[\[(\w+)\|([^\]|]+)\]\]")
 SIZES = {"panel": "(orientation: portrait) 90vw, 55vw", "field": "(orientation: portrait) 100vw, 100vw"}
 STUDY_WIDTH = {"wall": 1800, "card": 1400}
 STUDY_FILE = {"wall": "wall.webp", "card": "detail.webp"}
@@ -138,6 +145,16 @@ def txt(s):
 def nb(s):
     """Non-breaking spaces inside a measure ("600 x 600 mm")."""
     return re.sub(r"(?<=\d) (?=mm)", "&nbsp;", s).replace(" × ", "&nbsp;×&nbsp;")
+
+
+def linked(s, lang):
+    """txt() with each [[key|anchor]] made a link to LINKS[lang][key]."""
+    return LINK.sub(lambda m: f'<a href="{LINKS[lang][m.group(1)]}">{m.group(2)}</a>', txt(s))
+
+
+def plain(s):
+    """The text with each [[key|anchor]] reduced to its anchor words (for JSON-LD)."""
+    return LINK.sub(r"\2", s)
 
 
 def first_sentence(s):
@@ -304,11 +321,11 @@ def use_faq_html(d, lang):
     c, u = d[lang], UI[lang]
     if not c.get("use"):
         return ""
-    items = "\n".join(f"    <div><h3>{nb(txt(q))}</h3><p>{nb(txt(a))}</p></div>" for q, a in questions(d, lang))
+    items = "\n".join(f"    <div><h3>{nb(txt(q))}</h3><p>{nb(linked(a, lang))}</p></div>" for q, a in questions(d, lang))
     return f"""
 <section class="dsg-use reveal" id="{u['use_id']}">
   <h2 class="dsg-h">{u['use_h']}</h2>
-  <p>{nb(txt(c['use']))} {spec_dd('finish', u['use_finish'], u)}</p>
+  <p>{nb(linked(c['use'], lang))} {spec_dd('finish', u['use_finish'], u)}</p>
 </section>
 
 <section class="dsg-faq reveal" id="{u['faq_id']}">
@@ -328,7 +345,7 @@ def page_ld(d, lang, url, og):
            "creator": {"@type": "Organization", "name": "Studio Luminant", "url": DOMAIN}}
     if not c.get("use"):
         return [art]
-    typo = lambda s: s.replace("'", "’")  # the visible text's apostrophe (txt)
+    typo = lambda s: plain(s).replace("'", "’")  # the visible text's words and apostrophe (txt), no link
     faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [
         {"@type": "Question", "name": typo(q), "acceptedAnswer": {"@type": "Answer", "text": typo(a)}} for q, a in questions(d, lang)]}
     return [art, faq]

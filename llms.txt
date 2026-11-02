@@ -47,6 +47,7 @@ Key facts for accurate citation:
 - [What Are Sculptural Cast Wall Panels?](https://studioluminant.com.tr/en/what-are-sculptural-cast-wall-panels.htm): What the term means and whose drawing a panel is cast from.
 - [How to Specify Custom Cast Wall Panels](https://studioluminant.com.tr/en/how-to-specify-custom-cast-wall-panels.htm): End-to-end specifier's guide — brief, material, sample, format, technical data sheet and installation drawing, fixing, lead time, installation.
 - [GRG vs GRC for Interior Surfaces](https://studioluminant.com.tr/en/grg-vs-grc-interior-surfaces.htm): How the two compare for interior relief work.
+- [The Hotel Lobby Feature Wall](https://studioluminant.com.tr/en/hotel-lobby-feature-wall.htm): Specifying the wall behind reception in cast relief: viewing distance, depth, raking light, joints, finish and lead time.
 - [Journal](https://studioluminant.com.tr/en/journal.htm): Guides for architects specifying relief and cast wall panels.
 
 ## Technical resources (English)
@@ -73,6 +74,10 @@ Key facts for accurate citation:
 - [Mimari Rölyef Panel Nedir?](https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm): Tanım, kullanım alanları, malzemeler ve nasıl sipariş edildiği.
 - [Heykelsi Duvar Paneli Nedir?](https://studioluminant.com.tr/heykelsi-duvar-paneli-nedir.htm): Terimin anlamı ve panelin kimin çiziminden döküldüğü.
 - [Özel Üretim Duvar Paneli: Sipariş Rehberi](https://studioluminant.com.tr/ozel-uretim-duvar-paneli-mimar-rehberi.htm): Tasarımdan döküme uçtan uca sipariş rehberi.
+- [Lobi Duvar Kaplama ve Otel Karşılama Duvarı](https://studioluminant.com.tr/otel-lobisi-karsilama-duvari.htm): Otel lobisi karşılama duvarında boyut, derinlik, aydınlatma ve artizan finish kararları.
+- [Restoran Duvar Tasarımında Rölyef](https://studioluminant.com.tr/restoran-duvar-tasarimi.htm): Restoranda bakış mesafesi, loş ışıkta yalama açısı ve kullanım yükü.
+- [Otel Odası Duvar Tasarımı](https://studioluminant.com.tr/otel-odasi-duvar-tasarimi.htm): Yatak başı duvarında 10 mm altı rölyef, yalama ışık, oda tipine göre yerleşim ve teslim.
+- [Villa Duvar Tasarımı](https://studioluminant.com.tr/villa-duvar-tasarimi.htm): Salon, antre ve merdiven duvarında rölyef: gün ışığı, derinlik, ağırlık ve özel üretim.
 - [Makaleler](https://studioluminant.com.tr/makaleler.htm): Mimari rölyef ve özel üretim duvar paneli rehberleri.
 
 ## Notes
