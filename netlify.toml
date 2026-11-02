@@ -123,6 +123,15 @@
   status = 301
   force = true
 
+# ─── Malformed inbound links (GSC 2026-11-02) ───
+# An external page links to "studioluminant.com.tr/en/…" without a scheme, so
+# the browser resolves it under /en/ and lands on a 404. Fold it back.
+[[redirects]]
+  from = "/en/studioluminant.com.tr/*"
+  to = "/:splat"
+  status = 301
+  force = true
+
 # ─── Internal files — never served (Burak 2026-10-18) ───
 # docs/, tools/, CLAUDE.md, audits and build scripts sit in the publish root; 404 them.
 [[redirects]]
