@@ -7,9 +7,13 @@ One range, no tiers (Burak 2026-10-25): every design is listed as an equal, alph
 - kind "study": the wall study as the hero, a close view, the lay drawing (moulds and how they are laid), made as WebP
   in assets/designs/<slug>/ from the portfolio prestage PNGs named in the JSON. No module, depth, price or availability.
 - an optional "room" entry adds an in-situ figure (only renders Burak voted UP).
+- a design with "use" + "faq" (per language) closes with a "where it works" paragraph and three questions: its two
+  (size/format, depth) and the template's lead time + fixing, which states the spec table's facts. The page carries them
+  as FAQPage JSON-LD beside a VisualArtwork entry (never an offer or a price).
 - every design carries its Library code (`library`: the VAULT/Library/Relief/<code>_<design> folder); the build WARNS on a
   listed design with none, or with no manifest there (Portfolio Line Phase 0: the site reads the Library, never bypasses it).
-No price, stock, lead-time or castability claim on any page (DEC-04 default). Static output; re-run after editing the JSON.
+No price, stock or castability claim on any page (DEC-04 default); the only lead time is the spec table's (Burak 2026-11-01).
+Static output; re-run after editing the JSON.
 
 Which designs are listed is decided on the Verdict board's Portfolio tab (push_selection below; designs taken off the site go to
 "parked" with their content, their pages are removed and redirected). This script also keeps sitemap.xml, llms.txt,
@@ -44,6 +48,10 @@ UI = {
            "fixing": "Polimer yapıştırıcıyla",
            "lead": "Sözleşme ve peşinattan sonra 4 hafta, Sapanca'da fabrika teslimi (EXW)",
            "corners": "Kolon yüzleri ve dış köşeler yerleşim çiziminde çözülür. Bir kolonu saran, köşeyi dönen ya da kavisli bir duvarı izleyen parçalar, aynı motifle Özel Üretim olarak dökülür.",
+           "use_h": "Nerede kullanılır", "use_id": "nerede-kullanilir", "faq_h": "Sık sorulan sorular", "faq_id": "sorular",
+           "use_finish": "Parçalar boyaya hazır ya da artizan finish ile teslim edilir; boyaya hazır yüzey, yerinde mekânın rengine boyanabilir.",
+           "faq_lead_q": "{name} ne kadar sürede teslim edilir, duvara nasıl sabitlenir?",
+           "faq_lead_a": "Teslim süresi sözleşme ve peşinattan sonra 4 haftadır; teslim şekli Sapanca'da fabrika teslimidir (EXW). Parçalar Lumina PMAG™ — Polimer Modifiye Kompozit Alçı ile elde dökülür ve duvara polimer yapıştırıcıyla sabitlenir. Bir kolonu saran, köşeyi dönen ya da kavisli bir duvarı izleyen parçalar ise aynı motifle Özel Üretim olarak dökülür.",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
            "close_h": "Yakından", "drawing_h": "Çizim", "room_h": "Bir mekânda", "more": "İncele →", "moulds_h": "Kalıplar",
            "moulds_p": "Duvar, bu kalıplardan dökülen parçalarla kurulur; harfler çizimdeki dizilişle eşleşir, düz parça rölyefsizdir.",
@@ -52,7 +60,7 @@ UI = {
            "drawing_p": "Tasarımın kalıpları ve duvardaki dizilişi. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
            "door": "Bu tasarımın duvarınızda nasıl yerleşeceğini görmek için duvar ölçülerinizi iletin.",
            "own": "Kendi çiziminizle başlıyorsanız:", "prev": "Önceki tasarım", "next": "Sonraki tasarım",
-           "idx_title": "Atölye Tasarımları: Rölyef Duvar Tasarımları | Studio Luminant",
+           "idx_title": "Atölye Tasarımları: Rölyef Duvar Panelleri | Studio Luminant",
            "idx_meta": "Studio Luminant'ın çizdiği rölyef duvar tasarımları. Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin; Lumina PMAG™ ile Sapanca'da dökülür.",
            "idx_h1": "Bizim çizdiğimiz <em>rölyefler.</em>",
            "idx_lede": "Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
@@ -72,6 +80,10 @@ UI = {
            "fixing": "Polymer adhesive",
            "lead": "4 weeks after contract and advance, ex-works Sapanca (EXW)",
            "corners": "Column faces and outside corners are worked out on the layout drawing. Pieces that wrap a column, turn a corner or follow a curved wall are cast as Bespoke, in the same motif.",
+           "use_h": "Where it works", "use_id": "where-it-works", "faq_h": "Frequently asked questions", "faq_id": "questions",
+           "use_finish": "Pieces come paint-ready or with an artisan finish; a paint-ready surface can be painted on site to match the room.",
+           "faq_lead_q": "What is the lead time for {name}, and how is it fixed?",
+           "faq_lead_a": "Lead time is 4 weeks after contract and advance, ex-works Sapanca (EXW). Pieces are hand-cast in Lumina PMAG™ — Polymer Modified Composite Gypsum and fixed to the wall with a polymer adhesive. Pieces that wrap a column, turn a corner or follow a curved wall are cast as Bespoke, in the same motif.",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
            "close_h": "Close up", "drawing_h": "The drawing", "room_h": "In a room", "more": "View →", "moulds_h": "The moulds",
            "moulds_p": "The wall is laid from pieces cast in these moulds; the letters match the lay in the drawing, and the plain piece carries no relief.",
@@ -80,7 +92,7 @@ UI = {
            "drawing_p": "The design’s moulds and how they are laid on the wall. The mould is made for your order, and you approve the master before anything is cast.",
            "door": "To see how this design would sit on your wall, send the wall dimensions.",
            "own": "Starting from your own drawing:", "prev": "Previous design", "next": "Next design",
-           "idx_title": "Studio Designs: Relief Wall Designs | Studio Luminant",
+           "idx_title": "Studio Designs: Relief Wall Panels | Studio Luminant",
            "idx_meta": "Relief wall designs drawn by Studio Luminant. See each one on its own page, on the wall and in its drawing; cast in Lumina PMAG™ in Sapanca, Turkey.",
            "idx_h1": "Relief we have <em>drawn.</em>",
            "idx_lede": "See each design on its own page: on the wall and in its drawing. The mould is made for your order, and you approve the master before anything is cast.",
@@ -205,8 +217,9 @@ def og_jpg(folder, src="wall.webp"):
     return dst
 
 
-def head(lang, title, meta, url, tr_url, en_url, og_image, extra, crumbs):
+def head(lang, title, meta, url, tr_url, en_url, og_image, extra, crumbs, ld=()):
     pre = "" if lang == "tr" else "../"
+    more = "".join(f'<script type="application/ld+json">\n{json.dumps(o, ensure_ascii=False)}\n</script>\n' for o in ld)
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -230,7 +243,7 @@ def head(lang, title, meta, url, tr_url, en_url, og_image, extra, crumbs):
 <script type="application/ld+json">
 {json.dumps(crumbs, ensure_ascii=False)}
 </script>
-</head>
+{more}</head>
 <body>
 """
 
@@ -278,6 +291,47 @@ def room_html(d, lang, pre):
   </div>
 </section>
 """
+
+
+def questions(d, lang):
+    """The design's three questions as (q, a): its own two from designs.json, then lead time + fixing from the template."""
+    c, u = d[lang], UI[lang]
+    return [(f["q"], f["a"]) for f in c["faq"]] + [(u["faq_lead_q"].format(name=c["name"]), u["faq_lead_a"])]
+
+
+def use_faq_html(d, lang):
+    """Where it works (the design's paragraph + the surface line, its finish term linked) and the three questions."""
+    c, u = d[lang], UI[lang]
+    if not c.get("use"):
+        return ""
+    items = "\n".join(f"    <div><h3>{nb(txt(q))}</h3><p>{nb(txt(a))}</p></div>" for q, a in questions(d, lang))
+    return f"""
+<section class="dsg-use reveal" id="{u['use_id']}">
+  <h2 class="dsg-h">{u['use_h']}</h2>
+  <p>{nb(txt(c['use']))} {spec_dd('finish', u['use_finish'], u)}</p>
+</section>
+
+<section class="dsg-faq reveal" id="{u['faq_id']}">
+  <h2 class="dsg-h">{u['faq_h']}</h2>
+  <div class="dsg-faq__list">
+{items}
+  </div>
+</section>
+"""
+
+
+def page_ld(d, lang, url, og):
+    """JSON-LD beside the breadcrumb: the design as a VisualArtwork and, with its questions, an FAQPage. No offer, no price."""
+    c, u = d[lang], UI[lang]
+    art = {"@context": "https://schema.org", "@type": "VisualArtwork", "name": c["name"], "description": c["meta"],
+           "image": DOMAIN + og, "url": DOMAIN + url, "inLanguage": lang, "material": u["material"],
+           "creator": {"@type": "Organization", "name": "Studio Luminant", "url": DOMAIN}}
+    if not c.get("use"):
+        return [art]
+    typo = lambda s: s.replace("'", "’")  # the visible text's apostrophe (txt)
+    faq = {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [
+        {"@type": "Question", "name": typo(q), "acceptedAnswer": {"@type": "Answer", "text": typo(a)}} for q, a in questions(d, lang)]}
+    return [art, faq]
 
 
 def pager_html(data, d, lang):
@@ -371,7 +425,8 @@ def relief_page(data, d, lang, figs):
                  f'{u["share"]}</button>') if share else ""
     scripts = ((PHONE_POSTER if d.get("poster_on_phone") else "") + f'<script src="{pre}relief-light.js" defer></script>\n'
                + (f'<script src="{pre}share.js"></script>\n' if share else ""))
-    return (head(lang, c["title"], c.get("meta", c["lede"]), url, tr_url, en_url, og, extra, crumbs_for(lang, c["name"], url))
+    return (head(lang, c["title"], c.get("meta", c["lede"]), url, tr_url, en_url, og, extra, crumbs_for(lang, c["name"], url),
+                 page_ld(d, lang, url, og))
             + nav(lang, twin) + f"""<section class="sys-hero{' sys-hero--field' if field else ''} relief-light" data-relief-light="{rel}" data-input="auto">
   <div class="sys-hero__copy">
     <a class="sys-back" href="{u['index']}"><span aria-hidden="true">←</span> {u['lib']}</a>
@@ -401,7 +456,7 @@ def relief_page(data, d, lang, figs):
 {sections}
   </div>
 </section>
-{room_html(d, lang, pre)}{pager_html(data, d, lang)}{door_html(lang, d)}
+{room_html(d, lang, pre)}{use_faq_html(d, lang)}{pager_html(data, d, lang)}{door_html(lang, d)}
 {share_dialog_html(lang) if share else ""}""" + tail(lang, scripts))
 
 
@@ -454,7 +509,8 @@ def study_page(data, d, lang, sizes):
     og = f"assets/designs/{d['asset']}/{'og.jpg' if share else 'wall.webp'}"
     share_btn = (f'\n      <button type="button" class="sys-link" data-shr-href="{u["share_page"].format(slug=d["slug"])}">'
                  f'{u["share"]}</button>') if share else ""
-    return (head(lang, c["title"], c["meta"], url, tr_url, en_url, og, extra, crumbs_for(lang, c["name"], url))
+    return (head(lang, c["title"], c["meta"], url, tr_url, en_url, og, extra, crumbs_for(lang, c["name"], url),
+                 page_ld(d, lang, url, og))
             + nav(lang, twin) + f"""<section class="dsg-hero">
   <div class="dsg-hero__copy">
     <a class="sys-back" href="{u['index']}"><span aria-hidden="true">←</span> {u['lib']}</a>
@@ -499,7 +555,7 @@ def study_page(data, d, lang, sizes):
     </figure>
   </div>
 </section>
-{room_html(d, lang, pre)}{pager_html(data, d, lang)}{door_html(lang, d)}
+{room_html(d, lang, pre)}{use_faq_html(d, lang)}{pager_html(data, d, lang)}{door_html(lang, d)}
 {share_dialog_html(lang) if share else ""}""" + tail(lang, f'<script src="{pre}share.js"></script>\n' if share else ""))
 
 

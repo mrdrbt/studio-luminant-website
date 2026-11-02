@@ -1,5 +1,5 @@
 {
- "_note": "Studio Designs (Atölye Tasarımları), source for tools/build_designs.py: one range, one page per design (TR tasarim-<slug>.htm, EN en/design-<slug>.htm) and the index (tasarimlar.htm, en/designs.htm). Burak 2026-10-25: no Systems tier; all designs listed as equals, alphabetical. kind 'relief' = heightmap-backed (live relief hero, assets/relief/<asset>/, Library render); kind 'study' = small-format design from the 2026-10-21 portfolio prestage (wall study, close view, lay drawing; no module, depth, price or availability per the D1-D5 rule). An optional 'room' entry ({src, tr:{alt,cap}, en:{alt,cap}}) adds an in-situ figure: only renders Burak voted UP. Names: Library System profiles, source for tools/build_systems.py. Public names Cantilena / Glissando (012 was Cantilena until the #112 name-clash rename, 2026-10-23) chosen by Burak 2026-10-15; 031 (was Ostinato) is now Ricercar and 033 (was Tremolo) is now Mordent on 2026-10-23 after the same-sector check found both in use (wallpaper; wallcovering + acoustic panel) (Set A, music family with Refrain + Fugue, #83); web competitor check done 2026-10-15, TÜRKPATENT 19/27 clearance with the avukat still open (#95). Facts from VAULT/Library/Relief/<code>/manifest.json. No prices (#73). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default).",
+ "_note": "Studio Designs (Atölye Tasarımları), source for tools/build_designs.py: one range, one page per design (TR tasarim-<slug>.htm, EN en/design-<slug>.htm) and the index (tasarimlar.htm, en/designs.htm). Burak 2026-10-25: no Systems tier; all designs listed as equals, alphabetical. kind 'relief' = heightmap-backed (live relief hero, assets/relief/<asset>/, Library render); kind 'study' = small-format design from the 2026-10-21 portfolio prestage (wall study, close view, lay drawing; no module, depth, price or availability per the D1-D5 rule). An optional 'room' entry ({src, tr:{alt,cap}, en:{alt,cap}}) adds an in-situ figure: only renders Burak voted UP. Names: Library System profiles, source for tools/build_systems.py. Public names Cantilena / Glissando (012 was Cantilena until the #112 name-clash rename, 2026-10-23) chosen by Burak 2026-10-15; 031 (was Ostinato) is now Ricercar and 033 (was Tremolo) is now Mordent on 2026-10-23 after the same-sector check found both in use (wallpaper; wallcovering + acoustic panel) (Set A, music family with Refrain + Fugue, #83); web competitor check done 2026-10-15, TÜRKPATENT 19/27 clearance with the avukat still open (#95). Facts from VAULT/Library/Relief/<code>/manifest.json. No prices (#73). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-11-02 (SEO B1): per language, 'use' is the design's «Nerede kullanılır» / 'Where it works' paragraph and 'faq' its two questions (size/format, depth); the third (lead time + fixing) is the builder's template, from the spec table's facts. Study designs keep the no-module/no-depth rule: their answers name no size or depth figure.",
  "designs": [
   {
    "slug": "accelerando",
@@ -13,26 +13,48 @@
    "tr": {
     "name": "Accelerando",
     "story": "Boyutu duvar boyunca kademeli olarak değişen hücrelerden bir alan çizdik.",
-    "title": "Accelerando: Rölyef Duvar Tasarımı | Studio Luminant",
+    "title": "Accelerando: Kademeli Hücreli Rölyef Duvar | Studio Luminant",
     "meta": "Boyutu duvar boyunca kademeli olarak değişen hücrelerden bir alan çizdik. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
     "wall_alt": "Render: Accelerando, duvar çalışması",
     "wall_cap": "Render: Accelerando, duvar çalışması.",
     "card_alt": "Render: Accelerando, yüzeyin yakın planı",
     "card_cap": "Render: Accelerando, yakın plan.",
     "sketch_alt": "Çizim: Accelerando kalıpları ve duvardaki dizilişleri",
-    "sketch_cap": "Çizim: Accelerando, kalıplar ve diziliş."
+    "sketch_cap": "Çizim: Accelerando, kalıplar ve diziliş.",
+    "use": "Hücrelerin boyutu duvar boyunca kademeli olarak değiştiği için Accelerando, gözün bir uçtan öbür uca gezinebildiği uzun bir duvarda en net okunur. Sayfadaki render'lar tasarımı üç mekânda gösterir: bir otel lobisinde resepsiyonun ve oturma grubunun arkasındaki duvarda, bir barda tezgâhın arkasındaki uzun duvarda ve bir restoranda masaların boyunca uzanan duvarda. Duvar her render'da başka bir renge boyanmıştır.",
+    "faq": [
+     {
+      "q": "Accelerando hangi parçalardan oluşur, duvara nasıl dizilir?",
+      "a": "Duvar, dört kalıptan (A, B, C ve D) dökülen parçalar ve rölyefsiz düz parçalarla kurulur. Kalıpların harfleri, sayfadaki çizimde her parçanın duvardaki yerini gösterir. Duvarınızın ölçülerini iletirseniz, Accelerando'nun o duvara nasıl yerleşeceğini bir yerleşim çiziminde gösteririz; duvarın kenarları, kolon yüzleri ve dış köşeler de bu çizimde çözülür."
+     },
+     {
+      "q": "Accelerando'nun rölyefi ne kadar derin?",
+      "a": "Derinlik, sayfadaki yakın plan render'da görülür. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
+     }
+    ]
    },
    "en": {
     "name": "Accelerando",
     "story": "We drew a field of cells whose size grades across the wall.",
-    "title": "Accelerando: Relief Wall Design | Studio Luminant",
+    "title": "Accelerando: Graded-Cell Relief Wall Panel | Studio Luminant",
     "meta": "We drew a field of cells whose size grades across the wall. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
     "wall_alt": "Render: Accelerando, wall study",
     "wall_cap": "Render: Accelerando, wall study.",
     "card_alt": "Render: Accelerando, close view of the surface",
     "card_cap": "Render: Accelerando, close view.",
     "sketch_alt": "Drawing: the Accelerando moulds and how they are laid on the wall",
-    "sketch_cap": "Drawing: Accelerando, moulds and lay."
+    "sketch_cap": "Drawing: Accelerando, moulds and lay.",
+    "use": "Because the cells grade in size across the wall, Accelerando reads most clearly on a long wall, where the eye can travel from one end to the other. The renders on this page place it in three rooms: behind the reception desk and lounge seating of a hotel lobby, on the long wall behind a bar counter, and on the wall that runs beside the tables of a restaurant. Each render paints the wall a different colour.",
+    "faq": [
+     {
+      "q": "What pieces make up Accelerando, and how are they laid?",
+      "a": "The wall is laid from pieces cast in four moulds, A to D, plus plain pieces with no relief. The letters show where each piece sits in the lay drawn on this page. Send the dimensions of your wall and we show how Accelerando sits on it in a layout drawing; the edges of the wall, column faces and outside corners are worked out on the same drawing."
+     },
+     {
+      "q": "How deep is the Accelerando relief?",
+      "a": "The depth shows in the close-up render on this page. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
+     }
+    ]
    },
    "moulds": [
     {
@@ -125,7 +147,7 @@
     "alt": "Dikey çizgiler boyunca kıvrılan yatay nervürlerden oluşan rölyef duvar, yalama ışık altında",
     "object_alt": "Andante panelinin yalama ışıkta render'ı",
     "strip_alt": "Andante panellerinden oluşan bir duvarın render'ı",
-    "title": "Andante: Taranmış Nervürlü Rölyef Duvar Paneli | Studio Luminant",
+    "title": "Andante: Taranmış Nervürlü Rölyef Paneli | Studio Luminant",
     "meta": "Yatay nervürler, ebru tarağı gibi dört dikey çizgi boyunca çekilir ve sivri kıvrımlarla döner. Lumina PMAG™ ile Sapanca'da dökülür.",
     "sections": [
      {
@@ -150,7 +172,18 @@
     ],
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
-    "drawing_alt": "Andante panelinin derinlik haritası: nervürlerin ve kıvrımların gri tonlarla çizimi"
+    "drawing_alt": "Andante panelinin derinlik haritası: nervürlerin ve kıvrımların gri tonlarla çizimi",
+    "use": "Andante en güçlü hâlini, ışığı yandan alan bir duvarda gösterir; bu ışığı yandaki bir pencere ya da duvarı tavandan yalayan bir aydınlatma verir. Rölyef sığdır, bu yüzden ışığın duvarı yukarıdan ve yandan yalaması gerekir; bu ışıkta 30 mm aralıklı nervürler sık bir doku olarak okunur. Dik ışıkta çizgiler incelir ve yüzey sakinleşir.",
+    "faq": [
+     {
+      "q": "Andante panellerinin ölçüsü nedir, nasıl dizilir?",
+      "a": "Andante 1200 × 600 mm ölçüsünde bir panel olarak tasarlanmıştır. Her panel aynı yönde, döndürülmeden dizilir, çünkü nervürlerin yönü desenin parçasıdır; nervürler panel derzlerinde kesilmeden sürer. Dikey çizgiler 280 ile 330 mm arasında değişen aralıklarla durur ve bu düzensiz adım her 1200 mm'de bir yinelenir. Desenin duvar kenarlarında nerede kesileceği yerleşim çiziminde belirlenir."
+     },
+     {
+      "q": "Andante'nin rölyefi ne kadar derin?",
+      "a": "Rölyef 7 mm'dir ve 30 mm aralıklı nervürlerden oluşur. Derinlik sığ olsa da her nervürün dudağı alttakinin dibine ince bir gölge çizgisi düşürür; duvarın yalama ışıkta sık bir doku gibi okunması bu gölgelerden gelir."
+     }
+    ]
    },
    "en": {
     "name": "Andante",
@@ -186,7 +219,18 @@
     ],
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
-    "drawing_alt": "Depth map of the Andante panel: the ribs and cusps drawn in grey tones"
+    "drawing_alt": "Depth map of the Andante panel: the ribs and cusps drawn in grey tones",
+    "use": "Andante is strongest on a wall that takes its light from the side, from a window alongside or from wall-grazing lights at the ceiling. The relief is shallow, so it needs light crossing it from above and to the side; in that light the ribs, on a 30 mm pitch, read as a dense texture. In head-on light the lines thin and the surface quietens.",
+    "faq": [
+     {
+      "q": "What size are Andante panels, and how are they laid?",
+      "a": "Andante is designed as a 1200 × 600 mm panel. Every panel is laid the same way up, never turned, because the direction of the ribs is part of the pattern; the ribs run continuous across the panel joints. The vertical lines run at 280 to 330 mm centres, an irregular pitch that repeats every 1200 mm. The layout drawing sets where the pattern is cut at the edges of the wall."
+     },
+     {
+      "q": "How deep is the Andante relief?",
+      "a": "The relief is 7 mm, in ribs on a 30 mm pitch. Shallow as it is, the lip of each rib throws a fine shadow line onto the foot of the rib below, and those shadows are what make the wall read as a dense texture in raking light."
+     }
+    ]
    }
   },
   {
@@ -205,7 +249,7 @@
     "alt": "Kenarları dalgalanan dikey şeritlerden badem biçimli rölyef panel, yalama ışık altında",
     "object_alt": "Antiphon panelinin yalama ışıkta render'ı",
     "strip_alt": "Antiphon panellerinden oluşan bir duvar şeridinin render'ı",
-    "title": "Antiphon: Dalgalı Şeritli Rölyef Duvar Paneli | Studio Luminant",
+    "title": "Antiphon: Dalgalı Şeritli Rölyef Paneli | Studio Luminant",
     "meta": "Kenarları birbirinin tersine dalgalanan dikey şeritler; her şerit daralıp genişleyerek badem biçimleri oluşturur. Lumina PMAG™ ile Sapanca'da dökülür.",
     "sections": [
      {
@@ -230,7 +274,18 @@
     ],
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
-    "drawing_alt": "Antiphon panelinin derinlik haritası: dalgalı şeritlerin ve badem biçimlerinin gri tonlarla çizimi"
+    "drawing_alt": "Antiphon panelinin derinlik haritası: dalgalı şeritlerin ve badem biçimlerinin gri tonlarla çizimi",
+    "use": "Antiphon'un dikey şeritleri duvarda bir ritim kurar ve bu ritim yüksek bir duvarda daha belirgin okunur. Yalama ışıkta her badem biçiminin bir yanı aydınlanır, öbür yanı gölgede kalır ve duvar dikey bir nabız gibi okunur. Dik ışıkta gölgeler kısalır, yüzey yumuşak bir dalgaya döner.",
+    "faq": [
+     {
+      "q": "Antiphon panellerinin ölçüsü nedir, nasıl dizilir?",
+      "a": "Antiphon 600 × 600 mm ölçüsünde bir panel olarak tasarlanmıştır ve şeritler dikey durur. Paneller yan yana ve üst üste dizildiğinde şeritler panel derzlerinde kesilmez, duvar tek bir yüzey olarak okunur. Desenin duvar kenarlarında nerede kesileceği yerleşim çiziminde belirlenir."
+     },
+     {
+      "q": "Antiphon'un rölyefi ne kadar derin?",
+      "a": "Rölyef, badem biçimlerinin ortasındaki en yüksek noktadan şeritlerin buluştuğu oluklara kadar 15 mm derinliğe iner. Geçişler keskin bir kenarla değil, yumuşak bir eğriyle kurulur."
+     }
+    ]
    },
    "en": {
     "name": "Antiphon",
@@ -266,7 +321,18 @@
     ],
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
-    "drawing_alt": "Depth map of the Antiphon panel: the waving bands and almond shapes drawn in grey tones"
+    "drawing_alt": "Depth map of the Antiphon panel: the waving bands and almond shapes drawn in grey tones",
+    "use": "Antiphon's upright bands set a vertical rhythm that shows more strongly on a tall wall. In raking light one flank of each almond is lit and the other falls into shadow, and the wall reads as a vertical pulse. In head-on light the shadows shorten and the surface softens into a gentle wave.",
+    "faq": [
+     {
+      "q": "What size are Antiphon panels, and how are they laid?",
+      "a": "Antiphon is designed as a 600 × 600 mm panel, with the bands standing vertical. Laid side by side and one above another, the bands run continuous across the panel joints and the wall reads as one surface. The layout drawing sets where the pattern is cut at the edges of the wall."
+     },
+     {
+      "q": "How deep is the Antiphon relief?",
+      "a": "From the crown of each almond down to the grooves where the bands meet, the relief is 15 mm deep. The transitions are soft curves rather than sharp edges."
+     }
+    ]
    }
   },
   {
@@ -314,7 +380,18 @@
     ],
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
-    "drawing_alt": "Cantilena panelinin derinlik haritası: servi, lale, karanfil ve gül motiflerinin gri tonlarla çizimi"
+    "drawing_alt": "Cantilena panelinin derinlik haritası: servi, lale, karanfil ve gül motiflerinin gri tonlarla çizimi",
+    "use": "Cantilena bir duvarın odağı olarak tek başına durabilir ya da düz yüzeylerin arasında tek bir vurgu olarak yer alabilir. Uzaktan bir siluet, yakından ayrıntı verdiği için hem uzak hem yakın bakış mesafesinde okunur. Yalama ışıkta motifler gölge düşürür, dik ışıkta panel sakinleşir.",
+    "faq": [
+     {
+      "q": "Cantilena'nın ölçüsü nedir, nasıl yerleştirilir?",
+      "a": "Cantilena 600 × 600 mm ölçüsünde tek bir paneldir ve bir tekrar birimi olarak çizilmemiştir: kompozisyon panelin içinde başlar ve biter, bu yüzden paneller yan yana dizilerek bir desen kurmaz. Duvarda tek başına ya da düz yüzeylerin arasında yer alır."
+     },
+     {
+      "q": "Cantilena'nın rölyefi ne kadar derin?",
+      "a": "Rölyef 16 mm derinliğe ulaşır. Bu derinlik motiflerin kenarlarında net gölgeler, yapraklar arasında okunur ayrımlar verir; ışığın açısı değiştikçe servinin gövdesi, lale taçları ve gül yaprakları sırayla öne çıkar."
+     }
+    ]
    },
    "en": {
     "name": "Cantilena",
@@ -350,7 +427,18 @@
     ],
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
-    "drawing_alt": "Depth map of the Cantilena panel: the cypress, tulip, carnation and rose motifs drawn in grey tones"
+    "drawing_alt": "Depth map of the Cantilena panel: the cypress, tulip, carnation and rose motifs drawn in grey tones",
+    "use": "Cantilena can hold a wall on its own as the focal point, or sit between plain surfaces as a single accent. It gives a silhouette from across the room and detail up close, so it reads at both far and near viewing distances. In raking light the motifs throw shadow; in head-on light the panel calms.",
+    "faq": [
+     {
+      "q": "What size is Cantilena, and how is it placed?",
+      "a": "Cantilena is a single 600 × 600 mm panel, not a repeat unit: its composition begins and ends inside the panel, so panels are not laid side by side to make a pattern. It stands on a wall alone or between plain surfaces."
+     },
+     {
+      "q": "How deep is the Cantilena relief?",
+      "a": "The relief reaches 16 mm. That depth gives crisp shadows at the edges of the motifs and legible breaks between the leaves; as the angle of the light changes, the cypress trunk, the tulip heads and the rose petals come forward in turn."
+     }
+    ]
    }
   },
   {
@@ -369,7 +457,7 @@
     "alt": "Lale goncaları, rozetler ve tırtıllı yapraklardan oluşan çiçekli rölyef yüzey, yalama ışık altında",
     "object_alt": "Fioritura panelinin yalama ışıkta render'ı",
     "strip_alt": "Fioritura panellerinden oluşan bir duvar şeridinin render'ı",
-    "title": "Fioritura: Osmanlı Çiçek Motifli Rölyef Duvar Paneli | Studio Luminant",
+    "title": "Fioritura: Osmanlı Çiçek Motifli Rölyef | Studio Luminant",
     "meta": "Lale goncaları, rozetler ve tırtıllı yapraklar, kıvrılan dallarla bağlanır. Desen panel kenarlarında kesilmeden sürer. Lumina PMAG™ ile Sapanca'da dökülür.",
     "sections": [
      {
@@ -394,7 +482,18 @@
     ],
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
-    "drawing_alt": "Fioritura panelinin derinlik haritası: lale, rozet ve yaprak motiflerinin gri tonlarla çizimi"
+    "drawing_alt": "Fioritura panelinin derinlik haritası: lale, rozet ve yaprak motiflerinin gri tonlarla çizimi",
+    "use": "Desen 300 mm'de bir tekrar ettiği için Fioritura geniş bir duvarı, bir nişi ya da bir kolon yüzünü aynı dokuyla örtebilir. Yalama ışıkta rozetler birer nokta gibi parlar, dallar aralarındaki gölgeyle çizilir. Dik ışıkta yüzey ince, düzgün bir dokuya döner ve çiçekler ancak yakından bakınca seçilir.",
+    "faq": [
+     {
+      "q": "Fioritura panellerinin ölçüsü nedir, nasıl dizilir?",
+      "a": "Fioritura 600 × 600 mm ölçüsünde panellerle kurulur ve desen 300 mm'de bir tekrar eder. Paneller yan yana dizildiğinde desen ve dallar panel derzlerinde kesilmeden sürer; duvar tek bir çiçek alanı olarak okunur. Duvarın kenarlarında desenin nerede kesileceğini yerleşim çiziminde sizinle birlikte belirleriz."
+     },
+     {
+      "q": "Fioritura'nın rölyefi ne kadar derin?",
+      "a": "Rölyef 16 mm derinliğe ulaşır. Rozetlerin göbekleri ve yaprak sırtları öne çıkar, zemin geride kalır; bu derinlik farkıyla yapraklar kendi gölgelerini düşürür."
+     }
+    ]
    },
    "en": {
     "name": "Fioritura",
@@ -405,7 +504,7 @@
     "alt": "Floral relief surface of tulip buds, rosettes and serrated leaves, in low raking light",
     "object_alt": "Render of the Fioritura panel in raking light",
     "strip_alt": "Render of a wall strip laid in Fioritura panels",
-    "title": "Fioritura: Ottoman Floral Relief Wall Panel | Studio Luminant",
+    "title": "Fioritura: Ottoman Floral Relief Panel | Studio Luminant",
     "meta": "Tulip buds, rosettes and serrated leaves linked by winding stems, running unbroken across the panel edges. Cast in Lumina PMAG™ in Sapanca, Turkey.",
     "sections": [
      {
@@ -430,7 +529,18 @@
     ],
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
-    "drawing_alt": "Depth map of the Fioritura panel: the tulip, rosette and leaf motifs drawn in grey tones"
+    "drawing_alt": "Depth map of the Fioritura panel: the tulip, rosette and leaf motifs drawn in grey tones",
+    "use": "With a repeat every 300 mm, Fioritura can cover a broad wall, a niche or a column face in the same texture. In raking light the rosettes catch it like points and the stems are drawn by the shadow between them. In head-on light the surface turns to a fine, even texture, and the flowers separate only at close range.",
+    "faq": [
+     {
+      "q": "What size are Fioritura panels, and how are they laid?",
+      "a": "Fioritura is laid in 600 × 600 mm panels, and the pattern repeats every 300 mm. Laid side by side, the pattern and its stems run on from panel to panel, and the wall reads as a single field of flowers. Where the pattern is cut at the edges of the wall, we agree with you on the layout drawing."
+     },
+     {
+      "q": "How deep is the Fioritura relief?",
+      "a": "The relief reaches 16 mm. The hearts of the rosettes and the spines of the leaves stand forward while the ground falls back, so the leaves cast their own shadows."
+     }
+    ]
    }
   },
   {
@@ -474,7 +584,18 @@
     ],
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, duvarın her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
-    "drawing_alt": "Fugato duvarının derinlik haritası: oluklu plakaların kaydırmalı sıralarının gri tonlarla çizimi"
+    "drawing_alt": "Fugato duvarının derinlik haritası: oluklu plakaların kaydırmalı sıralarının gri tonlarla çizimi",
+    "use": "Tavana kadar çıkan ve ışığı yandan alan bir duvar, Fugato'nun en güçlü okunduğu yerdir. Plakalar 400 mm yüksekliğinde, kaydırmalı sıralarla yükselir. Oluklar derin olduğu için yalama ışıkta her oluk uzun, net bir gölge düşürür ve duvar dikey gölge çizgileri olarak okunur. Işık dikleştikçe gölgeler kısalır, oluklar yumuşak bir kıvrıma döner.",
+    "faq": [
+     {
+      "q": "Fugato plakalarının ölçüsü nedir, nasıl dizilir?",
+      "a": "Fugato 600 × 400 mm'lik plakalarla, 400 mm yüksekliğinde sıralar halinde kurulur. Profil üç kalıba bölünmüştür; her plaka olduğu gibi ya da 180 derece çevrilerek takılabildiği için üç kalıptan altı farklı plaka çıkar. Her sıra bir öncekine göre kaydırılır, en kısa kenar parçası 90 mm'nin altına düşmez ve tavana ulaşan son sıra yerinde kesilir. Kaydırmaların ve kesimlerin yeri yerleşim çiziminde belirlenir."
+     },
+     {
+      "q": "Fugato'nun rölyefi ne kadar derin?",
+      "a": "Oluklar 40 mm derinliğe iner. Plaka uçları aynı düz sırtta biter, bu yüzden her plaka komşusuyla düz bir yüzeyde, alın alına buluşur."
+     }
+    ]
    },
    "en": {
     "name": "Fugato",
@@ -510,7 +631,18 @@
     ],
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the wall in grey tones. The render at the top of the page is computed from it.",
-    "drawing_alt": "Depth map of the Fugato wall: the staggered courses of coved plates drawn in grey tones"
+    "drawing_alt": "Depth map of the Fugato wall: the staggered courses of coved plates drawn in grey tones",
+    "use": "Fugato is at its strongest on a full-height wall that takes its light from the side. The plates rise in staggered courses 400 mm high, and the coves run deep, so in raking light each one throws a long, crisp shadow and the wall reads as vertical lines of shadow. As the light turns head-on the shadows shorten and the coves soften into a gentle curve.",
+    "faq": [
+     {
+      "q": "What size are Fugato plates, and how are they laid?",
+      "a": "Fugato is laid in 600 × 400 mm plates, in courses 400 mm high. The profile is split across three moulds, and each plate can go in as cast or turned through 180 degrees, so three moulds give six different plates. Each course is staggered against the one below, no end piece is shorter than 90 mm, and the top course is cut on site where it meets the ceiling. The staggers and cuts are set out on the layout drawing."
+     },
+     {
+      "q": "How deep is the Fugato relief?",
+      "a": "The coves go 40 mm deep. Every plate ends on the same flat ridge, so each one meets its neighbour flush, end to end."
+     }
+    ]
    }
   },
   {
@@ -555,7 +687,18 @@
     ],
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
-    "drawing_alt": "Glissando panelinin derinlik haritası: akan liflerin gri tonlarla çizimi"
+    "drawing_alt": "Glissando panelinin derinlik haritası: akan liflerin gri tonlarla çizimi",
+    "use": "Glissando uzun ve yüksek duvarlar için kurgulanmıştır; lifler dikey bir akışla ilerler ve yüksek bir duvar bu akışı tüm boyuyla gösterir. Sayfadaki render'lar tasarımı bir oturma odasında, bir klinikte ve bir spada gösterir. Motifi olmayan, yalnızca ritmi olan bir rölyef olduğu için mekânın arka planında sakin kalır; lifler ancak yalama ışıkta keskinleşir.",
+    "faq": [
+     {
+      "q": "Glissando panellerinin ölçüsü nedir, nasıl dizilir?",
+      "a": "Glissando 600 × 1200 mm ölçüsünde dikey bir paneldir; paneller yarım boy, yani 600 mm şaşırtılarak dizilir. Şaşırtmanın duvarın kenarlarında nasıl biteceği yerleşim çiziminde çözülür."
+     },
+     {
+      "q": "Glissando'nun rölyefi ne kadar derin?",
+      "a": "Lifler 3 mm'lik bir zeminden 14 mm'ye kadar yükselir. Zemin sakin kalır, lifler bu zeminin üzerinde derinlik kazanır; yüzeyin büyük bölümü düz bir düzlem olarak okunur."
+     }
+    ]
    },
    "en": {
     "name": "Glissando",
@@ -591,7 +734,18 @@
     ],
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
-    "drawing_alt": "Depth map of the Glissando panel: the drifting fibres drawn in grey tones"
+    "drawing_alt": "Depth map of the Glissando panel: the drifting fibres drawn in grey tones",
+    "use": "Glissando is laid out for long, tall walls: the fibres run in a vertical flow, and a tall wall shows that flow at its full height. The renders on this page show it in a living room, a clinic and a spa. It is a relief with rhythm and no motif, so it stays quiet in the background of a room, and the fibres sharpen only in raking light.",
+    "faq": [
+     {
+      "q": "What size are Glissando panels, and how are they laid?",
+      "a": "Glissando is a vertical 600 × 1200 mm panel, laid in half-height running bond: each panel is offset by 600 mm against its neighbour. How the offset ends at the edges of the wall is worked out on the layout drawing."
+     },
+     {
+      "q": "How deep is the Glissando relief?",
+      "a": "The fibres rise from a 3 mm ground to 14 mm. The ground stays calm and the fibres gain their depth above it, so most of the surface reads as a flat plane."
+     }
+    ]
    },
    "rooms": [
     {
@@ -656,26 +810,48 @@
    "tr": {
     "name": "Gruppetto",
     "story": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor.",
-    "title": "Gruppetto: Rölyef Duvar Tasarımı | Studio Luminant",
+    "title": "Gruppetto: Yelpaze Desenli Rölyef Paneli | Studio Luminant",
     "meta": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
     "wall_alt": "Render: Gruppetto, duvar çalışması",
     "wall_cap": "Render: Gruppetto, duvar çalışması.",
     "card_alt": "Render: Gruppetto, yüzeyin yakın planı",
     "card_cap": "Render: Gruppetto, yakın plan.",
     "sketch_alt": "Çizim: Gruppetto kalıpları ve duvardaki dizilişleri",
-    "sketch_cap": "Çizim: Gruppetto, kalıplar ve diziliş."
+    "sketch_cap": "Çizim: Gruppetto, kalıplar ve diziliş.",
+    "use": "Yatayda uzanan bir duvar, Gruppetto'nun uzun S eğrilerine yer açar; her eğri birkaç parça boyunca sürer. Sayfadaki render'larda tasarım bir barda tezgâhın arkasındaki duvarda ve bir kafede küçük masaların yanındaki duvarda yer alır; ilkinde duvar kiremit rengine, ikincisinde açık bir taş rengine boyanmıştır. Eğriler yandan gelen ışıkta belirginleşir, dik ışıkta sakinleşir.",
+    "faq": [
+     {
+      "q": "Gruppetto hangi parçalardan oluşur, duvara nasıl dizilir?",
+      "a": "Duvar, tek bir yelpaze biçiminin tekrarıyla kurulur; S eğrilerini parçaların duvara diziliş yönü oluşturur. Sayfadaki çizim bu dizilişi gösterir. Duvarınızın ölçülerini iletirseniz, Gruppetto'nun o duvara nasıl yerleşeceğini bir yerleşim çiziminde gösteririz; duvarın kenarları, kolon yüzleri ve dış köşeler de bu çizimde çözülür."
+     },
+     {
+      "q": "Gruppetto'nun rölyefi ne kadar derin?",
+      "a": "Derinlik, sayfadaki yakın plan render'da görülür. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
+     }
+    ]
    },
    "en": {
     "name": "Gruppetto",
     "story": "One fan-shaped form, designed by us and laid in long S-curves.",
-    "title": "Gruppetto: Relief Wall Design | Studio Luminant",
+    "title": "Gruppetto: Fan-Pattern Relief Wall Panel | Studio Luminant",
     "meta": "One fan-shaped form, designed by us and laid in long S-curves. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
     "wall_alt": "Render: Gruppetto, wall study",
     "wall_cap": "Render: Gruppetto, wall study.",
     "card_alt": "Render: Gruppetto, close view of the surface",
     "card_cap": "Render: Gruppetto, close view.",
     "sketch_alt": "Drawing: the Gruppetto moulds and how they are laid on the wall",
-    "sketch_cap": "Drawing: Gruppetto, moulds and lay."
+    "sketch_cap": "Drawing: Gruppetto, moulds and lay.",
+    "use": "A wall that stretches out horizontally gives Gruppetto's long S-curves room to run, each one over several pieces. In the renders on this page it sits on the wall behind a bar counter and beside the small tables of a café, painted terracotta in the first and a pale stone colour in the second. The curves sharpen in raking light and settle in head-on light.",
+    "faq": [
+     {
+      "q": "What pieces make up Gruppetto, and how are they laid?",
+      "a": "The wall is laid from one fan-shaped form, repeated; the S-curves come from the direction in which the pieces are laid. The drawing on this page shows that lay. Send the dimensions of your wall and we show how Gruppetto sits on it in a layout drawing; the edges of the wall, column faces and outside corners are worked out on the same drawing."
+     },
+     {
+      "q": "How deep is the Gruppetto relief?",
+      "a": "The depth shows in the close-up render on this page. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
+     }
+    ]
    },
    "drawing": {
     "tr": {
@@ -726,26 +902,48 @@
    "tr": {
     "name": "Hemiola",
     "story": "Her biri eğik bir açıklık taşıyan bloklardan, elle dizilmiş gibi okunan bir duvar çizdik.",
-    "title": "Hemiola: Rölyef Duvar Tasarımı | Studio Luminant",
+    "title": "Hemiola: Eğik Açıklıklı Rölyef Blokları | Studio Luminant",
     "meta": "Her biri eğik bir açıklık taşıyan bloklardan, elle dizilmiş gibi okunan bir duvar çizdik. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
     "wall_alt": "Render: Hemiola, duvar çalışması, 1,5 mm derz",
     "wall_cap": "Render: Hemiola, duvar çalışması, 1,5 mm derz.",
     "card_alt": "Render: Hemiola, blokların 1,5 mm derzle yan yana dizildiği yakın plan",
     "card_cap": "Render: Hemiola, yakın plan, 1,5 mm derz.",
     "sketch_alt": "Çizim: Hemiola kalıpları ve duvardaki dizilişleri",
-    "sketch_cap": "Çizim: Hemiola, kalıplar ve diziliş."
+    "sketch_cap": "Çizim: Hemiola, kalıplar ve diziliş.",
+    "use": "Hemiola, her biri eğik bir açıklık taşıyan bloklardan kurulur ve elle örülmüş bir duvar gibi okunur; bloklar arasında 1,5 mm'lik bir derz kalır. Sayfadaki render'larda tasarım iki yerde görünür: bir lobide oturma grubunun arkasında yükselen bir duvar olarak ve bir restoranda yemek alanıyla barın arasında. Rölyef yandan gelen ışıkta belirginleşir, dik ışıkta sakinleşir.",
+    "faq": [
+     {
+      "q": "Hemiola hangi parçalardan oluşur, duvara nasıl dizilir?",
+      "a": "Duvar, dört kalıptan (A, B, C ve D) dökülen bloklarla kurulur ve bloklar arasında 1,5 mm'lik bir derz bırakılır. Kalıpların harfleri, sayfadaki çizimde her bloğun duvardaki yerini gösterir. Duvarınızın ölçülerini iletirseniz, Hemiola'nın o duvara nasıl yerleşeceğini bir yerleşim çiziminde gösteririz; duvarın kenarları, kolon yüzleri ve dış köşeler de bu çizimde çözülür."
+     },
+     {
+      "q": "Hemiola'nın rölyefi ne kadar derin?",
+      "a": "Derinlik, sayfadaki yakın plan render'da görülür. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
+     }
+    ]
    },
    "en": {
     "name": "Hemiola",
     "story": "A wall of blocks, each with an opening turned off square, drawn to read as hand-set.",
-    "title": "Hemiola: Relief Wall Design | Studio Luminant",
+    "title": "Hemiola: Skewed-Opening Block Relief Wall | Studio Luminant",
     "meta": "A wall of blocks, each with an opening turned off square, drawn to read as hand-set. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
     "wall_alt": "Render: Hemiola, wall study, 1.5 mm joint",
     "wall_cap": "Render: Hemiola, wall study, 1.5 mm joint.",
     "card_alt": "Render: Hemiola, close view of the blocks laid together with a 1.5 mm joint",
     "card_cap": "Render: Hemiola, close view, 1.5 mm joint.",
     "sketch_alt": "Drawing: the Hemiola moulds and how they are laid on the wall",
-    "sketch_cap": "Drawing: Hemiola, moulds and lay."
+    "sketch_cap": "Drawing: Hemiola, moulds and lay.",
+    "use": "Hemiola is built from blocks, each with an opening turned off square, and reads as a wall laid by hand; a 1.5 mm joint runs between the blocks. The renders on this page show it in two places: rising behind the seating of a lobby lounge, and between the dining area and the bar of a restaurant. The relief comes forward in raking light and settles in head-on light.",
+    "faq": [
+     {
+      "q": "What pieces make up Hemiola, and how are they laid?",
+      "a": "The wall is laid from blocks cast in four moulds, A to D, with a 1.5 mm joint between them. The letters show where each block sits in the lay drawn on this page. Send the dimensions of your wall and we show how Hemiola sits on it in a layout drawing; the edges of the wall, column faces and outside corners are worked out on the same drawing."
+     },
+     {
+      "q": "How deep is the Hemiola relief?",
+      "a": "The depth shows in the close-up render on this page. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
+     }
+    ]
    },
    "moulds": [
     {
@@ -848,7 +1046,18 @@
     ],
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
-    "drawing_alt": "Hocket panelinin derinlik haritası: örgünün gri tonlarla çizimi"
+    "drawing_alt": "Hocket panelinin derinlik haritası: örgünün gri tonlarla çizimi",
+    "use": "Hocket'in deseni bir motif değil bir doku olduğu için geniş bir yüzeyi tek başına doldurabilir. Yalama ışıkta üstte kalan bantlar alttakilere gölge düşürür ve örgü derinlik kazanır. Dik ışıkta gölgeler kısalır, örgü yumuşak bir dokuya döner.",
+    "faq": [
+     {
+      "q": "Hocket panellerinin ölçüsü nedir, nasıl dizilir?",
+      "a": "Hocket 600 × 600 mm ölçüsünde bir panel olarak tasarlanmıştır. Dalgalı bantlar 100 mm, dikey bantlar 75 mm genişliğindedir; dalgalı bir bant beş ile yedi dikey bandın üstünden geçer, sonra bir ile üç bandın altına iner. Örgü panel derzlerinde kesilmez ve duvar sık dokunmuş tek bir yüzey gibi okunur. Desenin duvar kenarlarında nerede kesileceği yerleşim çiziminde belirlenir."
+     },
+     {
+      "q": "Hocket'in rölyefi ne kadar derin?",
+      "a": "Rölyef 16 mm derinliğe ulaşır ve ince oluklar her bandı birkaç şeride ayırır; bu yüzden yüzey ışığı sık çizgiler halinde yakalar."
+     }
+    ]
    },
    "en": {
     "name": "Hocket",
@@ -884,7 +1093,18 @@
     ],
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
-    "drawing_alt": "Depth map of the Hocket panel: the weave drawn in grey tones"
+    "drawing_alt": "Depth map of the Hocket panel: the weave drawn in grey tones",
+    "use": "Hocket's pattern is a texture rather than a motif, so it can fill a broad wall on its own. In raking light the bands on top cast shadows onto the bands beneath and the weave gains depth; in head-on light the shadows shorten and the weave softens into an even texture.",
+    "faq": [
+     {
+      "q": "What size are Hocket panels, and how are they laid?",
+      "a": "Hocket is designed as a 600 × 600 mm panel. The wavy bands are 100 mm wide and the vertical bands 75 mm; a wavy band passes over five to seven vertical bands, then dips under one to three. The weave runs continuous across the panel joints and the wall reads as one closely woven surface. The layout drawing sets where the pattern is cut at the edges of the wall."
+     },
+     {
+      "q": "How deep is the Hocket relief?",
+      "a": "The relief reaches 16 mm, and fine grooves split each band into several strands, so the surface catches the light in close lines."
+     }
+    ]
    }
   },
   {
@@ -899,26 +1119,48 @@
    "tr": {
     "name": "Melisma",
     "story": "İnce çizgilerden bir labirent kurduk ve onu duvar boyunca tek bir akıntı gibi akıttık.",
-    "title": "Melisma: Rölyef Duvar Tasarımı | Studio Luminant",
+    "title": "Melisma: Labirent Desenli Rölyef Paneli | Studio Luminant",
     "meta": "İnce çizgilerden bir labirent kurduk ve onu duvar boyunca tek bir akıntı gibi akıttık. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
     "wall_alt": "Render: Melisma, duvar çalışması",
     "wall_cap": "Render: Melisma, duvar çalışması.",
     "card_alt": "Render: Melisma, yüzeyin yakın planı",
     "card_cap": "Render: Melisma, yakın plan.",
     "sketch_alt": "Çizim: Melisma kalıpları ve duvardaki dizilişleri",
-    "sketch_cap": "Çizim: Melisma, kalıplar ve diziliş."
+    "sketch_cap": "Çizim: Melisma, kalıplar ve diziliş.",
+    "use": "Melisma'nın labirenti tek bir parçada değil, duvarın bütününde okunur; ince çizgiler duvar boyunca tek bir akıntı gibi ilerler. Sayfadaki dört render'da tasarım duvarı uçtan uca örter: bir otel lobisinde oturma grubunun ve resepsiyonun arkasında, bir oturma odasında kanepenin arkasında, bir restoranda masaların boyunca ve bir spada dinlenme yataklarının arkasında. Duvar her render'da başka bir renge boyanmıştır; ince çizgiler yandan gelen ışıkta belirginleşir.",
+    "faq": [
+     {
+      "q": "Melisma hangi parçalardan oluşur, duvara nasıl dizilir?",
+      "a": "Duvar, iki kalıptan (A ve B) dökülen parçalarla kurulur. Kalıpların harfleri, sayfadaki çizimde her parçanın duvardaki yerini gösterir. Duvarınızın ölçülerini iletirseniz, Melisma'nın o duvara nasıl yerleşeceğini bir yerleşim çiziminde gösteririz; duvarın kenarları, kolon yüzleri ve dış köşeler de bu çizimde çözülür."
+     },
+     {
+      "q": "Melisma'nın rölyefi ne kadar derin?",
+      "a": "Derinlik, sayfadaki yakın plan render'da görülür. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
+     }
+    ]
    },
    "en": {
     "name": "Melisma",
     "story": "A maze of fine lines that we let run the length of the wall as one current.",
-    "title": "Melisma: Relief Wall Design | Studio Luminant",
+    "title": "Melisma: Fine-Line Maze Relief Wall Panel | Studio Luminant",
     "meta": "A maze of fine lines that we let run the length of the wall as one current. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
     "wall_alt": "Render: Melisma, wall study",
     "wall_cap": "Render: Melisma, wall study.",
     "card_alt": "Render: Melisma, close view of the surface",
     "card_cap": "Render: Melisma, close view.",
     "sketch_alt": "Drawing: the Melisma moulds and how they are laid on the wall",
-    "sketch_cap": "Drawing: Melisma, moulds and lay."
+    "sketch_cap": "Drawing: Melisma, moulds and lay.",
+    "use": "Melisma's maze reads across the whole wall rather than in any single piece, its fine lines running the length of the wall as one current. In all four renders on this page it covers a wall from end to end: behind the seating and reception desk of a hotel lobby, behind the sofa of a living room, along the tables of a restaurant and behind the daybeds of a spa. Each render paints the wall a different colour, and the fine lines come forward in raking light.",
+    "faq": [
+     {
+      "q": "What pieces make up Melisma, and how are they laid?",
+      "a": "The wall is laid from pieces cast in two moulds, A and B. The letters show where each piece sits in the lay drawn on this page. Send the dimensions of your wall and we show how Melisma sits on it in a layout drawing; the edges of the wall, column faces and outside corners are worked out on the same drawing."
+     },
+     {
+      "q": "How deep is the Melisma relief?",
+      "a": "The depth shows in the close-up render on this page. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
+     }
+    ]
    },
    "moulds": [
     {
@@ -1009,7 +1251,7 @@
     "alt": "Farklı büyüklükte, yuvarlak tepeli hücrelerden oluşan rölyef duvar, yalama ışık altında",
     "object_alt": "Mezzavoce panelinin yalama ışıkta render'ı",
     "strip_alt": "Mezzavoce panellerinden oluşan bir duvar şeridinin render'ı",
-    "title": "Mezzavoce: Yastık Hücreli Rölyef Duvar Paneli | Studio Luminant",
+    "title": "Mezzavoce: Yastık Hücreli Rölyef Paneli | Studio Luminant",
     "meta": "Farklı büyüklükte hücrelerden düzensiz bir ağ; her hücre yuvarlak bir tepeye kabarır. Lumina PMAG™ ile Sapanca'da dökülür.",
     "sections": [
      {
@@ -1034,7 +1276,18 @@
     ],
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
-    "drawing_alt": "Mezzavoce panelinin derinlik haritası: hücre ağının gri tonlarla çizimi"
+    "drawing_alt": "Mezzavoce panelinin derinlik haritası: hücre ağının gri tonlarla çizimi",
+    "use": "Mezzavoce'nin ağı hiçbir yönde düz bir sıra oluşturmaz; duvar bir desen değil, yumuşak bir doku olarak okunur ve bu yüzden Mezzavoce bütün bir duvarı örtebilir. Yalama ışıkta birleşme çizgileri ince, kırık bir ağ gibi belirir; dik ışıkta yüzey sakin, düzgün bir dokuya döner.",
+    "faq": [
+     {
+      "q": "Mezzavoce panellerinin ölçüsü nedir, nasıl dizilir?",
+      "a": "Mezzavoce 1200 × 600 mm ölçüsünde bir panel olarak tasarlanmıştır. Hücreler aynı büyüklükte değildir; büyükler küçüklerin arasına dağılır ve ağ panel derzlerinde kesilmez. Paneller yan yana ve üst üste dizildiğinde duvar tek bir yüzey olarak okunur. Desenin duvar kenarlarında nerede kesileceği yerleşim çiziminde belirlenir."
+     },
+     {
+      "q": "Mezzavoce'nin rölyefi ne kadar derin?",
+      "a": "Hücrelerin tepesinden birleşme çizgilerine kadar rölyef 18 mm derinliğe iner; tepeler yüzeyin en yüksek, birleşme çizgileri en derin yeridir ve her hücre kenarından ortasına doğru yumuşakça kabarır."
+     }
+    ]
    },
    "en": {
     "name": "Mezzavoce",
@@ -1045,7 +1298,7 @@
     "alt": "Relief wall of rounded cells in many sizes, in low raking light",
     "object_alt": "Render of the Mezzavoce panel in raking light",
     "strip_alt": "Render of a wall strip laid in Mezzavoce panels",
-    "title": "Mezzavoce: Cushioned-Cell Relief Wall Panel | Studio Luminant",
+    "title": "Mezzavoce: Cushioned-Cell Relief Panel | Studio Luminant",
     "meta": "An irregular net of cells in many sizes, each swelling into a rounded crown. Cast in Lumina PMAG™ in Sapanca, Turkey.",
     "sections": [
      {
@@ -1070,7 +1323,18 @@
     ],
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
-    "drawing_alt": "Depth map of the Mezzavoce panel: the net of cells drawn in grey tones"
+    "drawing_alt": "Depth map of the Mezzavoce panel: the net of cells drawn in grey tones",
+    "use": "Mezzavoce's network forms no straight row in any direction, so the wall reads as a soft texture rather than a pattern and can cover a whole wall. In raking light the seams show as a fine, broken net; in head-on light the surface settles into a calm, even texture.",
+    "faq": [
+     {
+      "q": "What size are Mezzavoce panels, and how are they laid?",
+      "a": "Mezzavoce is designed as a 1200 × 600 mm panel. The cells are not all one size: the large ones are scattered among the small, and the network runs continuous across the panel joints. Laid side by side and one above another, the panels read as one surface. The layout drawing sets where the pattern is cut at the edges of the wall."
+     },
+     {
+      "q": "How deep is the Mezzavoce relief?",
+      "a": "From the crown of each cell down to the seams, the relief is 18 mm deep; each cell swells gently from its edge to its centre."
+     }
+    ]
    }
   },
   {
@@ -1118,7 +1382,18 @@
     ],
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
-    "drawing_alt": "Ricercar panelinin derinlik haritası: Gotik dört yapraklı yonca kafesinin gri tonlarla çizimi"
+    "drawing_alt": "Ricercar panelinin derinlik haritası: Gotik dört yapraklı yonca kafesinin gri tonlarla çizimi",
+    "use": "Geniş bir duvar, bir kolon yüzü ya da bir bölme paneli aynı desenle örtülebilir: Ricercar'ın kafesi 600 mm'de bir tekrarlanır ve paneller yan yana dizildikçe duvar boyunca sürer. Sayfadaki render'lar tasarımı bir otel lobisinde, bir barda, bir restoranda ve bir kafede gösterir. Rölyef sığ olduğu için desen ağır bir kütle değil, ince bir çizgi ağı olarak okunur.",
+    "faq": [
+     {
+      "q": "Ricercar panellerinin ölçüsü nedir, nasıl dizilir?",
+      "a": "Ricercar 600 × 600 mm ölçüsünde bir tekrar birimiyle tasarlanmıştır; kafes panel derzlerinde kesilmez ve 600 mm'de bir kendini tekrarlar. Kafes tekrar ettiği için duvarın kenarlarında ve köşelerinde desenin nerede kesileceğini yerleşim çiziminde sizinle birlikte belirleriz."
+     },
+     {
+      "q": "Ricercar'ın rölyefi ne kadar derin?",
+      "a": "Rölyef 6 mm'dir. Bu derinlikte kafesin çizgileri yumuşak ve düzenli kalır; yalama ışıkta yoncaların kenarları belirginleşir, dik ışıkta kafes geri plana çekilir."
+     }
+    ]
    },
    "en": {
     "name": "Ricercar",
@@ -1154,7 +1429,18 @@
     ],
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
-    "drawing_alt": "Depth map of the Ricercar panel: the Gothic quatrefoil lattice drawn in grey tones"
+    "drawing_alt": "Depth map of the Ricercar panel: the Gothic quatrefoil lattice drawn in grey tones",
+    "use": "A broad wall, a column face or a partition panel can all take the same pattern: Ricercar's lattice repeats every 600 mm and runs on along the wall as the panels are laid side by side. The renders on this page show it in a hotel lobby, a bar, a restaurant and a café. The relief is shallow, so the pattern reads as a fine network of lines rather than a heavy mass.",
+    "faq": [
+     {
+      "q": "What size are Ricercar panels, and how are they laid?",
+      "a": "Ricercar is designed on a 600 × 600 mm repeat unit: the lattice runs continuous across the panel joints and repeats every 600 mm. Because it repeats, where the pattern is cut at the edges and corners of the wall is agreed with you on the layout drawing."
+     },
+     {
+      "q": "How deep is the Ricercar relief?",
+      "a": "The relief is 6 mm. At that depth the lines of the lattice stay soft and even; in raking light the edges of the quatrefoils sharpen, and in head-on light the lattice recedes."
+     }
+    ]
    },
    "rooms": [
     {
@@ -1219,26 +1505,48 @@
    "tr": {
     "name": "Rondeau",
     "story": "Yuvarlak tek bir form çizdik; duvarda bir alan olarak döşeniyor.",
-    "title": "Rondeau: Rölyef Duvar Tasarımı | Studio Luminant",
+    "title": "Rondeau: Yuvarlak Formlu Rölyef Paneli | Studio Luminant",
     "meta": "Yuvarlak tek bir form çizdik; duvarda bir alan olarak döşeniyor. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
     "wall_alt": "Render: Rondeau, duvar çalışması",
     "wall_cap": "Render: Rondeau, duvar çalışması.",
     "card_alt": "Render: Rondeau, yüzeyin yakın planı",
     "card_cap": "Render: Rondeau, yakın plan.",
     "sketch_alt": "Çizim: Rondeau kalıpları ve duvardaki dizilişleri",
-    "sketch_cap": "Çizim: Rondeau, kalıplar ve diziliş."
+    "sketch_cap": "Çizim: Rondeau, kalıplar ve diziliş.",
+    "use": "Rondeau tek bir yuvarlak formdan oluşur; form duvar boyunca tekrarlanarak yüzeyi baştan sona örter. Sayfadaki render'larda tasarım bir otel lobisinde resepsiyonun arkasındaki duvarda, bir restoranda duvar boyunca uzanan sedirin üstünde ve bir kahvehanede masaların arkasındaki duvarda yer alır. Yandan gelen ışık formların kenarlarını belirginleştirir; dik ışıkta yuvarlak formlar düzleşir gibi görünür.",
+    "faq": [
+     {
+      "q": "Rondeau hangi parçalardan oluşur, duvara nasıl dizilir?",
+      "a": "Duvar, üç kalıptan (A, B ve C) dökülen parçalar ve rölyefsiz düz parçalarla kurulur. Kalıpların harfleri, sayfadaki çizimde her parçanın duvardaki yerini gösterir. Duvarınızın ölçülerini iletirseniz, Rondeau'nun o duvara nasıl yerleşeceğini bir yerleşim çiziminde gösteririz; duvarın kenarları, kolon yüzleri ve dış köşeler de bu çizimde çözülür."
+     },
+     {
+      "q": "Rondeau'nun rölyefi ne kadar derin?",
+      "a": "Derinlik, sayfadaki yakın plan render'da görülür. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
+     }
+    ]
    },
    "en": {
     "name": "Rondeau",
     "story": "One round form, drawn once and laid as a field.",
-    "title": "Rondeau: Relief Wall Design | Studio Luminant",
+    "title": "Rondeau: Round-Form Relief Wall Panel | Studio Luminant",
     "meta": "One round form, drawn once and laid as a field. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
     "wall_alt": "Render: Rondeau, wall study",
     "wall_cap": "Render: Rondeau, wall study.",
     "card_alt": "Render: Rondeau, close view of the surface",
     "card_cap": "Render: Rondeau, close view.",
     "sketch_alt": "Drawing: the Rondeau moulds and how they are laid on the wall",
-    "sketch_cap": "Drawing: Rondeau, moulds and lay."
+    "sketch_cap": "Drawing: Rondeau, moulds and lay.",
+    "use": "Rondeau is one round form, repeated along the wall until it covers the surface from end to end. In the renders on this page it sits behind the reception desk of a hotel lobby, above the banquette of a restaurant and behind the tables of a coffee house. Raking light picks out the edges of the forms; in head-on light they seem to flatten.",
+    "faq": [
+     {
+      "q": "What pieces make up Rondeau, and how are they laid?",
+      "a": "The wall is laid from pieces cast in three moulds, A to C, plus plain pieces with no relief. The letters show where each piece sits in the lay drawn on this page. Send the dimensions of your wall and we show how Rondeau sits on it in a layout drawing; the edges of the wall, column faces and outside corners are worked out on the same drawing."
+     },
+     {
+      "q": "How deep is the Rondeau relief?",
+      "a": "The depth shows in the close-up render on this page. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
+     }
+    ]
    },
    "moulds": [
     {
