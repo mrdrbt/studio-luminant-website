@@ -294,7 +294,12 @@ def pager_html(data, d, lang):
 """
 
 
-def door_html(lang):
+def contact_href(lang, d):
+    """The contact page link of a design page, carrying the design so the enquiry names it (?design=<slug>)."""
+    return f"{UI[lang]['contact']}?design={d['slug']}"
+
+
+def door_html(lang, d):
     u = UI[lang]
     return f"""
 <section class="sys-door" id="sys-door">
@@ -302,7 +307,7 @@ def door_html(lang):
     <p>{u['door']}</p>
     <p>{u['corners']}</p>
     <div class="sys-door__links">
-      <a href="{u['contact']}" class="sys-link">{u['cta']}</a>
+      <a href="{contact_href(lang, d)}" class="sys-link">{u['cta']}</a>
       <span class="sys-door__own">{u['own']} <a href="{u['bespoke_href']}" class="sys-link">{u['bespoke']}</a></span>
     </div>
   </div>
@@ -373,7 +378,7 @@ def relief_page(data, d, lang, figs):
     <h1 class="sys-name">{esc(c['name'])}</h1>
     <p class="sys-lede">{nb(txt(c['lede']))}</p>
     <div class="sys-ctas">
-      <a href="{u['contact']}" class="btn-primary">{u['cta']}</a>{share_btn}
+      <a href="{contact_href(lang, d)}" class="btn-primary">{u['cta']}</a>{share_btn}
     </div>
   </div>
   <div class="sys-hero__stage">
@@ -396,7 +401,7 @@ def relief_page(data, d, lang, figs):
 {sections}
   </div>
 </section>
-{room_html(d, lang, pre)}{pager_html(data, d, lang)}{door_html(lang)}
+{room_html(d, lang, pre)}{pager_html(data, d, lang)}{door_html(lang, d)}
 {share_dialog_html(lang) if share else ""}""" + tail(lang, scripts))
 
 
@@ -456,7 +461,7 @@ def study_page(data, d, lang, sizes):
     <h1 class="sys-name">{esc(c['name'])}</h1>
     <p class="sys-lede">{txt(c['story'])}</p>
     <div class="sys-ctas">
-      <a href="{u['contact']}" class="btn-primary">{u['cta']}</a>{share_btn}
+      <a href="{contact_href(lang, d)}" class="btn-primary">{u['cta']}</a>{share_btn}
     </div>
   </div>
   <figure class="dsg-hero__img">
@@ -494,7 +499,7 @@ def study_page(data, d, lang, sizes):
     </figure>
   </div>
 </section>
-{room_html(d, lang, pre)}{pager_html(data, d, lang)}{door_html(lang)}
+{room_html(d, lang, pre)}{pager_html(data, d, lang)}{door_html(lang, d)}
 {share_dialog_html(lang) if share else ""}""" + tail(lang, f'<script src="{pre}share.js"></script>\n' if share else ""))
 
 
@@ -916,6 +921,22 @@ def sync_netlify(text, parked, today):
     return text + ("" if text.endswith("\n") else eol) + eol + block
 
 
+OPTIONS_RE = re.compile(r"([ 	]*)<!-- design-options:begin -->.*?<!-- design-options:end -->", re.S)
+
+
+def sync_design_options(text, designs, lang):
+    """The <option> run of every design select on the contact page (between the design-options markers): every listed design,
+    alphabetical by display name, value = slug. The empty first option stays hand-written in the page."""
+    eol = _eol(text)
+    ordered = sorted(designs, key=lambda d: d[lang]["name"].casefold())
+
+    def block(m):
+        ind = m.group(1)
+        rows = "".join(f'{ind}<option value="{d["slug"]}">{esc(d[lang]["name"])}</option>{eol}' for d in ordered)
+        return f"{ind}<!-- design-options:begin -->{eol}{rows}{ind}<!-- design-options:end -->"
+    return OPTIONS_RE.sub(block, text)
+
+
 def site_sync(data, today=None):
     """{relative path: new text} for the site-wide design lists that differ from designs.json (pure: reads, never writes)."""
     today = today or date.today().isoformat()
@@ -927,6 +948,8 @@ def site_sync(data, today=None):
         "llms.txt": lambda t: sync_llms(t, designs, managed),
         "site-haritasi.htm": lambda t: sync_site_map(t, designs, "tr"),
         "en/site-map.htm": lambda t: sync_site_map(t, designs, "en"),
+        "iletisim.htm": lambda t: sync_design_options(t, designs, "tr"),
+        "en/contact.htm": lambda t: sync_design_options(t, designs, "en"),
         "netlify.toml": lambda t: sync_netlify(t, data.get("parked", []), today),
     }
     changed = {}

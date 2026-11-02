@@ -56,6 +56,7 @@ in the Formspree copy (hidden inputs) and in this event:
 |---|---|---|
 | `form_type` | `project` / `sample` | contact page forms only |
 | `source` | `contact-tr` | the form's hidden `source` |
+| `design` | `andante` | contact page forms only, when a design is chosen: the slug from the optional design select (prefilled by `?design=<slug>` on the design pages' enquiry links). Absent when none. The slug is also appended to the lead's message as `Design: <slug>` (lead-intake has no design column) and sent as the `design` field in the Formspree copy. |
 | `lead_magnet` / `firm` | `specifier-kit` | kit pages only (unchanged) |
 | `service_line` | `Özel Üretim` | one of `Özel Üretim` · `Atölye Tasarımları` · `Dosya talebi` · `Diğer` (same value on TR and EN). A `?service_line=ozel-uretim\|atolye\|dosya\|diger` key on any URL wins (QR, DM and PDF links); else the last door page seen (Systems pages → Atölye Tasarımları; surec / process / Tufetto → Özel Üretim); else Diğer. Kit requests are always Dosya talebi. |
 | `landing_path` | `/sistemler.htm` | first page of the session, no query |
