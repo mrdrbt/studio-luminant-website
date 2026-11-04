@@ -830,6 +830,30 @@
 
 # ─── Specifier Kit pulled until it is rebuilt (Burak 2026-10-19): kit pages and PDFs go to contact; temporary (302) ───
 [[redirects]]
+  from = "/tasarim-dosyasi"
+  to = "/iletisim.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/tasarim-dosyasi.html"
+  to = "/iletisim.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/en/specifier-kit"
+  to = "/en/contact.htm"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/en/specifier-kit.html"
+  to = "/en/contact.htm"
+  status = 302
+  force = true
+
+[[redirects]]
   from = "/tasarim-dosyasi.htm"
   to = "/iletisim.htm"
   status = 302
