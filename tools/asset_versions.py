@@ -26,7 +26,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SKIP_DIRS = {"docs", "node_modules", ".git", ".claude", "tools"}
+SKIP_DIRS = {"docs", "node_modules", ".git", ".claude", "tools", "_site"}
 
 # (href|src)="<path>.css|.js[?query][#frag]" — quoted, double or single.
 REF = re.compile(

@@ -1,5 +1,8 @@
+# Publish step, not the repo root: tools/publish_site.py copies only the public site into _site/.
+# A 404 redirect cannot hide a deployed file, since other casings of its URL still serve it.
 [build]
-  publish = "."
+  command = "python3 tools/publish_site.py"
+  publish = "_site"
 
 # ─── Pretty URLs OFF ───
 # Netlify's post-processing was rewriting every internal link from
@@ -130,86 +133,6 @@
   from = "/en/studioluminant.com.tr/*"
   to = "/:splat"
   status = 301
-  force = true
-
-# ─── Internal files — never served (Burak 2026-10-18) ───
-# docs/, tools/, CLAUDE.md, audits and build scripts sit in the publish root; 404 them.
-[[redirects]]
-  from = "/docs/*"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/tools/*"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/CLAUDE.md"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/TECHNICAL-SEO-AUDIT-2026-07-03.md"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/apply-internal-optout.py"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/apply-lead-event.py"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/apply-meta-pixel.py"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/optimize-images.py"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/transform-html.py"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/.claude/*"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/.githooks/*"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/.gitignore"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/image-manifest.json"
-  to = "/404.html"
-  status = 404
   force = true
 
 # ─── WordPress ghost URLs — 410 Gone ───

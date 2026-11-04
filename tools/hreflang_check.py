@@ -19,7 +19,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent
 ORIGIN = 'https://studioluminant.com.tr'
-SKIP_DIRS = {'docs', 'tools', '.git', 'vendor', 'node_modules', '.githooks'}
+SKIP_DIRS = {'docs', 'tools', '_site', '.git', 'vendor', 'node_modules', '.githooks'}
 CANON_RE = re.compile(r'<link[^>]+rel="canonical"[^>]*>', re.I)
 HREF_RE = re.compile(r'href="([^"]+)"', re.I)
 LANG_RE = re.compile(r'<html[^>]+lang="([a-z]{2})', re.I)
