@@ -20,8 +20,7 @@ Key facts for accurate citation:
 
 - [Studio Luminant — Bespoke Architectural Elements](https://studioluminant.com.tr/en/): Homepage — the two doors, Bespoke and Studio Designs.
 - [Bespoke](https://studioluminant.com.tr/en/process.htm): The Bespoke process, from the drawing to the depth map, raking-light approval, master, mould, cast and installation.
-- [Studio Designs](https://studioluminant.com.tr/en/designs.htm): Relief designs drawn by the studio, each on its own page: Accelerando, Andante, Antiphon, Cantilena, Fioritura, Fugato, Glissando, Gruppetto, Hemiola, Hocket, Melisma, Mezzavoce, Ricercar, Rondeau.
-- [Cantilena](https://studioluminant.com.tr/en/design-cantilena.htm): Iznik cypress, tulip, carnation and rose, composed as a single panel with no repeat.
+- [Studio Designs](https://studioluminant.com.tr/en/designs.htm): Relief designs drawn by the studio, each on its own page: Accelerando, Andante, Antiphon, Fioritura, Fugato, Glissando, Gruppetto, Hemiola, Hocket, Melisma, Mezzavoce, Ricercar, Rondeau.
 - [Ricercar](https://studioluminant.com.tr/en/design-ricercar.htm): A lattice built from the Gothic quatrefoil, repeating every 600 mm.
 - [Glissando](https://studioluminant.com.tr/en/design-glissando.htm): Drifting fibres on upright panels laid with a half-height offset.
 - [Accelerando](https://studioluminant.com.tr/en/design-accelerando.htm): We drew a field of cells whose size grades across the wall.
@@ -62,7 +61,7 @@ Key facts for accurate citation:
 
 - [Studio Luminant — Özel Mimari Elemanlar](https://studioluminant.com.tr/): Ana sayfa — iki kapı: Özel Üretim ve Atölye Tasarımları.
 - [Özel Üretim](https://studioluminant.com.tr/surec.htm): Çizimden derinlik haritasına, yalama ışıkta onaya, ana modele, kalıba, döküme ve montaja: özel üretim süreci.
-- [Atölye Tasarımları](https://studioluminant.com.tr/tasarimlar.htm): Stüdyonun çizdiği rölyef tasarımları, her biri kendi sayfasında: Accelerando, Cantilena, Glissando, Gruppetto, Hemiola, Melisma, Ricercar, Rondeau.
+- [Atölye Tasarımları](https://studioluminant.com.tr/tasarimlar.htm): Stüdyonun çizdiği rölyef tasarımları, her biri kendi sayfasında: Accelerando, Glissando, Gruppetto, Hemiola, Melisma, Ricercar, Rondeau.
 - [Mimarlar İçin](https://studioluminant.com.tr/mimarlar.htm): Studio Luminant'ın mimarlarla çalışma biçimi.
 - [Malzeme — Lumina PMAG™](https://studioluminant.com.tr/urunler.htm): Lumina PMAG™ ve artizan finish için teknik veriler.
 - [Galeri](https://studioluminant.com.tr/galeri.htm): Rölyef paneller ve heykelsi duvar yüzeyleri.
