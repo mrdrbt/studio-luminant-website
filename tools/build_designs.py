@@ -68,7 +68,7 @@ UI = {
            "idx_h1": "Bizim çizdiğimiz <em>rölyefler.</em>",
            "idx_lede": "Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
            "idx_door": "Duvar sizin çiziminizle başlıyorsa bu Özel Üretim’dir: nasıl çizdiyseniz, öyle dökeriz.",
-           "idx_door_link": "Çiziminizi gönderin", "idx_samples": "Duvar yerleşimi isteyin",
+           "idx_door_link": "Çiziminizi gönderin", "idx_samples": "Duvar yerleşimi isteyin", "idx_rooms": "Kafe, restoran ya da otel duvarı için tasarımları mekânda <a href=\"galeri.htm\" class=\"sys-link\">Galeri</a>’de görebilirsiniz.",
            "share": "Paylaş", "share_page": "tasarim-{slug}-paylas.htm", "share_h": "Bu tasarımı paylaşın",
            "share_p": "Bağlantı, bu tasarımın sade bir sunum sayfasını açar. İsterseniz proje adını ve hazırlayanı ekleyin.",
            "share_proj": "Proje adı (isteğe bağlı)", "share_by": "Hazırlayan (isteğe bağlı)", "share_copy": "Bağlantıyı kopyala",
@@ -102,7 +102,7 @@ UI = {
            "idx_h1": "Relief we have <em>drawn.</em>",
            "idx_lede": "See each design on its own page: on the wall and in its drawing. The mould is made for your order, and you approve the master before anything is cast.",
            "idx_door": "If the wall starts from your drawing, that is Bespoke: we cast it the way you drew it.",
-           "idx_door_link": "Send your drawing", "idx_samples": "Request a wall layout",
+           "idx_door_link": "Send your drawing", "idx_samples": "Request a wall layout", "idx_rooms": "For a café, restaurant or hotel wall, see the designs in rooms in the <a href=\"gallery.htm\" class=\"sys-link\">Gallery</a>.",
            "share": "Share", "share_page": "design-{slug}-share.htm", "share_h": "Share this design",
            "share_p": "The link opens a plain presentation page for this design. Add a project name and who prepared it, if you wish.",
            "share_proj": "Project name (optional)", "share_by": "Prepared by (optional)", "share_copy": "Copy link",
@@ -427,6 +427,7 @@ def tail(lang, scripts=""):
 
 {scripts}<script src="{pre}shared.js"></script>
 <script src="{pre}components.js"></script>
+<script src="{pre}consent.js"></script>
 
 </body>
 </html>
@@ -805,6 +806,7 @@ def index_page(data, lang):
   <div class="eyebrow">{u['lib']}</div>
   <h1 class="dsg-index__title">{u['idx_h1']}</h1>
   <p class="dsg-index__lede">{u['idx_lede']}</p>
+  <p class="dsg-index__lede">{u['idx_rooms']}</p>
 </section>
 
 <section class="dsg-grid" aria-label="{u['lib']}">
@@ -815,8 +817,8 @@ def index_page(data, lang):
   <div class="sys-door__inner">
     <p>{u['idx_door']}</p>
     <div class="sys-door__links">
-      <a href="{u['bespoke_href']}" class="sys-link">{u['idx_door_link']}</a>
-      <a href="{u['contact']}" class="sys-link">{u['idx_samples']}</a>
+      <a href="{u['contact']}" class="sys-link">{u['idx_door_link']}</a>
+      <a href="{u['contact']}?ask=layout" class="sys-link">{u['idx_samples']}</a>
     </div>
   </div>
 </section>

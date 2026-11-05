@@ -104,6 +104,19 @@
     });
   }
 
+  // A layout request (?ask=layout, or any ?design=) lands on the Studio Designs door: swap the heading and lede, both on the page's header.
+  (function () {
+    var q = new URLSearchParams(window.location.search);
+    var intro = document.querySelector('.ct-intro');
+    if (!intro || !intro.dataset.layoutH || !(q.get('ask') === 'layout' || q.get('design'))) return;
+    var parts = intro.dataset.layoutH.split('|');
+    var h = intro.querySelector('.ct-title');
+    h.textContent = parts[0];
+    h.appendChild(document.createElement('br'));
+    h.appendChild(document.createElement('em')).textContent = parts[1];
+    intro.querySelector('.ct-lede').textContent = intro.dataset.layoutLede;
+  })();
+
   // ?design=<slug> (the design pages' enquiry links) preselects that design on both forms; an unknown slug is ignored.
   function prefillDesign() {
     var slug = new URLSearchParams(window.location.search).get('design');

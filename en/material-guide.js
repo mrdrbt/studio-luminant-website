@@ -40,7 +40,7 @@ const specCategories = [{
 }, {
   key: "finish",
   label: "Finish & Design",
-  specs: ["surface", "customDesign", "voc"]
+  specs: ["surface", "customDesign"]
 }, {
   key: "installation",
   label: "Installation",
@@ -199,7 +199,7 @@ const studioMaterials = [{
     chemical: "—",
     temperature: "—",
     surface: (_pmag.finish ? _pmag.finish.en : "Any RAL / custom colour — artisan finishes, smooth or textured"),
-    customDesign: "Parametric design, unlimited patterns",
+    customDesign: "Parametric design",
     voc: "Low — indoor air quality safe",
     acoustic: "—",
     antimicrobial: "—",
@@ -973,7 +973,7 @@ function MaterialCard({
   }, /*#__PURE__*/React.createElement("a", {
     href: TXT.sampleHref,
     className: "mg-cta"
-  }, "Tell us about the wall"))));
+  }, "Send your drawing"))));
 }
 
 // ─── COMPARISON TABLE ───

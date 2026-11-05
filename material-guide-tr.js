@@ -40,7 +40,7 @@ const specCategories = [{
 }, {
   key: "finish",
   label: "İşlem & Tasarım",
-  specs: ["surface", "customDesign", "voc"]
+  specs: ["surface", "customDesign"]
 }, {
   key: "installation",
   label: "Montaj",
@@ -199,7 +199,7 @@ const studioMaterials = [{
     chemical: "—",
     temperature: "—",
     surface: (_pmag.finish ? _pmag.finish.tr : "Tüm RAL / özel renkler — artizan finish, pürüzsüz ya da dokulu"),
-    customDesign: "Parametrik tasarım, sınırsız desen",
+    customDesign: "Parametrik tasarım",
     voc: "Düşük",
     acoustic: "—",
     antimicrobial: "—",
@@ -973,7 +973,7 @@ function MaterialCard({
   }, /*#__PURE__*/React.createElement("a", {
     href: TXT.sampleHref,
     className: "mg-cta"
-  }, "Duvarı anlatın"))));
+  }, "Çiziminizi gönderin"))));
 }
 
 // ─── COMPARISON TABLE ───
