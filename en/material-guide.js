@@ -109,33 +109,28 @@ const specMeta = {
   }
 };
 const finishTypes = [{
-  id: "matte",
-  label: "Matte",
-  desc: "Smooth, non-reflective surface",
+  id: "paint",
+  label: "Paint-ready",
+  desc: "Leaves the workshop primed, painted on site.",
   preview: {
     gradient: "linear-gradient(145deg, #333 0%, #444 100%)",
     overlay: null
   }
 }, {
-  id: "satin",
-  label: "Satin",
-  desc: "Soft sheen, low reflectivity",
+  id: "matte",
+  label: "Deep matte",
+  desc: "Keeps the panel's raw, as-cast texture.",
   preview: {
-    gradient: "linear-gradient(145deg, #555 0%, #777 60%, #555 100%)",
-    overlay: {
-      type: "sheen"
-    }
+    gradient: "linear-gradient(145deg, #333 0%, #444 100%)",
+    overlay: null
   }
 }, {
-  id: "mica",
-  label: "Mica Metallic",
-  desc: "Pearlescent metallic shimmer",
+  id: "traffic",
+  label: "High-traffic matte",
+  desc: "For high-traffic public areas.",
   preview: {
-    gradient: "linear-gradient(135deg, #5A4A2A 0%, #8B7340 40%, #5A4A2A 60%, #8B7340 100%)",
-    overlay: {
-      type: "grain",
-      angle: "90deg"
-    }
+    gradient: "linear-gradient(145deg, #333 0%, #444 100%)",
+    overlay: null
   }
 }];
 const colorPalettes = {
@@ -143,18 +138,15 @@ const colorPalettes = {
     { group: "Hospitality", colors: [
       { id: "warm-taupe", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
       { id: "ivory", label: "Ivory", hex: ["#D8D0C4", "#EDE8DF"] },
-      { id: "bronze", label: "Bronze", hex: ["#5C4A2A", "#8B7355"] },
       { id: "espresso", label: "Espresso", hex: ["#3C2415", "#5C3A2A"] }
     ]},
     { group: "Corporate", colors: [
       { id: "obsidian", label: "Obsidian", hex: ["#1A1A1A", "#2D2D2D"] },
       { id: "cloud-white", label: "Cloud White", hex: ["#EDEAE4", "#F0EFEB"] },
-      { id: "silhouette", label: "Silhouette", hex: ["#4A433E", "#635C56"] },
-      { id: "gold", label: "Gold", hex: ["#8B6914", "#C9A84C"] }
+      { id: "silhouette", label: "Silhouette", hex: ["#4A433E", "#635C56"] }
     ]},
     { group: "Residential", colors: [
       { id: "warm-taupe-r", label: "Warm Taupe", hex: ["#6B5D50", "#8A7B6D"] },
-      { id: "copper", label: "Copper", hex: ["#7A4A2A", "#B87333"] },
       { id: "midnight-sage", label: "Midnight Sage", hex: ["#3D503E", "#576B52"] },
       { id: "ivory-r", label: "Ivory", hex: ["#D8D0C4", "#EDE8DF"] }
     ]}
