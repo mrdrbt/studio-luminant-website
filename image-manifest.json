@@ -927,22 +927,22 @@
       }
     }
   },
-  "studio-luminant-sample-box-four-material-systems.jpg": {
+  "studio-luminant-sample-box.jpg": {
     "original": {
-      "file": "studio-luminant-sample-box-four-material-systems.jpg",
+      "file": "studio-luminant-sample-box.jpg",
       "w": 1600,
       "h": 1073,
       "size": 276038
     },
-    "webp": "studio-luminant-sample-box-four-material-systems.webp",
+    "webp": "studio-luminant-sample-box.webp",
     "variants": {
       "400": {
-        "file": "studio-luminant-sample-box-four-material-systems-400w.webp",
+        "file": "studio-luminant-sample-box-400w.webp",
         "w": 400,
         "h": 268
       },
       "800": {
-        "file": "studio-luminant-sample-box-four-material-systems-800w.webp",
+        "file": "studio-luminant-sample-box-800w.webp",
         "w": 800,
         "h": 536
       }
