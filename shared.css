@@ -989,3 +989,6 @@ a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, 
   :root { --ink-2: #2B261F; --ink-muted: #4A4339; --w-body: 400; }
   html body :is(p, li, dd, dt, figcaption, blockquote) { font-weight: 400 !important; }
 }
+
+/* Related-page rows are links: the arrow says so (2026-11-06) */
+.related-list a .tag::after, .arc-related a .tag::after { content: "\2192"; margin-left: 10px; font-size: 15px; line-height: 0; letter-spacing: 0; vertical-align: -1px; color: var(--accent); }
