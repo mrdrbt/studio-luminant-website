@@ -203,8 +203,8 @@ const studioMaterials = [{
     voc: "Low — indoor air quality safe",
     acoustic: "—",
     antimicrobial: "—",
-    method: "LuminClip™ concealed rail system",
-    speed: "20–30 sec per panel",
+    method: "Polymer adhesive",
+    speed: "—",
   },
   radar: {
     weightAdv: 0.6,

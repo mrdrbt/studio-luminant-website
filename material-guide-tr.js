@@ -203,8 +203,8 @@ const studioMaterials = [{
     voc: "Düşük",
     acoustic: "—",
     antimicrobial: "—",
-    method: "LuminClip™ gizli ray sistemi",
-    speed: "Panel başına 20–30 sn",
+    method: "Polimer yapıştırıcıyla",
+    speed: "—",
   },
   radar: {
     weightAdv: 0.6,

@@ -42,17 +42,19 @@ DOMAIN = "https://studioluminant.com.tr/"
 UI = {
     "tr": {"lib": "Atölye Tasarımları", "index": "tasarimlar.htm", "page": "tasarim-{slug}.htm", "home": "Ana Sayfa",
            "cta": "Duvar yerleşimi isteyin", "contact": "iletisim.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
-           "spec": {"size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey",
+           "spec": {"minimum": "Minimum sipariş", "size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey",
                     "fixing": "Montaj", "lead": "Teslim", "joint": "Derz"},
            "material": "Lumina PMAG™ (polimer modifiye kompozit alçı)", "finish": "Boyaya hazır ya da artizan finish ile", "joint": "1,5 mm",
            "finish_term": "artizan finish", "finish_href": "kaynaklar-yuzey-kaplamalari.htm",
-           "fixing": "Polimer yapıştırıcıyla",
+           "fixing": "Polimer yapıştırıcıyla", "fixing_ledger": "Polimer yapıştırıcı ve alt taşıyıcıyla", "fixing_project": "Her proje için montaj çiziminde belirlenir",
+    "fix_clause": "ve duvara polimer yapıştırıcıyla, metal dikme ve alçıpan duvarlarda ise ray sistemiyle sabitlenir.", "fix_project": "ve sabitlenmesi her proje için montaj çiziminde belirlenir.",
+    "min_val": "{min} m²", "min_faq": " Minimum sipariş {min} m²'dir. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız; ikisi de 4 haftaya dahildir.", "ledger_faq": " En alt sıra sabit bir alt taşıyıcıya oturur, üst sıralar birbirinin üzerinde durur; montajdan önce duvar yüzeyi kontrol edilir.",
            "lead": "Sözleşme ve peşinattan sonra 4 hafta (50 m²'ye kadar), Sapanca'da fabrika teslimi (EXW)",
            "corners": "Kolon yüzleri ve dış köşeler yerleşim çiziminde çözülür. Bir kolonu saran, köşeyi dönen ya da kavisli bir duvarı izleyen parçalar, aynı motifle Özel Üretim olarak dökülür.",
            "use_h": "Nerede kullanılır", "use_id": "nerede-kullanilir", "faq_h": "Sık sorulan sorular", "faq_id": "sorular",
            "use_finish": "Parçalar boyaya hazır ya da artizan finish ile teslim edilir; boyaya hazır yüzey, yerinde mekânın rengine boyanabilir.",
            "faq_lead_q": "{name} ne kadar sürede teslim edilir, duvara nasıl sabitlenir?",
-           "faq_lead_a": "Teslim süresi, 50 m²'ye kadar olan siparişlerde sözleşme ve peşinattan sonra 4 haftadır; daha büyük siparişlerde tarih teklifte belirtilir. Teslim şekli Sapanca'da fabrika teslimidir (EXW). Parçalar Lumina PMAG™ — Polimer Modifiye Kompozit Alçı ile elde dökülür ve duvara polimer yapıştırıcıyla sabitlenir. Bir kolonu saran, köşeyi dönen ya da kavisli bir duvarı izleyen parçalar ise aynı motifle Özel Üretim olarak dökülür.",
+           "faq_lead_a": "Teslim süresi, 50 m²'ye kadar olan siparişlerde sözleşme ve peşinattan sonra 4 haftadır; daha büyük siparişlerde tarih teklifte belirtilir. Teslim şekli Sapanca'da fabrika teslimidir (EXW). Parçalar Lumina PMAG™ — Polimer Modifiye Kompozit Alçı ile elde dökülür ve duvara polimer yapıştırıcıyla, metal dikme ve alçıpan duvarlarda ise ray sistemiyle sabitlenir. Bir kolonu saran, köşeyi dönen ya da kavisli bir duvarı izleyen parçalar ise aynı motifle Özel Üretim olarak dökülür; böyle bir duvar Özel Üretim takvimini izler.",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
            "close_h": "Yakından", "drawing_h": "Çizim", "room_h": "Bir mekânda", "more": "İncele →", "moulds_h": "Kalıplar",
            "moulds_p": "Duvar, bu kalıplardan dökülen parçalarla kurulur; harfler çizimdeki dizilişle eşleşir, düz parça rölyefsizdir.",
@@ -66,7 +68,7 @@ UI = {
            "idx_h1": "Bizim çizdiğimiz <em>rölyefler.</em>",
            "idx_lede": "Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
            "idx_door": "Duvar sizin çiziminizle başlıyorsa bu Özel Üretim’dir: nasıl çizdiyseniz, öyle dökeriz.",
-           "idx_door_link": "Çiziminizi gönderin", "idx_samples": "Numune kutusunu isteyin",
+           "idx_door_link": "Çiziminizi gönderin", "idx_samples": "Duvar yerleşimi isteyin",
            "share": "Paylaş", "share_page": "tasarim-{slug}-paylas.htm", "share_h": "Bu tasarımı paylaşın",
            "share_p": "Bağlantı, bu tasarımın sade bir sunum sayfasını açar. İsterseniz proje adını ve hazırlayanı ekleyin.",
            "share_proj": "Proje adı (isteğe bağlı)", "share_by": "Hazırlayan (isteğe bağlı)", "share_copy": "Bağlantıyı kopyala",
@@ -74,17 +76,19 @@ UI = {
            "shr_proj": "Proje", "shr_by": "Hazırlayan", "shr_credit": "Tasarım ve döküm: Studio Luminant, Sapanca"},
     "en": {"lib": "Studio Designs", "index": "designs.htm", "page": "design-{slug}.htm", "home": "Home",
            "cta": "Request a wall layout", "contact": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
-           "spec": {"size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface",
+           "spec": {"minimum": "Minimum order", "size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface",
                     "fixing": "Fixing", "lead": "Lead time", "joint": "Joint"},
            "material": "Lumina PMAG™ (polymer-modified composite gypsum)", "finish": "Paint-ready, or with an artisan finish", "joint": "1.5 mm",
            "finish_term": "artisan finish", "finish_href": "resources-finishes.htm",
-           "fixing": "Polymer adhesive",
+           "fixing": "Polymer adhesive", "fixing_ledger": "Polymer adhesive + bottom ledger", "fixing_project": "Set in the installation drawing for each project",
+    "fix_clause": "and fixed to the wall with a polymer adhesive, or with a rail system on metal stud and plasterboard walls.", "fix_project": "and their fixing is set in the installation drawing for each project.",
+    "min_val": "{min} m²", "min_faq": " The minimum order is {min} m². The mould is made for your order and you approve the master before casting; both are included in the 4 weeks.", "ledger_faq": " The bottom course sits on a fixed ledger and each course stands on the one below; the wall surface is checked before fixing.",
            "lead": "4 weeks after contract and advance (up to 50 m²), ex-works Sapanca (EXW)",
-           "corners": "Column faces and outside corners are worked out on the layout drawing. Pieces that wrap a column, turn a corner or follow a curved wall are cast as Bespoke, in the same motif.",
+           "corners": "Column faces and outside corners are worked out on the layout drawing. Pieces that wrap a column, turn a corner or follow a curved wall are cast as Bespoke, in the same motif, and such a wall follows the Bespoke programme.",
            "use_h": "Where it works", "use_id": "where-it-works", "faq_h": "Frequently asked questions", "faq_id": "questions",
            "use_finish": "Pieces come paint-ready or with an artisan finish; a paint-ready surface can be painted on site to match the room.",
            "faq_lead_q": "What is the lead time for {name}, and how is it fixed?",
-           "faq_lead_a": "Lead time is 4 weeks after contract and advance for orders up to 50 m²; for larger orders the quote sets the date. Delivery is ex-works Sapanca (EXW). Pieces are hand-cast in Lumina PMAG™ — Polymer Modified Composite Gypsum and fixed to the wall with a polymer adhesive. Pieces that wrap a column, turn a corner or follow a curved wall are cast as Bespoke, in the same motif.",
+           "faq_lead_a": "Lead time is 4 weeks after contract and advance for orders up to 50 m²; for larger orders the quote sets the date. Delivery is ex-works Sapanca (EXW). Pieces are hand-cast in Lumina PMAG™ — Polymer Modified Composite Gypsum and fixed to the wall with a polymer adhesive, or with a rail system on metal stud and plasterboard walls. Pieces that wrap a column, turn a corner or follow a curved wall are cast as Bespoke, in the same motif.",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
            "close_h": "Close up", "drawing_h": "The drawing", "room_h": "In a room", "more": "View →", "moulds_h": "The moulds",
            "moulds_p": "The wall is laid from pieces cast in these moulds; the letters match the lay in the drawing, and the plain piece carries no relief.",
@@ -98,7 +102,7 @@ UI = {
            "idx_h1": "Relief we have <em>drawn.</em>",
            "idx_lede": "See each design on its own page: on the wall and in its drawing. The mould is made for your order, and you approve the master before anything is cast.",
            "idx_door": "If the wall starts from your drawing, that is Bespoke: we cast it the way you drew it.",
-           "idx_door_link": "Send your drawing", "idx_samples": "Request the sample box",
+           "idx_door_link": "Send your drawing", "idx_samples": "Request a wall layout",
            "share": "Share", "share_page": "design-{slug}-share.htm", "share_h": "Share this design",
            "share_p": "The link opens a plain presentation page for this design. Add a project name and who prepared it, if you wish.",
            "share_proj": "Project name (optional)", "share_by": "Prepared by (optional)", "share_copy": "Copy link",
@@ -206,10 +210,40 @@ def drawing_webp(folder):
     return Image.open(dst).size
 
 
+# Minimum order (#127) and fixing (#130) per design. Prices never live here: the website repo is public.
+MIN_75 = {"andante", "mezzavoce", "glissando", "accelerando", "fugato"}
+LEDGER = {"antiphon", "melisma", "hocket", "accelerando", "gruppetto", "fugato"}
+FIXING_PER_PROJECT = {"hemiola"}  # an open screen block (#136)
+
+
+def min_m2(d, u):
+    decimal = "," if u["fixing"].startswith("Polimer") else "."
+    return f"7{decimal}5" if d["slug"] in MIN_75 else "5"
+
+
+def min_of(d, u):
+    return u["min_val"].format(min=min_m2(d, u))
+
+
+def fixing_of(d, u):
+    if d["slug"] in FIXING_PER_PROJECT:
+        return u["fixing_project"]
+    return u["fixing_ledger"] if d["slug"] in LEDGER else u["fixing"]
+
+
+def lead_answer(d, u):
+    extra = u["ledger_faq"] if d["slug"] in LEDGER else ""
+    base = u["faq_lead_a"]
+    if d["slug"] in FIXING_PER_PROJECT:
+        assert u["fix_clause"] in base
+        base = base.replace(u["fix_clause"], u["fix_project"])
+    return base + u["min_faq"].format(min=min_m2(d, u)) + extra
+
+
 def study_spec(d, u):
     """Material, surface, fixing and lead time; the joint row only for a design that declares one ("joint": true, Hemiola's gapped blocks) --
     walls render seamless by default (Burak 2026-10-30)."""
-    rows = [("material", u["material"]), ("finish", u["finish"]), ("fixing", u["fixing"]), ("lead", u["lead"])]
+    rows = [("material", u["material"]), ("finish", u["finish"]), ("fixing", fixing_of(d, u)), ("lead", u["lead"]), ("minimum", min_of(d, u))]
     return rows + [("joint", u["joint"])] if d.get("joint") else rows
 
 
@@ -313,7 +347,7 @@ def room_html(d, lang, pre):
 def questions(d, lang):
     """The design's three questions as (q, a): its own two from designs.json, then lead time + fixing from the template."""
     c, u = d[lang], UI[lang]
-    return [(f["q"], f["a"]) for f in c["faq"]] + [(u["faq_lead_q"].format(name=c["name"]), u["faq_lead_a"])]
+    return [(f["q"], f["a"]) for f in c["faq"]] + [(u["faq_lead_q"].format(name=c["name"]), lead_answer(d, u))]
 
 
 def use_faq_html(d, lang):
@@ -422,7 +456,7 @@ def relief_page(data, d, lang, figs):
     extra = (f'<link rel="preload" as="image" href="{rel}poster-1680.jpg" imagesrcset="{rel}poster-840.jpg {pw // 2}w, '
              f'{rel}poster-1680.jpg {pw}w" imagesizes="{SIZES[d["layout"]]}" fetchpriority="high">\n')
     spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
-                      ("material", u["material"]), ("finish", u["finish"]), ("fixing", u["fixing"]), ("lead", u["lead"])], u)
+                      ("material", u["material"]), ("finish", u["finish"]), ("fixing", fixing_of(d, u)), ("lead", u["lead"]), ("minimum", min_of(d, u))], u)
     fig_html = []
     for key, cap, alt in (("object", u["obj_cap"], c["object_alt"]), ("strip", u["strip_cap"], c["strip_alt"])):
         if key in figs and alt:
@@ -701,7 +735,7 @@ def relief_share_page(d, lang, figs):
     pw, ph = man["poster"]
     field = " shr-relief--field" if d["layout"] == "field" else ""
     spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
-                      ("material", u["material"]), ("finish", u["finish"]), ("fixing", u["fixing"]), ("lead", u["lead"])], u)
+                      ("material", u["material"]), ("finish", u["finish"]), ("fixing", fixing_of(d, u)), ("lead", u["lead"]), ("minimum", min_of(d, u))], u)
     ow, oh = figs["object"]
     strip = ""
     if "strip" in figs and c["strip_alt"]:
