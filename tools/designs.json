@@ -12,6 +12,8 @@
    },
    "tr": {
     "name": "Accelerando",
+    "size": "400 × 400 mm",
+    "depth": "20 mm",
     "story": "Boyutu duvar boyunca kademeli olarak değişen hücrelerden bir alan çizdik.",
     "title": "Accelerando: Kademeli Hücreli Rölyef Duvar | Studio Luminant",
     "meta": "Boyutu duvar boyunca kademeli olarak değişen hücrelerden bir alan çizdik. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
@@ -29,12 +31,14 @@
      },
      {
       "q": "Accelerando'nun rölyefi ne kadar derin?",
-      "a": "Derinlik, sayfadaki yakın plan render'da görülür. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
+      "a": "Rölyef 20 mm'dir. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
      }
     ]
    },
    "en": {
     "name": "Accelerando",
+    "size": "400 × 400 mm",
+    "depth": "20 mm",
     "story": "We drew a field of cells whose size grades across the wall.",
     "title": "Accelerando: Graded-Cell Relief Wall Panel | Studio Luminant",
     "meta": "We drew a field of cells whose size grades across the wall. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
@@ -52,7 +56,7 @@
      },
      {
       "q": "How deep is the Accelerando relief?",
-      "a": "The depth shows in the close-up render on this page. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
+      "a": "The relief is 20 mm. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
      }
     ]
    },
@@ -703,6 +707,8 @@
    },
    "tr": {
     "name": "Gruppetto",
+    "size": "400 × 400 mm",
+    "depth": "30 mm",
     "story": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor.",
     "title": "Gruppetto: Yelpaze Desenli Rölyef Paneli | Studio Luminant",
     "meta": "Tek bir yelpaze biçimi tasarladık; duvar boyunca uzun S eğrileri oluşturacak şekilde döşeniyor. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
@@ -720,12 +726,14 @@
      },
      {
       "q": "Gruppetto'nun rölyefi ne kadar derin?",
-      "a": "Derinlik, sayfadaki yakın plan render'da görülür. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
+      "a": "Rölyef 30 mm'dir. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
      }
     ]
    },
    "en": {
     "name": "Gruppetto",
+    "size": "400 × 400 mm",
+    "depth": "30 mm",
     "story": "One fan-shaped form, designed by us and laid in long S-curves.",
     "title": "Gruppetto: Fan-Pattern Relief Wall Panel | Studio Luminant",
     "meta": "One fan-shaped form, designed by us and laid in long S-curves. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
@@ -743,7 +751,7 @@
      },
      {
       "q": "How deep is the Gruppetto relief?",
-      "a": "The depth shows in the close-up render on this page. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
+      "a": "The relief is 30 mm. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
      }
     ]
    },
@@ -795,6 +803,7 @@
    },
    "tr": {
     "name": "Hemiola",
+    "size": "200 × 200 mm (blok)",
     "story": "Her biri eğik bir açıklık taşıyan bloklardan, elle dizilmiş gibi okunan bir duvar çizdik.",
     "title": "Hemiola: Eğik Açıklıklı Rölyef Blokları | Studio Luminant",
     "meta": "Her biri eğik bir açıklık taşıyan bloklardan, elle dizilmiş gibi okunan bir duvar çizdik. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
@@ -818,6 +827,7 @@
    },
    "en": {
     "name": "Hemiola",
+    "size": "200 × 200 mm (block)",
     "story": "A wall of blocks, each with an opening turned off square, drawn to read as hand-set.",
     "title": "Hemiola: Skewed-Opening Block Relief Wall | Studio Luminant",
     "meta": "A wall of blocks, each with an opening turned off square, drawn to read as hand-set. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
@@ -1012,6 +1022,8 @@
    },
    "tr": {
     "name": "Melisma",
+    "size": "200 × 200 mm",
+    "depth": "18 mm",
     "story": "İnce çizgilerden bir labirent kurduk ve onu duvar boyunca tek bir akıntı gibi akıttık.",
     "title": "Melisma: Labirent Desenli Rölyef Paneli | Studio Luminant",
     "meta": "İnce çizgilerden bir labirent kurduk ve onu duvar boyunca tek bir akıntı gibi akıttık. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
@@ -1029,12 +1041,14 @@
      },
      {
       "q": "Melisma'nın rölyefi ne kadar derin?",
-      "a": "Derinlik, sayfadaki yakın plan render'da görülür. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
+      "a": "Rölyef 18 mm'dir. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
      }
     ]
    },
    "en": {
     "name": "Melisma",
+    "size": "200 × 200 mm",
+    "depth": "18 mm",
     "story": "A maze of fine lines that we let run the length of the wall as one current.",
     "title": "Melisma: Fine-Line Maze Relief Wall Panel | Studio Luminant",
     "meta": "A maze of fine lines that we let run the length of the wall as one current. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
@@ -1052,7 +1066,7 @@
      },
      {
       "q": "How deep is the Melisma relief?",
-      "a": "The depth shows in the close-up render on this page. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
+      "a": "The relief is 18 mm. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
      }
     ]
    },
@@ -1398,6 +1412,8 @@
    },
    "tr": {
     "name": "Rondeau",
+    "size": "200 × 200 mm",
+    "depth": "18 mm",
     "story": "Yuvarlak tek bir form çizdik; duvarda bir alan olarak döşeniyor.",
     "title": "Rondeau: Yuvarlak Formlu Rölyef Paneli | Studio Luminant",
     "meta": "Yuvarlak tek bir form çizdik; duvarda bir alan olarak döşeniyor. Studio Luminant Atölye Tasarımları'ndan, Lumina PMAG™ ile.",
@@ -1415,12 +1431,14 @@
      },
      {
       "q": "Rondeau'nun rölyefi ne kadar derin?",
-      "a": "Derinlik, sayfadaki yakın plan render'da görülür. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
+      "a": "Rölyef 18 mm'dir. Kalıp, siparişiniz üzerine hazırlanır ve dökümden önce ana modeli siz onaylarsınız; dökülen parçalar bu modelle aynıdır, rölyefin derinliğini de döküm başlamadan modelin üzerinde görürsünüz."
      }
     ]
    },
    "en": {
     "name": "Rondeau",
+    "size": "200 × 200 mm",
+    "depth": "18 mm",
     "story": "One round form, drawn once and laid as a field.",
     "title": "Rondeau: Round-Form Relief Wall Panel | Studio Luminant",
     "meta": "One round form, drawn once and laid as a field. A Studio Luminant Studio Design, cast in Lumina PMAG™.",
@@ -1438,7 +1456,7 @@
      },
      {
       "q": "How deep is the Rondeau relief?",
-      "a": "The depth shows in the close-up render on this page. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
+      "a": "The relief is 18 mm. The mould is made for your order and you approve the master before anything is cast; the cast pieces match that master, so you see the depth of the relief on it before casting starts."
      }
     ]
    },

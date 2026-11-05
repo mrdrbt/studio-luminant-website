@@ -5,7 +5,7 @@ One range, no tiers (Burak 2026-10-25): every design is listed as an equal, alph
 - kind "relief": live relief hero (relief-light.js over the baked poster in assets/relief/<asset>/), spec, the Library
   render and wall strip as WebP (made here from VAULT/Library/Relief/<library>/), the drawing (depth map), a reading.
 - kind "study": the wall study as the hero, a close view, the lay drawing (moulds and how they are laid), made as WebP
-  in assets/designs/<slug>/ from the portfolio prestage PNGs named in the JSON. No module, depth, price or availability.
+  in assets/designs/<slug>/ from the portfolio prestage PNGs named in the JSON. Size and depth where the JSON gives them; no price or availability.
 - an optional "room" entry adds an in-situ figure (only renders Burak voted UP).
 - a design with "use" + "faq" (per language) closes with a "where it works" paragraph and three questions: its two
   (size/format, depth) and the template's lead time + fixing, which states the spec table's facts. The page carries them
@@ -240,10 +240,11 @@ def lead_answer(d, u):
     return base + u["min_faq"].format(min=min_m2(d, u)) + extra
 
 
-def study_spec(d, u):
+def study_spec(d, c, u):
     """Material, surface, fixing and lead time; the joint row only for a design that declares one ("joint": true, Hemiola's gapped blocks) --
     walls render seamless by default (Burak 2026-10-30)."""
-    rows = [("material", u["material"]), ("finish", u["finish"]), ("fixing", fixing_of(d, u)), ("lead", u["lead"]), ("minimum", min_of(d, u))]
+    rows = [(k, c[k]) for k in ("size", "depth") if c.get(k)]
+    rows += [("material", u["material"]), ("finish", u["finish"]), ("fixing", fixing_of(d, u)), ("lead", u["lead"]), ("minimum", min_of(d, u))]
     return rows + [("joint", u["joint"])] if d.get("joint") else rows
 
 
@@ -556,7 +557,7 @@ def study_page(data, d, lang, sizes):
     (ww, wh), (cw, ch) = sizes["wall"], sizes["card"]
     (sw, sh), (mw, mh) = sizes["drawing"][lang]["d"], sizes["drawing"][lang]["m"]
     extra = f'<link rel="preload" as="image" href="{base}wall.webp" fetchpriority="high">\n'
-    spec = spec_html(study_spec(d, u), u)
+    spec = spec_html(study_spec(d, c, u), u)
     share = shared(d)
     og = f"assets/designs/{d['asset']}/{'og.jpg' if share else 'wall.webp'}"
     share_btn = (f'\n      <button type="button" class="sys-link" data-shr-href="{u["share_page"].format(slug=d["slug"])}">'
@@ -700,7 +701,7 @@ def share_page(d, lang, sizes):
     base = f"{pre}assets/designs/{d['asset']}/"
     (ww, wh), (cw, ch) = sizes["wall"], sizes["card"]
     (sw, sh), (mw, mh) = sizes["drawing"][lang]["d"], sizes["drawing"][lang]["m"]
-    spec = spec_html(study_spec(d, u), u)
+    spec = spec_html(study_spec(d, c, u), u)
     body = f"""<figure class="shr-fig"><img src="{base}wall.webp" width="{ww}" height="{wh}" alt="{esc(c['wall_alt'])}"><figcaption>{txt(c['wall_cap'])}</figcaption></figure>
 {share_rooms(d, lang, pre)}<section class="shr-pair">
   <figure class="shr-fig"><img src="{base}detail.webp" width="{cw}" height="{ch}" alt="{esc(c['card_alt'])}"><figcaption>{txt(c['card_cap'])}</figcaption></figure>
