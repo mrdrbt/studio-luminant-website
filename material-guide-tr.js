@@ -15,7 +15,7 @@ const {
 const TXT = {
   better: "", worse: "",
   tableLabel: "Spesifikasyon Tablosu",
-  sampleHref: "iletisim.htm#sampleForm"
+  sampleHref: "iletisim.htm"
 };
 const COLORS = {
   bg: "var(--bg)",
@@ -973,7 +973,7 @@ function MaterialCard({
   }, /*#__PURE__*/React.createElement("a", {
     href: TXT.sampleHref,
     className: "mg-cta"
-  }, "Numune Talep Et"))));
+  }, "Duvarı anlatın"))));
 }
 
 // ─── COMPARISON TABLE ───

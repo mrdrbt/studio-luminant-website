@@ -15,7 +15,7 @@ const {
 const TXT = {
   better: "better", worse: "worse",
   tableLabel: "Specification Table",
-  sampleHref: "contact.htm#sampleForm"
+  sampleHref: "contact.htm"
 };
 const COLORS = {
   bg: "var(--bg)",
@@ -973,7 +973,7 @@ function MaterialCard({
   }, /*#__PURE__*/React.createElement("a", {
     href: TXT.sampleHref,
     className: "mg-cta"
-  }, "Request Sample"))));
+  }, "Tell us about the wall"))));
 }
 
 // ─── COMPARISON TABLE ───

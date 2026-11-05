@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#EFE8D5">
-<title>Contact: Send a Drawing, Get a Sample Box | Studio Luminant</title>
-<meta name="description" content="Send a sketch, a dimensioned drawing or a reference image for your wall. Or ask for the sample box: pieces cast in Lumina PMAG™ with artisan finishes.">
+<title>Contact: Send a Drawing or a Project | Studio Luminant</title>
+<meta name="description" content="Send a sketch, a dimensioned drawing or a reference image for your wall, and tell us about the project.">
 <link rel="canonical" href="https://studioluminant.com.tr/en/contact.htm">
   <link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/iletisim.htm">
   <link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/contact.htm">
   <link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/iletisim.htm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Studio Luminant">
-<meta property="og:title" content="Contact: Send a Drawing, Get a Sample Box | Studio Luminant">
-<meta property="og:description" content="Send a sketch, a dimensioned drawing or a reference image for your wall. Or ask for the sample box: pieces cast in Lumina PMAG™ with artisan finishes.">
+<meta property="og:title" content="Contact: Send a Drawing or a Project | Studio Luminant">
+<meta property="og:description" content="Send a sketch, a dimensioned drawing or a reference image for your wall, and tell us about the project.">
 <meta property="og:url" content="https://studioluminant.com.tr/en/contact.htm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact: Send a Drawing, Get a Sample Box | Studio Luminant">
-<meta name="twitter:description" content="Send a sketch, a dimensioned drawing or a reference image for your wall. Or ask for the sample box: pieces cast in Lumina PMAG™ with artisan finishes.">
+<meta name="twitter:title" content="Contact: Send a Drawing or a Project | Studio Luminant">
+<meta name="twitter:description" content="Send a sketch, a dimensioned drawing or a reference image for your wall, and tell us about the project.">
 <meta property="og:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preload" href="../fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -160,7 +160,7 @@
       <div class="eyebrow reveal">Sample box</div>
       <h2 class="ct-sample__h reveal" id="sample-title">Judge the relief<br><em>in your own light.</em></h2>
       <p class="ct-sample__p reveal">Depth, surface and colour get lost in a photograph. The sample box holds pieces cast in <span translate="no">Lumina PMAG™</span>, with artisan finishes, for you to turn over by a window, or under a lamp set low so its light rakes across them.</p>
-      <p class="ct-sample__free reveal">Free, with no commitment.</p>
+      <p class="ct-sample__free reveal">We send the box to practices with a live project.</p>
       <figure class="ct-sample__fig reveal">
         <picture>
           <source type="image/webp" srcset="../images/studio-luminant-sample-box-four-material-systems-800w.webp 800w, ../images/studio-luminant-sample-box-four-material-systems.webp 1600w" sizes="(orientation: portrait) 100vw, (max-width: 820px) 100vw, 600px">
@@ -175,7 +175,7 @@
       <form class="ct-form" id="sampleForm" action="https://formspree.io/f/xpqygpjw" method="POST" aria-labelledby="sample-form-title"
         data-form-type="sample"
         data-msg-sending="Sending…" data-msg-sent="Sent"
-        data-msg-ok="Thank you. Your sample box request has reached us; we’ll email you for the shipping details."
+        data-msg-ok="Thank you. Your request has reached us; we’ll read it and write back."
         data-msg-error="Something went wrong. Please email us directly at info@studioluminant.com.tr.">
         <p class="ct-help ct-legend" aria-hidden="true">* required field</p>
         <div class="ct-row">
@@ -184,8 +184,8 @@
             <input type="text" id="s-name" name="name" placeholder="Jane Smith…" autocomplete="name" required>
           </div>
           <div class="ct-field">
-            <label for="s-company">Practice / company</label>
-            <input type="text" id="s-company" name="company" placeholder="Example Architects…" autocomplete="organization">
+            <label for="s-company">Practice / company <span class="ct-req" aria-hidden="true">*</span></label>
+            <input type="text" required id="s-company" name="company" placeholder="Example Architects…" autocomplete="organization">
           </div>
         </div>
         <div class="ct-row">
@@ -194,9 +194,23 @@
             <input type="email" id="s-email" name="email" placeholder="you@practice.com…" autocomplete="email" inputmode="email" spellcheck="false" autocapitalize="off" required>
           </div>
           <div class="ct-field">
-            <label for="s-city">Shipping city</label>
-            <input type="text" id="s-city" name="shipping_city" placeholder="Istanbul…" autocomplete="address-level2">
+            <label for="s-city">Shipping city <span class="ct-req" aria-hidden="true">*</span></label>
+            <input type="text" required id="s-city" name="shipping_city" placeholder="Istanbul…" autocomplete="address-level2">
           </div>
+        </div>
+        <div class="ct-field">
+          <label for="s-project">Project <span class="ct-req" aria-hidden="true">*</span></label>
+          <input type="text" id="s-project" name="project" placeholder="Hotel lobby, Bodrum…" autocomplete="off" required>
+        </div>
+        <div class="ct-row">
+        <div class="ct-field">
+          <label for="s-area">Approximate area (m²) <span class="ct-req" aria-hidden="true">*</span></label>
+          <input type="text" id="s-area" name="area_m2" placeholder="40…" autocomplete="off" required>
+        </div>
+        <div class="ct-field">
+          <label for="s-when">Timeline <span class="ct-req" aria-hidden="true">*</span></label>
+          <input type="text" id="s-when" name="timeline" placeholder="On site in spring 2027…" autocomplete="off" required>
+        </div>
         </div>
         <div class="ct-field">
           <label for="s-design">Design (optional)</label>
@@ -235,7 +249,7 @@
           Request the sample box
           <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>
         </button>
-        <p class="ct-note">Once your request is in, we’ll email you for the address and shipping details.</p>
+        <p class="ct-note">We’ll read your request and write back.</p>
         <p class="ct-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
       </form>
     </div>
@@ -279,7 +293,7 @@
 
 <script src="../shared.js?v=18e9ebf3"></script>
 <script src="../components.js?v=1f502ace"></script>
-<script src="../contact.js?v=8332d11b" defer></script>
+<script src="../contact.js?v=4370a8b1" defer></script>
 
 <script src="../consent.js?v=08e17d54"></script>
 </body>

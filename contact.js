@@ -34,6 +34,10 @@
     if (data.drawing_link) {
       data.message = (data.message ? data.message + '\n\n' : '') + form.dataset.linkLabel + ': ' + data.drawing_link;
     }
+    // the sample form's project gate has no lead-intake column either
+    var gate = ['project', 'area_m2', 'timeline'].filter(function (k) { return data[k]; })
+      .map(function (k) { return k + ': ' + data[k]; }).join(' · ');
+    if (gate) data.message = (data.message ? data.message + '\n\n' : '') + gate;
     if (data.design) data.message = (data.message ? data.message + '\n\n' : '') + 'Design: ' + data.design;
     var meta = ['service_line', 'landing_path', 'referrer'].filter(function (k) { return data[k]; })
       .map(function (k) { return k + ': ' + data[k]; }).join(' · ');
