@@ -123,14 +123,15 @@
     }
    ],
    "room": {
-    "file": "images/studio-luminant-amber-relief-wall-bar-accelerando-concept.jpg",
+    "file": "assets/designs/accelerando/room-living.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/accelerando_living/draws/2026-11-06_x-accelerando-living-sig_frontal28_r2_gpt_2.png",
     "tr": {
-     "alt": "Render: Accelerando, bar",
-     "cap": "Render: bar"
+     "alt": "Render: Accelerando, oturma odası",
+     "cap": "Render: oturma odası"
     },
     "en": {
-     "alt": "Render: Accelerando, bar",
-     "cap": "Render: bar"
+     "alt": "Render: Accelerando, living room",
+     "cap": "Render: living room"
     }
    }
   },
@@ -234,6 +235,18 @@
       "a": "The relief is 7 mm, in ribs on a 30 mm pitch. Shallow as it is, the lip of each rib throws a fine shadow line onto the foot of the rib below, and those shadows are what make the wall read as a dense texture in raking light."
      }
     ]
+   },
+   "room": {
+    "file": "assets/designs/andante/room-guestroom.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/andante_guestroom/draws/2026-11-06_x-andante-guestroom-sig_frontal40_r2_gpt_1.png",
+    "tr": {
+     "alt": "Render: Andante, otel odası",
+     "cap": "Render: otel odası"
+    },
+    "en": {
+     "alt": "Render: Andante, hotel guest room",
+     "cap": "Render: hotel guest room"
+    }
    }
   },
   {
@@ -338,7 +351,8 @@
     ]
    },
    "room": {
-    "file": "images/studio-luminant-bone-relief-wall-lobby-antiphon-concept-v3.jpg",
+    "file": "assets/designs/antiphon/room-lobby.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/antiphon_lobby/draws/2026-11-06_x-antiphon-lobby-sig_frontal35_r2_gpt_1.png",
     "tr": {
      "alt": "Render: Antiphon, otel lobisi",
      "cap": "Render: otel lobisi"
@@ -455,14 +469,15 @@
     ]
    },
    "room": {
-    "file": "images/studio-luminant-blush-relief-wall-restaurant-fioritura-concept.jpg",
+    "file": "assets/designs/fioritura/room-spa.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/fioritura_spa/draws/2026-11-06_x-fioritura-spa-sig_oblique32_r2_gpt_1.png",
     "tr": {
-     "alt": "Render: Fioritura, restoran",
-     "cap": "Render: restoran"
+     "alt": "Render: Fioritura, spa",
+     "cap": "Render: spa"
     },
     "en": {
-     "alt": "Render: Fioritura, restaurant",
-     "cap": "Render: restaurant"
+     "alt": "Render: Fioritura, spa",
+     "cap": "Render: spa"
     }
    },
    "card_zoom": [
@@ -572,14 +587,15 @@
     ]
    },
    "room": {
-    "file": "images/studio-luminant-pale-grey-relief-wall-cafe-fugato-concept-portrait.jpg",
+    "file": "assets/designs/fugato/room-bar.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/fugato_bar/draws/2026-11-06_x-fugato-bar-sig_oblique38_r2_gpt_1.png",
     "tr": {
-     "alt": "Render: Fugato, kafe",
-     "cap": "Render: kafe"
+     "alt": "Render: Fugato, bar",
+     "cap": "Render: bar"
     },
     "en": {
-     "alt": "Render: Fugato, café",
-     "cap": "Render: café"
+     "alt": "Render: Fugato, bar",
+     "cap": "Render: bar"
     }
    }
   },
@@ -820,14 +836,15 @@
     }
    ],
    "room": {
-    "file": "images/studio-luminant-terracotta-relief-wall-bar-gruppetto-concept.jpg",
+    "file": "assets/designs/gruppetto/room-stair.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/gruppetto_stair/draws/2026-11-06_x-gruppetto-stair-sig_frontal30_r2_gpt_2.png",
     "tr": {
-     "alt": "Render: Gruppetto, bar",
-     "cap": "Render: bar"
+     "alt": "Render: Gruppetto, merdiven holü",
+     "cap": "Render: merdiven holü"
     },
     "en": {
-     "alt": "Render: Gruppetto, bar",
-     "cap": "Render: bar"
+     "alt": "Render: Gruppetto, stair hall",
+     "cap": "Render: stair hall"
     }
    }
   },
@@ -922,6 +939,18 @@
    },
    "rooms": [
     {
+     "file": "assets/designs/hemiola/room-lobby.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-20_skew_insitu/2026-10-20_x-skew-insitu-r183058_r6_lobby_oblique_gpt_2.png",
+     "tr": {
+      "alt": "Render: Hemiola, lobi oturma alanı",
+      "cap": "Render: lobi oturma alanı"
+     },
+     "en": {
+      "alt": "Render: Hemiola, lobby lounge",
+      "cap": "Render: lobby lounge"
+     }
+    },
+    {
      "file": "assets/designs/hemiola/room-diningbar.webp",
      "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/hemiola_diningbar/r2/draws/2026-10-26_x-hemiola-diningbar-w2r2_r4_gpt_2.png",
      "tr": {
@@ -936,15 +965,15 @@
    ],
    "joint": true,
    "room": {
-    "file": "assets/designs/hemiola/room-lobby.webp",
-    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-20_skew_insitu/2026-10-20_x-skew-insitu-r183058_r6_lobby_oblique_gpt_2.png",
+    "file": "assets/designs/hemiola/room-cafe.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/hemiola_divider/draws/2026-11-06_x-hemiola-divider-sig_through10_r2_gpt_1.png",
     "tr": {
-     "alt": "Render: Hemiola, lobi oturma alanı",
-     "cap": "Render: lobi oturma alanı"
+     "alt": "Render: Hemiola, kafe",
+     "cap": "Render: kafe"
     },
     "en": {
-     "alt": "Render: Hemiola, lobby lounge",
-     "cap": "Render: lobby lounge"
+     "alt": "Render: Hemiola, café",
+     "cap": "Render: café"
     }
    }
   },
@@ -1048,6 +1077,18 @@
       "a": "The relief reaches 16 mm, and fine grooves split each band into several strands, so the surface catches the light in close lines."
      }
     ]
+   },
+   "room": {
+    "file": "assets/designs/hocket/room-kahvehane.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/hocket_kahvehane/draws/2026-11-06_x-hocket-kahvehane-sig_oblique25_r2_gpt_1.png",
+    "tr": {
+     "alt": "Render: Hocket, kahvehane",
+     "cap": "Render: kahvehane"
+    },
+    "en": {
+     "alt": "Render: Hocket, coffee house",
+     "cap": "Render: coffee house"
+    }
    }
   },
   {
@@ -1133,6 +1174,18 @@
    },
    "rooms": [
     {
+     "file": "assets/designs/melisma/room-spa.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/melisma_spa/draws/2026-10-26_x-melisma-spa-w2_hero_gpt_1.png",
+     "tr": {
+      "alt": "Render: Melisma, spa",
+      "cap": "Render: spa"
+     },
+     "en": {
+      "alt": "Render: Melisma, spa",
+      "cap": "Render: spa"
+     }
+    },
+    {
      "file": "assets/designs/melisma/room-lobby.webp",
      "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave1/melisma_lobby/r2/draws/2026-10-26_x-rotor-lobby-w1_hero_r2_gpt_2.png",
      "tr": {
@@ -1170,15 +1223,15 @@
     }
    ],
    "room": {
-    "file": "assets/designs/melisma/room-spa.webp",
-    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/melisma_spa/draws/2026-10-26_x-melisma-spa-w2_hero_gpt_1.png",
+    "file": "assets/designs/melisma/room-guestroom.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/melisma_guestroom/draws/2026-11-06_x-melisma-guestroom-sig_oblique-15_r2_gpt_1.png",
     "tr": {
-     "alt": "Render: Melisma, spa",
-     "cap": "Render: spa"
+     "alt": "Render: Melisma, otel odası",
+     "cap": "Render: otel odası"
     },
     "en": {
-     "alt": "Render: Melisma, spa",
-     "cap": "Render: spa"
+     "alt": "Render: Melisma, hotel guest room",
+     "cap": "Render: hotel guest room"
     }
    }
   },
@@ -1282,6 +1335,18 @@
       "a": "From the crown of each cell down to the seams, the relief is 18 mm deep; each cell swells gently from its edge to its centre."
      }
     ]
+   },
+   "room": {
+    "file": "assets/designs/mezzavoce/room-bar.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/mezzavoce_loungebar/draws/2026-11-06_x-mezzavoce-loungebar-sig_frontal35_r2_gpt_2.png",
+    "tr": {
+     "alt": "Render: Mezzavoce, bar",
+     "cap": "Render: bar"
+    },
+    "en": {
+     "alt": "Render: Mezzavoce, bar",
+     "cap": "Render: bar"
+    }
    }
   },
   {
@@ -1391,6 +1456,18 @@
    },
    "rooms": [
     {
+     "file": "assets/designs/ricercar/room-lobby.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/ricercar_lobby/draws/2026-10-26_x-ricercar-lobby-w2_front35_gpt_1.png",
+     "tr": {
+      "alt": "Render: Ricercar, otel lobisi",
+      "cap": "Render: otel lobisi"
+     },
+     "en": {
+      "alt": "Render: Ricercar, hotel lobby",
+      "cap": "Render: hotel lobby"
+     }
+    },
+    {
      "file": "assets/designs/ricercar/room-bar.webp",
      "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_rooms_v4/ricercar/2026-10-25_x-ricercar-rooms-v4_ricercar_frontal_gpt_1.png",
      "tr": {
@@ -1428,15 +1505,15 @@
     }
    ],
    "room": {
-    "file": "assets/designs/ricercar/room-lobby.webp",
-    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/ricercar_lobby/draws/2026-10-26_x-ricercar-lobby-w2_front35_gpt_1.png",
+    "file": "assets/designs/ricercar/room-boutique.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/ricercar_retail/draws/2026-11-06_x-ricercar-retail-sig_tight32_r2_gpt_2.png",
     "tr": {
-     "alt": "Render: Ricercar, otel lobisi",
-     "cap": "Render: otel lobisi"
+     "alt": "Render: Ricercar, mağaza",
+     "cap": "Render: mağaza"
     },
     "en": {
-     "alt": "Render: Ricercar, hotel lobby",
-     "cap": "Render: hotel lobby"
+     "alt": "Render: Ricercar, boutique",
+     "cap": "Render: boutique"
     }
    }
   },
@@ -1532,6 +1609,18 @@
    },
    "rooms": [
     {
+     "file": "assets/designs/rondeau/room-cafe.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/rondeau_cafe/draws/2026-10-26_x-rondeau-cafe-w2_k1_gpt_2.png",
+     "tr": {
+      "alt": "Render: Rondeau, kahvehane",
+      "cap": "Render: kahvehane"
+     },
+     "en": {
+      "alt": "Render: Rondeau, coffee house",
+      "cap": "Render: coffee house"
+     }
+    },
+    {
      "file": "assets/designs/rondeau/room-lobby.webp",
      "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/rondeau_lobby/nothrow/draws/2026-10-26_x-rondeau-lobby-w2_w20_nothrow_gpt_2.png",
      "tr": {
@@ -1557,15 +1646,15 @@
     }
    ],
    "room": {
-    "file": "assets/designs/rondeau/room-cafe.webp",
-    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/rondeau_cafe/draws/2026-10-26_x-rondeau-cafe-w2_k1_gpt_2.png",
+    "file": "assets/designs/rondeau/room-cafe-b.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-06_site-signature-rooms_/rondeau_cafe/draws/2026-11-06_x-rondeau-cafe-sig_oblique28_r2_gpt_2.png",
     "tr": {
-     "alt": "Render: Rondeau, kahvehane",
-     "cap": "Render: kahvehane"
+     "alt": "Render: Rondeau, kafe",
+     "cap": "Render: kafe"
     },
     "en": {
-     "alt": "Render: Rondeau, coffee house",
-     "cap": "Render: coffee house"
+     "alt": "Render: Rondeau, café",
+     "cap": "Render: café"
     }
    }
   }
