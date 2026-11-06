@@ -107,14 +107,15 @@ function initCursor() {
 }
 
 // ─── SCROLL REVEAL ───
+// Starts before the block enters the screen, with no delay and a fast-start ease: a fast scroll never lands on a blank block.
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      setTimeout(() => { entry.target.classList.add('visible'); }, 100);
+      entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0, rootMargin: '0px 0px 15% 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 

@@ -378,7 +378,7 @@ footer {
 .footer-logo-img { height: 52px; width: auto; display: block; margin-bottom: 16px; opacity: 0.9; }
 
 /* ─── SCROLL REVEAL ─────────────────── */
-.js .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; transition-delay: var(--reveal-delay, 0s); }
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-out); transition-delay: var(--reveal-delay, 0s); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ─── RELIEF LIGHT (relief-light.js) ── */
