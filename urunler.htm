@@ -81,6 +81,13 @@
     opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards;
   }
 
+  /* the language link sits on the photo until the bar turns solid: a bone chip beside the button, legible on any photo */
+  @media (min-width: 901px) {
+    #mainNav .nav-right { gap: 12px; }
+    #mainNav .nav-lang { padding: 9px 12px; background: var(--bg); color: var(--ink); transition: background 0.4s ease; }
+    #mainNav.scrolled .nav-lang { background: transparent; }
+  }
+
   /* ─── PRODUCT SECTIONS ──────────────── */
   .product-section { padding: 0 0 100px; }
   .btn-secondary {
