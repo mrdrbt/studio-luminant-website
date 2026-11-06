@@ -523,7 +523,7 @@ def relief_page(data, d, lang, figs):
     spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
                       ("material", u["material"]), ("finish", u["finish"]), ("fixing", fixing_of(d, u)), ("lead", u["lead"]), ("minimum", min_of(d, u))], u)
     fig = {}
-    for key, cap, alt in (("object", u["obj_cap"], c["object_alt"]), ("strip", u["strip_cap"], c["strip_alt"])):
+    for key, cap, alt in (("object", c.get("object_cap", u["obj_cap"]), c["object_alt"]), ("strip", u["strip_cap"], c["strip_alt"])):
         if key in figs and alt:
             w, h = figs[key]
             fig[key] = (f'<figure class="dsg-view dsg-view--{key} reveal"><img src="{rel}{key}.webp" width="{w}" height="{h}" loading="lazy" '
@@ -813,7 +813,7 @@ def relief_share_page(d, lang, figs):
   <img class="relief-light__poster" src="{rel}poster-1680.jpg" srcset="{rel}poster-840.jpg {pw // 2}w, {rel}poster-1680.jpg {pw}w" sizes="{SIZES[d['layout']]}" width="{pw}" height="{ph}" alt="{esc(c['alt'])}">
 </div></figure>
 {share_rooms(d, lang, pre)}<section class="shr-pair shr-pair--relief">
-  <figure class="shr-fig"><img src="{rel}object.webp" width="{ow}" height="{oh}" alt="{esc(c['object_alt'])}"><figcaption>{u['obj_cap']}</figcaption></figure>
+  <figure class="shr-fig"><img src="{rel}object.webp" width="{ow}" height="{oh}" alt="{esc(c['object_alt'])}"><figcaption>{c.get('object_cap', u['obj_cap'])}</figcaption></figure>
   <div>
     <dl class="sys-spec">
 {spec}
