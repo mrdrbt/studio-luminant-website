@@ -297,7 +297,7 @@ nav.scrolled .nav-logo-img { height: 19px; }
 }
 .nav-cta:hover { background: var(--cta-bg-hover); }
 .nav-lang {
-  color: rgba(var(--ink-rgb), 0.6); font-size: 13px; letter-spacing: 0.04em;
+  color: var(--ink-muted); font-size: 13px; letter-spacing: 0.04em;
   text-decoration: none; transition: color 0.3s;
 }
 .nav-lang:hover { color: var(--ink); }
@@ -982,6 +982,9 @@ a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, 
   a.uds-link { display: inline-flex; }
   a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, a.uds-link::after { inset: -12px -6px; }
 }
+
+/* Back-link target: 24px minimum (WCAG 2.5.8); legal.css and the inline copies on article pages set no height. */
+.back-nav a { min-height: 24px; }
 
 /* ─── PHONE BODY COPY ───────────────────
    300-weight grey on cream is thin on a small screen: heavier weight, darker secondary inks. */

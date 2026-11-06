@@ -277,6 +277,7 @@ def head(lang, title, meta, url, tr_url, en_url, og_image, extra, crumbs, ld=())
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE8D5">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(meta)}">
 <link rel="canonical" href="{DOMAIN}{url}">

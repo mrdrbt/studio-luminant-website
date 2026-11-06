@@ -23,7 +23,7 @@
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preload" href="fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="shared.css?v=6351b34c">
+<link rel="stylesheet" href="shared.css?v=dce8c708">
 <link rel="preload" as="image" href="assets/relief/080-hero/poster-1680.jpg" imagesrcset="assets/relief/080-hero/poster-640.jpg 640w, assets/relief/080-hero/poster-840.jpg 840w, assets/relief/080-hero/poster-960.jpg 960w, assets/relief/080-hero/poster-1080.jpg 1080w, assets/relief/080-hero/poster-1680.jpg 1680w" imagesizes="(orientation: portrait) calc(1.4 * (100vw - 48px)), 84vh" fetchpriority="high">
 
 <style>
@@ -761,6 +761,7 @@
     text-decoration: none;
     border-bottom: 1px solid var(--border);
     padding-bottom: 3px; transition: border-color 0.3s;
+    min-height: 24px; box-sizing: border-box;
   }
   .faq-link:hover { border-color: var(--gold); }
   @media (max-width: 600px) {
@@ -1213,15 +1214,20 @@
         <p class="sbx-intro reveal">Rölyefi, yüzeyi ve rengi kendi mekânınızın ışığında, paneli şartnameye yazmadan önce değerlendirin. Kutuyu, devam eden bir projesi olan ofislere gönderiyoruz.</p>
       </div>
       <figure class="sbx-light reveal">
-        <video class="sbx-light-video" muted loop playsinline preload="none" width="720" height="900" poster="images/studio-luminant-glissando-light-study-poster.jpg" aria-label="Glissando rölyefi üzerinde gezinen yalama ışık">
+        <video class="sbx-light-video" muted loop playsinline preload="none" width="720" height="900" data-poster="images/studio-luminant-glissando-light-study-poster.jpg" aria-label="Glissando rölyefi üzerinde gezinen yalama ışık">
           <source src="video/studio-luminant-glissando-light-study.mp4" type="video/mp4">
         </video>
+        <noscript><style>#sample-box .sbx-light-video{display:none}</style><img src="images/studio-luminant-glissando-light-study-poster.jpg" alt="" width="720" height="900" style="display:block;width:100%;height:auto;aspect-ratio:4/5"></noscript>
       </figure>
       <script>
       (function(){var v=document.querySelector('#sample-box .sbx-light-video');if(!v)return;
-        if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+        var setPoster=function(){var s=v.getAttribute('data-poster');if(s){v.poster=s;v.removeAttribute('data-poster');}};
+        var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         var go=function(){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});};
-        if(!('IntersectionObserver' in window)){go();return;}
+        if(!('IntersectionObserver' in window)){setPoster();if(!still)go();return;}
+        var po=new IntersectionObserver(function(es){if(es.some(function(e){return e.isIntersecting;})){setPoster();po.disconnect();}},{rootMargin:'1200px 0px'});
+        po.observe(v);
+        if(still)return;
         new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)go();else v.pause();});},{rootMargin:'200px 0px'}).observe(v);
       })();
       </script>
@@ -1235,7 +1241,7 @@
         </picture>
         <picture class="sbx-closed" aria-hidden="true">
           <source type="image/webp" srcset="images/studio-luminant-finish-sample-box-angled-closed-800w.webp 800w, images/studio-luminant-finish-sample-box-angled-closed-1600w.webp 1600w" sizes="(max-width:1024px) 100vw, 920px">
-          <img src="images/studio-luminant-finish-sample-box-angled-closed.jpg" alt="" width="1600" height="1073" loading="lazy" decoding="async">
+          <img src="images/studio-luminant-finish-sample-box-angled-closed.jpg" alt="Studio Luminant" width="1600" height="1073" loading="lazy" decoding="async">
         </picture>
         <span class="sbx-cue">Açmak için kaydırın</span>
       </div>
@@ -1467,8 +1473,8 @@
 <!-- LATEST FROM THE JOURNAL -->
 <style>
   #journal-latest{padding:160px 0;background:var(--deep);border-top:1px solid var(--border);}
-  #journal-latest .journal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;margin-top:64px;}
-  #journal-latest .journal-card{background:var(--surface);padding:44px 40px;text-decoration:none;display:block;transition:background .3s;}
+  #journal-latest .journal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:2px;margin-top:64px;}
+  #journal-latest .journal-card{background:var(--surface);padding:44px 40px;text-decoration:none;display:block;min-width:0;max-width:100%;transition:background .3s;}
   #journal-latest .journal-card:hover{background:var(--surface-2);}
   #journal-latest .jc-eyebrow{font-size: 11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:14px;}
   #journal-latest .jc-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;line-height:1.15;color:var(--text-primary);margin-bottom:10px;}
@@ -1558,6 +1564,6 @@
 <script src="shared.js?v=18e9ebf3"></script>
 <script src="components.js?v=1f502ace"></script>
 
-<script src="consent.js?v=08e17d54"></script>
+<script src="consent.js?v=24c8a6ae"></script>
 </body>
 </html>

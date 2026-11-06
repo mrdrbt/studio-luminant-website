@@ -186,7 +186,9 @@
     '#sl-consent button.sl-c-primary{font-weight:400}',
     '#sl-consent button.sl-c-link{padding:0 4px}',
     '#sl-consent .sl-c-panel{flex-direction:column;align-items:stretch;gap:12px;margin-top:10px;padding-top:10px}',
-    '#sl-consent .sl-c-cats{grid-template-columns:1fr;gap:8px}}'
+    '#sl-consent .sl-c-cats{grid-template-columns:1fr;gap:8px}}',
+    'html:has(#sl-consent){scroll-padding-bottom:100px}',
+    '@media(max-width:480px){html:has(#sl-consent){scroll-padding-bottom:110px}}'
   ].join('');
 
   var el = null;

@@ -749,7 +749,7 @@ function FinishColorSelector({
       fontWeight: 300,
       lineHeight: 1.4
     }
-  }, "Özel renk eşleştirme mümkündür \u2014 RAL, NCS veya ısmarlama referans.")));
+  }, "Özel renk eşleştirme mümkündür \u2014 RAL, NCS veya özel referans.")));
 }
 function AdvantageArrow({
   advantage
