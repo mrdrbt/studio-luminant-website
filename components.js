@@ -182,6 +182,7 @@ function pictureTag(src, alt, sizes, opts) {
 
 <div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="${navLinks.mobileLabel}">
 ${mobileItemsHtml}
+  <a href="${doorCta.href}" class="btn-primary nav-mobile-cta">${doorCta.text}</a>
   ${hasTwin ? `<a href="${langUrl}" class="nav-mobile-lang" hreflang="${lang === 'tr' ? 'en' : 'tr'}" lang="${lang === 'tr' ? 'en' : 'tr'}">${navLinks.langLabel}</a>` : ''}
 </div>`;
 

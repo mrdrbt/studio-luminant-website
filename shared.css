@@ -493,7 +493,7 @@ summary:focus-visible,
 .nav-mobile-menu {
   display: none; position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(var(--bg-rgb), 0.97);
+  background: var(--bg);   /* opaque: at 0.97 the page's headline ghosted behind the menu */
   z-index: 999;
   flex-direction: column; align-items: center; justify-content: center;
   gap: 32px;
@@ -509,6 +509,12 @@ summary:focus-visible,
   transition: color 0.2s;
 }
 .nav-mobile-menu a:hover { color: var(--gold); }
+/* the door's one CTA: the primary button, not a fifth menu line */
+.nav-mobile-menu a.nav-mobile-cta,
+.nav-mobile-menu a.nav-mobile-cta:hover {
+  font-size: 11px; letter-spacing: 0.22em; padding: 14px 32px; margin-top: 8px;
+  color: var(--on-accent);
+}
 .nav-mobile-menu .nav-mobile-lang {
   margin-top: 16px; font-size: 13px; color: var(--gold-dim);
   letter-spacing: 0.15em; padding-top: 24px;
