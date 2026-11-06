@@ -7,6 +7,8 @@ For every page Netlify would serve (a forced redirect or a meta-refresh stub is 
     the page's own <html lang> entry = its canonical
   - reciprocity: the twin page's tr/en pair is the same pair
 Pages with no hreflang at all are listed as info (TR-only or EN-only pages), not counted as mismatches.
+Pages with a robots noindex (the design share views) are listed as info and not checked: they are not
+indexable, sit outside the sitemap and carry no canonical on purpose. Dot-folders (.superpowers) are not served.
 Exit 1 on any mismatch.
 
 Usage: python tools/hreflang_check.py [site-root]
@@ -24,6 +26,7 @@ CANON_RE = re.compile(r'<link[^>]+rel="canonical"[^>]*>', re.I)
 HREF_RE = re.compile(r'href="([^"]+)"', re.I)
 LANG_RE = re.compile(r'<html[^>]+lang="([a-z]{2})', re.I)
 REFRESH_RE = re.compile(r'http-equiv="refresh"', re.I)
+NOINDEX_RE = re.compile(r'<meta[^>]+name="robots"[^>]+content="[^"]*noindex', re.I)
 
 RULES = []
 for r in tomllib.loads((ROOT / 'netlify.toml').read_text(encoding='utf-8')).get('redirects', []):
@@ -86,7 +89,8 @@ def links(head):
 
 def served_pages():
     for f in sorted(ROOT.rglob('*')):
-        if f.suffix not in ('.htm', '.html') or any(p in SKIP_DIRS for p in f.relative_to(ROOT).parts):
+        parts = f.relative_to(ROOT).parts
+        if f.suffix not in ('.htm', '.html') or any(p in SKIP_DIRS or p.startswith('.') for p in parts):
             continue
         path = '/' + f.relative_to(ROOT).as_posix()
         status, _ = serve(path)
@@ -102,6 +106,9 @@ def main():
     for f in pages:
         rel = f.relative_to(ROOT).as_posix()
         head = head_of(f)
+        if NOINDEX_RE.search(head):
+            info.append(f'{rel}: noindex')
+            continue
         canon, alts = links(head)
         if len(canon) != 1:
             mismatches.append(f'{rel}: {len(canon)} canonical tags')
