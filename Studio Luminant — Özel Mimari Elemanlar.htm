@@ -438,8 +438,19 @@
     background: var(--bg);   /* a translucent scrim left dark text on dark rooms */
     opacity: 0; transition: opacity 0.4s;
   }
-  .portfolio-item:hover .portfolio-item-caption { opacity: 1; }
-  @media (hover: none) { .portfolio-item-caption { opacity: 1; } }
+  .portfolio-item:hover .portfolio-item-caption,
+  .portfolio-item:focus-visible .portfolio-item-caption { opacity: 1; }
+  .portfolio-item:focus-visible { outline: none; }
+  .portfolio-item:focus-visible::after {
+    content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+    border: 2px solid rgba(var(--bg-rgb),0.95);
+    outline: 2px solid var(--accent); outline-offset: -4px;
+  }
+  @media (hover: none) {
+    .portfolio-item-caption { opacity: 1; }
+    .portfolio-item img { filter: none; }
+    .uds-image { opacity: 1; }
+  }
   .portfolio-item-caption span {
     font-size: 11px; letter-spacing: 0.2em;
     text-transform: uppercase; color: var(--ink);
@@ -451,7 +462,7 @@
   .portfolio-concept-tag {
     position: absolute; top: 16px; left: 16px; z-index: 2;
     font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--text-secondary); background: rgba(var(--bg-rgb),0.55);
+    color: var(--text-secondary); background: rgba(var(--bg-rgb),0.72);
     border: 1px solid var(--border); padding: 5px 10px;
     backdrop-filter: blur(2px); pointer-events: none;
   }
@@ -844,10 +855,10 @@
     </a>
     <a class="portfolio-item" href="tasarim-antiphon.htm">
       <picture data-lazy>
-              <source type="image/webp" data-srcset="assets/designs/antiphon/room-lobby-800w.webp 800w, assets/designs/antiphon/room-lobby.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <source type="image/webp" data-srcset="assets/designs/antiphon/room-lobby-800w.webp 800w, assets/designs/antiphon/room-lobby.webp 1536w" sizes="(max-width: 1024px) 50vw, 25vw">
               <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/designs/antiphon/room-lobby.webp" alt="Render: Antiphon, otel lobisi" width="1536" height="1024" style="object-position:85% 50%" loading="lazy" decoding="async">
             </picture><noscript><picture>
-              <source type="image/webp" srcset="assets/designs/antiphon/room-lobby-800w.webp 800w, assets/designs/antiphon/room-lobby.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <source type="image/webp" srcset="assets/designs/antiphon/room-lobby-800w.webp 800w, assets/designs/antiphon/room-lobby.webp 1536w" sizes="(max-width: 1024px) 50vw, 25vw">
               <img src="assets/designs/antiphon/room-lobby.webp" alt="Render: Antiphon, otel lobisi" width="1536" height="1024" style="object-position:85% 50%" loading="lazy" decoding="async">
             </picture></noscript>
       <span class="portfolio-concept-tag">Konsept</span>
@@ -855,10 +866,10 @@
     </a>
     <a class="portfolio-item" href="tasarim-andante.htm">
       <picture data-lazy>
-              <source type="image/webp" data-srcset="assets/designs/andante/room-guestroom-800w.webp 800w, assets/designs/andante/room-guestroom.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <source type="image/webp" data-srcset="assets/designs/andante/room-guestroom-800w.webp 800w, assets/designs/andante/room-guestroom.webp 1536w" sizes="(max-width: 1024px) 50vw, 25vw">
               <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/designs/andante/room-guestroom.webp" alt="Render: Andante, otel odası" width="1536" height="1024" loading="lazy" decoding="async">
             </picture><noscript><picture>
-              <source type="image/webp" srcset="assets/designs/andante/room-guestroom-800w.webp 800w, assets/designs/andante/room-guestroom.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <source type="image/webp" srcset="assets/designs/andante/room-guestroom-800w.webp 800w, assets/designs/andante/room-guestroom.webp 1536w" sizes="(max-width: 1024px) 50vw, 25vw">
               <img src="assets/designs/andante/room-guestroom.webp" alt="Render: Andante, otel odası" width="1536" height="1024" loading="lazy" decoding="async">
             </picture></noscript>
       <span class="portfolio-concept-tag">Konsept</span>
@@ -866,10 +877,10 @@
     </a>
     <a class="portfolio-item" href="tasarim-fugato.htm">
       <picture data-lazy>
-              <source type="image/webp" data-srcset="assets/designs/fugato/room-bar-800w.webp 800w, assets/designs/fugato/room-bar.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <source type="image/webp" data-srcset="assets/designs/fugato/room-bar-800w.webp 800w, assets/designs/fugato/room-bar.webp 1536w" sizes="(max-width: 1024px) 50vw, 25vw">
               <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/designs/fugato/room-bar.webp" alt="Render: Fugato, bar" width="1536" height="1024" style="object-position:72% 50%" loading="lazy" decoding="async">
             </picture><noscript><picture>
-              <source type="image/webp" srcset="assets/designs/fugato/room-bar-800w.webp 800w, assets/designs/fugato/room-bar.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <source type="image/webp" srcset="assets/designs/fugato/room-bar-800w.webp 800w, assets/designs/fugato/room-bar.webp 1536w" sizes="(max-width: 1024px) 50vw, 25vw">
               <img src="assets/designs/fugato/room-bar.webp" alt="Render: Fugato, bar" width="1536" height="1024" style="object-position:72% 50%" loading="lazy" decoding="async">
             </picture></noscript>
       <span class="portfolio-concept-tag">Konsept</span>
@@ -877,10 +888,10 @@
     </a>
     <a class="portfolio-item" href="tasarim-ricercar.htm">
       <picture data-lazy>
-              <source type="image/webp" data-srcset="assets/designs/ricercar/room-boutique-800w.webp 800w, assets/designs/ricercar/room-boutique.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <source type="image/webp" data-srcset="assets/designs/ricercar/room-boutique-800w.webp 800w, assets/designs/ricercar/room-boutique.webp 1536w" sizes="(max-width: 1024px) 50vw, 25vw">
               <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="assets/designs/ricercar/room-boutique.webp" alt="Render: Ricercar, mağaza" width="1536" height="1024" style="object-position:14% 50%" loading="lazy" decoding="async">
             </picture><noscript><picture>
-              <source type="image/webp" srcset="assets/designs/ricercar/room-boutique-800w.webp 800w, assets/designs/ricercar/room-boutique.webp 1536w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw">
+              <source type="image/webp" srcset="assets/designs/ricercar/room-boutique-800w.webp 800w, assets/designs/ricercar/room-boutique.webp 1536w" sizes="(max-width: 1024px) 50vw, 25vw">
               <img src="assets/designs/ricercar/room-boutique.webp" alt="Render: Ricercar, mağaza" width="1536" height="1024" style="object-position:14% 50%" loading="lazy" decoding="async">
             </picture></noscript>
       <span class="portfolio-concept-tag">Konsept</span>
