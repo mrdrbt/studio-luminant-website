@@ -186,7 +186,7 @@ const studioMaterials = [{
     uv: "—",
     chemical: "—",
     temperature: "—",
-    surface: (_pmag.finish ? _pmag.finish.en : "Any RAL / custom colour — artisan finishes, smooth or textured"),
+    surface: (_pmag.finish ? _pmag.finish.en : "RAL and custom colours — artisan finishes, smooth or textured"),
     customDesign: "Parametric design",
     acoustic: "—",
     antimicrobial: "—",
