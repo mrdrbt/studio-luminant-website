@@ -984,7 +984,9 @@ def design_missing(d, library=None):
         if not ((rel / "height-1024.webp").exists() or (rel / "drawing.webp").exists()):
             missing.append(f"image assets/relief/{d['asset']}/height-1024.webp")
         lib = (library or LIBRARY) / str(d.get("library") or "-")
-        if not (rel / "object.webp").exists() and not (lib / "render.png").exists():
+        if not (rel / "object.webp").exists() and d.get("object_fixed"):
+            missing.append(f"image assets/relief/{d['asset']}/object.webp (hand-placed close view; restore it from git, the Library render is not its source)")
+        elif not (rel / "object.webp").exists() and not (lib / "render.png").exists():
             missing.append(f"image Library render for {d.get('library')}")
     elif kind == "study" and d.get("asset"):
         src = d.get("src") if isinstance(d.get("src"), dict) else {}

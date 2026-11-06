@@ -87,10 +87,6 @@ const specMeta = {
     label: "Custom design",
     unit: ""
   },
-  voc: {
-    label: "VOC emissions",
-    unit: ""
-  },
   acoustic: {
     label: "Acoustic",
     unit: ""
@@ -192,7 +188,6 @@ const studioMaterials = [{
     temperature: "—",
     surface: (_pmag.finish ? _pmag.finish.en : "Any RAL / custom colour — artisan finishes, smooth or textured"),
     customDesign: "Parametric design",
-    voc: "Low — indoor air quality safe",
     acoustic: "—",
     antimicrobial: "—",
     method: "Polymer adhesive",
@@ -222,7 +217,6 @@ const sectorMaterials = [{
     temperature: "—",
     surface: "Painted (on-site finishing required)",
     customDesign: "Limited mould availability",
-    voc: "—",
     acoustic: "—",
     antimicrobial: "—",
     method: "Adhesive + mechanical fixing",
@@ -251,7 +245,6 @@ const sectorMaterials = [{
     temperature: "Wide range",
     surface: "As-cast or painted (limited)",
     customDesign: "Possible but expensive tooling",
-    voc: "—",
     acoustic: "—",
     antimicrobial: "—",
     method: "Heavy mechanical fixing",
@@ -280,7 +273,6 @@ const sectorMaterials = [{
     temperature: "Wide range",
     surface: "Polished, honed, textured (natural)",
     customDesign: "Carved only — extreme cost",
-    voc: "None",
     acoustic: "—",
     antimicrobial: "—",
     method: "Structural support, skilled stonemason",
@@ -309,7 +301,6 @@ const sectorMaterials = [{
     temperature: "Moderate range",
     surface: "Gel coat or paint (can look plasticky)",
     customDesign: "Mold-dependent",
-    voc: "—",
     acoustic: "—",
     antimicrobial: "—",
     method: "Adhesive or mechanical",
@@ -338,7 +329,6 @@ const sectorMaterials = [{
     temperature: "Interior only",
     surface: "Veneered, painted, or CNC-carved",
     customDesign: "CNC possible but depth-limited",
-    voc: "Moderate (formaldehyde risk)",
     acoustic: "Moderate natural absorption",
     antimicrobial: "—",
     method: "Standard carpentry",

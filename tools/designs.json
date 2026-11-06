@@ -140,7 +140,7 @@
    "kind": "relief",
    "code": "096",
    "library": "096_tirage",
-   "asset": "andante",
+   "asset": "andante", "object_fixed": true,
    "layout": "field",
    "tr": {
     "name": "Andante",
@@ -254,7 +254,7 @@
    "kind": "relief",
    "code": "065",
    "library": "065_lens",
-   "asset": "065-antiphon",
+   "asset": "065-antiphon", "object_fixed": true,
    "layout": "field",
    "tr": {
     "name": "Antiphon",
@@ -361,18 +361,14 @@
      "alt": "Render: Antiphon, hotel lobby",
      "cap": "Render: hotel lobby"
     }
-   },
-   "card_zoom": [
-    1.65,
-    "50% 50%"
-   ]
+   }
   },
   {
    "slug": "fioritura",
    "kind": "relief",
    "code": "004",
    "library": "004_iznik-cell03",
-   "asset": "004-fioritura",
+   "asset": "004-fioritura", "object_fixed": true,
    "layout": "field",
    "tr": {
     "name": "Fioritura",
@@ -479,18 +475,14 @@
      "alt": "Render: Fioritura, spa",
      "cap": "Render: spa"
     }
-   },
-   "card_zoom": [
-    1.65,
-    "50% 50%"
-   ]
+   }
   },
   {
    "slug": "fugato",
    "kind": "relief",
    "code": "093",
    "library": "093_cove-course",
-   "asset": "093-fugato",
+   "asset": "093-fugato", "object_fixed": true,
    "layout": "panel",
    "tr": {
     "name": "Fugato",
@@ -1242,7 +1234,7 @@
    "kind": "relief",
    "code": "094",
    "library": "094_pillow-r4c",
-   "asset": "mezzavoce",
+   "asset": "mezzavoce", "object_fixed": true,
    "layout": "field",
    "tr": {
     "name": "Mezzavoce",
@@ -1352,15 +1344,11 @@
    }
   },
   {
-   "card_zoom": [
-    1.65,
-    "50% 50%"
-   ],
    "slug": "ricercar",
    "kind": "relief",
    "code": "031",
    "library": "031_gothic",
-   "asset": "031-ricercar",
+   "asset": "031-ricercar", "object_fixed": true,
    "layout": "field",
    "tr": {
     "name": "Ricercar",

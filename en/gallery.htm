@@ -120,6 +120,8 @@
   .gallery-item picture { display: block; overflow: hidden; background: var(--surface); aspect-ratio: 4 / 5; }
   .gallery-item.w2 { grid-column: span 2; }
   .gallery-item.w2 picture { aspect-ratio: 8 / 5; }
+  .gallery-grid[data-filtered] .gallery-item.w2 { grid-column: auto; }
+  .gallery-grid[data-filtered] .gallery-item.w2 picture { aspect-ratio: 4 / 5; }
 
   .gallery-item img {
     width: 100%; height: 100%; object-fit: cover; display: block;
@@ -526,6 +528,7 @@
       item.style.display = show ? '' : 'none';
       if (show) count++;
     });
+    document.querySelector('.gallery-grid').toggleAttribute('data-filtered', f !== 'all');
     galleryCount.textContent = label + ': ' + count;
     return count;
   }

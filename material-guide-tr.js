@@ -87,10 +87,6 @@ const specMeta = {
     label: "Özel tasarım",
     unit: ""
   },
-  voc: {
-    label: "VOC emisyonları",
-    unit: ""
-  },
   acoustic: {
     label: "Akustik",
     unit: ""
@@ -192,7 +188,6 @@ const studioMaterials = [{
     temperature: "—",
     surface: (_pmag.finish ? _pmag.finish.tr : "Tüm RAL / özel renkler — artizan finish, pürüzsüz ya da dokulu"),
     customDesign: "Parametrik tasarım",
-    voc: "Düşük",
     acoustic: "—",
     antimicrobial: "—",
     method: "Polimer yapıştırıcıyla",
@@ -222,7 +217,6 @@ const sectorMaterials = [{
     temperature: "—",
     surface: "Boyalı (şantiyede boya gerekir)",
     customDesign: "Kalıp seçeneği sınırlı",
-    voc: "—",
     acoustic: "—",
     antimicrobial: "—",
     method: "Yapıştırıcı + mekanik sabitleme",
@@ -251,7 +245,6 @@ const sectorMaterials = [{
     temperature: "Geniş aralık",
     surface: "Döküm hâliyle ya da boyalı (sınırlı)",
     customDesign: "Mümkün, ancak kalıp maliyeti yüksek",
-    voc: "—",
     acoustic: "—",
     antimicrobial: "—",
     method: "Ağır mekanik sabitleme",
@@ -280,7 +273,6 @@ const sectorMaterials = [{
     temperature: "Geniş aralık",
     surface: "Cilalı, honlu, dokulu (doğal)",
     customDesign: "Yalnızca oyma — çok yüksek maliyet",
-    voc: "Yok",
     acoustic: "—",
     antimicrobial: "—",
     method: "Taşıyıcı destek, usta taş işçiliği",
@@ -309,7 +301,6 @@ const sectorMaterials = [{
     temperature: "Orta aralık",
     surface: "Jelkot ya da boya (plastik görünebilir)",
     customDesign: "Kalıba bağlı",
-    voc: "—",
     acoustic: "—",
     antimicrobial: "—",
     method: "Yapıştırıcı ya da mekanik",
@@ -338,7 +329,6 @@ const sectorMaterials = [{
     temperature: "Yalnızca iç mekân",
     surface: "Kaplamalı, boyalı ya da CNC ile oyulmuş",
     customDesign: "CNC ile mümkün, derinlik sınırlı",
-    voc: "Orta (formaldehit riski)",
     acoustic: "Orta düzeyde doğal ses yutumu",
     antimicrobial: "—",
     method: "Standart doğrama işçiliği",
