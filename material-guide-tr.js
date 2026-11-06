@@ -264,7 +264,7 @@ const sectorMaterials = [{
   fullName: "Mermer / Kireçtaşı Kaplama",
   specs: {
     density: "2,300–2,800",
-    weight: "50–75",
+    weight: "—",
     thickness: "20+",
     moisture: "Değişken (yüzey korunmazsa gözenekli)",
     impact: "Kırılgan — kenar kırığı ve çatlak",

@@ -264,7 +264,7 @@ const sectorMaterials = [{
   fullName: "Marble / Limestone Cladding",
   specs: {
     density: "2,300–2,800",
-    weight: "50–75",
+    weight: "—",
     thickness: "20+",
     moisture: "Variable (porous unless sealed)",
     impact: "Brittle — chips and cracks",
