@@ -21,11 +21,6 @@
       <image:caption>İki bej döküm rölyef panel ve beyaz kalıpları, üstte su terazisiyle atölye tezgâhında</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
-      <image:title>Finish sample box — leather portfolio</image:title>
-      <image:caption>Kapağında Studio Luminant monogramı olan kapalı siyah portföy tipi numune kutusu</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept-square.jpg</image:loc>
       <image:title>Warm light grazes down a cellular relief wall from ceiling-line fixtures</image:title>
       <image:caption>Otel resepsiyonunda traverten bankonun arkasında yükselen, sıcak yalama ışıkla aydınlanan hücre desenli rölyef duvar</image:caption>
@@ -89,11 +84,6 @@
       <image:caption>Two tan cast relief panels beside their white moulds on a workshop bench, spirit level above</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
-      <image:title>Finish sample box — leather portfolio</image:title>
-      <image:caption>Closed black portfolio-style sample box with the Studio Luminant monogram on its cover</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://studioluminant.com.tr/images/studio-luminant-cellular-relief-wall-hotel-reception-concept-square.jpg</image:loc>
       <image:title>Warm light grazes down a cellular relief wall from ceiling-line fixtures</image:title>
       <image:caption>Warm light grazes down a cellular relief wall from ceiling-line fixtures, behind a travertine reception desk and bouclé lounge chairs</image:caption>
@@ -139,24 +129,8 @@
   </url>
 
   <!-- Gallery (TR) -->
-  <url>
-    <loc>https://studioluminant.com.tr/galeri.htm</loc>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
-      <image:title>Finish sample box — leather portfolio</image:title>
-      <image:caption>Kapağında Studio Luminant monogramı olan kapalı siyah portföy tipi numune kutusu</image:caption>
-    </image:image>
-  </url>
 
   <!-- Gallery (EN) -->
-  <url>
-    <loc>https://studioluminant.com.tr/en/gallery.htm</loc>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
-      <image:title>Finish sample box — leather portfolio</image:title>
-      <image:caption>Closed black portfolio-style sample box with the Studio Luminant monogram on its cover</image:caption>
-    </image:image>
-  </url>
 
 
   <!-- Hotel lobby article (TR) -->
@@ -176,11 +150,6 @@
       <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg</image:loc>
       <image:title>Relief panel of drifting vertical fibres</image:title>
       <image:caption>Dikey akan liflerden oluşan rölyef panel, yalama ışıkta yakından</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
-      <image:title>Finish sample box — leather portfolio</image:title>
-      <image:caption>Kapağında Studio Luminant monogramı olan kapalı siyah portföy tipi numune kutusu</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg</image:loc>
@@ -206,11 +175,6 @@
       <image:loc>https://studioluminant.com.tr/images/studio-luminant-flowing-fibre-relief-panel-raking-light.jpg</image:loc>
       <image:title>Relief panel of drifting vertical fibres</image:title>
       <image:caption>Relief panel of drifting vertical fibres, close up in raking light</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://studioluminant.com.tr/images/studio-luminant-finish-sample-box-closed.jpg</image:loc>
-      <image:title>Finish sample box — leather portfolio</image:title>
-      <image:caption>Closed black portfolio-style sample box with the Studio Luminant monogram on its cover</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://studioluminant.com.tr/images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg</image:loc>
