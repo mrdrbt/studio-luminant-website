@@ -96,43 +96,6 @@
   }
   .article-body strong { font-weight: 500; color: var(--text-primary); }
 
-  /* ─── COMPARISON TABLE ───────────────── */
-  .env-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 36px 0 40px;
-    font-size: 14px;
-  }
-  .env-table thead th {
-    text-align: left;
-    font-size: 11px; letter-spacing: 0.28em;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 400; padding: 14px 16px;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
-  }
-  .env-table tbody td {
-    padding: 16px;
-    border-bottom: 1px solid rgba(var(--accent-rgb),0.08);
-    vertical-align: top;
-    color: var(--text-secondary);
-    font-weight: 300;
-    line-height: 1.6;
-  }
-  .env-table tbody tr:hover { background: var(--surface); }
-  .env-table strong { color: var(--text-primary); font-weight: 500; }
-
-  .rating-badge {
-    display: inline-block;
-    font-size: 12px; font-weight: 500;
-    padding: 4px 12px; border-radius: 3px;
-    color: var(--obsidian);
-    white-space: nowrap;
-  }
-  .rating-high { background: var(--green); }
-  .rating-mid { background: var(--blue); }
-  .rating-low { background: var(--orange); }
-
   /* ─── CALLOUT BOX ────────────────────── */
   .callout {
     background: var(--surface);
@@ -228,16 +191,11 @@
     .article-wrapper { padding: 0 24px; }
     .stats-row { grid-template-columns: 1fr; }
     .lifecycle-grid { grid-template-columns: 1fr 1fr; }
-    .env-table { font-size: 13px; }
-    .env-table thead th, .env-table tbody td { padding: 12px; }
   }
   @media (max-width: 480px) {
     .lifecycle-grid { grid-template-columns: 1fr; }
   }
   /* a11y pass */
-  .env-table caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  .env-table tbody th { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid rgba(var(--accent-rgb),0.08); color: var(--text-secondary); font-weight: 300; font-size: inherit; line-height: 1.6; }
-  .env-table tbody td, .env-table tbody th { font-variant-numeric: tabular-nums; }
   .bar-value, .stat-value { font-variant-numeric: tabular-nums; }
   .article-title, .article-body h2, .page-hero-headline, .article-card-title, .resource-card-title, .cta-headline, .article-cta h3 { text-wrap: balance; }
 </style>
@@ -294,7 +252,7 @@
       <span translate="no">Lumina PMAG™</span>, doğal olarak oluşan ve ayrıca elektrik santrallerindeki baca gazı desülfürizasyonu gibi endüstriyel süreçlerin yan ürünü olarak da üretilen <strong>alçı</strong> üzerine kuruludur.
     </p>
     <p>
-      PMAG panellerin imalat süreci alternatiflere kıyasla düşük enerji tüketimlidir. Alçı döküm ortam sıcaklığında gerçekleşir — fırın yok, yüksek sıcaklıkta kür fırınları yok ve sinterleme işlemi yok. Birincil enerji girdisi ham alçının kalsinasyonudur (tipik olarak 120–180°C), bu da seramikler (1000–1200°C), cam (1500°C+) veya metal döküm için gereken sıcaklıklardan önemli ölçüde düşüktür.
+      Alçı döküm ortam sıcaklığında gerçekleşir — fırın yok, yüksek sıcaklıkta kür fırınları yok ve sinterleme işlemi yok. Birincil enerji girdisi ham alçının kalsinasyonudur (tipik olarak 120–180°C).
     </p>
 
     <!-- STATS -->
@@ -313,37 +271,6 @@
       </p>
     </div>
 
-    <h2>Çevresel <em>Karşılaştırma</em></h2>
-
-    <div class="table-scroll" tabindex="0" role="region" aria-label="Lumina PMAG™ ve doğal taş: çevresel karşılaştırma">
-    <table class="env-table">
-      <caption><span translate="no">Lumina PMAG™</span> ve doğal taş: çevresel karşılaştırma</caption>
-      <thead>
-        <tr>
-          <th scope="col">Faktör</th>
-          <th scope="col"><span lang="en"><span translate="no">Lumina PMAG™</span></span></th>
-          <th scope="col">Doğal Taş</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row"><strong>Ham madde kaynağı</strong></th>
-          <td>Doğal/FGD alçı</td>
-          <td>Ocaktan çıkarılan taş</td>
-        </tr>
-        <tr>
-          <th scope="row"><strong>İmalat enerjisi</strong></th>
-          <td><span class="rating-badge rating-high">Düşük</span></td>
-          <td><span class="rating-badge rating-low">Yüksek</span> (kesme, cilalama)</td>
-        </tr>
-        <tr>
-          <th scope="row"><strong>Ağırlık (nakliye etkisi)</strong></th>
-          <td>35–40&nbsp;kg/m² @ 25&nbsp;mm</td>
-          <td>65–80&nbsp;kg/m² @ 25&nbsp;mm</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
 
     <h2>Malzeme <em>Yaşam Döngüsü</em></h2>
 
