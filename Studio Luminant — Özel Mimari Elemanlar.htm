@@ -437,16 +437,20 @@
   .portfolio-item:hover img { transform: scale(1.05); filter: grayscale(0%); }
   .portfolio-item--large { grid-column: 1; grid-row: 1 / span 2; }
   .portfolio-item-caption {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    padding: 40px 28px 24px;
-    background: linear-gradient(to top, rgba(var(--bg-rgb),0.75), transparent);
+    position: absolute; bottom: 16px; left: 16px;
+    padding: 5px 10px;
+    background: var(--bg);   /* a translucent scrim left dark text on dark rooms */
     opacity: 0; transition: opacity 0.4s;
   }
   .portfolio-item:hover .portfolio-item-caption { opacity: 1; }
   @media (hover: none) { .portfolio-item-caption { opacity: 1; } }
   .portfolio-item-caption span {
     font-size: 11px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--text-secondary);
+    text-transform: uppercase; color: var(--ink);
+  }
+  @media (max-width: 600px) {   /* narrow tiles: the chip stays on one line */
+    .portfolio-item-caption { bottom: 8px; left: 8px; padding: 4px 8px; }
+    .portfolio-item-caption span { letter-spacing: 0.06em; }
   }
   .portfolio-concept-tag {
     position: absolute; top: 16px; left: 16px; z-index: 2;
