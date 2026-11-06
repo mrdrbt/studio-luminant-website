@@ -546,7 +546,7 @@ function FinishColorSelector({
         alignItems: "center",
         gap: 8,
         padding: "8px 14px",
-        borderRadius: 2,
+        borderRadius: 0,
         border: isAct ? `1px solid ${COLORS.gold}` : "1px solid rgba(138,130,117,0.2)",
         background: isAct ? `${COLORS.gold}10` : "transparent",
         cursor: "pointer",
@@ -557,7 +557,7 @@ function FinishColorSelector({
       style: {
         width: 24,
         height: 24,
-        borderRadius: 2,
+        borderRadius: 0,
         background: f.preview.gradient,
         position: "relative",
         overflow: "hidden",
@@ -658,7 +658,7 @@ function FinishColorSelector({
       style: {
         width: 44,
         height: 44,
-        borderRadius: 2,
+        borderRadius: 0,
         border: isAct ? `2px solid ${COLORS.gold}` : `1px solid ${COLORS.borderGold}`,
         background: getSwatchStyle(selectedFinish, color),
         position: "relative",
@@ -705,7 +705,7 @@ function FinishColorSelector({
       padding: "8px 12px",
       background: `${COLORS.gold}08`,
       border: `1px solid ${COLORS.borderGold}`,
-      borderRadius: 2,
+      borderRadius: 0,
       display: "inline-block"
     }
   }, /*#__PURE__*/React.createElement("span", {
@@ -721,7 +721,7 @@ function FinishColorSelector({
       padding: "12px 16px",
       background: "linear-gradient(135deg, rgba(var(--accent-rgb),0.06) 0%, rgba(var(--accent-rgb),0.02) 100%)",
       border: `1px solid ${COLORS.borderGold}`,
-      borderRadius: 2,
+      borderRadius: 0,
       display: "flex",
       alignItems: "center",
       gap: 10
@@ -771,7 +771,7 @@ function MaterialCard({
     style: {
       background: COLORS.surface,
       border: `1px solid ${COLORS.borderGold}`,
-      borderRadius: 2,
+      borderRadius: 0,
       transition: "box-shadow 0.3s cubic-bezier(0.25,0.1,0.25,1)",
       boxShadow: "none",
       flex: isExpanded ? "1 1 100%" : "1 1 calc(50% - 12px)",
@@ -998,7 +998,7 @@ function ComparisonTable({
     style: {
       overflowX: "auto",
       WebkitOverflowScrolling: "touch",
-      borderRadius: 2
+      borderRadius: 0
     }
   }, /*#__PURE__*/React.createElement("table", {
     style: {
@@ -1141,7 +1141,7 @@ function MaterialGuide() {
         .mg-root .mg-cta{display:inline-flex;align-items:center;font-family:'Jost',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--on-accent);background:${COLORS.gold};padding:14px 32px;text-decoration:none;transition:background-color 0.3s ease;}
         .mg-root .mg-cta:hover,.mg-root .mg-cta:focus-visible{background-color:${COLORS.goldLight};}
         .mg-scroll:focus-visible{outline:2px solid ${COLORS.gold};outline-offset:-2px;}
-        .mg-root ::-webkit-scrollbar{height:6px;width:6px;}.mg-root ::-webkit-scrollbar-track{background:${COLORS.bg};}.mg-root ::-webkit-scrollbar-thumb{background:${COLORS.borderGold};border-radius:2px;}
+        .mg-root ::-webkit-scrollbar{height:6px;width:6px;}.mg-root ::-webkit-scrollbar-track{background:${COLORS.bg};}.mg-root ::-webkit-scrollbar-thumb{background:${COLORS.borderGold};}
       `), /*#__PURE__*/React.createElement("section", {
     className: "mg-root",
     style: {
@@ -1206,7 +1206,7 @@ function MaterialGuide() {
     style: {
       background: COLORS.surface,
       border: `1px solid ${COLORS.borderGold}`,
-      borderRadius: 2,
+      borderRadius: 0,
       padding: isMobile ? "24px 16px" : "32px 28px",
       transition: "border-color 0.3s ease"
     }
@@ -1236,7 +1236,7 @@ function MaterialGuide() {
       fontSize: 12,
       fontWeight: 400,
       padding: "6px 16px",
-      borderRadius: 2,
+      borderRadius: 0,
       cursor: "pointer",
       letterSpacing: "0.04em",
       border: compareMaterial === m.id ? `1px solid ${COLORS.gold}` : `1px solid ${COLORS.borderGold}`,
@@ -1273,7 +1273,7 @@ function MaterialGuide() {
         fontSize: 11,
         fontWeight: 400,
         padding: "5px 12px",
-        borderRadius: 2,
+        borderRadius: 0,
         cursor: "pointer",
         border: isOn ? `1px solid ${COLORS.gold}` : "1px solid rgba(138,130,117,0.3)",
         color: isOn ? COLORS.gold : COLORS.muted,
@@ -1363,7 +1363,7 @@ function MaterialGuide() {
       width: 16,
       height: 3,
       background: COLORS.gold,
-      borderRadius: 1
+      borderRadius: 0
     }
   }), /*#__PURE__*/React.createElement("span", {
     style: {

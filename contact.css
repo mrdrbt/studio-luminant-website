@@ -67,13 +67,13 @@
 .ct-submit:disabled { cursor: progress; opacity: 0.75; }
 .ct-note { font-size: var(--t-body-sm); line-height: 1.6; color: var(--ink-muted); margin: 0; }
 .ct-status { font-size: var(--t-body-sm); line-height: 1.6; color: var(--ink); margin: 0;
-  padding: var(--s-3) var(--s-4); border-left: 2px solid var(--accent); background: rgba(var(--ink-rgb), 0.04); }
+  padding: var(--s-3) var(--s-4); border: 1px solid var(--accent); background: rgba(var(--ink-rgb), 0.04); }
 .ct-req { color: var(--accent); }
 .ct-legend { margin: 0; }
 .ct-status:empty { padding: 0; border: 0; background: none; margin: 0; }
 .ct-status:focus-visible { outline: 2px solid var(--focus-color); outline-offset: 2px; }
 .ct-submit[aria-disabled="true"] { cursor: progress; opacity: 0.75; }
-.ct-status.is-error { border-left-color: var(--accent-error); }
+.ct-status.is-error { border-color: var(--accent-error); }
 
 /* sample box: the night band */
 .ct-sample { padding: var(--s-10) var(--pad-x); color-scheme: dark; }

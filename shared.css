@@ -1023,5 +1023,8 @@ html body :is(p, li, dd, dt, figcaption, blockquote) { font-weight: 400 !importa
   html body .article-wrapper .article-body > :is(ul, ol):not(.spec-checklist) > li { max-width: 55ch; }
   html body .article-wrapper :is(.callout, .faq) p { max-width: 54ch; }
 }
+/* Square corners, no side tabs (the system is square, #99). Article pages carry inline copies of these rules; specificity beats them. */
+html body :is(.callout, .legal-callout) { border: 1px solid var(--border); border-radius: 0; }
+html body :is(.phase-badge, .bar-track, .bar-fill, .bar-legend-dot) { border-radius: 0; }
 /* Long FAQ answers: cap the measure on every page that uses the pattern */
 html body .faq-answer p, html body .faq p { max-width: 60ch; }
