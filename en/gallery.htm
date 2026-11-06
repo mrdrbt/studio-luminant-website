@@ -91,7 +91,7 @@
 
   .filter-btn {
     font-family: 'Jost', sans-serif;
-    font-size: 10px; letter-spacing: 0.22em;
+    font-size: var(--btn-fs); letter-spacing: var(--btn-ls);
     text-transform: uppercase; font-weight: 400;
     color: var(--text-secondary);
     background: transparent;
@@ -102,9 +102,9 @@
   }
   .filter-btn:hover { color: var(--gold); border-color: var(--gold); }
   .filter-btn.active {
-    background: var(--gold);
-    color: var(--obsidian);
-    border-color: var(--gold);
+    background: var(--cta-bg);
+    color: var(--cta-fg);
+    border-color: var(--cta-bg);
   }
 
   /* Balanced grid: uniform-height rows, captions below the image */

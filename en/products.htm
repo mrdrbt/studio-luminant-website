@@ -92,10 +92,10 @@
   .product-section { padding: 0 0 100px; }
   .btn-secondary {
     display: inline-flex; align-items: center; gap: 12px;
-    font-family: var(--font-body); font-size: 11px; font-weight: 400;
-    letter-spacing: 0.22em; text-transform: uppercase;
+    font-family: var(--font-body); font-size: var(--btn-fs); font-weight: 400;
+    letter-spacing: var(--btn-ls); text-transform: uppercase;
     color: var(--ink); background: transparent;
-    padding: 13px 31px; border: 1px solid var(--ink); text-decoration: none;
+    padding: calc(var(--btn-py) - 1px) calc(var(--btn-px) - 1px); border: 1px solid var(--ink); text-decoration: none;
     transition: background 0.3s, color 0.3s, gap 0.3s;
   }
   .btn-secondary:hover { background: var(--ink); color: var(--bg); gap: 20px; }

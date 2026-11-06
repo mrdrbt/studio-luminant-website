@@ -38,6 +38,11 @@
   --cta-bg:       #8E4426;
   --cta-bg-hover: #6E3018;
   --cta-fg:       #F6F1E6;
+  /* the button family reads one size, one clay, one off-white */
+  --btn-fs:       11px;
+  --btn-ls:       0.22em;
+  --btn-py:       14px;
+  --btn-px:       32px;
 
   /* ── STATE ACCENTS (darkened for the light ground; all ≥4.5:1 on --bg) ── */
   --accent-error:    #A3402F;
@@ -156,6 +161,7 @@
   --accent-rgb:   212, 146, 111;
   --accent-hover: #E3AA8A;
   --on-accent:    #1D1A16;
+  --cta-bg-hover: #A5532F;   /* on a dark ground the clay lightens on hover */
 }
 .night { background-color: var(--bg); }
 .night, footer, #workshop-filmstrip { color: var(--ink); }
@@ -316,17 +322,17 @@ section { position: relative; z-index: 2; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 12px;
   font-family: var(--font-body);
-  font-size: 11px; font-weight: 400;
-  letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--obsidian); background: var(--gold);
-  padding: 14px 32px; text-decoration: none;
+  font-size: var(--btn-fs); font-weight: 400;
+  letter-spacing: var(--btn-ls); text-transform: uppercase;
+  color: var(--cta-fg); background: var(--cta-bg);
+  padding: var(--btn-py) var(--btn-px); text-decoration: none;
   transition: background 0.3s, gap 0.3s;
 }
-.btn-primary:hover { background: var(--gold-light); gap: 20px; }
+.btn-primary:hover { background: var(--cta-bg-hover); gap: 20px; }
 .btn-primary svg { width: 14px; height: 14px; }
 /* Article link styles must not repaint the filled button (was gold-dim on gold in v2) */
 .article-body .btn-primary,
-.article-body .btn-primary:hover { color: var(--on-accent); border-bottom: 0; }
+.article-body .btn-primary:hover { color: var(--cta-fg); border-bottom: 0; }
 
 /* ─── FOOTER ────────────────────────── */
 footer {
@@ -356,10 +362,10 @@ footer {
 .footer-location-note { font-size: 11px; color: var(--text-muted); font-weight: 300; }
 .footer-cta-block a {
   display: inline-flex; align-items: center; gap: 12px;
-  font-family: var(--font-body); font-size: 11px; font-weight: 400;
-  letter-spacing: 0.22em; text-transform: uppercase;
+  font-family: var(--font-body); font-size: var(--btn-fs); font-weight: 400;
+  letter-spacing: var(--btn-ls); text-transform: uppercase;
   color: var(--cta-fg); background: var(--cta-bg);
-  padding: 14px 28px; text-decoration: none; transition: background 0.3s;
+  padding: var(--btn-py) var(--btn-px); text-decoration: none; transition: background 0.3s;
 }
 .footer-cta-block a:hover { background: var(--cta-bg-hover); }
 .footer-cta-block p { font-size: 11px; color: var(--text-muted); margin-top: 14px; font-weight: 300; }
@@ -404,7 +410,7 @@ footer {
 /* ─── SKIP LINK ────────── */
 .skip-link {
   position: absolute; top: -100%; left: 16px;
-  background: var(--gold); color: var(--obsidian);
+  background: var(--cta-bg); color: var(--cta-fg);
   padding: 8px 16px; font-size: 13px; font-weight: 400;
   z-index: 10000; text-decoration: none;
   transition: top 0.2s ease;
@@ -513,8 +519,8 @@ summary:focus-visible,
 /* the door's one CTA: the primary button, not a fifth menu line */
 .nav-mobile-menu a.nav-mobile-cta,
 .nav-mobile-menu a.nav-mobile-cta:hover {
-  font-size: 11px; letter-spacing: 0.22em; padding: 14px 32px; margin-top: 8px;
-  color: var(--on-accent);
+  font-size: var(--btn-fs); letter-spacing: var(--btn-ls); padding: var(--btn-py) var(--btn-px); margin-top: 8px;
+  color: var(--cta-fg);
 }
 .nav-mobile-menu .nav-mobile-lang {
   margin-top: 16px; font-size: 13px; color: var(--gold-dim);
