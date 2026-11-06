@@ -78,7 +78,8 @@
 @media (orientation: portrait), (max-width: 820px) {
   .sys-hero, .sys-hero--field { grid-template-columns: 1fr; grid-template-rows: auto auto; height: auto; min-height: 0; max-height: none;
     padding: 80px var(--pad-x-sm) var(--s-7); gap: var(--s-5); }
-  .sys-hero__copy, .sys-hero--field .sys-hero__copy { align-self: start; }
+  .sys-hero__copy, .sys-hero--field .sys-hero__copy, .dsg-hero__copy { align-self: start; display: flex; flex-direction: column; }
+  :is(.sys-hero__copy, .dsg-hero__copy) .sys-lede { order: 1; margin: var(--s-5) 0 0; }   /* name and button share the first screen with the cookie bar */
   .sys-hero--field .sys-hero__copy { padding: var(--s-5); }
   .sys-hero__stage { order: -1; min-height: 0; }
   .sys-hero__stage .relief-light__poster { max-height: 44svh; }
@@ -86,7 +87,6 @@
   .sys-hero--field .sys-hero__stage .relief-light__poster { width: max(100%, 34svh); max-height: none; }
   .sys-back { margin-bottom: var(--s-4); }
   .sys-name { margin-bottom: var(--s-4); }
-  .sys-lede { margin-bottom: var(--s-5); }
   .sys-body, .sys-body--plain { grid-template-columns: 1fr; padding: var(--s-8) var(--pad-x-sm); gap: var(--s-7); }
   .sys-body--plain .sys-spec { display: block; border-top: 1px solid var(--ink); }
   .sys-body--plain .sys-spec div:nth-child(-n+2) { border-top: 0; }

@@ -181,7 +181,7 @@
     '@media(max-width:820px){#sl-consent{padding:8px 16px;max-height:80vh;overflow-y:auto}',
     '#sl-consent .sl-c-bar{flex-direction:column;align-items:stretch;gap:8px}',
     '#sl-consent p{font-size:11px;line-height:1.4;font-weight:400;color:#C9C4BC}',
-    '#sl-consent .sl-c-actions{display:grid;grid-template-columns:auto 1fr 1fr;gap:8px}',
+    '#sl-consent .sl-c-actions{display:grid;grid-template-columns:auto 1fr;gap:8px}',
     '#sl-consent button{width:auto;padding:0 8px;min-height:38px;font-size:10px;letter-spacing:0.16em;font-weight:400}',
     '#sl-consent button.sl-c-primary{font-weight:400}',
     '#sl-consent button.sl-c-link{padding:0 4px}',
