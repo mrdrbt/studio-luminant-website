@@ -186,7 +186,7 @@ const studioMaterials = [{
     uv: "—",
     chemical: "—",
     temperature: "—",
-    surface: (_pmag.finish ? _pmag.finish.tr : "RAL ve özel renkler — artizan finish, pürüzsüz ya da dokulu"),
+    surface: (_pmag.finish ? _pmag.finish.tr : "Tüm RAL / özel renkler — artizan finish, pürüzsüz ya da dokulu"),
     customDesign: "Parametrik tasarım",
     acoustic: "—",
     antimicrobial: "—",
