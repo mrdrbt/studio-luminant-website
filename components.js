@@ -254,17 +254,6 @@ ${mobileItemsHtml}
     }, { passive: true });
   }
 
-  // ─── CURSOR HOVER (for injected nav elements) ───
-  if (window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(hover: none)').matches) {
-    const ring = document.getElementById('cursorRing');
-    if (ring) {
-      document.querySelectorAll('#mainNav a, #mainNav button, .nav-mobile-menu a').forEach(el => {
-        el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-        el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-      });
-    }
-  }
-
   // ─── FOOTER ───
   if (!footerEl) return;
 

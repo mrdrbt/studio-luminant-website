@@ -229,14 +229,12 @@ body {
   position: fixed; top: 0; left: 0;
   pointer-events: none; z-index: var(--z-cursor);
   transform: translate3d(0,0,0) translate(-50%,-50%);
-  transition: width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
   display: none;
 }
-.cursor-ring.hover { width: 56px; height: 56px; opacity: 0.6; }
 
 @media (pointer: fine) and (hover: hover) and (prefers-reduced-motion: no-preference) {
   .cursor-dot, .cursor-ring { display: block; }
-  /* parked at 0,0 until the first mousemove: no half-cut ring in the corner */
+  /* shown only while shared.js sets cursor-live: over a relief-light stage, never over a control */
   html:not(.cursor-live) .cursor-dot, html:not(.cursor-live) .cursor-ring { visibility: hidden; }
 }
 @media (hover: none), (pointer: coarse) {
