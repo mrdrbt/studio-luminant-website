@@ -30,7 +30,7 @@
 .arc-head { max-width: 640px; margin: 0 0 var(--s-8); }
 .arc-title { font-family: var(--font-display); font-weight: 300; font-size: clamp(36px, 3.6vw, 56px); line-height: 1.05;
   color: var(--ink); margin: 0 0 var(--s-4); }
-.arc-title em { font-style: italic; color: var(--accent); }
+.arc-title em { font-style: normal; color: inherit; }   /* the two-tone line stays on the hero and the sample band */
 .arc-lede { font-size: var(--t-body); line-height: 1.75; color: var(--ink-2); margin: 0; max-width: 600px; }
 
 /* spec: head left, three <dl> groups right */
