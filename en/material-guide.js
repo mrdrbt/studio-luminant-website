@@ -1091,9 +1091,9 @@ function ComparisonTable({
           fontWeight: 300,
           opacity: 0.85
         }
-      }, cv, spec.unit && cv !== "—" ? `\u00A0${spec.unit}` : "", /*#__PURE__*/React.createElement(AdvantageArrow, {
+      }, cv, spec.unit && cv !== "—" ? `\u00A0${spec.unit}` : "", cv !== "—" ? /*#__PURE__*/React.createElement(AdvantageArrow, {
         advantage: adv
-      }));
+      }) : null);
     }));
   }))));
 }
