@@ -50,8 +50,8 @@
     position: relative; z-index: 2;
     background: var(--bg);
     display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start;
-    width: min(780px, 56%);
-    padding: 160px 60px 100px;
+    width: min(calc(var(--edge) + 720px), 56%);
+    padding: 160px 60px 100px var(--edge);
   }
   .page-hero-eyebrow {
     display: inline-flex; align-items: center; gap: 16px;

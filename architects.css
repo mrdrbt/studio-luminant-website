@@ -26,7 +26,7 @@
 /* section shell */
 .arc-band { padding: var(--s-10) var(--pad-x); }
 .arc-band--alt { background: var(--bg-alt); }
-.arc-inner { max-width: var(--maxw); margin: 0 auto; box-sizing: border-box; }
+.arc-inner { max-width: var(--content-w); margin: 0 auto; box-sizing: border-box; }
 .arc-head { max-width: 640px; margin: 0 0 var(--s-8); }
 .arc-title { font-family: var(--font-display); font-weight: 300; font-size: clamp(36px, 3.6vw, 56px); line-height: 1.05;
   color: var(--ink); margin: 0 0 var(--s-4); }
@@ -74,7 +74,7 @@
 
 /* sample box: a night band, copy left, the box right */
 .arc-sample { padding: var(--s-10) var(--pad-x); }
-.arc-sample__inner { max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+.arc-sample__inner { max-width: var(--content-w); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--s-8); align-items: center; }
 .arc-sample__h { font-family: var(--font-display); font-weight: 300; font-size: clamp(40px, 4vw, 64px); line-height: 1.02;
   color: var(--ink); margin: 0 0 var(--s-5); }

@@ -34,7 +34,8 @@
   #hero {
     --relief-wall: #DFD8CA;
     --top: 96px;                       /* clear of the nav */
-    --x0: 46vw;                        /* left edge of the field */
+    --h1: clamp(52px, 6.1vw, 96px);
+    --x0: calc(var(--edge) + 6.6 * var(--h1));   /* left edge of the field: a headline's width after the copy */
     --S: max(57vw, 100svh - 72px);     /* always past the right and bottom edges */
     height: 100svh; min-height: 560px;
   }
@@ -47,8 +48,8 @@
 
   .hero-left {
     position: absolute; z-index: 2; isolation: isolate;
-    left: var(--pad-x); bottom: clamp(48px, 10svh, 100px);
-    width: min(620px, var(--x0) - var(--pad-x) - 40px);
+    left: var(--edge); bottom: clamp(48px, 10svh, 100px);
+    width: min(620px, var(--x0) - var(--edge) - 40px);
     display: flex; flex-direction: column;
   }
   /* soft wall-coloured scrim: keeps the copy legible when a low light throws the panel's
@@ -74,7 +75,7 @@
 
   .hero-headline {
     font-family: var(--font-display);
-    font-size: clamp(52px, 6.1vw, 96px);   /* a clear step above the 44–64 px section headings */
+    font-size: var(--h1);   /* a clear step above the 44–64 px section headings */
     text-wrap: balance;
     font-weight: 300;
     line-height: 0.98;
@@ -946,7 +947,7 @@
   #sample-box .sbx-light{margin:var(--s-6) auto 0;max-width:360px;}
   #sample-box .sbx-light video{display:block;width:100%;height:auto;aspect-ratio:4/5;background:var(--deep);}
   @media (min-width:900px){
-    #sample-box .sbx-head{max-width:920px;display:grid;grid-template-columns:1fr minmax(260px,340px);gap:var(--s-8);align-items:center;text-align:left;}
+    #sample-box .sbx-head{max-width:none;display:grid;grid-template-columns:1fr minmax(260px,340px);gap:var(--s-8);align-items:center;text-align:left;}
     #sample-box .sbx-light{margin:0;max-width:none;}
   }
   #sample-box .sbx-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.02;color:var(--text-primary);margin:.3em 0 .5em;}

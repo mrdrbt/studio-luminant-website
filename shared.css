@@ -84,6 +84,9 @@
   --maxw:      1280px;
   --pad-x:     60px;
   --pad-x-sm:  24px;
+  /* the page's one left edge, the content column. --edge holds a %: it resolves where it is used, on a box as wide as the page */
+  --content-w: calc(var(--maxw) - 2 * var(--pad-x));
+  --edge:      max(var(--pad-x), calc((100% - var(--maxw)) / 2 + var(--pad-x)));
 
   /* ── SPACING (8px base) ───────────── */
   --s-1:   4px;
@@ -259,7 +262,7 @@ body::before {
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-nav);
   display: flex; align-items: center; justify-content: space-between;
-  padding: 28px 60px;
+  padding: 28px var(--edge);
   border-bottom: 1px solid transparent;
   transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
 }
@@ -267,7 +270,7 @@ nav.scrolled {
   background: var(--bg);   /* opaque: a translucent bar showed blurred page text through it */
   backdrop-filter: blur(12px);
   border-color: var(--border);
-  padding: 18px 60px;
+  padding: 18px var(--edge);
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
 .nav-logo-img { height: 25px; width: auto; display: block; transition: opacity 0.3s ease, height 0.4s ease; }
@@ -941,7 +944,7 @@ summary:focus-visible,
 .filmstrip-caption {
   position: absolute;
   bottom: var(--s-7);
-  left: var(--pad-x);
+  left: var(--edge);
   z-index: 1;
   max-width: 480px;
 }
