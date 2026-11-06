@@ -22,32 +22,33 @@
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preload" href="../fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../shared.css?v=dce8c708">
-<link rel="preload" as="image" href="../assets/relief/080-hero/poster-1680.jpg" imagesrcset="../assets/relief/080-hero/poster-640.jpg 640w, ../assets/relief/080-hero/poster-840.jpg 840w, ../assets/relief/080-hero/poster-960.jpg 960w, ../assets/relief/080-hero/poster-1080.jpg 1080w, ../assets/relief/080-hero/poster-1680.jpg 1680w" imagesizes="(orientation: portrait) calc(1.4 * (100vw - 48px)), 84vh" fetchpriority="high">
+<link rel="stylesheet" href="../shared.css?v=cd9e272b">
+<link rel="preload" as="image" href="../assets/relief/093-fugato-hero/poster-1680.jpg" imagesrcset="../assets/relief/093-fugato-hero/poster-640.jpg 640w, ../assets/relief/093-fugato-hero/poster-840.jpg 840w, ../assets/relief/093-fugato-hero/poster-960.jpg 960w, ../assets/relief/093-fugato-hero/poster-1080.jpg 1080w, ../assets/relief/093-fugato-hero/poster-1680.jpg 1680w" imagesizes="(orientation: portrait) 149vw, max(80vw, 140vh)" fetchpriority="high">
 
 <style>
   /* ─── HERO (v3: relief-light engine) ───
-     The panel stands in the right ~60%, contained, as sculpture on a flat plaster wall; the
-     poster is the panel plus 120 mm of wall each side (1.4 × the panel, offset 0.2). The copy
-     sits over flat wall on the left. relief-light.js reads the panel rect from the poster. */
+     A field of Fugato courses fills the right of the stage and runs off its right and bottom
+     edges; its top and left edges stand on the flat plaster wall. The poster is the square field
+     plus 0.2 of its side as wall all round (1.4 × the field, offset 0.2). The copy sits over
+     flat wall on the left. relief-light.js reads the panel rect from the poster. */
   #hero {
     --relief-wall: #DFD8CA;
-    --m: max(24px, 6svh);
     --top: 96px;                       /* clear of the nav */
-    --S: min(60vw - 2 * var(--m), 100svh - var(--top) - var(--m));
+    --x0: 46vw;                        /* left edge of the field */
+    --S: max(57vw, 100svh - 72px);     /* always past the right and bottom edges */
     height: 100svh; min-height: 560px;
   }
   #hero .relief-light__poster {
-    position: absolute;
+    position: absolute; max-width: none;
     width: calc(1.4 * var(--S)); height: calc(1.4 * var(--S));
-    left: calc(40vw + (60vw - var(--S)) / 2 - 0.2 * var(--S));
-    top: calc(var(--top) + (100svh - var(--top) - var(--m) - var(--S)) / 2 - 0.2 * var(--S));
+    left: calc(var(--x0) - 0.2 * var(--S));
+    top: calc(var(--top) - 0.2 * var(--S));
   }
 
   .hero-left {
     position: absolute; z-index: 2; isolation: isolate;
     left: var(--pad-x); bottom: clamp(48px, 10svh, 100px);
-    width: min(560px, 44vw - var(--pad-x));
+    width: min(620px, var(--x0) - var(--pad-x) - 40px);
     display: flex; flex-direction: column;
   }
   /* soft wall-coloured scrim: keeps the copy legible when a low light throws the panel's
@@ -60,7 +61,6 @@
   .hero-eyebrow {
     display: flex; align-items: center; gap: 16px;
     margin-bottom: 32px;
-    opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
   }
   .hero-eyebrow::before {
     content: ''; display: block;
@@ -74,27 +74,25 @@
 
   .hero-headline {
     font-family: var(--font-display);
-    font-size: clamp(44px, 4vw, 76px);
+    font-size: clamp(52px, 6.1vw, 96px);   /* a clear step above the 44–64 px section headings */
+    text-wrap: balance;
     font-weight: 300;
     line-height: 0.98;
     letter-spacing: -0.015em;
     color: var(--ink);
     margin-bottom: 28px;
-    opacity: 0; animation: fadeUp 0.9s ease 0.5s forwards;
   }
   .hero-headline em { font-style: italic; color: var(--accent); }
 
   .hero-sub {
     font-size: 16px; font-weight: 300;
     line-height: 1.75; color: var(--ink-2);
-    max-width: 440px;
+    max-width: 460px; text-wrap: balance;
     margin-bottom: 40px;
-    opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards;
   }
 
   .hero-ctas {
     display: flex; align-items: center; gap: 32px;
-    opacity: 0; animation: fadeUp 0.9s ease 0.9s forwards;
   }
 
   .btn-ghost {
@@ -111,95 +109,23 @@
   .btn-ghost:hover { color: var(--accent); border-color: var(--accent); }
   .btn-ghost svg { width: 14px; height: 14px; flex-shrink: 0; }
 
-  /* phones and portrait screens: panel on top, copy below it in the flow */
+  /* phones and portrait screens: a full-width band of the field on top, copy below it in the flow */
   @media (orientation: portrait), (max-width: 820px) {
-    #hero { height: auto; min-height: 100svh; --S: min(100vw - 48px, 56svh - 88px); }
-    #hero .relief-light__poster {
-      left: calc((100vw - var(--S)) / 2 - 0.2 * var(--S));
-      top: calc(88px - 0.2 * var(--S));
-    }
+    #hero { height: auto; min-height: 0; --top: 84px; --x0: -3vw; --S: 106vw; --band: calc(0.6667 * var(--S)); }   /* the band ends on a course joint: four of the six courses */
+    @media (min-width: 600px) { #hero { --band: calc(0.5 * var(--S)); } }
     .hero-left {
       position: relative; left: auto; bottom: auto; width: auto;
-      padding: calc(88px + var(--S) + 24px) var(--pad-x-sm) 64px;
+      margin-top: calc(var(--top) + var(--band));
+      padding: 32px var(--pad-x-sm) 56px;
+      background: var(--relief-wall);   /* covers the field below the band, so its lower edge never shows */
     }
     .hero-left::before { display: none; }
+    .hero-eyebrow { margin-bottom: 20px; }
+    .hero-headline { font-size: min(14.4vw, 96px); }
     .hero-sub { margin-bottom: 24px; }
   }
 
   /* ─── STRATEGY ──────────────────────── */
-  #strategy {
-    padding: 90px 0;
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-  }
-
-  .strategy-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
-    align-items: start;
-  }
-
-  .strategy-left .section-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(44px, 4vw, 64px);
-    font-weight: 300;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    margin-bottom: 40px;
-  }
-
-  .strategy-left .section-headline em {
-    font-style: italic; color: var(--gold);
-  }
-
-  .strategy-body {
-    font-size: 16px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    margin-bottom: 24px;
-  }
-
-  .strategy-features {
-    margin-top: 40px;
-    display: flex; flex-direction: column; gap: 0;
-  }
-
-  .strategy-feature {
-    padding: 28px 0;
-    border-top: 1px solid var(--border);
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    gap: 24px;
-    align-items: start;
-  }
-  .strategy-feature:last-child { border-bottom: 1px solid var(--border); }
-
-  .feature-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 12px; color: var(--gold);
-    margin-top: 3px;
-  }
-  .feature-title {
-    font-size: 13px; font-weight: 500;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--text-primary); margin-bottom: 8px;
-  }
-  .feature-desc {
-    font-size: 13px; line-height: 1.7;
-    color: var(--text-secondary); font-weight: 300;
-  }
-
-  .strategy-right {
-    position: relative;
-  }
-
-  .strategy-image-frame {
-    position: relative;
-    background: var(--surface);
-    padding: 60px;
-    border: 1px solid var(--border);
-    overflow: hidden;
-  }
 
   /* Art Deco ornament for strategy */
   .deco-panel {
@@ -257,7 +183,6 @@
     font-weight: 300;
     line-height: 1.05;
   }
-  .process-header .section-headline em { font-style: italic; color: var(--gold); }
 
   .process-header-desc {
     font-size: 14px; line-height: 1.85;
@@ -337,24 +262,6 @@
     padding: 90px 0;
     background: var(--deep);
     border-top: 1px solid var(--border);
-  }
-
-  .materials-header {
-    max-width: 720px; margin-bottom: 56px;
-  }
-
-  .materials-header .section-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(44px, 4vw, 64px);
-    font-weight: 300; line-height: 1.05;
-    margin-bottom: 28px;
-  }
-  .materials-header .section-headline em { font-style: italic; color: var(--gold); }
-
-  .materials-header .body-text {
-    font-size: 16px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-    margin-bottom: 16px;
   }
 
   .materials-grid {
@@ -453,7 +360,6 @@
     line-height: 1.05;
     margin-bottom: 28px;
   }
-  .uds-content .section-headline em { font-style: italic; color: var(--gold); }
   .uds-desc {
     font-size: 16px;
     line-height: 1.85;
@@ -513,49 +419,6 @@
   .uds-image:hover { opacity: 1; }
 
   /* ─── EXPERTISE GRID ────────────────── */
-  #expertise {
-    padding: 80px 0;
-    background: var(--obsidian);
-    border-top: 1px solid var(--border);
-  }
-
-  .expertise-layout {
-    display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 72px; align-items: start;
-  }
-
-  .expertise-label .section-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px; font-weight: 300;
-    line-height: 1.05;
-  }
-  .expertise-label .section-headline em { font-style: italic; color: var(--gold); }
-  @media (max-width: 360px) { .expertise-label .section-headline { font-size: 40px; } }
-
-  .expertise-skills {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-  }
-
-  .skill-tag {
-    background: var(--surface);
-    padding: 22px 24px;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    font-weight: 400;
-    transition: background 0.3s, color 0.3s;
-    border: 1px solid transparent;
-    cursor: default;
-  }
-  .skill-tag:hover {
-    background: var(--surface-2);
-    color: var(--gold);
-    border-color: var(--border);
-  }
 
   /* ─── DIVIDER ───────────────────────── */
   .gold-divider {
@@ -565,13 +428,6 @@
   }
 
   /* ─── STRATEGY IMAGE ────────────────── */
-  .strategy-image-frame { padding: 0; overflow: hidden; }
-  .strategy-img {
-    width: 100%; aspect-ratio: 4/5; max-height: min(640px, 78svh);
-    object-fit: cover; object-position: 50% 22%; display: block;
-    transition: transform 0.7s cubic-bezier(.25,.46,.45,.94);
-  }
-  .strategy-image-frame:hover .strategy-img { transform: scale(1.03); }
 
   /* ─── PROCESS STEP IMAGE ────────────── */
   .step-image {
@@ -654,14 +510,12 @@
   /* ─── RESPONSIVE ────────────────────── */
   @media (max-width: 1024px) {
     .hero-ctas { flex-wrap: wrap; gap: 16px 24px; }
-    .strategy-grid, .process-header { grid-template-columns: 1fr; gap: 60px; }
+    .process-header { grid-template-columns: 1fr; gap: 60px; }
     .process-steps { grid-template-columns: 1fr; }
     .process-step { border-right: none; border-bottom: 1px solid var(--border); }
     .materials-grid { grid-template-columns: 1fr; }
     .uds-layout { grid-template-columns: 1fr; gap: 48px; }
     .uds-visual { max-width: 100%; justify-self: start; }
-    .expertise-layout { grid-template-columns: 1fr; gap: 48px; }
-    .expertise-skills { grid-template-columns: repeat(2, 1fr); }
     .portfolio-grid {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 260px 260px 260px;
@@ -669,10 +523,6 @@
     .portfolio-item--large { grid-column: 1 / span 2; grid-row: 1; }
     .step-image { width: calc(100% + 96px); margin: -56px -48px 36px; }
     .material-img { width: calc(100% + 96px); margin: -56px -48px 36px; }
-  }
-  @media (max-width: 600px) {
-    .expertise-skills { grid-template-columns: 1fr 1fr; }
-    .strategy-img { max-height: 60svh; }
   }
 
   /* ─── FINAL CTA ─────────────────────── */
@@ -683,7 +533,6 @@
     border-bottom: 1px solid var(--border);
     padding: 80px 0;
   }
-  .start-cta .eyebrow { margin-bottom: 28px; }
   .start-headline {
     font-family: var(--font-display);
     font-size: clamp(2.4rem, 5vw, 3.6rem);
@@ -708,60 +557,8 @@
   }
 
   /* ─── PROOF STRIP ───────────────────── */
-  @media (max-width: 760px) {
-  }
-  @media (max-width: 440px) {
-  }
 
   /* ─── WHO IT'S FOR ──────────────────── */
-  #audiences {
-    padding: 160px 0;
-    background: var(--deep);
-    border-top: 1px solid var(--border);
-  }
-  .audiences-header { max-width: 720px; margin-bottom: 72px; }
-  .audiences-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(44px, 4vw, 64px);
-    font-weight: 300; line-height: 1.05;
-  }
-  .audiences-headline em { font-style: italic; color: var(--gold); }
-  .audiences-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
-  }
-  .audience-card {
-    background: var(--surface); padding: 52px 44px;
-    position: relative; overflow: hidden;
-    transition: background 0.4s;
-  }
-  .audience-card:hover { background: var(--surface-2); }
-  .audience-card::after {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform 0.5s ease;
-  }
-  .audience-card:hover::after { transform: scaleX(1); }
-  .audience-num {
-    font-size: 11px; letter-spacing: 0.2em;
-    color: var(--gold); margin-bottom: 26px;
-  }
-  .audience-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px; font-weight: 300;
-    color: var(--text-primary); margin-bottom: 16px;
-  }
-  .audience-desc {
-    font-size: 16px; line-height: 1.85;
-    color: var(--text-secondary); font-weight: 300;
-  }
-  @media (max-width: 900px) {
-    .audiences-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 600px) {
-    #audiences { padding: 100px 0; }
-    .audience-card { padding: 44px 32px; }
-  }
 
   /* ─── FAQ ───────────────────────────── */
   #faq {
@@ -775,7 +572,6 @@
     font-size: clamp(40px, 3.6vw, 56px);
     font-weight: 300; line-height: 1.06;
   }
-  .faq-headline em { font-style: italic; color: var(--gold); }
   .faq-list { max-width: 860px; }
   .faq-item { border-top: 1px solid var(--border); }
   .faq-item:last-child { border-bottom: 1px solid var(--border); }
@@ -817,14 +613,11 @@
   /* ─── SECTION RHYTHM ────────────────── */
   /* One vertical padding for every content band, so section boundaries carry no empty bands.
      Outranks the per-section paddings above and in the inline <style> blocks below. */
-  #main > section:is(#strategy, #process, #studio, #materials, #sample-box, #design-system-teaser,
-                     #audiences, #expertise, #faq, #start-ladder, #journal-latest, #start) {
+  #main > section:is(#process, #sample-box, #design-system-teaser, #faq, #start) {
     padding-block: var(--s-9);
   }
-  #studio .materials-header { margin-bottom: 0; }
   @media (max-width: 600px) {
-    #main > section:is(#strategy, #process, #studio, #materials, #sample-box, #design-system-teaser,
-                       #audiences, #expertise, #faq, #start-ladder, #journal-latest, #start) {
+    #main > section:is(#process, #sample-box, #design-system-teaser, #faq, #start) {
       padding-block: var(--s-8);
     }
   }
@@ -832,14 +625,6 @@
 <style>
 /* home design fixes 2026-10-27 */
 /* capability grid: 4+4+3 on desktop, 2-col with a full-width last tile below */
-.expertise-skills{grid-template-columns:repeat(12,1fr);}
-.skill-tag{grid-column:span 3;}
-.skill-tag:nth-child(n+9){grid-column:span 4;}
-@media (max-width:1024px){
-  .expertise-skills{grid-template-columns:repeat(2,1fr);}
-  .skill-tag,.skill-tag:nth-child(n+9){grid-column:auto;}
-  .skill-tag:last-child{grid-column:1/-1;}
-}
 /* usage list: plain, not button-like */
 .uds-applications{display:flex;flex-wrap:wrap;gap:10px 28px;margin:24px 0 36px;}
 .uds-app-tag{padding:0;border:0;display:inline-flex;align-items:center;gap:10px;}
@@ -852,21 +637,21 @@
 #portfolio{padding-bottom:var(--s-8);}
 #portfolio > .section-inner{margin-top:40px!important;}
 /* atelier: copy + photo */
-@media (min-width:1025px){
-  #studio > .section-inner{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:72px;align-items:center;}
-}
-#studio .studio-photo{margin:0;}
-#studio .studio-photo img{display:block;width:100%;height:auto;aspect-ratio:5/4;object-fit:cover;}
-@media (max-width:1024px){#studio .studio-photo{margin-top:40px;}}
 /* audience cards: image on top */
-#audiences .audience-img{display:block;margin:-52px -44px 28px;}
-#audiences .audience-img img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;}
 /* phones: compact capability tiles + audience cards */
-@media (max-width:640px){
-  .skill-tag{padding:12px 12px;font-size: 11px;letter-spacing:.08em;line-height:1.4;}
-  .expertise-skills{gap:1px;}
-  #audiences .audience-card{padding:32px 24px;}
-  #audiences .audience-img{margin:-32px -24px 24px;}
+</style>
+<style>
+/* home distill 2026-11-06: seven bands (wall, bone, mosaic, night, bone, deeper bone, bone) */
+.process-header { gap: 24px 72px; }
+.process-header-desc { font-size: 16px; text-wrap: pretty; }
+#sample-box .sbx-head, #sample-box .sbx-stage { max-width: 1040px; }
+@media (min-width:900px){ #sample-box .sbx-head { grid-template-columns: 1fr minmax(300px,440px); } }
+#faq { background: var(--surface-2); }
+.faq-more { margin-top: 40px; }
+.uds-links { display: flex; flex-wrap: wrap; gap: 16px 40px; }
+@media (max-width:600px){
+  .process-header .section-headline, .uds-content .section-headline { font-size: 36px; }
+  .faq-headline { font-size: 34px; }
 }
 </style>
 <script type="application/ld+json">
@@ -957,11 +742,11 @@
 <main id="main">
 
 <!-- HERO -->
-<section id="hero" class="relief-light" data-relief-light="../assets/relief/080-hero/" data-input="auto">
-  <img class="relief-light__poster" src="../assets/relief/080-hero/poster-1680.jpg"
-       srcset="../assets/relief/080-hero/poster-640.jpg 640w, ../assets/relief/080-hero/poster-840.jpg 840w, ../assets/relief/080-hero/poster-960.jpg 960w, ../assets/relief/080-hero/poster-1080.jpg 1080w, ../assets/relief/080-hero/poster-1680.jpg 1680w"
-       sizes="(orientation: portrait) calc(1.4 * (100vw - 48px)), 84vh" width="1680" height="1680" fetchpriority="high"
-       alt="Render of a relief panel with a cypress and flowers under an arch, in low raking light">
+<section id="hero" class="relief-light" data-relief-light="../assets/relief/093-fugato-hero/" data-input="auto">
+  <img class="relief-light__poster" src="../assets/relief/093-fugato-hero/poster-1680.jpg"
+       srcset="../assets/relief/093-fugato-hero/poster-640.jpg 640w, ../assets/relief/093-fugato-hero/poster-840.jpg 840w, ../assets/relief/093-fugato-hero/poster-960.jpg 960w, ../assets/relief/093-fugato-hero/poster-1080.jpg 1080w, ../assets/relief/093-fugato-hero/poster-1680.jpg 1680w"
+       sizes="(orientation: portrait) 149vw, max(80vw, 140vh)" width="1680" height="1680" fetchpriority="high"
+       alt="Render of the Fugato design: a relief wall of vertical coves and flat bands laid in staggered courses, in low raking light">
   <div class="hero-left">
     <div class="hero-eyebrow">
       <span>Cast relief wall panels · Sapanca</span>
@@ -990,79 +775,19 @@
 
 </section>
 
-<!-- STRATEGY -->
-<section id="strategy">
-  <div class="section-inner">
-    <div class="strategy-grid">
-      <div class="strategy-left">
-        <div class="eyebrow reveal">For Architects & Specifiers</div>
-        <h2 class="section-headline reveal">
-          Design Freedom,<br><em>Without the Specification Gamble.</em>
-        </h2>
-        <p class="strategy-body reveal">
-          Bespoke relief shouldn’t mean bespoke headaches. Traditional fabricators make you choose between design ambition and programme certainty — intricate geometry is usually the first thing simplified in production.
-        </p>
-        <p class="strategy-body reveal">
-          We close that gap. Your concept becomes a 3D model first, and you approve the master before anything is cast, so the surface your client approves is the surface we cast. Your design stays yours; we carry the modelling and the casting.
-        </p>
-        <div class="strategy-features">
-          <div class="strategy-feature reveal" style="--reveal-delay:0s">
-            <span class="feature-num">01</span>
-            <div>
-              <div class="feature-title">Clear Data for the Specification</div>
-              <div class="feature-desc">We prepare a technical data sheet and installation drawing for every project, and finalise the specification wording with your office.</div>
-            </div>
-          </div>
-          <div class="strategy-feature reveal" style="--reveal-delay:.1s">
-            <span class="feature-num">02</span>
-            <div>
-              <div class="feature-title">Moulded and Cast In-House</div>
-              <div class="feature-desc">Design, mould-making, casting and quality control all happen in our Sapanca studio.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="strategy-right reveal">
-        <div class="strategy-image-frame">
-          <picture data-lazy>
-              <source type="image/webp"
-                  data-srcset="../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept-400w.webp 400w,
-                  ../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept-800w.webp 800w,
-                  ../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.webp 1120w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg"
-                   alt="Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front" class="strategy-img" width="1120" height="1400"
-                   loading="lazy" decoding="async">
-            </picture><noscript><picture>
-              <source type="image/webp"
-                  srcset="../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept-400w.webp 400w,
-                  ../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept-800w.webp 800w,
-                  ../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.webp 1120w"
-                  sizes="(max-width: 1024px) 100vw, 50vw">
-              <img src="../images/studio-luminant-charcoal-relief-wall-beauty-salon-reception-concept.jpg"
-                   alt="Charcoal relief wall of undulating vertical ridges in a beauty-salon waiting area, grazed by downlights set close to the wall; a blush upholstered bench in front" class="strategy-img" width="1120" height="1400"
-                   loading="lazy" decoding="async">
-            </picture></noscript>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PROCESS -->
 <section id="process">
   <div class="section-inner">
     <div class="process-header">
       <div>
-        <div class="eyebrow reveal">How We Work</div>
-        <h2 class="section-headline reveal">
-          Brief to Crated Panel,<br><em>One Process.</em>
+        <h2 class="section-headline">
+          Brief to Crated Panel,<br>One Process.
         </h2>
       </div>
+      <p class="process-header-desc">Your concept becomes a 3D model first, and you approve the master before anything is cast, so the surface your client approves is the surface we cast. Your design stays yours; we carry the modelling and the casting.</p>
     </div>
 
-    <div class="process-steps reveal">
+    <div class="process-steps">
       <div class="process-step">
         <picture data-lazy>
               <source type="image/webp"
@@ -1143,25 +868,6 @@
       </div>
     </div>
     <div style="margin-top:56px;"><a href="process.htm" class="faq-link">How We Work →</a></div>
-  </div>
-</section>
-
-<!-- THE STUDIO -->
-<section id="studio">
-  <style>#studio{padding:90px 0;background:var(--deep);border-top:1px solid var(--border);}</style>
-  <div class="section-inner">
-    <div class="materials-header">
-      <div class="eyebrow reveal">The Studio</div>
-      <h2 class="section-headline reveal">One workshop,<br><em>from drawing to cast.</em></h2>
-      <p class="body-text reveal">
-        <span translate="no">Studio Luminant</span> is a design-led workshop in Sakarya, founded by Burak Tanlak. Design, formulation, mould-making, casting and quality control all happen in our Sapanca studio. Production is run by a team that comes from contract-manufacturing management in this sector.
-      </p>
-      <p class="body-text reveal">
-        The process does not change with the size of the order: every change in writing, a 3D model before anything is cast, and structural data your engineer signs off. Open questions are settled at the model stage.
-      </p>
-      <p class="body-text reveal"><a href="about.htm" class="faq-link">About the studio →</a></p>
-    </div>
-    <figure class="studio-photo reveal"><img data-lazy src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../img/workshop/workshop-05-finishing.jpg" alt="Hand sanding the surface of a cast relief panel on the workbench" width="1152" height="928" loading="lazy" decoding="async"><noscript><img src="../img/workshop/workshop-05-finishing.jpg" alt="Hand sanding the surface of a cast relief panel on the workbench" width="1152" height="928" loading="lazy" decoding="async"></noscript></figure>
   </div>
 </section>
 
@@ -1291,7 +997,7 @@
 </section>
 
 <!-- INTERACTIVE SAMPLE BOX -->
-<section id="sample-box" aria-labelledby="sbx-title">
+<section id="sample-box" class="night" aria-labelledby="sbx-title">
   <style>
   #sample-box{background:var(--obsidian);border-top:1px solid var(--border);padding:var(--s-10) 0;position:relative;z-index:2;}
   #sample-box .sbx-head{max-width:720px;margin:0 auto var(--s-7);text-align:center;}
@@ -1302,7 +1008,6 @@
     #sample-box .sbx-light{margin:0;max-width:none;}
   }
   #sample-box .sbx-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.02;color:var(--text-primary);margin:.3em 0 .5em;}
-  #sample-box .sbx-title em{font-style:italic;color:var(--gold);}
   #sample-box .sbx-intro{color:var(--text-secondary);font-size:clamp(1rem,1.6vw,1.12rem);line-height:1.7;}
 
   #sample-box .sbx-stage{max-width:920px;margin:0 auto;perspective:1400px;}
@@ -1336,11 +1041,11 @@
   <div class="section-inner">
     <div class="sbx-head">
       <div class="sbx-copy">
-        <div class="eyebrow reveal">Finish Sample Box</div>
-        <h2 id="sbx-title" class="sbx-title reveal">See It.<br><em>Feel It.</em></h2>
-        <p class="sbx-intro reveal">Hold the samples in your own light to judge relief, surface and colour before a panel goes into the specification. We send the box to practices with a live project.</p>
+        <div class="eyebrow">Finish Sample Box</div>
+        <h2 id="sbx-title" class="sbx-title">See It.<br>Feel It.</h2>
+        <p class="sbx-intro">Hold the samples in your own light to judge relief, surface and colour before a panel goes into the specification. We send the box to practices with a live project.</p>
       </div>
-      <figure class="sbx-light reveal">
+      <figure class="sbx-light">
         <video class="sbx-light-video" muted loop playsinline preload="none" width="720" height="900" data-poster="../images/studio-luminant-glissando-light-study-poster.jpg" aria-label="Raking light travelling across the Glissando relief">
           <source src="../video/studio-luminant-glissando-light-study.mp4" type="video/mp4">
         </video>
@@ -1360,7 +1065,7 @@
       </script>
     </div>
 
-    <div class="sbx-stage reveal" data-state="closed">
+    <div class="sbx-stage" data-state="closed">
       <div class="sbx-box">
         <picture data-lazy class="sbx-open">
           <source type="image/webp" data-srcset="../images/studio-luminant-finish-sample-box-angled-open-800w.webp 800w, ../images/studio-luminant-finish-sample-box-angled-open-1600w.webp 1600w" sizes="(max-width:1024px) 100vw, 920px">
@@ -1381,7 +1086,7 @@
     </div>
 
     <div class="sbx-foot">
-      <a href="contact.htm#sample" class="btn-primary reveal sbx-cta">
+      <a href="contact.htm#sample" class="btn-primary sbx-cta">
         Request a sample for your project
         <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path></svg>
       </a>
@@ -1419,33 +1124,38 @@
 <section id="design-system-teaser">
   <div class="section-inner">
     <div class="uds-layout">
-      <div class="uds-content reveal">
-        <div class="eyebrow">One Material</div>
+      <div class="uds-content">
         <h2 class="section-headline">
-          One relief,<br><em>every surface.</em>
+          One relief,<br>every surface.
         </h2>
         <p class="uds-desc">
-          The same master carries across wall panels, ceilings, columns and feature walls: the design stays the same on every surface, while the panel build and fixing are worked out for each one.
+          The same master carries across wall panels, columns and feature walls: the design stays the same on every surface, while the panel build and fixing are worked out for each one.
         </p>
         <p class="uds-desc">
-          From the lobby wall to the reception desk front, from ceiling to column wrap, the interior is carried by one material: <span translate="no">Lumina PMAG™</span> — Polymer Modified Composite Gypsum. Each project goes into the specification with its technical data sheet.
+          From the lobby wall to the reception desk front and the column wrap, the interior is carried by one material: <span translate="no">Lumina PMAG™</span> — Polymer Modified Composite Gypsum. Each project goes into the specification with its technical data sheet.
         </p>
         <div class="uds-applications">
           <span class="uds-app-tag">Wall Panels</span>
-          <span class="uds-app-tag">Ceiling Panels</span>
           <span class="uds-app-tag">Column Wraps</span>
           <span class="uds-app-tag">Feature Walls</span>
           <span class="uds-app-tag">Reception Elements</span>
-          <span class="uds-app-tag">Bulkheads & Soffits</span>
         </div>
+        <div class="uds-links">
         <a href="products.htm" class="uds-link">
           See the Products
           <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
           </svg>
         </a>
+        <a href="designs.htm" class="uds-link">
+          See the designs
+          <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </a>
+        </div>
       </div>
-      <div class="uds-visual reveal">
+      <div class="uds-visual">
         <picture data-lazy>
               <source type="image/webp"
                   data-srcset="../images/studio-luminant-relief-wall-column-counter-cornice-400w.webp 400w,
@@ -1472,70 +1182,13 @@
   </div>
 </section>
 
-<!-- WHO IT'S FOR -->
-<section id="audiences">
-  <div class="section-inner">
-    <div class="audiences-header">
-      <h2 class="audiences-headline reveal">Where We<br><em>Work</em></h2>
-    </div>
-    <div class="audiences-grid reveal">
-      <div class="audience-card">
-        <a class="audience-img" href="design-rondeau.htm"><img data-lazy src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../assets/designs/rondeau/room-lobby.webp" alt="Render: Rondeau, hotel lobby" width="1536" height="1024" loading="lazy" decoding="async"><noscript><img src="../assets/designs/rondeau/room-lobby.webp" alt="Render: Rondeau, hotel lobby" width="1536" height="1024" loading="lazy" decoding="async"></noscript></a>
-        <div class="audience-num">01</div>
-        <h3 class="audience-title">Hospitality</h3>
-        <p class="audience-desc">Hotel lobbies, resort public areas, restaurant and bar concepts. Feature walls that carry the brand identity.</p>
-      </div>
-      <div class="audience-card">
-        <a class="audience-img" href="design-glissando.htm"><img data-lazy src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../assets/designs/glissando/room-living.webp" alt="Render: Glissando, living room" width="1121" height="1403" loading="lazy" decoding="async"><noscript><img src="../assets/designs/glissando/room-living.webp" alt="Render: Glissando, living room" width="1121" height="1403" loading="lazy" decoding="async"></noscript></a>
-        <div class="audience-num">02</div>
-        <h3 class="audience-title">High-End Residential</h3>
-        <p class="audience-desc">Private villas, penthouses, designer interiors. Single-piece sculptural surfaces designed for one space.</p>
-      </div>
-      <div class="audience-card">
-        <a class="audience-img" href="design-glissando.htm"><img data-lazy src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="../assets/designs/glissando/room-clinic.webp" alt="Render: Glissando, clinic" width="1121" height="1403" loading="lazy" decoding="async"><noscript><img src="../assets/designs/glissando/room-clinic.webp" alt="Render: Glissando, clinic" width="1121" height="1403" loading="lazy" decoding="async"></noscript></a>
-        <div class="audience-num">03</div>
-        <h3 class="audience-title">Commercial &amp; Cultural</h3>
-        <p class="audience-desc">Corporate lobbies, retail concepts, cultural buildings. Large-format cladding — with specification assurance built in.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERTISE -->
-<section id="expertise">
-  <div class="section-inner">
-    <div class="expertise-layout">
-      <div class="expertise-label">
-        <div class="eyebrow reveal">Capabilities</div>
-        <h2 class="section-headline reveal">
-          Comprehensive<br><em>Know-How</em>
-        </h2>
-      </div>
-      <div class="expertise-skills reveal">
-        <div class="skill-tag">Material Science</div>
-        <div class="skill-tag">Gypsum Casting (PMAG)</div>
-        <div class="skill-tag">Parametric Pattern Design</div>
-        <div class="skill-tag">Relief Modelling</div>
-        <div class="skill-tag">Hand Casting</div>
-        <div class="skill-tag">Large-Format Casting</div>
-        <div class="skill-tag">3D-Printed &amp; CNC-Machined Masters</div>
-        <div class="skill-tag">Silicone Mould Making</div>
-        <div class="skill-tag">Artisan Finishing</div>
-        <div class="skill-tag">Section &amp; Fixing Detailing</div>
-        <div class="skill-tag">Technical Specification Files</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq">
   <div class="section-inner">
     <div class="faq-header">
-      <div class="eyebrow reveal">Frequently Asked</div>
-      <h2 class="faq-headline reveal">What to Know<br><em>Before You Specify.</em></h2>
+      <h2 class="faq-headline">What to Know<br>Before You Specify.</h2>
     </div>
-    <div class="faq-list reveal">
+    <div class="faq-list">
       <details class="faq-item">
         <summary>What are your lead times?</summary>
         <div class="faq-answer">
@@ -1577,85 +1230,14 @@
         </div>
       </details>
     </div>
-  </div>
-</section>
-
-<!-- START LADDER -->
-<section id="start-ladder">
-  <style>#start-ladder{padding:120px 0;background:var(--obsidian);border-top:1px solid var(--border);}#start-ladder .audiences-grid{grid-template-columns:repeat(3,1fr);}@media (max-width:900px){#start-ladder .audiences-grid{grid-template-columns:1fr;}}</style>
-  <div class="section-inner">
-    <div class="audiences-header">
-      <div class="eyebrow reveal">Start Anywhere</div>
-      <h2 class="audiences-headline reveal">Three ways<br><em>to start.</em></h2>
-    </div>
-    <div class="audiences-grid reveal">
-      <div class="audience-card">
-        <div class="audience-num">01</div>
-        <h3 class="audience-title">Send your drawing</h3>
-        <p class="audience-desc">A sketch, a dimensioned drawing or a reference image is enough; we review it and come back with our questions.</p>
-        <a href="contact.htm" class="faq-link">Send your drawing →</a>
-      </div>
-      <div class="audience-card">
-        <div class="audience-num">02</div>
-        <h3 class="audience-title">Request a wall layout</h3>
-        <p class="audience-desc">Picked a Studio Design? Send your wall dimensions and we will show how it sits on your wall in a layout drawing.</p>
-        <a href="contact.htm?ask=layout" class="faq-link">Request a wall layout →</a>
-      </div>
-      <div class="audience-card">
-        <div class="audience-num">03</div>
-        <h3 class="audience-title">See the designs</h3>
-        <p class="audience-desc">Studio Designs are reliefs we have drawn. The mould is made for your order.</p>
-        <a href="designs.htm" class="faq-link">See the designs →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LATEST FROM THE JOURNAL -->
-<style>
-  #journal-latest{padding:160px 0;background:var(--deep);border-top:1px solid var(--border);}
-  #journal-latest .journal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:2px;margin-top:64px;}
-  #journal-latest .journal-card{background:var(--surface);padding:44px 40px;text-decoration:none;display:block;min-width:0;max-width:100%;transition:background .3s;}
-  #journal-latest .journal-card:hover{background:var(--surface-2);}
-  #journal-latest .jc-eyebrow{font-size: 11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:14px;}
-  #journal-latest .jc-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;line-height:1.15;color:var(--text-primary);margin-bottom:10px;}
-  #journal-latest .jc-desc{font-size:13px;line-height:1.7;color:var(--text-secondary);font-weight:300;}
-  #journal-latest .journal-more{margin-top:48px;}
-</style>
-<section id="journal-latest">
-  <div class="section-inner">
-    <div class="audiences-header">
-      <div class="eyebrow reveal">Journal</div>
-      <h2 class="audiences-headline reveal">From the <em>Journal.</em></h2>
-    </div>
-    <div class="journal-grid reveal">
-      <a class="journal-card" href="how-to-specify-custom-cast-wall-panels.htm">
-        <div class="jc-eyebrow">Architect’s Guide</div>
-        <div class="jc-title">How to Specify Custom Cast Wall Panels</div>
-        <div class="jc-desc">Eight steps from brief to installation for specifying a bespoke relief panel.</div>
-      </a>
-      <a class="journal-card" href="what-is-an-architectural-relief-panel.htm">
-        <div class="jc-eyebrow">Primer</div>
-        <div class="jc-title">What Is an Architectural Relief Panel?</div>
-        <div class="jc-desc">What a relief panel is, where it is used, what it is made of, and how to order it.</div>
-      </a>
-      <a class="journal-card" href="what-are-sculptural-cast-wall-panels.htm">
-        <div class="jc-eyebrow">Definition</div>
-        <div class="jc-title">What Are Sculptural Cast Wall Panels?</div>
-        <div class="jc-desc">Defining tactile cast surfaces.</div>
-      </a>
-    </div>
-    <div class="journal-more">
-      <a href="journal.htm" class="faq-link">All Articles →</a>
-    </div>
+    <div class="faq-more"><a href="journal.htm" class="faq-link">All Articles →</a></div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section id="start">
   <div class="section-inner">
-    <div class="start-cta reveal">
-      <div class="eyebrow">Start a Project</div>
+    <div class="start-cta">
       <h2 class="start-headline">Start with<br><em>a sketch.</em></h2>
       <p class="start-sub">
         Send a reference image, concept brief, or technical drawing. We review it and come back with our questions; the master comes to you for approval before anything is cast.

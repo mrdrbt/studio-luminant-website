@@ -180,7 +180,7 @@ const studioMaterials = [{
   fullName: "Polimer Modifiye Kompozit Alçı",
   tagline: "Yüksek spesifikasyonlu iç mekânlar için mimari rölyef panelleri",
   domain: "İç Mekân",
-  application: "Öne çıkan duvarlar, tavan elemanları, kolon kaplamaları, banko ve tezgâh önleri, vurgu yüzeyleri, resepsiyon alanları, koridor vurgu duvarları",
+  application: "Öne çıkan duvarlar, kolon kaplamaları, banko ve tezgâh önleri, vurgu yüzeyleri, resepsiyon alanları, koridor vurgu duvarları",
   specs: {
     density: "1,400–1,600",
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),

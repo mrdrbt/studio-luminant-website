@@ -2,13 +2,16 @@
 page per design (TR tasarim-<slug>.htm, EN en/design-<slug>.htm).
 
 One range, no tiers (Burak 2026-10-25): every design is listed as an equal, alphabetically.
-- kind "relief": live relief hero (relief-light.js over the baked poster in assets/relief/<asset>/), spec, the Library
-  render and wall strip as WebP (made here from VAULT/Library/Relief/<library>/), the drawing (depth map), a reading.
+- kind "relief": live relief hero (relief-light.js over the baked poster in assets/relief/<asset>/), then the wall large
+  (the lead room, the wall strip), the Library render beside the spec (both WebP, made here from
+  VAULT/Library/Relief/<library>/), a reading with the drawing (depth map) small beside it.
 - kind "study": the wall study as the hero, a close view, the lay drawing (moulds and how they are laid), made as WebP
   in assets/designs/<slug>/ from the portfolio prestage PNGs named in the JSON. Size and depth where the JSON gives them; no price or availability.
-- an optional "room" entry adds an in-situ figure (only renders Burak voted UP).
+- an optional "room" entry is the lead room: one wide in-situ figure right under the hero ({file, tr, en}; swap the render
+  by changing "file"); "rooms" are the further rooms lower on the page (only renders Burak voted UP).
 - a design with "use" + "faq" (per language) closes with a "where it works" paragraph and three questions: its two
-  (size/format, depth) and the template's lead time + fixing, which states the spec table's facts. The page carries them
+  (size/format, depth) and the template's lead time + fixing, which states the spec table's facts. They render as a closed
+  accordion (native details/summary; the text stays in the DOM, so page and JSON-LD match). The page carries them
   as FAQPage JSON-LD beside a VisualArtwork entry (never an offer or a price). That text may carry in-text links written
   [[key|anchor]] (LINKS).
 - every design carries its Library code (`library`: the VAULT/Library/Relief/<code>_<design> folder); the build WARNS on a
@@ -325,9 +328,67 @@ def spec_html(rows, u):
     return "\n".join(f'      <div><dt>{u["spec"][k]}</dt><dd>{spec_dd(k, v, u)}</dd></div>' for k, v in rows)
 
 
+ROOM_WIDTHS = (400, 800, 1200)  # the gallery's WebP set beside an image: <stem>-400w.webp ... and <stem>.webp at full width
+ROOM_SIZES = {"wide": "(max-width: 820px) 100vw, 92vw", "tall": "(max-width: 820px) 100vw, 50vw"}
+
+
+def room_picture(file, alt, pre, sizes):
+    """A room render as responsive markup. A gallery image (images/<stem>.jpg) reuses the gallery's own WebP set; a WebP
+    under assets/designs/ gets one 800-wide sibling made here (never upscaled)."""
+    p = SITE / file
+    w, h = Image.open(p).size
+    small = p.with_name(f"{p.stem}-800w.webp")
+    if p.suffix == ".webp" and w > 800 and not small.exists():
+        Image.open(p).convert("RGB").resize((800, round(h * 800 / w)), Image.LANCZOS).save(small, quality=82, method=6)
+    rel = lambda q: pre + q.relative_to(SITE).as_posix()
+    srcs = [f"{rel(q)} {n}w" for n in ROOM_WIDTHS for q in [p.with_name(f"{p.stem}-{n}w.webp")] if n < w and q.exists()]
+    if p.with_suffix(".webp").exists():
+        srcs.append(f"{rel(p.with_suffix('.webp'))} {w}w")
+    img = f'<img src="{pre}{file}" width="{w}" height="{h}" loading="lazy" decoding="async" alt="{esc(alt)}"'
+    if len(srcs) < 2:
+        return img + ">"
+    srcset = f'srcset="{", ".join(srcs)}" sizes="{sizes}"'
+    if p.suffix == ".webp":
+        return f"{img} {srcset}>"
+    return f'<picture><source type="image/webp" {srcset}>{img}></picture>'
+
+
+def room_tall(d):
+    """True when the lead room render is portrait: it then stands beside the views instead of running wide above them."""
+    room = d.get("room")
+    if not room:
+        return False
+    w, h = Image.open(SITE / room["file"]).size
+    return h > w
+
+
+def wall_html(d, lang, pre, views=()):
+    """Right under the hero: the wall, large. The lead room (d["room"], optional), then the view figures (a relief's wall
+    strip; with a portrait room, strip and single panel stacked beside it). Nothing when there is neither."""
+    room, u = d.get("room"), UI[lang]
+    tall = room_tall(d)
+    figs = []
+    if room:
+        r = room[lang]
+        figs.append(f'  <figure class="dsg-wall__room reveal">{room_picture(room["file"], r["alt"], pre, ROOM_SIZES["tall" if tall else "wide"])}'
+                    f'<figcaption>{txt(r["cap"])}</figcaption></figure>')
+    if views and tall:
+        figs.append('  <div class="dsg-wall__views">\n' + "\n".join("  " + v for v in views) + "\n  </div>")
+    else:
+        figs += list(views)
+    if not figs:
+        return ""
+    label = f' aria-label="{u["room_h"]}"' if room else ""
+    return f"""
+<section class="dsg-wall{' dsg-wall--tall' if tall else ''}"{label}>
+{chr(10).join(figs)}
+</section>
+"""
+
+
 def room_html(d, lang, pre):
-    """The design in rooms: rooms[] = {file, source, tr: {alt, cap}, en: {alt, cap}}, the images Burak up-voted."""
-    rooms = d.get("rooms") or ([d["room"]] if d.get("room") else [])
+    """The design in further rooms: rooms[] = {file, source, tr: {alt, cap}, en: {alt, cap}}, the images Burak up-voted."""
+    rooms = d.get("rooms") or []
     if not rooms:
         return ""
     u, figs = UI[lang], []
@@ -337,7 +398,7 @@ def room_html(d, lang, pre):
         figs.append(f'    <figure><img src="{pre}{room["file"]}" width="{w}" height="{h}" loading="lazy" alt="{esc(r["alt"])}">'
                     f'<figcaption>{txt(r["cap"])}</figcaption></figure>')
     return f"""
-<section class="dsg-room reveal">
+<section class="dsg-room{' dsg-room--one' if len(figs) == 1 else ''} reveal">
   <h2 class="dsg-h">{u['room_h']}</h2>
   <div class="dsg-room__grid" data-n="{len(figs)}">
 {chr(10).join(figs)}
@@ -357,7 +418,8 @@ def use_faq_html(d, lang):
     c, u = d[lang], UI[lang]
     if not c.get("use"):
         return ""
-    items = "\n".join(f"    <div><h3>{nb(txt(q))}</h3><p>{nb(linked(a, lang))}</p></div>" for q, a in questions(d, lang))
+    items = "\n".join(f'    <details class="dsg-faq__item"><summary><h3>{nb(txt(q))}</h3></summary><p>{nb(linked(a, lang))}</p></details>'
+                      for q, a in questions(d, lang))
     return f"""
 <section class="dsg-use reveal" id="{u['use_id']}">
   <h2 class="dsg-h">{u['use_h']}</h2>
@@ -460,16 +522,19 @@ def relief_page(data, d, lang, figs):
              f'{rel}poster-1680.jpg {pw}w" imagesizes="{SIZES[d["layout"]]}" fetchpriority="high">\n')
     spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
                       ("material", u["material"]), ("finish", u["finish"]), ("fixing", fixing_of(d, u)), ("lead", u["lead"]), ("minimum", min_of(d, u))], u)
-    fig_html = []
+    fig = {}
     for key, cap, alt in (("object", u["obj_cap"], c["object_alt"]), ("strip", u["strip_cap"], c["strip_alt"])):
         if key in figs and alt:
             w, h = figs[key]
-            fig_html.append(f'      <figure><img src="{rel}{key}.webp" width="{w}" height="{h}" loading="lazy" '
-                            f'alt="{esc(alt)}"><figcaption>{cap}</figcaption></figure>')
+            fig[key] = (f'<figure class="dsg-view dsg-view--{key} reveal"><img src="{rel}{key}.webp" width="{w}" height="{h}" loading="lazy" '
+                        f'decoding="async" alt="{esc(alt)}"><figcaption>{cap}</figcaption></figure>')
     draw_w, draw_h = drawing_webp(SITE / "assets" / "relief" / d["asset"])
-    fig_html.append(f'      <figure><img src="{rel}drawing.webp" width="{draw_w}" height="{draw_h}" loading="lazy" '
-                    f'alt="{esc(c["drawing_alt"])}"><figcaption>{c["drawing_cap"]}. {txt(c["drawing_note"])}</figcaption></figure>')
-    figures = "\n".join(fig_html)
+    drawing = (f'    <figure class="sys-read__drawing"><img src="{rel}drawing.webp" width="{draw_w}" height="{draw_h}" loading="lazy" '
+               f'decoding="async" alt="{esc(c["drawing_alt"])}"><figcaption>{c["drawing_cap"]}. {txt(c["drawing_note"])}</figcaption></figure>')
+    # a portrait room takes strip and single panel beside it; otherwise the strip runs wide and the panel sits by the spec
+    tall = room_tall(d)
+    views = [f"  {fig[k]}" for k in (("strip", "object") if tall else ("strip",)) if k in fig]
+    beside = "" if tall or "object" not in fig else f"  {fig['object']}\n"
     sections = "\n".join(
         f'    <div class="sys-read__block"><h2>{txt(sec["h"])}</h2>\n' + "\n".join(f'      <p>{txt(p)}</p>' for p in sec["p"]) + '\n    </div>'
         for sec in c["sections"])
@@ -495,19 +560,17 @@ def relief_page(data, d, lang, figs):
          sizes="{SIZES[d['layout']]}" width="{pw}" height="{ph}" fetchpriority="high" alt="{esc(c['alt'])}">
   </div>
 </section>
-
-<section class="sys-body">
-  <dl class="sys-spec reveal">
+{wall_html(d, lang, pre, views)}
+<section class="sys-body{'' if beside else ' sys-body--plain'}">
+{beside}  <dl class="sys-spec reveal">
 {spec}
   </dl>
-  <div class="sys-figures reveal">
-{figures}
-  </div>
 </section>
 
 <section class="sys-read reveal">
   <div class="sys-read__inner">
 {sections}
+{drawing}
   </div>
 </section>
 {room_html(d, lang, pre)}{use_faq_html(d, lang)}{pager_html(data, d, lang)}{door_html(lang, d)}
@@ -579,7 +642,7 @@ def study_page(data, d, lang, sizes):
     <figcaption>{txt(c['wall_cap'])}</figcaption>
   </figure>
 </section>
-
+{wall_html(d, lang, pre)}
 <section class="dsg-close">
   <figure class="dsg-close__img reveal">
     <img src="{base}detail.webp" width="{cw}" height="{ch}" loading="lazy" alt="{esc(c['card_alt'])}">
@@ -692,7 +755,7 @@ def share_rooms(d, lang, pre):
     return "".join(
         f'  <figure class="shr-fig"><img src="{pre}{r["file"]}" width="{w}" height="{h}" alt="{esc(r[lang]["alt"])}">'
         f'<figcaption>{txt(r[lang]["cap"])}</figcaption></figure>\n'
-        for r in (d.get("rooms") or []) for w, h in [Image.open(SITE / r["file"]).size])
+        for r in ([d["room"]] if d.get("room") else []) + (d.get("rooms") or []) for w, h in [Image.open(SITE / r["file"]).size])
 
 
 def share_page(d, lang, sizes):
@@ -784,17 +847,40 @@ def card_image(d, lang, pos):
     return f'<img src="{pre}{f}" width="{w}" height="{h}" {load}{style} alt="{esc(alt)}">'
 
 
+def wide_cards(n):
+    """Positions of the index cards that sit two to a row. The grid lays rows of three and rows of two, alternating from a
+    row of three, so no count above one leaves a lone card (13 = 3 + 2 + 3 + 2 + 3)."""
+    fits = [(a, b) for b in range(n // 2 + 1) for a in [(n - 2 * b) // 3] if 3 * a + 2 * b == n]
+    if not fits:
+        return set()
+    a, b = min(fits, key=lambda ab: abs(ab[0] - ab[1] - 0.5))
+    rows = []
+    while a or b:
+        if a:
+            rows.append(3)
+            a -= 1
+        if b:
+            rows.append(2)
+            b -= 1
+    wide, pos = set(), 0
+    for size in rows:
+        if size == 2:
+            wide |= {pos, pos + 1}
+        pos += size
+    return wide
+
+
 def index_page(data, lang):
     u = UI[lang]
     pre = "" if lang == "tr" else "../"
     tr_url, en_url = "tasarimlar.htm", "en/designs.htm"
     url = tr_url if lang == "tr" else en_url
     twin = f"{pre}{en_url}" if lang == "tr" else f"../{tr_url}"
-    cards = []
+    cards, wide = [], wide_cards(len(data["designs"]))
     for pos, d in enumerate(data["designs"]):
         c = d[lang]
         line = c["story"] if d["kind"] == "study" else first_sentence(c["lede"])
-        cards.append(f'''    <a class="dsg-card reveal" href="{u['page'].format(slug=d['slug'])}">
+        cards.append(f'''    <a class="dsg-card{' dsg-card--wide' if pos in wide else ''} reveal" href="{u['page'].format(slug=d['slug'])}">
       <span class="dsg-card__img">{card_image(d, lang, pos)}</span>
       <span class="dsg-card__name">{esc(c['name'])}</span>
       <span class="dsg-card__line">{nb(txt(line))}</span>

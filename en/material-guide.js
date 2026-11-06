@@ -180,7 +180,7 @@ const studioMaterials = [{
   fullName: "Polymer Modified Composite Gypsum",
   tagline: "Interior architectural relief panels for high-specification interiors",
   domain: "Interior",
-  application: "Feature walls, ceiling elements, column wraps, counter and desk fronts, accent surfaces, reception areas, corridor accent walls",
+  application: "Feature walls, column wraps, counter and desk fronts, accent surfaces, reception areas, corridor accent walls",
   specs: {
     density: "1,400–1,600",
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),

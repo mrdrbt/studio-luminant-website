@@ -22,22 +22,22 @@
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preload" href="fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="shared.css?v=dce8c708">
+<link rel="stylesheet" href="shared.css?v=cd9e272b">
 
 <style>
   .nav-links a.active { color: var(--gold); }
   .article-wrapper { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; padding: 0 60px; }
   .back-nav { padding: 40px 0 0; }
-  .back-nav a { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
+  .back-nav a { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
   .back-nav a:hover { color: var(--gold); }
   .back-nav svg { width: 14px; height: 14px; }
   .article-header { padding: 80px 0 60px; border-bottom: 1px solid var(--border); margin-bottom: 60px; }
-  .article-eyebrow { display: inline-flex; align-items: center; gap: 14px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 400; margin-bottom: 32px; }
+  .article-eyebrow { display: inline-flex; align-items: center; gap: 14px; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 400; margin-bottom: 32px; }
   .article-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
   .article-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5vw, 64px); font-weight: 300; line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 28px; }
   .article-title em { font-style: italic; color: var(--gold); }
   .article-subtitle { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--text-secondary); max-width: 620px; }
-  .article-meta { margin-top: 28px; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
+  .article-meta { margin-top: 28px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
   .article-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--text-primary); margin: 56px 0 20px; line-height: 1.2; }
   .article-body h2 em { font-style: italic; color: var(--gold); }
   .article-body p { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--text-secondary); margin-bottom: 20px; }
@@ -46,22 +46,22 @@
   .article-body a:hover { color: var(--gold); border-color: var(--gold); }
   .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 36px 0; }
   .compare-card { background: var(--surface); padding: 28px 24px; }
-  .compare-card-header { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .compare-card-header { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
   .compare-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(var(--accent-rgb),0.06); font-size: 13px; gap: 16px; }
   .compare-row:last-child { border-bottom: none; }
   .compare-label { color: var(--text-muted); }
   .compare-value { color: var(--text-primary); font-weight: 400; text-align: right; }
   .callout { background: var(--surface); border-left: 3px solid var(--gold); padding: 28px 32px; margin: 36px 0; border-radius: 0 4px 4px 0; }
-  .callout-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 400; }
+  .callout-label { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 400; }
   .callout p { font-size: 14px; line-height: 1.75; color: var(--text-secondary); font-weight: 300; margin-bottom: 0; }
   .callout strong { color: var(--text-primary); font-weight: 500; }
   .related { margin: 56px 0; padding: 32px 0 0; border-top: 1px solid var(--border); }
-  .related-label { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; font-weight: 400; }
+  .related-label { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; font-weight: 400; }
   .related-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; }
   .related-list a { display: flex; justify-content: space-between; align-items: center; background: var(--surface); padding: 18px 24px; font-size: 14px; color: var(--text-secondary); text-decoration: none; border: none; transition: background 0.3s, color 0.3s; }
   .related-list a:hover { background: var(--surface-2); color: var(--text-primary); }
   .related-list a:focus-visible { background: var(--surface-2); color: var(--text-primary); }
-  .related-list a span.tag { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
+  .related-list a span.tag { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-dim); }
   .article-cta { margin: 80px 0; padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
   .article-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin-bottom: 16px; }
   .article-cta h3 em { font-style: italic; color: var(--gold); }
@@ -79,7 +79,7 @@
 {"@context": "https://schema.org", "@type": "Article", "headline": "Mimari Rölyef Panel Nedir ve Nasıl Sipariş Edilir?", "description": "Rölyef panelin tanımı, kullanım alanları, malzemesi ve bir mimarın sipariş sürecini nasıl yürüttüğü.", "inLanguage": "tr", "image": "https://studioluminant.com.tr/images/studio-luminant-og-image.jpg", "datePublished": "2026-06-14", "dateModified": "2026-10-23", "author": {"@type": "Organization", "name": "Studio Luminant", "url": "https://studioluminant.com.tr"}, "publisher": {"@type": "Organization", "name": "Studio Luminant", "logo": {"@type": "ImageObject", "url": "https://studioluminant.com.tr/images/studio-luminant-logo-512.png"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm"}}
 </script>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "tr", "mainEntity": [{"@type": "Question", "name": "Mimari rölyef panel nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Mimari rölyef panel, yüzeyinde kabartma (rölyef) bir desen veya doku taşıyan, kalıba dökülerek üretilen bir duvar panelidir. Desen yüzeye basılmaz veya yapıştırılmaz; panelin kendi gövdesine dökümle kazınır. Bu nedenle rölyef, ışığın geliş açısına göre gölge ve vurgu üreterek okunur — düz bir baskının veremeyeceği bir derinlik etkisi yaratır."}}, {"@type": "Question", "name": "Rölyef paneller nerede kullanılır?", "acceptedAnswer": {"@type": "Answer", "text": "Rölyef paneller en çok, bir yüzeyin akılda kalıcı olması gereken ticari ve konaklama mekânlarında kullanılır: otel lobileri ve resepsiyon arkaları, restoran ve bar duvarları, mağaza içi vurgu yüzeyleri, asansör holleri ve toplantı/etkinlik alanları. Konut projelerinde ise tek bir vurgu duvarı olarak tercih edilir."}}, {"@type": "Question", "name": "Hangi malzemeden üretilir?", "acceptedAnswer": {"@type": "Answer", "text": "Studio Luminant rölyef panelleri Lumina PMAG™ ile döker; iç mekânda duvar, tavan, kolon kaplama, tezgâh önü ve vurgu yüzeyleri bu malzemeyle yapılır. Yüzey görünümü artizan finish ile belirlenir."}}, {"@type": "Question", "name": "Nasıl sipariş edilir?", "acceptedAnswer": {"@type": "Answer", "text": "Özel üretim bir rölyef panel, tasarım aşamasında verilen bir karardır ve genel olarak şu adımları izler: brief ve bağlam, motif geliştirme, malzeme seçimi, render ve ana model onayı, format ve m², yüzey bitişi, teknik veri sayfası, montaj çizimi ve sabitleme. Rölyef bir yüzeyin etkisi render üzerinde tam okunmadığından, fiziksel bir numune talep etmek yüzeyin ışığı nasıl yakaladığını görmenin tek güvenilir yoludur."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "tr", "mainEntity": [{"@type": "Question", "name": "Mimari rölyef panel nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Mimari rölyef panel, yüzeyinde kabartma (rölyef) bir desen veya doku taşıyan, kalıba dökülerek üretilen bir duvar panelidir. Desen yüzeye basılmaz veya yapıştırılmaz; panelin kendi gövdesine dökümle kazınır. Bu nedenle rölyef, ışığın geliş açısına göre gölge ve vurgu üreterek okunur — düz bir baskının veremeyeceği bir derinlik etkisi yaratır."}}, {"@type": "Question", "name": "Rölyef paneller nerede kullanılır?", "acceptedAnswer": {"@type": "Answer", "text": "Rölyef paneller en çok, bir yüzeyin akılda kalıcı olması gereken ticari ve konaklama mekânlarında kullanılır: otel lobileri ve resepsiyon arkaları, restoran ve bar duvarları, mağaza içi vurgu yüzeyleri, asansör holleri ve toplantı/etkinlik alanları. Konut projelerinde ise tek bir vurgu duvarı olarak tercih edilir."}}, {"@type": "Question", "name": "Hangi malzemeden üretilir?", "acceptedAnswer": {"@type": "Answer", "text": "Studio Luminant rölyef panelleri Lumina PMAG™ ile döker; iç mekânda duvar, kolon kaplama, tezgâh önü ve vurgu yüzeyleri bu malzemeyle yapılır. Yüzey görünümü artizan finish ile belirlenir."}}, {"@type": "Question", "name": "Nasıl sipariş edilir?", "acceptedAnswer": {"@type": "Answer", "text": "Özel üretim bir rölyef panel, tasarım aşamasında verilen bir karardır ve genel olarak şu adımları izler: brief ve bağlam, motif geliştirme, malzeme seçimi, render ve ana model onayı, format ve m², yüzey bitişi, teknik veri sayfası, montaj çizimi ve sabitleme. Rölyef bir yüzeyin etkisi render üzerinde tam okunmadığından, fiziksel bir numune talep etmek yüzeyin ışığı nasıl yakaladığını görmenin tek güvenilir yoludur."}}]}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "DefinedTerm", "name": "Mimari rölyef panel", "inLanguage": "tr", "description": "Yüzeyindeki kabartma deseni baskı veya kaplama yerine panelin gövdesine dökümle kazınan, böylece ışıkla üç boyutlu okunan bir duvar paneli. Studio Luminant tarafından Lumina PMAG™ mineral malzemesinden projeye özel dökülür.", "url": "https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm#definition", "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Studio Luminant — Mimari Yüzeyler Sözlüğü"}}
@@ -132,7 +132,7 @@
 
     <h2>Hangi <em>Malzemeden</em> Üretilir?</h2>
     <p>
-      <span translate="no">Studio Luminant</span> rölyef panelleri <a href="urunler.htm"><span translate="no">Lumina PMAG™</span></a> ile döker; iç mekânda duvar, tavan, kolon kaplama, tezgâh önü ve vurgu yüzeyleri bu malzemeyle yapılır. Yüzey görünümü artizan finish ile belirlenir.
+      <span translate="no">Studio Luminant</span> rölyef panelleri <a href="urunler.htm"><span translate="no">Lumina PMAG™</span></a> ile döker; iç mekânda duvar, kolon kaplama, tezgâh önü ve vurgu yüzeyleri bu malzemeyle yapılır. Yüzey görünümü artizan finish ile belirlenir.
     </p>
 
     <h2>Çizim Sizden mi, <em>Bizden mi?</em></h2>

@@ -55,12 +55,12 @@
 
   /* ── TYPOGRAPHY — Weights ─────────── */
   --w-display: 300;
-  --w-body:    300;
+  --w-body:    400;
   --w-label:   400;
 
   /* ── TYPOGRAPHY — Scale ──────────── */
-  --t-micro:    9px;
-  --t-eyebrow:  10px;
+  --t-micro:    11px;
+  --t-eyebrow:  11px;
   --t-label:    11px;
   --t-body-sm:  14px;
   --t-body:     16px;
@@ -989,9 +989,32 @@ a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, 
 /* ─── PHONE BODY COPY ───────────────────
    300-weight grey on cream is thin on a small screen: heavier weight, darker secondary inks. */
 @media (max-width: 720px) {
-  :root { --ink-2: #2B261F; --ink-muted: #4A4339; --w-body: 400; }
-  html body :is(p, li, dd, dt, figcaption, blockquote) { font-weight: 400 !important; }
+  :root { --ink-2: #2B261F; --ink-muted: #4A4339; }
+}
+/* Weight 400 body copy at every width (desktop joined phone 2026-11-06) */
+:root { --w-body: 400; }
+html body :is(p, li, dd, dt, figcaption, blockquote) { font-weight: 400 !important; }
+/* Display-face text keeps its light weight on desktop (phone stays 400 for legibility) */
+@media (min-width: 721px) {
+  html body :is(.sys-door p, .arc-disc li, .dsg-moulds figcaption, .article-figure figcaption, .about-lead) { font-weight: 300 !important; }
 }
 
 /* Related-page rows are links: the arrow says so (2026-11-06) */
 .related-list a .tag::after, .arc-related a .tag::after { content: "\2192"; margin-left: 10px; font-size: 15px; line-height: 0; letter-spacing: 0; vertical-align: -1px; color: var(--accent); }
+
+/* ─── ARTICLE + GUIDE PAGES: nav clearance, desktop reading comfort (2026-11-06) ───
+   The nav is fixed (94px desktop, 89px phone) and the inline copies of .back-nav only pad 40px,
+   so the back link sat under it. Specificity beats those inline copies. */
+:is(.article-wrapper, .legal-wrapper) > .back-nav { padding-top: 124px; }
+@media (max-width: 900px) { :is(.article-wrapper, .legal-wrapper) > .back-nav { padding-top: 116px; } }
+
+/* Measure held to ~70 characters. Tables, callouts, grids keep their width. */
+@media (min-width: 721px) {
+  html body .article-wrapper td { font-weight: 400; }
+  html body .article-wrapper .article-body > p,
+  html body .article-wrapper .article-subtitle,
+  html body .article-wrapper .article-body > :is(ul, ol):not(.spec-checklist) > li { max-width: 55ch; }
+  html body .article-wrapper :is(.callout, .faq) p { max-width: 54ch; }
+}
+/* Long FAQ answers: cap the measure on every page that uses the pattern */
+html body .faq-answer p, html body .faq p { max-width: 60ch; }

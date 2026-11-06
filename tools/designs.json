@@ -1,5 +1,5 @@
 {
- "_note": "Studio Designs (Atölye Tasarımları), source for tools/build_designs.py: one range, one page per design (TR tasarim-<slug>.htm, EN en/design-<slug>.htm) and the index (tasarimlar.htm, en/designs.htm). Burak 2026-10-25: no Systems tier; all designs listed as equals, alphabetical. kind 'relief' = heightmap-backed (live relief hero, assets/relief/<asset>/, Library render); kind 'study' = small-format design from the 2026-10-21 portfolio prestage (wall study, close view, lay drawing; no module, depth, price or availability per the D1-D5 rule). An optional 'room' entry ({src, tr:{alt,cap}, en:{alt,cap}}) adds an in-situ figure: only renders Burak voted UP. Names: Library System profiles, source for tools/build_systems.py. Public names Cantilena / Glissando (012 was Cantilena until the #112 name-clash rename, 2026-10-23) chosen by Burak 2026-10-15; 031 (was Ostinato) is now Ricercar and 033 (was Tremolo) is now Mordent on 2026-10-23 after the same-sector check found both in use (wallpaper; wallcovering + acoustic panel) (Set A, music family with Refrain + Fugue, #83); web competitor check done 2026-10-15, TÜRKPATENT 19/27 clearance with the avukat still open (#95). Facts from VAULT/Library/Relief/<code>/manifest.json. No prices (#73). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-11-02 (SEO B1): per language, 'use' is the design's «Nerede kullanılır» / 'Where it works' paragraph and 'faq' its two questions (size/format, depth); the third (lead time + fixing) is the builder's template, from the spec table's facts. Study designs keep the no-module/no-depth rule: their answers name no size or depth figure. 2026-11-02 (SEO B3): 'use' and FAQ answers may carry in-text links written [[key|anchor]] (keys: build_designs.LINKS), at most two new links per page: «rölyef duvar paneli» / 'relief wall panel' to the homepage, «lobi duvar kaplama» / 'hotel lobby feature wall' to the lobby guide where the renders include a lobby, and one room guide where its facts back it.",
+ "_note": "Studio Designs (Atölye Tasarımları), source for tools/build_designs.py: one range, one page per design (TR tasarim-<slug>.htm, EN en/design-<slug>.htm) and the index (tasarimlar.htm, en/designs.htm). Burak 2026-10-25: no Systems tier; all designs listed as equals, alphabetical. kind 'relief' = heightmap-backed (live relief hero, assets/relief/<asset>/, Library render); kind 'study' = small-format design from the 2026-10-21 portfolio prestage (wall study, close view, lay drawing; no module, depth, price or availability per the D1-D5 rule). An optional 'room' entry ({file, tr:{alt,cap}, en:{alt,cap}}) is the lead room figure shown wide right under the hero (swap the render by changing 'file'; a gallery image under images/ brings its -400w/-800w/-1200w WebP set); 'rooms' are the further rooms lower on the page: only renders Burak voted UP. Names: Library System profiles, source for tools/build_systems.py. Public names Cantilena / Glissando (012 was Cantilena until the #112 name-clash rename, 2026-10-23) chosen by Burak 2026-10-15; 031 (was Ostinato) is now Ricercar and 033 (was Tremolo) is now Mordent on 2026-10-23 after the same-sector check found both in use (wallpaper; wallcovering + acoustic panel) (Set A, music family with Refrain + Fugue, #83); web competitor check done 2026-10-15, TÜRKPATENT 19/27 clearance with the avukat still open (#95). Facts from VAULT/Library/Relief/<code>/manifest.json. No prices (#73). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-10-23 (WB-05): per-page title, meta and sections live here; no availability, castability or price claim (DEC-04 default). 2026-11-02 (SEO B1): per language, 'use' is the design's «Nerede kullanılır» / 'Where it works' paragraph and 'faq' its two questions (size/format, depth); the third (lead time + fixing) is the builder's template, from the spec table's facts. Study designs keep the no-module/no-depth rule: their answers name no size or depth figure. 2026-11-02 (SEO B3): 'use' and FAQ answers may carry in-text links written [[key|anchor]] (keys: build_designs.LINKS), at most two new links per page: «rölyef duvar paneli» / 'relief wall panel' to the homepage, «lobi duvar kaplama» / 'hotel lobby feature wall' to the lobby guide where the renders include a lobby, and one room guide where its facts back it.",
  "designs": [
   {
    "slug": "accelerando",
@@ -110,18 +110,6 @@
      }
     },
     {
-     "file": "assets/designs/accelerando/room-bar.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/accelerando_bar/draws/2026-10-26_x-accelerando-bar-w2_frontal_gpt_2.png",
-     "tr": {
-      "alt": "Render: Accelerando, bar",
-      "cap": "Render: bar"
-     },
-     "en": {
-      "alt": "Render: Accelerando, bar",
-      "cap": "Render: bar"
-     }
-    },
-    {
      "file": "assets/designs/accelerando/room-restaurant.webp",
      "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave1/accelerando_restaurant/draws/2026-10-26_x-optic-restaurant-w1_wall34_gpt_1.png",
      "tr": {
@@ -133,7 +121,18 @@
       "cap": "Render: restaurant"
      }
     }
-   ]
+   ],
+   "room": {
+    "file": "images/studio-luminant-amber-relief-wall-bar-accelerando-concept.jpg",
+    "tr": {
+     "alt": "Render: Accelerando, bar",
+     "cap": "Render: bar"
+    },
+    "en": {
+     "alt": "Render: Accelerando, bar",
+     "cap": "Render: bar"
+    }
+   }
   },
   {
    "slug": "andante",
@@ -337,7 +336,22 @@
       "a": "From the crown of each almond down to the grooves where the bands meet, the relief is 15 mm deep. The transitions are soft curves rather than sharp edges."
      }
     ]
-   }
+   },
+   "room": {
+    "file": "images/studio-luminant-bone-relief-wall-lobby-antiphon-concept-v3.jpg",
+    "tr": {
+     "alt": "Render: Antiphon, otel lobisi",
+     "cap": "Render: otel lobisi"
+    },
+    "en": {
+     "alt": "Render: Antiphon, hotel lobby",
+     "cap": "Render: hotel lobby"
+    }
+   },
+   "card_zoom": [
+    1.65,
+    "50% 50%"
+   ]
   },
   {
    "slug": "fioritura",
@@ -439,7 +453,22 @@
       "a": "The relief reaches 16 mm. The hearts of the rosettes and the spines of the leaves stand forward while the ground falls back, so the leaves cast their own shadows."
      }
     ]
-   }
+   },
+   "room": {
+    "file": "images/studio-luminant-blush-relief-wall-restaurant-fioritura-concept.jpg",
+    "tr": {
+     "alt": "Render: Fioritura, restoran",
+     "cap": "Render: restoran"
+    },
+    "en": {
+     "alt": "Render: Fioritura, restaurant",
+     "cap": "Render: restaurant"
+    }
+   },
+   "card_zoom": [
+    1.65,
+    "50% 50%"
+   ]
   },
   {
    "slug": "fugato",
@@ -541,6 +570,17 @@
       "a": "The coves go 40 mm deep. Every plate ends on the same flat ridge, so each one meets its neighbour flush, end to end."
      }
     ]
+   },
+   "room": {
+    "file": "images/studio-luminant-pale-grey-relief-wall-cafe-fugato-concept-portrait.jpg",
+    "tr": {
+     "alt": "Render: Fugato, kafe",
+     "cap": "Render: kafe"
+    },
+    "en": {
+     "alt": "Render: Fugato, café",
+     "cap": "Render: café"
+    }
    }
   },
   {
@@ -681,20 +721,20 @@
       "alt": "Render: Glissando, clinic",
       "cap": "Render: clinic"
      }
-    },
-    {
-     "file": "assets/designs/glissando/room-spa.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/glissando_spa/r2/draws/2026-10-26_x-glissando-spa-w2r2_w24_50mm_gpt_2.png",
-     "tr": {
-      "alt": "Render: Glissando, spa",
-      "cap": "Render: spa"
-     },
-     "en": {
-      "alt": "Render: Glissando, spa",
-      "cap": "Render: spa"
-     }
     }
-   ]
+   ],
+   "room": {
+    "file": "assets/designs/glissando/room-spa.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/glissando_spa/r2/draws/2026-10-26_x-glissando-spa-w2r2_w24_50mm_gpt_2.png",
+    "tr": {
+     "alt": "Render: Glissando, spa",
+     "cap": "Render: spa"
+    },
+    "en": {
+     "alt": "Render: Glissando, spa",
+     "cap": "Render: spa"
+    }
+   }
   },
   {
    "slug": "gruppetto",
@@ -767,18 +807,6 @@
    },
    "rooms": [
     {
-     "file": "assets/designs/gruppetto/room-bar.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/gruppetto_bar/draws/2026-10-26_x-gruppetto-bar-w2_s35_gpt_1.png",
-     "tr": {
-      "alt": "Render: Gruppetto, bar",
-      "cap": "Render: bar"
-     },
-     "en": {
-      "alt": "Render: Gruppetto, bar",
-      "cap": "Render: bar"
-     }
-    },
-    {
      "file": "assets/designs/gruppetto/room-cafe.webp",
      "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-17_bench_insitu_modkits/Crest/cafe_v1/2026-10-17_x-crest-modkit-bench-rmk_hero_gpt_1.png",
      "tr": {
@@ -790,7 +818,18 @@
       "cap": "Render: café"
      }
     }
-   ]
+   ],
+   "room": {
+    "file": "images/studio-luminant-terracotta-relief-wall-bar-gruppetto-concept.jpg",
+    "tr": {
+     "alt": "Render: Gruppetto, bar",
+     "cap": "Render: bar"
+    },
+    "en": {
+     "alt": "Render: Gruppetto, bar",
+     "cap": "Render: bar"
+    }
+   }
   },
   {
    "slug": "hemiola",
@@ -883,18 +922,6 @@
    },
    "rooms": [
     {
-     "file": "assets/designs/hemiola/room-lobby.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-20_skew_insitu/2026-10-20_x-skew-insitu-r183058_r6_lobby_oblique_gpt_2.png",
-     "tr": {
-      "alt": "Render: Hemiola, lobi oturma alanı",
-      "cap": "Render: lobi oturma alanı"
-     },
-     "en": {
-      "alt": "Render: Hemiola, lobby lounge",
-      "cap": "Render: lobby lounge"
-     }
-    },
-    {
      "file": "assets/designs/hemiola/room-diningbar.webp",
      "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/hemiola_diningbar/r2/draws/2026-10-26_x-hemiola-diningbar-w2r2_r4_gpt_2.png",
      "tr": {
@@ -907,7 +934,19 @@
      }
     }
    ],
-   "joint": true
+   "joint": true,
+   "room": {
+    "file": "assets/designs/hemiola/room-lobby.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-20_skew_insitu/2026-10-20_x-skew-insitu-r183058_r6_lobby_oblique_gpt_2.png",
+    "tr": {
+     "alt": "Render: Hemiola, lobi oturma alanı",
+     "cap": "Render: lobi oturma alanı"
+    },
+    "en": {
+     "alt": "Render: Hemiola, lobby lounge",
+     "cap": "Render: lobby lounge"
+    }
+   }
   },
   {
    "slug": "hocket",
@@ -1128,20 +1167,20 @@
       "alt": "Render: Melisma, restaurant",
       "cap": "Render: restaurant"
      }
-    },
-    {
-     "file": "assets/designs/melisma/room-spa.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/melisma_spa/draws/2026-10-26_x-melisma-spa-w2_hero_gpt_1.png",
-     "tr": {
-      "alt": "Render: Melisma, spa",
-      "cap": "Render: spa"
-     },
-     "en": {
-      "alt": "Render: Melisma, spa",
-      "cap": "Render: spa"
-     }
     }
-   ]
+   ],
+   "room": {
+    "file": "assets/designs/melisma/room-spa.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/melisma_spa/draws/2026-10-26_x-melisma-spa-w2_hero_gpt_1.png",
+    "tr": {
+     "alt": "Render: Melisma, spa",
+     "cap": "Render: spa"
+    },
+    "en": {
+     "alt": "Render: Melisma, spa",
+     "cap": "Render: spa"
+    }
+   }
   },
   {
    "slug": "mezzavoce",
@@ -1247,8 +1286,8 @@
   },
   {
    "card_zoom": [
-    1.3,
-    "70% 30%"
+    1.65,
+    "50% 50%"
    ],
    "slug": "ricercar",
    "kind": "relief",
@@ -1364,18 +1403,6 @@
      }
     },
     {
-     "file": "assets/designs/ricercar/room-lobby.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/ricercar_lobby/draws/2026-10-26_x-ricercar-lobby-w2_front35_gpt_1.png",
-     "tr": {
-      "alt": "Render: Ricercar, otel lobisi",
-      "cap": "Render: otel lobisi"
-     },
-     "en": {
-      "alt": "Render: Ricercar, hotel lobby",
-      "cap": "Render: hotel lobby"
-     }
-    },
-    {
      "file": "assets/designs/ricercar/room-restaurant.webp",
      "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/ricercar_restaurant/draws/2026-10-26_x-ricercar-restaurant-w2_frontal_gpt_2.png",
      "tr": {
@@ -1399,7 +1426,19 @@
       "cap": "Render: café"
      }
     }
-   ]
+   ],
+   "room": {
+    "file": "assets/designs/ricercar/room-lobby.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/ricercar_lobby/draws/2026-10-26_x-ricercar-lobby-w2_front35_gpt_1.png",
+    "tr": {
+     "alt": "Render: Ricercar, otel lobisi",
+     "cap": "Render: otel lobisi"
+    },
+    "en": {
+     "alt": "Render: Ricercar, hotel lobby",
+     "cap": "Render: hotel lobby"
+    }
+   }
   },
   {
    "slug": "rondeau",
@@ -1515,20 +1554,20 @@
       "alt": "Render: Rondeau, restaurant",
       "cap": "Render: restaurant"
      }
-    },
-    {
-     "file": "assets/designs/rondeau/room-cafe.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/rondeau_cafe/draws/2026-10-26_x-rondeau-cafe-w2_k1_gpt_2.png",
-     "tr": {
-      "alt": "Render: Rondeau, kahvehane",
-      "cap": "Render: kahvehane"
-     },
-     "en": {
-      "alt": "Render: Rondeau, coffee house",
-      "cap": "Render: coffee house"
-     }
     }
-   ]
+   ],
+   "room": {
+    "file": "assets/designs/rondeau/room-cafe.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/rondeau_cafe/draws/2026-10-26_x-rondeau-cafe-w2_k1_gpt_2.png",
+    "tr": {
+     "alt": "Render: Rondeau, kahvehane",
+     "cap": "Render: kahvehane"
+    },
+    "en": {
+     "alt": "Render: Rondeau, coffee house",
+     "cap": "Render: coffee house"
+    }
+   }
   }
  ],
  "parked": [
