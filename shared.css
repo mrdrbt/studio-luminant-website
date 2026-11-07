@@ -278,6 +278,15 @@ nav.scrolled {
   border-color: var(--border);
   padding: 18px var(--edge);
 }
+/* The crawlable link row components.js swaps for the real footer: it stays in the footer's place, not in the fixed bar above */
+nav.sl-static-footer-links {
+  position: static;
+  flex-wrap: wrap; justify-content: flex-start; gap: var(--s-2) var(--s-5);
+  padding: var(--s-6) var(--edge);
+  border-top: 1px solid var(--border);
+}
+.sl-static-footer-links a { font-size: 13px; color: var(--ink); text-decoration: none; padding: var(--s-1) 0; }
+.sl-static-footer-links a:hover { color: var(--accent); }
 .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
 .nav-logo-img { height: 25px; width: auto; display: block; transition: opacity 0.3s ease, height 0.4s ease; }
 .nav-logo:hover .nav-logo-img { opacity: 0.8; }
@@ -539,6 +548,7 @@ summary:focus-visible,
 @media (max-width: 900px) {
   nav { padding: 20px 32px; }
   nav.scrolled { padding: 16px 32px; }
+  nav.sl-static-footer-links { padding: var(--s-6) 32px; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .nav-cta { display: none; }
