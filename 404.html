@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 — Sayfa Bulunamadı | Studio Luminant</title>
 <meta name="robots" content="noindex">
-<link rel="preload" href="fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="shared.css?v=6b070017">
+<link rel="preload" href="/fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/shared.css?v=c3883dac">
 <style>
   .error-container {
     min-height: 100vh;
@@ -98,7 +98,7 @@
 </style>
 </head>
 <body>
-<div id="site-nav" data-lang="tr" data-base="./"></div>
+<div id="site-nav" data-lang="tr" data-base="/"></div>
 
 <main class="error-container" id="main">
   <div class="error-code">404</div>
@@ -114,9 +114,16 @@
   <div class="error-en">Page not found — <a href="/en/">Go to English site</a></div>
 </main>
 
-<div id="site-footer" data-lang="tr" data-base="./"></div>
-<script src="shared.js?v=3e01377b"></script>
-<script src="components.js?v=7d3011b6"></script>
-<script src="consent.js?v=c65ea30c"></script>
+<div id="site-footer" data-lang="tr" data-base="/"></div>
+<script src="/shared.js?v=3e01377b"></script>
+<script src="/components.js?v=7d3011b6"></script>
+<script>
+  // Served at any depth, but components.js injects relative links: pin them to the root, or /en/x.htm links on to /en/surec.htm.
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var href = a.getAttribute('href');
+    if (!/^(?:[a-z]+:|\/|#)/i.test(href)) a.setAttribute('href', '/' + href);
+  });
+</script>
+<script src="/consent.js?v=c65ea30c"></script>
 </body>
 </html>
