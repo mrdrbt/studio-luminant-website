@@ -59,13 +59,24 @@ UI = {
            "faq_lead_q": "{name} ne kadar sürede teslim edilir, duvara nasıl sabitlenir?",
            "faq_lead_a": "Teslim süresi, 50 m²'ye kadar olan siparişlerde sözleşme ve peşinattan sonra 4 haftadır; daha büyük siparişlerde tarih teklifte belirtilir. Teslim şekli Sapanca'da fabrika teslimidir (EXW). Parçalar Lumina PMAG™ — Polimer Modifiye Kompozit Alçı ile elde dökülür ve duvara polimer yapıştırıcıyla, metal dikme ve alçıpan duvarlarda ise ray sistemiyle sabitlenir. Bir kolonu saran, köşeyi dönen ya da kavisli bir duvarı izleyen parçalar ise aynı motifle Özel Üretim olarak dökülür; böyle bir duvar Özel Üretim takvimini izler.",
            "obj_cap": "Render: tek panel, yalama ışık", "strip_cap": "Render: duvar şeridi",
-           "close_h": "Yakından", "drawing_h": "Çizim", "room_h": "Bir mekânda", "more": "İncele →", "moulds_h": "Kalıplar",
+           "close_h": "Yakından", "drawing_h": "Çizim", "room_h": "Bir mekânda", "moulds_h": "Kalıplar",
            "moulds_p": "Duvar, bu kalıplardan dökülen parçalarla kurulur; harfler çizimdeki dizilişle eşleşir, düz parça rölyefsizdir.",
            "mould_alt": "Render: {name}, kalıp {letter}", "plain": "Düz", "plain_alt": "Render: {name}, düz parça",
            "close_p": "Aynı duvar, yakından: rölyefin derinliği.",
            "drawing_p": "Tasarımın kalıpları ve duvardaki dizilişi. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
            "door": "Bu tasarımın duvarınızda nasıl yerleşeceğini görmek için duvar ölçülerinizi iletin.",
            "own": "Kendi çiziminizle başlıyorsanız:", "prev": "Önceki tasarım", "next": "Sonraki tasarım",
+           "tray_lede": "Hangi tasarımın hangi ışıkta belirginleştiği, hangisinde düzleştiği yan yana görünür.",
+           "tray_hint": ("Noktayı sürükleyin ya da bir ışık seçin.", "Fareyi tasarımların üzerinde gezdirin ya da bir ışık seçin.", "Bir ışık seçin."),
+           "tray_pad": "Işığın yönü ve yüksekliği", "tray_lights_label": "Hazır ışıklar",
+           "tray_from": {"left": "soldan", "upleft": "sol üstten", "up": "üstten", "upright": "sağ üstten", "right": "sağdan"},
+           "tray_lights": {"ceiling": "Tavandan yalama", "window": "Yan pencere", "front": "Uzak spot"},
+           "tray_alt": "{name}: rölyefin 600 × 600 mm’lik bir alanı",
+           "tray_note_h2": "Fotoğraf değil, hesaplanan ışık",
+           "tray_note": ("Her kare, tasarımın aynı ölçekteki 600 × 600 mm’lik bir alanını gösterir. Görüntüyü tarayıcınız o anda, tasarımın kendi yükseklik verisinden hesaplar; ışık değiştikçe gölgeler de bu veriden yeniden düşer. Adın yanındaki ölçü rölyef derinliğidir.",
+                         "Duvara 55° açıyla vuran uzak spotu deneyin: Mezzavoce’nin kontrastı üçte birine iner, Andante’ninki korunur. Fugato ışığı yandan ister: tavandan yalamada sönük kalır, yan pencerede öne çıkar.",
+                         "Hesap tek renk, mat bir yüzey varsayar. Artizan finish ve mekândaki diğer ışık kaynakları gördüğünüzü değiştirir."),
+           "tray_list_h2": "Tasarımlar",
            "idx_title": "Atölye Tasarımları: Rölyef Duvar Panelleri | Studio Luminant",
            "idx_meta": "Studio Luminant'ın çizdiği rölyef duvar tasarımları. Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin; Lumina PMAG™ ile Sapanca'da dökülür.",
            "idx_h1": "Bizim çizdiğimiz <em>rölyefler.</em>",
@@ -93,13 +104,24 @@ UI = {
            "faq_lead_q": "What is the lead time for {name}, and how is it fixed?",
            "faq_lead_a": "Lead time is 4 weeks after contract and advance for orders up to 50 m²; for larger orders the quote sets the date. Delivery is ex-works Sapanca (EXW). Pieces are hand-cast in Lumina PMAG™ — Polymer Modified Composite Gypsum and fixed to the wall with a polymer adhesive, or with a rail system on metal stud and plasterboard walls. Pieces that wrap a column, turn a corner or follow a curved wall are cast as Bespoke, in the same motif.",
            "obj_cap": "Render: single panel, raking light", "strip_cap": "Render: wall strip",
-           "close_h": "Close up", "drawing_h": "The drawing", "room_h": "In a room", "more": "View →", "moulds_h": "The moulds",
+           "close_h": "Close up", "drawing_h": "The drawing", "room_h": "In a room", "moulds_h": "The moulds",
            "moulds_p": "The wall is laid from pieces cast in these moulds; the letters match the lay in the drawing, and the plain piece carries no relief.",
            "mould_alt": "Render: {name}, mould {letter}", "plain": "Plain", "plain_alt": "Render: {name}, plain piece",
            "close_p": "The same wall, close up: the depth of the relief.",
            "drawing_p": "The design’s moulds and how they are laid on the wall. The mould is made for your order, and you approve the master before anything is cast.",
            "door": "To see how this design would sit on your wall, send the wall dimensions.",
            "own": "Starting from your own drawing:", "prev": "Previous design", "next": "Next design",
+           "tray_lede": "Side by side, you can see which design sharpens under which light and which one goes flat.",
+           "tray_hint": ("Drag the dot, or pick a light.", "Move your mouse over the designs, or pick a light.", "Pick a light."),
+           "tray_pad": "Direction and height of the light", "tray_lights_label": "Set lights",
+           "tray_from": {"left": "from the left", "upleft": "from upper left", "up": "from above", "upright": "from upper right", "right": "from the right"},
+           "tray_lights": {"ceiling": "Ceiling wash", "window": "Side window", "front": "Set-back spot"},
+           "tray_alt": "{name}: a 600 × 600 mm area of the relief",
+           "tray_note_h2": "Calculated light, not photographs",
+           "tray_note": ("Each square shows the same 600 × 600 mm of surface, at one scale. Your browser works the image out live from the design’s own height data, so the shadows redraw as the light moves. The figure beside a name is the relief depth.",
+                         "Try the set-back spot, which strikes the wall at 55°: Mezzavoce drops to a third of its contrast while Andante holds. Fugato wants its light from the side: a ceiling wash leaves it quiet, a side window brings it up.",
+                         "The calculation assumes one matte tone. An artisan finish and the other light sources in a room will change what you see."),
+           "tray_list_h2": "The designs",
            "idx_title": "Studio Designs: Relief Wall Panels | Studio Luminant",
            "idx_meta": "Relief wall designs drawn by Studio Luminant. See each one on its own page, on the wall and in its drawing; cast in Lumina PMAG™ in Sapanca, Turkey.",
            "idx_h1": "Relief we have <em>drawn.</em>",
@@ -829,45 +851,43 @@ def relief_share_page(d, lang, figs):
     return share_shell(d, lang, f"assets/relief/{d['asset']}/og.jpg", body, scripts)
 
 
-EAGER_CARDS = 3  # the index's first row at desktop width: not lazy, the first one is the LCP image
+TRAY_EAGER = 6  # the first screen on a phone and on a laptop: not lazy, the first one is the LCP image
 
 
-def card_image(d, lang, pos):
-    pre = "" if lang == "tr" else "../"
-    if d["kind"] == "relief":
-        f = f"assets/relief/{d['asset']}/object.webp"
-        alt = d[lang]["object_alt"]
-    else:
-        f = f"assets/designs/{d['asset']}/wall.webp"
-        alt = d[lang]["wall_alt"]
-    w, h = Image.open(SITE / f).size
-    z = d.get("card_zoom")  # optional per-card crop-in that trims dark corners of a rotated source photo
-    style = f' style="--z:{z[0]};transform-origin:{z[1]}"' if z else ""
-    load = 'loading="lazy"' if pos >= EAGER_CARDS else ('fetchpriority="high"' if pos == 0 else 'loading="eager"')
-    return f'<img src="{pre}{f}" width="{w}" height="{h}" {load}{style} alt="{esc(alt)}">'
+def tray_cell(d, lang, pos):
+    u, c, pre = UI[lang], d[lang], "" if lang == "tr" else "../"
+    page = u["page"].format(slug=d["slug"])
+    stem = f"{pre}assets/relief-tray/{d['slug']}/poster-ceiling-"
+    load = 'loading="lazy"' if pos >= TRAY_EAGER else ('fetchpriority="high"' if pos == 0 else 'loading="eager"')
+    depth = re.match(r"\d+ mm", c.get("depth", ""))
+    depth_html = f'<span class="tray-depth">{depth.group(0)}</span>' if depth else ""
+    return f'''    <li class="tray-cell" data-slug="{d['slug']}">
+      <a class="tray-sample" href="{page}" tabindex="-1" draggable="false">
+        <span class="tray-shadow" aria-hidden="true"></span>
+        <img class="tray-poster" src="{stem}560.webp" srcset="{stem}560.webp 560w, {stem}840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 640px) 31vw, 47vw" width="840" height="840" {load} draggable="false" alt="{esc(u['tray_alt'].format(name=c['name']))}">
+      </a>
+      <div class="tray-label"><a class="tray-name" href="{page}">{esc(c['name'])}</a>{depth_html}</div>
+    </li>'''
 
 
-def wide_cards(n):
-    """Positions of the index cards that sit two to a row. The grid lays rows of three and rows of two, alternating from a
-    row of three, so no count above one leaves a lone card (13 = 3 + 2 + 3 + 2 + 3)."""
-    fits = [(a, b) for b in range(n // 2 + 1) for a in [(n - 2 * b) // 3] if 3 * a + 2 * b == n]
-    if not fits:
-        return set()
-    a, b = min(fits, key=lambda ab: abs(ab[0] - ab[1] - 0.5))
-    rows = []
-    while a or b:
-        if a:
-            rows.append(3)
-            a -= 1
-        if b:
-            rows.append(2)
-            b -= 1
-    wide, pos = set(), 0
-    for size in rows:
-        if size == 2:
-            wide |= {pos, pos + 1}
-        pos += size
-    return wide
+def tray_dock(u):
+    froms = " ".join(f'data-from-{k}="{v}"' for k, v in u["tray_from"].items())
+    rings = "".join(f'<path class="tray-pad__ring" d="M{100 - r} 104 A{r} {r} 0 0 1 {100 + r} 104"/>' for r in (34, 67))
+    lights = "\n".join(f'        <li><button type="button" data-light="{k}" aria-pressed="{str(k == "ceiling").lower()}">{v}</button></li>'
+                       for k, v in u["tray_lights"].items())
+    touch, mouse, still = u["tray_hint"]
+    return f'''    <div class="tray-dock">
+      <p class="tray-hint"><span class="tray-hint__touch">{touch}</span><span class="tray-hint__mouse">{mouse}</span><span class="tray-hint__still">{still}</span></p>
+      <svg class="tray-pad" viewBox="-8 -8 216 120" role="slider" tabindex="0" aria-label="{u['tray_pad']}" aria-valuemin="0" aria-valuemax="180" aria-valuenow="90" aria-valuetext="{u['tray_from']['up']}, 12°" {froms}>
+        <path class="tray-pad__sky" d="M0 104 A100 100 0 0 1 200 104 Z"/>
+        {rings}
+        <line class="tray-pad__ray" x1="100" y1="104" x2="100" y2="24"/>
+        <g class="tray-pad__dot" transform="translate(100 24)"><circle r="15"/><circle r="6.5"/></g>
+      </svg>
+      <ul class="tray-lights" aria-label="{u['tray_lights_label']}">
+{lights}
+      </ul>
+    </div>'''
 
 
 def index_page(data, lang):
@@ -876,29 +896,50 @@ def index_page(data, lang):
     tr_url, en_url = "tasarimlar.htm", "en/designs.htm"
     url = tr_url if lang == "tr" else en_url
     twin = f"{pre}{en_url}" if lang == "tr" else f"../{tr_url}"
-    cards, wide = [], wide_cards(len(data["designs"]))
-    for pos, d in enumerate(data["designs"]):
+    cells = [tray_cell(d, lang, pos) for pos, d in enumerate(data["designs"])]
+    rows = []
+    for d in data["designs"]:
         c = d[lang]
         line = c["story"] if d["kind"] == "study" else first_sentence(c["lede"])
-        cards.append(f'''    <a class="dsg-card{' dsg-card--wide' if pos in wide else ''} reveal" href="{u['page'].format(slug=d['slug'])}">
-      <span class="dsg-card__img">{card_image(d, lang, pos)}</span>
-      <span class="dsg-card__name">{esc(c['name'])}</span>
-      <span class="dsg-card__line">{nb(txt(line))}</span>
-      <span class="dsg-card__more">{u['more']}</span>
-    </a>''')
+        rows.append(f'''    <li><a href="{u['page'].format(slug=d['slug'])}"><span class="tray-list__name">{esc(c['name'])}</span><span class="tray-list__line">{nb(txt(line))}</span></a></li>''')
     first = data["designs"][0]
     og = (f"assets/designs/{first['asset']}/wall.webp" if first["kind"] == "study"
           else f"assets/relief/{first['asset']}/poster-1680.jpg")
-    return (head(lang, u["idx_title"], u["idx_meta"], url, tr_url, en_url, og, "", crumbs_for(lang, None, url))
-            + nav(lang, twin) + f"""<section class="dsg-index-head">
-  <div class="eyebrow">{u['lib']}</div>
-  <h1 class="dsg-index__title">{u['idx_h1']}</h1>
-  <p class="dsg-index__lede">{u['idx_lede']}</p>
-  <p class="dsg-index__lede">{u['idx_rooms']}</p>
+    note = "\n".join(f"  <p>{p}</p>" for p in u["tray_note"])
+    page_head = head(lang, u["idx_title"], u["idx_meta"], url, tr_url, en_url, og, "", crumbs_for(lang, None, url))
+    page_head = (page_head.replace("</head>", f'<link rel="stylesheet" href="{pre}relight-tray.css">\n</head>', 1)
+                 .replace("<body>", '<body class="tray-page">', 1))
+    return (page_head + nav(lang, twin) + f"""<section class="tray" data-tray="{pre}assets/relief-tray/" aria-label="{u['lib']}">
+  <div class="tray-head">
+    <div class="eyebrow">{u['lib']}</div>
+    <h1>{u['idx_h1']}</h1>
+    <p>{u['tray_lede']}</p>
+  </div>
+  <ul class="tray-grid">
+{chr(10).join(cells)}
+    <li class="tray-door">
+      <p>{u['idx_door']}</p>
+      <a href="{u['contact']}" class="sys-link">{u['idx_door_link']}</a>
+    </li>
+  </ul>
+  <div class="tray-side">
+    <div class="tray-scale"><i></i>200 mm</div>
+{tray_dock(u)}
+  </div>
 </section>
 
-<section class="dsg-grid" aria-label="{u['lib']}">
-{chr(10).join(cards)}
+<section class="tray-note">
+  <h2>{u['tray_note_h2']}</h2>
+{note}
+</section>
+
+<section class="tray-list" aria-labelledby="tray-list-h">
+  <h2 id="tray-list-h">{u['tray_list_h2']}</h2>
+  <p>{u['idx_lede']}</p>
+  <p>{u['idx_rooms']}</p>
+  <ul>
+{chr(10).join(rows)}
+  </ul>
 </section>
 
 <section class="sys-door" id="sys-door">
@@ -910,7 +951,7 @@ def index_page(data, lang):
     </div>
   </div>
 </section>
-""" + tail(lang))
+""" + tail(lang, f'<script src="{pre}relight-tray.js" defer></script>\n'))
 
 
 def old_page(*paths):

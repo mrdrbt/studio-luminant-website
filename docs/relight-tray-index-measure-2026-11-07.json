@@ -1,0 +1,736 @@
+{
+ "url": "http://localhost:3117/en/designs.htm",
+ "rtx": {
+  "phone": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 508,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/accelerando/poster-ceiling-560.webp",
+    "cls": 0,
+    "longTasks": [
+     51,
+     325
+    ]
+   },
+   "bench": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Laptop GPU (0x000028A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     390,
+     844
+    ],
+    "devicePixelRatio": 3,
+    "lod": "s",
+    "sampleCssPx": 174,
+    "governorLevel": 0,
+    "governorGpuMs": null,
+    "readyMs": 607,
+    "textureMB": 27.9,
+    "bytes": {
+     "posters": 439300,
+     "textures": 1099378,
+     "manifest": 7119,
+     "script": 43188,
+     "chrome": 269048
+    },
+    "runs": [
+     {
+      "work": "idle",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "layers",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 0.5
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 16,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 60.1,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 0.3
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 1.5,
+      "stepsCap": 16,
+      "canvas": [
+       537,
+       1902
+      ],
+      "shadedPx": 544968,
+      "fps": 60.1,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 1.3
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 1,
+      "stepsCap": 16,
+      "canvas": [
+       358,
+       1268
+      ],
+      "shadedPx": 242208,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 0.3
+     }
+    ]
+   }
+  },
+  "governor_phone": {
+   "level": 0,
+   "dpr": 2,
+   "canvas": [
+    716,
+    2536
+   ],
+   "fps": 58.9
+  },
+  "laptop": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 136,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/accelerando/poster-ceiling-840.webp",
+    "cls": 2.9812885802469134e-05,
+    "longTasks": []
+   },
+   "bench": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Laptop GPU (0x000028A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     1440,
+     900
+    ],
+    "devicePixelRatio": 1.5,
+    "lod": "s",
+    "sampleCssPx": 332,
+    "governorLevel": 0,
+    "governorGpuMs": null,
+    "readyMs": 239,
+    "textureMB": 27.9,
+    "bytes": {
+     "posters": 838398,
+     "textures": 1099378,
+     "manifest": 7119,
+     "script": 43188,
+     "chrome": 269048
+    },
+    "runs": [
+     {
+      "work": "idle",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "layers",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "full",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 0.6
+     },
+     {
+      "work": "full",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 16,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 2.6
+     },
+     {
+      "work": "full",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 16,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 2.3
+     },
+     {
+      "work": "full",
+      "designs": 9,
+      "dpr": 1,
+      "stepsCap": 16,
+      "canvas": [
+       1032,
+       1648
+      ],
+      "shadedPx": 992016,
+      "fps": 60.3,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 1.8
+     }
+    ]
+   }
+  }
+ },
+ "load_phone_slow4g": {
+  "vitals": {
+   "lcp": 1644,
+   "lcpEl": "http://localhost:3117/assets/relief-tray/accelerando/poster-ceiling-560.webp",
+   "cls": 0,
+   "longTasks": []
+  },
+  "readyMs": 7230,
+  "bytes": {
+   "posters": 441951,
+   "textures": 652322,
+   "tray_code": 50885,
+   "site_chrome": 291429
+  },
+  "requests": 47
+ },
+ "uhd": {
+  "phone": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 292,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/accelerando/poster-ceiling-560.webp",
+    "cls": 0,
+    "longTasks": [
+     61,
+     152
+    ]
+   },
+   "bench": {
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     390,
+     844
+    ],
+    "devicePixelRatio": 3,
+    "lod": "s",
+    "sampleCssPx": 174,
+    "governorLevel": 0,
+    "governorGpuMs": null,
+    "readyMs": 379,
+    "textureMB": 27.9,
+    "bytes": {
+     "posters": 439300,
+     "textures": 1099378,
+     "manifest": 7119,
+     "script": 43188,
+     "chrome": 269048
+    },
+    "runs": [
+     {
+      "work": "idle",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "layers",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 5.3
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 16,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 60.3,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 3.9
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 1.5,
+      "stepsCap": 16,
+      "canvas": [
+       537,
+       1902
+      ],
+      "shadedPx": 544968,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 2.5
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 1,
+      "stepsCap": 16,
+      "canvas": [
+       358,
+       1268
+      ],
+      "shadedPx": 242208,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 1.4
+     }
+    ]
+   }
+  },
+  "governor_phone": {
+   "level": 0,
+   "dpr": 2,
+   "canvas": [
+    716,
+    2536
+   ],
+   "fps": 59.1
+  },
+  "laptop": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 128,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/accelerando/poster-ceiling-840.webp",
+    "cls": 2.9812885802469134e-05,
+    "longTasks": []
+   },
+   "bench": {
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     1440,
+     900
+    ],
+    "devicePixelRatio": 1.5,
+    "lod": "s",
+    "sampleCssPx": 332,
+    "governorLevel": 0,
+    "governorGpuMs": null,
+    "readyMs": 221,
+    "textureMB": 27.9,
+    "bytes": {
+     "posters": 838398,
+     "textures": 1099378,
+     "manifest": 7119,
+     "script": 43188,
+     "chrome": 269048
+    },
+    "runs": [
+     {
+      "work": "idle",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "layers",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "full",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 7.2
+     },
+     {
+      "work": "full",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 16,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 5.2
+     },
+     {
+      "work": "full",
+      "designs": 9,
+      "dpr": 1.5,
+      "stepsCap": 16,
+      "canvas": [
+       1548,
+       2472
+      ],
+      "shadedPx": 2232036,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 5.3
+     },
+     {
+      "work": "full",
+      "designs": 9,
+      "dpr": 1,
+      "stepsCap": 16,
+      "canvas": [
+       1032,
+       1648
+      ],
+      "shadedPx": 992016,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 4.7
+     }
+    ]
+   }
+  }
+ },
+ "software": {
+  "phone": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 612,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/accelerando/poster-ceiling-560.webp",
+    "cls": 0,
+    "longTasks": [
+     58,
+     373
+    ]
+   },
+   "bench": {
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     390,
+     844
+    ],
+    "devicePixelRatio": 3,
+    "lod": "s",
+    "sampleCssPx": 174,
+    "governorLevel": 0,
+    "governorGpuMs": null,
+    "readyMs": 782,
+    "textureMB": 27.9,
+    "bytes": {
+     "posters": 439300,
+     "textures": 1099378,
+     "manifest": 7119,
+     "script": 43188,
+     "chrome": 269048
+    },
+    "runs": [
+     {
+      "work": "idle",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 139.5,
+      "p50ms": 6.9,
+      "p95ms": 7,
+      "slowFramePct": 0.4,
+      "frames": 838,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "layers",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 140.3,
+      "p50ms": 7,
+      "p95ms": 7.3,
+      "slowFramePct": 0.1,
+      "frames": 842,
+      "gpuFrameMs": null
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 11.8,
+      "p50ms": 83.3,
+      "p95ms": 117.6,
+      "slowFramePct": 97.2,
+      "frames": 71,
+      "gpuFrameMs": 69.8
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 2,
+      "stepsCap": 16,
+      "canvas": [
+       716,
+       2536
+      ],
+      "shadedPx": 968832,
+      "fps": 17.3,
+      "p50ms": 55.6,
+      "p95ms": 83.7,
+      "slowFramePct": 98.1,
+      "frames": 104,
+      "gpuFrameMs": 51.1
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 1.5,
+      "stepsCap": 16,
+      "canvas": [
+       537,
+       1902
+      ],
+      "shadedPx": 544968,
+      "fps": 30.5,
+      "p50ms": 34.7,
+      "p95ms": 41.7,
+      "slowFramePct": 98.4,
+      "frames": 183,
+      "gpuFrameMs": 30
+     },
+     {
+      "work": "full",
+      "designs": 8,
+      "dpr": 1,
+      "stepsCap": 16,
+      "canvas": [
+       358,
+       1268
+      ],
+      "shadedPx": 242208,
+      "fps": 58.8,
+      "p50ms": 14,
+      "p95ms": 20.9,
+      "slowFramePct": 0.6,
+      "frames": 353,
+      "gpuFrameMs": 14.8
+     }
+    ]
+   }
+  },
+  "governor_phone": {
+   "level": 2,
+   "dpr": 1.5,
+   "canvas": [
+    537,
+    1902
+   ],
+   "fps": 52.3
+  }
+ }
+}

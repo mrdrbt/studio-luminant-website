@@ -2,8 +2,10 @@
  *
  * Markup: a [data-tray] root holding .tray-grid > .tray-cell[data-slug] > .tray-sample > img.tray-poster, plus the
  * .tray-shadow behind it, the .tray-pad dome control and [data-light] buttons. The posters are the first paint and
- * the fallback; one canvas fades in over them and shades every sample in one pass, one viewport per sample, so six
- * designs cost one context and one shader compile. Textures, posters and manifest come from tools/tray_bake.py.
+ * the fallback; one canvas over them shades the on-screen samples in one pass, one viewport per sample, so the whole
+ * range costs one context and one shader compile. A sample's textures load as its row comes near the screen. The canvas
+ * sits in the page, covers the screen plus a row each way and moves a whole row at a time, so scrolling never lags it.
+ * Textures, posters and manifest come from tools/tray_bake.py.
  *
  * The light is one direction for every sample, never a point at the cursor: a point would give each design a
  * different light, and a comparison needs the same one. It comes from above or the sides only, as in relief-light.js:
@@ -30,6 +32,7 @@
     gpuBudgetMs: 14                 // ...and a frame costing more than this drops a quality level
   };
   var LIVE_AFTER_MS = 700;   // the canvas has faded in: the posters under it can stop being composited
+  var BENCH_SETTLE_MS = 800; // after the jump to where the load peaks, for the page to stop moving
   var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var FINE = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var DPR_CAP = FINE ? 1.5 : 2;
@@ -159,6 +162,7 @@
     var base = root.getAttribute('data-tray');
     var grid = root.querySelector('.tray-grid');
     var pad = root.querySelector('.tray-pad');
+    var dock = root.querySelector('.tray-dock');
     var dot = pad.querySelector('.tray-pad__dot');
     var ray = pad.querySelector('.tray-pad__ray');
     var buttons = [].slice.call(root.querySelectorAll('[data-light]'));
@@ -167,7 +171,8 @@
         slug: el.getAttribute('data-slug'),
         sample: el.querySelector('.tray-sample'),
         poster: el.querySelector('.tray-poster'),
-        shadow: el.querySelector('.tray-shadow')
+        shadow: el.querySelector('.tray-shadow'),
+        el: el, visible: false, loaded: false, pending: null, live: false
       };
     });
     var state = {
@@ -176,10 +181,19 @@
     root.relightTray = state;
 
     var M, gl, canvas, prog, drawn = { az: NaN, el: NaN }, running = false, visible = true, dirty = true, lastT = 0;
-    var sweep = null, touched = false, benching = false, active = cells, acc = 0, accN = 0, stepsCap = QUALITY[0].steps;
+    var sweep = null, touched = false, benching = false, limit = Infinity, acc = 0, accN = 0, stepsCap = QUALITY[0].steps;
+    var canvasTop = 0, canvasHeight = 0, rowPitch = 1, dpr = 1, shadowTransform = '', faded = false;
     var qualitySettled = false;
     var dprNow = QUALITY[0].dpr, L = { az: 90, el: 12, vAz: 0, vEl: 0, tAz: 90, tEl: 12 }, manual = false, sampleCss = 0;
     state.light = L;
+
+    // On a first visit the consent banner covers the bottom of the screen, which is where a phone keeps the dock.
+    function standClearOfConsent() {
+      var banner = document.getElementById('sl-consent');
+      root.style.setProperty('--consent-h', banner ? banner.offsetHeight + 'px' : '0px');
+    }
+    standClearOfConsent();
+    new MutationObserver(standClearOfConsent).observe(document.body, { childList: true });
 
     /* ── the light ── */
     function aimAt(nx, ny) {
@@ -213,32 +227,66 @@
     function drawShadows() {
       var az = L.az * DEG, mm = CFG.standOffMm / Math.tan(L.el * DEG);
       var px = (sampleCss || cells[0].sample.getBoundingClientRect().width) / M.windowMm * mm;
-      var tf = 'translate3d(' + (-Math.cos(az) * px).toFixed(2) + 'px,' + (Math.sin(az) * px).toFixed(2) + 'px,0)';
-      cells.forEach(function (c) { c.shadow.style.transform = tf; });
+      shadowTransform = 'translate3d(' + (-Math.cos(az) * px).toFixed(2) + 'px,' + (Math.sin(az) * px).toFixed(2) + 'px,0)';
+      cells.forEach(function (c) { if (c.visible || state.mode !== 'live') c.shadow.style.transform = shadowTransform; });
     }
 
     /* ── drawing ── */
     function layout() {
       var g = grid.getBoundingClientRect();
-      var dpr = Math.min(window.devicePixelRatio || 1, dprNow);
-      var w = Math.max(1, Math.round(g.width * dpr)), h = Math.max(1, Math.round(g.height * dpr));
-      if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+      dpr = Math.min(window.devicePixelRatio || 1, dprNow);
       cells.forEach(function (c) {
         var r = c.sample.getBoundingClientRect();
         c.w = Math.round(r.width * dpr);
         c.h = Math.round(r.height * dpr);
         c.x = Math.round((r.left - g.left) * dpr);
-        c.y = h - Math.round((r.bottom - g.top) * dpr);
+        c.top = Math.round((r.top - g.top) * dpr);
+        c.topCss = r.top - g.top;
       });
+      var rows = cells.map(function (c) { return c.topCss; }).filter(function (t, i, all) { return all.indexOf(t) === i; });
+      rowPitch = rows.length > 1 ? rows[1] - rows[0] : g.height;
+      canvasHeight = Math.min(g.height, window.innerHeight + 2 * rowPitch);
+      var w = Math.max(1, Math.round(g.width * dpr)), h = Math.max(1, Math.round(canvasHeight * dpr));
+      if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+      canvas.style.height = canvasHeight + 'px';
       sampleCss = cells[0].sample.getBoundingClientRect().width;
       state.canvas = [w, h];
       state.dpr = dpr;
+      canvasTop = -1;
+      placeCanvas();
+      updateVisible();
       dirty = true;
+    }
+    // Whole rows only, so a sample's place in the canvas stays put between moves.
+    function placeCanvas() {
+      var g = grid.getBoundingClientRect();
+      var want = Math.floor(Math.max(0, -g.top) / rowPitch - 1) * rowPitch;
+      want = Math.max(0, Math.min(g.height - canvasHeight, want));
+      if (want === canvasTop) return false;
+      canvasTop = want;
+      canvas.style.transform = 'translateY(' + want + 'px)';
+      return true;
+    }
+    // What a viewer can see of the grid: the screen, less the opaque nav above and, on a phone, the dock below.
+    // Asked on every scroll, so a row is shaded in the frame it enters, with no poster at the old light first.
+    function updateVisible() {
+      var g = grid.getBoundingClientRect(), d = dock.getBoundingClientRect(), nav = document.querySelector('nav');
+      var top = nav ? Math.max(0, nav.getBoundingClientRect().bottom) : 0;
+      var bottom = d.left < g.right && d.right > g.left ? Math.min(window.innerHeight, d.top) : window.innerHeight;
+      var changed = false;
+      cells.forEach(function (c) {
+        var y = g.top + c.topCss, on = y < bottom && y + sampleCss > top;
+        if (on === c.visible) return;
+        c.visible = on;
+        changed = true;
+        if (on) c.shadow.style.transform = shadowTransform;
+      });
+      return changed;
     }
     function drawCell(c, U) {
       var D = c.data, tanEl = Math.tan(L.el * DEG);
       var steps = Math.ceil(D.reliefMm / tanEl * c.heightPxPerMm * CFG.stepsPerTexel);
-      gl.viewport(c.x, c.y, c.w, c.h);
+      gl.viewport(c.x, canvas.height - (c.top - Math.round(canvasTop * dpr)) - c.h, c.w, c.h);
       gl.activeTexture(gl.TEXTURE0);
       gl.bindTexture(gl.TEXTURE_2D, c.texN);
       gl.activeTexture(gl.TEXTURE1);
@@ -259,7 +307,13 @@
       gl.uniform3f(U.uL, ce * Math.cos(az), ce * Math.sin(az), Math.sin(elv));
       gl.uniform1f(U.uTanEl, Math.tan(elv));
       gl.uniform1f(U.uExposure, S.flatLevel / (S.ambient + Math.sin(elv)));
-      active.forEach(function (c) { drawCell(c, U); });
+      var shaded = 0;
+      cells.forEach(function (c) {
+        var draws = c.visible && c.loaded && shaded < limit;
+        if (draws) { drawCell(c, U); shaded++; }
+        var live = draws && faded;
+        if (live !== c.live) { c.live = live; c.el.classList.toggle('is-live', live); }   // its poster can stop compositing
+      });
       drawn.az = L.az; drawn.el = L.el; dirty = false; state.frames++;
       drawPad();
       drawShadows();
@@ -343,7 +397,8 @@
     /* ── input ── */
     function aimFromGrid(e) {
       var r = grid.getBoundingClientRect();
-      aimAt((e.clientX - r.left - r.width / 2) / (r.width / 2), (r.bottom - e.clientY) / r.height);
+      var top = Math.max(r.top, 0), bottom = Math.min(r.bottom, window.innerHeight);   // the part of the tray on screen
+      aimAt((e.clientX - r.left - r.width / 2) / (r.width / 2), (bottom - e.clientY) / Math.max(1, bottom - top));
     }
     function aimFromPad(e) {
       // viewBox -8 -8 216 120: the dome's base sits 8 units above the bottom, its radius is 100
@@ -353,12 +408,6 @@
     function bindLive() {
       grid.addEventListener('pointermove', function (e) {
         if (benching) return;
-        markManual();
-        aimFromGrid(e);
-        wake();
-      }, { passive: true });
-      grid.addEventListener('pointerup', function (e) {
-        if (e.pointerType === 'mouse' || benching) return;
         markManual();
         aimFromGrid(e);
         wake();
@@ -387,6 +436,10 @@
         visible = entries[0].isIntersecting && !document.hidden;
         wake();
       }).observe(grid);
+      window.addEventListener('scroll', function () {
+        var moved = placeCanvas(), exposed = updateVisible();
+        if (moved || exposed) { dirty = true; wake(); }
+      }, { passive: true });
       document.addEventListener('visibilitychange', function () {
         if (document.hidden) { visible = false; return; }
         var r = grid.getBoundingClientRect();
@@ -426,20 +479,36 @@
       return need <= M.lodPxPerMm.s * 1.15 ? 's' : 'l';
     }
     function loadCell(c) {
+      if (c.pending) return c.pending;
       c.data = M.designs[c.slug];
       var f = c.data.lods[state.lod];
       c.heightPxPerMm = f.heightPxPerMm;
-      return Promise.all([loadImage(base + c.slug + '/' + f.normal), loadImage(base + c.slug + '/' + f.height)])
+      c.pending = Promise.all([loadImage(base + c.slug + '/' + f.normal), loadImage(base + c.slug + '/' + f.height)])
         .then(function (imgs) {
           gl.activeTexture(gl.TEXTURE0);
           c.texN = makeTexture(gl, imgs[0], false, c.data.wrap);
           c.texH = makeTexture(gl, imgs[1], true, c.data.wrap);
           state.textureBytes += imgs[0].naturalWidth * imgs[0].naturalHeight * 4 * 4 / 3 + imgs[1].naturalWidth * imgs[1].naturalHeight;
+          c.loaded = true;
+          dirty = true;
+          wake();
         });
+      return c.pending;
+    }
+    function watchCells() {
+      var byEl = new Map(cells.map(function (c) { return [c.sample, c]; }));
+      var near = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          near.unobserve(e.target);
+          loadCell(byEl.get(e.target)).catch(function (err) { console.warn(String(err && err.message || err)); });
+        });
+      }, { rootMargin: '25% 0px' });   // a screen's worth reached the whole range on a phone before anyone scrolled
+      cells.forEach(function (c) { near.observe(c.sample); });
     }
     function enterStill(mode) {
       state.mode = mode;
-      root.classList.remove('tray-live');
+      cells.forEach(function (c) { c.live = false; c.el.classList.remove('is-live'); });
       root.classList.add('tray-still');
       pad.removeAttribute('tabindex');
     }
@@ -459,20 +528,25 @@
         canvas.remove();
       });
       state.lod = pickLod();
+      var onFirstScreen = cells.filter(function (c) {
+        var r = c.sample.getBoundingClientRect();
+        return r.bottom > 0 && r.top < window.innerHeight;
+      });
       var compiled = compile(gl);
-      Promise.all(cells.map(loadCell))
+      Promise.all(onFirstScreen.map(loadCell))
         .then(function () { return compiled; })
         .then(function (p) {
           prog = p;
           setStatic();
           layout();
-          draw();
           state.mode = 'live';
+          draw();
           state.ready = true;
           state.readyMs = Math.round(performance.now());
           requestAnimationFrame(function () { canvas.classList.add('is-on'); });
-          setTimeout(function () { if (state.ready) root.classList.add('tray-live'); }, LIVE_AFTER_MS);
+          setTimeout(function () { faded = true; dirty = true; wake(); }, LIVE_AFTER_MS);
           bindLive();
+          watchCells();
           if (!touched) sweep = { t0: performance.now() + 700, az: L.az, el: L.el };
           wake();
           root.dispatchEvent(new CustomEvent('relighttray:ready', { detail: state }));
@@ -498,10 +572,11 @@
     function runBench(cfg, seconds) {
       dprNow = cfg.dpr;
       stepsCap = cfg.steps;
-      active = cells.slice(0, cfg.n);
+      limit = cfg.n || Infinity;
       layout();
       draw();
-      var px = active.reduce(function (sum, c) { return sum + c.w * c.h; }, 0);
+      var px = cells.filter(function (c) { return c.visible && c.loaded; }).slice(0, limit)
+        .reduce(function (sum, c) { return sum + c.w * c.h; }, 0);
       return new Promise(function (resolve) {
         var deltas = [], t0 = performance.now(), last = t0;
         (function frame(now) {
@@ -524,7 +599,7 @@
           var mean = deltas.reduce(function (a, b) { return a + b; }, 0) / Math.max(1, deltas.length);
           var slow = deltas.filter(function (x) { return x > 25; }).length;
           resolve({
-            work: cfg.work || 'full', designs: cfg.n, dpr: cfg.dpr, stepsCap: cfg.steps, canvas: [canvas.width, canvas.height], shadedPx: px,
+            work: cfg.work || 'full', designs: cells.filter(function (c) { return c.visible && c.loaded; }).slice(0, limit).length, dpr: cfg.dpr, stepsCap: cfg.steps, canvas: [canvas.width, canvas.height], shadedPx: px,
             fps: +(1000 / mean).toFixed(1), p50ms: +pctl(d, 0.5).toFixed(1), p95ms: +pctl(d, 0.95).toFixed(1),
             slowFramePct: +(100 * slow / Math.max(1, deltas.length)).toFixed(1), frames: deltas.length,
             gpuFrameMs: sync.length ? +pctl(sync, 0.5).toFixed(2) : null
@@ -547,16 +622,16 @@
     state.bench = function (opts) {
       opts = opts || {};
       if (!state.ready) return Promise.reject(new Error('the tray is not live on this device: ' + state.mode));
-      var seconds = opts.seconds || 4, saved = { dpr: dprNow, steps: stepsCap, active: active };
-      var cap = Math.min(window.devicePixelRatio || 1, DPR_CAP), n = cells.length;
+      var seconds = opts.seconds || 4, saved = { dpr: dprNow, steps: stepsCap };
+      var cap = Math.min(window.devicePixelRatio || 1, DPR_CAP);
       // idle = nothing moves: what the device's own frame loop allows. layers = shadows and dot move, no shading.
       var runs = opts.runs || [
-        { n: n, dpr: cap, steps: 32, work: 'idle' },
-        { n: n, dpr: cap, steps: 32, work: 'layers' },
-        { n: n, dpr: cap, steps: 32 },
-        { n: n, dpr: cap, steps: 16 },
-        { n: n, dpr: Math.min(cap, 1.5), steps: 16 },
-        { n: n, dpr: 1, steps: 16 }
+        { dpr: cap, steps: 32, work: 'idle' },
+        { dpr: cap, steps: 32, work: 'layers' },
+        { dpr: cap, steps: 32 },
+        { dpr: cap, steps: 16 },
+        { dpr: Math.min(cap, 1.5), steps: 16 },
+        { dpr: 1, steps: 16 }
       ];
       benching = true;
       sweep = null;
@@ -566,7 +641,7 @@
       }, Promise.resolve()).then(function () {
         dprNow = saved.dpr;
         stepsCap = saved.steps;
-        active = saved.active;
+        limit = Infinity;
         benching = false;
         layout();
         L.tAz = L.az = M.lights[M.defaultLight].az;
@@ -580,6 +655,14 @@
         };
       });
     };
+    // The load peaks with a row half under the nav: every row below it fits too, so the most samples are shaded at once.
+    state.benchAtPeak = function (opts) {
+      var nav = document.querySelector('nav');
+      window.scrollTo(0, window.scrollY + grid.getBoundingClientRect().top - (nav ? nav.getBoundingClientRect().bottom : 0) + rowPitch * 1.5);
+      return new Promise(function (resolve) { setTimeout(resolve, BENCH_SETTLE_MS); })
+        .then(function () { return Promise.all(cells.filter(function (c) { return c.visible; }).map(loadCell)); })
+        .then(function () { return state.bench(opts); });
+    };
     var benchBtn = root.parentNode.querySelector('[data-tray-bench]');
     if (benchBtn) {
       var benchOut = root.parentNode.querySelector('[data-tray-bench-out]');
@@ -587,8 +670,8 @@
         benchBtn.disabled = true;
         benchOut.hidden = false;
         benchOut.textContent = benchBtn.getAttribute('data-running');
-        window.scrollTo(0, 0);
-        state.bench().then(function (r) { benchOut.textContent = JSON.stringify(r); }, function (err) { benchOut.textContent = String(err.message); })
+        state.benchAtPeak()
+          .then(function (r) { benchOut.textContent = JSON.stringify(r); }, function (err) { benchOut.textContent = String(err.message); })
           .then(function () { benchBtn.disabled = false; });
       });
     }

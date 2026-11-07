@@ -6,26 +6,26 @@
 
 .tray { --s: calc((100cqw - 2 * var(--gut) - var(--gap)) / 2);
   padding: var(--nav) var(--gut) 0; }
-.tray-grid { margin-top: var(--s-3); }
 .tray-side { display: contents; }   /* so the dock sticks to the whole tray, not to a box its own height */
+.tray-head .eyebrow { margin-bottom: var(--s-1); }
 .tray-head h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(32px, 9vw, 40px); line-height: 1.02;
   letter-spacing: -0.01em; margin: 0; color: var(--ink); text-wrap: balance; }
 .tray-head h1 em { font-style: italic; color: var(--accent); }
 .tray-head p { margin: var(--s-2) 0 0; font-size: var(--t-body-sm); line-height: 1.45; color: var(--ink-2); max-width: 44ch; }
 
-.tray-grid { position: relative; list-style: none; margin: 0; padding: 0; display: grid;
+.tray-grid { position: relative; list-style: none; margin: var(--s-4) 0 0; padding: 0; display: grid;
   grid-template-columns: repeat(2, var(--s)); gap: var(--s-2) var(--gap); touch-action: pan-y; }
 .tray-cell { display: block; min-width: 0; }
-.tray-sample { position: relative; width: var(--s); height: var(--s); }
+.tray-sample { display: block; position: relative; width: var(--s); height: var(--s); -webkit-touch-callout: none; -webkit-user-drag: none; }
 .tray-poster { position: relative; z-index: 1; display: block; width: 100%; height: 100%; background: var(--bg-alt); }
 /* A plate standing off the wall, cast on the page. Offset for the default light: 5 mm stand-off at 12° from above. */
 /* box-shadow, not filter: blur(): it rasterises once and the layer only translates, so a phone composites no blur per frame. */
 .tray-shadow { position: absolute; inset: 0; background: rgba(var(--ink-rgb), 0.16); box-shadow: 0 0 calc(var(--s) * 0.035) rgba(var(--ink-rgb), 0.2);
   transform: translate3d(0, calc(var(--s) * 0.039), 0); will-change: transform; }
-.tray-canvas { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; pointer-events: none; opacity: 0;
+.tray-canvas { position: absolute; top: 0; left: 0; z-index: 2; width: 100%; pointer-events: none; opacity: 0;
   transition: opacity var(--dur-3) var(--ease); }
 .tray-canvas.is-on { opacity: 1; }
-.tray-live .tray-poster { visibility: hidden; }
+.tray-cell.is-live .tray-poster { visibility: hidden; }
 .tray-label { position: relative; z-index: 3; display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-2);
   height: var(--label); }
 .tray-name { font-family: var(--font-display); font-size: 19px; line-height: 1.2; color: var(--ink); text-decoration: none;
@@ -34,7 +34,7 @@
 .tray-depth { font-size: 12px; line-height: 1.9; letter-spacing: 0.02em; color: var(--ink-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* The light control docks under the thumb on a phone, clear of the samples being compared. */
-.tray-dock { position: sticky; bottom: 0; z-index: 4; margin: 0 calc(-1 * var(--gut)); padding: var(--s-2) var(--gut) calc(var(--s-2) + env(safe-area-inset-bottom));
+.tray-dock { position: sticky; bottom: var(--consent-h, 0px); z-index: 4; margin: 0 calc(-1 * var(--gut)); padding: var(--s-2) var(--gut) calc(var(--s-2) + env(safe-area-inset-bottom));
   display: grid; grid-template-columns: 1fr 124px; align-items: end; gap: var(--s-2) var(--s-3); background: var(--bg);
   border-top: 1px solid var(--rule-2); visibility: hidden; }
 .tray-js .tray-dock { visibility: visible; }
@@ -69,7 +69,19 @@
 .tray-scale { display: flex; align-items: center; gap: var(--s-2); margin: var(--s-2) 0; font-size: 12px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
 .tray-scale i { display: block; width: calc(var(--s) / 3); height: 5px; border: 1px solid var(--ink-muted); border-top: 0; }
 
-.tray-note { padding: var(--s-7) var(--gut) var(--s-8); max-width: 62ch; }
+/* 13 samples leave the last row short: the door to Bespoke finishes it. */
+.tray-door { display: flex; flex-direction: column; justify-content: center; gap: var(--s-3); padding: var(--s-3) 0; font-size: var(--t-body-sm); line-height: 1.5; color: var(--ink-2); }
+.tray-door p { margin: 0; }
+
+.tray-note { padding: var(--s-7) var(--gut) 0; max-width: 62ch; }
+.tray-list { padding: var(--s-7) var(--gut) var(--s-8); }
+.tray-list h2 { font-family: var(--font-display); font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0 0 var(--s-3); color: var(--ink); }
+.tray-list > p { font-size: var(--t-body); line-height: 1.65; color: var(--ink-2); margin: 0 0 var(--s-4); max-width: 62ch; }
+.tray-list ul { list-style: none; margin: var(--s-5) 0 0; padding: 0; display: grid; column-gap: var(--s-7); }
+.tray-list li a { display: grid; gap: var(--s-1); padding: var(--s-3) 0 var(--s-4); border-top: 1px solid var(--rule-2); color: var(--ink); text-decoration: none; }
+.tray-list__name { font-family: var(--font-display); font-size: 22px; line-height: 1.2; }
+.tray-list__line { font-size: var(--t-body-sm); line-height: 1.5; color: var(--ink-2); }
+.tray-list li a:hover .tray-list__name { color: var(--accent); }
 .tray-note h2 { font-family: var(--font-display); font-weight: 400; font-size: 26px; line-height: 1.15; margin: 0 0 var(--s-3); color: var(--ink); }
 .tray-note p { font-size: var(--t-body); line-height: 1.65; color: var(--ink-2); margin: 0 0 var(--s-4); }
 .tray-note a { color: var(--accent); text-underline-offset: 3px; }
@@ -83,6 +95,8 @@
   .tray { --s: calc((100cqw - 2 * var(--gut) - 2 * var(--gap)) / 3); }
   .tray-page { --gut: 24px; --gap: 14px; }
   .tray-grid { grid-template-columns: repeat(3, var(--s)); row-gap: var(--s-3); }
+  .tray-door { grid-column: span 2; max-width: 48ch; }
+  .tray-list ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 1100px) {
@@ -95,7 +109,7 @@
   .tray-head h1 { font-size: clamp(40px, 3.6vw, 58px); }
   .tray-head p { font-size: var(--t-body); line-height: 1.55; margin-top: var(--s-4); }
   .tray-grid { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; }
-  .tray-side { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; }
+  .tray-side { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; position: sticky; top: var(--nav); }
   .tray-scale { order: 2; }
   .tray-dock { position: static; margin: 0; padding: 0; display: block; border: 0; background: none; }
   .tray-hint { margin-bottom: var(--s-3); }
@@ -105,7 +119,9 @@
   .tray-lights button[aria-pressed="true"] { padding-top: 8px; }
   .tray-scale { margin: var(--s-5) 0 0; }
   .tray-name { font-size: 22px; }
-  .tray-note { padding: var(--s-8) var(--gut) var(--s-9); margin: 0 auto; }
+  .tray-note { padding: var(--s-8) var(--gut) 0; margin: 0 auto; max-width: 1180px; box-sizing: border-box; }
+  .tray-note p { max-width: 62ch; }
+  .tray-list { padding: var(--s-8) var(--gut) var(--s-9); margin: 0 auto; max-width: 1180px; box-sizing: border-box; }
 }
 
 @media (prefers-reduced-motion: reduce) {

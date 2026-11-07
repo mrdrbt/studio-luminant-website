@@ -7,7 +7,7 @@ under that cap. Vsync stays on: with it off, frame rate reads the rAF loop and n
 quality level it settled on. A phone GPU is not one of these, and this script cannot stand in for one: the page's own
 "measure" button does that.
 
-Usage: python tools/tray_measure.py --url http://localhost:3117/en/light-tray.htm --out <file.json>
+Usage: python tools/tray_measure.py --url http://localhost:3117/en/designs.htm --out <file.json>
 Needs Playwright with its Chromium.
 """
 import argparse
@@ -36,6 +36,12 @@ new PerformanceObserver(l => { for (const e of l.getEntries()) __vitals.longTask
 """
 
 
+# A returning visitor: no consent banner, so the phone's dock sits at the screen's edge and the most samples show.
+RETURNING = """
+document.cookie = 'sl_cookie_consent=' + encodeURIComponent(JSON.stringify({v: 1, analytics: false, marketing: false})) + '; path=/';
+"""
+
+
 def live(page, timeout_ms):
     page.wait_for_function("window.RelightTray && (RelightTray.ready || RelightTray.mode === 'still')", timeout=timeout_ms)
     return page.evaluate("RelightTray.mode")
@@ -44,11 +50,11 @@ def live(page, timeout_ms):
 def bench_run(browser, url, ctx_opts, seconds):
     ctx = browser.new_context(**ctx_opts)
     page = ctx.new_page()
-    page.add_init_script(OBSERVE)
+    page.add_init_script(OBSERVE + RETURNING)
     page.goto(url, wait_until="load")
     mode = live(page, 60000)
     vitals = page.evaluate("__vitals")
-    result = page.evaluate(f"RelightTray.bench({{seconds: {seconds}}})") if mode == "live" else None
+    result = page.evaluate(f"RelightTray.benchAtPeak({{seconds: {seconds}}})") if mode == "live" else None
     ctx.close()
     return {"mode": mode, "vitals": vitals, "bench": result}
 
