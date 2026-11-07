@@ -406,6 +406,12 @@
       aimAt((e.clientX - (r.left + r.width / 2)) / R, (r.bottom - r.height * 8 / 120 - e.clientY) / R);
     }
     function bindLive() {
+      // A mouse drag moves the light; only a press and release in one spot opens the design.
+      var downX = 0, downY = 0;
+      grid.addEventListener('pointerdown', function (e) { downX = e.clientX; downY = e.clientY; }, { passive: true });
+      grid.addEventListener('click', function (e) {
+        if (e.detail && Math.hypot(e.clientX - downX, e.clientY - downY) > 8) e.preventDefault();
+      });
       grid.addEventListener('pointermove', function (e) {
         if (benching) return;
         markManual();
