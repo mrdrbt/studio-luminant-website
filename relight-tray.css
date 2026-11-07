@@ -35,7 +35,7 @@
 
 /* The light control docks under the thumb on a phone, clear of the samples being compared. */
 .tray-dock { position: sticky; bottom: 0; z-index: 4; margin: 0 calc(-1 * var(--gut)); padding: var(--s-2) var(--gut) calc(var(--s-2) + env(safe-area-inset-bottom));
-  display: grid; grid-template-columns: 124px 1fr; align-items: end; gap: var(--s-2) var(--s-3); background: var(--bg);
+  display: grid; grid-template-columns: 1fr 124px; align-items: end; gap: var(--s-2) var(--s-3); background: var(--bg);
   border-top: 1px solid var(--rule-2); visibility: hidden; }
 .tray-js .tray-dock { visibility: visible; }
 .tray-hint { grid-column: 1 / -1; margin: 0; font-size: var(--t-body-sm); line-height: 1.3; font-weight: 500; color: var(--ink); }
@@ -46,7 +46,7 @@
 }
 .tray-still .tray-hint__touch, .tray-still .tray-hint__mouse { display: none; }
 .tray-still .tray-hint__still { display: inline; }
-.tray-pad { display: block; width: 100%; height: auto; touch-action: none; cursor: grab; overflow: visible; }
+.tray-pad { grid-column: 2; grid-row: 2; display: block; width: 100%; height: auto; touch-action: none; cursor: grab; overflow: visible; }
 .tray-pad:active { cursor: grabbing; }
 .tray-pad__sky { fill: rgba(var(--ink-rgb), 0.05); stroke: rgba(var(--ink-rgb), 0.42); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
 .tray-pad__ring { fill: none; stroke: rgba(var(--ink-rgb), 0.16); stroke-width: 1; vector-effect: non-scaling-stroke; }
@@ -59,7 +59,7 @@
 .tray-pad:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
 .tray-still .tray-pad { cursor: default; touch-action: auto; pointer-events: none; }
 
-.tray-lights { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-2); margin: 0; padding: 0; list-style: none; }
+.tray-lights { grid-column: 1; grid-row: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-2); margin: 0; padding: 0; list-style: none; }
 .tray-lights button { display: flex; align-items: flex-start; width: 100%; min-height: 48px; padding: 6px 4px 7px; font: inherit; font-size: 13px; line-height: 1.2; text-align: left; color: var(--ink-2);
   background: none; border: 0; border-top: 1px solid var(--rule-3); cursor: pointer;
   transition: color var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease); }
