@@ -74,6 +74,11 @@
 .sys-door__own .sys-link { margin-left: var(--s-2); }
 @media (max-width: 960px) { .sys-read__inner { grid-template-columns: 1fr; } }
 
+/* field heroes: the relief runs behind the nav, so the bar is solid from the start (its links measured 1.1 to 2.6:1 on the relief) */
+@media (min-width: 821px) and (orientation: landscape) {
+  body:has(.sys-hero--field) #mainNav { background: var(--bg); border-color: var(--border); }
+}
+
 /* phones: the relief first and only as tall as it is, so name, lede and the button share the first screen */
 @media (orientation: portrait), (max-width: 820px) {
   .sys-hero, .sys-hero--field { grid-template-columns: 1fr; grid-template-rows: auto auto; height: auto; min-height: 0; max-height: none;
