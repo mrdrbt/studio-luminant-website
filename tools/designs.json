@@ -636,7 +636,7 @@
     "drawing_cap": "Çizim: derinlik haritası",
     "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır.",
     "drawing_alt": "Glissando panelinin derinlik haritası: akan liflerin gri tonlarla çizimi",
-    "use": "Glissando uzun ve yüksek duvarlar için kurgulanmıştır; lifler dikey bir akışla ilerler ve yüksek bir duvar bu akışı tüm boyuyla gösterir. Sayfadaki render'lar tasarımı bir oturma odasında, bir klinikte ve bir spada gösterir. Motifi olmayan, yalnızca ritmi olan bir rölyef olduğu için mekânın arka planında sakin kalır; lifler ancak yalama ışıkta keskinleşir. Bir konutun salonunda böyle bir duvarın nasıl planlandığını [[villa|villa duvar tasarımı]] rehberinde anlattık.",
+    "use": "Glissando uzun ve yüksek duvarlar için kurgulanmıştır; lifler dikey bir akışla ilerler ve yüksek bir duvar bu akışı tüm boyuyla gösterir. Sayfadaki render'lar tasarımı bir oturma odasında, bir klinikte, bir spada ve bir otel lobisinde gösterir. Motifi olmayan, yalnızca ritmi olan bir rölyef olduğu için mekânın arka planında sakin kalır; lifler ancak yalama ışıkta keskinleşir. Bir konutun salonunda böyle bir duvarın nasıl planlandığını [[villa|villa duvar tasarımı]] rehberinde anlattık.",
     "faq": [
      {
       "q": "Glissando panellerinin ölçüsü nedir, nasıl dizilir?",
@@ -683,7 +683,7 @@
     "drawing_cap": "Drawing: depth map",
     "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it.",
     "drawing_alt": "Depth map of the Glissando panel: the drifting fibres drawn in grey tones",
-    "use": "Glissando is laid out for long, tall walls: the fibres run in a vertical flow, and a tall wall shows that flow at its full height. The renders on this page show it in a living room, a clinic and a spa. It is a relief with rhythm and no motif, so it stays quiet in the background of a room, and the fibres sharpen only in raking light.",
+    "use": "Glissando is laid out for long, tall walls: the fibres run in a vertical flow, and a tall wall shows that flow at its full height. The renders on this page show it in a living room, a clinic, a spa and a hotel lobby. It is a relief with rhythm and no motif, so it stays quiet in the background of a room, and the fibres sharpen only in raking light.",
     "faq": [
      {
       "q": "What size are Glissando panels, and how are they laid?",
@@ -731,18 +731,30 @@
       "alt": "Render: Glissando, clinic",
       "cap": "Render: clinic"
      }
+    },
+    {
+     "file": "assets/designs/glissando/room-spa.webp",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/glissando_spa/r2/draws/2026-10-26_x-glissando-spa-w2r2_w24_50mm_gpt_2.png",
+     "tr": {
+      "alt": "Render: Glissando, spa",
+      "cap": "Render: spa"
+     },
+     "en": {
+      "alt": "Render: Glissando, spa",
+      "cap": "Render: spa"
+     }
     }
    ],
    "room": {
-    "file": "assets/designs/glissando/room-spa.webp",
-    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-26_insitu_wave2/glissando_spa/r2/draws/2026-10-26_x-glissando-spa-w2r2_w24_50mm_gpt_2.png",
+    "file": "assets/designs/glissando/room-lobby.webp",
+    "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-07_site-renders_/glissando_lobby/2026-11-07_x-glissando-lobby-sig_wide40yaw12_gpt_1_final.png",
     "tr": {
-     "alt": "Render: Glissando, spa",
-     "cap": "Render: spa"
+     "alt": "Render: Glissando, otel lobisi",
+     "cap": "Render: otel lobisi"
     },
     "en": {
-     "alt": "Render: Glissando, spa",
-     "cap": "Render: spa"
+     "alt": "Render: Glissando, hotel lobby",
+     "cap": "Render: hotel lobby"
     }
    }
   },
