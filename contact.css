@@ -11,7 +11,7 @@
 .ct-title { font-family: var(--font-display); font-weight: 300; font-size: clamp(56px, 6vw, 104px);
   line-height: 0.95; letter-spacing: -0.02em; color: var(--ink); margin: var(--s-4) 0 var(--s-6); }
 .ct-title em { font-style: italic; color: var(--accent); }
-.ct-lede { font-size: var(--t-body); line-height: 1.75; color: var(--ink-2); max-width: 460px; margin: 0 0 var(--s-8); }
+.ct-lede { font-size: var(--t-body); line-height: 1.75; color: var(--ink-2); max-width: 460px; margin: 0 0 var(--s-8); text-wrap: pretty; }
 
 /* studio facts: the System-page spec rows */
 .ct-facts { margin: 0; max-width: 460px; border-top: 1px solid var(--ink); }
@@ -67,13 +67,13 @@
 .ct-submit:disabled { cursor: progress; opacity: 0.75; }
 .ct-note { font-size: var(--t-body-sm); line-height: 1.6; color: var(--ink-muted); margin: 0; }
 .ct-status { font-size: var(--t-body-sm); line-height: 1.6; color: var(--ink); margin: 0;
-  padding: var(--s-3) var(--s-4); border-left: 2px solid var(--accent); background: rgba(var(--ink-rgb), 0.04); }
+  padding: var(--s-3) var(--s-4); border: 1px solid var(--accent); background: rgba(var(--ink-rgb), 0.04); }
 .ct-req { color: var(--accent); }
 .ct-legend { margin: 0; }
 .ct-status:empty { padding: 0; border: 0; background: none; margin: 0; }
 .ct-status:focus-visible { outline: 2px solid var(--focus-color); outline-offset: 2px; }
 .ct-submit[aria-disabled="true"] { cursor: progress; opacity: 0.75; }
-.ct-status.is-error { border-left-color: var(--accent-error); }
+.ct-status.is-error { border-color: var(--accent-error); }
 
 /* sample box: the night band */
 .ct-sample { padding: var(--s-10) var(--pad-x); color-scheme: dark; }

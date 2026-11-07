@@ -121,9 +121,12 @@ function pictureTag(src, alt, sizes, opts) {
   // Everything else is the Bespoke door.
   const pageFile = location.pathname.split('/').pop() || 'index.html';
   const isStudioDoor = /^(tasarimlar|designs|tasarim-(?!dosyasi)|design-)/.test(pageFile);
+  // The Studio door asks for a layout: a design page names its design, as its hero button does, and contact swaps its heading to match.
+  const contactHref = lang === 'tr' ? 'iletisim.htm' : 'contact.htm';
+  const designSlug = (pageFile.match(/^(?:tasarim|design)-(?!dosyasi)([a-z]+)\.htm$/) || [])[1];
   const doorCta = isStudioDoor
-    ? { text: L.ctaStudio, href: lang === 'tr' ? 'iletisim.htm' : 'contact.htm' }
-    : { text: L.ctaBespoke, href: lang === 'tr' ? 'iletisim.htm' : 'contact.htm' };
+    ? { text: L.ctaStudio, href: contactHref + (designSlug ? '?design=' + designSlug : '?ask=layout') }
+    : { text: L.ctaBespoke, href: contactHref };
 
   // ─── NAV ───
   const navLinks = lang === 'tr' ? {
@@ -182,6 +185,7 @@ function pictureTag(src, alt, sizes, opts) {
 
 <div class="nav-mobile-menu" id="mobileMenu" role="navigation" aria-label="${navLinks.mobileLabel}">
 ${mobileItemsHtml}
+  <a href="${doorCta.href}" class="btn-primary nav-mobile-cta">${doorCta.text}</a>
   ${hasTwin ? `<a href="${langUrl}" class="nav-mobile-lang" hreflang="${lang === 'tr' ? 'en' : 'tr'}" lang="${lang === 'tr' ? 'en' : 'tr'}">${navLinks.langLabel}</a>` : ''}
 </div>`;
 
@@ -251,17 +255,6 @@ ${mobileItemsHtml}
     window.addEventListener('scroll', () => {
       mainNav.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
-  }
-
-  // ─── CURSOR HOVER (for injected nav elements) ───
-  if (window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(hover: none)').matches) {
-    const ring = document.getElementById('cursorRing');
-    if (ring) {
-      document.querySelectorAll('#mainNav a, #mainNav button, .nav-mobile-menu a').forEach(el => {
-        el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-        el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-      });
-    }
   }
 
   // ─── FOOTER ───

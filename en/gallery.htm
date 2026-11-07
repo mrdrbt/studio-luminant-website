@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preload" href="../fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../shared.css?v=cd9e272b">
+<link rel="stylesheet" href="../shared.css?v=6b070017">
 
 <style>
   /* ─── GALLERY HERO ──────────────────── */
@@ -33,7 +33,7 @@
     display: flex; align-items: flex-end;
     position: relative;
     overflow: hidden;
-    padding: 140px 60px 80px;
+    padding: 140px var(--edge) 80px;
   }
 
   /* Grid-line pattern overlay */
@@ -91,7 +91,7 @@
 
   .filter-btn {
     font-family: 'Jost', sans-serif;
-    font-size: 10px; letter-spacing: 0.22em;
+    font-size: var(--btn-fs); letter-spacing: var(--btn-ls);
     text-transform: uppercase; font-weight: 400;
     color: var(--text-secondary);
     background: transparent;
@@ -102,9 +102,9 @@
   }
   .filter-btn:hover { color: var(--gold); border-color: var(--gold); }
   .filter-btn.active {
-    background: var(--gold);
-    color: var(--obsidian);
-    border-color: var(--gold);
+    background: var(--cta-bg);
+    color: var(--cta-fg);
+    border-color: var(--cta-bg);
   }
 
   /* Balanced grid: uniform-height rows, captions below the image */
@@ -508,8 +508,8 @@
   </nav>
 </div>
 
-<script src="../shared.js?v=18e9ebf3"></script>
-<script src="../components.js?v=1f502ace"></script>
+<script src="../shared.js?v=3e01377b"></script>
+<script src="../components.js?v=7d3011b6"></script>
 <script>
   // Gallery filter
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -549,6 +549,6 @@
   })();
 </script>
 
-<script src="../consent.js?v=24c8a6ae"></script>
+<script src="../consent.js?v=c65ea30c"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preload" href="fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="shared.css?v=cd9e272b">
+<link rel="stylesheet" href="shared.css?v=6b070017">
 <link rel="preload" as="image" type="image/webp" href="images/studio-luminant-sage-relief-wall-hotel-guestroom-concept.webp">
 
 <style>
@@ -50,8 +50,8 @@
     position: relative; z-index: 2;
     background: var(--bg);
     display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start;
-    width: min(780px, 56%);
-    padding: 160px 60px 100px;
+    width: min(calc(var(--edge) + 720px), 56%);
+    padding: 160px 60px 100px var(--edge);
   }
   .page-hero-eyebrow {
     display: inline-flex; align-items: center; gap: 16px;
@@ -81,14 +81,21 @@
     opacity: 0; animation: fadeUp 0.9s ease 0.7s forwards;
   }
 
+  /* the language link sits on the photo until the bar turns solid: a bone chip beside the button, legible on any photo */
+  @media (min-width: 901px) {
+    #mainNav .nav-right { gap: 12px; }
+    #mainNav .nav-lang { padding: 9px 12px; background: var(--bg); color: var(--ink); transition: background 0.4s ease; }
+    #mainNav.scrolled .nav-lang { background: transparent; }
+  }
+
   /* ─── PRODUCT SECTIONS ──────────────── */
   .product-section { padding: 0 0 100px; }
   .btn-secondary {
     display: inline-flex; align-items: center; gap: 12px;
-    font-family: var(--font-body); font-size: 11px; font-weight: 400;
-    letter-spacing: 0.22em; text-transform: uppercase;
+    font-family: var(--font-body); font-size: var(--btn-fs); font-weight: 400;
+    letter-spacing: var(--btn-ls); text-transform: uppercase;
     color: var(--ink); background: transparent;
-    padding: 13px 31px; border: 1px solid var(--ink); text-decoration: none;
+    padding: calc(var(--btn-py) - 1px) calc(var(--btn-px) - 1px); border: 1px solid var(--ink); text-decoration: none;
     transition: background 0.3s, color 0.3s, gap 0.3s;
   }
   .btn-secondary:hover { background: var(--ink); color: var(--bg); gap: 20px; }
@@ -219,7 +226,7 @@
       <div>
         <div class="eyebrow reveal"><span lang="en"><span translate="no">Lumina PMAG™</span></span></div>
         <h2 class="product-name reveal">
-          Polimer Modifiye<br><em>Kompozit Alçı</em>
+          Polimer Modifiye<br>Kompozit Alçı
         </h2>
         <p class="product-desc reveal">
           <span translate="no">Lumina PMAG™</span>, <span translate="no">Studio Luminant</span>’ın ana malzemesidir — yüksek spesifikasyonlu mimari uygulamalar için formüle edilmiş polimer modifiye kompozit alçı.
@@ -396,8 +403,8 @@
   </nav>
 </div>
 
-<script src="shared.js?v=18e9ebf3"></script>
-<script src="components.js?v=1f502ace"></script>
+<script src="shared.js?v=3e01377b"></script>
+<script src="components.js?v=7d3011b6"></script>
 
 <script src="material-specs.js?v=f644a59b"></script>
 <script>
@@ -427,8 +434,8 @@
 <!-- Malzeme Rehberi Motoru (React) -->
 <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-<script src="material-guide-tr.js?v=e62e2ebf"></script>
+<script src="material-guide-tr.js?v=c6ee0809"></script>
 
-<script src="consent.js?v=24c8a6ae"></script>
+<script src="consent.js?v=c65ea30c"></script>
 </body>
 </html>

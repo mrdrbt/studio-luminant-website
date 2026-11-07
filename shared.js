@@ -66,21 +66,31 @@ document.addEventListener('click', function (e) {
 });
 
 // ─── CURSOR ───
-// Called by components.js after cursor elements are injected
+// Called by components.js after cursor elements are injected.
+// The dot and ring appear only where the pointer holds the light: over a relief-light stage, never
+// over a control. Everywhere else, reading pages included, the OS cursor alone.
 function initCursor() {
   if (!window.matchMedia('(pointer: fine)').matches) return;
   if (window.matchMedia('(hover: none)').matches) return;
   if (window.matchMedia('(pointer: coarse)').matches) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const STAGE = '[data-relief-light]';
+  const CONTROL = 'a, button, input, select, textarea, label, summary, [role="button"]';
+  if (!document.querySelector(STAGE)) return;
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
   if (!dot || !ring) return;
+  const root = document.documentElement;
 
-  let mx = 0, my = 0, rx = 0, ry = 0;
+  let mx = 0, my = 0, rx = 0, ry = 0, live = false;
 
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
-    if (!document.documentElement.classList.contains('cursor-live')) document.documentElement.classList.add('cursor-live');
+    const t = e.target;
+    const on = !!(t.closest && t.closest(STAGE) && !t.closest(CONTROL));
+    if (on && !live) { rx = mx; ry = my; }   // the ring starts at the pointer, it does not fly in
+    if (on !== live) { live = on; root.classList.toggle('cursor-live', on); }
+    if (!on) return;
     dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0) translate(-50%,-50%)';
     if (!running) { running = true; requestAnimationFrame(animateRing); }
   }, { passive: true });
@@ -94,23 +104,18 @@ function initCursor() {
     if (Math.abs(mx - rx) > 0.1 || Math.abs(my - ry) > 0.1) requestAnimationFrame(animateRing);
     else running = false;
   }
-
-  // Hover effect on all interactive elements
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-  });
 }
 
 // ─── SCROLL REVEAL ───
+// Starts before the block enters the screen, with no delay and a fast-start ease: a fast scroll never lands on a blank block.
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      setTimeout(() => { entry.target.classList.add('visible'); }, 100);
+      entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0, rootMargin: '0px 0px 15% 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 

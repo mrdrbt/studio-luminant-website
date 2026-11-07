@@ -3,7 +3,7 @@
 
 /* hero: full-bleed photograph, copy on a bone card bottom-left */
 .case-hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end;
-  padding: 104px var(--pad-x) var(--s-7); box-sizing: border-box; overflow: hidden; }
+  padding: 104px var(--pad-x) var(--s-7) var(--edge); box-sizing: border-box; overflow: hidden; }
 .case-hero picture, .case-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .case-hero__copy { position: relative; z-index: 2; max-width: 560px; background: rgba(var(--bg-rgb), 0.92); padding: var(--s-6); }
 
@@ -27,7 +27,7 @@
 
 /* light series: one camera, a range scrubs the frames */
 .case-light { padding: var(--s-10) var(--pad-x); }
-.case-light__inner { max-width: var(--maxw); margin: 0 auto; }
+.case-light__inner { max-width: var(--content-w); margin: 0 auto; }
 .case-light h2 { font-family: var(--font-display); font-weight: 300; font-size: clamp(32px, 3.2vw, 52px); line-height: 1.05;
   color: var(--ink); margin: 0 0 var(--s-3); }
 .case-light p { font-size: var(--t-body); line-height: 1.75; color: var(--ink-2); margin: 0 0 var(--s-6); max-width: 560px; }

@@ -160,12 +160,12 @@
     '#sl-consent p{flex:1;font-size:13px;line-height:1.6;font-weight:300;margin:0}',
     '#sl-consent a{color:#D4926F;text-decoration:none;border-bottom:1px solid rgba(212,146,111,0.3)}',
     '#sl-consent .sl-c-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}',
-    '#sl-consent button{font-family:inherit;font-size:10px;letter-spacing:0.22em;',
+    '#sl-consent button{font-family:inherit;font-size:var(--btn-fs);letter-spacing:var(--btn-ls);',
     'text-transform:uppercase;padding:11px 0;width:132px;cursor:pointer;transition:border-color .3s,color .3s,background-color .3s;',
     'border:1px solid rgba(212,146,111,0.4);background:transparent;color:#B9B4AC}',
     '#sl-consent button:hover{border-color:#D4926F;color:#D4926F}',
-    '#sl-consent button.sl-c-primary{background:#D4926F;border-color:#D4926F;color:#12100E;font-weight:500}',
-    '#sl-consent button.sl-c-primary:hover{background:#E3AA8A;color:#12100E}',
+    '#sl-consent button.sl-c-primary{background:var(--cta-bg);border-color:var(--cta-bg);color:var(--cta-fg)}',
+    '#sl-consent button.sl-c-primary:hover{background:var(--cta-bg-hover);border-color:var(--cta-bg-hover);color:var(--cta-fg)}',
     '#sl-consent button.sl-c-link{width:auto;border:0;padding:11px 6px;color:#B9B4AC;',
     'text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(212,146,111,0.4)}',
     '#sl-consent button.sl-c-link:hover{color:#D4926F}',
@@ -181,9 +181,8 @@
     '@media(max-width:820px){#sl-consent{padding:8px 16px;max-height:80vh;overflow-y:auto}',
     '#sl-consent .sl-c-bar{flex-direction:column;align-items:stretch;gap:8px}',
     '#sl-consent p{font-size:11px;line-height:1.4;font-weight:400;color:#C9C4BC}',
-    '#sl-consent .sl-c-actions{display:grid;grid-template-columns:auto 1fr 1fr;gap:8px}',
-    '#sl-consent button{width:auto;padding:0 8px;min-height:38px;font-size:10px;letter-spacing:0.16em;font-weight:400}',
-    '#sl-consent button.sl-c-primary{font-weight:400}',
+    '#sl-consent .sl-c-actions{display:grid;grid-template-columns:auto 1fr;gap:8px}',
+    '#sl-consent button{width:auto;padding:0 8px;min-height:38px;letter-spacing:0.16em;font-weight:400}',
     '#sl-consent button.sl-c-link{padding:0 4px}',
     '#sl-consent .sl-c-panel{flex-direction:column;align-items:stretch;gap:12px;margin-top:10px;padding-top:10px}',
     '#sl-consent .sl-c-cats{grid-template-columns:1fr;gap:8px}}',
@@ -215,6 +214,7 @@
 
     el = document.createElement('div');
     el.id = 'sl-consent';
+    el.className = 'night';
     el.setAttribute('role', 'dialog');
     el.setAttribute('aria-label', t.aria);
     el.innerHTML =

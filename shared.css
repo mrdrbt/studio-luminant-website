@@ -38,6 +38,11 @@
   --cta-bg:       #8E4426;
   --cta-bg-hover: #6E3018;
   --cta-fg:       #F6F1E6;
+  /* the button family reads one size, one clay, one off-white */
+  --btn-fs:       11px;
+  --btn-ls:       0.22em;
+  --btn-py:       14px;
+  --btn-px:       32px;
 
   /* ── STATE ACCENTS (darkened for the light ground; all ≥4.5:1 on --bg) ── */
   --accent-error:    #A3402F;
@@ -84,6 +89,9 @@
   --maxw:      1280px;
   --pad-x:     60px;
   --pad-x-sm:  24px;
+  /* the page's one left edge, the content column. --edge holds a %: it resolves where it is used, on a box as wide as the page */
+  --content-w: calc(var(--maxw) - 2 * var(--pad-x));
+  --edge:      max(var(--pad-x), calc((100% - var(--maxw)) / 2 + var(--pad-x)));
 
   /* ── SPACING (8px base) ───────────── */
   --s-1:   4px;
@@ -153,6 +161,7 @@
   --accent-rgb:   212, 146, 111;
   --accent-hover: #E3AA8A;
   --on-accent:    #1D1A16;
+  --cta-bg-hover: #A5532F;   /* on a dark ground the clay lightens on hover */
 }
 .night { background-color: var(--bg); }
 .night, footer, #workshop-filmstrip { color: var(--ink); }
@@ -229,14 +238,12 @@ body {
   position: fixed; top: 0; left: 0;
   pointer-events: none; z-index: var(--z-cursor);
   transform: translate3d(0,0,0) translate(-50%,-50%);
-  transition: width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
   display: none;
 }
-.cursor-ring.hover { width: 56px; height: 56px; opacity: 0.6; }
 
 @media (pointer: fine) and (hover: hover) and (prefers-reduced-motion: no-preference) {
   .cursor-dot, .cursor-ring { display: block; }
-  /* parked at 0,0 until the first mousemove: no half-cut ring in the corner */
+  /* shown only while shared.js sets cursor-live: over a relief-light stage, never over a control */
   html:not(.cursor-live) .cursor-dot, html:not(.cursor-live) .cursor-ring { visibility: hidden; }
 }
 @media (hover: none), (pointer: coarse) {
@@ -261,7 +268,7 @@ body::before {
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-nav);
   display: flex; align-items: center; justify-content: space-between;
-  padding: 28px 60px;
+  padding: 28px var(--edge);
   border-bottom: 1px solid transparent;
   transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
 }
@@ -269,7 +276,7 @@ nav.scrolled {
   background: var(--bg);   /* opaque: a translucent bar showed blurred page text through it */
   backdrop-filter: blur(12px);
   border-color: var(--border);
-  padding: 18px 60px;
+  padding: 18px var(--edge);
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
 .nav-logo-img { height: 25px; width: auto; display: block; transition: opacity 0.3s ease, height 0.4s ease; }
@@ -315,17 +322,17 @@ section { position: relative; z-index: 2; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 12px;
   font-family: var(--font-body);
-  font-size: 11px; font-weight: 400;
-  letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--obsidian); background: var(--gold);
-  padding: 14px 32px; text-decoration: none;
+  font-size: var(--btn-fs); font-weight: 400;
+  letter-spacing: var(--btn-ls); text-transform: uppercase;
+  color: var(--cta-fg); background: var(--cta-bg);
+  padding: var(--btn-py) var(--btn-px); text-decoration: none;
   transition: background 0.3s, gap 0.3s;
 }
-.btn-primary:hover { background: var(--gold-light); gap: 20px; }
+.btn-primary:hover { background: var(--cta-bg-hover); gap: 20px; }
 .btn-primary svg { width: 14px; height: 14px; }
 /* Article link styles must not repaint the filled button (was gold-dim on gold in v2) */
 .article-body .btn-primary,
-.article-body .btn-primary:hover { color: var(--on-accent); border-bottom: 0; }
+.article-body .btn-primary:hover { color: var(--cta-fg); border-bottom: 0; }
 
 /* ─── FOOTER ────────────────────────── */
 footer {
@@ -355,10 +362,10 @@ footer {
 .footer-location-note { font-size: 11px; color: var(--text-muted); font-weight: 300; }
 .footer-cta-block a {
   display: inline-flex; align-items: center; gap: 12px;
-  font-family: var(--font-body); font-size: 11px; font-weight: 400;
-  letter-spacing: 0.22em; text-transform: uppercase;
+  font-family: var(--font-body); font-size: var(--btn-fs); font-weight: 400;
+  letter-spacing: var(--btn-ls); text-transform: uppercase;
   color: var(--cta-fg); background: var(--cta-bg);
-  padding: 14px 28px; text-decoration: none; transition: background 0.3s;
+  padding: var(--btn-py) var(--btn-px); text-decoration: none; transition: background 0.3s;
 }
 .footer-cta-block a:hover { background: var(--cta-bg-hover); }
 .footer-cta-block p { font-size: 11px; color: var(--text-muted); margin-top: 14px; font-weight: 300; }
@@ -380,7 +387,7 @@ footer {
 .footer-logo-img { height: 52px; width: auto; display: block; margin-bottom: 16px; opacity: 0.9; }
 
 /* ─── SCROLL REVEAL ─────────────────── */
-.js .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; transition-delay: var(--reveal-delay, 0s); }
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-out); transition-delay: var(--reveal-delay, 0s); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ─── RELIEF LIGHT (relief-light.js) ── */
@@ -403,7 +410,7 @@ footer {
 /* ─── SKIP LINK ────────── */
 .skip-link {
   position: absolute; top: -100%; left: 16px;
-  background: var(--gold); color: var(--obsidian);
+  background: var(--cta-bg); color: var(--cta-fg);
   padding: 8px 16px; font-size: 13px; font-weight: 400;
   z-index: 10000; text-decoration: none;
   transition: top 0.2s ease;
@@ -493,7 +500,7 @@ summary:focus-visible,
 .nav-mobile-menu {
   display: none; position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(var(--bg-rgb), 0.97);
+  background: var(--bg);   /* opaque: at 0.97 the page's headline ghosted behind the menu */
   z-index: 999;
   flex-direction: column; align-items: center; justify-content: center;
   gap: 32px;
@@ -509,6 +516,12 @@ summary:focus-visible,
   transition: color 0.2s;
 }
 .nav-mobile-menu a:hover { color: var(--gold); }
+/* the door's one CTA: the primary button, not a fifth menu line */
+.nav-mobile-menu a.nav-mobile-cta,
+.nav-mobile-menu a.nav-mobile-cta:hover {
+  font-size: var(--btn-fs); letter-spacing: var(--btn-ls); padding: var(--btn-py) var(--btn-px); margin-top: 8px;
+  color: var(--cta-fg);
+}
 .nav-mobile-menu .nav-mobile-lang {
   margin-top: 16px; font-size: 13px; color: var(--gold-dim);
   letter-spacing: 0.15em; padding-top: 24px;
@@ -937,7 +950,7 @@ summary:focus-visible,
 .filmstrip-caption {
   position: absolute;
   bottom: var(--s-7);
-  left: var(--pad-x);
+  left: var(--edge);
   z-index: 1;
   max-width: 480px;
 }
@@ -1016,5 +1029,10 @@ html body :is(p, li, dd, dt, figcaption, blockquote) { font-weight: 400 !importa
   html body .article-wrapper .article-body > :is(ul, ol):not(.spec-checklist) > li { max-width: 55ch; }
   html body .article-wrapper :is(.callout, .faq) p { max-width: 54ch; }
 }
+/* Reading pages: the italic stays in the title. Section headings speak plainly, so the structure reads at a glance. */
+html body .article-body h2 em { font-style: normal; color: inherit; }
+/* Square corners, no side tabs (the system is square, #99). Article pages carry inline copies of these rules; specificity beats them. */
+html body :is(.callout, .legal-callout) { border: 1px solid var(--border); border-radius: 0; }
+html body :is(.phase-badge, .bar-track, .bar-fill, .bar-legend-dot) { border-radius: 0; }
 /* Long FAQ answers: cap the measure on every page that uses the pattern */
 html body .faq-answer p, html body .faq p { max-width: 60ch; }

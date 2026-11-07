@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://studioluminant.com.tr/images/studio-luminant-og-image.jpg">
 <link rel="preload" href="../fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../shared.css?v=cd9e272b">
+<link rel="stylesheet" href="../shared.css?v=6b070017">
 <link rel="preload" as="image" href="../assets/relief/093-fugato-hero/poster-1680.jpg" imagesrcset="../assets/relief/093-fugato-hero/poster-640.jpg 640w, ../assets/relief/093-fugato-hero/poster-840.jpg 840w, ../assets/relief/093-fugato-hero/poster-960.jpg 960w, ../assets/relief/093-fugato-hero/poster-1080.jpg 1080w, ../assets/relief/093-fugato-hero/poster-1680.jpg 1680w" imagesizes="(orientation: portrait) 149vw, max(80vw, 140vh)" fetchpriority="high">
 
 <style>
@@ -34,7 +34,8 @@
   #hero {
     --relief-wall: #DFD8CA;
     --top: 96px;                       /* clear of the nav */
-    --x0: 46vw;                        /* left edge of the field */
+    --h1: clamp(52px, 6.1vw, 96px);
+    --x0: calc(var(--edge) + 6.6 * var(--h1));   /* left edge of the field: a headline's width after the copy */
     --S: max(57vw, 100svh - 72px);     /* always past the right and bottom edges */
     height: 100svh; min-height: 560px;
   }
@@ -47,8 +48,8 @@
 
   .hero-left {
     position: absolute; z-index: 2; isolation: isolate;
-    left: var(--pad-x); bottom: clamp(48px, 10svh, 100px);
-    width: min(620px, var(--x0) - var(--pad-x) - 40px);
+    left: var(--edge); bottom: clamp(48px, 10svh, 100px);
+    width: min(620px, var(--x0) - var(--edge) - 40px);
     display: flex; flex-direction: column;
   }
   /* soft wall-coloured scrim: keeps the copy legible when a low light throws the panel's
@@ -74,7 +75,7 @@
 
   .hero-headline {
     font-family: var(--font-display);
-    font-size: clamp(52px, 6.1vw, 96px);   /* a clear step above the 44–64 px section headings */
+    font-size: var(--h1);   /* a clear step above the 44–64 px section headings */
     text-wrap: balance;
     font-weight: 300;
     line-height: 0.98;
@@ -98,9 +99,9 @@
   .btn-ghost {
     display: inline-flex; align-items: center; gap: 10px;
     font-family: var(--font-body);
-    font-size: 11px; font-weight: 400;
-    letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ink-2);
+    font-size: var(--btn-fs); font-weight: 400;
+    letter-spacing: var(--btn-ls); text-transform: uppercase;
+    color: var(--ink);
     text-decoration: none;
     border-bottom: 1px solid var(--border);
     padding-bottom: 2px;
@@ -111,8 +112,7 @@
 
   /* phones and portrait screens: a full-width band of the field on top, copy below it in the flow */
   @media (orientation: portrait), (max-width: 820px) {
-    #hero { height: auto; min-height: 0; --top: 84px; --x0: -3vw; --S: 106vw; --band: calc(0.6667 * var(--S)); }   /* the band ends on a course joint: four of the six courses */
-    @media (min-width: 600px) { #hero { --band: calc(0.5 * var(--S)); } }
+    #hero { height: auto; min-height: 0; --top: 84px; --x0: -3vw; --S: 106vw; --band: calc(0.5 * var(--S)); }   /* the band ends on a course joint: three of the six courses */
     .hero-left {
       position: relative; left: auto; bottom: auto; width: auto;
       margin-top: calc(var(--top) + var(--band));
@@ -122,7 +122,7 @@
     .hero-left::before { display: none; }
     .hero-eyebrow { margin-bottom: 20px; }
     .hero-headline { font-size: min(14.4vw, 96px); }
-    .hero-sub { margin-bottom: 24px; }
+    .hero-sub { order: 1; margin: 28px 0 0; }   /* headline and button share the first screen with the cookie bar */
   }
 
   /* ─── STRATEGY ──────────────────────── */
@@ -230,11 +230,6 @@
     margin-bottom: 16px;
   }
 
-  .step-title {
-    font-size: 12px; font-weight: 500;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 16px;
-  }
 
   .step-headline {
     font-family: 'Cormorant Garamond', serif;
@@ -465,7 +460,9 @@
   .portfolio-item:hover img { transform: scale(1.05); filter: grayscale(0%); }
   .portfolio-item--large { grid-column: 1; grid-row: 1 / span 2; }
   .portfolio-item-caption {
-    position: absolute; bottom: 16px; left: 16px; right: 16px;
+    position: absolute; bottom: 16px; left: 16px;
+    padding: 5px 10px;
+    background: var(--bg);   /* a translucent scrim left dark text on dark rooms */
     opacity: 0; transition: opacity 0.4s;
   }
   .portfolio-item:hover .portfolio-item-caption,
@@ -483,12 +480,11 @@
   }
   .portfolio-item-caption span {
     font-size: 11px; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--text-secondary);
+    text-transform: uppercase; color: var(--ink);
   }
-  .portfolio-item-caption > span {
-    display: inline-block; line-height: 1.6; padding: 5px 10px;
-    background: rgba(var(--bg-rgb),0.85); border: 1px solid var(--border);
-    backdrop-filter: blur(2px);
+  @media (max-width: 600px) {   /* narrow tiles: the chip stays on one line */
+    .portfolio-item-caption { bottom: 8px; left: 8px; padding: 4px 8px; }
+    .portfolio-item-caption span { letter-spacing: 0.06em; }
   }
   .portfolio-concept-tag {
     position: absolute; top: 16px; left: 16px; z-index: 2;
@@ -770,7 +766,7 @@
       Your drawing,<br><em>cast faithfully.</em>
     </h1>
     <p class="hero-sub">
-      We cast relief wall panels for hotels, homes and commercial interiors. Send us your own drawing, or choose one of the Studio Designs we have drawn. You approve the master before casting.
+      We cast relief wall panels for hotels, homes and commercial interiors. Send us your own drawing, or choose one of the Studio Designs we have drawn. You approve the master before&nbsp;casting.
     </p>
     <div class="hero-ctas">
       <a href="contact.htm" class="btn-primary">
@@ -826,7 +822,6 @@
                    loading="lazy" decoding="async">
             </picture></noscript>
         <span class="step-number">01</span>
-        <div class="step-title">Design &amp; Modelling</div>
         <h3 class="step-headline">From Brief to 3D Model</h3>
         <p class="step-desc">Send a sketch, a reference, or a brief. We turn it into a high-resolution 3D surface model, with the texture and depth the design calls for.</p>
         <div class="step-line"></div>
@@ -852,7 +847,6 @@
                    loading="lazy" decoding="async">
             </picture></noscript>
         <span class="step-number">02</span>
-        <div class="step-title">Moulding &amp; Casting</div>
         <h3 class="step-headline">Mould Masters, Precision Casting</h3>
         <p class="step-desc">We make the mould master straight from the model, 3D-printed or CNC-machined depending on the geometry, then pour each panel in <span translate="no">Lumina PMAG™</span> and leave it in the mould to set, carrying every detail of the mould surface into the panel — every batch checked for surface integrity before it leaves the floor.</p>
         <div class="step-line"></div>
@@ -876,7 +870,6 @@
                    loading="lazy" decoding="async">
             </picture></noscript>
         <span class="step-number">03</span>
-        <div class="step-title">Finishing &amp; Delivery</div>
         <h3 class="step-headline">Artisan Finish and Crating</h3>
         <p class="step-desc">Each panel is either finished by hand in the workshop in the chosen artisan finish or leaves primed for the site painter, then is crated with its technical data sheet and installation drawing.</p>
         <div class="step-line"></div>
@@ -921,7 +914,7 @@
               <img src="../assets/designs/andante/room-guestroom.webp" alt="Andante, hotel guest room" width="1536" height="1024" loading="lazy" decoding="async">
             </picture></noscript>
       <span class="portfolio-concept-tag">Concept</span>
-      <div class="portfolio-item-caption"><span>Hotel Guest Room · Andante</span></div>
+      <div class="portfolio-item-caption"><span>Guest Room · Andante</span></div>
     </a>
     <a class="portfolio-item" href="design-fugato.htm">
       <picture data-lazy>
@@ -957,7 +950,7 @@
   #sample-box .sbx-light{margin:var(--s-6) auto 0;max-width:360px;}
   #sample-box .sbx-light video{display:block;width:100%;height:auto;aspect-ratio:4/5;background:var(--deep);}
   @media (min-width:900px){
-    #sample-box .sbx-head{max-width:920px;display:grid;grid-template-columns:1fr minmax(260px,340px);gap:var(--s-8);align-items:center;text-align:left;}
+    #sample-box .sbx-head{max-width:none;display:grid;grid-template-columns:1fr minmax(260px,340px);gap:var(--s-8);align-items:center;text-align:left;}
     #sample-box .sbx-light{margin:0;max-width:none;}
   }
   #sample-box .sbx-title{font-family:var(--font-display);font-weight:300;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.02;color:var(--text-primary);margin:.3em 0 .5em;}
@@ -1266,8 +1259,8 @@
 })();
 </script>
 <script src="../relief-light.js?v=651e9ca5" defer></script>
-<script src="../shared.js?v=18e9ebf3"></script>
-<script src="../components.js?v=1f502ace"></script>
+<script src="../shared.js?v=3e01377b"></script>
+<script src="../components.js?v=7d3011b6"></script>
 <script>
   // Page-specific: add hover cursor effect to skill-tag, material-card, and process-step elements
   if (window.matchMedia('(pointer: fine)').matches) {
@@ -1281,5 +1274,5 @@
   }
 </script>
 
-<script src="../consent.js?v=24c8a6ae"></script>
+<script src="../consent.js?v=c65ea30c"></script>
 </body></html>
