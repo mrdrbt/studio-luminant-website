@@ -121,9 +121,12 @@ function pictureTag(src, alt, sizes, opts) {
   // Everything else is the Bespoke door.
   const pageFile = location.pathname.split('/').pop() || 'index.html';
   const isStudioDoor = /^(tasarimlar|designs|tasarim-(?!dosyasi)|design-)/.test(pageFile);
+  // The Studio door asks for a layout: a design page names its design, as its hero button does, and contact swaps its heading to match.
+  const contactHref = lang === 'tr' ? 'iletisim.htm' : 'contact.htm';
+  const designSlug = (pageFile.match(/^(?:tasarim|design)-(?!dosyasi)([a-z]+)\.htm$/) || [])[1];
   const doorCta = isStudioDoor
-    ? { text: L.ctaStudio, href: lang === 'tr' ? 'iletisim.htm' : 'contact.htm' }
-    : { text: L.ctaBespoke, href: lang === 'tr' ? 'iletisim.htm' : 'contact.htm' };
+    ? { text: L.ctaStudio, href: contactHref + (designSlug ? '?design=' + designSlug : '?ask=layout') }
+    : { text: L.ctaBespoke, href: contactHref };
 
   // ─── NAV ───
   const navLinks = lang === 'tr' ? {
