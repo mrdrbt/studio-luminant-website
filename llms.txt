@@ -20,7 +20,7 @@ Key facts for accurate citation:
 
 - [Studio Luminant — Bespoke Architectural Elements](https://studioluminant.com.tr/en/): Homepage — the two doors, Bespoke and Studio Designs.
 - [Bespoke](https://studioluminant.com.tr/en/process.htm): The Bespoke process, from the drawing to the depth map, raking-light approval, master, mould, cast and installation.
-- [Studio Designs](https://studioluminant.com.tr/en/designs.htm): Relief designs drawn by the studio, each on its own page: Accelerando, Andante, Antiphon, Fioritura, Fugato, Glissando, Gruppetto, Hemiola, Hocket, Melisma, Mezzavoce, Ricercar, Rondeau.
+- [Studio Designs](https://studioluminant.com.tr/en/designs.htm): Relief designs drawn by the studio, each on its own page: Accelerando, Andante, Antiphon, Fioritura, Fugato, Glissando, Gruppetto, Hemiola, Hocket, Melisma, Mezzavoce, Ricercar, Rondeau, Sonado.
 - [Ricercar](https://studioluminant.com.tr/en/design-ricercar.htm): A lattice built from the Gothic quatrefoil, repeating every 600 mm.
 - [Glissando](https://studioluminant.com.tr/en/design-glissando.htm): Drifting fibres on upright panels laid with a half-height offset.
 - [Accelerando](https://studioluminant.com.tr/en/design-accelerando.htm): We drew a field of cells whose size grades across the wall.
@@ -34,6 +34,7 @@ Key facts for accurate citation:
 - [Andante](https://studioluminant.com.tr/en/design-andante.htm): We drew a field of horizontal ribs and pulled it up or down along four vertical lines, the way a comb is drawn through marbling.
 - [Mezzavoce](https://studioluminant.com.tr/en/design-mezzavoce.htm): We drew an irregular net of cells in many sizes.
 - [Hocket](https://studioluminant.com.tr/en/design-hocket.htm): We wove waving horizontal bands through straight upright ones.
+- [Sonado](https://studioluminant.com.tr/en/design-sonado.htm): Five pleats to a panel.
 - [For Architects](https://studioluminant.com.tr/en/architects.htm): How the studio works with architects and specifiers.
 - [Material — Lumina PMAG™](https://studioluminant.com.tr/en/products.htm): Technical data for Lumina PMAG™ and the artisan finishes.
 - [Gallery](https://studioluminant.com.tr/en/gallery.htm): Relief panels and sculptural wall surfaces.

@@ -1659,6 +1659,123 @@
      "cap": "Concept: café"
     }
    }
+  },
+  {
+   "slug": "sonado",
+   "kind": "relief",
+   "code": "092",
+   "library": "092_pleat-sway",
+   "asset": "092-sonado",
+   "object_fixed": true,
+   "layout": "field",
+   "tr": {
+    "name": "Sonado",
+    "lede": "Her panelde beş pile var. Pileler yüzeyden yavaşça yükselip keskin bir kenarla bitiyor, yukarı doğru hafifçe sağa sola salınıyor. 600 × 600 mm'lik paneller kenar kenara dizildiğinde pileler bir panelden ötekine kesintisiz sürüyor.",
+    "size": "600 × 600 mm",
+    "depth": "24 mm",
+    "layout": "Tek kalıp, düz ızgara",
+    "alt": "Salınan dikey pilelerden oluşan rölyef duvar, yalama ışık altında",
+    "object_alt": "Sonado panelinin eğik açıdan render'ı",
+    "object_cap": "Tek panel, eğik görünüş",
+    "strip_alt": null,
+    "title": "Sonado: Salınan Pileli Rölyef Duvar Paneli | Studio Luminant",
+    "meta": "Beş pileden bir yüzey: her pile panel boyunca salınır, keskin bir kenarla biter. 600 × 600 mm'lik paneller kenar kenara dizilir, pileler kesintisiz sürer.",
+    "sections": [
+     {
+      "h": "Desen",
+      "p": [
+       "Sonado'nun her panelinde beş pile bulunur. Pile yüzeyden yavaş bir eğimle yükselir, 24 mm'ye ulaştığı yerde keskin bir kenarla biter; bir sonraki pile bu kenarın dibinden yeniden başlar. Pileler düz değildir. Panelin yüksekliği boyunca her biri iki yana 20 mm'ye kadar salınır, aralarındaki mesafe de 110 ile 130 mm arasında değişir.",
+       "Pile kenarları hafifçe öne taşar ve her kenarın altında dar bir boşluk kalır. Bu biçimi dökülebilir kılan esnek silikon kalıptır; rijit bir kalıp bu kenara takılırdı."
+      ]
+     },
+     {
+      "h": "Işıkta okunuşu",
+      "p": [
+       "Sayfanın başındaki görüntü, bu tasarımın derinlik haritasından hesaplanan bir render'dır; ışığı bilgisayarda imleciniz, telefonda sayfayı kaydırmanız yönlendirir. Işık yandan geldiğinde her pile kenarı uzun, dalgalı bir gölge düşürür ve duvar dikey gölge çizgileriyle okunur. Işık dikleştikçe gölgeler daralır, pilelerin yumuşak eğimi öne çıkar. Derinlik haritası kenarların altındaki boşluğu kaydedemez; parçanın gerçek biçimini sayfadaki eğik görünüş gösterir."
+      ]
+     },
+     {
+      "h": "Duvarda",
+      "p": [
+       "Sonado 600 × 600 mm'lik kare panellerle, kaydırma olmadan düz bir ızgarada kurulur. Panel kenarları birbirine uyacak şekilde çizildiği için her pile komşu panelde kaldığı yerden devam eder ve duvar tek bir yüzey olarak okunur. Tavana ya da duvarın ucuna denk gelen son sıra yerinde kesilir; kesimlerin yeri yerleşim çiziminde belirlenir."
+      ]
+     }
+    ],
+    "drawing_cap": "Çizim: derinlik haritası",
+    "drawing_note": "Derinlik haritası, panelin her noktasındaki derinliği gri tonlarla tarif eder. Sayfanın başındaki render bu haritadan hesaplanır; pile kenarlarının altındaki boşluk haritada görünmez.",
+    "drawing_alt": "Sonado panelinin derinlik haritası: salınan beş pilenin gri tonlarla çizimi",
+    "use": "Sonado, ışığı yandan alan bir duvarda en güçlü okunur: her pile kenarı dalgalı bir gölge çizgisi düşürür ve duvar boyunca dikey bir ritim kurulur. Sayfadaki render tasarımı bir kafede, deri bir banketin arkasındaki duvarda gösterir. Pileler salındığı için panel sınırları kolay seçilmez; geniş bir duvarda yüzey tek parça, kıvrımlı bir düzlem gibi görünür. Restoran ve kafe duvarlarında bakış mesafesini ve ışığı [[restaurant|restoran duvar tasarımı]] rehberi ayrıca ele alır.",
+    "faq": [
+     {
+      "q": "Sonado panellerinin ölçüsü nedir, nasıl dizilir?",
+      "a": "Sonado 600 × 600 mm ölçüsünde kare bir [[home|rölyef duvar paneli]] olarak tasarlanmıştır; paneller kenar kenara, kaydırma olmadan düz bir ızgarada dizilir. Kenarlar birbirine uyduğu için pileler panelden panele kesintisiz sürer. Duvarın kenarlarında kalan kesimler yerleşim çiziminde çözülür."
+     },
+     {
+      "q": "Sonado'nun rölyefi ne kadar derin?",
+      "a": "Pileler 24 mm'ye kadar yükselir ve bu yükseklikte keskin bir kenarla biter. Kenarlar hafifçe öne taşar; esnek silikon kalıp sayesinde bu taşma dökümde de korunur."
+     }
+    ]
+   },
+   "en": {
+    "name": "Sonado",
+    "lede": "Five pleats to a panel. Each climbs slowly from the ground, stops at a crisp edge and sways a little from side to side on its way up. The 600 × 600 mm panels are laid edge to edge, and the pleats run on from one panel to the next.",
+    "size": "600 × 600 mm",
+    "depth": "24 mm",
+    "layout": "One mould, straight grid",
+    "alt": "Cast relief wall of swaying vertical pleats, in raking light",
+    "object_alt": "Oblique render of the Sonado panel",
+    "object_cap": "Single panel, oblique view",
+    "strip_alt": null,
+    "title": "Sonado: Swaying Pleat Relief Wall Panel | Studio Luminant",
+    "meta": "Five pleats to a panel, each swaying along its height and ending in a crisp edge. 600 × 600 mm panels laid edge to edge, the pleats running on unbroken.",
+    "sections": [
+     {
+      "h": "The pattern",
+      "p": [
+       "Each Sonado panel carries five pleats. A pleat rises on a gentle slope, reaches 24 mm and stops at a sharp edge; the next pleat starts again at the foot of that edge. The pleats are not straight. Over the height of the panel each one drifts up to 20 mm to either side, and the spacing between them varies from 110 to 130 mm.",
+       "Each pleat edge leans slightly forward, leaving a narrow hollow under its lip. The flexible silicone mould is what lets this shape be cast; a rigid mould would lock on that edge."
+      ]
+     },
+     {
+      "h": "How it reads in light",
+      "p": [
+       "The image at the top of the page is a render computed from this design's depth map; on a computer the light follows your cursor, on a phone it moves as you scroll. With the light from the side, every pleat edge throws a long, wavering shadow and the wall reads as a set of vertical shadow lines. As the light turns head-on the shadows narrow and the soft slope of each pleat comes forward. A depth map cannot record the hollow under each edge; the oblique view on this page shows the piece as it is."
+      ]
+     },
+     {
+      "h": "On the wall",
+      "p": [
+       "Sonado is laid in square 600 × 600 mm panels on a straight grid, edge to edge, with no offset. The panel edges are drawn to meet, so each pleat carries on in the neighbouring panel where it left off and the wall reads as one surface. The last course at the ceiling or the end of the wall is cut on site; where the cuts fall is set on the layout drawing."
+      ]
+     }
+    ],
+    "drawing_cap": "Drawing: depth map",
+    "drawing_note": "The depth map describes the depth at every point of the panel in grey tones. The render at the top of the page is computed from it; the hollow under the pleat edges does not show in the map.",
+    "drawing_alt": "Depth map of the Sonado panel: five swaying pleats drawn in grey tones",
+    "use": "Sonado reads strongest on a wall that takes its light from the side: each pleat edge throws a wavering shadow line and the wall picks up a vertical rhythm. The render on this page shows it on the wall behind a leather banquette in a café. Because the pleats sway, the panel joints are hard to pick out, and on a large wall the surface reads as one folded plane.",
+    "faq": [
+     {
+      "q": "What size are Sonado panels, and how are they laid?",
+      "a": "Sonado is a square 600 × 600 mm [[home|relief wall panel]], laid edge to edge on a straight grid with no offset. The edges meet, so the pleats run on from panel to panel. Cuts at the edges of the wall are worked out on the layout drawing."
+     },
+     {
+      "q": "How deep is the Sonado relief?",
+      "a": "The pleats rise to 24 mm and stop there at a sharp edge. That edge leans slightly forward; the flexible silicone mould keeps the overhang in the cast."
+     }
+    ]
+   },
+   "room": {
+    "file": "assets/designs/sonado/room-cafe.webp",
+    "source": "VAULT/Library/Relief/092_pleat-sway/insitu_still.png",
+    "tr": {
+     "alt": "Sonado, kafe",
+     "cap": "Konsept: kafe"
+    },
+    "en": {
+     "alt": "Sonado, café",
+     "cap": "Concept: café"
+    }
+   }
   }
  ],
  "parked": [

@@ -633,4 +633,22 @@
     <priority>0.7</priority>
     <lastmod>2026-11-07</lastmod>
   </url>
+  <url>
+    <loc>https://studioluminant.com.tr/tasarim-sonado.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-sonado.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-sonado.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-sonado.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/design-sonado.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/tasarim-sonado.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/design-sonado.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/tasarim-sonado.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-07</lastmod>
+  </url>
 </urlset>
