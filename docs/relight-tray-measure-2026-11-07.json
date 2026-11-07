@@ -1,0 +1,549 @@
+{
+ "url": "http://localhost:3117/en/light-tray.htm",
+ "rtx": {
+  "phone": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 664,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/andante/poster-ceiling-560.webp",
+    "cls": 0,
+    "longTasks": [
+     57,
+     383
+    ]
+   },
+   "bench": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Laptop GPU (0x000028A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     390,
+     844
+    ],
+    "devicePixelRatio": 3,
+    "lod": "s",
+    "sampleCssPx": 174,
+    "governorLevel": 0,
+    "readyMs": 786,
+    "textureMB": 12.7,
+    "bytes": {
+     "posters": 242934,
+     "textures": 610301,
+     "manifest": 3662,
+     "script": 34218,
+     "chrome": 232588
+    },
+    "runs": [
+     {
+      "designs": 6,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       1256
+      ],
+      "shadedPx": 726624,
+      "fps": 60,
+      "p50ms": 16.7,
+      "p95ms": 16.8,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 0.7
+     },
+     {
+      "designs": 6,
+      "dpr": 2,
+      "stepsCap": 16,
+      "canvas": [
+       716,
+       1256
+      ],
+      "shadedPx": 726624,
+      "fps": 60.3,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 1
+     },
+     {
+      "designs": 6,
+      "dpr": 1,
+      "stepsCap": 32,
+      "canvas": [
+       358,
+       628
+      ],
+      "shadedPx": 181656,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 0.4
+     },
+     {
+      "designs": 3,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       1256
+      ],
+      "shadedPx": 363312,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 0.4
+     }
+    ]
+   }
+  },
+  "governor_phone": {
+   "level": 0,
+   "dpr": 2,
+   "canvas": [
+    716,
+    1256
+   ],
+   "fps": 59.0
+  },
+  "laptop": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 168,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/andante/poster-ceiling-840.webp",
+    "cls": 2.980806327160494e-05,
+    "longTasks": [
+     69
+    ]
+   },
+   "bench": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Laptop GPU (0x000028A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     1440,
+     900
+    ],
+    "devicePixelRatio": 1.5,
+    "lod": "s",
+    "sampleCssPx": 332,
+    "governorLevel": 0,
+    "readyMs": 265,
+    "textureMB": 12.7,
+    "bytes": {
+     "posters": 473276,
+     "textures": 610301,
+     "manifest": 3662,
+     "script": 34218,
+     "chrome": 232588
+    },
+    "runs": [
+     {
+      "designs": 6,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       1104
+      ],
+      "shadedPx": 1488024,
+      "fps": 60.1,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 2.2
+     },
+     {
+      "designs": 6,
+      "dpr": 1.5,
+      "stepsCap": 16,
+      "canvas": [
+       1548,
+       1104
+      ],
+      "shadedPx": 1488024,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 1.9
+     },
+     {
+      "designs": 6,
+      "dpr": 1,
+      "stepsCap": 32,
+      "canvas": [
+       1032,
+       736
+      ],
+      "shadedPx": 661344,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 17,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 1.8
+     },
+     {
+      "designs": 3,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       1104
+      ],
+      "shadedPx": 744012,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 17,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 1.5
+     }
+    ]
+   }
+  }
+ },
+ "load_phone_slow4g": {
+  "vitals": {
+   "lcp": 1672,
+   "lcpEl": "http://localhost:3117/assets/relief-tray/andante/poster-ceiling-560.webp",
+   "cls": 0,
+   "longTasks": [
+    52,
+    67,
+    76,
+    65,
+    90
+   ]
+  },
+  "readyMs": 6740,
+  "bytes": {
+   "posters": 244158,
+   "textures": 612704,
+   "tray_code": 38464,
+   "site_chrome": 243106
+  },
+  "requests": 34
+ },
+ "uhd": {
+  "phone": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 328,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/andante/poster-ceiling-560.webp",
+    "cls": 0,
+    "longTasks": [
+     192
+    ]
+   },
+   "bench": {
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     390,
+     844
+    ],
+    "devicePixelRatio": 3,
+    "lod": "s",
+    "sampleCssPx": 174,
+    "governorLevel": 0,
+    "readyMs": 424,
+    "textureMB": 12.7,
+    "bytes": {
+     "posters": 242934,
+     "textures": 610301,
+     "manifest": 3662,
+     "script": 34218,
+     "chrome": 232588
+    },
+    "runs": [
+     {
+      "designs": 6,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       1256
+      ],
+      "shadedPx": 726624,
+      "fps": 60.1,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 3.8
+     },
+     {
+      "designs": 6,
+      "dpr": 2,
+      "stepsCap": 16,
+      "canvas": [
+       716,
+       1256
+      ],
+      "shadedPx": 726624,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 2.4
+     },
+     {
+      "designs": 6,
+      "dpr": 1,
+      "stepsCap": 32,
+      "canvas": [
+       358,
+       628
+      ],
+      "shadedPx": 181656,
+      "fps": 60.3,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 1.3
+     },
+     {
+      "designs": 3,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       1256
+      ],
+      "shadedPx": 363312,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 2.2
+     }
+    ]
+   }
+  },
+  "governor_phone": {
+   "level": 0,
+   "dpr": 2,
+   "canvas": [
+    716,
+    1256
+   ],
+   "fps": 58.9
+  },
+  "laptop": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 184,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/andante/poster-ceiling-840.webp",
+    "cls": 2.980806327160494e-05,
+    "longTasks": [
+     81
+    ]
+   },
+   "bench": {
+    "renderer": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A788) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     1440,
+     900
+    ],
+    "devicePixelRatio": 1.5,
+    "lod": "s",
+    "sampleCssPx": 332,
+    "governorLevel": 0,
+    "readyMs": 278,
+    "textureMB": 12.7,
+    "bytes": {
+     "posters": 473276,
+     "textures": 610301,
+     "manifest": 3662,
+     "script": 34218,
+     "chrome": 232588
+    },
+    "runs": [
+     {
+      "designs": 6,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       1104
+      ],
+      "shadedPx": 1488024,
+      "fps": 60.1,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 361,
+      "gpuFrameMs": 4.6
+     },
+     {
+      "designs": 6,
+      "dpr": 1.5,
+      "stepsCap": 16,
+      "canvas": [
+       1548,
+       1104
+      ],
+      "shadedPx": 1488024,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 4.3
+     },
+     {
+      "designs": 6,
+      "dpr": 1,
+      "stepsCap": 32,
+      "canvas": [
+       1032,
+       736
+      ],
+      "shadedPx": 661344,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 16.9,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 2.8
+     },
+     {
+      "designs": 3,
+      "dpr": 1.5,
+      "stepsCap": 32,
+      "canvas": [
+       1548,
+       1104
+      ],
+      "shadedPx": 744012,
+      "fps": 60.2,
+      "p50ms": 16.7,
+      "p95ms": 17,
+      "slowFramePct": 0,
+      "frames": 362,
+      "gpuFrameMs": 2.4
+     }
+    ]
+   }
+  }
+ },
+ "software": {
+  "phone": {
+   "mode": "live",
+   "vitals": {
+    "lcp": 684,
+    "lcpEl": "http://localhost:3117/assets/relief-tray/andante/poster-ceiling-560.webp",
+    "cls": 0,
+    "longTasks": [
+     729
+    ]
+   },
+   "bench": {
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "viewport": [
+     390,
+     844
+    ],
+    "devicePixelRatio": 3,
+    "lod": "s",
+    "sampleCssPx": 174,
+    "governorLevel": 0,
+    "readyMs": 965,
+    "textureMB": 12.7,
+    "bytes": {
+     "posters": 242934,
+     "textures": 610301,
+     "manifest": 3662,
+     "script": 34218,
+     "chrome": 232588
+    },
+    "runs": [
+     {
+      "designs": 6,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       1256
+      ],
+      "shadedPx": 726624,
+      "fps": 12.6,
+      "p50ms": 69.5,
+      "p95ms": 145.8,
+      "slowFramePct": 97.4,
+      "frames": 76,
+      "gpuFrameMs": 54.7
+     },
+     {
+      "designs": 6,
+      "dpr": 2,
+      "stepsCap": 16,
+      "canvas": [
+       716,
+       1256
+      ],
+      "shadedPx": 726624,
+      "fps": 13.5,
+      "p50ms": 76.3,
+      "p95ms": 125,
+      "slowFramePct": 93.9,
+      "frames": 82,
+      "gpuFrameMs": 51.2
+     },
+     {
+      "designs": 6,
+      "dpr": 1,
+      "stepsCap": 32,
+      "canvas": [
+       358,
+       628
+      ],
+      "shadedPx": 181656,
+      "fps": 25.9,
+      "p50ms": 41.5,
+      "p95ms": 55.5,
+      "slowFramePct": 94.9,
+      "frames": 156,
+      "gpuFrameMs": 15.2
+     },
+     {
+      "designs": 3,
+      "dpr": 2,
+      "stepsCap": 32,
+      "canvas": [
+       716,
+       1256
+      ],
+      "shadedPx": 363312,
+      "fps": 18.4,
+      "p50ms": 55.5,
+      "p95ms": 83.4,
+      "slowFramePct": 94.6,
+      "frames": 111,
+      "gpuFrameMs": 24.8
+     }
+    ]
+   }
+  },
+  "governor_phone": {
+   "level": 3,
+   "dpr": 1,
+   "canvas": [
+    358,
+    628
+   ],
+   "fps": 19.6
+  }
+ }
+}

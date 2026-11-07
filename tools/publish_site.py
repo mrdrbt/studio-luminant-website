@@ -23,7 +23,7 @@ OUT = ROOT / "_site"
 
 PUBLIC_DIRS = {"assets", "downloads", "en", "fonts", "images", "img", "pdf", "vendor", "video"}
 INTERNAL_DIRS = {"_site", "docs", "tools"}
-PUBLIC_EXTS = {".css", ".htm", ".html", ".ico", ".jpeg", ".jpg", ".js", ".mp4", ".pdf", ".png", ".svg",
+PUBLIC_EXTS = {".avif", ".css", ".htm", ".html", ".ico", ".jpeg", ".jpg", ".js", ".mp4", ".pdf", ".png", ".svg",
                ".webp", ".woff2", ".xml"}
 INTERNAL_EXTS = {".json", ".md", ".py", ".toml"}
 # Named exceptions to the extension lists: relief-light.js fetches manifest.json at runtime.
