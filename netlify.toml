@@ -46,7 +46,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.facebook.com; connect-src 'self' https://mjmeqgljpyenuqorarte.supabase.co https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net; frame-src 'none'; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'"
+    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.facebook.com; connect-src 'self' https://mjmeqgljpyenuqorarte.supabase.co https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net; frame-src 'none'; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'"
 
 # Long cache for images (1 year, immutable content-hashed filenames)
 [[headers]]
