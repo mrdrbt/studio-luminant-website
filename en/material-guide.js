@@ -13,7 +13,6 @@ const {
 // ─────────────────────────────────────────────
 
 const TXT = {
-  better: "better", worse: "worse",
   tableLabel: "Specification Table",
   sampleHref: "contact.htm"
 };
@@ -741,23 +740,6 @@ function FinishColorSelector({
     }
   }, "Custom colour matching available \u2014 RAL, NCS, or bespoke reference.")));
 }
-function AdvantageArrow({
-  advantage
-}) {
-  const glyph = (color, ch) => /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
-    "aria-hidden": "true",
-    style: {
-      color,
-      fontSize: "11px",
-      marginLeft: 4
-    }
-  }, ch), advantage !== "neutral" && TXT[advantage] ? /*#__PURE__*/React.createElement("span", {
-    className: "mg-sr"
-  }, " (" + TXT[advantage] + ")") : null);
-  if (advantage === "better") return glyph(COLORS.sage, "\u25B2");
-  if (advantage === "worse") return glyph(COLORS.crimson, "\u25BC");
-  return glyph(COLORS.muted, "\u2014");
-}
 
 // ─── MATERIAL CARD ───
 function MaterialCard({
@@ -968,27 +950,6 @@ function ComparisonTable({
     key: s,
     category: c.label
   })));
-  const getAdvantage = (sk, slVal, compVal) => {
-    if (!slVal || slVal === "—" || !compVal || compVal === "—") return "neutral";
-    const a = {
-      moisture: () => {
-        const rk = ["Poor", "Low", "Moderate", "Variable", "High", "Excellent"];
-        const g = v => rk.findIndex(r => v.includes(r));
-        const s = g(slVal),
-          c = g(compVal);
-        return s > c ? "better" : s < c ? "worse" : "neutral";
-      },
-      impact: () => {
-        const rk = ["Brittle", "Low", "Moderate", "High"];
-        const g = v => rk.findIndex(r => v.includes(r));
-        const s = g(slVal),
-          c = g(compVal);
-        return s > c ? "better" : s < c ? "worse" : "neutral";
-      }
-    };
-    if (a[sk]) return a[sk]();
-    return "neutral";
-  };
   const cols = sectorMaterials.filter(m => activeSector.includes(m.id));
   return /*#__PURE__*/React.createElement("div", {
     className: "mg-scroll",
@@ -1082,7 +1043,6 @@ function ComparisonTable({
       }
     }, slVal, spec.unit && slVal !== "—" ? `\u00A0${spec.unit}` : ""), cols.map(m => {
       const cv = m.specs[spec.key] || "—";
-      const adv = getAdvantage(spec.key, slVal, cv);
       return /*#__PURE__*/React.createElement("td", {
         key: m.id,
         style: {
@@ -1091,9 +1051,7 @@ function ComparisonTable({
           fontWeight: 300,
           opacity: 0.85
         }
-      }, cv, spec.unit && cv !== "—" ? `\u00A0${spec.unit}` : "", cv !== "—" ? /*#__PURE__*/React.createElement(AdvantageArrow, {
-        advantage: adv
-      }) : null);
+      }, cv, spec.unit && cv !== "—" ? `\u00A0${spec.unit}` : "");
     }));
   }))));
 }
@@ -1140,6 +1098,7 @@ function MaterialGuide() {
         .mg-root .mg-explore:hover,.mg-root .mg-link:hover{border-bottom-color:${COLORS.gold};color:${COLORS.goldLight};}
         .mg-root .mg-cta{display:inline-flex;align-items:center;font-family:'Jost',sans-serif;font-size:var(--btn-fs);font-weight:400;letter-spacing:var(--btn-ls);text-transform:uppercase;color:var(--cta-fg);background:var(--cta-bg);padding:var(--btn-py) var(--btn-px);text-decoration:none;transition:background-color 0.3s ease;}
         .mg-root .mg-cta:hover,.mg-root .mg-cta:focus-visible{background-color:var(--cta-bg-hover);}
+        .mg-scroll{position:relative;}
         .mg-scroll:focus-visible{outline:2px solid ${COLORS.gold};outline-offset:-2px;}
         .mg-root ::-webkit-scrollbar{height:6px;width:6px;}.mg-root ::-webkit-scrollbar-track{background:${COLORS.bg};}.mg-root ::-webkit-scrollbar-thumb{background:${COLORS.borderGold};}
       `), /*#__PURE__*/React.createElement("section", {
