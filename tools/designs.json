@@ -946,7 +946,7 @@
    "rooms": [
     {
      "file": "assets/designs/hemiola/room-lobby.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/2026-10-20_skew_insitu/2026-10-20_x-skew-insitu-r183058_r6_lobby_oblique_gpt_2.png",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-07_ceiling-rerender_/hemiola_lobby/draws/2026-11-07_x-hemiola-lobby-rr_through33_r2_gpt_1.png",
      "tr": {
       "alt": "Hemiola, lobi oturma alanı",
       "cap": "Konsept: lobi oturma alanı"
@@ -1471,7 +1471,7 @@
     },
     {
      "file": "assets/designs/ricercar/room-bar.webp",
-     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/Images/2026-10-25_rooms_v4/ricercar/2026-10-25_x-ricercar-rooms-v4_ricercar_frontal_gpt_1.png",
+     "source": "VAULT/10 — AI & Tools/FACTORY/00 — Staging/insitu/2026-11-07_ceiling-rerender_/ricercar_bar/draws/2026-11-07_x-ricercar-bar-rr_frontal35_gpt_2.png",
      "tr": {
       "alt": "Ricercar, bar",
       "cap": "Konsept: bar"

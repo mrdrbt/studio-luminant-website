@@ -864,69 +864,6 @@
       }
     }
   },
-  "studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg": {
-    "original": {
-      "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept.jpg",
-      "w": 1536,
-      "h": 1024,
-      "size": 184225
-    },
-    "webp": "studio-luminant-sage-relief-wall-hotel-guestroom-concept.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-400w.webp",
-        "w": 400,
-        "h": 267
-      },
-      "800": {
-        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-800w.webp",
-        "w": 800,
-        "h": 533
-      },
-      "1200": {
-        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-1200w.webp",
-        "w": 1200,
-        "h": 800
-      }
-    }
-  },
-  "studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.jpg": {
-    "original": {
-      "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.jpg",
-      "w": 768,
-      "h": 1024,
-      "size": 116096
-    },
-    "webp": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-portrait-400w.webp",
-        "w": 400,
-        "h": 533
-      }
-    }
-  },
-  "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square.jpg": {
-    "original": {
-      "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square.jpg",
-      "w": 1024,
-      "h": 1024,
-      "size": 146444
-    },
-    "webp": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square.webp",
-    "variants": {
-      "400": {
-        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square-400w.webp",
-        "w": 400,
-        "h": 400
-      },
-      "800": {
-        "file": "studio-luminant-sage-relief-wall-hotel-guestroom-concept-square-800w.webp",
-        "w": 800,
-        "h": 800
-      }
-    }
-  },
   "studio-luminant-sample-box.jpg": {
     "original": {
       "file": "studio-luminant-sample-box.jpg",
@@ -1043,6 +980,69 @@
         "file": "studio-luminant-glissando-relief-panel-raking-light-portrait-800w.webp",
         "w": 800,
         "h": 1000
+      }
+    }
+  },
+  "studio-luminant-sand-relief-wall-hotel-guestroom-concept.jpg": {
+    "original": {
+      "file": "studio-luminant-sand-relief-wall-hotel-guestroom-concept.jpg",
+      "w": 1536,
+      "h": 1024,
+      "size": 243726
+    },
+    "webp": "studio-luminant-sand-relief-wall-hotel-guestroom-concept.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-400w.webp",
+        "w": 400,
+        "h": 267
+      },
+      "800": {
+        "file": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-800w.webp",
+        "w": 800,
+        "h": 533
+      },
+      "1200": {
+        "file": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-1200w.webp",
+        "w": 1200,
+        "h": 800
+      }
+    }
+  },
+  "studio-luminant-sand-relief-wall-hotel-guestroom-concept-portrait.jpg": {
+    "original": {
+      "file": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-portrait.jpg",
+      "w": 768,
+      "h": 1024,
+      "size": 123299
+    },
+    "webp": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-portrait.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-portrait-400w.webp",
+        "w": 400,
+        "h": 533
+      }
+    }
+  },
+  "studio-luminant-sand-relief-wall-hotel-guestroom-concept-square.jpg": {
+    "original": {
+      "file": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-square.jpg",
+      "w": 1024,
+      "h": 1024,
+      "size": 163189
+    },
+    "webp": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-square.webp",
+    "variants": {
+      "400": {
+        "file": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-square-400w.webp",
+        "w": 400,
+        "h": 400
+      },
+      "800": {
+        "file": "studio-luminant-sand-relief-wall-hotel-guestroom-concept-square-800w.webp",
+        "w": 800,
+        "h": 800
       }
     }
   }
