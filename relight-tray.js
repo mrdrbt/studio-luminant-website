@@ -11,8 +11,10 @@
  * the centre of its base is head-on. The tray grid maps the same way, so the light comes from where the pointer is.
  *
  * Never shades under prefers-reduced-motion or without WebGL2: the [data-light] buttons swap baked posters instead.
- * Sleeps when settled, off-screen or in a hidden tab. If the frame budget is missed it drops steps, then resolution,
- * and stays there. window.RelightTray exposes state and bench() for QA and for measuring a real device.
+ * Sleeps when settled, off-screen or in a hidden tab. If frames run slow AND the GPU itself is over budget it drops steps,
+ * then resolution, and stays there; a slow cadence alone proves nothing, because phones, WebViews and power saving cap
+ * rAF at 30 Hz with the GPU idle (Galaxy A32, 2026-11-07: 33.3 ms at 6.6 ms of GPU work).
+ * window.RelightTray exposes state and bench() for QA and for measuring a real device.
  */
 (function () {
   'use strict';
@@ -24,8 +26,10 @@
     sweepS: 18, sweepAz: 82,        // the one slow pass after loading, either side of the default light
     standOffMm: 5,                  // how far a sample stands off the page, for the shadow it casts on the page
     stepsPerTexel: 1.25, minSteps: 6,
-    budgetMs: 26, budgetFrames: 30  // mean frame time above this over that many frames drops a quality level
+    budgetMs: 26, budgetFrames: 30, // mean frame time above this over that many frames asks the GPU...
+    gpuBudgetMs: 14                 // ...and a frame costing more than this drops a quality level
   };
+  var LIVE_AFTER_MS = 700;   // the canvas has faded in: the posters under it can stop being composited
   var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var FINE = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var DPR_CAP = FINE ? 1.5 : 2;
@@ -173,6 +177,7 @@
 
     var M, gl, canvas, prog, drawn = { az: NaN, el: NaN }, running = false, visible = true, dirty = true, lastT = 0;
     var sweep = null, touched = false, benching = false, active = cells, acc = 0, accN = 0, stepsCap = QUALITY[0].steps;
+    var qualitySettled = false;
     var dprNow = QUALITY[0].dpr, L = { az: 90, el: 12, vAz: 0, vEl: 0, tAz: 90, tEl: 12 }, manual = false, sampleCss = 0;
     state.light = L;
 
@@ -186,6 +191,7 @@
       if (manual) return;
       manual = touched = true;
       sweep = null;
+      root.classList.add('tray-touched');
       setPressed(null);
     }
     function setPressed(name) {
@@ -281,16 +287,27 @@
       v += (CFG.springW * CFG.springW * (target - x) - 2 * CFG.springW * v) * dt;
       return [x + v * dt, v];
     }
+    function gpuFrameMs() {
+      var read = new Uint8Array(4);
+      draw();
+      gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, read);   // flush the queue first
+      var t0 = performance.now();
+      draw();
+      gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, read);   // returns once the GPU has finished the frame
+      return performance.now() - t0;
+    }
     function governor(rawMs) {
-      if (rawMs <= 0 || rawMs > 250 || state.level >= QUALITY.length - 1) return;
+      if (qualitySettled || rawMs <= 0 || rawMs > 250 || state.level >= QUALITY.length - 1) return;
       acc += rawMs; accN++;
       if (accN < CFG.budgetFrames) return;
-      if (acc / accN > CFG.budgetMs) {
-        state.level++;
-        stepsCap = QUALITY[state.level].steps;
-        if (QUALITY[state.level].dpr !== dprNow) { dprNow = QUALITY[state.level].dpr; layout(); }
-      }
+      var slow = acc / accN > CFG.budgetMs;
       acc = accN = 0;
+      if (!slow) return;
+      state.gpuMs = +gpuFrameMs().toFixed(1);
+      if (state.gpuMs < CFG.gpuBudgetMs) { qualitySettled = true; return; }   // the cadence is a cap, not the GPU
+      state.level++;
+      stepsCap = QUALITY[state.level].steps;
+      if (QUALITY[state.level].dpr !== dprNow) { dprNow = QUALITY[state.level].dpr; layout(); draw(); }
     }
     function tick(now) {
       if (!visible || !state.ready || benching) { running = false; return; }
@@ -382,6 +399,7 @@
       var P = M.lights[name];
       setPressed(name);
       touched = true;
+      root.classList.add('tray-touched');
       manual = false;
       sweep = null;
       L.tAz = P.az;
@@ -421,6 +439,7 @@
     }
     function enterStill(mode) {
       state.mode = mode;
+      root.classList.remove('tray-live');
       root.classList.add('tray-still');
       pad.removeAttribute('tabindex');
     }
@@ -452,6 +471,7 @@
           state.ready = true;
           state.readyMs = Math.round(performance.now());
           requestAnimationFrame(function () { canvas.classList.add('is-on'); });
+          setTimeout(function () { if (state.ready) root.classList.add('tray-live'); }, LIVE_AFTER_MS);
           bindLive();
           if (!touched) sweep = { t0: performance.now() + 700, az: L.az, el: L.el };
           wake();
@@ -480,37 +500,34 @@
       stepsCap = cfg.steps;
       active = cells.slice(0, cfg.n);
       layout();
+      draw();
       var px = active.reduce(function (sum, c) { return sum + c.w * c.h; }, 0);
-      var read = new Uint8Array(4);
       return new Promise(function (resolve) {
         var deltas = [], t0 = performance.now(), last = t0;
         (function frame(now) {
           var t = (now - t0) / 1000;
           deltas.push(now - last);
           last = now;
-          benchLight(t);
-          draw();
+          if (cfg.work !== 'idle') {
+            benchLight(t);
+            if (cfg.work === 'layers') { drawPad(); drawShadows(); } else draw();
+          }
           if (t < seconds) { requestAnimationFrame(frame); return; }
           deltas.shift();
           var sync = [], i;
-          for (i = 0; i < 12; i++) {
+          for (i = 0; !cfg.work && i < 12; i++) {
             benchLight(i * 0.31);
-            draw();
-            gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, read);   // flush the queue first
-            var s0 = performance.now();
-            draw();
-            gl.readPixels(0, 0, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, read);   // returns once the GPU has finished the frame
-            sync.push(performance.now() - s0);
+            sync.push(gpuFrameMs());
           }
           var d = deltas.slice().sort(function (a, b) { return a - b; });
           sync.sort(function (a, b) { return a - b; });
           var mean = deltas.reduce(function (a, b) { return a + b; }, 0) / Math.max(1, deltas.length);
           var slow = deltas.filter(function (x) { return x > 25; }).length;
           resolve({
-            designs: cfg.n, dpr: cfg.dpr, stepsCap: cfg.steps, canvas: [canvas.width, canvas.height], shadedPx: px,
+            work: cfg.work || 'full', designs: cfg.n, dpr: cfg.dpr, stepsCap: cfg.steps, canvas: [canvas.width, canvas.height], shadedPx: px,
             fps: +(1000 / mean).toFixed(1), p50ms: +pctl(d, 0.5).toFixed(1), p95ms: +pctl(d, 0.95).toFixed(1),
             slowFramePct: +(100 * slow / Math.max(1, deltas.length)).toFixed(1), frames: deltas.length,
-            gpuFrameMs: +pctl(sync, 0.5).toFixed(2)
+            gpuFrameMs: sync.length ? +pctl(sync, 0.5).toFixed(2) : null
           });
         })(performance.now());
       });
@@ -530,13 +547,16 @@
     state.bench = function (opts) {
       opts = opts || {};
       if (!state.ready) return Promise.reject(new Error('the tray is not live on this device: ' + state.mode));
-      var seconds = opts.seconds || 6, saved = { dpr: dprNow, steps: stepsCap, active: active };
-      var cap = Math.min(window.devicePixelRatio || 1, DPR_CAP);
+      var seconds = opts.seconds || 4, saved = { dpr: dprNow, steps: stepsCap, active: active };
+      var cap = Math.min(window.devicePixelRatio || 1, DPR_CAP), n = cells.length;
+      // idle = nothing moves: what the device's own frame loop allows. layers = shadows and dot move, no shading.
       var runs = opts.runs || [
-        { n: cells.length, dpr: cap, steps: 32 },
-        { n: cells.length, dpr: cap, steps: 16 },
-        { n: cells.length, dpr: 1, steps: 32 },
-        { n: 3, dpr: cap, steps: 32 }
+        { n: n, dpr: cap, steps: 32, work: 'idle' },
+        { n: n, dpr: cap, steps: 32, work: 'layers' },
+        { n: n, dpr: cap, steps: 32 },
+        { n: n, dpr: cap, steps: 16 },
+        { n: n, dpr: Math.min(cap, 1.5), steps: 16 },
+        { n: n, dpr: 1, steps: 16 }
       ];
       benching = true;
       sweep = null;
@@ -555,7 +575,7 @@
         return {
           renderer: renderer(), ua: navigator.userAgent, viewport: [window.innerWidth, window.innerHeight],
           devicePixelRatio: window.devicePixelRatio, lod: state.lod, sampleCssPx: Math.round(cells[0].sample.getBoundingClientRect().width),
-          governorLevel: state.level, readyMs: state.readyMs, textureMB: +(state.textureBytes / 1048576).toFixed(1),
+          governorLevel: state.level, governorGpuMs: state.gpuMs, readyMs: state.readyMs, textureMB: +(state.textureBytes / 1048576).toFixed(1),
           bytes: bytes(), runs: out
         };
       });

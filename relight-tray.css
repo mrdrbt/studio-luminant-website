@@ -19,11 +19,13 @@
 .tray-sample { position: relative; width: var(--s); height: var(--s); }
 .tray-poster { position: relative; z-index: 1; display: block; width: 100%; height: 100%; background: var(--bg-alt); }
 /* A plate standing off the wall, cast on the page. Offset for the default light: 5 mm stand-off at 12° from above. */
-.tray-shadow { position: absolute; inset: 0; background: rgba(var(--ink-rgb), 0.3); filter: blur(calc(var(--s) * 0.008));
+/* box-shadow, not filter: blur(): it rasterises once and the layer only translates, so a phone composites no blur per frame. */
+.tray-shadow { position: absolute; inset: 0; background: rgba(var(--ink-rgb), 0.16); box-shadow: 0 0 calc(var(--s) * 0.035) rgba(var(--ink-rgb), 0.2);
   transform: translate3d(0, calc(var(--s) * 0.039), 0); will-change: transform; }
 .tray-canvas { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; pointer-events: none; opacity: 0;
   transition: opacity var(--dur-3) var(--ease); }
 .tray-canvas.is-on { opacity: 1; }
+.tray-live .tray-poster { visibility: hidden; }
 .tray-label { position: relative; z-index: 3; display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-2);
   height: var(--label); }
 .tray-name { font-family: var(--font-display); font-size: 19px; line-height: 1.2; color: var(--ink); text-decoration: none;
@@ -33,16 +35,27 @@
 
 /* The light control docks under the thumb on a phone, clear of the samples being compared. */
 .tray-dock { position: sticky; bottom: 0; z-index: 4; margin: 0 calc(-1 * var(--gut)); padding: var(--s-2) var(--gut) calc(var(--s-2) + env(safe-area-inset-bottom));
-  display: grid; grid-template-columns: 124px 1fr; align-items: end; gap: var(--s-3); background: var(--bg);
+  display: grid; grid-template-columns: 124px 1fr; align-items: end; gap: var(--s-2) var(--s-3); background: var(--bg);
   border-top: 1px solid var(--rule-2); visibility: hidden; }
 .tray-js .tray-dock { visibility: visible; }
+.tray-hint { grid-column: 1 / -1; margin: 0; font-size: var(--t-body-sm); line-height: 1.3; font-weight: 500; color: var(--ink); }
+.tray-hint__mouse, .tray-hint__still { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .tray-hint__touch { display: none; }
+  .tray-hint__mouse { display: inline; }
+}
+.tray-still .tray-hint__touch, .tray-still .tray-hint__mouse { display: none; }
+.tray-still .tray-hint__still { display: inline; }
 .tray-pad { display: block; width: 100%; height: auto; touch-action: none; cursor: grab; overflow: visible; }
 .tray-pad:active { cursor: grabbing; }
 .tray-pad__sky { fill: rgba(var(--ink-rgb), 0.05); stroke: rgba(var(--ink-rgb), 0.42); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
 .tray-pad__ring { fill: none; stroke: rgba(var(--ink-rgb), 0.16); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .tray-pad__ray { stroke: var(--accent); stroke-width: 1.25; vector-effect: non-scaling-stroke; }
 .tray-pad__dot circle { fill: var(--accent); }
-.tray-pad__dot circle:first-child { fill: rgba(var(--accent-rgb, 142, 68, 38), 0.18); }
+.tray-pad__dot circle:first-child { fill: rgba(var(--accent-rgb), 0.18); transform-box: fill-box; transform-origin: center;
+  animation: tray-grab 1.8s var(--ease) 6; }
+.tray-touched .tray-pad__dot circle:first-child, .tray-still .tray-pad__dot circle:first-child { animation: none; }
+@keyframes tray-grab { 50% { transform: scale(1.45); opacity: 0.55; } }
 .tray-pad:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
 .tray-still .tray-pad { cursor: default; touch-action: auto; pointer-events: none; }
 
@@ -85,6 +98,7 @@
   .tray-side { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; }
   .tray-scale { order: 2; }
   .tray-dock { position: static; margin: 0; padding: 0; display: block; border: 0; background: none; }
+  .tray-hint { margin-bottom: var(--s-3); }
   .tray-pad { width: 100%; max-width: 240px; }
   .tray-lights { grid-template-columns: 1fr; gap: 0; margin-top: var(--s-5); max-width: 240px; }
   .tray-lights button { min-height: 38px; padding: 9px 0; font-size: 14px; }
@@ -96,4 +110,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .tray-canvas, .tray-lights button { transition: none; }
+  .tray-pad__dot circle:first-child { animation: none; }
 }
