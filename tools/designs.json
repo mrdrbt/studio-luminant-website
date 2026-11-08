@@ -486,22 +486,22 @@
    "layout": "panel",
    "tr": {
     "name": "Fugato",
-    "lede": "Oluklar ve düz bantlardan bir profil çizdik ve onu üç kalıba böldük. 600 × 400 mm'lik plakalar sıra sıra, her sırada kaydırılarak dizilir; her plaka iki yönde de takılabildiği için aynı profil duvarda hiç aynı sırayla tekrar etmez.",
+    "lede": "Oluklar ve düz bantlardan bir profil çizdik ve onu iki kalıba böldük. 600 × 400 mm'lik plakalar sıra sıra, her sırada kaydırılarak dizilir; her plaka iki yönde de takılabildiği için aynı profil duvarda hiç aynı sırayla tekrar etmez.",
     "size": "600 × 400 mm (plaka)",
     "depth": "40 mm",
-    "layout": "Üç kalıp, kaydırmalı sıralar",
+    "layout": "İki kalıp, kaydırmalı sıralar",
     "alt": "Dikey oluklar ve düz bantlardan oluşan, kaydırmalı sıralarla dizilmiş rölyef duvar, yalama ışık altında",
     "object_alt": "Fugato plakaları, yalama ışıkta",
     "object_cap": "Yalama ışık",
     "strip_alt": "Fugato plakalarıyla dizilmiş bir duvar, konsept",
     "title": "Fugato: Oluklu Plakalı Rölyef Duvar | Studio Luminant",
-    "meta": "Oluklar ve düz bantlardan bir profil, üç kalıba bölünmüş. 600 × 400 mm'lik plakalar kaydırmalı sıralarla dizilir. Lumina PMAG™ ile Sapanca'da dökülür.",
+    "meta": "Oluklar ve düz bantlardan bir profil, iki kalıba bölünmüş. 600 × 400 mm'lik plakalar kaydırmalı sıralarla dizilir. Lumina PMAG™ ile Sapanca'da dökülür.",
     "sections": [
      {
       "h": "Desen",
       "p": [
-       "Füg, bir ezginin farklı seslerde, farklı anlarda yeniden girdiği bir yazım biçimidir. Fugato'da ezgi bir profildir; dikey oluklarla aralarındaki düz bantlardan oluşur. Profil üç kalıba bölünmüştür ve her kalıp, oluklarla bantları farklı genişliklerde taşır.",
-       "Plakalar dizilirken her biri olduğu gibi ya da 180 derece çevrilerek takılabilir. Böylece üç kalıptan altı farklı plaka çıkar ve duvarda aynı dizi kolay kolay yinelenmez."
+       "Füg, bir ezginin farklı seslerde, farklı anlarda yeniden girdiği bir yazım biçimidir. Fugato'da ezgi bir profildir; dikey oluklarla aralarındaki düz bantlardan oluşur. Profil iki kalıba bölünmüştür ve her kalıp, oluklarla bantları farklı genişliklerde taşır.",
+       "Plakalar dizilirken her biri olduğu gibi ya da 180 derece çevrilerek takılabilir. Böylece iki kalıptan dört farklı plaka çıkar ve duvarda aynı dizi kolay kolay yinelenmez."
       ]
      },
      {
@@ -524,7 +524,7 @@
     "faq": [
      {
       "q": "Fugato plakalarının ölçüsü nedir, nasıl dizilir?",
-      "a": "Fugato 600 × 400 mm'lik plakalarla, 400 mm yüksekliğinde sıralar halinde kurulur. Profil üç kalıba bölünmüştür; her plaka olduğu gibi ya da 180 derece çevrilerek takılabildiği için üç kalıptan altı farklı plaka çıkar. Her sıra bir öncekine göre kaydırılır, en kısa kenar parçası 90 mm'nin altına düşmez ve tavana ulaşan son sıra yerinde kesilir. Kaydırmaların ve kesimlerin yeri yerleşim çiziminde belirlenir."
+      "a": "Fugato 600 × 400 mm'lik plakalarla, 400 mm yüksekliğinde sıralar halinde kurulur. Profil iki kalıba bölünmüştür; her plaka olduğu gibi ya da 180 derece çevrilerek takılabildiği için iki kalıptan dört farklı plaka çıkar. Her sıra bir öncekine göre kaydırılır, en kısa kenar parçası 90 mm'nin altına düşmez ve tavana ulaşan son sıra yerinde kesilir. Kaydırmaların ve kesimlerin yeri yerleşim çiziminde belirlenir."
      },
      {
       "q": "Fugato'nun rölyefi ne kadar derin?",
@@ -534,22 +534,22 @@
    },
    "en": {
     "name": "Fugato",
-    "lede": "We drew a profile of coves and flat bands and divided it across three moulds. The 600 × 400 mm plates are laid in courses, each course shifted from the last, and every plate can go either way up, so the same sequence almost never repeats on the wall.",
+    "lede": "We drew a profile of coves and flat bands and divided it across two moulds. The 600 × 400 mm plates are laid in courses, each course shifted from the last, and every plate can go either way up, so the same sequence almost never repeats on the wall.",
     "size": "600 × 400 mm (plate)",
     "depth": "40 mm",
-    "layout": "Three moulds, staggered courses",
+    "layout": "Two moulds, staggered courses",
     "alt": "Relief wall of vertical coves and flat bands laid in staggered courses, in low raking light",
     "object_alt": "Fugato plates in raking light",
     "object_cap": "Raking light",
     "strip_alt": "Wall laid in Fugato plates, concept",
     "title": "Fugato: Coved-Plate Relief Wall | Studio Luminant",
-    "meta": "A profile of coves and flat bands divided across three moulds. The 600 × 400 mm plates are laid in staggered courses. Cast in Lumina PMAG™ in Sapanca, Turkey.",
+    "meta": "A profile of coves and flat bands divided across two moulds. The 600 × 400 mm plates are laid in staggered courses. Cast in Lumina PMAG™ in Sapanca, Turkey.",
     "sections": [
      {
       "h": "The pattern",
       "p": [
-       "In a fugue, one melody enters again and again, in different voices and at different moments. In Fugato the melody is a profile: upright coves with flat bands between them. The profile is divided across three moulds, and each mould carries its coves and bands at different widths.",
-       "Each plate can be laid as cast or turned through 180 degrees, so the three moulds give six different plates, and a run of them rarely repeats on the wall."
+       "In a fugue, one melody enters again and again, in different voices and at different moments. In Fugato the melody is a profile: upright coves with flat bands between them. The profile is divided across two moulds, and each mould carries its coves and bands at different widths.",
+       "Each plate can be laid as cast or turned through 180 degrees, so the two moulds give four different plates, and a run of them rarely repeats on the wall."
       ]
      },
      {
@@ -572,7 +572,7 @@
     "faq": [
      {
       "q": "What size are Fugato plates, and how are they laid?",
-      "a": "Fugato is laid in 600 × 400 mm plates, in courses 400 mm high. The profile is split across three moulds, and each plate can go in as cast or turned through 180 degrees, so three moulds give six different plates. Each course is staggered against the one below, no end piece is shorter than 90 mm, and the top course is cut on site where it meets the ceiling. The staggers and cuts are set out on the layout drawing."
+      "a": "Fugato is laid in 600 × 400 mm plates, in courses 400 mm high. The profile is split across two moulds, and each plate can go in as cast or turned through 180 degrees, so two moulds give four different plates. Each course is staggered against the one below, no end piece is shorter than 90 mm, and the top course is cut on site where it meets the ceiling. The staggers and cuts are set out on the layout drawing."
      },
      {
       "q": "How deep is the Fugato relief?",
