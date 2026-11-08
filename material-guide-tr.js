@@ -180,7 +180,7 @@ const studioMaterials = [{
     density: "1,400–1,600",
     weight: (_pmag.weight ? _pmag.weight.min + '–' + _pmag.weight.max : "35–40"),
     thickness: (_pmag.thickness ? _pmag.thickness.min + '–' + _pmag.thickness.max : "15–40"),
-    moisture: "Standart alçıya göre neme dayanıklı",
+    moisture: "—",
     impact: "Orta (cam elyaf takviyeli)",
     uv: "—",
     chemical: "—",

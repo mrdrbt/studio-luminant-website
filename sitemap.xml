@@ -269,6 +269,7 @@
   <url>
     <loc>https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/anatolian-motifs-contemporary-relief.htm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -286,6 +287,7 @@
   <url>
     <loc>https://studioluminant.com.tr/restoran-duvar-tasarimi.htm</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/restoran-duvar-tasarimi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/restaurant-wall-design.htm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/restoran-duvar-tasarimi.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -294,6 +296,7 @@
   <url>
     <loc>https://studioluminant.com.tr/otel-odasi-duvar-tasarimi.htm</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/otel-odasi-duvar-tasarimi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/hotel-room-wall-design.htm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/otel-odasi-duvar-tasarimi.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -302,6 +305,7 @@
   <url>
     <loc>https://studioluminant.com.tr/villa-duvar-tasarimi.htm</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/villa-duvar-tasarimi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/villa-wall-design.htm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/villa-duvar-tasarimi.htm"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -342,6 +346,42 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/anatolian-motifs-contemporary-relief.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/anatolian-motifs-contemporary-relief.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/anadolu-motifleri-cagdas-rolyef.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/hotel-room-wall-design.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/otel-odasi-duvar-tasarimi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/hotel-room-wall-design.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/otel-odasi-duvar-tasarimi.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/restaurant-wall-design.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/restoran-duvar-tasarimi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/restaurant-wall-design.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/restoran-duvar-tasarimi.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://studioluminant.com.tr/en/villa-wall-design.htm</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://studioluminant.com.tr/villa-duvar-tasarimi.htm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://studioluminant.com.tr/en/villa-wall-design.htm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://studioluminant.com.tr/villa-duvar-tasarimi.htm"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://studioluminant.com.tr/mimari-rolyef-panel-nedir.htm</loc>
