@@ -5,7 +5,7 @@
   "tr": {
     "file": "surec.htm",
     "title": "Özel Üretim Rölyef Panel: Çizimden Döküme | Studio Luminant",
-    "desc": "Çizimden dökme rölyef panele: derinlik haritası, yalama ışıkta onay, ana model, silikon kalıp, döküm ve artizan finish. Hepsi Sapanca'daki atölyemizde.",
+    "desc": "Çizimden dökme rölyef panele: derinlik haritası, yalama ışıkta onay, ana model, silikon kalıp, döküm ve astar. Hepsi Sapanca'daki atölyemizde.",
     "crumb": "Özel Üretim",
     "home": "Ana Sayfa",
     "eyebrow": "Özel Üretim",
@@ -18,13 +18,13 @@
       {"h": "Rölyef", "p": "Onaylanan yüzeyden 3D baskıyla ana model üretilir. Bu sayfadaki rölyef ise aynı derinlik haritasından gerçek zamanlı hesaplanır; imleci gezdirdikçe ya da sayfayı kaydırdıkça ışığın yönü ve gölgeler değişir.", "cap": "Gerçek zamanlı görünüm, yalama ışık", "alt": "Rölyefin gerçek zamanlı görünümü, yalama ışıkta"}
     ],
     "shop_eyebrow": "Atölyede",
-    "shop_tagline": "Ana modelden artizan finish'e kadar her adım Sapanca'daki atölyemizde atılır.",
+    "shop_tagline": "Ana modelden sandıklamaya kadar her adım Sapanca'daki atölyemizde atılır.",
     "frames": [
       {"cap": "Her dökümden önce silikon kalıba ayırıcı sürülür.", "alt": "Döküm öncesi beyaz silikon kalıba fırçayla ayırıcı madde sürülüyor"},
       {"cap": "Lumina PMAG™ kalıba dökülür ve priz alana kadar bekletilir.", "alt": "Kalıba dökülen PMAG yüzeyi atölye masasında elle düzleştiriliyor"},
       {"cap": "Kalıptan çıkarma: panel ilk kez görünür.", "alt": "Döküm rölyef panel beyaz silikon kalıptan kaldırılıyor, kalıptaki negatif form görünüyor"},
       {"cap": "Negatif kalıp ve pozitif panel yan yana. Kalıp, ana modelin ters açılarını da panele aktarır.", "alt": "Döküm rölyef paneller silikon kalıbın yanında: pozitif ve negatif form"},
-      {"cap": "Yüzey elde son kez düzeltilir, ardından artizan finish uygulanır.", "alt": "Döküm rölyef panelin yüzeyi tezgâhta elle zımparalanıyor"}
+      {"cap": "Yüzey elde son kez düzeltilir, ardından astarlanır.", "alt": "Döküm rölyef panelin yüzeyi tezgâhta elle zımparalanıyor"}
     ],
     "door_h": "Çiziminizi gönderin.",
     "door_p": "Bir eskiz, bir çizim ya da bir referans görsel; elinizde ne varsa başlamak için yeterli.",
@@ -36,7 +36,7 @@
   "en": {
     "file": "en/process.htm",
     "title": "Bespoke Relief Panels: Drawing to Cast | Studio Luminant",
-    "desc": "How a drawing becomes a cast relief panel: depth map, approval in raking light, master, silicone mould, cast and artisan finishes, all in our Sapanca workshop.",
+    "desc": "How a drawing becomes a cast relief panel: depth map, approval in raking light, master, silicone mould, casting and priming, all in our Sapanca workshop.",
     "crumb": "Bespoke",
     "home": "Home",
     "eyebrow": "Bespoke",
@@ -55,7 +55,7 @@
       {"cap": "Lumina PMAG™ is poured and left in the mould to set.", "alt": "Hands levelling the poured PMAG surface in a silicone mould on the workbench"},
       {"cap": "Demoulding: the first look at the panel.", "alt": "A cast relief panel lifted from its white silicone mould, the negative form visible below"},
       {"cap": "Negative and positive: the mould carries the master's undercuts into the panel.", "alt": "Cast relief panels standing beside their silicone mould: positive and negative form"},
-      {"cap": "The surface is dressed by hand, then the artisan finish goes on.", "alt": "Hand sanding the surface of a cast relief panel on the workbench"}
+      {"cap": "The surface is dressed by hand, then primed.", "alt": "Hand sanding the surface of a cast relief panel on the workbench"}
     ],
     "door_h": "Send your drawing.",
     "door_p": "Whatever you have is enough to start: a sketch, an elevation or a reference.",

@@ -111,22 +111,6 @@ const finishTypes = [{
     gradient: "linear-gradient(145deg, #333 0%, #444 100%)",
     overlay: null
   }
-}, {
-  id: "matte",
-  label: "Deep matte",
-  desc: "Keeps the panel's raw, as-cast texture.",
-  preview: {
-    gradient: "linear-gradient(145deg, #333 0%, #444 100%)",
-    overlay: null
-  }
-}, {
-  id: "traffic",
-  label: "High-traffic matte",
-  desc: "For high-traffic public areas.",
-  preview: {
-    gradient: "linear-gradient(145deg, #333 0%, #444 100%)",
-    overlay: null
-  }
 }];
 const colorPalettes = {
   pmag: [
@@ -185,7 +169,7 @@ const studioMaterials = [{
     uv: "—",
     chemical: "—",
     temperature: "—",
-    surface: (_pmag.finish ? _pmag.finish.en : "Any RAL / custom colour — artisan finishes, smooth or textured"),
+    surface: (_pmag.finish ? _pmag.finish.en : "Paint-ready — any RAL / custom colour on site"),
     customDesign: "Parametric design",
     acoustic: "—",
     antimicrobial: "—",
@@ -501,7 +485,7 @@ function RadarChart({
 function FinishColorSelector({
   materialId
 }) {
-  const [activeFinish, setActiveFinish] = useState("matte");
+  const [activeFinish, setActiveFinish] = useState("paint");
   const [activeColor, setActiveColor] = useState(null);
   const colorGroups = colorPalettes[materialId] || colorPalettes.pmag;
   const allColors = colorGroups.flatMap(g => g.colors);
