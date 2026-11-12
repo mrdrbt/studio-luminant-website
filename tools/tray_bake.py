@@ -50,7 +50,9 @@ DEFAULT_LIGHT = "ceiling"
 ORIGIN = {"fugato": (1500.0, 900.0), "glissando": (0.0, 300.0)}
 READ_SET = ("andante", "antiphon", "fioritura", "fugato", "glissando", "hocket", "mezzavoce", "ricercar")  # tray_read.py
 TRAY = ("accelerando", "andante", "antiphon", "fioritura", "fugato", "glissando", "gruppetto", "hemiola", "hocket",
-        "melisma", "mezzavoce", "ricercar", "rondeau")
+        "melisma", "mezzavoce", "ricercar", "rondeau", "sonado")
+# A design whose heightmap is not in the Library folder: the staging file its design page was baked from.
+HM_STAGING = {"sonado": "heightmaps/2026-11-07_092-sonado-web/092_sonado_hm16.png"}
 
 # A study's look depends on how its moulds are laid, so its window comes from the laid wall, not from one module. Each
 # heightmap is the one behind the design's published wall render (designs.json src.wall -> its .args.json), except
@@ -80,6 +82,7 @@ NORMAL_ENC = {
     "mezzavoce": ("avif", 85),
     "ricercar": ("avif", 85),
     "rondeau": ("avif", 85),
+    "sonado": ("avif", 85),
 }
 
 
@@ -97,7 +100,7 @@ def design_sources(library, slugs=TRAY):
         d = designs[slug]
         m = json.loads((ROOT / "assets/relief" / d["asset"] / "manifest.json").read_text(encoding="utf-8"))
         out[slug] = {
-            "hm": library / d["library"] / "heightmap.png",
+            "hm": staging / HM_STAGING[slug] if slug in HM_STAGING else library / d["library"] / "heightmap.png",
             "sheet_mm": (float(m["panelWmm"]), float(m["panelHmm"])),
             "relief_mm": float(m["reliefMm"]),
             "wrap": m.get("layout") == "field",

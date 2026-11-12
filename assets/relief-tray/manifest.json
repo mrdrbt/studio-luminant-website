@@ -335,6 +335,30 @@
           "heightPxPerMm": 0.64
         }
       }
+    },
+    "sonado": {
+      "texMm": [
+        600.0,
+        600.0
+      ],
+      "win": [
+        0.0,
+        0.0
+      ],
+      "reliefMm": 24.0,
+      "wrap": true,
+      "lods": {
+        "s": {
+          "normal": "normal-s.avif",
+          "height": "height-s.webp",
+          "heightPxPerMm": 0.4266666666666667
+        },
+        "l": {
+          "normal": "normal-l.avif",
+          "height": "height-l.webp",
+          "heightPxPerMm": 0.64
+        }
+      }
     }
   },
   "shade": {
