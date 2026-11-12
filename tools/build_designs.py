@@ -1003,6 +1003,18 @@ def dump_designs(data):
     return (json.dumps(data, ensure_ascii=False, indent=1) + "\n").replace("\n", "\r\n")
 
 
+def tray_missing(slug):
+    """The relight-tray files a listed design lacks (tools/tray_bake.py keeps its own design list). [] = baked."""
+    tray = SITE / "assets" / "relief-tray"
+    manifest = json.loads((tray / "manifest.json").read_text(encoding="utf-8"))
+    entry = manifest["designs"].get(slug)
+    if not entry:
+        return [f"relief-tray manifest entry (add {slug} to TRAY in tools/tray_bake.py, then bake --only {slug})"]
+    names = [f"poster-{light}-{px}.webp" for light in manifest["lights"] for px in manifest["posterPx"]]
+    names += [f for lod in entry["lods"].values() for f in (lod["normal"], lod["height"])]
+    return [f"image assets/relief-tray/{slug}/{n}" for n in names if not (tray / slug / n).exists()]
+
+
 def design_missing(d, library=None):
     """What a design entry still lacks before its page can go live: copy fields (TR + EN) and every image on disk. [] = ready."""
     kind = d.get("kind")
@@ -1046,6 +1058,8 @@ def design_missing(d, library=None):
     room = d.get("room")
     if room and not (SITE / room["file"]).exists():
         missing.append(f"image {room['file']}")
+    if d.get("slug"):
+        missing += tray_missing(d["slug"])
     return missing
 
 
@@ -1236,6 +1250,10 @@ def build(library, rebuild_images=False):
     data = json.loads(designs_path().read_text(encoding="utf-8"))
     for line in library_warnings(data, library):
         print(line)
+    no_tray = {d["slug"]: m for d in data["designs"] if (m := tray_missing(d["slug"]))}
+    if no_tray:
+        raise SystemExit("the Designs tray would show an empty cell for: "
+                         + "; ".join(f"{s}: {', '.join(m)}" for s, m in no_tray.items()))
     for d in data["designs"]:
         tr_path, en_path = SITE / urls(d["slug"])[0], SITE / urls(d["slug"])[1]
         tr_old, en_old = SITE / f"sistem-{d['slug']}.htm", SITE / "en" / f"system-{d['slug']}.htm"
