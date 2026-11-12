@@ -24,23 +24,35 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://studioluminant.com.tr/"}, {"@type": "ListItem", "position": 2, "name": "Atölye Tasarımları", "item": "https://studioluminant.com.tr/tasarimlar.htm"}]}
 </script>
-<link rel="stylesheet" href="relight-tray.css?v=d313cc00">
+<link rel="stylesheet" href="relight-tray.css?v=a233202e">
 </head>
 <body class="tray-page">
 <div id="site-nav" data-lang="tr" data-lang-url="en/designs.htm"></div>
 
 <main id="main">
-<section class="tray" data-tray="assets/relief-tray/" aria-label="Atölye Tasarımları">
-  <div class="tray-head">
-    <div class="eyebrow">Atölye Tasarımları</div>
+<section class="idx-hero">
+  <figure class="idx-hero__img"><picture><source media="(max-width: 899px)" srcset="assets/designs/accelerando/room-lobby-phone-640w.webp 640w, assets/designs/accelerando/room-lobby-phone.webp 840w" sizes="100vw" width="840" height="672"><img src="assets/designs/accelerando/room-lobby-wide.webp" width="1340" height="462" fetchpriority="high" alt="Accelerando, otel lobisi"></picture><figcaption><a href="tasarim-accelerando.htm">Accelerando</a> · Konsept: otel lobisi</figcaption></figure>
+  <div class="idx-hero__copy">
     <h1>Bizim çizdiğimiz <em>rölyefler.</em></h1>
+    <div class="idx-hero__side">
+      <p>Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin.<span class="idx-hero__more"> Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.</span></p>
+      <div class="idx-hero__links">
+        <a href="#tray-h" class="btn-primary">Tasarımları ışıkta karşılaştırın</a>
+        <a href="iletisim.htm?ask=layout" class="sys-link">Duvar yerleşimi isteyin</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="tray" id="tray" data-tray="assets/relief-tray/" aria-labelledby="tray-h">
+  <div class="tray-head">
+    <h2 id="tray-h">Tek ışık altında, yan yana.</h2>
     <p>Hangi tasarımın hangi ışıkta belirginleştiği, hangisinde düzleştiği yan yana görünür.</p>
   </div>
   <ul class="tray-grid">
     <li class="tray-cell" data-slug="accelerando">
       <a class="tray-sample" href="tasarim-accelerando.htm" tabindex="-1" draggable="false">
         <span class="tray-shadow" aria-hidden="true"></span>
-        <img class="tray-poster" src="assets/relief-tray/accelerando/poster-ceiling-560.webp" srcset="assets/relief-tray/accelerando/poster-ceiling-560.webp 560w, assets/relief-tray/accelerando/poster-ceiling-840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 640px) 31vw, 47vw" width="840" height="840" fetchpriority="high" draggable="false" alt="Accelerando: rölyefin 600 × 600 mm’lik bir alanı">
+        <img class="tray-poster" src="assets/relief-tray/accelerando/poster-ceiling-560.webp" srcset="assets/relief-tray/accelerando/poster-ceiling-560.webp 560w, assets/relief-tray/accelerando/poster-ceiling-840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 640px) 31vw, 47vw" width="840" height="840" loading="eager" draggable="false" alt="Accelerando: rölyefin 600 × 600 mm’lik bir alanı"><span class="tray-tag">lobideki duvar</span>
       </a>
       <div class="tray-label"><a class="tray-name" href="tasarim-accelerando.htm">Accelerando</a><span class="tray-depth">20 mm</span></div>
     </li>
@@ -168,7 +180,6 @@
 
 <section class="tray-list" aria-labelledby="tray-list-h">
   <h2 id="tray-list-h">Tasarımlar</h2>
-  <p>Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.</p>
   <p>Kafe, restoran ya da otel duvarı için tasarımları mekânda <a href="galeri.htm" class="sys-link">Galeri</a>’de görebilirsiniz.</p>
   <ul>
     <li><a href="tasarim-accelerando.htm"><span class="tray-list__name">Accelerando</span><span class="tray-list__line">Boyutu duvar boyunca kademeli olarak değişen hücrelerden bir alan çizdik.</span></a></li>
@@ -222,7 +233,7 @@
 
 <script src="relight-tray.js?v=bfd74e6f" defer></script>
 <script src="shared.js?v=3e01377b"></script>
-<script src="components.js?v=7d3011b6"></script>
+<script src="components.js?v=c4daa4db"></script>
 <script src="consent.js?v=c65ea30c"></script>
 
 </body>

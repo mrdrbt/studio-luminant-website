@@ -67,6 +67,7 @@ UI = {
            "door": "Bu tasarımın duvarınızda nasıl yerleşeceğini görmek için duvar ölçülerinizi iletin.",
            "own": "Kendi çiziminizle başlıyorsanız:", "prev": "Önceki tasarım", "next": "Sonraki tasarım",
            "tray_lede": "Hangi tasarımın hangi ışıkta belirginleştiği, hangisinde düzleştiği yan yana görünür.",
+           "tray_h2": "Tek ışık altında, yan yana.", "idx_to_tray": "Tasarımları ışıkta karşılaştırın", "idx_tile_tag": "lobideki duvar",
            "tray_hint": ("Noktayı sürükleyin ya da bir ışık seçin.", "Fareyi tasarımların üzerinde gezdirin ya da bir ışık seçin.", "Bir ışık seçin."),
            "tray_pad": "Işığın yönü ve yüksekliği", "tray_lights_label": "Hazır ışıklar",
            "tray_from": {"left": "soldan", "upleft": "sol üstten", "up": "üstten", "upright": "sağ üstten", "right": "sağdan"},
@@ -112,6 +113,7 @@ UI = {
            "door": "To see how this design would sit on your wall, send the wall dimensions.",
            "own": "Starting from your own drawing:", "prev": "Previous design", "next": "Next design",
            "tray_lede": "Side by side, you can see which design sharpens under which light and which one goes flat.",
+           "tray_h2": "Side by side, under one light.", "idx_to_tray": "Compare the designs in light", "idx_tile_tag": "the lobby wall",
            "tray_hint": ("Drag the dot, or pick a light.", "Move your mouse over the designs, or pick a light.", "Pick a light."),
            "tray_pad": "Direction and height of the light", "tray_lights_label": "Set lights",
            "tray_from": {"left": "from the left", "upleft": "from upper left", "up": "from above", "upright": "from upper right", "right": "from the right"},
@@ -851,6 +853,10 @@ def relief_share_page(d, lang, figs):
     return share_shell(d, lang, f"assets/relief/{d['asset']}/og.jpg", body, scripts)
 
 
+INDEX_HERO = ("accelerando", "assets/designs/accelerando/room-lobby.webp")   # Burak 2026-11-13: one room, full width, before the tray
+# Art-directed crops of it (Fable read, applied 2026-11-13): a wide band weighted to the wall, a 5:4 phone frame of wall, lamp and chairs
+INDEX_HERO_CROPS = {"wide": "assets/designs/accelerando/room-lobby-wide.webp", "phone": "assets/designs/accelerando/room-lobby-phone.webp",
+                    "phone_small": "assets/designs/accelerando/room-lobby-phone-640w.webp"}
 TRAY_EAGER = 6  # the first screen on a phone and on a laptop: not lazy, the first one is the LCP image
 
 
@@ -858,13 +864,14 @@ def tray_cell(d, lang, pos):
     u, c, pre = UI[lang], d[lang], "" if lang == "tr" else "../"
     page = u["page"].format(slug=d["slug"])
     stem = f"{pre}assets/relief-tray/{d['slug']}/poster-ceiling-"
-    load = 'loading="lazy"' if pos >= TRAY_EAGER else ('fetchpriority="high"' if pos == 0 else 'loading="eager"')
+    load = 'loading="lazy"' if pos >= TRAY_EAGER else 'loading="eager"'      # the hero room is the LCP image now
     depth = re.match(r"\d+ mm", c.get("depth", ""))
     depth_html = f'<span class="tray-depth">{depth.group(0)}</span>' if depth else ""
+    tag = f'<span class="tray-tag">{u["idx_tile_tag"]}</span>' if d["slug"] == INDEX_HERO[0] else ""     # the hero's wall, found again in the tray
     return f'''    <li class="tray-cell" data-slug="{d['slug']}">
       <a class="tray-sample" href="{page}" tabindex="-1" draggable="false">
         <span class="tray-shadow" aria-hidden="true"></span>
-        <img class="tray-poster" src="{stem}560.webp" srcset="{stem}560.webp 560w, {stem}840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 640px) 31vw, 47vw" width="840" height="840" {load} draggable="false" alt="{esc(u['tray_alt'].format(name=c['name']))}">
+        <img class="tray-poster" src="{stem}560.webp" srcset="{stem}560.webp 560w, {stem}840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 640px) 31vw, 47vw" width="840" height="840" {load} draggable="false" alt="{esc(u['tray_alt'].format(name=c['name']))}">{tag}
       </a>
       <div class="tray-label"><a class="tray-name" href="{page}">{esc(c['name'])}</a>{depth_html}</div>
     </li>'''
@@ -890,6 +897,35 @@ def tray_dock(u):
     </div>'''
 
 
+def index_hero(data, lang, pre):
+    """The index opens on one design in a room, full width, before the tray asks the visitor to work the light."""
+    u, (slug, file) = UI[lang], INDEX_HERO
+    d = next(x for x in data["designs"] if x["slug"] == slug)
+    room = next(r for r in [d.get("room")] + (d.get("rooms") or []) if r and r["file"] == file)
+    size = lambda f: Image.open(SITE / f).size
+    (ww, wh), (pw, ph), (sw, _) = size(INDEX_HERO_CROPS["wide"]), size(INDEX_HERO_CROPS["phone"]), size(INDEX_HERO_CROPS["phone_small"])
+    pic = (f'<picture><source media="(max-width: 899px)" srcset="{pre}{INDEX_HERO_CROPS["phone_small"]} {sw}w, {pre}{INDEX_HERO_CROPS["phone"]} {pw}w" '
+           f'sizes="100vw" width="{pw}" height="{ph}">'
+           f'<img src="{pre}{INDEX_HERO_CROPS["wide"]}" width="{ww}" height="{wh}" fetchpriority="high" alt="{esc(room[lang]["alt"])}"></picture>')
+    first, _, rest = u["idx_lede"].partition(". ")
+    lede = f'{first}.<span class="idx-hero__more"> {rest}</span>' if rest else u["idx_lede"]   # a phone keeps the first sentence
+    page = u["page"].format(slug=slug)
+    return f"""<section class="idx-hero">
+  <figure class="idx-hero__img">{pic}<figcaption><a href="{page}">{esc(d[lang]['name'])}</a> · {txt(room[lang]['cap'])}</figcaption></figure>
+  <div class="idx-hero__copy">
+    <h1>{u['idx_h1']}</h1>
+    <div class="idx-hero__side">
+      <p>{lede}</p>
+      <div class="idx-hero__links">
+        <a href="#tray-h" class="btn-primary">{u['idx_to_tray']}</a>
+        <a href="{u['contact']}?ask=layout" class="sys-link">{u['idx_samples']}</a>
+      </div>
+    </div>
+  </div>
+</section>
+"""
+
+
 def index_page(data, lang):
     u = UI[lang]
     pre = "" if lang == "tr" else "../"
@@ -909,10 +945,9 @@ def index_page(data, lang):
     page_head = head(lang, u["idx_title"], u["idx_meta"], url, tr_url, en_url, og, "", crumbs_for(lang, None, url))
     page_head = (page_head.replace("</head>", f'<link rel="stylesheet" href="{pre}relight-tray.css">\n</head>', 1)
                  .replace("<body>", '<body class="tray-page">', 1))
-    return (page_head + nav(lang, twin) + f"""<section class="tray" data-tray="{pre}assets/relief-tray/" aria-label="{u['lib']}">
+    return (page_head + nav(lang, twin) + index_hero(data, lang, pre) + f"""<section class="tray" id="tray" data-tray="{pre}assets/relief-tray/" aria-labelledby="tray-h">
   <div class="tray-head">
-    <div class="eyebrow">{u['lib']}</div>
-    <h1>{u['idx_h1']}</h1>
+    <h2 id="tray-h">{u['tray_h2']}</h2>
     <p>{u['tray_lede']}</p>
   </div>
   <ul class="tray-grid">
@@ -935,7 +970,6 @@ def index_page(data, lang):
 
 <section class="tray-list" aria-labelledby="tray-list-h">
   <h2 id="tray-list-h">{u['tray_list_h2']}</h2>
-  <p>{u['idx_lede']}</p>
   <p>{u['idx_rooms']}</p>
   <ul>
 {chr(10).join(rows)}
