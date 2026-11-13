@@ -8,7 +8,7 @@
 <title>Atölye Tasarımları — Duvar kompozisyonu</title>
 <link rel="icon" href="data:,">
 <link rel="preload" href="fonts/jost-var-latin-tr.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="style.css?v=2b81cc16">
+<link rel="stylesheet" href="style.css?v=442fb73a">
 <link rel="modulepreload" href="lib/composer_layout.js?v=b748dc4d">
 <link rel="modulepreload" href="price.js?v=59a918cf">
 <link rel="modulepreload" href="light.js?v=aa3008dc">
@@ -24,6 +24,7 @@
   (function (p) {
     var m = p.get("mode");
     document.documentElement.dataset.mode = p.get("view") !== "client" && (m === "quote" || (m !== "full" && !p.get("c"))) ? "quote" : "full";
+    if (p.get("l") === "en") document.documentElement.lang = "en";      // pickLocale's rule, early: the site's cookie banner reads lang once at load
   })(new URLSearchParams(location.search));
 </script>
 <script src="lib/solar.js?v=4f22f0ee"></script>
@@ -297,9 +298,10 @@
     </section>
   </div>
 </main>
-<footer class="maker-foot"><span data-s="maker_label"></span>: <b data-s="maker_value"></b></footer>
+<footer class="maker-foot"><span data-s="maker_label"></span>: <b data-s="maker_value"></b><button type="button" class="cookie-link" data-cookie-settings data-s="cookie_settings"></button></footer>
 
 <div id="toast" class="toast" hidden></div>
 <div id="live" class="vh" role="status" aria-live="polite" aria-atomic="true"></div>
+<script src="../consent.js?v=c65ea30c"></script>
 </body>
 </html>

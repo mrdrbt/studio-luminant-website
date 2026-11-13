@@ -334,6 +334,9 @@ select:hover { border-color: var(--ink); }
 .cell.maker dd { font-size: var(--t-14); color: var(--ink-2); }
 .maker-foot { padding: var(--s-5) var(--gutter) calc(104px + env(safe-area-inset-bottom)); font-size: var(--t-14); color: var(--ink-3); border-top: 1px solid var(--hair); }
 .maker-foot b { color: var(--ink-2); font-weight: 500; }
+.maker-foot .cookie-link { margin-left: 1em; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+/* The website's cookie banner (consent.js, injected by the site copy only) styles its buttons with shared.css tokens the Composer does not load. */
+#sl-consent { --btn-fs: 11px; --btn-ls: 0.22em; --cta-bg: #8E4426; --cta-bg-hover: #A5532F; --cta-fg: #F6F1E6; }
 .broken-link .maker-foot { border-top: 0; }
 .lay.room .antet .cell:not(.r) { border-left: 0; }   /* A-02 marks its right-hand cell with .r; the A-03 2n rule does not apply */
 .cell:first-child { border-top: 0; }

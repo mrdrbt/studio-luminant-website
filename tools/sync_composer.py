@@ -11,6 +11,10 @@ import graph changes every URL above it. The pages' own includes are then stampe
 
 Skipped: _comp/ (a design-comp scratch page, not part of the tool).
 
+Site-only: the copy of index.html gets the site's cookie banner (../consent.js, which loads GA4 after consent) and a
+cookie-preferences link in its footer. They live here, not in the umbrella source, because the Composer's own test server has
+no consent.js and its runners fail on the 404.
+
 Usage (website repo root):  python tools/sync_composer.py [--src <composer public dir>]
 """
 import argparse
@@ -26,6 +30,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DST = ROOT / "tasarla"
 DEFAULT_SRC = ROOT.parent.parent / "10 — AI & Tools" / "catalog_composer" / "public"
 SKIP = {"_comp"}
+SITE_ONLY = [   # (anchor in tasarla/index.html, text inserted before it)
+    ("</footer>", '<button type="button" class="cookie-link" data-cookie-settings data-s="cookie_settings"></button>'),
+    ("</body>", '<script src="../consent.js"></script>' + "\n"),
+]
 IMPORT = re.compile(r"""(\bfrom\s*|\bimport\s*\(\s*|\bimport\s+)(["'])(\.{1,2}/[^"'?]+\.js)(?:\?[^"']*)?\2""")
 
 
@@ -39,6 +47,17 @@ def copy_tree(src):
         out = DST / rel
         out.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(p, out)
+
+
+def add_site_only():
+    """Insert the site-only markup into tasarla/index.html. Raises unless each anchor occurs exactly once."""
+    page = DST / "index.html"
+    text = page.read_text(encoding="utf-8")
+    for anchor, insert in SITE_ONLY:
+        if text.count(anchor) != 1:
+            raise SystemExit(f"tasarla/index.html: expected one {anchor}, found {text.count(anchor)}")
+        text = text.replace(anchor, insert + anchor)
+    page.write_text(text, encoding="utf-8", newline="")
 
 
 def stamp_modules():
@@ -78,6 +97,7 @@ def main():
     if not (a.src / "index.html").is_file():
         raise SystemExit(f"no Composer at {a.src}")
     copy_tree(a.src)
+    add_site_only()
     n = stamp_modules()
     stamp_pages(apply=True)
     files = sum(1 for p in DST.rglob("*") if p.is_file())
