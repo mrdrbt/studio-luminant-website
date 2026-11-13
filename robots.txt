@@ -1,5 +1,8 @@
 # ─── Default policy ───
+# Content Signals (contentsignals.org), repeated in each named group below (a bot with its own group ignores *):
+# search, AI answers and training are all welcome.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 Disallow: /tools/
@@ -14,51 +17,62 @@ Disallow: /_build_process/
 
 # OpenAI (ChatGPT search index, live browsing, model training)
 User-agent: OAI-SearchBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 User-agent: ChatGPT-User
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 User-agent: GPTBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 # Anthropic (Claude)
 User-agent: ClaudeBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 User-agent: Claude-Web
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 User-agent: anthropic-ai
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 # Perplexity
 User-agent: PerplexityBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 User-agent: Perplexity-User
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 # Google AI (Gemini / AI Overviews training signal)
 User-agent: Google-Extended
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 # Apple Intelligence
 User-agent: Applebot-Extended
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 
 # Common Crawl (feeds many LLM training sets)
 User-agent: CCBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /downloads/
 

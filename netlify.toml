@@ -81,6 +81,14 @@
   [headers.values]
     X-Robots-Tag = "noindex"
 
+# Markdown for Agents copies (<page>.htm.md, tools/page_markdown.py): served to Accept: text/markdown by
+# netlify/edge-functions/markdown.ts; the direct .md URLs stay out of search so they never compete with the pages.
+[[headers]]
+  for = "/*.md"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Content-Type = "text/markdown; charset=utf-8"
+
 # ─── Homepage rewrites (serve actual content at clean URLs) ───
 # Fixes /en/ soft-404 in Google Search Console
 # force = true overrides the existing index.html meta-refresh files
