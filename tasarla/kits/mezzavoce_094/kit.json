@@ -1,0 +1,164 @@
+{
+  "kit": "mezzavoce_094",
+  "design": "MEZ",
+  "line": 12,
+  "module_mm": [
+    1200,
+    600
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 1200,
+  "px_h": 600,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.0002746623941405356,
+  "base_level": 65535,
+  "kit_relief_mm": 18.0,
+  "moulds": {
+    "A": {
+      "source": "VAULT\\Library\\Relief\\094_pillow-r4c\\heightmap.png",
+      "sha256": "ab699b4e7bf4fdfab3330a9f6f40954ac52121a9442f0c75df2290dc36ce7f5e",
+      "registry": "current",
+      "source_relief_mm": 18.0,
+      "id": "A",
+      "file": "A.png",
+      "px_w": 1200,
+      "px_h": 600,
+      "relief_mm": 17.9997
+    }
+  },
+  "descriptor": {
+    "kit": "mezzavoce_094",
+    "design": "MEZ",
+    "line": 12,
+    "module_mm": [
+      1200,
+      600
+    ],
+    "engine": "plan",
+    "labels": {
+      "A": "A"
+    },
+    "source": "Mezzavoce (Library 094 pillow-r4c), lay: stack, rotation none, 1 mould: Library 094 manifest laying ('stack (pillow_r4C_card.png.card.json: plain stack)'); seam check SEAMLESS h1.41 v1.37. Gallery plan 3 x 4 modules (3.6 x 2.4 m); any other wall size continues the lay by its period (resize: tile, period 1 x 1). WIP in the composer: price open, no price.",
+    "moulds": [
+      {
+        "id": "A",
+        "turns": [
+          0
+        ],
+        "role": "field"
+      }
+    ],
+    "plan": {
+      "cols": 3,
+      "rows": 4,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "resize": {
+      "method": "tile",
+      "period": [
+        1,
+        1
+      ]
+    }
+  },
+  "baked": "2026-11-03",
+  "mm_per_level_receipt": "18 mm over the full 16-bit range, 65535 = tallest = face 0 mm: Library 094 generator_script.py field() = clip(z / zmax, 0, 1) x relief_mm, build() saves Hf (= field at relief 1) x 65535 via relief_toolkit.save_render; manifest relief_mm 18.0 (the script's RELIEF_MM 8 is its placeholder, the file was built with --relief-mm 18); file spans 0..65535; STL z-span 28 = 18 + 10 base; STL top height vs heightmap level correlates +0.998. mm_per_level = 18 / 65535.",
+  "plan_source": {
+    "source": "catalog_composer/allowlist.json",
+    "key": "mezzavoce_094.plan_cells",
+    "sha256": "29ca4110b63b3faa43cb8e695b17b6ff3e168d75f96bfaa4fc4cd5011c61e425"
+  }
+}

@@ -26,13 +26,16 @@ from page_markdown import page_markdown
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_site"
 
-PUBLIC_DIRS = {"assets", "downloads", "en", "fonts", "images", "img", "pdf", "vendor", "video"}
+PUBLIC_DIRS = {"assets", "downloads", "en", "fonts", "images", "img", "pdf", "tasarla", "vendor", "video"}
 INTERNAL_DIRS = {"_site", "docs", "netlify", "tools"}
 PUBLIC_EXTS = {".avif", ".css", ".htm", ".html", ".ico", ".jpeg", ".jpg", ".js", ".mp4", ".pdf", ".png", ".svg",
                ".webp", ".woff2", ".xml"}
 INTERNAL_EXTS = {".json", ".md", ".py", ".toml"}
 # Named exceptions to the extension lists: relief-light.js fetches manifest.json at runtime.
 PUBLIC_NAMES = {"llms.txt", "manifest.json", "robots.txt"}
+# tasarla/ is the Catalog Composer (tools/sync_composer.py): it fetches its config, strings and kits as .json at runtime,
+# and ships its font with the font's licence.
+COMPOSER_EXTS = {".json", ".txt", ".woff"}
 
 
 def redirected_away():
@@ -71,6 +74,8 @@ def is_public(rel):
     if len(parts) > 1 and parts[0] not in PUBLIC_DIRS:
         raise ValueError(f"{rel}: folder {parts[0]}/ is in neither PUBLIC_DIRS nor INTERNAL_DIRS")
     ext = rel.suffix.lower()
+    if parts[0] == "tasarla" and ext in COMPOSER_EXTS:
+        return True
     if rel.name in PUBLIC_NAMES or ext in PUBLIC_EXTS:
         return True
     if ext in INTERNAL_EXTS:
@@ -97,7 +102,7 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(path, target)
         published += 1
-        if rel.suffix.lower() in (".htm", ".html"):
+        if rel.suffix.lower() in (".htm", ".html") and rel.parts[0] != "tasarla":   # the Composer is an app: its text is drawn by script
             markdown += write_markdown(rel, path.read_text(encoding="utf-8"))
     if unknown:
         print("publish_site: build stopped, unclassified files:\n  " + "\n  ".join(unknown), file=sys.stderr)

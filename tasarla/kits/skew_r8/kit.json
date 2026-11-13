@@ -1,0 +1,532 @@
+{
+  "kit": "skew_r8",
+  "design": "SKW",
+  "line": 20,
+  "module_mm": [
+    200,
+    200
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 200,
+  "px_h": 200,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.0013275349050125887,
+  "base_level": 65535,
+  "kit_relief_mm": 87.0,
+  "moulds": {
+    "A1": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Skew\\mould_A1_hm16.png",
+      "sha256": "d50ad3e3395548fc9f7b34a275c66388be471ce72826e517dde16502c1b23af3",
+      "registry": "wip",
+      "source_relief_mm": 87.0,
+      "id": "A1",
+      "file": "A1.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 87.0
+    },
+    "A2": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Skew\\mould_A2_hm16.png",
+      "sha256": "18b444b505593b4ade54102cd0faae71e7bc33472e4d2acc0a85d11abafad712",
+      "registry": "wip",
+      "source_relief_mm": 87.0,
+      "id": "A2",
+      "file": "A2.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 87.0
+    },
+    "A3": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Skew\\mould_A3_hm16.png",
+      "sha256": "2daa991458d16cde58278f08eeb69bf291d9a410db4dd97c8f9932d858f31f1e",
+      "registry": "wip",
+      "source_relief_mm": 87.0,
+      "id": "A3",
+      "file": "A3.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 87.0
+    },
+    "A4": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Skew\\mould_A4_hm16.png",
+      "sha256": "1c9386d400dd6c0374762420b6e7a64acd2b60f35ea90256ea075923b41335eb",
+      "registry": "wip",
+      "source_relief_mm": 87.0,
+      "id": "A4",
+      "file": "A4.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 87.0
+    },
+    "A1F": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Skew\\mould_A1F_hm16.png",
+      "sha256": "00940d643184c9bee3bf3750d86ac76a6d22661ea2dca663f2d93302d081651c",
+      "registry": "wip",
+      "source_relief_mm": 87.0,
+      "id": "A1F",
+      "file": "A1F.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 87.0
+    },
+    "A2F": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Skew\\mould_A2F_hm16.png",
+      "sha256": "29437c2e4dc8aab658d557b72e87e7a9885ff5309929666be0ac027d2e4b021f",
+      "registry": "wip",
+      "source_relief_mm": 87.0,
+      "id": "A2F",
+      "file": "A2F.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 87.0
+    },
+    "A3F": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Skew\\mould_A3F_hm16.png",
+      "sha256": "668ae29304d93766de15bd2d47b2d1615cc23480c7765cba417da7b6f8907b10",
+      "registry": "wip",
+      "source_relief_mm": 87.0,
+      "id": "A3F",
+      "file": "A3F.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 87.0
+    },
+    "A4F": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Skew\\mould_A4F_hm16.png",
+      "sha256": "5b875deb0aa45f88949be299938c67880a11773ba8a731a3c905186a179a0eb4",
+      "registry": "wip",
+      "source_relief_mm": 87.0,
+      "id": "A4F",
+      "file": "A4F.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 87.0
+    }
+  },
+  "descriptor": {
+    "kit": "skew_r8",
+    "design": "SKW",
+    "line": 20,
+    "module_mm": [
+      200,
+      200
+    ],
+    "engine": "plan",
+    "preview": true,
+    "source": "FACE PREVIEW of Skew r8 (2026-10-20_skew_r8_100mm, A1-A4, 200 mm pieces, 100 mm bodies): the first surface seen from the front (z-buffer, 1 px/mm), openings at the kit minimum level, never filled. A turned-over piece (state R0F / R2F) shows its back face, baked from below and mirrored, as <piece>F. Lay = lays.booth, 10 x 5 modules (2.0 x 1.0 m), fixed plan; the cap rail, the 100 mm depth, the waist and the rod channels are not in the preview. Public letters A-D = the website's Hemiola list; A' = the turned-over face of A. Stand-in: WIP, no registry entry. See FACTORY/00 - Staging/2026-10-26_composer_studio_designs/build_skew_face_kit.py.",
+    "labels": {
+      "A1": "A",
+      "A2": "B",
+      "A3": "C",
+      "A4": "D",
+      "A1F": "A′",
+      "A2F": "B′",
+      "A3F": "C′",
+      "A4F": "D′"
+    },
+    "moulds": [
+      {
+        "id": "A1",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A2",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A3",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A4",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A1F",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A2F",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A3F",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A4F",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      }
+    ],
+    "plan": {
+      "cols": 10,
+      "rows": 5,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A2F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A4F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A3F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3F",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A3",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A4F",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "baked": "2026-10-26",
+  "mm_per_level_receipt": "FACE PREVIEW. level 65535 = the proudest lip of any face (z 117.02 mm in the world frame), 0 = an opening (no material in the column), VOID_MARGIN_MM 20.0 below the deepest real surface; mm = (level - 65535) * 0.00132753",
+  "plan_source": {
+    "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\plans_skew.json",
+    "key": "skew_r8",
+    "sha256": "011e3e561c88c553977737574aa398bcd1f37230976bf24b9b048201695baaba"
+  }
+}

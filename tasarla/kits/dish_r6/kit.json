@@ -1,0 +1,595 @@
+{
+  "kit": "dish_r6",
+  "design": "DSH",
+  "line": 20,
+  "module_mm": [
+    200,
+    200
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 200,
+  "px_h": 200,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.0002746623941405356,
+  "base_level": 65535,
+  "kit_relief_mm": 18.0,
+  "moulds": {
+    "A": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Dish\\mould_A_hm16.png",
+      "sha256": "2621dc012ad7d4dd804d0ec4edb40e07ad70226e6e6c89f2209f028c9b52a66e",
+      "registry": "wip",
+      "source_relief_mm": 18.0,
+      "id": "A",
+      "file": "A.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.0
+    },
+    "C": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Dish\\mould_C_hm16.png",
+      "sha256": "328fe859fe206f972bb2c49535a8ed5117f055037ac9ef267726d371ec43ad86",
+      "registry": "wip",
+      "source_relief_mm": 18.0,
+      "id": "C",
+      "file": "C.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.0
+    },
+    "D": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Dish\\mould_D_hm16.png",
+      "sha256": "8d2273db29b69b2ca81a18bd71c8f206135e2e36edfaf30d7f377818b5217379",
+      "registry": "revision",
+      "source_relief_mm": 18.0,
+      "id": "D",
+      "file": "D.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.0
+    },
+    "0": {
+      "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\Dish\\mould_0_hm16.png",
+      "sha256": "680f162326c2da7817b24a8c24543922c8134ccbe6f114609022f899020ce3dd",
+      "registry": "revision",
+      "source_relief_mm": 18.0,
+      "id": "0",
+      "file": "0.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.0
+    }
+  },
+  "descriptor": {
+    "kit": "dish_r6",
+    "design": "DSH",
+    "line": 20,
+    "module_mm": [
+      200,
+      200
+    ],
+    "engine": "plan",
+    "source": "Dish r3 moulds A, C, D (2026-10-19_dish_r3, 200 mm, 18 mm relief; copied read-only to 2026-10-26_composer_studio_designs/Dish) + the blank 0 as land (level 0); lay = composed-blank 6x3 wall of Dish r6 (2026-10-20_dish_r6 metrics lays.composed.6x3.map, 12 x 6 modules = 2.4 x 1.2 m, checked cell for cell against composed-blank_wall6x3_hm16.png by build_dish_kit.py, max level diff 0), every piece turn 0. Any other wall size continues the lay by its own period (resize: tile, whole plan). Public name Rondeau; public mould letters from site-v3/tools/designs.json. Stand-in: WIP, no registry entry.",
+    "labels": {
+      "A": "A",
+      "C": "B",
+      "D": "C"
+    },
+    "moulds": [
+      {
+        "id": "A",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "C",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "D",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "0",
+        "turns": [
+          0
+        ],
+        "role": "plain"
+      }
+    ],
+    "resize": {
+      "method": "tile"
+    },
+    "plan": {
+      "cols": 12,
+      "rows": 6,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "C",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "baked": "2026-10-26",
+  "mm_per_level_receipt": "Dish r3 metrics.json: hm16 0 = land 0 mm, 65535 = +relief 18 mm (white = proud); here 65535 = the rim = face 0 mm, land = -18 mm; blank 0 = land (level 0)",
+  "plan_source": {
+    "source": "FACTORY\\00 — Staging\\2026-10-26_composer_studio_designs\\plans.json",
+    "key": "dish_r6",
+    "sha256": "55ec5360379380c4afb1640de2127abe921512ef77fc5de3080524290a576e12"
+  }
+}

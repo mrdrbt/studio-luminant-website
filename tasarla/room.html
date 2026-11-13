@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>A-02 Room</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#edeeea">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css?v=2b81cc16">
+<script src="lib/graze_shader.js?v=bd99247f"></script>
+<script type="module" src="room.js?v=1b8447e0"></script>
+</head>
+<body>
+<div id="sheetbar"></div>
+<main class="lay room">
+  <div class="lay-head">
+    <h1><b>A-02</b> <span id="r-title">Oda</span></h1>
+  </div>
+  <div id="stage"><canvas id="wall" role="img"></canvas><svg id="cues" aria-hidden="true" focusable="false"></svg><div id="cue-tags" aria-hidden="true"></div></div>
+  <p class="room-note" id="r-note" hidden></p>
+  <p class="room-cap" id="r-cap"></p>
+  <p class="note" id="r-crop" hidden></p>
+  <div class="room-grid">
+    <div class="field">
+      <div class="field-head"><h2 class="h" id="r-pick-h">Oda</h2></div>
+      <nav id="rooms" class="idx" aria-label="rooms"></nav>
+      <p id="err" class="note err" role="alert" hidden></p>
+    </div>
+    <div class="field">
+      <div class="antet">
+        <dl>
+          <div class="cell span code" id="r-code-cell"><dt id="r-code-l">Duvar kodu</dt><dd><span class="code-v" id="r-code"></span></dd></div>
+          <div class="cell"><dt id="r-design-l">Tasarım</dt><dd id="r-design"></dd></div>
+          <div class="cell r"><dt id="r-colour-l">Finish</dt><dd id="r-colour"></dd></div>
+          <div class="cell span"><dt id="r-size-l">Duvar ölçüsü</dt><dd id="r-size"></dd></div>
+          <div class="cell span"><dt id="r-set-l">Paftalar</dt><dd class="set" id="r-set"></dd></div>
+          <div class="cell span maker"><dt id="r-maker-l"></dt><dd id="r-maker"></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

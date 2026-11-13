@@ -1,0 +1,236 @@
+{
+  "kit": "hocket_095",
+  "design": "HOC",
+  "line": 66,
+  "module_mm": [
+    600,
+    600
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 600,
+  "px_h": 600,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.00024414435034714275,
+  "base_level": 65535,
+  "kit_relief_mm": 16.0,
+  "moulds": {
+    "A": {
+      "source": "VAULT\\Library\\Relief\\095_weave-twill-600\\heightmap.png",
+      "sha256": "580b5dc2be5eec55a52b90e8c2640e0c2500c5591627e01fc485ab1610ece8fe",
+      "registry": "current",
+      "source_relief_mm": 16.0,
+      "id": "A",
+      "file": "A.png",
+      "px_w": 600,
+      "px_h": 600,
+      "relief_mm": 16.0
+    }
+  },
+  "descriptor": {
+    "kit": "hocket_095",
+    "design": "HOC",
+    "line": 66,
+    "module_mm": [
+      600,
+      600
+    ],
+    "engine": "plan",
+    "labels": {
+      "A": "A"
+    },
+    "source": "Hocket (Library 095 weave-twill-600), lay: stack, rotation none, 1 mould: Library 095 manifest laying ('stack ... B tiled 4x2'); seam check PASS. Gallery plan 6 x 4 modules (3.6 x 2.4 m); any other wall size continues the lay by its period (resize: tile, period 1 x 1). WIP in the composer: price open, no price.",
+    "moulds": [
+      {
+        "id": "A",
+        "turns": [
+          0
+        ],
+        "role": "field"
+      }
+    ],
+    "plan": {
+      "cols": 6,
+      "rows": 4,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "resize": {
+      "method": "tile",
+      "period": [
+        1,
+        1
+      ]
+    }
+  },
+  "baked": "2026-11-03",
+  "mm_per_level_receipt": "16 mm over the full 16-bit range, 65535 = tallest = face 0 mm: Library 095 generator_script.py build() sets Hf = field(relief_mm)/relief clipped 0..1 and relief_toolkit.save_render writes (Hf x 65535) as uint16; manifest relief_mm 16.0; file spans 0..65535; STL z-span 26 = 16 + 10 base; STL top height vs heightmap level correlates +0.953. mm_per_level = 16 / 65535.",
+  "plan_source": {
+    "source": "catalog_composer/allowlist.json",
+    "key": "hocket_095.plan_cells",
+    "sha256": "b1092e0f9cbd5a7e44689ec8867f62ca10768a56a51bb79f9644180c2e373217"
+  }
+}

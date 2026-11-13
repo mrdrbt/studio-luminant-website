@@ -1,0 +1,124 @@
+{
+ "_status": "DRAFT - placeholder panel, Blender-projected corners",
+ "id": "cafe_counter",
+ "label": {
+  "tr": "Kafe tezgâhı",
+  "en": "Café counter"
+ },
+ "venue": "cafe",
+ "plate": "plate.jpg",
+ "plate_px": [
+  1600,
+  1067
+ ],
+ "plate_bytes": 60072,
+ "quad_px": [
+  [
+   300.975,
+   83.7
+  ],
+  [
+   1299.025,
+   83.7
+  ],
+  [
+   1299.025,
+   582.726
+  ],
+  [
+   300.975,
+   582.726
+  ]
+ ],
+ "quad_order": "TL,TR,BR,BL",
+ "wall_mm": [
+  3200,
+  1600
+ ],
+ "key_light": {
+  "az_deg": 90.0,
+  "el_deg": 5.458,
+  "frame": "wall-local: az 0 = from image-right, 90 = from above; el from the wall plane",
+  "source": "wash_S",
+  "distance_m": 1.577
+ },
+ "ambient": {
+  "ambient_frac": 0.504,
+  "exposure_gain": 1.0,
+  "placeholder_albedo": 0.5,
+  "plate_wall_mean_linear": 0.09379,
+  "view_transform": "Standard",
+  "blender_exposure": -0.3,
+  "method": {
+   "name": "umbra_floor_median",
+   "seed_floor": 0.0502,
+   "umbra_px": 50009,
+   "umbra_share_of_wall": 0.1036,
+   "truth_p10_p90_in_umbra": [
+    0.3132,
+    0.7462
+   ],
+   "umbra_slack": 1.15
+  },
+  "why": "median of truth luma / flat luma over the pixels where the page's N-pass extended source delivers no direct light, measured on this room's own Blender truth render (default composition as real displaced geometry); same method for every room"
+ },
+ "panel_albedo": {
+  "linear": 0.5,
+  "why": "Base Color of the Blender material 'placeholder' that the plate's feature-wall panel was rendered with (room_scene.py RHO_PLACEHOLDER, linear RGB 0.5,0.5,0.5, Principled BSDF, roughness 0.9). The page tints the plate by swatch_linear / this, so a swatch of albedo 0.5 reproduces the plate unchanged. The room light is not altered."
+ },
+ "note": {
+  "tr": "Kafe, tezgâh arkası duvar (3200 × 1600 mm panel, tezgâh üstünden 200 mm yukarıda); ışık: tavan lineer aydınlatma; kamera göz hizasında, 1,6 m.",
+  "en": "Café, wall behind the counter (3200 × 1600 mm panel, 200 mm above the counter top); light: ceiling linear wash; camera at 1.6 m eye height.",
+  "status": "DRAFT"
+ },
+ "scale_cues": {
+  "wall_width": {
+   "a_px": [
+    300.97,
+    613.91
+   ],
+   "b_px": [
+    1299.03,
+    613.91
+   ],
+   "mm": 3200,
+   "below_panel_edge_mm": 100
+  },
+  "figure": {
+   "floor_px": [
+    471.5,
+    1045.14
+   ],
+   "head_px": [
+    471.5,
+    349.49
+   ],
+   "mm": 1800,
+   "from_wall_mm": 1100,
+   "u_mm": 950
+  },
+  "counter_height": {
+   "floor_px": [
+    1414.84,
+    988.92
+   ],
+   "top_px": [
+    1414.84,
+    672.72
+   ],
+   "mm": 900
+  },
+  "why": "camera-projected through the Blender render camera (room_scene.py cues_px), plate pixels. wall_width: horizontal string 100 mm under the panel's lower edge, on the wall plane; counter_height: vertical string at the counter's front edge depth, floor to counter top; figure: a 1.8 m standing figure, floor point + head point, at the stated distance from the wall plane."
+ },
+ "render": {
+  "engine": "blender cycles",
+  "jpeg_quality": 92
+ },
+ "key_extent_deg": {
+  "az_half": 49.217,
+  "el_half": 2.701,
+  "centre_az": 90.0,
+  "centre_el": 4.909,
+  "why": "wash_S is a Blender AREA RECTANGLE 3.6 x 0.12 m at the wall; 81 emitter samples seen from the panel centre in the wall frame; half-extent = (max - min) / 2 per axis. The page jitters over this az/el box (the emitter's az-el correlation is dropped)."
+ }
+}

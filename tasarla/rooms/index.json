@@ -1,0 +1,33 @@
+{
+ "_status": "DRAFT",
+ "caption": {
+  "tr": "Örnek odalar. Duvar, bu kompozisyonun gerçek geometrisinden her odanın kendi ışığında hesaplanarak oluşturulur; odalar yalnızca örnektir.",
+  "en": "Example rooms. The wall is rendered from this composition's real geometry under each room's own light; the rooms themselves are only examples."
+ },
+ "rooms": [
+  {
+   "id": "cafe_counter",
+   "label": {
+    "tr": "Kafe tezgâhı",
+    "en": "Café counter"
+   }
+  },
+  {
+   "id": "clinic_093",
+   "label": {
+    "tr": "Klinik resepsiyonu",
+    "en": "Clinic reception"
+   },
+   "designs": [
+    "L093"
+   ]
+  },
+  {
+   "id": "clinic_reception",
+   "label": {
+    "tr": "Klinik resepsiyonu",
+    "en": "Clinic reception"
+   }
+  }
+ ]
+}

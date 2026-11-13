@@ -1,0 +1,388 @@
+{
+  "_status": "DRAFT — placeholders marked; every number here is read by the page, none are inline",
+  "line_name": {
+    "tr": "Atölye Tasarımları",
+    "en": "Studio Designs"
+  },
+  "default_locale": "tr",
+  "default_code": "ANT-2E2G-SJJX-TRRA-BQS9-RH",
+  "default_size": {
+    "OPT": { "cols": 6, "rows": 4 },
+    "AND": { "cols": 2, "rows": 2 },
+    "FIO": { "cols": 2, "rows": 2 },
+    "GLI": { "cols": 2, "rows": 4 },
+    "CRE": { "cols": 10, "rows": 5 },
+    "HOC": { "cols": 3, "rows": 2 },
+    "RIC": { "cols": 2, "rows": 2 }
+  },
+  "_default_size": "The wall a design opens on, in modules (Fable blind read 2026-11-03, Burak approved): chosen by the design on its first pick (unless the architect typed a wall) and for a code-less open. Glissando is modelled as 600 x 600 halves top/bottom, so 2 x 4 modules = 2 plates wide x 2 plates high (1.2 x 2.4 m, whole lay period). A design not listed keeps its gallery plan (plans) or 8 x 4 (bond / corners); Hemiola and Fugato are fixed plans and never read this. A share code carries its own cols/rows and ignores it. default_code follows the Accelerando default (6 x 4).",
+  "designs": [
+    "OPT",
+    "AND",
+    "ANT",
+    "FIO",
+    "L093",
+    "GLI",
+    "CRE",
+    "SKW",
+    "HOC",
+    "ROT",
+    "MEZ",
+    "RIC",
+    "DSH",
+    "SON"
+  ],
+  "_designs": "The Studio Designs the picker offers, in order (alphabetical by public name: Accelerando OPT, Andante AND, Antiphon ANT, Fioritura FIO, Fugato L093, Glissando GLI, Gruppetto CRE, Hemiola SKW, Hocket HOC, Melisma ROT, Mezzavoce MEZ, Ricercar RIC, Rondeau DSH, Sonado SON). A design with no baked kit is skipped. SKW (Hemiola) is a face preview: its kit is the front face of the Skew r8 screen as a height field, and every place it is named says so (strings preview_label). Fugato keeps its first code L093 (Library 093 cove-course) so old codes still open it. Kits not listed here (plates_r3, throat_r2) are hidden from the picker; their files stay, and an old code for one opens the default wall.",
+  "finishes": [{"id": "CANVAS", "swatch": "#E3DCCD"}],
+  "finishes_held": [{"id": "VEIL", "swatch": "#E3DCCD"}, {"id": "GRIT", "swatch": "#E3DCCD"}],
+  "_finishes_held": "Burak 2026-11-13: only paint-ready (Canvas) is offered for now. Veil / Grit wait here; move them back into finishes to offer them again. The test fixture serves them, so the finish-switching paths stay tested.",
+  "_finishes": "The surface choice (Burak 2026-10-26): Canvas = paint-ready, Veil / Grit = finished (artisan finishes). Only these three are offered. Pigment colours are on hold. The composition code's tag slot (comp.colour) now carries the finish id. swatch = the one neutral on-screen tone for every finish: the preview shows no finish and no pigment.",
+  "pricing": {
+    "currency": "TRY",
+    "sets": {
+      "OPT": null,
+      "AND": null,
+      "ANT": null,
+      "FIO": null,
+      "L093": null,
+      "GLI": null,
+      "CRE": null,
+      "SKW": null,
+      "HOC": null,
+      "ROT": null,
+      "MEZ": null,
+      "RIC": null,
+      "DSH": null,
+      "SON": null
+    },
+    "_sets": "Keep every value null (#121): this file is public, so a number here can be read by anyone with no email given. Prices live in VAULT/05 Studio_Designs_Price_Register.md and reach a buyer only in the PDF offer. The price code stays for a later private route.",
+    "kdv_rate": 0.2,
+    "moq_m2_per_design": {
+      "OPT": 7.5,
+      "AND": 7.5,
+      "ANT": 5,
+      "FIO": 5,
+      "L093": 7.5,
+      "GLI": 7.5,
+      "CRE": 5,
+      "SKW": 5,
+      "HOC": 5,
+      "ROT": 5,
+      "MEZ": 7.5,
+      "RIC": 5,
+      "DSH": 5,
+      "SON": 5
+    },
+    "_moq_m2_per_design": "The minimum m2 order per design, kept equal to VAULT/05 Studio_Designs_Price_Register.md (test_quote.mjs checks it). Below it the job is Bespoke: the quote form still takes the request and flags it.",
+    "per_block_designs": ["SKW"],
+    "_per_block_designs": "Priced per block, so the quote form asks for the size in the note (Hemiola, #127). Every other design asks for the wall, a fixed plan such as Fugato included.",
+    "pay_terms_set": false,
+    "_pay_terms_set": "false = the terms box says the quote carries the payment plan. The Studio Designs split is Burak's to set; turn this on once it matches the terms_pay line",
+    "lead_time_weeks": {
+      "OPT": 4,
+      "AND": 4,
+      "ANT": 4,
+      "FIO": 4,
+      "L093": 4,
+      "GLI": 4,
+      "CRE": 4,
+      "SKW": 4,
+      "HOC": 4,
+      "ROT": 4,
+      "MEZ": 4,
+      "RIC": 4,
+      "DSH": 4,
+      "SON": 4
+    },
+    "_lead_time_weeks": "Lead time in weeks per design, counted from contract and advance, mould and master approval included, up to lead_time_max_m2 (#123, #124). null = not stated: the page says the lead time is given in the quote.",
+    "lead_time_max_m2": 50,
+    "lead_time_basis": "ex_works_pickup",
+    "validity_days": null,
+    "_validity_days": "null = no validity period is stated on the page (Burak's open decision); a number shows \"Geçerlilik: N gün\" in the terms block and the DM",
+    "logistics": {
+      "pickup": {
+        "price_try": 0
+      },
+      "standard": {
+        "price_try": null
+      },
+      "fast": {
+        "price_try": null
+      }
+    }
+  },
+  "dm": {
+    "placeholder": true,
+    "instagram_url": "https://www.instagram.com/studio_luminant/",
+    "instagram_prefill": false
+  },
+  "light": {
+    "cities": {
+      "sapanca": {
+        "lat": 40.69,
+        "lon": 30.26,
+        "utc_offset": 3
+      },
+      "istanbul": {
+        "lat": 41.0082,
+        "lon": 28.9784,
+        "utc_offset": 3
+      },
+      "dubai": {
+        "lat": 25.2048,
+        "lon": 55.2708,
+        "utc_offset": 4
+      },
+      "london": {
+        "lat": 51.5074,
+        "lon": -0.1278,
+        "utc_offset": 0
+      }
+    },
+    "default_city": "sapanca",
+    "default_facing": 180,
+    "default_hour": 16,
+    "date": null,
+    "cities_source": "sun_studio/public/strings.json"
+  },
+  "material": {
+    "_note": "Facts for the A-00 material sheet, per design (Burak 2026-10-18: each design has its own), keyed by the design code (one per design in `designs`). null = not supplied yet: the page shows a dash and nothing else. Text facts are {\"tr\": ..., \"en\": ...}; thickness_mm, weight_kg_m2 and spares_pct are numbers. The material name, format, relief depth, production and cut rule are not here: name, production and cut rule are page copy, format and depth come from the kit.",
+    "OPT": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "AND": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "ANT": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "FIO": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "L093": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "GLI": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "CRE": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "SKW": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "HOC": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "ROT": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "MEZ": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "RIC": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "DSH": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    },
+    "SON": {
+      "surface": null,
+      "thickness_mm": null,
+      "weight_kg_m2": null,
+      "adhesive": null,
+      "joint": null,
+      "substrate": null,
+      "cleaning": null,
+      "spares_pct": null
+    }
+  },
+  "sample": {
+    "_note": "The sample as an order line (A-01 price block and send antet; A-00), per design, keyed by the design code. null = not set: the row shows a dash. contents is {\"tr\": ..., \"en\": ...}; price_try whole TL; days a number. The client view never shows the price.",
+    "OPT": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "AND": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "ANT": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "FIO": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "L093": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "GLI": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "CRE": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "SKW": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "HOC": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "ROT": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "MEZ": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "RIC": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "DSH": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    },
+    "SON": {
+      "contents": null,
+      "price_try": null,
+      "days": null
+    }
+  },
+  "slugs": {"accelerando": "OPT", "andante": "AND", "antiphon": "ANT", "fioritura": "FIO", "fugato": "L093", "glissando": "GLI", "gruppetto": "CRE", "hemiola": "SKW", "hocket": "HOC", "melisma": "ROT", "mezzavoce": "MEZ", "ricercar": "RIC", "rondeau": "DSH", "sonado": "SON"},
+  "quote": {
+    "endpoint": "https://mjmeqgljpyenuqorarte.supabase.co/functions/v1/lead-intake",
+    "key": "sl_web_lead_k7Qm2P",
+    "backup": "https://formspree.io/f/xpqygpjw",
+    "consent_version": "2026-10-16",
+    "consent_url": {
+      "tr": "https://studioluminant.com.tr/acik-riza.htm",
+      "en": "https://studioluminant.com.tr/en/consent.htm"
+    },
+    "privacy_url": {
+      "tr": "https://studioluminant.com.tr/gizlilik.htm",
+      "en": "https://studioluminant.com.tr/en/privacy.htm"
+    },
+    "sample_url": {
+      "tr": "https://studioluminant.com.tr/iletisim.htm#numune",
+      "en": "https://studioluminant.com.tr/en/contact.htm#sample"
+    },
+    "_note": "The quote form posts here, the same route and public key as the website's forms. consent_version = the date on the consent page; it is written into the CRM message beside a yes."
+  },
+  "lead": {
+    "endpoint": null,
+    "_note": "null = no network call; a URL receives {code, ts, locale, channel} per send, nothing else"
+  }
+}

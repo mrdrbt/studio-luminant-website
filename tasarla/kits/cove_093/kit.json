@@ -1,0 +1,367 @@
+{
+  "kit": "cove_093",
+  "design": "L093",
+  "line": 60,
+  "module_mm": [
+    600,
+    400
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 600,
+  "px_h": 400,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.0006103608758678569,
+  "base_level": 65535,
+  "kit_relief_mm": 40.0,
+  "moulds": {
+    "A": {
+      "source": "VAULT\\Library\\Relief\\093_cove-course\\heightmap_a.png",
+      "sha256": "bcc5d0ca2f4528f7c39ad2f82398e51d0496132d8d9a31798729394ff00d0669",
+      "registry": "current",
+      "source_relief_mm": 40.0,
+      "id": "A",
+      "file": "A.png",
+      "px_w": 600,
+      "px_h": 400,
+      "relief_mm": 39.9994
+    },
+    "D": {
+      "source": "VAULT\\Library\\Relief\\093_cove-course\\heightmap_d.png",
+      "sha256": "ab1aed1b4c5656372c8c43e9a99bdb83c61598ae8506af8ead03579640cb6869",
+      "registry": "current",
+      "source_relief_mm": 40.0,
+      "id": "D",
+      "file": "D.png",
+      "px_w": 600,
+      "px_h": 400,
+      "relief_mm": 39.9994
+    }
+  },
+  "descriptor": {
+    "kit": "cove_093",
+    "design": "L093",
+    "line": 60,
+    "module_mm": [
+      600,
+      400
+    ],
+    "engine": "plan",
+    "resize": {
+      "method": "courses",
+      "seed": 7,
+      "min_edge_mm": 90,
+      "saw_mm": 3
+    },
+    "labels": {
+      "A": "A",
+      "D": "B"
+    },
+    "source": "Library 093 cove-course (decision #101): two 600 x 400 mm course plates A and D, each also laid turned 180 deg (two moulds per Burak 2026-11-09, Fugato stays two plates). Library 093's laying_plan is the three-plate plan, so the gallery plan keeps its course geometry (6 courses, 3600 mm, offsets and cuts of laying_plan.json) and draws its plates by the courses law (no base plan, seed 7); the same law continues it at any other wall (resize courses). Name: Fermata (Burak 2026-10-16, pending the TÜRKPATENT check: drafts only). Price open, no price.",
+    "moulds": [
+      {
+        "id": "A",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      },
+      {
+        "id": "D",
+        "turns": [
+          0,
+          2
+        ],
+        "role": "field"
+      }
+    ],
+    "plan": {
+      "cols": 6,
+      "rows": 6,
+      "courses": [
+        {
+          "offset_mm": 90.0,
+          "pieces": [
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 90.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 510.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 300.0,
+          "pieces": [
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 300.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 300.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 510.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 510.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 90.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 143.5,
+          "pieces": [
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 143.5,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 456.5
+            }
+          ]
+        },
+        {
+          "offset_mm": 365.5,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 365.5,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 234.5
+            }
+          ]
+        },
+        {
+          "offset_mm": 600.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "baked": "2026-11-13",
+  "mm_per_level_receipt": "40 mm over the full 16-bit range, white (65535) = crest = face 0 mm: Library 093 generator_script.py encode16 (frac = 1 - clip(depth, 0, max) / max, max = MAX_DEPTH_MM 40.0, one global max for all moulds) + manifest relief '40 mm'; heightmap_a/d/f are 800 x 1200 = 400 x 600 mm at 2 px/mm, each spanning 0..65535. mm_per_level = 40 / 65535.",
+  "plan_source": {
+    "source": "composition.law_plan",
+    "key": "cove_093.plan_from_law"
+  }
+}

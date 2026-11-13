@@ -1,0 +1,236 @@
+{
+  "kit": "antiphon_065",
+  "design": "ANT",
+  "line": 66,
+  "module_mm": [
+    600,
+    600
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 600,
+  "px_h": 600,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.00022888532845044633,
+  "base_level": 65535,
+  "kit_relief_mm": 15.0,
+  "moulds": {
+    "A": {
+      "source": "VAULT\\Library\\Relief\\065_lens\\heightmap.png",
+      "sha256": "733d819427442ca59e4259f1e8f4741fdc8256068ca6a47996cc5431c14b44d6",
+      "registry": "current",
+      "source_relief_mm": 14.9998,
+      "id": "A",
+      "file": "A.png",
+      "px_w": 600,
+      "px_h": 600,
+      "relief_mm": 14.4173
+    }
+  },
+  "descriptor": {
+    "kit": "antiphon_065",
+    "design": "ANT",
+    "line": 66,
+    "module_mm": [
+      600,
+      600
+    ],
+    "engine": "plan",
+    "labels": {
+      "A": "A"
+    },
+    "source": "Antiphon (Library 065 lens), lay: exact repeat, turn 0, 1 mould: Library 065 states no lay; its 2026-10-30 tile-proof is SEAMLESS under a plain 3 x 3 repeat (h_wrap 0.0, v_wrap 1.58 mm). Gallery plan 6 x 4 modules (3.6 x 2.4 m); any other wall size continues the lay by its period (resize: tile, period 1 x 1). WIP in the composer: price open, no price.",
+    "moulds": [
+      {
+        "id": "A",
+        "turns": [
+          0
+        ],
+        "role": "field"
+      }
+    ],
+    "plan": {
+      "cols": 6,
+      "rows": 4,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "resize": {
+      "method": "tile",
+      "period": [
+        1,
+        1
+      ]
+    }
+  },
+  "baked": "2026-11-03",
+  "mm_per_level_receipt": "15 mm over the full 16-bit range, 65535 = tallest = face 0 mm: Library 065 generator_script.py line 102 hm = round(clip(z, 0, depth) / depth x 65535) with --depth 15 (recipe), z = height; file spans 1..65535; STL z-span 25 = 15 + 10 base; STL top height vs heightmap level correlates +0.996. mm_per_level = 15 / 65535.",
+  "plan_source": {
+    "source": "catalog_composer/allowlist.json",
+    "key": "antiphon_065.plan_cells",
+    "sha256": "b1092e0f9cbd5a7e44689ec8867f62ca10768a56a51bb79f9644180c2e373217"
+  }
+}

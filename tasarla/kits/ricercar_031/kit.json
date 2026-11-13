@@ -1,0 +1,236 @@
+{
+  "kit": "ricercar_031",
+  "design": "RIC",
+  "line": 66,
+  "module_mm": [
+    600,
+    600
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 600,
+  "px_h": 600,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 9.155413138017853e-05,
+  "base_level": 65535,
+  "kit_relief_mm": 6.0,
+  "moulds": {
+    "A": {
+      "source": "VAULT\\Library\\Relief\\031_gothic\\heightmap.png",
+      "sha256": "b394bab74f398a55e185edf30819d6d3df6a1eb27b4453311b259dcc73a10417",
+      "registry": "current",
+      "source_relief_mm": 4.0401,
+      "id": "A",
+      "file": "A.png",
+      "px_w": 600,
+      "px_h": 600,
+      "relief_mm": 4.0395
+    }
+  },
+  "descriptor": {
+    "kit": "ricercar_031",
+    "design": "RIC",
+    "line": 66,
+    "module_mm": [
+      600,
+      600
+    ],
+    "engine": "plan",
+    "labels": {
+      "A": "A"
+    },
+    "source": "Ricercar (Library 031 gothic), lay: exact repeat, turn 0, 1 mould: Library 031 states no lay; tile-proof 3 x 3 SEAMLESS (h_wrap = v_wrap 1.56 mm; the 2026-09-27 receipt reads MARGINAL at 2.17 mm for the same file). Gallery plan 6 x 4 modules (3.6 x 2.4 m); any other wall size continues the lay by its period (resize: tile, period 1 x 1). WIP in the composer: price open, no price.",
+    "moulds": [
+      {
+        "id": "A",
+        "turns": [
+          0
+        ],
+        "role": "field"
+      }
+    ],
+    "plan": {
+      "cols": 6,
+      "rows": 4,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "resize": {
+      "method": "tile",
+      "period": [
+        1,
+        1
+      ]
+    }
+  },
+  "baked": "2026-11-03",
+  "mm_per_level_receipt": "6 mm over the full 16-bit range, 65535 = tallest = face 0 mm: manifest relief '6 mm' / relief_mm 6 and depth_change_2026_10_01 'full stated depth 6 mm: peak 6.00, floor 1.96, carving 4.04 mm' (the file spans 21407..65534 = 4.04 mm below the peak); STL z-span 16 = 6 + 10 base; STL top height vs heightmap level correlates +0.996. mm_per_level = 6 / 65535.",
+  "plan_source": {
+    "source": "catalog_composer/allowlist.json",
+    "key": "ricercar_031.plan_cells",
+    "sha256": "b1092e0f9cbd5a7e44689ec8867f62ca10768a56a51bb79f9644180c2e373217"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "kit": "sonado_092",
+  "design": "SON",
+  "line": 66,
+  "module_mm": [
+    600,
+    600
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 600,
+  "px_h": 600,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.0003662165255207141,
+  "base_level": 65535,
+  "kit_relief_mm": 24.0,
+  "moulds": {
+    "A": {
+      "source": "FACTORY\\00 — Staging\\heightmaps\\2026-11-07_092-sonado-web\\092_sonado_hm16.png",
+      "sha256": "c6802f17c0925af4dd2f294515d9cdb5b6c1818dc2bbf24bd8f33ccebc1f5482",
+      "registry": "wip",
+      "source_relief_mm": 24.0,
+      "id": "A",
+      "file": "A.png",
+      "px_w": 600,
+      "px_h": 600,
+      "relief_mm": 23.9982
+    }
+  },
+  "descriptor": {
+    "kit": "sonado_092",
+    "design": "SON",
+    "line": 66,
+    "module_mm": [
+      600,
+      600
+    ],
+    "engine": "plan",
+    "labels": {
+      "A": "A"
+    },
+    "source": "Sonado (Library 092 pleat-sway), lay: exact repeat, turn 0, 1 mould, straight grid with no offset (the website: 'Tek kalıp, düz ızgara'; the pleats continue across the joints). Source: the 2026-11-07 web heightmap (no Library heightmap role yet), so registry 'wip'; the pleat lips' undercut cannot show in a height field. Gallery plan 6 x 4 modules (3.6 x 2.4 m); any other wall size continues the lay by its period (resize: tile, period 1 x 1). WIP in the composer: price open, no price.",
+    "moulds": [
+      {
+        "id": "A",
+        "turns": [
+          0
+        ],
+        "role": "field"
+      }
+    ],
+    "resize": {
+      "method": "tile",
+      "period": [
+        1,
+        1
+      ]
+    },
+    "plan": {
+      "cols": 6,
+      "rows": 4,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "baked": "2026-11-13",
+  "mm_per_level_receipt": "24 mm over the full 16-bit range, 65535 = tallest = face 0 mm. Library 092 has no heightmap role; this is the 2026-11-07 web heightmap (1200 x 1200 px = 2 px/mm, 0..65535) the website's tray bake uses. Checked 2026-11-13 against Library 092 stl.stl (600 x 600 x 34 mm = 24 relief + 10 base): STL top height vs heightmap level correlates +0.973 as-is (flipped up-down +0.82, left-right +0.80), slope 3.79e-4 mm/level = 24.8 mm over the full range; manifest relief_mm 24. The pleat lips' undercut is not in a height field (the site says so too).",
+  "plan_source": {
+    "source": "catalog_composer/allowlist.json",
+    "key": "sonado_092.plan_cells",
+    "sha256": "b1092e0f9cbd5a7e44689ec8867f62ca10768a56a51bb79f9644180c2e373217"
+  }
+}

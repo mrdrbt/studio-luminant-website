@@ -1,0 +1,199 @@
+{
+  "kits": [
+    {
+      "kit": "andante_096",
+      "design": "AND",
+      "line": 12,
+      "manifest": "andante_096/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A"
+      ]
+    },
+    {
+      "kit": "antiphon_065",
+      "design": "ANT",
+      "line": 66,
+      "manifest": "antiphon_065/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A"
+      ]
+    },
+    {
+      "kit": "cove_093",
+      "design": "L093",
+      "line": 60,
+      "manifest": "cove_093/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A",
+        "D"
+      ]
+    },
+    {
+      "kit": "crest_f2",
+      "design": "CRE",
+      "line": 40,
+      "manifest": "crest_f2/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "F2"
+      ]
+    },
+    {
+      "kit": "dish_r6",
+      "design": "DSH",
+      "line": 20,
+      "manifest": "dish_r6/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A",
+        "C",
+        "D",
+        "0"
+      ]
+    },
+    {
+      "kit": "fioritura_004",
+      "design": "FIO",
+      "line": 66,
+      "manifest": "fioritura_004/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A"
+      ]
+    },
+    {
+      "kit": "glissando_042",
+      "design": "GLI",
+      "line": 66,
+      "manifest": "glissando_042/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "T",
+        "B"
+      ]
+    },
+    {
+      "kit": "hocket_095",
+      "design": "HOC",
+      "line": 66,
+      "manifest": "hocket_095/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A"
+      ]
+    },
+    {
+      "kit": "mezzavoce_094",
+      "design": "MEZ",
+      "line": 12,
+      "manifest": "mezzavoce_094/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A"
+      ]
+    },
+    {
+      "kit": "optic_r3",
+      "design": "OPT",
+      "line": 40,
+      "manifest": "optic_r3/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "0"
+      ]
+    },
+    {
+      "kit": "plates_r3",
+      "design": "PLT",
+      "line": 20,
+      "manifest": "plates_r3/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "F0",
+        "F1",
+        "F2",
+        "A0",
+        "A1",
+        "A2",
+        "D0",
+        "D1",
+        "X0",
+        "FD"
+      ]
+    },
+    {
+      "kit": "ricercar_031",
+      "design": "RIC",
+      "line": 66,
+      "manifest": "ricercar_031/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A"
+      ]
+    },
+    {
+      "kit": "rotor_r2",
+      "design": "ROT",
+      "line": 20,
+      "manifest": "rotor_r2/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "R",
+        "L",
+        "E",
+        "K",
+        "B0"
+      ]
+    },
+    {
+      "kit": "skew_r8",
+      "design": "SKW",
+      "line": 20,
+      "manifest": "skew_r8/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A1F",
+        "A2F",
+        "A3F",
+        "A4F"
+      ]
+    },
+    {
+      "kit": "sonado_092",
+      "design": "SON",
+      "line": 66,
+      "manifest": "sonado_092/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A"
+      ]
+    },
+    {
+      "kit": "throat_r2",
+      "design": "THR",
+      "line": 40,
+      "manifest": "throat_r2/kit.json",
+      "px_per_mm": 1.0,
+      "moulds": [
+        "A",
+        "AF",
+        "B",
+        "C",
+        "D",
+        "0"
+      ]
+    }
+  ]
+}

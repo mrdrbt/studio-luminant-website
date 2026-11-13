@@ -1,0 +1,200 @@
+{
+  "kit": "optic_r3",
+  "design": "OPT",
+  "line": 40,
+  "module_mm": [
+    400,
+    400
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 400,
+  "px_h": 400,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.0003051651789120317,
+  "base_level": 65535,
+  "kit_relief_mm": 19.999,
+  "moulds": {
+    "S0": {
+      "source": "FACTORY\\00 — Staging\\2026-10-15_modular_r3\\Optic\\mould_S0_hm16.png",
+      "sha256": "f31538682c0270486f87b89af3810993cf41e3e4f07fd58d4a5215f2c80d60b3",
+      "registry": "wip",
+      "source_relief_mm": 19.9932,
+      "id": "S0",
+      "file": "S0.png",
+      "px_w": 400,
+      "px_h": 400,
+      "relief_mm": 19.9129
+    },
+    "S1": {
+      "source": "FACTORY\\00 — Staging\\2026-10-15_modular_r3\\Optic\\mould_S1_hm16.png",
+      "sha256": "510e569011994bfff14dde6cef3c079d0b1266b4ca84987b7e7cf797167a96dc",
+      "registry": "wip",
+      "source_relief_mm": 19.9987,
+      "id": "S1",
+      "file": "S1.png",
+      "px_w": 400,
+      "px_h": 400,
+      "relief_mm": 19.9166
+    },
+    "S2": {
+      "source": "FACTORY\\00 — Staging\\2026-10-15_modular_r3\\Optic\\mould_S2_hm16.png",
+      "sha256": "74edb75958739b8ac9312a274dad1e9e0d70e0620fef56cc41c4357a5edaa461",
+      "registry": "wip",
+      "source_relief_mm": 19.9987,
+      "id": "S2",
+      "file": "S2.png",
+      "px_w": 400,
+      "px_h": 400,
+      "relief_mm": 19.9486
+    },
+    "S3": {
+      "source": "FACTORY\\00 — Staging\\2026-10-15_modular_r3\\Optic\\mould_S3_hm16.png",
+      "sha256": "3169ef379db24b03c88452b58446d2c746d45c613ca3465f1de54676ca862218",
+      "registry": "wip",
+      "source_relief_mm": 19.9624,
+      "id": "S3",
+      "file": "S3.png",
+      "px_w": 400,
+      "px_h": 400,
+      "relief_mm": 19.8696
+    },
+    "S4": {
+      "source": "FACTORY\\00 — Staging\\2026-10-15_modular_r3\\Optic\\mould_S4_hm16.png",
+      "sha256": "05f3e181e5bea5c8cf856b6dddffeab8312fdd48cd2f77272c29fa0e2bc8a121",
+      "registry": "wip",
+      "source_relief_mm": 9.9459,
+      "id": "S4",
+      "file": "S4.png",
+      "px_w": 400,
+      "px_h": 400,
+      "relief_mm": 9.8391
+    },
+    "0": {
+      "source": null,
+      "sha256": null,
+      "registry": "synthetic-flat",
+      "source_relief_mm": 0.0,
+      "id": "0",
+      "file": "0.png",
+      "px_w": 400,
+      "px_h": 400,
+      "relief_mm": 0.0
+    }
+  },
+  "descriptor": {
+    "kit": "optic_r3",
+    "design": "OPT",
+    "line": 40,
+    "module_mm": [
+      400,
+      400
+    ],
+    "engine": "corners",
+    "labels": {
+      "S1": "A",
+      "S2": "B",
+      "S3": "C",
+      "S4": "D",
+      "S0": "E"
+    },
+    "code_den": 2,
+    "range_steps": 5,
+    "source": "FACTORY/00 - Staging/2026-10-15_modular_r3/Optic/kit_r3.py: classes S0..S4 + plain '0'; code(v)=min(v,R_CODE=2.5); codes here are integer steps of 1/code_den (0.5), range_steps 5 = 2.5",
+    "moulds": [
+      {
+        "id": "S0",
+        "corners": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "S1",
+        "corners": [
+          1,
+          2,
+          3,
+          2
+        ],
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "S2",
+        "corners": [
+          2,
+          3,
+          4,
+          3
+        ],
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "S3",
+        "corners": [
+          3,
+          4,
+          5,
+          4
+        ],
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "S4",
+        "corners": [
+          4,
+          5,
+          5,
+          5
+        ],
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "0",
+        "corners": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "turns": [
+          0
+        ],
+        "role": "plain"
+      }
+    ]
+  },
+  "baked": "2026-10-26"
+}

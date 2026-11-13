@@ -1,0 +1,113 @@
+{
+ "_status": "DRAFT - placeholder panel, Blender-projected corners",
+ "id": "clinic_reception",
+ "label": {
+  "tr": "Klinik resepsiyonu",
+  "en": "Clinic reception"
+ },
+ "venue": "clinic",
+ "plate": "plate.jpg",
+ "plate_px": [
+  1200,
+  1500
+ ],
+ "plate_bytes": 70540,
+ "quad_px": [
+  [
+   125.926,
+   454.259
+  ],
+  [
+   1074.074,
+   454.259
+  ],
+  [
+   1074.074,
+   928.333
+  ],
+  [
+   125.926,
+   928.333
+  ]
+ ],
+ "quad_order": "TL,TR,BR,BL",
+ "wall_mm": [
+  3200,
+  1600
+ ],
+ "key_light": {
+  "az_deg": 182.891,
+  "el_deg": 20.722,
+  "frame": "wall-local: az 0 = from image-right, 90 = from above; el from the wall plane",
+  "source": "key_D",
+  "distance_m": 2.12
+ },
+ "ambient": {
+  "ambient_frac": 0.4937,
+  "exposure_gain": 1.0,
+  "placeholder_albedo": 0.5,
+  "plate_wall_mean_linear": 0.16379,
+  "view_transform": "Standard",
+  "blender_exposure": -2.7,
+  "method": {
+   "name": "umbra_floor_median",
+   "seed_floor": 0.0617,
+   "umbra_px": 11979,
+   "umbra_share_of_wall": 0.0276,
+   "truth_p10_p90_in_umbra": [
+    0.3763,
+    0.6132
+   ],
+   "umbra_slack": 1.15
+  },
+  "why": "median of truth luma / flat luma over the pixels where the page's N-pass extended source delivers no direct light, measured on this room's own Blender truth render (default composition as real displaced geometry); same method for every room"
+ },
+ "panel_albedo": {
+  "linear": 0.5,
+  "why": "Base Color of the Blender material 'placeholder' that the plate's feature-wall panel was rendered with (room_scene.py RHO_PLACEHOLDER, linear RGB 0.5,0.5,0.5, Principled BSDF, roughness 0.9). The page tints the plate by swatch_linear / this, so a swatch of albedo 0.5 reproduces the plate unchanged. The room light is not altered."
+ },
+ "note": {
+  "tr": "Klinik resepsiyonu, karşı duvar (3200 × 1600 mm panel, zeminden 900 mm); ışık: sol duvarda yan pencere, tavandan yumuşak dağınık ışık.",
+  "en": "Clinic reception, facing wall (3200 × 1600 mm panel, 900 mm above the floor); light: side window, left wall, soft ceiling fill.",
+  "status": "DRAFT"
+ },
+ "scale_cues": {
+  "wall_width": {
+   "a_px": [
+    125.93,
+    957.96
+   ],
+   "b_px": [
+    1074.07,
+    957.96
+   ],
+   "mm": 3200,
+   "below_panel_edge_mm": 100
+  },
+  "figure": {
+   "floor_px": [
+    1122.52,
+    1281.49
+   ],
+   "head_px": [
+    1122.52,
+    632.84
+   ],
+   "mm": 1800,
+   "from_wall_mm": 800,
+   "u_mm": 3450
+  },
+  "why": "camera-projected through the Blender render camera (room_scene.py cues_px), plate pixels. wall_width: horizontal string 100 mm under the panel's lower edge, on the wall plane; counter_height: vertical string at the counter's front edge depth, floor to counter top; figure: a 1.8 m standing figure, floor point + head point, at the stated distance from the wall plane."
+ },
+ "render": {
+  "engine": "blender cycles",
+  "jpeg_quality": 92
+ },
+ "key_extent_deg": {
+  "az_half": 31.171,
+  "el_half": 11.984,
+  "centre_az": 182.116,
+  "centre_el": 19.202,
+  "why": "key_D is a Blender AREA RECTANGLE 0.9 x 2.4 m at the wall; 81 emitter samples seen from the panel centre in the wall frame; half-extent = (max - min) / 2 per axis. The page jitters over this az/el box (the emitter's az-el correlation is dropped)."
+ }
+}

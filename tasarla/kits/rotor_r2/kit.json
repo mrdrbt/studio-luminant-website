@@ -1,0 +1,4115 @@
+{
+  "kit": "rotor_r2",
+  "design": "ROT",
+  "line": 20,
+  "module_mm": [
+    200,
+    200
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 200,
+  "px_h": 200,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.00027466237146296174,
+  "base_level": 65535,
+  "kit_relief_mm": 18.0,
+  "moulds": {
+    "R": {
+      "source": "FACTORY\\00 — Staging\\2026-10-16_r2\\Rotor\\mould_R_hm16.png",
+      "sha256": "4cecac3d022bdb610728ca13472960cd707ddfb9e32b323905d0cec3500221eb",
+      "registry": "wip",
+      "source_relief_mm": 18.0,
+      "id": "R",
+      "file": "R.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.0
+    },
+    "L": {
+      "source": "FACTORY\\00 — Staging\\2026-10-16_r2\\Rotor\\mould_L_hm16.png",
+      "sha256": "49dea81a782e3f2f00775aa79e9da2e2a40a2d89b9bd60f48a52b8620e8bfbbb",
+      "registry": "wip",
+      "source_relief_mm": 18.0,
+      "id": "L",
+      "file": "L.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.0
+    },
+    "E": {
+      "source": "FACTORY\\00 — Staging\\2026-10-16_r2\\Rotor\\mould_E_hm16.png",
+      "sha256": "664ff7e143f9e28bb08e89f0b211df3bd809c07e86834382b2baf3b90fffe22a",
+      "registry": "wip",
+      "source_relief_mm": 18.0,
+      "id": "E",
+      "file": "E.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.0
+    },
+    "K": {
+      "source": "FACTORY\\00 — Staging\\2026-10-16_r2\\Rotor\\mould_K_hm16.png",
+      "sha256": "201312fac50f03c18ec0dde59d4bc4a5db5cb15a1ed64947302bb193fe9effb5",
+      "registry": "wip",
+      "source_relief_mm": 18.0,
+      "id": "K",
+      "file": "K.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.0
+    },
+    "B0": {
+      "source": null,
+      "sha256": null,
+      "registry": "synthetic-flat",
+      "source_relief_mm": 0.0,
+      "id": "B0",
+      "file": "B0.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 0.0
+    }
+  },
+  "descriptor": {
+    "kit": "rotor_r2",
+    "design": "ROT",
+    "line": 20,
+    "module_mm": [
+      200,
+      200
+    ],
+    "engine": "plan",
+    "labels": {
+      "R": "A",
+      "L": "B",
+      "E": "C",
+      "K": "D"
+    },
+    "source": "Rotor r2 (2026-10-16_r2/Rotor/rotor2_kit.py): moulds R, L, E, K + blank B0, 200 mm; lay G1_S (wall-relative S band through a quiet field) seed 103, re-run for 45 x 14 modules (9.0 x 2.8 m, the in-situ gallery wall) with the kit's own tuned_region / lay_from_region, kept as the gallery plan; every wall size up to 64 x 21 modules is laid again with the same generator (resize.flow: tuned_region / lay_from_region at that size, so the S band spans the wall), a taller wall crops it top-left or continues it by its own size, re-laying the cells whose edges would not mate (resize: tile + edges). Stand-in: WIP, no registry entry.",
+    "moulds": [
+      {
+        "id": "R",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "L",
+        "turns": [
+          0,
+          1
+        ],
+        "role": "field"
+      },
+      {
+        "id": "E",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "K",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "B0",
+        "turns": [
+          0
+        ],
+        "role": "plain"
+      }
+    ],
+    "plan": {
+      "cols": 45,
+      "rows": 14,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "K",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "B0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "E",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "R",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "L",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "resize": {
+      "method": "tile",
+      "flow": {
+        "file": "flow.json",
+        "cols": 64,
+        "rows": 21
+      },
+      "seed": 103,
+      "edges": {
+        "R": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "L": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          null,
+          null
+        ],
+        "E": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "K": [
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "B0": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          null,
+          null,
+          null
+        ]
+      }
+    }
+  },
+  "baked": "2026-10-26",
+  "plan_source": {
+    "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\plans.json",
+    "key": "rotor_r2",
+    "sha256": "c5814c4895e0d1519491eb29ef3ef6ee34dfd12af9c96e819ef9a66736325f3e"
+  }
+}

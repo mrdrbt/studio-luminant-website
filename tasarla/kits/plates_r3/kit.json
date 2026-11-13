@@ -1,0 +1,4102 @@
+{
+  "kit": "plates_r3",
+  "design": "PLT",
+  "line": 20,
+  "module_mm": [
+    200,
+    200
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 200,
+  "px_h": 200,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.00040394935876596834,
+  "base_level": 65535,
+  "kit_relief_mm": 26.4728,
+  "moulds": {
+    "F0": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_F0_hm16.png",
+      "sha256": "680f162326c2da7817b24a8c24543922c8134ccbe6f114609022f899020ce3dd",
+      "registry": "revision",
+      "source_relief_mm": 26.4728,
+      "id": "F0",
+      "file": "F0.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 26.4728
+    },
+    "F1": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_F1_hm16.png",
+      "sha256": "7e3e1fd5dae9028ac3df3c94e1d4452c3e152de05348ad2777773995836f33b0",
+      "registry": "revision",
+      "source_relief_mm": 18.473,
+      "id": "F1",
+      "file": "F1.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.473
+    },
+    "F2": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_F2_hm16.png",
+      "sha256": "b900c972674f78ed381db2d4b6aa895c60d66204c7c3a553572bab3df0f3d1e9",
+      "registry": "revision",
+      "source_relief_mm": 10.4728,
+      "id": "F2",
+      "file": "F2.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 10.4728
+    },
+    "A0": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_A0_hm16.png",
+      "sha256": "e73cf3e811cfe47d4f1d89c55cecb1309f77adcdb6c517f09e593e6ec3ea0ae1",
+      "registry": "revision",
+      "source_relief_mm": 26.4639,
+      "id": "A0",
+      "file": "A0.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 26.4466
+    },
+    "A1": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_A1_hm16.png",
+      "sha256": "8344c0d1ba58a6050ef4d86c4262ca2874f6c9d01f9d1ec80f83f2f7c5a0b092",
+      "registry": "revision",
+      "source_relief_mm": 18.4641,
+      "id": "A1",
+      "file": "A1.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.4463
+    },
+    "A2": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_A2_hm16.png",
+      "sha256": "7a9529c0d8800e8261b7496d5d7cf7e25028a8ac67eaedf95a68bb2ad97bcd35",
+      "registry": "revision",
+      "source_relief_mm": 10.4639,
+      "id": "A2",
+      "file": "A2.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 10.4465
+    },
+    "D0": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_D0_hm16.png",
+      "sha256": "dbd6f33f1f28682efa54bbd2f4e02db0268f3a7352933bf46534711f4084c08a",
+      "registry": "revision",
+      "source_relief_mm": 26.4603,
+      "id": "D0",
+      "file": "D0.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 26.4357
+    },
+    "D1": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_D1_hm16.png",
+      "sha256": "bee23aeab7609ea3398ac2ccebc6259e456eb53bfc7b8ee897da78fa19cc80da",
+      "registry": "revision",
+      "source_relief_mm": 18.4605,
+      "id": "D1",
+      "file": "D1.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 18.4354
+    },
+    "X0": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_X0_hm16.png",
+      "sha256": "1d2b125858c3027cfabb3a56c3a37500b0ca5e7114203207fd93b4053f27a32f",
+      "registry": "revision",
+      "source_relief_mm": 26.4555,
+      "id": "X0",
+      "file": "X0.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 26.4199
+    },
+    "FD": {
+      "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\Plates\\mould_FD_hm16.png",
+      "sha256": "82db369d4e8b9439e60c8a803fefdd317628c2ac31b7882445a0e6fba91b8968",
+      "registry": "wip",
+      "source_relief_mm": 26.4728,
+      "id": "FD",
+      "file": "FD.png",
+      "px_w": 200,
+      "px_h": 200,
+      "relief_mm": 26.4728
+    }
+  },
+  "descriptor": {
+    "kit": "plates_r3",
+    "design": "PLT",
+    "line": 20,
+    "module_mm": [
+      200,
+      200
+    ],
+    "engine": "plan",
+    "source": "Plates r3 (2026-10-16_elevation_r1/Plates/plates3_kit.py, s8 cap 26.5; the kit the 2026-10-17 restaurant wall34 render used): ONE blank cast in elevation x tilt states + the FD fold, re-laid with its own wall_spec (seed SEED+3, fold chain at col 5) for 45 x 14 modules (9.0 x 2.8 m, the in-situ gallery wall, fold chain as the render), gallery plan; every wall size up to 64 x 21 modules is laid again with the same generator (resize.flow: wall_spec at that size, the fold chain at 5/45 of the width and one step per row, so it runs top to bottom), a taller wall crops the gallery plan top-left or continues it by its own size (resize: tile). 10 distinct faces (F0 F1 F2 flats, A0 A1 A2 axis 3 deg, D0 D1 corner 3 deg, X0 axis 6 deg accent, FD fold = 11 with none dropped); joints are DECLARED hairline steps (max about 22 mm): the heightmap shows them as the kit has them. Stand-in: WIP.",
+    "moulds": [
+      {
+        "id": "F0",
+        "turns": [
+          0
+        ],
+        "role": "plain"
+      },
+      {
+        "id": "F1",
+        "turns": [
+          0
+        ],
+        "role": "field"
+      },
+      {
+        "id": "F2",
+        "turns": [
+          0
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A0",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A1",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "A2",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "D0",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "D1",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "X0",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      },
+      {
+        "id": "FD",
+        "turns": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "role": "field"
+      }
+    ],
+    "plan": {
+      "cols": 45,
+      "rows": 14,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "X0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "FD",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F2",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A0",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "F0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 3,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D0",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 2,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "D1",
+              "turn": 1,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "resize": {
+      "method": "tile",
+      "flow": {
+        "file": "flow.json",
+        "cols": 64,
+        "rows": 21
+      }
+    }
+  },
+  "baked": "2026-10-19",
+  "plan_source": {
+    "source": "FACTORY\\00 — Staging\\2026-10-19_composer_2040_kits\\plans.json",
+    "key": "plates_r3",
+    "sha256": "c5814c4895e0d1519491eb29ef3ef6ee34dfd12af9c96e819ef9a66736325f3e"
+  }
+}

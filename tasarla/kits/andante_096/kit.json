@@ -1,0 +1,164 @@
+{
+  "kit": "andante_096",
+  "design": "AND",
+  "line": 12,
+  "module_mm": [
+    1200,
+    600
+  ],
+  "px_per_mm": 1.0,
+  "px_w": 1200,
+  "px_h": 600,
+  "encoding": "two-channel 8-bit RGB PNG: level = R*256 + G; mm = (level - base_level) * mm_per_level",
+  "mm_per_level": 0.00010681315327687495,
+  "base_level": 65535,
+  "kit_relief_mm": 7.0,
+  "moulds": {
+    "A": {
+      "source": "VAULT\\Library\\Relief\\096_tirage\\heightmap.png",
+      "sha256": "e103370b420ecdde6a166e718d9ede4e54415306591b794a074640b74cce39bd",
+      "registry": "current",
+      "source_relief_mm": 7.0,
+      "id": "A",
+      "file": "A.png",
+      "px_w": 1200,
+      "px_h": 600,
+      "relief_mm": 6.9955
+    }
+  },
+  "descriptor": {
+    "kit": "andante_096",
+    "design": "AND",
+    "line": 12,
+    "module_mm": [
+      1200,
+      600
+    ],
+    "engine": "plan",
+    "labels": {
+      "A": "A"
+    },
+    "source": "Andante (Library 096 tirage), lay: stack, rotation none, 1 mould: Library 096 manifest laying ('stack (READY.json lay stack/none)'; seam receipt 0/12 joints over, wall3x3 stack). Gallery plan 3 x 4 modules (3.6 x 2.4 m); any other wall size continues the lay by its period (resize: tile, period 1 x 1). WIP in the composer: price open, no price.",
+    "moulds": [
+      {
+        "id": "A",
+        "turns": [
+          0
+        ],
+        "role": "field"
+      }
+    ],
+    "plan": {
+      "cols": 3,
+      "rows": 4,
+      "courses": [
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        },
+        {
+          "offset_mm": 0.0,
+          "pieces": [
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            },
+            {
+              "mould": "A",
+              "turn": 0,
+              "cut_left": 0.0,
+              "cut_right": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    "resize": {
+      "method": "tile",
+      "period": [
+        1,
+        1
+      ]
+    }
+  },
+  "baked": "2026-11-03",
+  "mm_per_level_receipt": "7 mm over the full 16-bit range, 65535 = tallest = face 0 mm: tirage_relief.py field() returns heights 0..depth_mm, the HIGH_7mm hm16 is height / 7 mm x 65535 (relief_toolkit.save_render Hf*65535) and the file spans 0..65535; manifest relief_mm 7.0; STL z-span 17 = 7 + 10 mm base; STL top height vs heightmap level correlates +0.96. mm_per_level = 7 / 65535.",
+  "plan_source": {
+    "source": "catalog_composer/allowlist.json",
+    "key": "andante_096.plan_cells",
+    "sha256": "29ca4110b63b3faa43cb8e695b17b6ff3e168d75f96bfaa4fc4cd5011c61e425"
+  }
+}

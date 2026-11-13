@@ -44,7 +44,7 @@ LIBRARY = ROOT / "VAULT" / "Library" / "Relief"   # the tile registry (tile_look
 DOMAIN = "https://studioluminant.com.tr/"
 UI = {
     "tr": {"lib": "Atölye Tasarımları", "index": "tasarimlar.htm", "page": "tasarim-{slug}.htm", "home": "Ana Sayfa",
-           "cta": "Duvar yerleşimi isteyin", "contact": "iletisim.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
+           "cta": "Duvar yerleşimi isteyin", "price": "Duvarınız için fiyat isteyin", "contact": "iletisim.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
            "spec": {"minimum": "Minimum sipariş", "size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey",
                     "fixing": "Montaj", "lead": "Teslim", "joint": "Derz"},
            "material": "Lumina PMAG™ (polimer modifiye kompozit alçı)", "finish": "Boyaya hazır", "joint": "1,5 mm",
@@ -90,7 +90,7 @@ UI = {
            "share_copied": "Bağlantı kopyalandı", "share_pdf": "PDF olarak kaydet", "share_close": "Kapat",
            "shr_proj": "Proje", "shr_by": "Hazırlayan", "shr_credit": "Tasarım ve döküm: Studio Luminant, Sapanca"},
     "en": {"lib": "Studio Designs", "index": "designs.htm", "page": "design-{slug}.htm", "home": "Home",
-           "cta": "Request a wall layout", "contact": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
+           "cta": "Request a wall layout", "price": "Request a price for your wall", "contact": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
            "spec": {"minimum": "Minimum order", "size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface",
                     "fixing": "Fixing", "lead": "Lead time", "joint": "Joint"},
            "material": "Lumina PMAG™ (polymer-modified composite gypsum)", "finish": "Paint-ready", "joint": "1.5 mm",
@@ -492,6 +492,23 @@ def contact_href(lang, d):
     return f"{UI[lang]['contact']}?design={d['slug']}"
 
 
+def composer_href(lang, d, pre):
+    """The Catalog Composer (tasarla/, tools/sync_composer.py) opened on this design in the page's language; None if it does not offer it."""
+    cfg = SITE / "tasarla" / "config.json"
+    if not cfg.is_file() or d["slug"] not in json.loads(cfg.read_text(encoding="utf-8")).get("slugs", {}):
+        return None
+    return f"{pre}tasarla/?d={d['slug']}&amp;l={lang}"
+
+
+def price_ctas(lang, d, pre):
+    """Hero CTAs: the Composer's price request as the primary button, the layout request beside it (Burak 2026-11-13)."""
+    u, href = UI[lang], composer_href(lang, d, pre)
+    layout = f"<a href=\"{contact_href(lang, d)}\" class=\"{'sys-link' if href else 'btn-primary'}\">{u['cta']}</a>"
+    if href is None:
+        return layout
+    return f"<a href=\"{href}\" class=\"btn-primary\">{u['price']}</a>" + "\n      " + layout
+
+
 def door_html(lang, d):
     u = UI[lang]
     return f"""
@@ -576,7 +593,7 @@ def relief_page(data, d, lang, figs):
     <h1 class="sys-name">{esc(c['name'])}</h1>
     <p class="sys-lede">{nb(txt(c['lede']))}</p>
     <div class="sys-ctas">
-      <a href="{contact_href(lang, d)}" class="btn-primary">{u['cta']}</a>{share_btn}
+      {price_ctas(lang, d, pre)}{share_btn}
     </div>
   </div>
   <div class="sys-hero__stage">
@@ -658,7 +675,7 @@ def study_page(data, d, lang, sizes):
     <h1 class="sys-name">{esc(c['name'])}</h1>
     <p class="sys-lede">{txt(c['story'])}</p>
     <div class="sys-ctas">
-      <a href="{contact_href(lang, d)}" class="btn-primary">{u['cta']}</a>{share_btn}
+      {price_ctas(lang, d, pre)}{share_btn}
     </div>
   </div>
   <figure class="dsg-hero__img">
