@@ -69,7 +69,7 @@ function pictureTag(src, alt, sizes, opts) {
 
   // ─── ORGANIZATION JSON-LD ───
   // Single-sourced as static markup in the homepage <head> (canonical brand entity, full
-  // NAP + telephone + @id) to avoid duplicate/conflicting Organization nodes. Intentionally
+  // NAP + @id; no telephone — SL is written-first) to avoid duplicate/conflicting Organization nodes. Intentionally
   // NOT injected per-page here — the brand entity only needs to exist once, on the homepage.
 
   // ─── LABELS (Two Doors Copy v1 §1–3; DEC-02 open: each label is one constant, so a ruling is a one-line change) ───
@@ -105,7 +105,8 @@ function pictureTag(src, alt, sizes, opts) {
   const ABOUT_HREF = { tr: 'hakkimizda.htm', en: 'about.htm' };
 
   // DEC-12: the WhatsApp Business number goes here (international format). Empty = email only:
-  // the contact pages' [data-contact-phone] row stays hidden. Also add it to the schema and llms.txt.
+  // the contact pages' [data-contact-phone] row stays hidden. Messages only (written-first contact,
+  // VAULT/02 SL_Written_First_Contact_v1.md): keep it out of the schema and llms.txt.
   const CONTACT_PHONE = '';
   if (CONTACT_PHONE) {
     const waDigits = CONTACT_PHONE.replace(/\D/g, '');
