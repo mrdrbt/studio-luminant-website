@@ -14,7 +14,7 @@
       "el": 55.0
     }
   },
-  "defaultLight": "ceiling",
+  "defaultLight": "window",
   "posterPx": [
     560,
     840

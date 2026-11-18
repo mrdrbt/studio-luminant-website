@@ -44,7 +44,7 @@ LIGHTS = {
     "window": {"az": 172.0, "el": 16.0},
     "front": {"az": 90.0, "el": 55.0},
 }
-DEFAULT_LIGHT = "ceiling"
+DEFAULT_LIGHT = "window"
 
 # Window origin in mm within the design's own sheet, for the designs that do not repeat.
 ORIGIN = {"fugato": (1500.0, 900.0), "glissando": (0.0, 300.0)}
@@ -59,7 +59,7 @@ HM_STAGING = {"sonado": "heightmaps/2026-11-07_092-sonado-web/092_sonado_hm16.pn
 # Hemiola's, which tools/tray_hemiola_hm.py rasterises from the STLs and the booth lay. Not in the tile registry.
 SEAMLESS_WORK = "Images/2026-10-30_seamless_2040/_work"
 WALLS = {
-    "accelerando": {"hm": f"{SEAMLESS_WORK}/optic_wall_hm16_2ppmm.png", "sheet_mm": (1600.0, 1200.0), "relief_mm": 19.979, "origin": (500.0, 300.0)},
+    "accelerando": {"hm": f"{SEAMLESS_WORK}/optic_wall_hm16_2ppmm.png", "sheet_mm": (1600.0, 1200.0), "relief_mm": 19.979, "origin": (300.0, 300.0)},
     "gruppetto": {"hm": f"{SEAMLESS_WORK}/crest_wall_hm16_2ppmm.png", "sheet_mm": (1600.0, 1200.0), "relief_mm": 30.0, "origin": (200.0, 200.0)},
     "hemiola": {"hm": "heightmaps/2026-11-07_hemiola_booth_hm16_2ppmm.png", "sheet_mm": (800.0, 800.0), "relief_mm": 66.89, "origin": (100.0, 100.0)},
     "melisma": {"hm": f"{SEAMLESS_WORK}/rotor_wall_hm16_2ppmm.png", "sheet_mm": (1600.0, 1200.0), "relief_mm": 18.0, "origin": (500.0, 300.0)},

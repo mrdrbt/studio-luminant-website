@@ -208,8 +208,30 @@
       root.classList.add('tray-touched');
       setPressed(null);
     }
+    // On a phone the dock folds to one line: the light's name and a button that opens the controls.
+    var dockName = document.createElement('span'), dockBtn = document.createElement('button'), dockBar = document.createElement('div');
+    dockName.className = 'tray-dock__name';
+    dockBtn.type = 'button';
+    dockBtn.className = 'tray-dock__btn';
+    dockBtn.textContent = /^en/i.test(document.documentElement.lang) ? 'Light settings' : 'Işık ayarları';
+    dockBtn.setAttribute('aria-expanded', 'false');
+    dockBar.className = 'tray-dock__bar';
+    dockBar.appendChild(dockName);
+    dockBar.appendChild(dockBtn);
+    dock.insertBefore(dockBar, dock.firstChild);
+    dockBtn.addEventListener('click', function () {
+      dockBtn.setAttribute('aria-expanded', String(dock.classList.toggle('is-open')));
+      updateVisible();
+      dirty = true;
+      wake();
+    });
     function setPressed(name) {
-      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-light') === name)); });
+      buttons.forEach(function (b) {
+        var on = b.getAttribute('data-light') === name;
+        b.setAttribute('aria-pressed', String(on));
+        if (on) dockName.textContent = b.textContent;
+      });
+      if (!name) dockName.textContent = pad.getAttribute('aria-label') || '';
     }
     function drawPad() {
       var R = 100, r = (CFG.elMax - L.el) / (CFG.elMax - CFG.elMin);
@@ -699,6 +721,17 @@
       .catch(function (err) { console.warn(String(err && err.message || err)); });
     return state;
   }
+
+  // One listener for every way into a design from this page (see docs/ga4-events.md). It only reports; navigation is untouched.
+  var DESIGN_HREF = /(?:^|\/)(?:tasarim|design)-([a-z0-9-]+)\.htm(?:[?#]|$)/i;
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || e.defaultPrevented || typeof window.slTrack !== 'function') return;
+    var m = DESIGN_HREF.exec(a.getAttribute('href'));
+    if (!m || /-share$/i.test(m[1])) return;
+    var how = a.closest('.idx-hero') ? 'hero' : a.closest('.tray-cue') ? 'tray_cue' : a.closest('.tray-name') ? 'tray_name' : a.closest('.tray-sample') ? 'tray' : 'list';
+    window.slTrack('view_design', { design_id: m[1], view_method: how });
+  });
 
   function init() {
     var root = document.querySelector('[data-tray]');

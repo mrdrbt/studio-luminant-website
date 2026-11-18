@@ -23,10 +23,21 @@ aggregate; split by language with GA4's built-in `language` / page path.
 | `design_code` | `SIG-CMP` | pattern `code` (pattern only) |
 | `collection` | `SIG` | pattern `collection` (pattern only) |
 | `style` | `heritage` | pattern `style`; lookbook `data-cat` for scenes |
-| `view_method` | `card` / `lightbox_nav` / `enlarge` | grid card click/Enter · prev/next arrows inside the lightbox · lookbook image enlarge |
+| `view_method` | `card` / `lightbox_nav` / `enlarge` / `hero` / `tray` / `tray_name` / `tray_cue` / `list` | grid card click/Enter · prev/next arrows inside the lightbox · lookbook image enlarge · designs index (below) |
 
 Fired from: `koleksiyon.htm`, `en/collection.htm` (lightbox open + prev/next),
-`en/lookbook.htm` (image enlarge).
+`en/lookbook.htm` (image enlarge),
+`tasarimlar.htm` + `en/designs.htm` (click on a link to a design page).
+
+Designs index: a delegated click listener in `relight-tray.js` sends `view_design`
+with only `design_id` (the page slug from `tasarim-<slug>.htm` / `design-<slug>.htm`;
+`*-share.htm` excluded) and `view_method`: `hero` = link inside the room-photo hero ·
+`tray` = the sample image · `tray_name` = the name under it · `tray_cue` = the
+"İncele →" / "View →" link · `list` = the plain list further down. It fires on the
+click, never blocks navigation, and skips a click that the tray turned into a drag.
+`design_id` and `view_method` are already registered as custom dimensions (see
+GA4 Admin below); no new registration is needed, but the new `view_method` values
+only show once data has arrived.
 
 Colour / finish: not sent — no page shows a per-item colour or finish choice yet,
 and the pattern data carries none. Add a `finish` param here first if one appears.
