@@ -392,7 +392,7 @@
       if (sweep) {
         var p = Math.max(0, (now - sweep.t0) / 1000 / CFG.sweepS);
         if (p >= 1) { L.tAz = sweep.az; L.tEl = sweep.el; sweep = null; }
-        else { L.tAz = sweep.az + CFG.sweepAz * Math.sin(2 * Math.PI * p); L.tEl = sweep.el; }
+        else { L.tAz = clamp(sweep.az + CFG.sweepAz * Math.sin(2 * Math.PI * p), 0, 180); L.tEl = sweep.el; }   // a side default must not swing behind the wall
       }
       var a = spring(L.az, L.vAz, L.tAz, dt), e = spring(L.el, L.vEl, L.tEl, dt);
       L.az = a[0]; L.vAz = a[1]; L.el = e[0]; L.vEl = e[1];
