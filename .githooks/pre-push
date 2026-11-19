@@ -7,39 +7,58 @@
 # This gate therefore runs LOCALLY, on the last hop before code leaves this machine and
 # Netlify auto-deploys it. See this repo's CLAUDE.md ("Fire-hold pre-push gate").
 #
-# Fail-OPEN only when the scanner cannot be located or run (e.g. this repo was cloned
-# standalone, away from the umbrella) — a broken gate must not brick deploys.
-# Fail-CLOSED on an actual leak: exit 1 aborts the push.
+# Fail-CLOSED when the scanner cannot be located or run: a gate that skips silently
+# let pushes from scratch-folder worktrees go out unscanned (found 2026-11-19). The
+# umbrella is found from the repo's shared .git dir, so every worktree of this repo
+# resolves the same umbrella wherever it lives; SL_UMBRELLA overrides. A deliberate,
+# visible bypass: SL_FIREHOLD_SKIP=1 git push (or git push --no-verify).
+# Fail-CLOSED on an actual leak: exit 1 aborts the push. The scan covers the tree
+# actually being pushed ($repo_root), not the canonical checkout.
 set -u
 
-repo_root=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
-umbrella=$(cd "$repo_root/../../.." 2>/dev/null && pwd) || umbrella=""
-scanner="$umbrella/.claude/tools/fire_leak_scan.py"
-scope="VAULT/06 — Website/Studio Luminant Website"
-
-if [ -z "$umbrella" ] || [ ! -f "$scanner" ]; then
-  echo "[SL fire-hold] scanner not found (expected the umbrella repo three levels up) — skipping; push allowed." >&2
-  exit 0
-fi
-
-py=$(command -v python || command -v py || command -v python3) || {
-  echo "[SL fire-hold] no python on PATH — skipping; push allowed." >&2
-  exit 0
+repo_root=$(git rev-parse --show-toplevel 2>/dev/null) || {
+  echo "[SL fire-hold] not inside a git work tree -- PUSH BLOCKED." >&2
+  exit 1
 }
 
-echo "[SL fire-hold] scanning the website tree for fire-cert leaks..." >&2
-"$py" "$scanner" "$scope"
-status=$?
+if [ -n "${SL_UMBRELLA:-}" ]; then
+  umbrella="$SL_UMBRELLA"
+else
+  common_dir=$(cd "$repo_root" && cd "$(git rev-parse --git-common-dir)" 2>/dev/null && pwd) || common_dir=""
+  # common_dir = <canonical website checkout>/.git ; the umbrella is three levels above the checkout
+  umbrella=$(cd "$common_dir/../../../.." 2>/dev/null && pwd) || umbrella=""
+fi
+scanner="$umbrella/.claude/tools/fire_leak_scan.py"
 
-if [ "$status" -ne 0 ]; then
-  echo "" >&2
-  echo "[SL fire-hold] PUSH BLOCKED — fire-cert language found in the published website tree (fire hold active)." >&2
-  echo "               Remove the flagged token(s) above. Only if you have confirmed a false" >&2
-  echo "               positive, re-push with:  git push --no-verify" >&2
+py=$(command -v python || command -v py || command -v python3) || py=""
+
+if [ "${SL_FIREHOLD_SKIP:-}" = "1" ]; then
+  echo "[SL fire-hold] SL_FIREHOLD_SKIP=1 -- fire scan deliberately skipped for this push." >&2
+elif [ -z "$umbrella" ] || [ ! -f "$scanner" ] || [ -z "$py" ]; then
+  echo "[SL fire-hold] PUSH BLOCKED -- cannot run the fire-hold scan." >&2
+  echo "               scanner looked for: ${scanner}" >&2
+  [ -z "$py" ] && echo "               no python on PATH." >&2
+  echo "               Set SL_UMBRELLA=<path to SL COWORK>, or bypass on purpose with" >&2
+  echo "               SL_FIREHOLD_SKIP=1 git push  (then run fire_leak_scan.py by hand)." >&2
   exit 1
+else
+  echo "[SL fire-hold] scanning $repo_root for fire-cert leaks..." >&2
+  "$py" "$scanner" "$repo_root"
+  status=$?
+  if [ "$status" -ne 0 ]; then
+    echo "" >&2
+    echo "[SL fire-hold] PUSH BLOCKED — fire-cert language found in the published website tree (fire hold active)." >&2
+    echo "               Remove the flagged token(s) above. Only if you have confirmed a false" >&2
+    echo "               positive, re-push with:  git push --no-verify" >&2
+    exit 1
+  fi
+  echo "[SL fire-hold] clean — no fire-cert leaks." >&2
 fi
 
-echo "[SL fire-hold] clean — no fire-cert leaks; push allowed." >&2
+if [ -z "$py" ]; then
+  echo "[SL assets/sitemap] no python on PATH -- PUSH BLOCKED." >&2
+  exit 1
+fi
 
 # ─── Asset cache-busting ───
 # shared.css / components.js etc. are cached for a week (netlify.toml), so every local
