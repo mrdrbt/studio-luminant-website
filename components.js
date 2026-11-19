@@ -107,12 +107,13 @@ function pictureTag(src, alt, sizes, opts) {
   // DEC-12: the WhatsApp Business number goes here (international format). Empty = email only:
   // the contact pages' [data-contact-phone] row stays hidden. Messages only (written-first contact,
   // VAULT/02 SL_Written_First_Contact_v1.md): keep it out of the schema and llms.txt.
-  const CONTACT_PHONE = '';
+  // The number lives only in the wa.me link; the page shows the word "WhatsApp" (Burak 2026-11-19, #161).
+  const CONTACT_PHONE = '+90 545 540 3020';
   if (CONTACT_PHONE) {
     const waDigits = CONTACT_PHONE.replace(/\D/g, '');
     document.querySelectorAll('[data-contact-phone]').forEach(row => {
       const dd = row.querySelector('dd');
-      if (dd) dd.innerHTML = `<a href="https://wa.me/${waDigits}" target="_blank" rel="noopener">${CONTACT_PHONE}</a>`;
+      if (dd) dd.innerHTML = `<a href="https://wa.me/${waDigits}" target="_blank" rel="noopener">WhatsApp</a>`;
       row.hidden = false;
     });
   }
