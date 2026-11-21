@@ -14,6 +14,7 @@
     if (data.design) params.design = data.design;
     if (typeof gtag === 'function') gtag('event', 'generate_lead', params);
     if (typeof fbq === 'function') fbq('track', 'Lead');
+    if (typeof slStep === 'function') slStep('lead');
   }
 
   // Hidden inputs, so Formspree's copy carries the attribution too (shared.js → slAttribution).

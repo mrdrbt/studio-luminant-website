@@ -54,6 +54,71 @@ var SL_UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'u
   };
 })();
 
+// ─── SITE STEPS (cookie-free funnel counts) ───
+// GA4 waits for cookie consent, which most ad visitors never give, so the funnel is also counted here:
+// one row per step per browser session in Supabase `site_steps` (migration 010_site_steps.sql).
+// Each row is the step, the page path and the session's utm_* set: no cookie, no visitor id, no IP.
+// sessionStorage only stops a step counting twice. Steps: land, engaged, page2, form_view, form_start, lead.
+var SL_STEPS_URL = 'https://mjmeqgljpyenuqorarte.supabase.co/rest/v1/rpc/log_site_step';
+var SL_STEPS_KEY = 'sb_publishable_vCLQ5AGLhXUCRzbR-XDtxA_ds5-h_R5'; // Supabase publishable key (public by design); empty = counting off
+function slStep(step) {
+  if (!SL_STEPS_KEY) return;
+  try {
+    if (localStorage.getItem('sl_internal') === '1') return;
+    var done = JSON.parse(sessionStorage.getItem('sl_steps') || '[]');
+    if (done.indexOf(step) !== -1) return;
+    done.push(step);
+    sessionStorage.setItem('sl_steps', JSON.stringify(done));
+  } catch (e) { return; } // storage blocked: count nothing rather than count twice
+  var a = window.slAttribution ? window.slAttribution() : {};
+  fetch(SL_STEPS_URL, {
+    method: 'POST',
+    keepalive: true,
+    headers: { 'Content-Type': 'application/json', 'apikey': SL_STEPS_KEY },
+    body: JSON.stringify({
+      p_step: step,
+      p_path: location.pathname.slice(0, 200),
+      p_utm_source: a.utm_source || null,
+      p_utm_medium: a.utm_medium || null,
+      p_utm_campaign: a.utm_campaign || null,
+      p_utm_content: a.utm_content || null,
+      p_is_test: location.hostname !== 'studioluminant.com.tr'
+    })
+  }).catch(function () {});
+}
+(function () {
+  var seen;
+  try { seen = JSON.parse(sessionStorage.getItem('sl_steps') || '[]'); } catch (e) { seen = []; }
+  if (seen.indexOf('land') === -1) slStep('land');
+  else if (window.slAttribution().landing_path !== decodeURIComponent(location.pathname)) slStep('page2'); // a reload is not a second page
+
+  var ENGAGED_MS = 15000;
+  var timer = setTimeout(function () { slStep('engaged'); }, ENGAGED_MS);
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) clearTimeout(timer);
+  });
+  function onScroll() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (max > 0 && window.scrollY / max >= 0.5) {
+      slStep('engaged');
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  var forms = document.querySelectorAll('form[data-form-type]');
+  if (!forms.length) return;
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      if (entries.some(function (en) { return en.isIntersecting; })) { slStep('form_view'); io.disconnect(); }
+    });
+    forms.forEach(function (f) { io.observe(f); });
+  }
+  forms.forEach(function (f) {
+    f.addEventListener('focusin', function () { slStep('form_start'); }, { once: true });
+  });
+})();
+
 // ─── CONTACT CLICKS (WB-08) ───
 // tel: / mailto: / WhatsApp links anywhere on the page (nav, footer, contact rows).
 document.addEventListener('click', function (e) {
