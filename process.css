@@ -18,8 +18,9 @@
 .pseq__layer { position: absolute; inset: 0; margin: 0; opacity: 0; will-change: opacity; }
 .pseq__layer[data-layer="0"] { opacity: 1; }
 .pseq__layer img { display: block; width: 100%; height: 100%; object-fit: cover; }
-/* the live relief's poster is the panel plus a 120 mm wall margin (600 / 840): inset −20% so the panel fills the frame */
-.pseq__relief { position: absolute; inset: -20%; }
+/* the live relief's poster is the 600 × 1200 panel plus a 120 mm wall margin (840 × 1440); the stage shows the panel's
+   centre 600 mm square, the window process_bake.py crops: 120 mm margin each side (−20%), 120 + 300 mm above and below (−70%) */
+.pseq__relief { position: absolute; inset: -70% -20%; }
 .pseq__relief .relief-light__poster { width: 100%; height: 100%; }
 
 .pseq__caps { position: relative; width: min(100%, calc(100svh - 200px)); height: 1.6em; }

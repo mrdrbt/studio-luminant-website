@@ -1,11 +1,12 @@
 """Bake the Process page's drawing-to-cast sequence layers from one Library relief folder.
 
-Writes concept / depth / light layers, each registered to the heightmap's panel square, so the
+Writes concept / depth / light layers, each registered to the heightmap's panel square (a non-square panel's
+centre square, as the graze frames are cropped), so the
 scroll crossfade reads as one surface changing rather than a slideshow. The fourth layer is the
 live relief (assets/relief/<asset>/, from relief_bake.py), inset in CSS so its panel fills the
 same square.
 
-  python tools/process_bake.py "<VAULT/Library/Relief/012_iznik-cypress>" assets/process/cantilena --light-frame 0
+  python tools/process_bake.py "<VAULT/Library/Relief/042_drift-focus>" assets/process/glissando --light-frame 0 --registered
 
 Concept: the source image is warped onto the heightmap with an ECC affine fit on gradient maps.
 Light: the graze sheet holds three raking-light frames; --light-frame picks the one lit from the poster's side.
@@ -70,6 +71,8 @@ def main():
                     help="which of the graze sheet's three frames; pick the one lit from the poster's side")
     ap.add_argument("--concept", type=Path, default=None,
                     help="drawing/concept image for the first layer (default: <library>/source_image.png)")
+    ap.add_argument("--registered", action="store_true",
+                    help="the concept is already on the heightmap's square (tools/process_drawing.py): skip the ECC fit")
     a = ap.parse_args()
     a.out.mkdir(parents=True, exist_ok=True)
 
@@ -77,6 +80,10 @@ def main():
     if h is None:
         sys.exit("no heightmap.png")
     h = h.astype(np.float32)
+    if h.shape[0] != h.shape[1]:  # a portrait/landscape panel: the stage is square, take its centre square
+        side = min(h.shape[:2])
+        y0, x0 = (h.shape[0] - side) // 2, (h.shape[1] - side) // 2
+        h = h[y0:y0 + side, x0:x0 + side]
     depth = ((h - h.min()) / (h.max() - h.min()) * 255).astype(np.uint8)
     depth_w = cv2.resize(depth, (WORK, WORK), interpolation=cv2.INTER_AREA)
 
@@ -101,7 +108,9 @@ def main():
     concept = imread(a.concept or a.library / "source_image.png")
     cw = cv2.resize(to_gray(concept), (WORK, WORK), interpolation=cv2.INTER_AREA)
     best_warp, best_score = None, -1
-    for s in (0.85, 0.92, 1.0, 1.1):
+    if a.registered:
+        best_warp, best_score = np.array([[1, 0, 0], [0, 1, 0]], np.float32), 1.0
+    for s in () if a.registered else (0.85, 0.92, 1.0, 1.1):
         try:
             w, sc = register(cw, depth_w, s)
         except cv2.error:
@@ -110,7 +119,7 @@ def main():
             best_warp, best_score = w, sc
     if best_warp is None:
         sys.exit("concept registration failed")
-    report["concept_ecc"] = round(best_score, 3)
+    report["concept_ecc"] = "registered by construction" if a.registered else round(best_score, 3)
     report["concept_warp"] = best_warp.round(4).tolist()
     S = SIZES[0]
     full = best_warp.copy()
