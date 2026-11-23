@@ -7,6 +7,26 @@
 
   function clean(v) { return (v || "").replace(/\s+/g, " ").trim().slice(0, LIMIT); }
 
+  // One cookie-free `share_view` row per share view per browser session, so an opened sheet is counted
+  // (share pages load no consent.js and no shared.js). Same endpoint, key and opt-out as slStep in shared.js;
+  // only the page path is sent — the project name and preparer stay in the hash.
+  function countView() {
+    var key = "sl_share_views", path = location.pathname.slice(0, 200), done;
+    try {
+      if (localStorage.getItem("sl_internal") === "1") return;
+      done = JSON.parse(sessionStorage.getItem(key) || "[]");
+      if (done.indexOf(path) !== -1) return;
+      done.push(path);
+      sessionStorage.setItem(key, JSON.stringify(done));
+    } catch (e) { return; }  // storage blocked: count nothing rather than count twice
+    fetch("https://mjmeqgljpyenuqorarte.supabase.co/rest/v1/rpc/log_site_step", {
+      method: "POST",
+      keepalive: true,
+      headers: { "Content-Type": "application/json", "apikey": "sb_publishable_vCLQ5AGLhXUCRzbR-XDtxA_ds5-h_R5" },
+      body: JSON.stringify({ p_step: "share_view", p_path: path, p_is_test: location.hostname !== "studioluminant.com.tr" })
+    }).catch(function () {});
+  }
+
   function shareLink(href, form, print) {
     var url = new URL(href, location.href), h = new URLSearchParams();
     ["p", "by"].forEach(function (k) { var v = clean(form.elements[k].value); if (v) h.set(k, v); });
@@ -58,6 +78,7 @@
     meta.hidden = !shown.length;
     if (h.get("p")) document.title = clean(h.get("p")) + " — " + document.title;  // names the saved PDF
     document.querySelector("[data-shr-print]").addEventListener("click", function () { window.print(); });
+    if (h.get("print") !== "1") countView();  // the PDF button's own print tab is the sharer, not a reader
     if (h.get("print") === "1") {
       if (document.readyState === "complete") window.print();
       else window.addEventListener("load", function () { window.print(); });
