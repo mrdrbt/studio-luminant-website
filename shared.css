@@ -404,6 +404,7 @@ footer {
    The template positions .relief-light__poster; the canvas covers the container and fades in. */
 .relief-light { position: relative; overflow: hidden; background: var(--relief-wall, #DFD8CA); margin: 0; }
 .relief-light__poster { display: block; }
+.relief-light__pic { display: contents; }  /* the WebP <picture> wrapper (tools/poster_variants.py): no box of its own */
 .relief-light__canvas {
   position: absolute; inset: 0; width: 100%; height: 100%;
   opacity: 0; transition: opacity var(--dur-4) var(--ease); pointer-events: none;
@@ -996,15 +997,22 @@ summary:focus-visible,
 /* ─── TEXT-LINK TAP TARGETS ─────────────
    Small-caps arrow links (.sys-link .arc-link .p-door__link .faq-link .uds-link).
    The hit area grows through ::after, so the underline and the page layout stay where they were. */
-a.sys-link, a.arc-link, a.p-door__link, a.faq-link, a.uds-link { position: relative; }
-a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, a.uds-link::after {
+a.sys-link, a.arc-link, a.p-door__link, a.faq-link, a.uds-link,
+button.sys-link, a.sys-back, .dsg-pager a.dsg-pager__index { position: relative; }
+a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, a.uds-link::after,
+button.sys-link::after, a.sys-back::after, .dsg-pager a.dsg-pager__index::after {
   content: ''; position: absolute; inset: -9px -4px;
 }
 @media (max-width: 900px) {
   a.sys-link, a.arc-link, a.p-door__link, a.faq-link, a.uds-link { display: inline-block; font-size: 13px; }
   a.uds-link { display: inline-flex; }
-  a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, a.uds-link::after { inset: -12px -6px; }
+  a.sys-link::after, a.arc-link::after, a.p-door__link::after, a.faq-link::after, a.uds-link::after,
+  button.sys-link::after, a.sys-back::after, .dsg-pager a.dsg-pager__index::after { inset: -12px -6px; }
+  a.sys-back::after, .dsg-pager a.dsg-pager__index::after { inset: -14px -6px; }  /* 16-17px tall: 14px pads reach 44px */
 }
+/* The logo links are a ~25px image: an invisible pad makes the tap target 44px+ (mobile QA 2026-11-23). */
+.nav-logo, .shr-logo { position: relative; }
+.nav-logo::after, .shr-logo::after { content: ''; position: absolute; inset: -10px -8px; }
 
 /* Back-link target: 24px minimum (WCAG 2.5.8); legal.css and the inline copies on article pages set no height. */
 .back-nav a { min-height: 24px; }

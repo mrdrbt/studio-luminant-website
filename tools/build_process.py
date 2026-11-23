@@ -14,6 +14,7 @@ import re
 from pathlib import Path
 
 from build_designs import DOMAIN, SITE, tracking_block
+from poster_variants import picture as poster_picture
 
 FRAMES = [  # real workshop photographs: file, width, height, object-position
     ("workshop-01-mould-prep.jpg", 1800, 2400, "center 30%"),
@@ -60,11 +61,10 @@ def page(d, lang, track, footer):
     steps = c["steps"]
     layers = "\n".join(layer_html(pre, d, i, steps[i]) for i in range(3))
     live = steps[3]
+    live_attrs = f'width="{pw}" height="{ph}" loading="lazy" decoding="async" alt="{esc(live["alt"])}"'
     layers += (f'\n      <figure class="pseq__layer pseq__layer--live" data-layer="3">\n'
                f'        <div class="pseq__relief relief-light" data-relief-light="{rel}" data-input="auto" data-scroll-for="#pseq">\n'
-               f'          <img class="relief-light__poster" src="{rel}poster-1680.jpg" srcset="{rel}poster-840.jpg {pw // 2}w, '
-               f'{rel}poster-1680.jpg {pw}w" sizes="{RELIEF_SIZES}" width="{pw}" height="{ph}" loading="lazy" decoding="async" '
-               f'alt="{esc(live["alt"])}">\n        </div>\n      </figure>')
+               f'          {poster_picture(rel, pw, RELIEF_SIZES, live_attrs)}\n        </div>\n      </figure>')
     caps = "\n".join(f'      <span class="pseq__cap" data-layer="{i}">{esc(s["cap"])}</span>' for i, s in enumerate(steps))
     step_html = "\n".join(
         f'    <li class="pseq__step" data-layer="{i}">\n'
