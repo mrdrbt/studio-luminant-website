@@ -1,0 +1,21 @@
+{
+ "frames_ecc_to_depth": [
+  0.814,
+  0.717,
+  0.69
+ ],
+ "light_frame": 0,
+ "concept_ecc": "registered by construction",
+ "concept_warp": [
+  [
+   1.0,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   1.0,
+   0.0
+  ]
+ ]
+}

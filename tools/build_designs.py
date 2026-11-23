@@ -35,6 +35,7 @@ from pathlib import Path
 from PIL import Image
 
 import asset_versions
+from poster_variants import picture as poster_picture, preload as poster_preload
 
 SITE = Path(__file__).resolve().parents[1]
 # the SL COWORK umbrella; study sources are given relative to it. Found by its VAULT folder, not a fixed depth: this repo and
@@ -148,7 +149,15 @@ LINKS = {"tr": {"home": "/", "lobby": "otel-lobisi-karsilama-duvari.htm", "guest
                 "villa": "villa-duvar-tasarimi.htm", "restaurant": "restoran-duvar-tasarimi.htm"},
          "en": {"home": "/en/", "lobby": "hotel-lobby-feature-wall.htm"}}
 LINK = re.compile(r"\[\[(\w+)\|([^\]|]+)\]\]")
-SIZES = {"panel": "(orientation: portrait) 90vw, 55vw", "field": "(orientation: portrait) 100vw, 100vw"}
+def poster_sizes(d, pw, ph, cap_vh):
+    """The relief poster's `sizes`. On a phone a field poster spans the stage (the viewport less 2 x 24px); a panel poster
+    is capped at cap_vh of the screen height (library.css: 44svh on the hero, 82svh on the share view), so its width
+    follows its aspect. A flat 90vw / 100vw made a DPR-3 phone fetch the 1680 file for a 342px box (mobile QA 2026-11-23)."""
+    if d["layout"] == "field":
+        return "(orientation: portrait) calc(100vw - 48px), 100vw"
+    # in vw, not vh: the preload scanner cannot resolve vh in imagesizes, fell back to 100vw and fetched the 1680 file
+    # beside the <img>'s own pick. A vh cap becomes vw on a reference phone (390 x 664 visible): close on any phone.
+    return f"(orientation: portrait) min(calc(100vw - 48px), {round(cap_vh * pw / ph * 664 / 390)}vw), 55vw"
 STUDY_WIDTH = {"wall": 1800, "card": 1400}
 STUDY_FILE = {"wall": "wall.webp", "card": "detail.webp"}
 # the lay drawing, one per language: drawing[lang] = {"d": 1600-wide desktop, "m": 900-wide portrait for phones}
@@ -568,8 +577,8 @@ def relief_page(data, d, lang, figs):
     man = json.loads((SITE / "assets" / "relief" / d["asset"] / "manifest.json").read_text(encoding="utf-8"))
     pw, ph = man["poster"]
     field = d["layout"] == "field"
-    extra = (f'<link rel="preload" as="image" href="{rel}poster-1680.jpg" imagesrcset="{rel}poster-840.jpg {pw // 2}w, '
-             f'{rel}poster-1680.jpg {pw}w" imagesizes="{SIZES[d["layout"]]}" fetchpriority="high">\n')
+    extra = poster_preload(rel, pw, poster_sizes(d, pw, ph, 44))
+    hero_attrs = f'width="{pw}" height="{ph}" fetchpriority="high" alt="{esc(c["alt"])}"'
     spec = spec_html([("size", c["size"]), ("depth", c["depth"]), ("layout", c["layout"]),
                       ("material", u["material"]), ("finish", u["finish"]), ("fixing", fixing_of(d, u)), ("lead", u["lead"]), ("minimum", min_of(d, u))], u)
     fig = {}
@@ -606,8 +615,7 @@ def relief_page(data, d, lang, figs):
     </div>
   </div>
   <div class="sys-hero__stage">
-    <img class="relief-light__poster" src="{rel}poster-1680.jpg" srcset="{rel}poster-840.jpg {pw // 2}w, {rel}poster-1680.jpg {pw}w"
-         sizes="{SIZES[d['layout']]}" width="{pw}" height="{ph}" fetchpriority="high" alt="{esc(c['alt'])}">
+    {poster_picture(rel, pw, poster_sizes(d, pw, ph, 44), hero_attrs)}
   </div>
 </section>
 {wall_html(d, lang, pre, views)}
@@ -859,8 +867,9 @@ def relief_share_page(d, lang, figs):
         strip = (f'<figure class="shr-fig"><img src="{rel}strip.webp" width="{tw}" height="{th}" alt="{esc(c["strip_alt"])}">'
                  f'<figcaption>{u["strip_cap"]}</figcaption></figure>\n')
     dw, dh = drawing_webp(SITE / "assets" / "relief" / d["asset"])
+    poster_attrs = f'width="{pw}" height="{ph}" alt="{esc(c["alt"])}"'
     body = f"""<figure class="shr-fig shr-relief{field}"><div class="relief-light" data-relief-light="{rel}" data-input="auto">
-  <img class="relief-light__poster" src="{rel}poster-1680.jpg" srcset="{rel}poster-840.jpg {pw // 2}w, {rel}poster-1680.jpg {pw}w" sizes="{SIZES[d['layout']]}" width="{pw}" height="{ph}" alt="{esc(c['alt'])}">
+  {poster_picture(rel, pw, poster_sizes(d, pw, ph, 82), poster_attrs)}
 </div></figure>
 {share_rooms(d, lang, pre)}<section class="shr-pair shr-pair--relief">
   <figure class="shr-fig"><img src="{rel}object.webp" width="{ow}" height="{oh}" alt="{esc(c['object_alt'])}"><figcaption>{c.get('object_cap', u['obj_cap'])}</figcaption></figure>

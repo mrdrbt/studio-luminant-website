@@ -7,7 +7,7 @@ Brightness = height (never inverted). For one relief it writes into --out:
   height-<N/2>.webp lossless RGB at HALF the normal size: R = height (8-bit: 0.06 mm steps on 16 mm, ample for
                    shadow marching; the fine detail lives in the normals), G = albedo variation (128 = neutral),
                    B = 0. Shadows read soft structure, so half resolution is enough.
-  poster-1680.jpg, poster-840.jpg
+  poster-1680.jpg, poster-840.jpg (+ poster-1080.jpg and WebP renditions via tools/poster_variants.py)
                    CPU render with the same shading model at the manifest's default light (long side 1680 / 840).
                    --layout panel: the panel standing base_mm proud of a flat plaster wall, margin_mm of wall
                    on every side. --layout field: --field-tiles of the relief edge to edge (it must tile
@@ -28,6 +28,8 @@ from pathlib import Path
 import cv2
 import numpy as np
 from PIL import Image
+
+from poster_variants import write_variants
 
 SHADE = {  # shading model shared with relief-light.js through manifest.json
     "albedo": [233, 226, 211], "albedoVar": 0.035, "ambient": 0.08, "bounce": 0.10,
@@ -222,6 +224,7 @@ def main():
                 "poster": [img.width, img.height], "textures": files,
                 "posters": ["poster-840.jpg", "poster-1680.jpg"], "heightBits": 8, "shade": SHADE}
     (a.out / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    write_variants(a.out)  # poster-1080.jpg + WebP renditions, served by build_designs / build_process
     for f in sorted(a.out.iterdir()):
         print(f"{f.name:22s} {f.stat().st_size / 1024:7.0f} KB")
     print(f"layout {a.layout}; poster {img.width}x{img.height}; wall {wall}")
