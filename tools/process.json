@@ -1,6 +1,8 @@
 {
   "_note": "Copy for the Process page (surec.htm / en/process.htm), source for tools/build_process.py. Gated via sl-content-writer 2026-10-15 (fire/terminology, slop, archlex, TR calque + metrics, native-TR reader, de-slop reader). Layers from tools/process_bake.py on Library 012 (Cantilena); the live relief is assets/relief/012-cantilena/.",
   "asset": "012-cantilena",
+  "poster_asset": "042-glissando",
+  "_note_poster": "The live relief (relief-light.js data) is `asset`; the poster under it and the social image are `poster_asset`. They differ since 2026-11-06 (08643f7 moved the social image off Cantilena and the poster went with it) - kept as committed; set both to one asset to make the poster match the live relief.",
   "layers": "assets/process/cantilena/",
   "tr": {
     "file": "surec.htm",
@@ -10,28 +12,99 @@
     "home": "Ana Sayfa",
     "eyebrow": "Özel Üretim",
     "h1": "Nasıl çizdiyseniz,<br><em>öyle dökeriz.</em>",
-    "lede": "Bir projenin çizimi, Sapanca'daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, tasarımlarımızdan birini özel üretim bir çizimin izlediği yoldan geçiriyoruz.",
+    "lede": "Bir projenin çizimi, Sapanca’daki atölyemizde dökme bir rölyef panele dönüşür. Aşağıda, tasarımlarımızdan birini özel üretim bir çizimin izlediği yoldan geçiriyoruz.",
     "steps": [
-      {"h": "Çizim ya da görsel", "p": "Her proje bir çizim ya da görselle başlar. Elle çizilmiş bir eskiz, ölçülü bir teknik çizim ya da bir referans görsel olabilir. Burada tasarımı bir çizim olarak görüyorsunuz: İznik çini geleneğinin servi, lale, karanfil ve gül motifleri tek bir simetrik kompozisyonda. Çizim, derinlik haritası ve aşağıdaki rölyef aynı yüzeydir.", "cap": "Çizim", "alt": "Servi, lale, karanfil ve gül motifli panelin karakalem ve mürekkep çizimi"},
-      {"h": "Derinlik haritası", "p": "Çizimi bir derinlik haritasına çeviririz. Haritadaki her gri tonu bir yüksekliğe karşılık gelir. Siyah, panelin zeminidir; beyaz, en yüksek noktası. Bu tasarımda rölyef derinliği, zeminden en yüksek noktaya 16 mm'dir. Değişiklikler dijitalde kaldığı için kalıp ya da malzeme maliyeti doğurmaz.", "cap": "Derinlik haritası", "alt": "Panelin siyahtan beyaza derinlik haritası"},
-      {"h": "Yalama ışıkta okuma", "p": "Döküme geçmeden önce yüzeyi alçak açıdan, yandan vuran bir ışıkta dijital olarak okuruz. Rölyefin gölgesi burada belirir; sığ formların nerede düzleştiği, derin olanların nerede gölgeye gömüldüğü bu aşamada görülür. Ortaya çıkan görselleri onayınıza sunarız; onayınız olmadan döküme geçmeyiz.", "cap": "Yalama ışık testi", "alt": "Panelin yalama ışıkta dijital testi"},
-      {"h": "Rölyef", "p": "Onaylanan yüzeyden 3D baskıyla ana model üretilir. Bu sayfadaki rölyef ise aynı derinlik haritasından gerçek zamanlı hesaplanır; imleci gezdirdikçe ya da sayfayı kaydırdıkça ışığın yönü ve gölgeler değişir.", "cap": "Gerçek zamanlı görünüm, yalama ışık", "alt": "Rölyefin gerçek zamanlı görünümü, yalama ışıkta"}
+      {
+        "h": "Çizim ya da görsel",
+        "p": "Her proje bir çizim ya da görselle başlar. Elle çizilmiş bir eskiz, ölçülü bir teknik çizim ya da bir referans görsel olabilir. Burada tasarımı bir çizim olarak görüyorsunuz: İznik çini geleneğinin servi, lale, karanfil ve gül motifleri tek bir simetrik kompozisyonda. Çizim, derinlik haritası ve aşağıdaki rölyef aynı yüzeydir.",
+        "cap": "Çizim",
+        "alt": "Servi, lale, karanfil ve gül motifli panelin karakalem ve mürekkep çizimi"
+      },
+      {
+        "h": "Derinlik haritası",
+        "p": "Çizimi bir derinlik haritasına çeviririz. Haritadaki her gri tonu bir yüksekliğe karşılık gelir. Siyah, panelin zeminidir; beyaz, en yüksek noktası. Bu tasarımda rölyef derinliği, zeminden en yüksek noktaya 16 mm’dir. Değişiklikler dijitalde kaldığı için kalıp ya da malzeme maliyeti doğurmaz.",
+        "cap": "Derinlik haritası",
+        "alt": "Panelin siyahtan beyaza derinlik haritası"
+      },
+      {
+        "h": "Yalama ışıkta okuma",
+        "p": "Döküme geçmeden önce yüzeyi alçak açıdan, yandan vuran bir ışıkta dijital olarak okuruz. Rölyefin gölgesi burada belirir; sığ formların nerede düzleştiği, derin olanların nerede gölgeye gömüldüğü bu aşamada görülür. Ortaya çıkan görselleri onayınıza sunarız; onayınız olmadan döküme geçmeyiz.",
+        "cap": "Yalama ışık testi",
+        "alt": "Panelin yalama ışıkta dijital testi"
+      },
+      {
+        "h": "Rölyef",
+        "p": "Onaylanan yüzeyden, geometriye göre 3D baskı ya da CNC işlemeyle ana model üretilir. Bu sayfadaki rölyef ise aynı derinlik haritasından gerçek zamanlı hesaplanır",
+        "cap": "Gerçek zamanlı görünüm, yalama ışık",
+        "alt": "Rölyefin gerçek zamanlı görünümü, yalama ışıkta",
+        "hover": "; imleci gezdirdikçe ya da sayfayı kaydırdıkça ışığın yönü ve gölgeler değişir",
+        "p_end": "."
+      }
     ],
     "shop_eyebrow": "Atölyede",
-    "shop_tagline": "Ana modelden sandıklamaya kadar her adım Sapanca'daki atölyemizde atılır.",
+    "shop_tagline": "Ana modelden sandıklamaya kadar her adım Sapanca’daki atölyemizde atılır.",
     "frames": [
-      {"cap": "Her dökümden önce silikon kalıba ayırıcı sürülür.", "alt": "Döküm öncesi beyaz silikon kalıba fırçayla ayırıcı madde sürülüyor"},
-      {"cap": "Lumina PMAG™ kalıba dökülür ve priz alana kadar bekletilir.", "alt": "Kalıba dökülen PMAG yüzeyi atölye masasında elle düzleştiriliyor"},
-      {"cap": "Kalıptan çıkarma: panel ilk kez görünür.", "alt": "Döküm rölyef panel beyaz silikon kalıptan kaldırılıyor, kalıptaki negatif form görünüyor"},
-      {"cap": "Negatif kalıp ve pozitif panel yan yana. Kalıp, ana modelin ters açılarını da panele aktarır.", "alt": "Döküm rölyef paneller silikon kalıbın yanında: pozitif ve negatif form"},
-      {"cap": "Yüzey elde son kez düzeltilir, ardından astarlanır.", "alt": "Döküm rölyef panelin yüzeyi tezgâhta elle zımparalanıyor"}
+      {
+        "cap": "Her dökümden önce silikon kalıba ayırıcı sürülür.",
+        "alt": "Döküm öncesi beyaz silikon kalıba fırçayla ayırıcı madde sürülüyor"
+      },
+      {
+        "cap": "Lumina PMAG™ kalıba dökülür ve priz alana kadar bekletilir.",
+        "alt": "Kalıba dökülen PMAG yüzeyi atölye masasında elle düzleştiriliyor"
+      },
+      {
+        "cap": "Kalıptan çıkarma: panel ilk kez görünür.",
+        "alt": "Döküm rölyef panel beyaz silikon kalıptan kaldırılıyor, kalıptaki negatif form görünüyor"
+      },
+      {
+        "cap": "Negatif kalıp ve pozitif panel yan yana. Kalıp, ana modelin ters açılarını da panele aktarır.",
+        "alt": "Döküm rölyef paneller silikon kalıbın yanında: pozitif ve negatif form"
+      },
+      {
+        "cap": "Yüzey elde son kez düzeltilir, ardından astarlanır.",
+        "alt": "Döküm rölyef panelin yüzeyi tezgâhta elle zımparalanıyor"
+      }
     ],
     "door_h": "Çiziminizi gönderin.",
     "door_p": "Bir eskiz, bir çizim ya da bir referans görsel; elinizde ne varsa başlamak için yeterli.",
     "door_cta": "Çiziminizi gönderin",
     "door_link": "Tasarımları inceleyin",
     "contact": "iletisim.htm",
-    "library": "tasarimlar.htm"
+    "library": "tasarimlar.htm",
+    "path": {
+      "eyebrow": "Özel Üretim",
+      "title": "Çiziminizden duvara",
+      "steps": [
+        {
+          "h": "Çizim",
+          "p": "Bir eskiz, ölçülü bir teknik çizim ya da referans görsel gönderirsiniz."
+        },
+        {
+          "h": "Yalama ışıkta onay",
+          "p": "Modeli yalama ışıkta okur, görselleri onayınıza sunarız."
+        },
+        {
+          "h": "Teklif",
+          "p": "Projenize özel teklif hazırlarız."
+        },
+        {
+          "h": "Sözleşme ve avans",
+          "p": "Üretim, imzalı sözleşme ve avans ödemesiyle başlar."
+        },
+        {
+          "h": "Ana model onayı",
+          "p": "Ana modeli üretir, dökümden önce onayınıza sunarız."
+        },
+        {
+          "h": "Kalıp ve döküm",
+          "p": "Onaylanan ana modelden silikon kalıp çıkarılır; paneller Sapanca’daki atölyemizde dökülür ve boyaya hazır olarak astarlanır."
+        },
+        {
+          "h": "Montaj",
+          "p": "Montajı projeye göre ayrı bir kalem olarak fiyatlandırırız."
+        }
+      ]
+    }
   },
   "en": {
     "file": "en/process.htm",
@@ -43,25 +116,96 @@
     "h1": "Your drawing,<br><em>cast faithfully.</em>",
     "lede": "A project drawing becomes a cast relief panel in our Sapanca workshop. Below, we follow one of our designs through the same route a bespoke drawing takes.",
     "steps": [
-      {"h": "The drawing", "p": "Every project starts with an image: a hand sketch, a dimensioned elevation or a reference. Here is the design as a drawing: the cypress, tulip, carnation and rose of the Iznik tile tradition in one symmetric composition. The drawing, the depth map and the relief below are the same surface.", "cap": "Drawing", "alt": "Pencil and ink drawing of the panel: cypress, tulips, carnations and roses"},
-      {"h": "The depth map", "p": "We translate the drawing into a depth map, where every grey value is a height: black is the ground of the panel, white its highest point. Relief depth on this design is 16 mm, ground to highest point. Changes are still digital, so they cost no tooling and no material.", "cap": "Depth map", "alt": "Depth map of the panel: black is the ground, white the highest point"},
-      {"h": "Read in raking light", "p": "Before anything is cast, we read the surface digitally under raking light, low and from the side. This is where the relief's shadow appears, and where shallow forms flatten out and deep ones fill solid with shadow. You approve these images; nothing is cast until you do.", "cap": "Raking-light test", "alt": "Digital raking-light test of the panel"},
-      {"h": "The relief", "p": "The approved surface is 3D-printed as the master. What you see here is not the master: it is computed live from the same depth map. Move the cursor or scroll, and the light and its shadows move with it.", "cap": "Live view in raking light", "alt": "Live view of the relief in raking light"}
+      {
+        "h": "The drawing",
+        "p": "Every project starts with an image: a hand sketch, a dimensioned elevation or a reference. Here is the design as a drawing: the cypress, tulip, carnation and rose of the Iznik tile tradition in one symmetric composition. The drawing, the depth map and the relief below are the same surface.",
+        "cap": "Drawing",
+        "alt": "Pencil and ink drawing of the panel: cypress, tulips, carnations and roses"
+      },
+      {
+        "h": "The depth map",
+        "p": "We translate the drawing into a depth map, where every grey value is a height: black is the ground of the panel, white its highest point. Relief depth on this design is 16 mm, ground to highest point. Changes are still digital, so they cost no tooling and no material.",
+        "cap": "Depth map",
+        "alt": "Depth map of the panel: black is the ground, white the highest point"
+      },
+      {
+        "h": "Read in raking light",
+        "p": "Before anything is cast, we read the surface digitally under raking light, low and from the side. This is where the relief’s shadow appears, and where shallow forms flatten out and deep ones fill solid with shadow. You approve these images; nothing is cast until you do.",
+        "cap": "Raking-light test",
+        "alt": "Digital raking-light test of the panel"
+      },
+      {
+        "h": "The relief",
+        "p": "The master is made from the approved surface, 3D-printed or CNC-machined depending on the geometry. What you see here is not the master: it is computed live from the same depth map.",
+        "cap": "Live view in raking light",
+        "alt": "Live view of the relief in raking light",
+        "hover": " Move the cursor or scroll, and the light and its shadows move with it.",
+        "p_end": ""
+      }
     ],
     "shop_eyebrow": "In the workshop",
     "shop_tagline": "Mould, pour, demould and finish: every step happens in the same workshop.",
     "frames": [
-      {"cap": "Release agent goes onto the silicone mould before every pour.", "alt": "Release agent brushed onto a white silicone mould before casting"},
-      {"cap": "Lumina PMAG™ is poured and left in the mould to set.", "alt": "Hands levelling the poured PMAG surface in a silicone mould on the workbench"},
-      {"cap": "Demoulding: the first look at the panel.", "alt": "A cast relief panel lifted from its white silicone mould, the negative form visible below"},
-      {"cap": "Negative and positive: the mould carries the master's undercuts into the panel.", "alt": "Cast relief panels standing beside their silicone mould: positive and negative form"},
-      {"cap": "The surface is dressed by hand, then primed.", "alt": "Hand sanding the surface of a cast relief panel on the workbench"}
+      {
+        "cap": "Release agent goes onto the silicone mould before every pour.",
+        "alt": "Release agent brushed onto a white silicone mould before casting"
+      },
+      {
+        "cap": "Lumina PMAG™ is poured and left in the mould to set.",
+        "alt": "Hands levelling the poured PMAG surface in a silicone mould on the workbench"
+      },
+      {
+        "cap": "Demoulding: the first look at the panel.",
+        "alt": "A cast relief panel lifted from its white silicone mould, the negative form visible below"
+      },
+      {
+        "cap": "Negative and positive: the mould carries the master’s undercuts into the panel.",
+        "alt": "Cast relief panels standing beside their silicone mould: positive and negative form"
+      },
+      {
+        "cap": "The surface is dressed by hand, then primed.",
+        "alt": "Hand sanding the surface of a cast relief panel on the workbench"
+      }
     ],
     "door_h": "Send your drawing.",
     "door_p": "Whatever you have is enough to start: a sketch, an elevation or a reference.",
     "door_cta": "Send Your Drawing",
     "door_link": "See the designs",
     "contact": "contact.htm",
-    "library": "designs.htm"
+    "library": "designs.htm",
+    "path": {
+      "eyebrow": "Bespoke",
+      "title": "From your drawing to the wall",
+      "steps": [
+        {
+          "h": "Drawing",
+          "p": "Send a sketch, a dimensioned drawing or a reference image."
+        },
+        {
+          "h": "Raking-light approval",
+          "p": "We read the model under raking light and send the images for your approval."
+        },
+        {
+          "h": "Quotation",
+          "p": "We write a quotation for your project."
+        },
+        {
+          "h": "Contract and advance",
+          "p": "Production begins on a signed contract and an advance payment."
+        },
+        {
+          "h": "Master approval",
+          "p": "We make the master and put it to you for approval before anything is cast."
+        },
+        {
+          "h": "Mould and cast",
+          "p": "We take the silicone mould from the approved master, then cast the panels in our Sapanca workshop and prime them, paint-ready."
+        },
+        {
+          "h": "Installation",
+          "p": "Installation is quoted separately, project by project."
+        }
+      ]
+    }
   }
 }
