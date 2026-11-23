@@ -45,6 +45,7 @@ DOMAIN = "https://studioluminant.com.tr/"
 UI = {
     "tr": {"lib": "Atölye Tasarımları", "index": "tasarimlar.htm", "page": "tasarim-{slug}.htm", "home": "Ana Sayfa",
            "cta": "Duvar yerleşimi isteyin", "price": "Duvarınız için fiyat isteyin", "contact": "iletisim.htm", "bespoke": "Özel Üretim", "bespoke_href": "surec.htm",
+           "wa": "WhatsApp’tan sorun", "wa_msg": "Merhaba, sitenizde {name} tasarımını gördüm. Bir sorum var:",
            "spec": {"minimum": "Minimum sipariş", "size": "Ölçü", "depth": "Rölyef", "layout": "Kurgu", "material": "Malzeme", "finish": "Yüzey",
                     "fixing": "Montaj", "lead": "Teslim", "joint": "Derz"},
            "material": "Lumina PMAG™ (polimer modifiye kompozit alçı)", "finish": "Boyaya hazır", "joint": "1,5 mm",
@@ -67,8 +68,10 @@ UI = {
            "door": "Bu tasarımın duvarınızda nasıl yerleşeceğini görmek için duvar ölçülerinizi iletin.",
            "own": "Kendi çiziminizle başlıyorsanız:", "prev": "Önceki tasarım", "next": "Sonraki tasarım",
            "tray_lede": "Hangi tasarımın hangi ışıkta belirginleştiği, hangisinde düzleştiği yan yana görünür.",
-           "tray_h2": "Tek ışık altında, yan yana.", "idx_to_tray": "Tasarımları ışıkta karşılaştırın", "idx_tile_tag": "lobideki duvar",
-           "tray_hint": ("Noktayı sürükleyin ya da bir ışık seçin.", "Fareyi tasarımların üzerinde gezdirin ya da bir ışık seçin.", "Bir ışık seçin."),
+           "tray_h2": "Tek ışık altında, yan yana.", "idx_to_tray": "Tasarımlara göz atın", "idx_to_list": "Listeyi görün", "list_id": "liste", "idx_tile_tag": "bardaki duvar",
+           "tray_cue": "İncele →", "tray_cue_label": "{name} tasarımını inceleyin", "tray_depth": "derinlik {depth}",
+           "idx_sample": "Numune kutusunu isteyin", "sample_anchor": "numune",
+           "tray_hint": ("Bir tasarımı açmak için dokunun; ışığı değiştirmek için noktayı sürükleyin.", "Fareyi tasarımların üzerinde gezdirin ya da bir ışık seçin.", "Bir ışık seçin."),
            "tray_pad": "Işığın yönü ve yüksekliği", "tray_lights_label": "Hazır ışıklar",
            "tray_from": {"left": "soldan", "upleft": "sol üstten", "up": "üstten", "upright": "sağ üstten", "right": "sağdan"},
            "tray_lights": {"ceiling": "Tavandan yalama", "window": "Yan pencere", "front": "Uzak spot"},
@@ -78,8 +81,8 @@ UI = {
                          "Duvara 55° açıyla vuran uzak spotu deneyin: Mezzavoce’nin kontrastı üçte birine iner, Andante’ninki korunur. Fugato ışığı yandan ister: tavandan yalamada sönük kalır, yan pencerede öne çıkar.",
                          "Hesap tek renk, mat bir yüzey varsayar. Boyanın rengi ve mekândaki diğer ışık kaynakları gördüğünüzü değiştirir."),
            "tray_list_h2": "Tasarımlar",
-           "idx_title": "Atölye Tasarımları: Rölyef Duvar Panelleri | Studio Luminant",
-           "idx_meta": "Studio Luminant'ın çizdiği rölyef duvar tasarımları. Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin; Lumina PMAG™ ile Sapanca'da dökülür.",
+           "idx_title": "Rölyef Duvar Dekoru: Atölye Tasarımları | Studio Luminant",
+           "idx_meta": "Rölyef duvar dekoru ve panel modelleri: Studio Luminant'ın çizdiği tasarımlar. Her birini duvarda ve çizimiyle inceleyin; Lumina PMAG™ ile Sapanca'da dökülür.",
            "idx_h1": "Bizim çizdiğimiz <em>rölyefler.</em>",
            "idx_lede": "Her tasarımı kendi sayfasında duvarda ve çizimiyle inceleyin. Kalıp siparişinizle hazırlanır; dökümden önce ana modeli siz onaylarsınız.",
            "idx_door": "Duvar sizin çiziminizle başlıyorsa bu Özel Üretim’dir: nasıl çizdiyseniz, öyle dökeriz.",
@@ -91,6 +94,7 @@ UI = {
            "shr_proj": "Proje", "shr_by": "Hazırlayan", "shr_credit": "Tasarım ve döküm: Studio Luminant, Sapanca"},
     "en": {"lib": "Studio Designs", "index": "designs.htm", "page": "design-{slug}.htm", "home": "Home",
            "cta": "Request a wall layout", "price": "Request a price for your wall", "contact": "contact.htm", "bespoke": "Bespoke", "bespoke_href": "process.htm",
+           "wa": "Ask on WhatsApp", "wa_msg": "Hello, I saw {name} on your website and have a question:",
            "spec": {"minimum": "Minimum order", "size": "Size", "depth": "Relief", "layout": "Layout", "material": "Material", "finish": "Surface",
                     "fixing": "Fixing", "lead": "Lead time", "joint": "Joint"},
            "material": "Lumina PMAG™ (polymer-modified composite gypsum)", "finish": "Paint-ready", "joint": "1.5 mm",
@@ -113,8 +117,10 @@ UI = {
            "door": "To see how this design would sit on your wall, send the wall dimensions.",
            "own": "Starting from your own drawing:", "prev": "Previous design", "next": "Next design",
            "tray_lede": "Side by side, you can see which design sharpens under which light and which one goes flat.",
-           "tray_h2": "Side by side, under one light.", "idx_to_tray": "Compare the designs in light", "idx_tile_tag": "the lobby wall",
-           "tray_hint": ("Drag the dot, or pick a light.", "Move your mouse over the designs, or pick a light.", "Pick a light."),
+           "tray_h2": "Side by side, under one light.", "idx_to_tray": "Browse the designs", "idx_to_list": "See the list", "list_id": "list", "idx_tile_tag": "the bar wall",
+           "tray_cue": "View →", "tray_cue_label": "View {name}", "tray_depth": "depth {depth}",
+           "idx_sample": "Request the sample box", "sample_anchor": "sample",
+           "tray_hint": ("Tap a design to open it; drag the dot to move the light.", "Move your mouse over the designs, or pick a light.", "Pick a light."),
            "tray_pad": "Direction and height of the light", "tray_lights_label": "Set lights",
            "tray_from": {"left": "from the left", "upleft": "from upper left", "up": "from above", "upright": "from upper right", "right": "from the right"},
            "tray_lights": {"ceiling": "Ceiling wash", "window": "Side window", "front": "Set-back spot"},
@@ -501,12 +507,15 @@ def composer_href(lang, d, pre):
 
 
 def price_ctas(lang, d, pre):
-    """Hero CTAs: the Composer's price request as the primary button, the layout request beside it (Burak 2026-11-13)."""
+    """Hero CTAs: the Composer's price request as the primary button, the layout request beside it (Burak 2026-11-13),
+    and a WhatsApp message as the small first step for a cold visitor (Burak 2026-11-23). The WhatsApp link ships hidden
+    with no number: components.js builds it from CONTACT_PHONE, the number's only home."""
     u, href = UI[lang], composer_href(lang, d, pre)
     layout = f"<a href=\"{contact_href(lang, d)}\" class=\"{'sys-link' if href else 'btn-primary'}\">{u['cta']}</a>"
+    wa = f"<a class=\"sys-link\" data-wa-msg=\"{esc(u['wa_msg'].format(name=d[lang]['name']))}\" hidden>{u['wa']}</a>"
     if href is None:
-        return layout
-    return f"<a href=\"{href}\" class=\"btn-primary\">{u['price']}</a>" + "\n      " + layout
+        return layout + "\n      " + wa
+    return f"<a href=\"{href}\" class=\"btn-primary\">{u['price']}</a>" + "\n      " + wa + "\n      " + layout
 
 
 def door_html(lang, d):
@@ -870,39 +879,51 @@ def relief_share_page(d, lang, figs):
     return share_shell(d, lang, f"assets/relief/{d['asset']}/og.jpg", body, scripts)
 
 
-INDEX_HERO = ("accelerando", "assets/designs/accelerando/room-lobby.webp")   # Burak 2026-11-13: one room, full width, before the tray
+INDEX_HERO = ("gruppetto", "assets/designs/gruppetto/room-bar.webp")   # one room, full width, before the tray (2026-11-13); Gruppetto bar since 2026-11-19
 # Art-directed crops of it (Fable read, applied 2026-11-13): a wide band weighted to the wall, a 5:4 phone frame of wall, lamp and chairs
-INDEX_HERO_CROPS = {"wide": "assets/designs/accelerando/room-lobby-wide.webp", "phone": "assets/designs/accelerando/room-lobby-phone.webp",
-                    "phone_small": "assets/designs/accelerando/room-lobby-phone-640w.webp"}
+INDEX_HERO_CROPS = {"wide": "assets/designs/gruppetto/room-bar-wide.webp", "phone": "assets/designs/gruppetto/room-bar-phone.webp",
+                    "phone_small": "assets/designs/gruppetto/room-bar-phone-640w.webp"}
+# The hero room's words, for a hero room that is not one of the design's listed rooms (the Gruppetto bar, 2026-11-19).
+INDEX_HERO_ROOM = {"tr": {"alt": "Gruppetto, bar", "cap": "Konsept: bar"}, "en": {"alt": "Gruppetto, bar", "cap": "Concept: bar"}}
+# Tray and plain-list order on the index: Fable's order (2026-11-19). Designs not named here follow, in designs.json order.
+INDEX_ORDER = ("gruppetto", "hemiola", "fioritura", "rondeau", "antiphon", "melisma", "mezzavoce", "hocket", "andante",
+               "accelerando", "sonado", "ricercar", "fugato", "glissando")
+TRAY_LIGHT = "window"  # the tray opens on window light: Sonado and Fugato read blank under the ceiling graze (2026-11-19)
 TRAY_EAGER = 6  # the first screen on a phone and on a laptop: not lazy, the first one is the LCP image
+
+
+def index_order(designs):
+    rank = {slug: i for i, slug in enumerate(INDEX_ORDER)}
+    return sorted(designs, key=lambda d: rank.get(d["slug"], len(rank)))
 
 
 def tray_cell(d, lang, pos):
     u, c, pre = UI[lang], d[lang], "" if lang == "tr" else "../"
     page = u["page"].format(slug=d["slug"])
-    stem = f"{pre}assets/relief-tray/{d['slug']}/poster-ceiling-"
+    stem = f"{pre}assets/relief-tray/{d['slug']}/poster-{TRAY_LIGHT}-"
     load = 'loading="lazy"' if pos >= TRAY_EAGER else 'loading="eager"'      # the hero room is the LCP image now
     depth = re.match(r"\d+ mm", c.get("depth", ""))
-    depth_html = f'<span class="tray-depth">{depth.group(0)}</span>' if depth else ""
+    depth_html = f'<span class="tray-depth">{u["tray_depth"].format(depth=depth.group(0))}</span>' if depth else ""
+    cue = f'<a class="tray-cue" href="{page}" aria-label="{esc(u["tray_cue_label"].format(name=c["name"]))}">{u["tray_cue"]}</a>'
     tag = f'<span class="tray-tag">{u["idx_tile_tag"]}</span>' if d["slug"] == INDEX_HERO[0] else ""     # the hero's wall, found again in the tray
     return f'''    <li class="tray-cell" data-slug="{d['slug']}">
       <a class="tray-sample" href="{page}" tabindex="-1" draggable="false">
         <span class="tray-shadow" aria-hidden="true"></span>
         <img class="tray-poster" src="{stem}560.webp" srcset="{stem}560.webp 560w, {stem}840.webp 840w" sizes="(min-width: 1100px) 30vw, (min-width: 640px) 31vw, 47vw" width="840" height="840" {load} draggable="false" alt="{esc(u['tray_alt'].format(name=c['name']))}">{tag}
       </a>
-      <div class="tray-label"><a class="tray-name" href="{page}">{esc(c['name'])}</a>{depth_html}</div>
+      <div class="tray-label"><a class="tray-name" href="{page}">{esc(c['name'])}</a>{depth_html}{cue}</div>
     </li>'''
 
 
 def tray_dock(u):
     froms = " ".join(f'data-from-{k}="{v}"' for k, v in u["tray_from"].items())
     rings = "".join(f'<path class="tray-pad__ring" d="M{100 - r} 104 A{r} {r} 0 0 1 {100 + r} 104"/>' for r in (34, 67))
-    lights = "\n".join(f'        <li><button type="button" data-light="{k}" aria-pressed="{str(k == "ceiling").lower()}">{v}</button></li>'
+    lights = "\n".join(f'        <li><button type="button" data-light="{k}" aria-pressed="{str(k == TRAY_LIGHT).lower()}">{v}</button></li>'
                        for k, v in u["tray_lights"].items())
     touch, mouse, still = u["tray_hint"]
     return f'''    <div class="tray-dock">
       <p class="tray-hint"><span class="tray-hint__touch">{touch}</span><span class="tray-hint__mouse">{mouse}</span><span class="tray-hint__still">{still}</span></p>
-      <svg class="tray-pad" viewBox="-8 -8 216 120" role="slider" tabindex="0" aria-label="{u['tray_pad']}" aria-valuemin="0" aria-valuemax="180" aria-valuenow="90" aria-valuetext="{u['tray_from']['up']}, 12°" {froms}>
+      <svg class="tray-pad" viewBox="-8 -8 216 120" role="slider" tabindex="0" aria-label="{u['tray_pad']}" aria-valuemin="0" aria-valuemax="180" aria-valuenow="172" aria-valuetext="{u['tray_from']['left']}, 16°" {froms}>
         <path class="tray-pad__sky" d="M0 104 A100 100 0 0 1 200 104 Z"/>
         {rings}
         <line class="tray-pad__ray" x1="100" y1="104" x2="100" y2="24"/>
@@ -918,7 +939,7 @@ def index_hero(data, lang, pre):
     """The index opens on one design in a room, full width, before the tray asks the visitor to work the light."""
     u, (slug, file) = UI[lang], INDEX_HERO
     d = next(x for x in data["designs"] if x["slug"] == slug)
-    room = next(r for r in [d.get("room")] + (d.get("rooms") or []) if r and r["file"] == file)
+    room = next((r for r in [d.get("room")] + (d.get("rooms") or []) if r and r["file"] == file), INDEX_HERO_ROOM)
     size = lambda f: Image.open(SITE / f).size
     (ww, wh), (pw, ph), (sw, _) = size(INDEX_HERO_CROPS["wide"]), size(INDEX_HERO_CROPS["phone"]), size(INDEX_HERO_CROPS["phone_small"])
     pic = (f'<picture><source media="(max-width: 899px)" srcset="{pre}{INDEX_HERO_CROPS["phone_small"]} {sw}w, {pre}{INDEX_HERO_CROPS["phone"]} {pw}w" '
@@ -928,13 +949,14 @@ def index_hero(data, lang, pre):
     lede = f'{first}.<span class="idx-hero__more"> {rest}</span>' if rest else u["idx_lede"]   # a phone keeps the first sentence
     page = u["page"].format(slug=slug)
     return f"""<section class="idx-hero">
-  <figure class="idx-hero__img">{pic}<figcaption><a href="{page}">{esc(d[lang]['name'])}</a> · {txt(room[lang]['cap'])}</figcaption></figure>
+  <figure class="idx-hero__img"><a href="{page}">{pic}</a><figcaption><a href="{page}">{esc(d[lang]['name'])}</a> · {txt(room[lang]['cap'])}</figcaption></figure>
   <div class="idx-hero__copy">
     <h1>{u['idx_h1']}</h1>
     <div class="idx-hero__side">
       <p>{lede}</p>
       <div class="idx-hero__links">
         <a href="#tray-h" class="btn-primary">{u['idx_to_tray']}</a>
+        <a href="#{u['list_id']}" class="sys-link">{u['idx_to_list']}</a>
         <a href="{u['contact']}?ask=layout" class="sys-link">{u['idx_samples']}</a>
       </div>
     </div>
@@ -949,9 +971,10 @@ def index_page(data, lang):
     tr_url, en_url = "tasarimlar.htm", "en/designs.htm"
     url = tr_url if lang == "tr" else en_url
     twin = f"{pre}{en_url}" if lang == "tr" else f"../{tr_url}"
-    cells = [tray_cell(d, lang, pos) for pos, d in enumerate(data["designs"])]
+    ordered = index_order(data["designs"])
+    cells = [tray_cell(d, lang, pos) for pos, d in enumerate(ordered)]
     rows = []
-    for d in data["designs"]:
+    for d in ordered:
         c = d[lang]
         line = c["story"] if d["kind"] == "study" else first_sentence(c["lede"])
         rows.append(f'''    <li><a href="{u['page'].format(slug=d['slug'])}"><span class="tray-list__name">{esc(c['name'])}</span><span class="tray-list__line">{nb(txt(line))}</span></a></li>''')
@@ -969,10 +992,6 @@ def index_page(data, lang):
   </div>
   <ul class="tray-grid">
 {chr(10).join(cells)}
-    <li class="tray-door">
-      <p>{u['idx_door']}</p>
-      <a href="{u['contact']}" class="sys-link">{u['idx_door_link']}</a>
-    </li>
   </ul>
   <div class="tray-side">
     <div class="tray-scale"><i></i>200 mm</div>
@@ -985,7 +1004,7 @@ def index_page(data, lang):
 {note}
 </section>
 
-<section class="tray-list" aria-labelledby="tray-list-h">
+<section class="tray-list" id="{u['list_id']}" aria-labelledby="tray-list-h">
   <h2 id="tray-list-h">{u['tray_list_h2']}</h2>
   <p>{u['idx_rooms']}</p>
   <ul>
@@ -998,6 +1017,7 @@ def index_page(data, lang):
     <p>{u['idx_door']}</p>
     <div class="sys-door__links">
       <a href="{u['contact']}" class="sys-link">{u['idx_door_link']}</a>
+      <a href="{u['contact']}#{u['sample_anchor']}" class="sys-link">{u['idx_sample']}</a>
       <a href="{u['contact']}?ask=layout" class="sys-link">{u['idx_samples']}</a>
     </div>
   </div>

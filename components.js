@@ -116,6 +116,13 @@ function pictureTag(src, alt, sizes, opts) {
       if (dd) dd.innerHTML = `<a href="https://wa.me/${waDigits}" target="_blank" rel="noopener">WhatsApp</a>`;
       row.hidden = false;
     });
+    // Design-page hero: a WhatsApp message with the design named, the small first step (build_designs.py ships it hidden).
+    document.querySelectorAll('a[data-wa-msg]').forEach(a => {
+      a.href = `https://wa.me/${waDigits}?text=${encodeURIComponent(a.dataset.waMsg)}`;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.hidden = false;
+    });
   }
 
   // ─── DOOR (one primary CTA per door; Copy v1 §3) ───

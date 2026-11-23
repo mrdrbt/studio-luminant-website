@@ -19,9 +19,9 @@
  * Never runs under prefers-reduced-motion or without WebGL2 (the poster stays). Sleeps when settled,
  * off-screen or in a hidden tab. Exposes window.ReliefLight.mount(el) and el.reliefLight (state, for QA);
  * el.reliefLight.hold(true) also sleeps it while a page hides it some other way (a crossfaded layer).
- * Deferred start (2026-10-28, mobile PageSpeed): init() mounts nothing at load. On touch screens the light
- * only moves on scroll and the first frame is the poster's own light, so it starts on the first scroll or
- * touch; on a fine pointer it starts on the first pointer move, or once the page has loaded and gone idle.
+ * Deferred start (2026-10-28, mobile PageSpeed): init() mounts nothing at load. It starts on the first input
+ * (scroll or touch; pointer move on a fine pointer) or once the page has loaded and gone idle, on every device
+ * since 2026-11-23. A hero on screen in scroll mode drifts in the idle arc until the first scroll.
  * The shader compiles off the main thread where KHR_parallel_shader_compile exists. mount(el) is immediate.
  */
 (function () {
@@ -329,7 +329,7 @@
       wake();
     }
 
-    function onScroll() { if (visible) { scrollTarget(); wake(); } }
+    function onScroll() { if (visible) { state.idle = false; scrollTarget(); wake(); } }
 
     new IntersectionObserver(function (entries) {
       visible = entries[0].isIntersecting && !document.hidden;
@@ -387,6 +387,9 @@
           p0 = el.getBoundingClientRect().top < window.innerHeight && pNow < 1 ? pNow : 0;
           window.addEventListener('scroll', onScroll, { passive: true });
           scrollTarget();
+          // A hero already on screen drifts in the idle arc until the first scroll, so a phone visitor who has
+          // not touched the page still sees the light move (Burak 2026-11-23: ad visitors leave before scrolling).
+          if (p0 > 0) enterIdle(performance.now());
         }
         wake();
         el.dispatchEvent(new CustomEvent('relieflight:ready', { detail: state }));
@@ -410,11 +413,11 @@
       for (var i = 0; i < els.length; i++) mount(els[i]);
     }
     events.forEach(function (ev) { window.addEventListener(ev, start, { passive: true }); });
-    if (FINE) {
-      var idle = function () { (window.requestIdleCallback || function (f) { setTimeout(f, 200); })(start, { timeout: 2000 }); };
-      if (document.readyState === 'complete') idle();
-      else window.addEventListener('load', idle);
-    }
+    // Every device also starts once the page has loaded and gone idle (touch screens too since 2026-11-23),
+    // so the LCP poster still paints first and nothing waits on a first touch.
+    var idle = function () { (window.requestIdleCallback || function (f) { setTimeout(f, 200); })(start, { timeout: 2000 }); };
+    if (document.readyState === 'complete') idle();
+    else window.addEventListener('load', idle);
   }
 
   window.ReliefLight = { mount: mount, init: init };

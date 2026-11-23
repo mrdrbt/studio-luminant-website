@@ -58,7 +58,7 @@ var SL_UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'u
 // GA4 waits for cookie consent, which most ad visitors never give, so the funnel is also counted here:
 // one row per step per browser session in Supabase `site_steps` (migration 010_site_steps.sql).
 // Each row is the step, the page path and the session's utm_* set: no cookie, no visitor id, no IP.
-// sessionStorage only stops a step counting twice. Steps: land, engaged, page2, form_view, form_start, lead.
+// sessionStorage only stops a step counting twice. Steps: land, engaged, page2, form_view, form_start, lead, contact (a WhatsApp tap; migration 011).
 var SL_STEPS_URL = 'https://mjmeqgljpyenuqorarte.supabase.co/rest/v1/rpc/log_site_step';
 var SL_STEPS_KEY = 'sb_publishable_vCLQ5AGLhXUCRzbR-XDtxA_ds5-h_R5'; // Supabase publishable key (public by design); empty = counting off
 function slStep(step) {
@@ -127,6 +127,7 @@ document.addEventListener('click', function (e) {
   var href = a.getAttribute('href');
   var method = /^tel:/i.test(href) ? 'tel' : /^mailto:/i.test(href) ? 'mail' : /^https:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(href) ? 'whatsapp' : '';
   if (!method) return;
+  if (method === 'whatsapp') slStep('contact'); // cookie-free count: most ad visitors never give GA4 consent
   slTrack('contact_click', { contact_method: method, link_location: a.closest('#site-footer') ? 'footer' : a.closest('#site-nav') ? 'nav' : 'body' });
 });
 
