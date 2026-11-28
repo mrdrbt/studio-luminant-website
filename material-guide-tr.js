@@ -169,7 +169,7 @@ const studioMaterials = [{
     uv: "—",
     chemical: "—",
     temperature: "—",
-    surface: (_pmag.finish ? _pmag.finish.tr : "Boyaya hazır — sahada tüm RAL / özel renkler"),
+    surface: (_pmag.finish ? _pmag.finish.tr : "Boyaya hazır — sahada projenin rengine boyanır"),
     customDesign: "Parametrik tasarım",
     acoustic: "—",
     antimicrobial: "—",
@@ -722,7 +722,7 @@ function FinishColorSelector({
       fontWeight: 300,
       lineHeight: 1.4
     }
-  }, "Özel renk eşleştirme mümkündür \u2014 RAL, NCS veya özel referans.")));
+  }, "Sahada projenin renk referansına boyanır \u2014 RAL, NCS ya da onaylı numune.")));
 }
 
 // ─── MATERIAL CARD ───

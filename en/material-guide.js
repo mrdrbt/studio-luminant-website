@@ -169,7 +169,7 @@ const studioMaterials = [{
     uv: "—",
     chemical: "—",
     temperature: "—",
-    surface: (_pmag.finish ? _pmag.finish.en : "Paint-ready — any RAL / custom colour on site"),
+    surface: (_pmag.finish ? _pmag.finish.en : "Paint-ready — painted on site to the project's colour"),
     customDesign: "Parametric design",
     acoustic: "—",
     antimicrobial: "—",
@@ -722,7 +722,7 @@ function FinishColorSelector({
       fontWeight: 300,
       lineHeight: 1.4
     }
-  }, "Custom colour matching available \u2014 RAL, NCS, or bespoke reference.")));
+  }, "Painted on site to the project's colour reference \u2014 RAL, NCS or an approved sample.")));
 }
 
 // ─── MATERIAL CARD ───
