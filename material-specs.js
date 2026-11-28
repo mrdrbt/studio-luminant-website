@@ -1,5 +1,5 @@
 // ─── MATERIAL SPECS — Single Source of Truth ───
-// Generated from Supabase · 2026-11-12
+// Generated from Supabase · 2026-11-28
 // Referenced by: products.htm, tr/urunler.htm, material-guide.js, tr/material-guide-tr.js, lookbook.htm
 
 window.SL_SPECS = {
@@ -31,8 +31,8 @@ window.SL_SPECS = {
       "tr": "Seramik-Pürüzsüz Yüzey"
     },
     "finish": {
-      "en": "Any RAL / Custom Colour",
-      "tr": "Tüm RAL / Özel Renkler",
+      "en": "Paint-ready",
+      "tr": "Boyaya hazır",
       "note_en": "Paint-ready; painted on site in any colour.",
       "note_tr": "Boyaya hazır; sahada istenen renge boyanır."
     },
